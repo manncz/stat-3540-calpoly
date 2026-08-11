@@ -1,0 +1,68 @@
+project:
+  type: website
+  output-dir: docs
+  execute-dir: file
+  render:
+    - "*.qmd"
+    - "!/student-versions/"
+    - "!/solutions/"
+    - "!/exams/"
+    - "!/course-info/stud-info/"
+    - "!/project/"
+    - "!/handouts/"
+    - "!/quiz/"
+    - "!/prev-materials/"
+
+website:
+  page-navigation: true
+  title: "Statistical Methods for Study Design and Analysis"
+  description: "Homepage for STAT 3540/5440 at Cal Poly Fall 2026"
+  site-url: "https://github.com/manncz/stat-3540-calpoly"
+  repo-url: https://github.com/manncz/stat-3540-calpoly
+  repo-actions: [issue]
+
+  page-footer:
+    right: "This page is built with ❤️️ and [Quarto](https://quarto.org/)."
+    left: "Built by Charlotte Mann, adapted from materials by Dr. Emily Robinson and Dr. Anelise Sabbag."
+    background: "#bfd3e6"
+
+  sidebar:
+    background: "#084594"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/manncz/stat-3540-calpoly
+        text: "GitHub organization"
+      - icon: person-fill
+        href: https://canvas.calpoly.edu
+        text: "Cal Poly Canvas"
+
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "Course information"
+        contents:
+          - href: course-info/syllabus-f26.qmd
+            text: Syllabus
+          # - href: course-materials/course-support.qmd
+          #   text: Support
+          - href: index.qmd
+            text: Schedule
+          - href: course-info/course-resources.qmd
+            text: Resources
+
+format:
+  html:
+    theme:
+      light: [cosmo, style/stat331.scss]
+      dark: [cosmo, style/stat331.scss, style/dark.scss]
+    mainfont: "Atkinson Hyperlegible"
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+    linkcolor: "#2171b5"
+#    highlight-style: a11y-dark
+
+editor: source

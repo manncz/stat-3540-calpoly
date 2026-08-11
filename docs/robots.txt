@@ -1,0 +1,1 @@
+Sitemap: https://github.com/manncz/stat-3540-calpoly/sitemap.xml

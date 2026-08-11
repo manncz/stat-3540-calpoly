@@ -1,0 +1,121 @@
+---
+title: "Statistical Methods for Study Design and Analysis"
+---
+
+<!--
+Note that for the calendar to work, you need to install the fontawesome extension for Quarto and have initiated the extension somewhere in the page as well, like what is done with the calendar icon below. Very strange, but it works for some reason.
+-->
+
+{{< fa calendar title="An calendar" >}}  This page contains an outline of the topics, content, and assignments for the quarter. Note that this schedule will be updated as the quarter progresses, with all changes documented here. 
+
+
+```{r}
+#| label: packages
+#| echo: false
+#| message: false
+#| warning: false
+
+library(gt)
+library(tidyverse)
+```
+
+
+```{r}
+#| label: read-data
+#| echo: false
+
+d <- readxl::read_excel("stat-3540-f26-schedule.xlsx")
+
+```
+
+
+```{r}
+#| label: format-calendar-entries
+#| echo: false
+
+t <- d |>
+  mutate(day = str_c(weekdays(date_raw, abbreviate = T),
+                     ", ",
+                     month(date_raw),
+                     "/",
+                     day(date_raw)),
+         .after = week) |> 
+  mutate(week = str_c("Week ", week)) |> 
+  select(-date_raw) |> 
+  gt() |> 
+  text_transform(cells_body(columns = c(prepare)),
+                 fn = function(x){
+                   ifelse(is.na(x), fontawesome::fa('book', fill_opacity = 0.1), 
+                          glue::glue('<a href="{x}"><i class="fa fa-book" style="color: #238b45;"></i></a>'))
+                 }) |> 
+  text_transform(cells_body(columns = c(slides)),
+                 fn = function(x){
+                   ifelse(is.na(x), fontawesome::fa('laptop', fill_opacity = 0.1), 
+                           glue::glue('<a href="{x}"><i class="fa fa-laptop" style="color: #005a32;"></i></a>'))
+                 }) |> 
+  text_transform(cells_body(columns = c(activity)),
+                 fn = function(x){
+                   ifelse(is.na(x), fontawesome::fa('users', fill_opacity = 0.1),
+                          glue::glue('<a href="{x}"><i class="fa fa-users" style="color: #084594;"></i></a>'))
+                  }) |> 
+  text_transform(cells_body(columns = c(lab)),
+                 fn = function(x){
+                   ifelse(is.na(x), fontawesome::fa('pencil', fill_opacity = 0.1), 
+                          glue::glue('<a href="{x}"><i class="fa fa-pencil" style="color: #084594;"></i></a>'))
+                 }) |> 
+  sub_missing(columns = week, missing_text = "")  |> 
+  tab_row_group(
+    label = "Intro to DOE",
+    rows = (unit == "Intro to DOE"), 
+    id = "Unit 1"
+  ) |> 
+  tab_row_group(
+    label = "Complex Experimental Design",
+    rows = (unit == "Complex Experimental Design"), 
+    id = "Unit 2"
+  ) |> 
+  tab_row_group(
+    label = "Observational Studies and Survey Design",
+    rows = (unit == "Observational Studies and Survey Design"), 
+    id = "Unit 3"
+  ) |> 
+  tab_row_group(
+    label = "Study Design through Case Studies",
+    rows = (unit == "Study Design through Case Studies"), 
+    id = "Unit 4"
+  ) |> 
+  cols_hide(unit) |> 
+  row_group_order(groups = c("Unit 1",
+                             "Unit 2",
+                             "Unit 3",
+                             "Unit 4")
+                  ) |> 
+  tab_style(
+    style = list(cell_fill(color = "gray95"),
+                 cell_text(weight = "bold")),
+    locations = cells_row_groups(groups = c("Unit 1",
+                                            "Unit 2",
+                                            "Unit 3",
+                                            "Unit 4"))) |>
+   cols_label(
+    week = "",
+    topic = "",
+    day = "",
+    prepare = md("**Prepare**"),
+    slides = md("**Slides**"), 
+    activity = md("**Activity**"),
+    lab = md("**Lab**")
+    )
+
+t <- t |>
+  as_raw_html() 
+```
+
+```{r}
+#| echo: false
+#| results: "asis"
+#| label: output-calendar
+
+cat(t)
+```
+
