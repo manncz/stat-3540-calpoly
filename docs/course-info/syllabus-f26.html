@@ -74,6 +74,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
 
 </head>
@@ -302,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course-info/course-resources.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../course-info/course-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -333,12 +335,12 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#course-policies" id="toc-course-policies" class="nav-link" data-scroll-target="#course-policies">Course Policies</a>
   <ul class="collapse">
-  <li><a href="#attendance-participation" id="toc-attendance-participation" class="nav-link" data-scroll-target="#attendance-participation">Attendance &amp; Participation</a></li>
-  <li><a href="#accessibility-and-accomodations" id="toc-accessibility-and-accomodations" class="nav-link" data-scroll-target="#accessibility-and-accomodations">Accessibility and Accomodations</a></li>
+  <li><a href="#sec-attendance" id="toc-sec-attendance" class="nav-link" data-scroll-target="#sec-attendance">Attendance &amp; Participation</a></li>
+  <li><a href="#accessibility-and-accommodations" id="toc-accessibility-and-accommodations" class="nav-link" data-scroll-target="#accessibility-and-accommodations">Accessibility and Accommodations</a></li>
   <li><a href="#inclusive-classroom" id="toc-inclusive-classroom" class="nav-link" data-scroll-target="#inclusive-classroom">Inclusive Classroom</a></li>
   <li><a href="#group-work" id="toc-group-work" class="nav-link" data-scroll-target="#group-work">Group Work</a></li>
   <li><a href="#late-policy" id="toc-late-policy" class="nav-link" data-scroll-target="#late-policy">Late Policy</a></li>
-  <li><a href="#exam-conflicts" id="toc-exam-conflicts" class="nav-link" data-scroll-target="#exam-conflicts">Exam Conflicts</a></li>
+  <li><a href="#sec-examconflict" id="toc-sec-examconflict" class="nav-link" data-scroll-target="#sec-examconflict">Exam Conflicts</a></li>
   </ul></li>
   <li><a href="#course-expectations" id="toc-course-expectations" class="nav-link" data-scroll-target="#course-expectations">Course Expectations</a></li>
   <li><a href="#academic-integrity-and-class-conduct" id="toc-academic-integrity-and-class-conduct" class="nav-link" data-scroll-target="#academic-integrity-and-class-conduct">Academic Integrity and Class Conduct</a>
@@ -379,20 +381,21 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="communication" class="level2">
 <h2 class="anchored" data-anchor-id="communication">Communication</h2>
-<p><strong>Dr.&nbsp;Charlotte Zilber Mann</strong></p>
-<p>You can call me Dr.&nbsp;C, Professor/Prof.&nbsp;C., Dr.&nbsp;Mann, or Professor.</p>
+<p><strong>Dr.&nbsp;Charlotte Zilber Mann</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> (she/her/ella)</p>
+<p>You can call me Dr.&nbsp;C, Professor/Prof.&nbsp;C., Dr.&nbsp;Mann, or Professor.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"></path></svg> Email: <a href="mailto:czmann@calpoly.edu?subject=Stat%20331/531">czmann@calpoly.edu</a></p>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M64 48c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16h80V400c0-26.5 21.5-48 48-48s48 21.5 48 48v64h80c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64zM0 64C0 28.7 28.7 0 64 0H320c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm88 40c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H104c-8.8 0-16-7.2-16-16V104zM232 88h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H232c-8.8 0-16-7.2-16-16V104c0-8.8 7.2-16 16-16zM88 232c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H104c-8.8 0-16-7.2-16-16V232zm144-16h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H232c-8.8 0-16-7.2-16-16V232c0-8.8 7.2-16 16-16z"></path></svg> Office: Building 25 Office 201</p>
 <p><strong>Email:</strong></p>
 <ul>
 <li>Only email me with your <span class="citation" data-cites="calpoly.edu">@calpoly.edu</span> email – I cannot respond to other email addresses</li>
-<li>Please <strong>start your email subject line with “[STAT 3540]”</strong></li>
+<li>Please <strong>start your email subject line with “[STAT 3540]”</strong> or <strong>“[STAT 5440]”</strong> to get my attention!</li>
 <li>I will do my best to respond within 24 hours during the week</li>
 <li>If you send me an email past 6pm or on the weekend, I will likely not respond until the morning of the next working day</li>
+<li>If I don’t respond within 48 hours, please email me again!</li>
 <li><em>You should only email me about things that relate to you as an individual.</em> Any other questions should be posted on the course Discord (more details below).</li>
 </ul>
 <p><strong>Course Discord Page:</strong></p>
-<p>For questions of general interest, such as course clarifications or conceptual questions, please use the course <a href="discord-instructions.html">Discord page</a> (you will join this Week 1). If you have a question – someone else in class does too! I encourage you all to respond to each other. I will do my best to check Discord twice each weekday during working hours (8-6) to ensure that questions are being answered accurately.</p>
+<p>For questions of general interest, such as course clarifications or conceptual questions, please use the course <a href="discord-instructions.html">Discord page</a> (you will join this Week 1). If you have a question, someone else in class does too! I encourage you all to respond to each other. I will do my best to check Discord twice each weekday during working hours (8-6) to ensure that questions are being answered accurately.</p>
 <p>I encourage you to give your post a concise and informative initial sentence, so that other people can find it. You may post snippets of code, errors or problem attempts on Discord, but please do not post full solutions.</p>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"></path></svg> While your posts are not anonymous, in this case there is no such thing as a bad question!</p>
 </section>
@@ -433,27 +436,46 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Office hours are also helpful for me…</strong> this is my chance to get to know you all better and also get a good idea of what is most challenging and most interesting to you.</li>
 <li>See <a href="https://lsc.cornell.edu/consult-with/how-to-use-office-hours/">this resource</a> for ways that students use office hours.</li>
 <li>One thing I will not do during office hours is tell you whether an answer to a problem is “correct” or not. We can talk through your thinking that led to your solution, but will leave the final assessment to once you have submitted an assignment.</li>
-<li>Note that office hours are not just for when you have content questions. Stop by to introduce yourself, ask questions about the broader field of statistics, or share what you are working on!</li>
+<li><strong>Note that office hours are not just for when you have content questions.</strong> Stop by to introduce yourself, ask questions about the broader field of statistics, or share what you are working on!</li>
 <li>I am always open to students joining remotely via Zoom – just email me.</li>
+<li>I <em>LOVE</em> office hours! Please come by – you are never inconveniencing me.</li>
 </ul>
 </section>
 <section id="course-description" class="level2">
 <h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
+<p>Study designs to address statistical research questions. Ethical considerations when designing studies and analyzing data. Experimental designs, completely randomized, block designs, factorial, and nested designs. Survey planning, execution, and analysis. Survey research, non-sampling, and sampling errors. Use of weights in surveys. Estimate parameters and calculate sample size. Course may be offered in classroom-based, online, or hybrid format</p>
 <p><strong>Prerequisites</strong></p>
+<p>STAT 252, STAT 1220, STAT 302, STAT 313 or STAT 3520.</p>
 </section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this course, you should be able to:</p>
+<ul>
+<li>Communicate the ethical implications of research questions, study designs, and analysis choices.</li>
+<li>Determine which type of study (observational or experimental) is appropriate given a research context.</li>
+<li>Design and explain a plan for conducting an experiment (e.g., RCBD) or a sample survey (e.g., stratified sample design).</li>
+<li>Analyze data by applying an appropriate model that accounts for the study design and attempts to isolate and quantify the effects of the factors of interest.</li>
+<li>Describe the limitations of study designs and propose alternative designs.</li>
+<li>Produce a written and/or oral summary of an appropriate study design and analysis.</li>
+</ul>
 </section>
 <section id="course-materials" class="level2">
 <h2 class="anchored" data-anchor-id="course-materials">Course Materials</h2>
 <p><strong>Course Webpage (Canvas)</strong></p>
 <p>All course material will be made available on our Canvas page. Canvas will also contain detailed weekly schedules throughout the term. You are responsible for checking the Canvas page every day and making sure you see Canvas Announcements.</p>
-<p>I will also be posting material on <a href="https://manncz.github.io/stat331-calpoly-s26/">this website</a> for easy access to materials. Please note that <strong>this website does not include deadlines</strong> and links to all material will additionally be posted to Canvas. Canvas will always contain the most updated information about course deadlines and details, so always defer to these.</p>
-<p><strong>Textbooks</strong></p>
-<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg></p>
+<p>I will also be posting material on <a href="https://manncz.github.io/stat-3540-calpoly/">this website</a> (which is actually where you are right now!) for easy access to materials. Please note that <strong>this website does not include deadlines</strong> and links to all material will additionally be posted to Canvas. Canvas will always contain the most updated information about course deadlines and details, so always defer to these.</p>
+<p><strong>Class Preparation</strong></p>
+<p>For each topic, you will prepare for class by <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"></path></svg> watching 1-3 short lecture videos following a set of <em>lecture slide notes</em> <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg> containing definitions and examples. You are expected to either print <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zM432 248a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> or save <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M48 96V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V170.5c0-4.2-1.7-8.3-4.7-11.3l33.9-33.9c12 12 18.7 28.3 18.7 45.3V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96C0 60.7 28.7 32 64 32H309.5c17 0 33.3 6.7 45.3 18.7l74.5 74.5-33.9 33.9L320.8 84.7c-.3-.3-.5-.5-.8-.8V184c0 13.3-10.7 24-24 24H104c-13.3 0-24-10.7-24-24V80H64c-8.8 0-16 7.2-16 16zm80-16v80H272V80H128zm32 240a64 64 0 1 1 128 0 64 64 0 1 1 -128 0z"></path></svg> the lecture slide notes to your device and follow along, filling <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path></svg> out your set of notes while watching the videos.</p>
+<p>During class, I will highlight any key points from the lecture videos and we will complete activities meant to reinforce the ideas learned in the videos.</p>
+<p>Supplemental reading from the following <em>open source</em> books will be recommended throughout the course:</p>
+<ul>
+<li><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg> <a href="http://users.stat.umn.edu/%7Egary/book/fcdae.pdf">A First Course in Design and Analysis of Experiments</a> by Gary W. Oehlert</li>
+<li><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg></li>
+</ul>
 <p><strong>Computing</strong></p>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M384 96V320H64L64 96H384zM64 32C28.7 32 0 60.7 0 96V320c0 35.3 28.7 64 64 64H181.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H277.3l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48V432c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H528zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg> You will need access to a laptop for this course. If this requirement is limiting for you, please contact me ASAP.</p>
-<p>We will be using the <code>R</code> statistical software and <code>RStudio</code> IDE throughout this course . Both <code>R</code> and <code>RStudio</code> are freely available. Download instructions are available on Canvas.</p>
+<p>We will be using the <code>R</code> statistical software and <code>RStudio</code> IDE throughout this course . Both <code>R</code> and <code>RStudio</code> are freely available. Download instructions are available on Canvas. If you can, please work on downloading this software before class begins.</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path></svg> We will also be using Gradescope – an app on your phone or computer browser.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -471,7 +493,7 @@ Warning
 </section>
 <section id="class-schedule-topic-outline" class="level2">
 <h2 class="anchored" data-anchor-id="class-schedule-topic-outline">Class Schedule &amp; Topic Outline</h2>
-<p>This schedule is tentative and subject to change.</p>
+<p>This schedule is tentative and subject to change. See Canvas and the course <a href="../index.html">Schedule</a> for up-to-date information.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -495,19 +517,19 @@ Warning
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Aug 25, Aug 27</td>
-<td style="text-align: left;">Introduction to R</td>
+<td style="text-align: left;">Introduction to Design of Experiments</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sep 1, Sep 3</td>
-<td style="text-align: left;">Basics of Graphics</td>
+<td style="text-align: left;">Completely Randomized Design (CRD)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sep 8, Sep 10</td>
-<td style="text-align: left;">Data Cleaning and Manipulation</td>
+<td style="text-align: left;">Power and Sample Size + Factorials</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sep 15</td>
-<td style="text-align: left;">Data Transformations + Factors</td>
+<td style="text-align: left;">Factorials</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sep 17</td>
@@ -515,51 +537,51 @@ Warning
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sep 22, Sep 24</td>
-<td style="text-align: left;">Special Data Types</td>
+<td style="text-align: left;">More Complex Experimental Designs</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sep 29, Oct 1</td>
-<td style="text-align: left;">Version Control</td>
+<td style="text-align: left;">More Complex Experimental Models</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Oct 6, Oct 8</td>
-<td style="text-align: left;">Functions and Iteration</td>
+<td style="text-align: left;">Extensions and Considerations</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Oct 13, Oct 15</td>
-<td style="text-align: left;">Functions and Simulation</td>
+<td style="text-align: left;">Extensions and Considerations</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Oct 22</td>
-<td style="text-align: left;">Regression</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">Oct 20</td>
 <td style="text-align: left;">Midterm Exam II</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;">Oct 22</td>
+<td style="text-align: left;">Observational Studies</td>
+</tr>
 <tr class="even">
 <td style="text-align: left;">Oct 27, Oct 29</td>
-<td style="text-align: left;">Inference and Advanced Graphics</td>
+<td style="text-align: left;">Intro to Surveys and Survey Sampling</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Nov 3, Nov 5</td>
-<td style="text-align: left;">XX</td>
+<td style="text-align: left;">Survey Sampling</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Nov 10, Nov 12</td>
-<td style="text-align: left;">XX</td>
+<td style="text-align: left;">Writing Survey Instruments</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Nov 17, Nov 19</td>
-<td style="text-align: left;">XX</td>
+<td style="text-align: left;">Survey Instruments and Survey Weights</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Dec 1, Dec 3</td>
-<td style="text-align: left;">XX</td>
+<td style="text-align: left;">Putting it all Together!</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Dec 8</td>
-<td style="text-align: left;">XX</td>
+<td style="text-align: left;">Putting it all Together!</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Dec 10</td>
@@ -588,55 +610,124 @@ Warning
 </section>
 <section id="formative-assessments" class="level3">
 <h3 class="anchored" data-anchor-id="formative-assessments">Formative Assessments</h3>
+<section id="class-preparation-participation-professionalism" class="level4">
+<h4 class="anchored" data-anchor-id="class-preparation-participation-professionalism">Class Preparation, Participation, &amp; Professionalism</h4>
+<p>This course uses a flipped classroom model. Core content is introduced before class through assigned videos or readings, and class time is devoted to activities and practice. Coming to class prepared is essential for your own learning and for your group’s success. Preparation will occasionally be checked using short, closed-note <em>learning quizzes</em> or <em>entry/exit tickets</em></p>
+<p>Participation credit is earned by being present, prepared, and engaged during class. You must be in class to receive participation credit. Part of this grade also reflects professionalism, including arriving on time, being mentally present, treating others with respect, and contributing constructively to group work.</p>
+<ul>
+<li><strong>2</strong> participation grades will be dropped; think of these as “sick days”.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you are feeling ill, please <em>do not come to class</em>. If you miss more than 2 class days for illness, we will work something out!</p>
+<p>See <a href="#sec-attendance" class="quarto-xref">Section&nbsp;8.1</a> for more information. You do not need to notify me, but instead do your best to complete the in-class activity found on Canvas and get any questions answered from your classmates, Discord, and office hours.</p>
+</div>
+</div>
+</section>
+<section id="in-class-activities" class="level4">
+<h4 class="anchored" data-anchor-id="in-class-activities">In-class Activities</h4>
+<p>Most class meetings will include in-class activities designed to reinforce and apply course content. Class time will be dedicated to working on these activities. You will collaborate with your group members; however, each student must submit their own original work.</p>
+<ul>
+<li>In-class activities will be submitted and graded through Gradescope, which is integrated with Canvas.</li>
+<li>Unless otherwise noted, activities are due at <strong>11:59pm the day after class.</strong></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cal Poly provides access to <a href="https://www.gradescope.com/">Gradescope</a>. There will be more instructions on using Gradescope as a student during the first week of class.</p>
+</div>
+</div>
+</section>
+<section id="lab-reports" class="level4">
+<h4 class="anchored" data-anchor-id="lab-reports">Lab Reports</h4>
+<p>You will complete 4-6 lab assignments (I am still figuring this out!) in groups of 3-4. Each lab will involve designing a study and collecting data, often using <a href="https://islands.smp.uq.edu.au/">The Islands</a>. A written report summarizing your methods and findings will be submitted for each lab. More details will be provided in class.</p>
+<ul>
+<li>One report per group should be submitted as a PDF on Canvas.</li>
+<li>See the course schedule on Canvas for tentative deadlines.</li>
+</ul>
+</section>
 </section>
 <section id="evaluative-assessments" class="level3">
 <h3 class="anchored" data-anchor-id="evaluative-assessments">Evaluative Assessments</h3>
 <section id="final-project" class="level4">
 <h4 class="anchored" data-anchor-id="final-project">Final Project</h4>
-<p>I am changing the final project from previous quarters, so it is still TBD.</p>
+<p>You will complete a paired final project in which you design and propose a study, including all necessary details. The project will culminate in a 10-minute presentation during the last week of class. Additional details and expectations will be provided later in the term.</p>
 </section>
 <section id="exams" class="level4">
 <h4 class="anchored" data-anchor-id="exams">Exams</h4>
-<p>There will be <strong>two midterm exams</strong> and a <strong>final exam</strong>.</p>
+<p>There will be <strong>two midterm exams</strong> and a <strong>final exam</strong>, designed to assess your individual understanding and progress in the course. You may bring a one-sided notesheet to each midterm exams and a two-sided notesheet to the final exam. Exam dates are listed in the course calendar.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you have a known conflict with an exam, please discuss it with me <strong>at least three weeks prior to the exam date</strong>. (See <a href="#sec-examconflict" class="quarto-xref">Section&nbsp;8.6</a> for more information.)</p>
+</div>
+</div>
 </section>
 </section>
 <section id="course-grade" class="level3">
 <h3 class="anchored" data-anchor-id="course-grade">Course Grade</h3>
 <p>Your grade in STAT 3540/5440 will contain the following components:</p>
-<table class="caption-top table">
+<div class="cell" data-fig-loc="H">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
 <thead>
 <tr class="header">
-<th>Assignments</th>
-<th>Weight</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Assignments</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Weight</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Group Quizzes &amp; Misc.</td>
-<td>10%</td>
+<td style="text-align: left;">Class Preparation, Participation, &amp; Professionalism</td>
+<td style="text-align: left;">5%</td>
 </tr>
 <tr class="even">
-<td>Practice Activities</td>
-<td>10%</td>
+<td style="text-align: left;">In-class Activities</td>
+<td style="text-align: left;">10%</td>
 </tr>
 <tr class="odd">
-<td>Lab Assignments</td>
-<td>20%</td>
+<td style="text-align: left;">Lab Reports</td>
+<td style="text-align: left;">15%</td>
 </tr>
 <tr class="even">
-<td>Midterm Exam</td>
-<td>20%</td>
+<td style="text-align: left;">Final Project</td>
+<td style="text-align: left;">10%</td>
 </tr>
 <tr class="odd">
-<td>Final Project</td>
-<td>15%</td>
+<td style="text-align: left;">Midterm Exams I &amp; II *</td>
+<td style="text-align: left;">25%</td>
 </tr>
 <tr class="even">
-<td>Final Exam</td>
-<td>25%</td>
+<td style="text-align: left;">Final Exam</td>
+<td style="text-align: left;">25%</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<p>* At the end of the semester, your higher-scoring midterm exam will be weighted to 15% of your final grade, while the lower-scoring midterm will be weighted to 10%.</p>
 <p>Lower bounds for grade cutoffs are shown in the following table. It is possible that I could lower any of the grade cutoffs. You will only have the opportunity for grade rounding to the nearest tenth of a percent if you completed all assignments in the course.</p>
 <table class="caption-top table">
 <thead>
@@ -691,20 +782,34 @@ Warning
 </section>
 <section id="course-policies" class="level2">
 <h2 class="anchored" data-anchor-id="course-policies">Course Policies</h2>
-<section id="attendance-participation" class="level3">
-<h3 class="anchored" data-anchor-id="attendance-participation">Attendance &amp; Participation</h3>
-<p>I do not take formal attendance in this class. The only time your attendance is required is for the Group Quizzes on Mondays. However, it is my expectation that you remain in class and on task until you have finished all your activities and assignments.</p>
-<p><strong>If you are feeling ill, please do not come to class</strong>.</p>
+<section id="sec-attendance" class="level3">
+<h3 class="anchored" data-anchor-id="sec-attendance">Attendance &amp; Participation</h3>
+<p>As stated above, <strong>if you are feeling ill, please do not come to class</strong>. Two participation grades will be dropped as “sick days.” If you <em>really</em> just have a cold and <em>really</em> want to come to class be polite to your classmates and wear a mask!</p>
 <p>Here’s what you should do if you do miss a class:</p>
 <ul>
-<li>Talk to a classmate to figure out what information you missed</li>
-<li>Check Canvas for any necessary handouts or changes to assignments</li>
-<li>Post on Discord with any questions you have after reviewing notes and handouts</li>
+<li>You do not need to notify me, unless there is a special circumstance you want to discuss.</li>
+<li>Complete the in-class activities on your own, which are posted on Canvas.</li>
+<li>Check Canvas for any other necessary notes or changes to assignments.</li>
+<li>Talk to a classmate to figure out what information you missed.</li>
+<li>Post on Discord with any questions you have after reviewing notes and activities.</li>
+<li>Come by office hours when you are feeling better.</li>
 </ul>
-<p>If you miss a bunch of classes, please come talk to me. I’m working from the assumption that you care and are trying, but something is getting in your way (health issues? college stress? work?); let’s figure out what that is and how I can help.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Don’t be a stranger!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you miss a bunch of classes, please do come talk to me. I’m working from the assumption that you care and are trying, but something is getting in your way (health issues? college stress? work?); let’s figure out what that is and how I can help.</p>
+</div>
+</div>
 </section>
-<section id="accessibility-and-accomodations" class="level3">
-<h3 class="anchored" data-anchor-id="accessibility-and-accomodations">Accessibility and Accomodations</h3>
+<section id="accessibility-and-accommodations" class="level3">
+<h3 class="anchored" data-anchor-id="accessibility-and-accommodations">Accessibility and Accommodations</h3>
 <p>I have taken numerous steps to ensure that all of the materials presented in this course are accessible to all participants, regardless of physical or learning disabilities. I know that everyone is unique and I may have unintentionally overlooked something that limits access to some materials or activities. Please let me know if you cannot access any content. If you find you need additional accommodations to complete the required course work, please contact me as soon as possible! I want to support your success.</p>
 <p>If you wish to request disability-related accommodations such as extra exam time for this or any other course, please contact the <a href="https://drc.calpoly.edu/">Disability Resource Center</a>. It’s important to do this with as much advanced notice as possible, so you have full access to your course materials and activities in a timely manner. <strong>Please also email me</strong> to let me know that I should expect an email from the DRC to get you the accommodations that you need.</p>
 </section>
@@ -715,7 +820,6 @@ Warning
 <section id="group-work" class="level3">
 <h3 class="anchored" data-anchor-id="group-work">Group Work</h3>
 <p>This course will rely heavily on in-class group work. You will be expected to work with classmates on in-class material. If you have concerns about random group assignment, please talk to me at the start of the term.</p>
-<p>You are also encouraged to discuss your ideas for lab assignments; however, I expect that these collaborations are about ideas and no R code is shared. Each person’s lab assignment submissions are expected to reflect their own thinking, and thus copying the work of others does not provide me with any information about your learning.</p>
 <p>The community standards for student-to-student and student-to-instructor interactions include the following:</p>
 <ul>
 <li>Listen actively and attentively.</li>
@@ -730,10 +834,15 @@ Warning
 </section>
 <section id="late-policy" class="level3">
 <h3 class="anchored" data-anchor-id="late-policy">Late Policy</h3>
-<p><strong>Everyone will be given a “bank” of 4 <em>deadline extensions</em></strong> which can be used on XXX at any point in the quarter. <strong>One deadline extension will get you a 24 hour extension on a given assignment.</strong> You can use all of your deadline extensions on one assignment or split them up in any way.</p>
+<p><strong>Everyone will be given a “bank” of 4 <em>deadline extensions</em></strong> which can be used on in-class activities or lab reports at any point in the quarter. <strong>One deadline extension will get you a 24 hour extension on a given assignment.</strong> You can use all of your deadline extensions on one assignment or split them up in any way.</p>
 <ul>
 <li>Like how the “real world” works, you must request a deadline extension <strong>before the deadline.</strong> To use your deadline extensions, you need to email me <strong>before the assignment deadline.</strong> You don’t need to get a response from me, you just need to email me at least a minute before the deadline.</li>
 <li>If you do not email me before the assignment deadline (or you run out of late days), you will be docked 20% for each day that the assignment is late. (e.g.&nbsp;you can get a maximum of 80% on the assignment if it is submitted within 24 hours after the original due date and time.)</li>
+<li>In order to use deadline extensions on group <em>lab reports</em>:
+<ol type="1">
+<li><strong>everyone</strong> in your lab group must agree to use one of their extensions.</li>
+<li>You <strong>must cc everyone</strong> in your group to your email to me asking for the extension.</li>
+</ol></li>
 </ul>
 <p>A note on this policy: my priority is for all of you to engage with and understand the course materials. The best way to achieve this is to complete all assignments and receive feedback on your work. At the same time, I understand that things happen outside of our control and that you are balancing many responsibilities.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -751,8 +860,8 @@ Warning
 </div>
 <p>If you find yourself with extenuating circumstances beyond the defined late policy, please email me before the due date.</p>
 </section>
-<section id="exam-conflicts" class="level3">
-<h3 class="anchored" data-anchor-id="exam-conflicts">Exam Conflicts</h3>
+<section id="sec-examconflict" class="level3">
+<h3 class="anchored" data-anchor-id="sec-examconflict">Exam Conflicts</h3>
 <p>If you have a known conflict with an exam, please discuss it with me <strong>at least three weeks prior to the exam date</strong>. If an illness or a family emergency arises, please let me know as soon as possible, and we will work out a solution. This may involve taking the exam at a later date or replacing the missed exam score with the final exam score. If you are unable to take the final exam, you will likely receive an Incomplete in the course.</p>
 </section>
 </section>
@@ -761,7 +870,7 @@ Warning
 <p><strong>For Students, I expect:</strong></p>
 <ul>
 <li>You will ask lots of questions.</li>
-<li>You will do reading and other assignments outside of class and be prepared for each class meeting.</li>
+<li>You will do the reading, video watching, and other assignments outside of class and be prepared for each class meeting.</li>
 <li>You will engage in some productive struggle/challenge when working on assignments (i.e.&nbsp;not give up and google or use ChatGPT immediately!)</li>
 <li>If you find yourself struggling in general or feel that you are falling behind, please reach out to me as soon as possible so that we can develop a plan for your success together.</li>
 <li>You will take advantage of the resources that I provide and to seek out additional resources if you find that you are struggling with the material. You do not need to seek out additional resources all on your own – we can figure out what additional resources you may need.<br>
@@ -785,15 +894,7 @@ Warning
 <p>It is most likely that a student will slip up if they are feeling overwhelmed or unsure of how to approach a problem that they are stuck on. So <strong>let’s be proactive to prevent those situations!!</strong> If you are helpless in an assignment or in studying, post on discord, come to office hours, or email me or one of your classmates! I am working hard to provide all of the resources you need to succeed</p>
 <p>However, <strong>the college doesn’t really care if you break the rules on purpose or by accident.</strong> If I suspect you have done something that violates academic integrity on any graded elements of the course (included those graded for completion), you will receive an email to tell you about my suspicion and how the situation will be handled. <strong>Typically, students earn a 0 for the assignment on which academic misconduct is found.</strong> University policy dictates that we must report every instance of suspected academic dishonesty to the Office of Student Rights and Responsibilities, no matter how small. For more information on academic misconduct and what constitutes cheating and plagiarism, please see <a href="https://academicprograms.calpoly.edu/content/academicpolicies/Cheating">academicprograms.calpoly.edu/content/academicpolicies/Cheating</a>.</p>
 <p>It is important to note that paraphrasing or quoting another’s work without proper citation is a form of academic misconduct. This includes the <code>R</code> code produced by someone else! Writing code is like writing a paper, it is obvious if you copied-and-pasted a sentence from someone else into your paper because the way each person writes is different.</p>
-<p>Even inadvertent or unintentional misuse or appropriation of another’s work (such as relying heavily on source material that is not expressly acknowledged) is considered plagiarism. This includes using <strong>Generative AI, which should only be used to help you problem solve just as a tutor or peer would, and not as a substitute for your own work.</strong> If you are struggling with writing the <code>R</code> code for an assignment, please reach out to me and post to Discord. If you use Generative AI to help, make sure that you <strong>understand</strong> the solution it provides.</p>
-<section id="generative-ai-policy" class="level3">
-<h3 class="anchored" data-anchor-id="generative-ai-policy">Generative AI Policy</h3>
-<p>Generative AI (like Chat GPT) is an extremely and increasingly powerful tool for many many tasks. It is true that in some (how many, I am not sure!) workplaces, employees are encouraged to use AI for a number of tasks. However, in this class, you are students, not employees! Your primary goal here is to learn, so I want us to think critically about how to use Generative AI (if you choose to use it at all) to assist your <strong>learning</strong>, not to undermine it.</p>
-<p>You <strong>may not copy and paste any course materials into generative AI</strong>. All course materials are my or other faculty’s intellectual property, and we have not consented to you contributing it to generative AI model data.</p>
-<p>You can use generative AI to complete XX. However, I encourage you to give all problems a full effort on your own, referencing the provided course materials <strong>before</strong> turning to AI. You will learn SO much more this way!! You should also give thought to how you are using AI, and approach it as a tutor, asking it specific questions to help you solve a problem. Again, you may not copy and paste course materials, including problems, into AI. When you do use AI to help with a problem, make sure you understand <strong>why</strong> the code it provides works or why the solution make sense. <strong>If you choose to use AI, you must cite your use including the prompt that you gave.</strong></p>
-<p>Note that work created by AI tools may not be considered original work and instead, considered automated plagiarism. It is derived from previously created texts from other sources that the models were trained on, yet doesn’t cite sources. Thus, there is a high risk that you can unintentionally plagiarize other sources from the web.</p>
-<p>Class time is structured around active learning and I expect you to actively engage with the software, so <strong>you may not use generative AI for in-class work and activities</strong>. You have each other and me to grapple with the material during class. If you use generative AI in class, there will be a deduction in your XX portion of the grade.</p>
-<p>A final personal opinion is that I find YOU so much more interesting than AI! I would so much rather see and read what you are thinking and how you approach a problem than something you may think looks more “clean” from AI.</p>
+<p>Even inadvertent or unintentional misuse or appropriation of another’s work (such as relying heavily on source material that is not expressly acknowledged) is considered plagiarism. This includes using <strong>Generative AI, which should only be used to help you problem solve just as a tutor or peer would, and not as a substitute for your own work.</strong> If you are struggling with an assignment, please reach out to me and post to Discord. If you use Generative AI to help, make sure that you <strong>understand</strong> the solution it provides.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -807,12 +908,56 @@ Warning
 <p>In this class the assumed knowledge is the course materials, including the course textbook, coursework pages, and course slides. If you use outside resources on assignments I expect that you will <em>cite those resources.</em> This means that</p>
 <ul>
 <li>If you use <strong>Google</strong> you are expected to “inform” me of any resources you used by pasting the link to the resource at the end of your assignment with a note of how it was used.</li>
-<li>If you use <strong>AI</strong> you are expected to “inform” me by stating that you used at the end of your assignment including <strong>the full prompt that you gave AI (like ChatGPT)</strong>.</li>
+<li>If you use <strong>AI</strong> you are expected to “inform” me by stating that you used at the end of your assignment including <strong>the full prompt that you gave AI (like ChatGPT)</strong>. See an example of an appropriate citation below.</li>
 <li>If you <strong>work with classmates</strong> on an assignment, you are expected to “inform” me by including a note with their names.</li>
 </ul>
 </div>
 </div>
 <p><strong>If you have any questions about using and citing sources, you are expected to ask for clarification.</strong></p>
+<section id="generative-ai-policy" class="level3">
+<h3 class="anchored" data-anchor-id="generative-ai-policy">Generative AI Policy</h3>
+<p>Generative AI (like Chat GPT) is an extremely and increasingly powerful tool for many many tasks. It is true that in some (how many, I am not sure!) workplaces, employees are encouraged to use AI for a number of tasks. However, in this class, you are students, not employees! Your primary goal here is to learn, so I want us to think critically about how to use Generative AI (if you choose to use it at all) to <strong>assist your learning</strong>, not to undermine it.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>No copy-paste, seriously
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You <strong>may not copy and paste any course materials into generative AI</strong>. That includes slides and assignments. All course materials are my or other faculty’s intellectual property, and we have not consented to you contributing it to generative AI model data.</p>
+</div>
+</div>
+<section id="in-class" class="level4">
+<h4 class="anchored" data-anchor-id="in-class">In Class:</h4>
+<p>Class time is structured around active learning and I expect you to actively engage with the software, so <strong>you may not use generative AI for in-class work and activities</strong>. You have each other and me to grapple with the material during class. If you use generative AI in class, you will not get participation credit for that day.</p>
+</section>
+<section id="outside-of-class" class="level4">
+<h4 class="anchored" data-anchor-id="outside-of-class">Outside of Class:</h4>
+<p>You can use generative AI outside of class on assignments. However, I encourage you to give all problems a full effort on your own, referencing the provided course materials <strong>before</strong> turning to AI. You will learn SO much more this way!! You should also give thought to how you are using AI, and approach it as a tutor, asking it specific questions to help you solve a problem. Again, you may not copy and paste course materials, including problems, into AI. When you do use AI to help with a problem, make sure you understand <strong>why</strong> the code it provides works or why the solution make sense. <strong>If you choose to use AI, you must cite your use including the prompt that you gave.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Example AI citation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li></li>
+</ul>
+</div>
+</div>
+<p>Note that work created by AI tools may not be considered original work and instead, considered automated plagiarism. It is derived from previously created texts from other sources that the models were trained on, yet doesn’t cite sources. Thus, there is a high risk that you can unintentionally plagiarize other sources from the web.</p>
+</section>
+<section id="my-2-cents" class="level4">
+<h4 class="anchored" data-anchor-id="my-2-cents">My 2-cents</h4>
+<p>A final personal opinion is that I find YOU so much more interesting than AI! I would so much rather see and read what you are thinking and how you approach a problem than something you may think looks more “clean” from AI.</p>
+</section>
 </section>
 </section>
 <section id="learning-environment-and-support" class="level2">
@@ -825,13 +970,20 @@ Warning
 </section>
 <section id="support-services" class="level3">
 <h3 class="anchored" data-anchor-id="support-services">Support Services</h3>
-<p>If you are experiencing food insecurity, housing instability, or other challenges that may impact your ability to succeed in this course, please refer to the resources listed on Canvas under “Student Support Services at Cal Poly.” These resources provide a range of essential support services, including emergency financial assistance, counseling, and academic support.</p>
+<p>If you are experiencing food insecurity, housing instability, or other challenges that may impact your ability to succeed in this course, please refer to the resources listed on Canvas under <a href="https://canvas.calpoly.edu/courses/191796/pages/student-support-and-basic-needs">“Student Support and Basic Needs”</a>. These resources provide a range of essential support services, including emergency financial assistance, counseling, and academic support.</p>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Why do I include my middle name? It’s my mom’s last name!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>As an FYI for folks who don’t know, it is considered rude to use “Ms.” or “Mrs.” when addressing instructors. I will get annoyed if you do this and will correct you.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
