@@ -1,0 +1,36 @@
+---
+title: "Course Resources"
+---
+
+
+# R Cheatsheets
+
+- [RStudio IDE](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html?_gl=1*1bgdjez*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjEuMTcxODkxNjk4OC4wLjAuMA..)
+
+- [Quarto](https://rstudio.github.io/cheatsheets/html/quarto.html?_gl=1*1li2kb5*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjEuMTcxODkxNjk4OC4wLjAuMA..)
+
+- [Base R](https://rstudio.github.io/cheatsheets/base-r.pdf)
+
+- [Git & GitHub](https://rstudio.github.io/cheatsheets/git-github.pdf)
+
+- [Data Visualization with ggplot2](https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..)
+
+- [Data Import with readr](https://rstudio.github.io/cheatsheets/html/data-import.html?_gl=1*1bgdjez*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjEuMTcxODkxNjk4OC4wLjAuMA..)
+
+- [Data Wrangling with dplyr](https://rstudio.github.io/cheatsheets/html/data-transformation.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..)
+
+- [Data Tidying with tidyr](https://rstudio.github.io/cheatsheets/html/tidyr.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..)
+
+- [Factors with forcats](https://rstudio.github.io/cheatsheets/html/factors.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..)
+
+- [Dates with lubridate](https://rstudio.github.io/cheatsheets/html/lubridate.html?_gl=1*12ke444*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA) 
+
+- [Strings with stringr](https://rstudio.github.io/cheatsheets/html/strings.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..)
+
+- [Regular Expressions](https://rstudio.github.io/cheatsheets/regex.pdf)
+
+
+- [Tidy Evaluation](https://rstudio.github.io/cheatsheets/tidyeval.pdf)
+
+
+- [Iteration with purrr](https://rstudio.github.io/cheatsheets/html/purrr.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..)

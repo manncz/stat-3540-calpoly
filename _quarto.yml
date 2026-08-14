@@ -7,7 +7,7 @@ project:
     - "!/student-versions/"
     - "!/solutions/"
     - "!/exams/"
-    - "!/course-info/stud-info/"
+    - "!/0-course-info/stud-info/"
     - "!/project/"
     - "!/handouts/"
     - "!/quiz/"
@@ -44,13 +44,13 @@ website:
     contents:
       - section: "Course information"
         contents:
-          - href: course-info/syllabus-f26.qmd
+          - href: 0-course-info/syllabus-f26.qmd
             text: Syllabus
           # - href: course-materials/course-support.qmd
           #   text: Support
           - href: index.qmd
             text: Schedule
-          - href: course-info/course-resources.qmd
+          - href: 0-course-info/course-resources.qmd
             text: Resources
 
 format:
