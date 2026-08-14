@@ -97,15 +97,23 @@ t <- d |>
                                             "Unit 2",
                                             "Unit 3",
                                             "Unit 4"))) |>
-   cols_label(
+    cols_width(
+    week ~ pct(4),
+    day ~ pct(4.5),
+    topic ~ pct(15),
+    prepare:lab ~ pct(5)
+    )  |> 
+  cols_align(align = "center",
+             columns = !topic) |> 
+  cols_label(
     week = "",
     topic = "",
     day = "",
-    prepare = md("**Prepare**"),
-    slides = md("**Slides**"), 
+    prepare = md("**Preparation**"),
+    slides = md("**In-Class\nSlides**"), 
     activity = md("**Activity**"),
     lab = md("**Lab**")
-    )
+    ) 
 
 t <- t |>
   as_raw_html() 
