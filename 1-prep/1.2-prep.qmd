@@ -34,7 +34,9 @@ library(tidyverse)
 
 {{< video https://www.youtube.com/watch?v=aDxl9b4f2Lo >}}
 
+## Get Started with Discord
 
+- ✅ Follow the instructions to [Join the STAT 3540 Discord Server](../0-course-info/discord-instructions.qmd). Make sure that you complete all of the "Get Started" tasks you will be prompted to do once you are in!
 
 ## Getting Started with R and RStudio
 
