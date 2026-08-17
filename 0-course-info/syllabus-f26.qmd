@@ -1,6 +1,9 @@
 ---
 title: "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus"
 subtitle: "Fall 2026"
+format:
+  html: default
+  pdf: default
 ---
 
 ```{r}
@@ -246,9 +249,18 @@ You can call me Dr. C, Professor/Prof. C., Dr. Mann, or Professor.^[As an FYI fo
 
 **Course Discord Page:**
 
+:::columns
+:::{.column width=10%}
+![](https://logos-world.net/wp-content/uploads/2020/12/Discord-Emblem-700x394.png){fig-alt="Discord logo" fig-align="center"}
+:::
+:::{.column width=90%}
 For questions of general interest, such as course clarifications or
 conceptual questions, please use the course [Discord page](discord-instructions.html) (you will join
 this Week 1). If you have a question, someone else in class does too! I encourage you all to respond to each other. I will do my best to check Discord twice each weekday during working hours (8-6) to ensure that questions are being answered accurately.
+
+:::
+
+:::
 
 I encourage you to give your post a concise and informative initial
 sentence, so that other people can find it. You may post snippets of code, errors or problem attempts on Discord, but please do not post full solutions.
@@ -317,7 +329,7 @@ officehr_cal
 
 
 ::: column-margin
-https://lsc.cornell.edu/consult-with/how-to-use-office-hours/
+[![Learn more about faculty office hours by clicking on the image.](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c2a562db-e9cf-4540-9abb-5ba7bce7cf40_rw_1920.png?h=a05dd63b5a17c7d8f077e9243c846365){fig-alt="A little monster in a cool black jacket and sunglasses, leaning casually against a fence with a sign reading 'Warning! Live troubleshooting!'"}](https://lsc.cornell.edu/consult-with/how-to-use-office-hours/)
 
 :::
 
@@ -358,9 +370,16 @@ By the end of this course, you should be able to:
 
 **Course Webpage (Canvas)**
 
+:::columns
+:::{.column width=10%}
+![](https://www.wabash.edu/images2/technology/canvas.png){fig-alt="canvas logo" fig-align="center" width=80%}
+:::
+:::{.column width=90%}
 All course material will be made available on our Canvas page. Canvas will
 also contain detailed weekly schedules throughout the term. You are responsible for
 checking the Canvas page every day and making sure you see Canvas Announcements.
+:::
+:::
 
 I will also be posting material on [this website](https://manncz.github.io/stat-3540-calpoly/) (which is actually where you are right now!) for easy access to materials. Please note that **this website does not include deadlines** and links to all material will additionally be posted to Canvas. Canvas will always contain the most updated information about course deadlines and details, so always defer to these. 
 
@@ -380,8 +399,15 @@ Supplemental reading from the following *open source* books will be recommended 
 `r fontawesome::fa("computer")` You will need access to a laptop for this course. If this requirement is limiting for you, please
 contact me ASAP.
 
+:::columns
+:::{.column width=10%}
+![](https://opensource.posit.co/software/rstudio/logo.svg){fig-alt="rstudio logo" fig-align="center"}
+:::
+:::{.column width=90%}
 We will be using the `R` statistical software and `RStudio` IDE
 throughout this course . Both `R` and `RStudio` are freely available. Download instructions are available on Canvas. If you can, please work on downloading this software before class begins.
+:::
+:::
 
 `r fontawesome::fa("phone")` We will also be using Gradescope -- an app on your phone or computer browser.
 
@@ -443,7 +469,7 @@ rubrics to evaluate your work.
 
 ### Formative Assessments
 
-#### Class Preparation, Participation, \& Professionalism
+#### 📺📘📋✅ Class Preparation, Participation, \& Professionalism
 
 This course uses a flipped classroom model. Core content is introduced before class through assigned videos or readings, and class time is devoted to activities and practice. Coming to class prepared is essential for your own learning and for your group’s success. Preparation will occasionally be checked using short, closed-note *learning quizzes* or *entry/exit tickets*
 
@@ -458,7 +484,7 @@ If you are feeling ill, please *do not come to class*. If you miss more than 2 c
 See @sec-attendance for more information. You do not need to notify me, but instead do your best to complete the in-class activity found on Canvas and get any questions answered from your classmates, Discord, and office hours.
 :::
 
-#### In-class Activities
+#### 🧩 In-class Activities
 
 Most class meetings will include in-class activities designed to reinforce and apply course content. Class time will be dedicated to working on these activities. You will collaborate with your group members; however, each student must submit their own original work.
 
@@ -469,7 +495,7 @@ Most class meetings will include in-class activities designed to reinforce and a
 Cal Poly provides access to [Gradescope](https://www.gradescope.com/). There will be more instructions on using Gradescope as a student during the first week of class.
 :::
 
-#### Lab Reports
+#### 🏝 Lab Reports
 
 You will complete 4-6 lab assignments (I am still figuring this out!) in groups of 3-4. Each lab will involve designing a study and collecting data, often using [The Islands](https://islands.smp.uq.edu.au/). A written report summarizing your methods and findings will be submitted for each lab. More details will be provided in class.
 
@@ -479,11 +505,11 @@ You will complete 4-6 lab assignments (I am still figuring this out!) in groups 
 
 ### Evaluative Assessments
 
-#### Final Project
+#### 📓 Final Project
 
 You will complete a paired final project in which you design and propose a study, including all necessary details. The project will culminate in a 10-minute presentation during the last week of class. Additional details and expectations will be provided later in the term.
 
-#### Exams
+#### 📝 Exams
 
 There will be **two midterm exams** and a **final exam**, designed to assess your individual understanding and progress in the course. You may bring a one-sided notesheet to each midterm exams and a two-sided notesheet to the final exam. Exam dates are listed in the course calendar.
 
@@ -711,11 +737,20 @@ Class time is structured around active learning and I expect you to actively eng
 You can use generative AI outside of class on assignments. However, I encourage you to give all problems a full effort on your own, referencing the provided course materials **before** turning to AI. You will learn SO much more this way!! You should also give thought to how you are using AI, and approach it as a tutor, asking it specific questions to help you solve a problem. Again, you may not copy and paste course materials, including problems, into AI. When you do use AI to help with a problem, make sure you understand **why** the code it provides works or why the solution make sense. **If you choose to use AI, you must cite your use including the prompt that you gave.**
 
 :::callout-tip
-## Example AI citation
+## AI Citation Guidelines
 
-- 
+**General form:**^[Adapted from the Dalhousie University Library Guide. [https://dal.ca.libguides.com/CitationStyleGuide/citing-ai](https://dal.ca.libguides.com/CitationStyleGuide/citing-ai)]
+
+Prompt: [[provide exact prompt in quoations]]
+
+AI Company Name. (year, month day). *Title of chat in italics* [Generative AI chat]. Tool Name/Model. URL of the chat itself.
 
 
+**Example:**
+
+Prompt: "How can you randomly assign a vector a names to five treatments in R?"
+
+Anthropic. (2026, August 17). *Random assignment in R* [Generative AI chat]. Claude Sonnet 4.5. [https://claude.ai/share/0c6f2224-8839-4150-80d3-c02194358cc0](https://claude.ai/share/0c6f2224-8839-4150-80d3-c02194358cc0)
 
 :::
 
