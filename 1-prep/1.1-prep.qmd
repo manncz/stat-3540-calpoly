@@ -11,9 +11,9 @@ number-depth: 2
 library(tidyverse)
 ```
 
-#### 📖 Readings: 15 minutes
+#### 📖 Read: 15 minutes
 
-#### 📽 Watch Videos: 30 min
+#### 📽 Watch Videos: 30-45 min
 
 ------------------------------------------------------------------------
 
@@ -25,16 +25,20 @@ library(tidyverse)
 :::
 
 
-### Syllabus
+## Syllabus
 
-- 📖 Review Canvas and the [syllabus](../0-course-info/syllabus-f26.qmd) after watching the introduction!
+- 📖 Review Canvas and the [syllabus](../0-course-info/syllabus-f26.qmd).
+
+- 📽 Watch at least the first 6 minutes of this introduction. The rest is if you would like a video walk-through of the syllabus!
+
+
+{{< video https://youtu.be/D1y80v4FHrE >}}
 
 
 
+## Basics of Design of Experiments (DOE)
 
-### Basics of Design of Experiments (DOE)
-
-- Follow along with the [slides](../2-slides/01.1-baseics-of-doe.qmd).
+- 📽 Follow along with the [slides](../2-slides/01.1-basics-of-doe.qmd).
 - Note: you can export the slides to a pdf for notetaking via the bottom left three horizontal stacked lines > Tools > PDF Export Mode > Print + Save as PDF
 
 {{< video https://www.youtube.com/watch?v=R65yHRQIBlc >}}

@@ -120,15 +120,24 @@ Now, suppose that early sign-ups tend to be more motivated or well-rested, while
 
 Why is this problematic?
 
-## Experimental Design vs Observational Study
+## Randomized Experiment vs Observational Study
 
 ::: callout-note
-+ **Designed Experiment:** A treatment is __________________ (and randomly) imposed on an experimental unit in the interest of observing the response.
++ **Randomized Experiment:** A treatment is __________________ and randomly imposed on an experimental unit in the interest of observing the response.
 
 + **Observational Study:** This involves collecting and analyzing data __________________ randomly assigning treatments to experimental units.
 
-BIG IDEA: Because designed experiments use random assignment of the treatments (as well as other types of randomization) cause-and-effect conclusions may be made. In observational studies, because no random assignment is used, only associations may be concluded, because there are likely to be confounding variables.
+BIG IDEA: Because randomized experiments use random assignment of the treatments (as well as other types of randomization) cause-and-effect conclusions may be made. In observational studies, because no random assignment is used, only associations may be concluded, because there are likely to be confounding variables.
 :::
+
+## Complicating the dichotomy...
+
+- Causal conclusions can be drawn from a couple different types of **well-designed** studies:
+  - Randomized experiments
+  - Quasi-experiments
+  - Specifically designed and analyzed observational studies
+  
+- The key issue is whether you can convince yourself (an others) that confounding has been eliminated through your design and analysis
 
 <!-- ## Basic Steps -->
 

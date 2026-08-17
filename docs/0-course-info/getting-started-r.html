@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1.2 Preparation: Controlling for Variability and R &amp; RStudio – Statistical Methods for Study Design and Analysis</title>
+<title>Getting Started with R and RStudio – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -77,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -319,22 +354,40 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#controlling-for-variability" id="toc-controlling-for-variability" class="nav-link active" data-scroll-target="#controlling-for-variability"><span class="header-section-number">1</span> Controlling for Variability</a></li>
-  <li><a href="#getting-started-with-r-and-rstudio" id="toc-getting-started-with-r-and-rstudio" class="nav-link" data-scroll-target="#getting-started-with-r-and-rstudio"><span class="header-section-number">2</span> Getting Started with R and RStudio</a>
+  <li><a href="#sec-installr" id="toc-sec-installr" class="nav-link active" data-scroll-target="#sec-installr">Installing <code>R</code></a>
   <ul class="collapse">
-  <li><a href="#set-up-r-and-rstudio-for-stat-3540-5440" id="toc-set-up-r-and-rstudio-for-stat-3540-5440" class="nav-link" data-scroll-target="#set-up-r-and-rstudio-for-stat-3540-5440">Set up R and RStudio for STAT 3540 / 5440</a></li>
-  <li><a href="#learn-about-refresh-r" id="toc-learn-about-refresh-r" class="nav-link" data-scroll-target="#learn-about-refresh-r">Learn About / Refresh R</a></li>
+  <li><a href="#updating-your-version-of-r" id="toc-updating-your-version-of-r" class="nav-link" data-scroll-target="#updating-your-version-of-r">Updating Your Version of R</a>
+  <ul class="collapse">
+  <li><a href="#if-you-are-a-windows-user" id="toc-if-you-are-a-windows-user" class="nav-link" data-scroll-target="#if-you-are-a-windows-user">If you are a <em>Windows</em> user:</a></li>
+  <li><a href="#if-you-are-macos-user" id="toc-if-you-are-macos-user" class="nav-link" data-scroll-target="#if-you-are-macos-user">If you are <em>macOS</em> user:</a></li>
+  <li><a href="#if-you-are-a-linux-user" id="toc-if-you-are-a-linux-user" class="nav-link" data-scroll-target="#if-you-are-a-linux-user">If you are a <em>Linux</em> user:</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sec-installrstudio" id="toc-sec-installrstudio" class="nav-link" data-scroll-target="#sec-installrstudio">Install RStudio</a>
+  <ul class="collapse">
+  <li><a href="#updating-your-version-of-rstudio" id="toc-updating-your-version-of-rstudio" class="nav-link" data-scroll-target="#updating-your-version-of-rstudio">Updating Your Version of RStudio</a></li>
+  <li><a href="#installing-rstudio" id="toc-installing-rstudio" class="nav-link" data-scroll-target="#installing-rstudio">Installing RStudio</a></li>
+  </ul></li>
+  <li><a href="#sec-quarto" id="toc-sec-quarto" class="nav-link" data-scroll-target="#sec-quarto">Ensure Quarto is Installed</a></li>
+  <li><a href="#sec-rproject" id="toc-sec-rproject" class="nav-link" data-scroll-target="#sec-rproject">Create an R Project</a></li>
+  <li><a href="#sec-intror" id="toc-sec-intror" class="nav-link" data-scroll-target="#sec-intror">Introduction to R and RStudio</a>
+  <ul class="collapse">
+  <li><a href="#navigating-rstudio" id="toc-navigating-rstudio" class="nav-link" data-scroll-target="#navigating-rstudio">Navigating RStudio</a>
+  <ul class="collapse">
+  <li><a href="#exploring-the-rstudio-panes" id="toc-exploring-the-rstudio-panes" class="nav-link" data-scroll-target="#exploring-the-rstudio-panes">Exploring the RStudio Panes</a></li>
+  </ul></li>
+  <li><a href="#programming-in-r" id="toc-programming-in-r" class="nav-link" data-scroll-target="#programming-in-r">Programming in R</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/manncz/stat-3540-calpoly/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">1.2 Preparation: Controlling for Variability and R &amp; RStudio</h1>
+<h1 class="title">Getting Started with R and RStudio</h1>
 </div>
 
 
@@ -351,71 +404,317 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="read-15-minutes" class="level4">
-<h4 class="anchored" data-anchor-id="read-15-minutes">📖 Read: 15 minutes</h4>
-</section>
-<section id="watch-videos-15-min" class="level4">
-<h4 class="anchored" data-anchor-id="watch-videos-15-min">📽 Watch Videos: 15 min</h4>
-</section>
-<section id="complete-activity-20-min" class="level4">
-<h4 class="anchored" data-anchor-id="complete-activity-20-min">✅ Complete Activity: 20 min</h4>
-<hr>
-<div class="callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">None</span>Learning Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="sec-installr" class="level1 page-columns page-full">
+<h1>Installing <code>R</code></h1>
+<p>You need local installations of both R (the software) and RStudio (the interface for working in R). <strong>Do not skip this step if you already have both R and RStudio installed on your computer</strong>, as you need to ensure you are using <strong>the most up to date version</strong> of R and RStudio.</p>
+<section id="updating-your-version-of-r" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="updating-your-version-of-r">Updating Your Version of R</h2>
+<p>If you already have <code>R</code> downloaded, you need to confirm that you have the most up to date version of <code>R</code>. <strong>Do not ignore these instructions.</strong> If you neglect to update your version of R, you may find that updating a package will make it so your code will not run.</p>
 <ul>
-<li>Distinguish between treatment structure and design structure.</li>
-<li>Recognize and apply principles of randomization, blocking, and replication to reduce variability.</li>
-<li>Differentiate between designed experiments and observational studies, explaining the implications for cause and effect</li>
+<li>Step 1: Open RStudio</li>
+<li>Step 2: At the top of the the Console it will say what version of R you are using</li>
 </ul>
-</div>
-</div>
-</section>
-<section id="controlling-for-variability" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="controlling-for-variability"><span class="header-section-number">1</span> Controlling for Variability</h2>
+<p><img src="images/01-rversion.png" class="img-fluid" alt="A screenshot of what version of R should appear when you open RStudio. The version reads R version 4.6.1 (2026-06-24) -- 'Happy Hop'."></p>
+<p>You can also see the version right under the word “Console” or by running the following code in the console: <code>R.version</code>.</p>
+<p>If the version <strong>is not</strong> 4.6.1 (like the image above), you need to update your version of R! The simplest way to do this is to follow the instructions below to install R.</p>
+<p>Download and install R by going to <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a>. Here, you will find three options for installing R—click on the option for your computer’s operating system.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/YrEe2TLr3MI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div></div><section id="if-you-are-a-windows-user" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-are-a-windows-user">If you are a <em>Windows</em> user:</h3>
 <ul>
-<li>📽 Follow along with the <a href="../2-slides/01.2-controlling-for-variability.html">slides</a>.</li>
+<li><p>Click on “Download R for Windows”</p></li>
+<li><p>Click on “base”</p></li>
+<li><p>Click on the Download link.</p></li>
+<li><p>When you open the execution file (<code>.exe</code>) you will be prompted with a variety of questions about installing R. Feel free to use the default features / settings that come with R (continue to click “Ok” until the download starts).</p></li>
 </ul>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/aDxl9b4f2Lo" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-<section id="getting-started-with-r-and-rstudio" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="getting-started-with-r-and-rstudio"><span class="header-section-number">2</span> Getting Started with R and RStudio</h2>
-<p>We are going to use R and RStudio throughout this course. You may have used Posit Cloud in previous courses, but in this course we will all work with a <em>local</em> version of the software.</p>
-<p>By the start of week 2, you will need to have the latest versions R and RStudio installed and working on your computer! Come by office hours and reach out if you are having trouble.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Cannot Install R or RStudio
+<span class="screen-reader-only">Warning</span>Multiple Versions of R
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If for any reason you cannot download R or RStudio onto your laptop, please let me know as soon as possible so we can figure something out.</p>
-</div>
-</div>
-<section id="set-up-r-and-rstudio-for-stat-3540-5440" class="level3">
-<h3 class="anchored" data-anchor-id="set-up-r-and-rstudio-for-stat-3540-5440">Set up R and RStudio for STAT 3540 / 5440</h3>
+<p>Beware that if you had a previous version of R downloaded on your PC, that old version will not be deleted when you download the most recent version of R. We do not want to have two versions of R installed, as your computer can get confused what version of R to use. So, you need to remove the old version of R.</p>
+<p>To do this you need to:</p>
 <ul>
-<li>✅ Follow the instructions to <a href="../0-course-info/getting-started-r.html#sec-installr">Install / Update R</a>.</li>
-<li>✅ Follow the instructions to <a href="../0-course-info/getting-started-r.html#sec-installrstudio">Install / Update RStudio</a></li>
-<li>✅ Follow the instructions to ensure <a href="../0-course-info/getting-started-r.html#sec-quarto">Quarto is installed</a></li>
-<li>✅ Follow the instructions to <a href="../0-course-info/getting-started-r.html#sec-rproject">create an RStudio Project</a> for this course</li>
+<li>Navigate to your computer’s settings</li>
+<li>Click on the “Apps” option on the left-hand panel</li>
+<li>Search for or scroll down to R</li>
+<li>Find the older version of R</li>
 </ul>
+<p><img src="images/01-multiple-versions-of-r.png" class="img-fluid" alt="A screenshot of a PC with two different versions of R installed---version 4.3.1 and version 4.4.1."></p>
+<ul>
+<li>Click on the <code>...</code> on the right side</li>
+<li>Select “Uninstall”</li>
+</ul>
+<p><img src="images/01-uninstall-old-r-version.png" class="img-fluid" alt="A screenshot of selecting the (...) option to uninstall the older version of R."></p>
+</div>
+</div>
 </section>
-<section id="learn-about-refresh-r" class="level3">
-<h3 class="anchored" data-anchor-id="learn-about-refresh-r">Learn About / Refresh R</h3>
-<p>If you have not taken STAT 331 / STAT 1810 or used R in previous courses, <strong>please take some time to get yourself acquainted with our good friend R!</strong></p>
-<p>I will give you all of the code that you need throughout the course, but it will help you be less overwhelmed if you take some time in these first weeks to watch videos and do some tutorials. Please come by office hours if you are overwhelmed and ask lots of questions on Discord!!</p>
-<p>😎 Get started at <a href="../0-course-info/getting-started-r.html#sec-intror">Introduction to R and RStudio</a></p>
+<section id="if-you-are-macos-user" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-are-macos-user">If you are <em>macOS</em> user:</h3>
+<ul>
+<li><p>Click on “Download R for (Mac) OS X”</p></li>
+<li><p>Under “Latest release:” click on R-X.X.X.pkg, where R-X.X.X is the version number. For example, the latest version of R as of August 2026 is 4.6.1 Happy Hop</p></li>
+<li><p>When installing, use the default features / settings that come with R (click Ok until the download starts).</p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Troubleshooting for Macs
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>First, identify which version of OSx you are running. <a href="https://support.apple.com/en-us/HT201260">How-to</a></p>
+<p>Next, find out which version of <code>R</code> your computer can run. <a href="https://cran.r-project.org/bin/macosx/">Link</a></p>
+<p>If this version is 3.6 or later, download the latest version that your computer can handle.</p>
+<p>If this version is 3.4 or earlier, you’re going to run in to some trouble. I recommend updating your version of OSx, if you are willing. If you can’t, then you can use <a href="https://posit.cloud/">Posit Cloud</a> to run <code>R</code> and RStudio on a free server. However, I recommend strongly against this option; your files will not be saved indefinitely, you will have limited hours to complete your work, your computing power will be limited, and you will need an internet connection at all times to do your work.</p>
+</div>
+</div>
+</section>
+<section id="if-you-are-a-linux-user" class="level3">
+<h3 class="anchored" data-anchor-id="if-you-are-a-linux-user">If you are a <em>Linux</em> user:</h3>
+<p>Click on “Download R for Linux” and choose your distribution for more information on installing <code>R</code> for your setup.</p>
+</section>
+</section>
+</section>
+<section id="sec-installrstudio" class="level1 page-columns page-full">
+<h1>Install RStudio</h1>
+<p>RStudio is an Integrated Development Environment (IDE) for <code>R</code>. What does that mean? Well, if you think of <code>R</code> as a language, which it is, you can think of RStudio as a program that helps you write and work in the language. Back in the dark ages, people wrote programs in text editors and then used the command line to compile those programs and run them. RStudio makes programming in <code>R</code> much easier and this course requires you to use it!</p>
+<section id="updating-your-version-of-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="updating-your-version-of-rstudio">Updating Your Version of RStudio</h2>
+<p>If you already have RStudio, <strong>you need to double check if you have the most recent version.</strong> You <strong>will not</strong> have access to the newest features for Quarto documents unless you have the most recent version of RStudio.</p>
+<ul>
+<li>Step 1: Open RStudio</li>
+<li>Step 2: Click on “Help” in the upper menu</li>
+<li>Step 3: Click on “Check for Updates”</li>
+</ul>
+<p>If there are no updates to RStudio since you installed it, you are good to go! If you need to update RStudio, you will be sent to Posit (the parent company) to download the most recent version of RStudio desktop.</p>
+</section>
+<section id="installing-rstudio" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="installing-rstudio">Installing RStudio</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/YrEe2TLr3MI" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/n8kP7c_QbLA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div></div><p>Downloading the most recent version of RStudio works the same way regardless of whether you’ve never downloaded RStudio before or if you just need to update your version of RStudio.</p>
+<p>When you navigate to the RStudio download page (<a href="https://rstudio.com/products/rstudio/download/" class="uri">https://rstudio.com/products/rstudio/download/</a>), the website should automatically detect your computer’s operating system. So, you should be able to simply click the blue “Download RStudio Desktop for [insert operating system here]” button.</p>
+<p>Clicking the button will begin installing RStudio. Once the download has completed, you will need to open the application file (on a Mac this is a <code>.dmg</code> file, on Windows this is an <code>exe</code> file).</p>
+</section>
+</section>
+<section id="sec-quarto" class="level1">
+<h1>Ensure Quarto is Installed</h1>
+<p>We will learn more about Quarto notebooks next week, so for now, just make sure that you have the software set up! It is likely that it was already installed automatically.</p>
+<p>To check, open a new Rstudio window click the + icon in the top left of the Rstudio window and see if Quarto is an option. See screenshot below.</p>
+<p><img src="images/01-check-quarto-install.PNG" class="img-fluid" alt="A screenshot of the top left corner of RStudio with a box around text that reads Quarto Document"></p>
+<p>If you do not see Quarto, <a href="https://quarto.org/docs/get-started/">download and install</a> the latest version of Quarto for your operating system.</p>
+</section>
+<section id="sec-rproject" class="level1">
+<h1>Create an R Project</h1>
+<p>Since there are often many files necessary for a project (e.g.&nbsp;data sources, images, etc.), <code>R</code> has a nice built in system for setting up your project organization with RProjects. You can either create a new folder on your computer containing an Rproject (e.g., you have not yet created a folder for this class) or you can add an Rproject to an existing folder on your computer (e.g., you have already created a folder for this class).</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">Create with a new folder</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Add to an existing folder</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>To create a Rproject, first open RStudio on your computer and click <code>File &gt; New Project</code>, then:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/01-create-new-rproj-step1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/01-create-new-rproj-step2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Give your folder a name. It is good practice for this file folder name to not contain spaces. For this course you might want <code>stat-3540</code> or something like that.</p>
+<p>Then, browse on your computer for a location to save this folder to. For example, mine is saved in my Documents. Make sure you know how to find this; it should NOT be saved in your Downloads!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/01-create-new-rproj-step3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This new folder, <code>my-stat331</code> or whatever you called it should now live in your Documents folder (or wherever you save it to) and contain a <code>my-stat331.Rproj</code> file. This is your new “home” base for this class - whenever you refer to a file with a relative path it will begin to look for it here.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>To add a Rproject to an existing folder on your computer (e.g., you already created a folder for this class), first open RStudio on your computer and click <code>File &gt; New Project</code>, then:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/01-create-existing-rproj-step1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Then, browse on your computer to select the existing folder you wish to add your Rproject to. For example, mine is saved in my Documents and called <code>my-stat331</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/01-create-existing-rproj-step2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Your existing folder, <code>my-stat331</code> should now contain a <code>my-stat331.Rproj</code> file. This is your new “home” base for this class - whenever you refer to a file with a relative path it will begin to look for it here.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="sec-intror" class="level1">
+<h1>Introduction to R and RStudio</h1>
+<section id="navigating-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="navigating-rstudio">Navigating RStudio</h2>
+<ul>
+<li>📽 Video – A Tour of RStudio:</li>
+</ul>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/kfcX5DEMAp4?si=okE0641GKkf8ZrSJ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<ul>
+<li><a href="https://rstudio.github.io/cheatsheets/rstudio-ide.pdf">Download a “cheetsheet”</a> (easy reference page) for navigating the RStudio IDE.</li>
+</ul>
+<section id="exploring-the-rstudio-panes" class="level3">
+<h3 class="anchored" data-anchor-id="exploring-the-rstudio-panes">Exploring the RStudio Panes</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-important-buttons.png" class="img-fluid figure-img"></p>
+<figcaption>The RStudio window will look something like this.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Top-left</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Top-right</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Bottom-left</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false" href="">Bottom-right</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Includes the text editor. This is where you’ll do most of your work.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-editor-pane-buttons.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The logo on the script file indicates the file type. When an R file is open, there are Run and Source buttons on the top which allow you to run selected lines of code (Run) or source (run) the entire file. Code line numbers are provided on the left (this is a handy way to see where in the code the errors occur), and you can see line:character numbers at the bottom left. At the bottom right, there is another indicator of what type of file Rstudio thinks this is.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>In the top right, you’ll find the environment, history, and connections tabs. The environment tab shows you the objects available in R (variables, data files, etc.), the history tab shows you what code you’ve run recently, and the connections tab is useful for setting up database connections.</p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>On the bottom left is the console. There are also other tabs to give you a terminal (command line) prompt, and a jobs tab to monitor progress of long-running jobs. In this class we’ll primarily use the console tab.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-terminal-R.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-terminal-R.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p>On the bottom right, there are a set of tabs:</p>
+<ul>
+<li><strong>files</strong> (to give you an idea of where you are working, and what files are present),</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-file-tab.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><p><strong>plots</strong> (which will be self-explanatory),</p></li>
+<li><p><strong>packages</strong> (which extensions to R are installed and loaded),</p></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-packages-tab.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-packages-tab.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>the <strong>help</strong> tab (where documentation will show up), and</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-help-tab.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>the <strong>viewer</strong> window, which is used for interactive graphics or previewing HTML documents.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="programming-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="programming-in-r">Programming in R</h2>
+<ul>
+<li><p>📖 Reading: <a href="https://r4ds.hadley.nz/workflow-basics">R4DS: Basics of R</a></p></li>
+<li><p>💻 Tutorial: <a href="https://r-primers.andrewheiss.com/basics/02-programming-basics">R Programming Basics</a></p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Programming in R
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This tutorial gives you an overview of the foundations that make up the R programming language, including:</p>
+<ul>
+<li>functions and their arguments</li>
+<li>accessing help files</li>
+<li>making code comments</li>
+<li>object types (e.g., vectors, lists, )</li>
+<li>data types (e.g., numeric, integer, double, character)</li>
+<li>R’s package system</li>
+</ul>
+</div>
+</div>
+<ul>
+<li>📽 Video – Installing R Packages</li>
+</ul>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/tXZDoMlXfTE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 </section>

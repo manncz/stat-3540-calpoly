@@ -336,8 +336,8 @@
     "objectID": "2-slides/01.2-controlling-for-variability.html#outline",
     "href": "2-slides/01.2-controlling-for-variability.html#outline",
     "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "",
-    "text": "Example 1.1: Reaction Time\nControlling for Variability\nRandomization"
+    "section": "Outline",
+    "text": "Outline\n\nExample 1.1: Reaction Time\nControlling for Variability\nRandomization"
   },
   {
     "objectID": "2-slides/01.2-controlling-for-variability.html#control-for-variability",
@@ -358,7 +358,7 @@
     "href": "2-slides/01.2-controlling-for-variability.html#inclusion-criteria",
     "title": "Module 1: Introduction to Design of Experiments (DOE)",
     "section": "Inclusion Criteria",
-    "text": "Inclusion Criteria\n\n\n\n\n\n\nNote\n\n\n\nInclusion Criteria: The ________________________________ participants must have in order to qualify to be in a study.\nHaving strict inclusion criteria creates a more homogeneous group of study participants than if the inclusion criteria were less strict. Having a more homogeneous group of study participants means less variability in the response variable."
+    "text": "Inclusion Criteria\n\n\n\n\n\n\nNote\n\n\nInclusion Criteria: The ________________________________ participants must have in order to qualify to be in a study.\nHaving strict inclusion criteria creates a more homogeneous group of study participants than if the inclusion criteria were less strict. Having a more homogeneous group of study participants means less variability in the response variable."
   },
   {
     "objectID": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time-1",
@@ -372,7 +372,7 @@
     "href": "2-slides/01.2-controlling-for-variability.html#direct-control",
     "title": "Module 1: Introduction to Design of Experiments (DOE)",
     "section": "Direct Control",
-    "text": "Direct Control\n\n\n\n\n\n\nNote\n\n\n\nDirect Control: This refers to holding certain variables or characteristics during data collection _________________ across all treatment groups to reduce variability that could be caused by factors unrelated to the explanatory variable.\nWhen a researcher suspects that a specific variable (other than the explanatory variable) could influence the response, they may choose to keep it the same for all participants. This helps isolate the effect of the explanatory variable by reducing variation in the response caused by other factors."
+    "text": "Direct Control\n\n\n\n\n\n\nNote\n\n\nDirect Control: This refers to holding certain variables or characteristics during data collection _________________ across all treatment groups to reduce variability that could be caused by factors unrelated to the explanatory variable.\nWhen a researcher suspects that a specific variable (other than the explanatory variable) could influence the response, they may choose to keep it the same for all participants. This helps isolate the effect of the explanatory variable by reducing variation in the response caused by other factors."
   },
   {
     "objectID": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time-2",
@@ -386,7 +386,7 @@
     "href": "2-slides/01.2-controlling-for-variability.html#blocking",
     "title": "Module 1: Introduction to Design of Experiments (DOE)",
     "section": "Blocking",
-    "text": "Blocking\n\n\n\n\n\n\nNote\n\n\n\nBlocking: Experimental units are _______________ in such a way that the variability of the units within the blocks is less than the variability of the units across the blocks.\nThe blocks should be similar in ways that are expected to affect the response to the treatment. This allows for the treatments to be compared within a more uniform environment, and the variability associated with differences among the blocks can be separated from the experimental error.\n\n\nNOTE: We will examine the concept of blocking in much more detail later in the semester."
+    "text": "Blocking\n\n\n\n\n\n\nNote\n\n\nBlocking: Experimental units are _______________ in such a way that the variability of the units within the blocks is less than the variability of the units across the blocks.\nThe blocks should be similar in ways that are expected to affect the response to the treatment. This allows for the treatments to be compared within a more uniform environment, and the variability associated with differences among the blocks can be separated from the experimental error.\n\n\n\nNOTE: We will examine the concept of blocking in much more detail later in the semester."
   },
   {
     "objectID": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time-3",
@@ -400,14 +400,14 @@
     "href": "2-slides/01.2-controlling-for-variability.html#randomized-complete-block-design-rcbd",
     "title": "Module 1: Introduction to Design of Experiments (DOE)",
     "section": "Randomized Complete Block Design (RCBD)",
-    "text": "Randomized Complete Block Design (RCBD)\n\nknitr::include_graphics(\"_images/reaction-time-blocking.png\")"
+    "text": "Randomized Complete Block Design (RCBD)"
   },
   {
     "objectID": "2-slides/01.2-controlling-for-variability.html#randomization-1",
     "href": "2-slides/01.2-controlling-for-variability.html#randomization-1",
     "title": "Module 1: Introduction to Design of Experiments (DOE)",
     "section": "Randomization",
-    "text": "Randomization\n\n\n\n\n\n\nNote\n\n\n\nRandomization is the process of _________________________ to experimental units using a random mechanism. This ensures that every unit has an equal chance of receiving any treatment, preventing systematic bias.\nBIG IDEA: Randomization eliminates the influence of hidden or unknown factors (often called extraneous variables) not under the direct control of the researcher so that comparisons between treatments measure only the true treatment effects. Without randomization, extraneous variables could confound the results, leading to misleading conclusions.\nThink of randomization as insurance – protecting your experiment from unknown biases, just as insurance shields you from unforeseen risks."
+    "text": "Randomization\n\n\n\n\n\n\nNote\n\n\nRandomization is the process of _________________________ to experimental units using a random mechanism. This ensures that every unit has an equal chance of receiving any treatment, preventing systematic bias.\nBIG IDEA: Randomization eliminates the influence of hidden or unknown factors (often called extraneous variables) not under the direct control of the researcher so that comparisons between treatments measure only the true treatment effects. Without randomization, extraneous variables could confound the results, leading to misleading conclusions.\nThink of randomization as insurance – protecting your experiment from unknown biases, just as insurance shields you from unforeseen risks."
   },
   {
     "objectID": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-times",
@@ -632,5 +632,250 @@
     "title": "1.1 Preparation: R & RStudio",
     "section": "2.4 ✅ Create an R Project",
     "text": "2.4 ✅ Create an R Project\nSince there are often many files necessary for a project (e.g. data sources, images, etc.), R has a nice built in system for setting up your project organization with RProjects. You can either create a new folder on your computer containing an Rproject (e.g., you have not yet created a folder for this class) or you can add an Rproject to an existing folder on your computer (e.g., you have already created a folder for this class).\n\nCreate with a new folderAdd to an existing folder\n\n\nTo create a Rproject, first open RStudio on your computer and click File &gt; New Project, then:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGive your folder a name (it doesn’t have to be my-stat331). However, it is good practice for this file folder name to not contain spaces.\nThen, browse on your computer for a location to save this folder to. For example, mine is saved in my Documents. Make sure you know how to find this; it should NOT be saved in your Downloads!\n\n\n\n\n\n\n\n\n\nThis new folder, my-stat331 should now live in your Documents folder (or wherever you save it to) and contain a my-stat331.Rproj file. This is your new “home” base for this class - whenever you refer to a file with a relative path it will begin to look for it here.\n\n\nTo add a Rproject to an existing folder on your computer (e.g., you already created a folder for this class), first open RStudio on your computer and click File &gt; New Project, then:\n\n\n\n\n\n\n\n\n\nThen, browse on your computer to select the existing folder you wish to add your Rproject to. For example, mine is saved in my Documents and called my-stat331.\n\n\n\n\n\n\n\n\n\nYour existing folder, my-stat331 should now contain a my-stat331.Rproj file. This is your new “home” base for this class - whenever you refer to a file with a relative path it will begin to look for it here."
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#outline",
+    "href": "2-slides/01.1-basics-of-doe.html#outline",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Outline",
+    "text": "Outline\n\nWhy experiments?\nSources of Variation\nBasic Terminology\nDesign Blueprints\nExample 1.1: Reaction Time"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#why-design-of-experiments-doe",
+    "href": "2-slides/01.1-basics-of-doe.html#why-design-of-experiments-doe",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Why Design of Experiments (DOE)?",
+    "text": "Why Design of Experiments (DOE)?\n“If the design of an experiment is faulty, any method of interpretation which makes it out to be decisive must be faulty too.”\n– Fisher, 1935, Design of Experiments\nOur Goal: How to obtain useful data and work with it."
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#why-conduct-experiments",
+    "href": "2-slides/01.1-basics-of-doe.html#why-conduct-experiments",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Why Conduct Experiments?",
+    "text": "Why Conduct Experiments?\n\nTo identify the main causes of variation in a measured response.\nTo determine the conditions that lead to maximum or minimum responses.\nTo compare responses at different settings of controllable variables.\nTo develop a mathematical model for predicting future responses."
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#sources-of-variation-sv",
+    "href": "2-slides/01.1-basics-of-doe.html#sources-of-variation-sv",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Sources of Variation (SV)",
+    "text": "Sources of Variation (SV)\nIn any experiment, variation is inevitable and it can stem from:\n\ndifferences in treatments\nmeasurement errors\nnatural fluctuations in the environment.\n\nIdentifying and accounting for these sources is essential to ensure that the observed effects reflect real differences, not random noise."
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time",
+    "href": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Example 1.1: Reaction Time",
+    "text": "Example 1.1: Reaction Time\nReaction time is the time taken to respond to a stimulus. Suppose we would like to study reaction time in human adults. We recruit 30 adults. Each participant sits at a computer and is instructed to press the space bar as quickly as possible when a visual stimulus (a green circle) appears on the screen. Reaction time (in milliseconds) is recorded for each participant.\n\nWhat are some possible sources of variability in the reaction times? That is, what might explain why reaction times in human adults differ from each other?"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#treatment-structure-vs-design-structure",
+    "href": "2-slides/01.1-basics-of-doe.html#treatment-structure-vs-design-structure",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Treatment Structure vs Design Structure",
+    "text": "Treatment Structure vs Design Structure\n\nTreatment structure (Treatment Design): Set of treatments, factors, treatment combinations, or populations that the experimenter has selected to study and/or compare - the “what” of the experiment.\nDesign structure (Experimental Design): Grouping of the experimental units into similar groups of blocks - the “how” of the experiment."
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#treatment-structures",
+    "href": "2-slides/01.1-basics-of-doe.html#treatment-structures",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Treatment Structures",
+    "text": "Treatment Structures\n\n\n\n\n\n\n\nStructure Type\nExample Methods\n\n\n\n\nOne-way\nOne-way ANOVA, Simple Linear Regression\n\n\nTwo-way and n-way\nn-way ANOVA, Factorial Designs, Multiple Regression"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#design-structures",
+    "href": "2-slides/01.1-basics-of-doe.html#design-structures",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Design Structures",
+    "text": "Design Structures\n\n\n\n\n\n\n\nStructure Type\nExample Methods\n\n\n\n\nCompletely Randomized\nCRD\n\n\nOne-way Blocked\nRCBD, BIBD, IBD\n\n\nTwo-way Blocked\nLatin Square, Youden Square\n\n\nSplit Plot (Repeated Measures)\nSplit plot designs, repeated measures designs"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#terminology",
+    "href": "2-slides/01.1-basics-of-doe.html#terminology",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Terminology",
+    "text": "Terminology\n\n\n\n\n\n\nNote\n\n\n\nFactor: An explanatory (or independent) variable to be studied in an investigation.\nLevel: A particular form of a factor.\nTreatment: A treatment is determined by the set of factors and the levels of each factor.\nResponse: Something you measure during or after an investigation.\n\nNOTE: A factor HAS an effect on the response if different levels of the factor produce differing responses!"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-1",
+    "href": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-1",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Example 1.1: Reaction Time…",
+    "text": "Example 1.1: Reaction Time…\nNow suppose that the experiment is conducted to determine what (if any) impact the type of distraction has on reaction time. Three different types of distraction (auditory, visual, and none) are used in the experiment.\n\nFactor(s):\nLevel(s):\nResponse(s):\nA treatment corresponds to the levels. Thus, this experiment has 3 treatments which are…"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#replication",
+    "href": "2-slides/01.1-basics-of-doe.html#replication",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Replication",
+    "text": "Replication\n\n\n\n\n\n\nNote\n\n\nThe number of replications in an experiment is the number of experimental units per treatment or treatment combination. An experiment is said to be replicated if each treatment is applied independently to each of two or more experimental units.\n\nExperimental Unit (e.u.): The smallest unit of experimental material to which a treatment is independently assigned.\nMeasurement Unit (m.u.): The unit at which the response is measured (aka: sampling unit). This may involve subsampling within an experimental unit.\nExperimental Error: Differences that occur from one repetition (or replication) of an experiment to another.\n\nNOTE: Replication makes it possible to estimate the variance of the experimental error."
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-times",
+    "href": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-times",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Example 1.1: Reaction times…",
+    "text": "Example 1.1: Reaction times…\nAdditional information: Each individual completes one task under their assigned distraction condition.\n\nIdentify the experimental unit (e.u.)\nMeasurement/Sampling unit (m.u.):\nHow many replications exist per treatment? r = _______"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#design-blueprint",
+    "href": "2-slides/01.1-basics-of-doe.html#design-blueprint",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Design Blueprint",
+    "text": "Design Blueprint\n\nknitr::include_graphics(\"_images/reaction-time-crd.png\")"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#section",
+    "href": "2-slides/01.1-basics-of-doe.html#section",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "",
+    "text": "Treatment structure: One-way treatment structure with 3 levels of distraction type (auditory, visual, and none) making up the 3 treatments.\nExperimental structure: Distraction type is assigned to each individual (e.u.) in a completely randomized design (CRD) with r = 10. The reaction time (ms) is measured on each individual (m.u.)."
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-2",
+    "href": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-2",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Example 1.1: Reaction time…",
+    "text": "Example 1.1: Reaction time…\nAdditional information: Now suppose the researchers want to increase their sample size by having each of the 30 individuals repeat their task 5 times under their assigned distraction condition, resulting in 150 reaction times.\n\nIdentify the experimental unit:\nMeasurement unit:\nHow many replications exist per treatment?"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#subsampling",
+    "href": "2-slides/01.1-basics-of-doe.html#subsampling",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Subsampling",
+    "text": "Subsampling\n\n\n\n\n\n\nNote\n\n\nSubsampling – taking multiple measurement units from the same experimental unit.\nTreating these measurements as independent inflates the sample size, leading to overoptimistic results and increased type I errors.\nIt is best practice to aggregate subsamples (e.g., average) to get one response per experimental unit and ensure the analysis reflects the true number of experimental units."
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-3",
+    "href": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-3",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Example 1.1: Reaction time…",
+    "text": "Example 1.1: Reaction time…\nNow suppose that instead of assigning distraction types individually, we place 10 individuals in a room at a time and apply the same distraction type to the entire group. This process is repeated three times – once for each distraction type.\n\nIdentify the experimental unit:\nMeasurement unit:\nHow many replications exist per treatment?"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#section-1",
+    "href": "2-slides/01.1-basics-of-doe.html#section-1",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "",
+    "text": "knitr::include_graphics(\"_images/reaction-time-unreplicated.png\")"
+  },
+  {
+    "objectID": "2-slides/01.1-basics-of-doe.html#unreplicated-designs",
+    "href": "2-slides/01.1-basics-of-doe.html#unreplicated-designs",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Unreplicated Designs",
+    "text": "Unreplicated Designs\n\n\n\n\n\n\nWarning\n\n\nUnreplicated Designs – a study design with experimental unit replication of r = 1 causes issues since we cannot estimate the experimental error."
+  },
+  {
+    "objectID": "0-course-info/getting-started-r.html",
+    "href": "0-course-info/getting-started-r.html",
+    "title": "Getting Started with R and RStudio",
+    "section": "",
+    "text": "You need local installations of both R (the software) and RStudio (the interface for working in R). Do not skip this step if you already have both R and RStudio installed on your computer, as you need to ensure you are using the most up to date version of R and RStudio.\n\n\nIf you already have R downloaded, you need to confirm that you have the most up to date version of R. Do not ignore these instructions. If you neglect to update your version of R, you may find that updating a package will make it so your code will not run.\n\nStep 1: Open RStudio\nStep 2: At the top of the the Console it will say what version of R you are using\n\n\nYou can also see the version right under the word “Console” or by running the following code in the console: R.version.\nIf the version is not 4.6.1 (like the image above), you need to update your version of R! The simplest way to do this is to follow the instructions below to install R.\nDownload and install R by going to https://cloud.r-project.org/. Here, you will find three options for installing R—click on the option for your computer’s operating system.\n\n\n\n\n\n\nClick on “Download R for Windows”\nClick on “base”\nClick on the Download link.\nWhen you open the execution file (.exe) you will be prompted with a variety of questions about installing R. Feel free to use the default features / settings that come with R (continue to click “Ok” until the download starts).\n\n\n\n\n\n\n\nWarningMultiple Versions of R\n\n\n\nBeware that if you had a previous version of R downloaded on your PC, that old version will not be deleted when you download the most recent version of R. We do not want to have two versions of R installed, as your computer can get confused what version of R to use. So, you need to remove the old version of R.\nTo do this you need to:\n\nNavigate to your computer’s settings\nClick on the “Apps” option on the left-hand panel\nSearch for or scroll down to R\nFind the older version of R\n\n\n\nClick on the ... on the right side\nSelect “Uninstall”\n\n\n\n\n\n\n\n\nClick on “Download R for (Mac) OS X”\nUnder “Latest release:” click on R-X.X.X.pkg, where R-X.X.X is the version number. For example, the latest version of R as of August 2026 is 4.6.1 Happy Hop\nWhen installing, use the default features / settings that come with R (click Ok until the download starts).\n\n\n\n\n\n\n\nTipTroubleshooting for Macs\n\n\n\nFirst, identify which version of OSx you are running. How-to\nNext, find out which version of R your computer can run. Link\nIf this version is 3.6 or later, download the latest version that your computer can handle.\nIf this version is 3.4 or earlier, you’re going to run in to some trouble. I recommend updating your version of OSx, if you are willing. If you can’t, then you can use Posit Cloud to run R and RStudio on a free server. However, I recommend strongly against this option; your files will not be saved indefinitely, you will have limited hours to complete your work, your computing power will be limited, and you will need an internet connection at all times to do your work.\n\n\n\n\n\nClick on “Download R for Linux” and choose your distribution for more information on installing R for your setup."
+  },
+  {
+    "objectID": "0-course-info/getting-started-r.html#updating-your-version-of-r",
+    "href": "0-course-info/getting-started-r.html#updating-your-version-of-r",
+    "title": "Getting Started with R and RStudio",
+    "section": "",
+    "text": "If you already have R downloaded, you need to confirm that you have the most up to date version of R. Do not ignore these instructions. If you neglect to update your version of R, you may find that updating a package will make it so your code will not run.\n\nStep 1: Open RStudio\nStep 2: At the top of the the Console it will say what version of R you are using\n\n\nYou can also see the version right under the word “Console” or by running the following code in the console: R.version.\nIf the version is not 4.6.1 (like the image above), you need to update your version of R! The simplest way to do this is to follow the instructions below to install R.\nDownload and install R by going to https://cloud.r-project.org/. Here, you will find three options for installing R—click on the option for your computer’s operating system.\n\n\n\n\n\n\nClick on “Download R for Windows”\nClick on “base”\nClick on the Download link.\nWhen you open the execution file (.exe) you will be prompted with a variety of questions about installing R. Feel free to use the default features / settings that come with R (continue to click “Ok” until the download starts).\n\n\n\n\n\n\n\nWarningMultiple Versions of R\n\n\n\nBeware that if you had a previous version of R downloaded on your PC, that old version will not be deleted when you download the most recent version of R. We do not want to have two versions of R installed, as your computer can get confused what version of R to use. So, you need to remove the old version of R.\nTo do this you need to:\n\nNavigate to your computer’s settings\nClick on the “Apps” option on the left-hand panel\nSearch for or scroll down to R\nFind the older version of R\n\n\n\nClick on the ... on the right side\nSelect “Uninstall”\n\n\n\n\n\n\n\n\nClick on “Download R for (Mac) OS X”\nUnder “Latest release:” click on R-X.X.X.pkg, where R-X.X.X is the version number. For example, the latest version of R as of August 2026 is 4.6.1 Happy Hop\nWhen installing, use the default features / settings that come with R (click Ok until the download starts).\n\n\n\n\n\n\n\nTipTroubleshooting for Macs\n\n\n\nFirst, identify which version of OSx you are running. How-to\nNext, find out which version of R your computer can run. Link\nIf this version is 3.6 or later, download the latest version that your computer can handle.\nIf this version is 3.4 or earlier, you’re going to run in to some trouble. I recommend updating your version of OSx, if you are willing. If you can’t, then you can use Posit Cloud to run R and RStudio on a free server. However, I recommend strongly against this option; your files will not be saved indefinitely, you will have limited hours to complete your work, your computing power will be limited, and you will need an internet connection at all times to do your work.\n\n\n\n\n\nClick on “Download R for Linux” and choose your distribution for more information on installing R for your setup."
+  },
+  {
+    "objectID": "0-course-info/getting-started-r.html#install-rstudio",
+    "href": "0-course-info/getting-started-r.html#install-rstudio",
+    "title": "Getting Started with R and RStudio",
+    "section": "",
+    "text": "RStudio is an Integrated Development Environment (IDE) for R. What does that mean? Well, if you think of R as a language, which it is, you can think of RStudio as a program that helps you write and work in the language. Back in the dark ages, people wrote programs in text editors and then used the command line to compile those programs and run them. RStudio makes programming in R much easier and this course requires you to use it!\n\n\nIf you already have RStudio, you need to double check if you have the most recent version. You will not have access to the newest features for Quarto documents unless you have the most recent version of RStudio.\n\nStep 1: Open RStudio\nStep 2: Click on “Help” in the upper menu\nStep 3: Click on “Check for Updates”\n\nIf there are no updates to RStudio since you installed it, you are good to go! If you need to update RStudio, you will be sent to Posit (the parent company) to download the most recent version of RStudio desktop.\n\n\n\n\n\n\n\nDownloading the most recent version of RStudio works the same way regardless of whether you’ve never downloaded RStudio before or if you just need to update your version of RStudio.\nWhen you navigate to the RStudio download page (https://rstudio.com/products/rstudio/download/), the website should automatically detect your computer’s operating system. So, you should be able to simply click the blue “Download RStudio Desktop for [insert operating system here]” button.\nClicking the button will begin installing RStudio. Once the download has completed, you will need to open the application file (on a Mac this is a .dmg file, on Windows this is an exe file)."
+  },
+  {
+    "objectID": "0-course-info/getting-started-r.html#ensure-quarto-is-installed",
+    "href": "0-course-info/getting-started-r.html#ensure-quarto-is-installed",
+    "title": "Getting Started with R and RStudio",
+    "section": "",
+    "text": "We will learn more about Quarto notebooks next week, so for now, just make sure that you have the software set up! It is likely that it was already installed automatically.\nTo check, open a new Rstudio window click the + icon in the top left of the Rstudio window and see if Quarto is an option. See screenshot below.\n\nIf you do not see Quarto, download and install the latest version of Quarto for your operating system."
+  },
+  {
+    "objectID": "0-course-info/getting-started-r.html#create-an-r-project",
+    "href": "0-course-info/getting-started-r.html#create-an-r-project",
+    "title": "Getting Started with R and RStudio",
+    "section": "",
+    "text": "Since there are often many files necessary for a project (e.g. data sources, images, etc.), R has a nice built in system for setting up your project organization with RProjects. You can either create a new folder on your computer containing an Rproject (e.g., you have not yet created a folder for this class) or you can add an Rproject to an existing folder on your computer (e.g., you have already created a folder for this class).\n\nCreate with a new folderAdd to an existing folder\n\n\nTo create a Rproject, first open RStudio on your computer and click File &gt; New Project, then:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGive your folder a name. It is good practice for this file folder name to not contain spaces. For this course you might want stat-3540 or something like that.\nThen, browse on your computer for a location to save this folder to. For example, mine is saved in my Documents. Make sure you know how to find this; it should NOT be saved in your Downloads!\n\n\n\n\n\n\n\n\n\nThis new folder, my-stat331 or whatever you called it should now live in your Documents folder (or wherever you save it to) and contain a my-stat331.Rproj file. This is your new “home” base for this class - whenever you refer to a file with a relative path it will begin to look for it here.\n\n\nTo add a Rproject to an existing folder on your computer (e.g., you already created a folder for this class), first open RStudio on your computer and click File &gt; New Project, then:\n\n\n\n\n\n\n\n\n\nThen, browse on your computer to select the existing folder you wish to add your Rproject to. For example, mine is saved in my Documents and called my-stat331.\n\n\n\n\n\n\n\n\n\nYour existing folder, my-stat331 should now contain a my-stat331.Rproj file. This is your new “home” base for this class - whenever you refer to a file with a relative path it will begin to look for it here."
+  },
+  {
+    "objectID": "0-course-info/getting-started-r.html#installing-packages",
+    "href": "0-course-info/getting-started-r.html#installing-packages",
+    "title": "Getting Started with R and RStudio",
+    "section": "Installing Packages",
+    "text": "Installing Packages\n\n📽 Video: Installing R Packages (4 minutes)"
+  },
+  {
+    "objectID": "1-prep/1.2-prep.html#controlling-for-variability",
+    "href": "1-prep/1.2-prep.html#controlling-for-variability",
+    "title": "1.2 Preparation: Controlling for Variability and R & RStudio",
+    "section": "1 Controlling for Variability",
+    "text": "1 Controlling for Variability\n\n📽 Follow along with the slides."
+  },
+  {
+    "objectID": "1-prep/1.2-prep.html#getting-started-with-r-and-rstudio",
+    "href": "1-prep/1.2-prep.html#getting-started-with-r-and-rstudio",
+    "title": "1.2 Preparation: Controlling for Variability and R & RStudio",
+    "section": "2 Getting Started with R and RStudio",
+    "text": "2 Getting Started with R and RStudio\nWe are going to use R and RStudio throughout this course. You may have used Posit Cloud in previous courses, but in this course we will all work with a local version of the software.\nBy the start of week 2, you will need to have the latest versions R and RStudio installed and working on your computer! Come by office hours and reach out if you are having trouble.\n\n\n\n\n\n\nWarningCannot Install R or RStudio\n\n\n\nIf for any reason you cannot download R or RStudio onto your laptop, please let me know as soon as possible so we can figure something out.\n\n\n\nSet up R and RStudio for STAT 3540 / 5440\n\n✅ Follow the instructions to Install / Update R.\n✅ Follow the instructions to Install / Update RStudio\n✅ Follow the instructions to ensure Quarto is installed\n✅ Follow the instructions to create an RStudio Project for this course\n\n\n\nLearn About / Refresh R\nIf you have not taken STAT 331 / STAT 1810 or used R in previous courses, please take some time to get yourself acquainted with our good friend R!\nI will give you all of the code that you need throughout the course, but it will help you be less overwhelmed if you take some time in these first weeks to watch videos and do some tutorials. Please come by office hours if you are overwhelmed and ask lots of questions on Discord!!\n😎 Get started at Introduction to R and RStudio"
+  },
+  {
+    "objectID": "1-prep/1.1-prep.html#syllabus",
+    "href": "1-prep/1.1-prep.html#syllabus",
+    "title": "1.1 Preparation: Syllabus and Intro to DOE",
+    "section": "1 Syllabus",
+    "text": "1 Syllabus\n\n📖 Review Canvas and the syllabus after watching the introduction!"
+  },
+  {
+    "objectID": "1-prep/1.1-prep.html#basics-of-design-of-experiments-doe",
+    "href": "1-prep/1.1-prep.html#basics-of-design-of-experiments-doe",
+    "title": "1.1 Preparation: Syllabus and Intro to DOE",
+    "section": "2 Basics of Design of Experiments (DOE)",
+    "text": "2 Basics of Design of Experiments (DOE)\n\n📽 Follow along with the slides.\nNote: you can export the slides to a pdf for notetaking via the bottom left three horizontal stacked lines &gt; Tools &gt; PDF Export Mode &gt; Print + Save as PDF"
+  },
+  {
+    "objectID": "0-course-info/getting-started-r.html#updating-your-version-of-rstudio",
+    "href": "0-course-info/getting-started-r.html#updating-your-version-of-rstudio",
+    "title": "Getting Started with R and RStudio",
+    "section": "Updating Your Version of RStudio",
+    "text": "Updating Your Version of RStudio\nIf you already have RStudio, you need to double check if you have the most recent version. You will not have access to the newest features for Quarto documents unless you have the most recent version of RStudio.\n\nStep 1: Open RStudio\nStep 2: Click on “Help” in the upper menu\nStep 3: Click on “Check for Updates”\n\nIf there are no updates to RStudio since you installed it, you are good to go! If you need to update RStudio, you will be sent to Posit (the parent company) to download the most recent version of RStudio desktop."
+  },
+  {
+    "objectID": "0-course-info/getting-started-r.html#installing-rstudio",
+    "href": "0-course-info/getting-started-r.html#installing-rstudio",
+    "title": "Getting Started with R and RStudio",
+    "section": "Installing RStudio",
+    "text": "Installing RStudio\n\n\n\n\nDownloading the most recent version of RStudio works the same way regardless of whether you’ve never downloaded RStudio before or if you just need to update your version of RStudio.\nWhen you navigate to the RStudio download page (https://rstudio.com/products/rstudio/download/), the website should automatically detect your computer’s operating system. So, you should be able to simply click the blue “Download RStudio Desktop for [insert operating system here]” button.\nClicking the button will begin installing RStudio. Once the download has completed, you will need to open the application file (on a Mac this is a .dmg file, on Windows this is an exe file)."
+  },
+  {
+    "objectID": "0-course-info/getting-started-r.html#navigating-rstudio",
+    "href": "0-course-info/getting-started-r.html#navigating-rstudio",
+    "title": "Getting Started with R and RStudio",
+    "section": "Navigating RStudio",
+    "text": "Navigating RStudio\n\n📽 Video – A Tour of RStudio:\n\n\n\nDownload a “cheetsheet” (easy reference page) for navigating the RStudio IDE.\n\n\nExploring the RStudio Panes\n\n\n\n\n\nThe RStudio window will look something like this.\n\n\n\n\n\nTop-leftTop-rightBottom-leftBottom-right\n\n\nIncludes the text editor. This is where you’ll do most of your work.\n\n\n\n\n\n\n\n\n\nThe logo on the script file indicates the file type. When an R file is open, there are Run and Source buttons on the top which allow you to run selected lines of code (Run) or source (run) the entire file. Code line numbers are provided on the left (this is a handy way to see where in the code the errors occur), and you can see line:character numbers at the bottom left. At the bottom right, there is another indicator of what type of file Rstudio thinks this is.\n\n\nIn the top right, you’ll find the environment, history, and connections tabs. The environment tab shows you the objects available in R (variables, data files, etc.), the history tab shows you what code you’ve run recently, and the connections tab is useful for setting up database connections.\n\n\nOn the bottom left is the console. There are also other tabs to give you a terminal (command line) prompt, and a jobs tab to monitor progress of long-running jobs. In this class we’ll primarily use the console tab.\n\nknitr::include_graphics(\"https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-terminal-R.png\")\n\n\n\n\n\n\n\n\n\n\nOn the bottom right, there are a set of tabs:\n\nfiles (to give you an idea of where you are working, and what files are present),\n\n\n\n\n\n\n\n\n\n\n\nplots (which will be self-explanatory),\npackages (which extensions to R are installed and loaded),\n\n\nknitr::include_graphics(\"https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-packages-tab.png\")\n\n\n\n\n\n\n\n\n\nthe help tab (where documentation will show up), and\n\n\n\n\n\n\n\n\n\n\n\nthe viewer window, which is used for interactive graphics or previewing HTML documents."
+  },
+  {
+    "objectID": "0-course-info/getting-started-r.html#programming-in-r",
+    "href": "0-course-info/getting-started-r.html#programming-in-r",
+    "title": "Getting Started with R and RStudio",
+    "section": "Programming in R",
+    "text": "Programming in R\n\n📖 Reading: R4DS: Basics of R\n💻 Tutorial: R Programming Basics\n\n\n\n\n\n\n\nNoteProgramming in R\n\n\n\nThis tutorial gives you an overview of the foundations that make up the R programming language, including:\n\nfunctions and their arguments\naccessing help files\nmaking code comments\nobject types (e.g., vectors, lists, )\ndata types (e.g., numeric, integer, double, character)\nR’s package system\n\n\n\n\n📽 Video – Installing R Packages"
+  },
+  {
+    "objectID": "2-slides/01.2-controlling-for-variability.html#randomized-experiment-vs-observational-study",
+    "href": "2-slides/01.2-controlling-for-variability.html#randomized-experiment-vs-observational-study",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Randomized Experiment vs Observational Study",
+    "text": "Randomized Experiment vs Observational Study\n\n\n\n\n\n\nNote\n\n\n\nRandomized Experiment: A treatment is __________________ and randomly imposed on an experimental unit in the interest of observing the response.\nObservational Study: This involves collecting and analyzing data __________________ randomly assigning treatments to experimental units.\n\nBIG IDEA: Because randomized experiments use random assignment of the treatments (as well as other types of randomization) cause-and-effect conclusions may be made. In observational studies, because no random assignment is used, only associations may be concluded, because there are likely to be confounding variables."
+  },
+  {
+    "objectID": "2-slides/01.2-controlling-for-variability.html#complicating-the-dichotomy",
+    "href": "2-slides/01.2-controlling-for-variability.html#complicating-the-dichotomy",
+    "title": "Module 1: Introduction to Design of Experiments (DOE)",
+    "section": "Complicating the dichotomy…",
+    "text": "Complicating the dichotomy…\n\nCausal conclusions can be drawn from a couple different types of well-designed studies:\n\nRandomized experiments\nQuasi-experiments\nSpecifically designed and analyzed observational studies\n\nThe key issue is whether you can convince yourself (an others) that confounding has been eliminated through your design and analysis"
   }
 ]
