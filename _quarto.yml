@@ -4,13 +4,11 @@ project:
   execute-dir: file
   render:
     - "*.qmd"
-    - "!/student-versions/"
-    - "!/solutions/"
+    - "!*/solution/"
+    - "!*/student/"
     - "!/exams/"
     - "!/0-course-info/stud-info/"
     - "!/project/"
-    - "!/handouts/"
-    - "!/quiz/"
     - "!/prev-materials/"
 
 website:

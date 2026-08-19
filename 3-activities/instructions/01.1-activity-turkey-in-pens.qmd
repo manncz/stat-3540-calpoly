@@ -1,20 +1,22 @@
 ---
 title: "Activity 1.1: Design Blueprints"
 subtitle: "Turkeys in Pens"
-format:
-  html: default
-  docx: default
-  typst: default
-format-links:
-  - docx
-  - format: typst
-    text: PDF
-    icon: file-pdf
----
+execute: 
+  error: true
+  echo: true
+  message: false
+  warning: false
 
+eval: false
+format:
+  docx: default
+  html: default
+---
 ## 0. Software. 
 
-We will be using R and Rstudio in this course. To keep things simple for this first day, you can use PositCloud if you do not have R and RStudio set up already for a different Class. 
+We will be using R and Rstudio in this course. To keep things simple for this first day, you can use [PositCloud](https://posit.cloud/content/12747010) if you do not have R and RStudio set up already for a different Class. 
+
+If you have R and Rstudio on your computer, you can download and use this template qmd: [01.1-activity-turkey-in-pens.qmd](../student/01.1-activity-turkey-in-pens.qmd)
 
 Alternatively, for **this activity only** you can use any software that you like to generate the plots and conduct the analysis.
 
@@ -55,7 +57,7 @@ b. What does each row in this data file represent?
 
 c. How many observations are there per diet? Why?
 
-d. Create a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots).
+d. Create a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots). Don't forget to make sure your plot has clear axis labels and a title!
 
 e. Create a summary table showing the mean and standard deviation of pen-level ADG for each diet.
 
@@ -125,12 +127,13 @@ When you are finished, submit your work to **Gradescope**:
 
    - Your study blueprint sketch
    - Your written answers for parts (b)–(n)
-   - Any requested tables/values from JMP or R
+   - Any requested tables/values from R
    
 2. Combine everything into **one PDF**.
 
    - If you wrote on paper: take clear photos and save/print to PDF.
    - If you typed responses: export to PDF.
+   - If you used Quarto: render your report (it is set to render as PDF).
    
 3. Go to **Canvas > Gradescope > Activity 1.1: Design Blueprints** and upload your PDF.
 

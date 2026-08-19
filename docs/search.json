@@ -1,1028 +1,279 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Statistical Methods for Study Design and Analysis",
-    "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the quarter. Note that this schedule will be updated as the quarter progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPreparation\n\n\n\n\nIn-Class\n\n\n\nLab\n\n\n\n\nWatch/Do\n\n\nSlides\n\n\nSlides\n\n\nActivity\n\n\n\n\n\n\nIntro to DOE\n\n\n\n\nWeek 1\n\n\nTue, 8/25\n\n\nMod 1: Introduction to Study Design\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\nThu, 8/27\n\n\nMod 1: Introduction to Study Design\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\nTue, 9/1\n\n\nMod 2: CRD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\nThu, 9/3\n\n\nMod 2: CRD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\nTue, 9/8\n\n\nMod 3: Power and Sample Size\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\nThu, 9/10\n\n\nMod 4: Factorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\nTue, 9/15\n\n\nMod 4: Factorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\nThu, 9/17\n\n\nMidterm Exam I\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComplex Experimental Design\n\n\n\n\nWeek 5\n\n\nTue, 9/22\n\n\nMod 4: Factorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\nThu, 9/24\n\n\nMod 5: RCBD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\nTue, 9/29\n\n\nMod 5: RCBD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\nThu, 10/1\n\n\nMod 6: Random / Fixed Effects Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\nTue, 10/6\n\n\nMod 6: Random / Fixed Effects Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\nThu, 10/8\n\n\nMod 7: Extensions + Considerations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\nTue, 10/13\n\n\nMod 7: Extensions + Considerations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\nThu, 10/15\n\n\nMod 8: Causal Inference\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\nTue, 10/20\n\n\nMidterm Exam II\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservational Studies and Survey Design\n\n\n\n\nWeek 9\n\n\nThu, 10/22\n\n\nMod 9: Observational Studies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\nTue, 10/27\n\n\nMod 9: Observational Studies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\nThu, 10/29\n\n\nMod 10: Writing Survey Instruments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 11\n\n\nTue, 11/3\n\n\nMod 10: Writing Survey Instruments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 11\n\n\nThu, 11/5\n\n\nMod 10: Writing Survey Instruments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 12\n\n\nTue, 11/10\n\n\nMod 11: Survey Sampling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 12\n\n\nThu, 11/12\n\n\nMod 11: Survey Sampling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 13\n\n\nTue, 11/17\n\n\nMod 11: Survey Sampling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 13\n\n\nThu, 11/19\n\n\nMod 12: Survey Weights\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue, 11/24\n\n\nFall Break\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu, 11/26\n\n\nFall Break\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudy Design through Case Studies\n\n\n\n\nWeek 14\n\n\nTue, 12/1\n\n\nMod 13: Putting it all Together!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 14\n\n\nThu, 12/3\n\n\nMod 13: Putting it all Together!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 15\n\n\nTue, 12/8\n\n\nMod 13: Putting it all Together!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 15\n\n\nThu, 12/10\n\n\nFinal Project Presentations",
-    "crumbs": [
-      "Course information",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html",
-    "href": "course-info/syllabus-f26.html",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "",
-    "text": "Dr. Charlotte Zilber Mann1 (she/her/ella)\nYou can call me Dr. C, Professor/Prof. C., Dr. Mann, or Professor.2\n Email: czmann@calpoly.edu\n Office: Building 25 Office 201\nEmail:\n\nOnly email me with your @calpoly.edu email – I cannot respond to other email addresses\nPlease start your email subject line with “[STAT 3540]” or “[STAT 5440]” to get my attention!\nI will do my best to respond within 24 hours during the week\nIf you send me an email past 6pm or on the weekend, I will likely not respond until the morning of the next working day\nIf I don’t respond within 48 hours, please email me again!\nYou should only email me about things that relate to you as an individual. Any other questions should be posted on the course Discord (more details below).\n\nCourse Discord Page:\nFor questions of general interest, such as course clarifications or conceptual questions, please use the course Discord page (you will join this Week 1). If you have a question, someone else in class does too! I encourage you all to respond to each other. I will do my best to check Discord twice each weekday during working hours (8-6) to ensure that questions are being answered accurately.\nI encourage you to give your post a concise and informative initial sentence, so that other people can find it. You may post snippets of code, errors or problem attempts on Discord, but please do not post full solutions.\n While your posts are not anonymous, in this case there is no such thing as a bad question!",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#communication",
-    "href": "course-info/syllabus-f26.html#communication",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "",
-    "text": "Dr. Charlotte Zilber Mann1 (she/her/ella)\nYou can call me Dr. C, Professor/Prof. C., Dr. Mann, or Professor.2\n Email: czmann@calpoly.edu\n Office: Building 25 Office 201\nEmail:\n\nOnly email me with your @calpoly.edu email – I cannot respond to other email addresses\nPlease start your email subject line with “[STAT 3540]” or “[STAT 5440]” to get my attention!\nI will do my best to respond within 24 hours during the week\nIf you send me an email past 6pm or on the weekend, I will likely not respond until the morning of the next working day\nIf I don’t respond within 48 hours, please email me again!\nYou should only email me about things that relate to you as an individual. Any other questions should be posted on the course Discord (more details below).\n\nCourse Discord Page:\nFor questions of general interest, such as course clarifications or conceptual questions, please use the course Discord page (you will join this Week 1). If you have a question, someone else in class does too! I encourage you all to respond to each other. I will do my best to check Discord twice each weekday during working hours (8-6) to ensure that questions are being answered accurately.\nI encourage you to give your post a concise and informative initial sentence, so that other people can find it. You may post snippets of code, errors or problem attempts on Discord, but please do not post full solutions.\n While your posts are not anonymous, in this case there is no such thing as a bad question!",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#course-logistics",
-    "href": "course-info/syllabus-f26.html#course-logistics",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Course Logistics",
-    "text": "Course Logistics\nClass Meeting Times: Tuesdays / Thursdays\n\nSection 01: 8:00am - 9:50am\nSection 02: 10:00am - 11:50am\nSection 03: 2:00pm - 3:50pm\n\nClassrooms:\n\nSections 01 & 02: 180-272\nSection 03: 180-0102\n\nOffice Hours are held in my office (25-201) during the following times:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://lsc.cornell.edu/consult-with/how-to-use-office-hours/\n\nOffice hours are for you! During this time, I am available to talk about anything related to the course.\nOffice hours are also helpful for me… this is my chance to get to know you all better and also get a good idea of what is most challenging and most interesting to you.\nSee this resource for ways that students use office hours.\nOne thing I will not do during office hours is tell you whether an answer to a problem is “correct” or not. We can talk through your thinking that led to your solution, but will leave the final assessment to once you have submitted an assignment.\nNote that office hours are not just for when you have content questions. Stop by to introduce yourself, ask questions about the broader field of statistics, or share what you are working on!\nI am always open to students joining remotely via Zoom – just email me.\nI LOVE office hours! Please come by – you are never inconveniencing me.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#course-description",
-    "href": "course-info/syllabus-f26.html#course-description",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Course Description",
-    "text": "Course Description\nStudy designs to address statistical research questions. Ethical considerations when designing studies and analyzing data. Experimental designs, completely randomized, block designs, factorial, and nested designs. Survey planning, execution, and analysis. Survey research, non-sampling, and sampling errors. Use of weights in surveys. Estimate parameters and calculate sample size. Course may be offered in classroom-based, online, or hybrid format\nPrerequisites\nSTAT 252, STAT 1220, STAT 302, STAT 313 or STAT 3520.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#learning-objectives",
-    "href": "course-info/syllabus-f26.html#learning-objectives",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of this course, you should be able to:\n\nCommunicate the ethical implications of research questions, study designs, and analysis choices.\nDetermine which type of study (observational or experimental) is appropriate given a research context.\nDesign and explain a plan for conducting an experiment (e.g., RCBD) or a sample survey (e.g., stratified sample design).\nAnalyze data by applying an appropriate model that accounts for the study design and attempts to isolate and quantify the effects of the factors of interest.\nDescribe the limitations of study designs and propose alternative designs.\nProduce a written and/or oral summary of an appropriate study design and analysis.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#course-materials",
-    "href": "course-info/syllabus-f26.html#course-materials",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Course Materials",
-    "text": "Course Materials\nCourse Webpage (Canvas)\nAll course material will be made available on our Canvas page. Canvas will also contain detailed weekly schedules throughout the term. You are responsible for checking the Canvas page every day and making sure you see Canvas Announcements.\nI will also be posting material on this website (which is actually where you are right now!) for easy access to materials. Please note that this website does not include deadlines and links to all material will additionally be posted to Canvas. Canvas will always contain the most updated information about course deadlines and details, so always defer to these.\nClass Preparation\nFor each topic, you will prepare for class by  watching 1-3 short lecture videos following a set of lecture slide notes  containing definitions and examples. You are expected to either print  or save  the lecture slide notes to your device and follow along, filling  out your set of notes while watching the videos.\nDuring class, I will highlight any key points from the lecture videos and we will complete activities meant to reinforce the ideas learned in the videos.\nSupplemental reading from the following open source books will be recommended throughout the course:\n\n A First Course in Design and Analysis of Experiments by Gary W. Oehlert\n Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method by Don A Dillman, Jolene D Smyth, and Leah Melani Christian\n\nComputing\n You will need access to a laptop for this course. If this requirement is limiting for you, please contact me ASAP.\nWe will be using the R statistical software and RStudio IDE throughout this course . Both R and RStudio are freely available. Download instructions are available on Canvas. If you can, please work on downloading this software before class begins.\n We will also be using Gradescope – an app on your phone or computer browser.\n\n\n\n\n\n\nWarning\n\n\n\nChromebooks and iPads will not be sufficient to use R. If this requirement is limiting for you, please contact me ASAP.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#class-schedule-topic-outline",
-    "href": "course-info/syllabus-f26.html#class-schedule-topic-outline",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Class Schedule & Topic Outline",
-    "text": "Class Schedule & Topic Outline\nThis schedule is tentative and subject to change. See Canvas and the course Schedule for up-to-date information.\n\n\n\n\n\nNote that all Cal Poly holidays other than Fall Break fall on Mondays or Wednesdays, so we will have regularly scheduled class throughout the entire semester.\n\n\n\n\n\n\n\nTentative schedule of class topics and important due dates\n\n\nDate\nTopic\n\n\n\n\nAug 25, Aug 27\nIntroduction to Design of Experiments\n\n\nSep 1, Sep 3\nCompletely Randomized Design (CRD)\n\n\nSep 8, Sep 10\nPower and Sample Size + Factorials\n\n\nSep 15\nFactorials\n\n\nSep 17\nMidterm Exam I\n\n\nSep 22, Sep 24\nMore Complex Experimental Designs\n\n\nSep 29, Oct 1\nMore Complex Experimental Models\n\n\nOct 6, Oct 8\nExtensions and Considerations\n\n\nOct 13, Oct 15\nExtensions and Considerations\n\n\nOct 20\nMidterm Exam II\n\n\nOct 22\nObservational Studies\n\n\nOct 27, Oct 29\nIntro to Surveys and Writing Survey Instrucments\n\n\nNov 3, Nov 5\nWriting Survey Instruments\n\n\nNov 10, Nov 12\nSurvey Sampling\n\n\nNov 17, Nov 19\nSurvey Sampling and Survey Weights\n\n\nDec 1, Dec 3\nPutting it all Together!\n\n\nDec 8\nPutting it all Together!\n\n\nDec 10\nProject Presentations\n\n\nDec 15\nSec 03 Final Exam 4-6:30pm\n\n\nDec 17\nSec 02 Final Exam 10am-12:30pm & Sec 01 Final Exam 7-9:30pm",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#assessments",
-    "href": "course-info/syllabus-f26.html#assessments",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Assessments",
-    "text": "Assessments\n\nGeneral Evaluation Criteria\nIn every assignment, discussion, and written component of this class, you are expected to demonstrate that you are intellectually engaging with the material. I will evaluate you based on this engagement, which means that technically correct but low effort answers which do not demonstrate engagement or understanding will receive no credit.\nWhen you answer questions in this class, your goal is to show that you either understand the material or are actively engaging with it. If you did not achieve this goal, then your answer is incomplete, regardless of whether or not it is technically correct. This is not to encourage you to add unnecessary complexity to your answer - simple, elegant solutions are always preferable to unwieldly, complex solutions that accomplish the same task.\nWhile this is not an English class, grammar and spelling are important, as is your ability to communicate technical information in writing; both of these criteria will be used in addition to assignment-specific rubrics to evaluate your work.\n\n\nFormative Assessments\n\nClass Preparation, Participation, & Professionalism\nThis course uses a flipped classroom model. Core content is introduced before class through assigned videos or readings, and class time is devoted to activities and practice. Coming to class prepared is essential for your own learning and for your group’s success. Preparation will occasionally be checked using short, closed-note learning quizzes or entry/exit tickets\nParticipation credit is earned by being present, prepared, and engaged during class. You must be in class to receive participation credit. Part of this grade also reflects professionalism, including arriving on time, being mentally present, treating others with respect, and contributing constructively to group work.\n\n2 participation grades will be dropped; think of these as “sick days”.\n\n\n\n\n\n\n\nNote\n\n\n\nIf you are feeling ill, please do not come to class. If you miss more than 2 class days for illness, we will work something out!\nSee Section 8.1 for more information. You do not need to notify me, but instead do your best to complete the in-class activity found on Canvas and get any questions answered from your classmates, Discord, and office hours.\n\n\n\n\nIn-class Activities\nMost class meetings will include in-class activities designed to reinforce and apply course content. Class time will be dedicated to working on these activities. You will collaborate with your group members; however, each student must submit their own original work.\n\nIn-class activities will be submitted and graded through Gradescope, which is integrated with Canvas.\nUnless otherwise noted, activities are due at 11:59pm the day after class.\n\n\n\n\n\n\n\nNote\n\n\n\nCal Poly provides access to Gradescope. There will be more instructions on using Gradescope as a student during the first week of class.\n\n\n\n\nLab Reports\nYou will complete 4-6 lab assignments (I am still figuring this out!) in groups of 3-4. Each lab will involve designing a study and collecting data, often using The Islands. A written report summarizing your methods and findings will be submitted for each lab. More details will be provided in class.\n\nOne report per group should be submitted as a PDF on Canvas.\nSee the course schedule on Canvas for tentative deadlines.\n\n\n\n\nEvaluative Assessments\n\nFinal Project\nYou will complete a paired final project in which you design and propose a study, including all necessary details. The project will culminate in a 10-minute presentation during the last week of class. Additional details and expectations will be provided later in the term.\n\n\nExams\nThere will be two midterm exams and a final exam, designed to assess your individual understanding and progress in the course. You may bring a one-sided notesheet to each midterm exams and a two-sided notesheet to the final exam. Exam dates are listed in the course calendar.\n\n\n\n\n\n\nNote\n\n\n\nIf you have a known conflict with an exam, please discuss it with me at least three weeks prior to the exam date. (See Section 8.6 for more information.)\n\n\n\n\n\nCourse Grade\nYour grade in STAT 3540/5440 will contain the following components:\n\n\n\n\n\nAssignments\nWeight\n\n\n\n\nClass Preparation, Participation, & Professionalism\n5%\n\n\nIn-class Activities\n10%\n\n\nLab Reports\n15%\n\n\nFinal Project\n10%\n\n\nMidterm Exams I & II *\n25%\n\n\nFinal Exam\n25%\n\n\n\n\n\n* At the end of the semester, your higher-scoring midterm exam will be weighted to 15% of your final grade, while the lower-scoring midterm will be weighted to 10%.\nLower bounds for grade cutoffs are shown in the following table. It is possible that I could lower any of the grade cutoffs. You will only have the opportunity for grade rounding to the nearest tenth of a percent if you completed all assignments in the course.\n\n\n\nLetter grade\nX +\nX\nX -\n\n\n\n\nA\n.\n93\n90\n\n\nB\n87\n83\n80\n\n\nC\n77\n73\n70\n\n\nD\n67\n63\n60\n\n\nF\n&lt;60\n\n\n\n\n\nInterpretation of this table:\n\nA grade of 85 will receive a B.\nA grade of 77 will receive a C+.\nA grade of 70 will receive a C-.\nAnything below a 60 will receive an F.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#course-policies",
-    "href": "course-info/syllabus-f26.html#course-policies",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Course Policies",
-    "text": "Course Policies\n\nAttendance & Participation\nAs stated above, if you are feeling ill, please do not come to class. Two participation grades will be dropped as “sick days.” If you really just have a cold and really want to come to class be polite to your classmates and wear a mask!\nHere’s what you should do if you do miss a class:\n\nYou do not need to notify me, unless there is a special circumstance you want to discuss.\nComplete the in-class activities on your own, which are posted on Canvas.\nCheck Canvas for any other necessary notes or changes to assignments.\nTalk to a classmate to figure out what information you missed.\nPost on Discord with any questions you have after reviewing notes and activities.\nCome by office hours when you are feeling better.\n\n\n\n\n\n\n\nTipDon’t be a stranger!\n\n\n\nIf you miss a bunch of classes, please do come talk to me. I’m working from the assumption that you care and are trying, but something is getting in your way (health issues? college stress? work?); let’s figure out what that is and how I can help.\n\n\n\n\nAccessibility and Accommodations\nI have taken numerous steps to ensure that all of the materials presented in this course are accessible to all participants, regardless of physical or learning disabilities. I know that everyone is unique and I may have unintentionally overlooked something that limits access to some materials or activities. Please let me know if you cannot access any content. If you find you need additional accommodations to complete the required course work, please contact me as soon as possible! I want to support your success.\nIf you wish to request disability-related accommodations such as extra exam time for this or any other course, please contact the Disability Resource Center. It’s important to do this with as much advanced notice as possible, so you have full access to your course materials and activities in a timely manner. Please also email me to let me know that I should expect an email from the DRC to get you the accommodations that you need.\n\n\nInclusive Classroom\nBecause data are collected by and about humans, data necessarily encode aspects of our proclivities and biases. As a result, this course may touch upon difficult topics related to race, gender, inequality, class, and oppression. We each come into this class with different perspectives that can be shared to enhance our understanding of these issues. I ask that you enter these conversations with respect, curiosity, and cultural humility. You should be open to alternative perspectives and be willing to revise beliefs that are based on misinformation. As a general rule, your ideas and experiences can always be shared during these conversations, but please refrain from dismissing the experiences of others. Personal attacks of any kind will not be tolerated.\n\n\nGroup Work\nThis course will rely heavily on in-class group work. You will be expected to work with classmates on in-class material. If you have concerns about random group assignment, please talk to me at the start of the term.\nThe community standards for student-to-student and student-to-instructor interactions include the following:\n\nListen actively and attentively.\nAsk for clarification if you are confused.\nChallenge one another respectfully.\nGracefully accept constructive criticism.\nTake responsibility for the quality of the discussion and the work.\nDo not monopolize discussion.\nAcknowledge that everyone has something to offer.\nSpeak from your own experience, without generalizing.\n\n\n\nLate Policy\nEveryone will be given a “bank” of 4 deadline extensions which can be used on in-class activities or lab reports at any point in the quarter. One deadline extension will get you a 24 hour extension on a given assignment. You can use all of your deadline extensions on one assignment or split them up in any way.\n\nLike how the “real world” works, you must request a deadline extension before the deadline. To use your deadline extensions, you need to email me before the assignment deadline. You don’t need to get a response from me, you just need to email me at least a minute before the deadline.\nIf you do not email me before the assignment deadline (or you run out of late days), you will be docked 20% for each day that the assignment is late. (e.g. you can get a maximum of 80% on the assignment if it is submitted within 24 hours after the original due date and time.)\nIn order to use deadline extensions on group lab reports:\n\neveryone in your lab group must agree to use one of their extensions.\nYou must cc everyone in your group to your email to me asking for the extension.\n\n\nA note on this policy: my priority is for all of you to engage with and understand the course materials. The best way to achieve this is to complete all assignments and receive feedback on your work. At the same time, I understand that things happen outside of our control and that you are balancing many responsibilities.\n\n\n\n\n\n\nWarningAutomatic Canvas Settings\n\n\n\nCanvas is set up to automatically input 0% for missing assignments (as an incentive to go complete the assignment) and apply the 20% grade deduction policy. I will need to manually adjust your grade when you use your “deadline extensions.” You are responsible for double checking your grade to make sure I didn’t miss anything.\n\n\nIf you find yourself with extenuating circumstances beyond the defined late policy, please email me before the due date.\n\n\nExam Conflicts\nIf you have a known conflict with an exam, please discuss it with me at least three weeks prior to the exam date. If an illness or a family emergency arises, please let me know as soon as possible, and we will work out a solution. This may involve taking the exam at a later date or replacing the missed exam score with the final exam score. If you are unable to take the final exam, you will likely receive an Incomplete in the course.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#course-expectations",
-    "href": "course-info/syllabus-f26.html#course-expectations",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Course Expectations",
-    "text": "Course Expectations\nFor Students, I expect:\n\nYou will ask lots of questions.\nYou will do the reading, video watching, and other assignments outside of class and be prepared for each class meeting.\nYou will engage in some productive struggle/challenge when working on assignments (i.e. not give up and google or use ChatGPT immediately!)\nIf you find yourself struggling in general or feel that you are falling behind, please reach out to me as soon as possible so that we can develop a plan for your success together.\nYou will take advantage of the resources that I provide and to seek out additional resources if you find that you are struggling with the material. You do not need to seek out additional resources all on your own – we can figure out what additional resources you may need.\n\nYou will be doing your best to engage with what we are all doing together during class. This means that you are using technology (i.e. laptops/tablets/phones) for class activities and not in ways that distract you.\nYou will approach the course with academic integrity.\nYou will come to class on time and work on class material with your peers.\nEveryone can learn the material in this course.\n\nFor Me:\n\nI am responsible for ensuring that all students feel welcome and valued in the classroom.\nI am responsible for providing the resources necessary so that all students in the course can achieve the learning objectives.\nI am responsible for providing prompt and clear feedback on your coursework.\nI welcome and appreciate any actionable feedback regarding how the class is meeting your learning needs. We can discuss ways to adjust the course to ensure it is supporting your learning and do more of anything that is working well!",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#academic-integrity-and-class-conduct",
-    "href": "course-info/syllabus-f26.html#academic-integrity-and-class-conduct",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Academic Integrity and Class Conduct",
-    "text": "Academic Integrity and Class Conduct\nOur academic community is at its best when we treat each other with fairness, honesty, respect, and trust. Unfortunately, sometimes students slip up and do something that gives themselves (or someone else) an unfair advantage over other students. Such actions will not be tolerated in this class.\nIt is most likely that a student will slip up if they are feeling overwhelmed or unsure of how to approach a problem that they are stuck on. So let’s be proactive to prevent those situations!! If you are helpless in an assignment or in studying, post on discord, come to office hours, or email me or one of your classmates! I am working hard to provide all of the resources you need to succeed\nHowever, the college doesn’t really care if you break the rules on purpose or by accident. If I suspect you have done something that violates academic integrity on any graded elements of the course (included those graded for completion), you will receive an email to tell you about my suspicion and how the situation will be handled. Typically, students earn a 0 for the assignment on which academic misconduct is found. University policy dictates that we must report every instance of suspected academic dishonesty to the Office of Student Rights and Responsibilities, no matter how small. For more information on academic misconduct and what constitutes cheating and plagiarism, please see academicprograms.calpoly.edu/content/academicpolicies/Cheating.\nIt is important to note that paraphrasing or quoting another’s work without proper citation is a form of academic misconduct. This includes the R code produced by someone else! Writing code is like writing a paper, it is obvious if you copied-and-pasted a sentence from someone else into your paper because the way each person writes is different.\nEven inadvertent or unintentional misuse or appropriation of another’s work (such as relying heavily on source material that is not expressly acknowledged) is considered plagiarism. This includes using Generative AI, which should only be used to help you problem solve just as a tutor or peer would, and not as a substitute for your own work. If you are struggling with an assignment, please reach out to me and post to Discord. If you use Generative AI to help, make sure that you understand the solution it provides.\n\n\n\n\n\n\nTipAlways Cite Outside Resources!\n\n\n\nIn this class the assumed knowledge is the course materials, including the course textbook, coursework pages, and course slides. If you use outside resources on assignments I expect that you will cite those resources. This means that\n\nIf you use Google you are expected to “inform” me of any resources you used by pasting the link to the resource at the end of your assignment with a note of how it was used.\nIf you use AI you are expected to “inform” me by stating that you used at the end of your assignment including the full prompt that you gave AI (like ChatGPT). See an example of an appropriate citation below.\nIf you work with classmates on an assignment, you are expected to “inform” me by including a note with their names.\n\n\n\nIf you have any questions about using and citing sources, you are expected to ask for clarification.\n\nGenerative AI Policy\nGenerative AI (like Chat GPT) is an extremely and increasingly powerful tool for many many tasks. It is true that in some (how many, I am not sure!) workplaces, employees are encouraged to use AI for a number of tasks. However, in this class, you are students, not employees! Your primary goal here is to learn, so I want us to think critically about how to use Generative AI (if you choose to use it at all) to assist your learning, not to undermine it.\n\n\n\n\n\n\nImportantNo copy-paste, seriously\n\n\n\nYou may not copy and paste any course materials into generative AI. That includes slides and assignments. All course materials are my or other faculty’s intellectual property, and we have not consented to you contributing it to generative AI model data.\n\n\n\nIn Class:\nClass time is structured around active learning and I expect you to actively engage with the software, so you may not use generative AI for in-class work and activities. You have each other and me to grapple with the material during class. If you use generative AI in class, you will not get participation credit for that day.\n\n\nOutside of Class:\nYou can use generative AI outside of class on assignments. However, I encourage you to give all problems a full effort on your own, referencing the provided course materials before turning to AI. You will learn SO much more this way!! You should also give thought to how you are using AI, and approach it as a tutor, asking it specific questions to help you solve a problem. Again, you may not copy and paste course materials, including problems, into AI. When you do use AI to help with a problem, make sure you understand why the code it provides works or why the solution make sense. If you choose to use AI, you must cite your use including the prompt that you gave.\n\n\n\n\n\n\nTipExample AI citation\n\n\n\n\n\n\n\n\nNote that work created by AI tools may not be considered original work and instead, considered automated plagiarism. It is derived from previously created texts from other sources that the models were trained on, yet doesn’t cite sources. Thus, there is a high risk that you can unintentionally plagiarize other sources from the web.\n\n\nMy 2-cents\nA final personal opinion is that I find YOU so much more interesting than AI! I would so much rather see and read what you are thinking and how you approach a problem than something you may think looks more “clean” from AI.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#learning-environment-and-support",
-    "href": "course-info/syllabus-f26.html#learning-environment-and-support",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Learning Environment and Support",
-    "text": "Learning Environment and Support\nMy priority is your success in this course. I understand that things happen unexpectedly and obtaining official accommodations can be slow.\nIf you feel that any circumstances or factors beyond your control may affect your presence and work in this class, please reach out to me and we will work to accommodate your needs. You do not need to share personal information with me when you reach out, unless you would like to.\n\nMental Health\nNational surveys of college students have consistently found that stress, sleep problems, anxiety, depression, interpersonal concerns, death of a significant other and alcohol use are among the top ten health impediments to academic performance. If you are experiencing any mental health issues, I and Cal Poly are here to help you. Cal Poly’s Counseling Services (805-756-2511) is a free and confidential resource for assistance, support and advocacy https://chw.calpoly.edu/counseling.\n\n\nSupport Services\nIf you are experiencing food insecurity, housing instability, or other challenges that may impact your ability to succeed in this course, please refer to the resources listed on Canvas under “Student Support and Basic Needs”. These resources provide a range of essential support services, including emergency financial assistance, counseling, and academic support.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-info/discord-instructions.html",
-    "href": "course-info/discord-instructions.html",
-    "title": "Course Discord Instructions",
-    "section": "",
-    "text": "We’ll be using Discord to interact with our peers and group members.\nDiscord is a platform for text chatting, voice chatting, and screen sharing."
-  },
-  {
-    "objectID": "course-info/discord-instructions.html#join-the-server",
-    "href": "course-info/discord-instructions.html#join-the-server",
-    "title": "Course Discord Instructions",
-    "section": "1 Join the server",
-    "text": "1 Join the server\nJoin the Stat 3540 Server to start experimenting with the interface. (STAT 5440 are also part of this server – that name just got too long!)\nWhen you join the server, you will be given some suggestions to get started.\n\nI recommend you click through these - and in particular, it is probably a good idea to download the desktop version of Discord, and perhaps to install it on your phone if you wish."
-  },
-  {
-    "objectID": "course-info/discord-instructions.html#set-up-your-account",
-    "href": "course-info/discord-instructions.html#set-up-your-account",
-    "title": "Course Discord Instructions",
-    "section": "2 Set up your account",
-    "text": "2 Set up your account\n\nVerify your email\nTo use this Discord server, you must have a verified email.\nNobody (including your professors) will be able to see this email, and it does not have to be your Cal Poly email. This is simply to keep the server from being overrun by temporary accounts.\n\n\nCreate your identity\nThe first thing you should do is decide what name and picture you would like to use.\n\nI would like to strongly encourage you to use your real name and picture, so that everyone can get to know you. This also helps me know who I am talking to! However, if you prefer to remain anonymous, you are free to do so.\n\n(Do not be like Regina and use the name of another student, however!\nThis kind of impersonation will result in a permanent ban from the server.)\nRemember that this is still a professional space for this course. Ensure that your profile photo and name is appropriate. If a picture of a human is used, it should be you. This doesn’t have to cramp your style for your other Discord servers! You can make an identity just for our course server.\n\n\nComplete the “Get Started” tasks\nI have set up a slightly fancier entry to this Discord channel which will hopefully orient you and make things easy!\nOne of the first things you will do is indicate which section of class you are in. This will help me send messages to sections separately if needed. You will also be prompted to introduce yourself and to click through a couple of channels. If this get’s too complicated, I will disable this, but it seemed worth a shot!\n\n\nDecide about privacy and notifications\nThe default settings on the channel are probably just fine for you.\nFeel free to make any changes that work for you, though.\nYou can change your message notifications:\n\nYou can edit your privacy settings, although most things are already private:"
-  },
-  {
-    "objectID": "course-info/discord-instructions.html#using-the-channels",
-    "href": "course-info/discord-instructions.html#using-the-channels",
-    "title": "Course Discord Instructions",
-    "section": "3 Using the Channels",
-    "text": "3 Using the Channels\nThe server is made up of many channels. Some are text chatrooms, while some are “Voice Channels” that connect you via audio to everyone else in the channel.\n\nText Channels\nUse the #general channel for anything and everything:\n\nIf your question is about course logistics, rather than the material itself, consider using the #class-logistics channel:\n\nYou can use the specific weekly channels to ask questions about the material…\n\n… or the specific assignment.\n\nNotice that you can use tick marks (```), like in Markdown, to make your code appear in a formatted code box.\n\n\nPrivate messages\nIt is also easy to send private messages, to your professor or to each other. These private messages can also easily be used to launch a private video chat and / or screen sharing."
-  },
-  {
-    "objectID": "course-info/discord-instructions.html#creating-your-own-server",
-    "href": "course-info/discord-instructions.html#creating-your-own-server",
-    "title": "Course Discord Instructions",
-    "section": "4 Creating your own server",
-    "text": "4 Creating your own server\nLast but not least - for the teams you are a part of, you may want to use Discord to communicate with each other about the weekly assignments. You can do this by creating your own server! You can easily hop between servers during work parties, to ask each other questions or just to take a break and chat about life."
-  },
-  {
-    "objectID": "course-info/course-resources.html",
-    "href": "course-info/course-resources.html",
-    "title": "Course Resources",
-    "section": "",
-    "text": "R Cheatsheets\n\nRStudio IDE\nQuarto\nBase R\nGit & GitHub\nData Visualization with ggplot2\nData Import with readr\nData Wrangling with dplyr\nData Tidying with tidyr\nFactors with forcats\nDates with lubridate\nStrings with stringr\nRegular Expressions\nTidy Evaluation\nIteration with purrr",
-    "crumbs": [
-      "Course information",
-      "Resources"
-    ]
-  },
-  {
-    "objectID": "course-info/syllabus-f26.html#footnotes",
-    "href": "course-info/syllabus-f26.html#footnotes",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nWhy do I include my middle name? It’s my mom’s last name!↩︎\nAs an FYI for folks who don’t know, it is considered rude to use “Ms.” or “Mrs.” when addressing instructors. I will get annoyed if you do this and will correct you.↩︎",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#outline",
-    "href": "slides/01.1-basics-of-doe.html#outline",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Outline",
-    "text": "Outline\n\nWhy experiments?\nSources of Variation\nBasic Terminology\nDesign Blueprints\nExample 1.1: Reaction Time"
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#why-design-of-experiments-doe",
-    "href": "slides/01.1-basics-of-doe.html#why-design-of-experiments-doe",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Why Design of Experiments (DOE)?",
-    "text": "Why Design of Experiments (DOE)?\n“If the design of an experiment is faulty, any method of interpretation which makes it out to be decisive must be faulty too.”\n– Fisher, 1935, Design of Experiments\nOur Goal: How to obtain useful data and work with it."
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#why-conduct-experiments",
-    "href": "slides/01.1-basics-of-doe.html#why-conduct-experiments",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Why Conduct Experiments?",
-    "text": "Why Conduct Experiments?\n\nTo identify the main causes of variation in a measured response.\nTo determine the conditions that lead to maximum or minimum responses.\nTo compare responses at different settings of controllable variables.\nTo develop a mathematical model for predicting future responses."
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#sources-of-variation-sv",
-    "href": "slides/01.1-basics-of-doe.html#sources-of-variation-sv",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Sources of Variation (SV)",
-    "text": "Sources of Variation (SV)\nIn any experiment, variation is inevitable and it can stem from:\n\ndifferences in treatments\nmeasurement errors\nnatural fluctuations in the environment.\n\nIdentifying and accounting for these sources is essential to ensure that the observed effects reflect real differences, not random noise."
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#example-1.1-reaction-time",
-    "href": "slides/01.1-basics-of-doe.html#example-1.1-reaction-time",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction Time",
-    "text": "Example 1.1: Reaction Time\nReaction time is the time taken to respond to a stimulus. Suppose we would like to study reaction time in human adults. We recruit 30 adults. Each participant sits at a computer and is instructed to press the space bar as quickly as possible when a visual stimulus (a green circle) appears on the screen. Reaction time (in milliseconds) is recorded for each participant.\n\nWhat are some possible sources of variability in the reaction times? That is, what might explain why reaction times in human adults differ from each other?"
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#treatment-structure-vs-design-structure",
-    "href": "slides/01.1-basics-of-doe.html#treatment-structure-vs-design-structure",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Treatment Structure vs Design Structure",
-    "text": "Treatment Structure vs Design Structure\n\nTreatment structure (Treatment Design): Set of treatments, factors, treatment combinations, or populations that the experimenter has selected to study and/or compare - the “what” of the experiment.\nDesign structure (Experimental Design): Grouping of the experimental units into similar groups of blocks - the “how” of the experiment."
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#treatment-structures",
-    "href": "slides/01.1-basics-of-doe.html#treatment-structures",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Treatment Structures",
-    "text": "Treatment Structures\n\n\n\n\n\n\n\nStructure Type\nExample Methods\n\n\n\n\nOne-way\nOne-way ANOVA, Simple Linear Regression\n\n\nTwo-way and n-way\nn-way ANOVA, Factorial Designs, Multiple Regression"
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#design-structures",
-    "href": "slides/01.1-basics-of-doe.html#design-structures",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Design Structures",
-    "text": "Design Structures\n\n\n\n\n\n\n\nStructure Type\nExample Methods\n\n\n\n\nCompletely Randomized\nCRD\n\n\nOne-way Blocked\nRCBD, BIBD, IBD\n\n\nTwo-way Blocked\nLatin Square, Youden Square\n\n\nSplit Plot (Repeated Measures)\nSplit plot designs, repeated measures designs"
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#terminology",
-    "href": "slides/01.1-basics-of-doe.html#terminology",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Terminology",
-    "text": "Terminology\n\n\n\n\n\n\nNote\n\n\n\nFactor: An explanatory (or independent) variable to be studied in an investigation.\nLevel: A particular form of a factor.\nTreatment: A treatment is determined by the set of factors and the levels of each factor.\nResponse: Something you measure during or after an investigation.\n\nNOTE: A factor HAS an effect on the response if different levels of the factor produce differing responses!"
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#example-1.1-reaction-time-1",
-    "href": "slides/01.1-basics-of-doe.html#example-1.1-reaction-time-1",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction Time…",
-    "text": "Example 1.1: Reaction Time…\nNow suppose that the experiment is conducted to determine what (if any) impact the type of distraction has on reaction time. Three different types of distraction (auditory, visual, and none) are used in the experiment.\n\nFactor(s):\nLevel(s):\nResponse(s):\nA treatment corresponds to the levels. Thus, this experiment has 3 treatments which are…"
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#replication",
-    "href": "slides/01.1-basics-of-doe.html#replication",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Replication",
-    "text": "Replication\n\n\n\n\n\n\nNote\n\n\nThe number of replications in an experiment is the number of experimental units per treatment or treatment combination. An experiment is said to be replicated if each treatment is applied independently to each of two or more experimental units.\n\nExperimental Unit (e.u.): The smallest unit of experimental material to which a treatment is independently assigned.\nMeasurement Unit (m.u.): The unit at which the response is measured (aka: sampling unit). This may involve subsampling within an experimental unit.\nExperimental Error: Differences that occur from one repetition (or replication) of an experiment to another.\n\nNOTE: Replication makes it possible to estimate the variance of the experimental error."
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#example-1.1-reaction-times",
-    "href": "slides/01.1-basics-of-doe.html#example-1.1-reaction-times",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction times…",
-    "text": "Example 1.1: Reaction times…\nAdditional information: Each individual completes one task under their assigned distraction condition.\n\nIdentify the experimental unit (e.u.)\nMeasurement/Sampling unit (m.u.):\nHow many replications exist per treatment? r = _______"
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#design-blueprint",
-    "href": "slides/01.1-basics-of-doe.html#design-blueprint",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Design Blueprint",
-    "text": "Design Blueprint"
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#section",
-    "href": "slides/01.1-basics-of-doe.html#section",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "",
-    "text": "Treatment structure: One-way treatment structure with 3 levels of distraction type (auditory, visual, and none) making up the 3 treatments.\nExperimental structure: Distraction type is assigned to each individual (e.u.) in a completely randomized design (CRD) with r = 10. The reaction time (ms) is measured on each individual (m.u.)."
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#example-1.1-reaction-time-2",
-    "href": "slides/01.1-basics-of-doe.html#example-1.1-reaction-time-2",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction time…",
-    "text": "Example 1.1: Reaction time…\nAdditional information: Now suppose the researchers want to increase their sample size by having each of the 30 individuals repeat their task 5 times under their assigned distraction condition, resulting in 150 reaction times.\n\nIdentify the experimental unit:\nMeasurement unit:\nHow many replications exist per treatment?"
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#subsampling",
-    "href": "slides/01.1-basics-of-doe.html#subsampling",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Subsampling",
-    "text": "Subsampling\n\n\n\n\n\n\nNote\n\n\nSubsampling – taking multiple measurement units from the same experimental unit.\nTreating these measurements as independent inflates the sample size, leading to overoptimistic results and increased type I errors.\nIt is best practice to aggregate subsamples (e.g., average) to get one response per experimental unit and ensure the analysis reflects the true number of experimental units."
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#example-1.1-reaction-time-3",
-    "href": "slides/01.1-basics-of-doe.html#example-1.1-reaction-time-3",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction time…",
-    "text": "Example 1.1: Reaction time…\nNow suppose that instead of assigning distraction types individually, we place 10 individuals in a room at a time and apply the same distraction type to the entire group. This process is repeated three times – once for each distraction type.\n\nIdentify the experimental unit:\nMeasurement unit:\nHow many replications exist per treatment?"
-  },
-  {
-    "objectID": "slides/01.1-basics-of-doe.html#unreplicated-designs",
-    "href": "slides/01.1-basics-of-doe.html#unreplicated-designs",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Unreplicated Designs",
-    "text": "Unreplicated Designs\n\n\n\n\n\n\nWarning\n\n\nUnreplicated Designs – a study design with experimental unit replication of r = 1 causes issues since we cannot estimate the experimental error."
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html",
-    "href": "2-slides/01.2-controlling-for-variability.html",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "",
-    "text": "Example 1.1: Reaction Time\nControlling for Variability\nRandomization"
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#outline",
-    "href": "2-slides/01.2-controlling-for-variability.html#outline",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Outline",
-    "text": "Outline\n\nExample 1.1: Reaction Time\nControlling for Variability\nRandomization"
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#control-for-variability",
-    "href": "2-slides/01.2-controlling-for-variability.html#control-for-variability",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Control for Variability",
-    "text": "Control for Variability\nThis concept refers to actions that researchers take to reduce experimental error. There are several ways for a researcher to control experimental error:\n\nInclusion Criteria\nDirect Control\nBlocking"
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time",
-    "href": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction Time",
-    "text": "Example 1.1: Reaction Time\nReaction time is the time taken to respond to a stimulus. Suppose we would like to study reaction time in human adults. We recruit 30 adults. Each participant sits at a computer and is instructed to press the space bar as quickly as possible when a visual stimulus (a green circle) appears on the screen. Reaction time (in milliseconds) is recorded for each participant.\nResearchers conducted an experiment to determine what (if any) impact the type of distraction has on reaction time. Three different types of distraction (auditory, visual, and none) are used in the experiment."
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#inclusion-criteria",
-    "href": "2-slides/01.2-controlling-for-variability.html#inclusion-criteria",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Inclusion Criteria",
-    "text": "Inclusion Criteria\n\n\n\n\n\n\nNote\n\n\nInclusion Criteria: The ________________________________ participants must have in order to qualify to be in a study.\nHaving strict inclusion criteria creates a more homogeneous group of study participants than if the inclusion criteria were less strict. Having a more homogeneous group of study participants means less variability in the response variable."
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time-1",
-    "href": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time-1",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction Time…",
-    "text": "Example 1.1: Reaction Time…\nSuppose we want to study reaction time across a wide age range (18–65).\n\nHow might including both younger and older adults introduce variability into reaction times?\nHow could narrowing the inclusion criteria to ages 18–25 reduce variability in the results?\n\nWhile stricter criteria may reduce variability, it could limit the generalizability of the findings."
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#direct-control",
-    "href": "2-slides/01.2-controlling-for-variability.html#direct-control",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Direct Control",
-    "text": "Direct Control\n\n\n\n\n\n\nNote\n\n\nDirect Control: This refers to holding certain variables or characteristics during data collection _________________ across all treatment groups to reduce variability that could be caused by factors unrelated to the explanatory variable.\nWhen a researcher suspects that a specific variable (other than the explanatory variable) could influence the response, they may choose to keep it the same for all participants. This helps isolate the effect of the explanatory variable by reducing variation in the response caused by other factors."
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time-2",
-    "href": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time-2",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction Time…",
-    "text": "Example 1.1: Reaction Time…\nSuppose we want to study reaction time in response to different types of distractions.\n\nHow could background noise or lighting conditions influence the results?\nWhat are some things we could hold constant to reduce variability not related to the distractions?\nWhat might be the downsides of holding too many things constant? Could this make the study less realistic or applicable to real-world settings?"
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#blocking",
-    "href": "2-slides/01.2-controlling-for-variability.html#blocking",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Blocking",
-    "text": "Blocking\n\n\n\n\n\n\nNote\n\n\nBlocking: Experimental units are _______________ in such a way that the variability of the units within the blocks is less than the variability of the units across the blocks.\nThe blocks should be similar in ways that are expected to affect the response to the treatment. This allows for the treatments to be compared within a more uniform environment, and the variability associated with differences among the blocks can be separated from the experimental error.\n\n\n\nNOTE: We will examine the concept of blocking in much more detail later in the semester."
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time-3",
-    "href": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-time-3",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction Time…",
-    "text": "Example 1.1: Reaction Time…\nSuppose that, due to material constraints, only 3 participants can complete the study in any given hour. Each hour therefore forms a block.\nTo reduce set-up time, the researcher assigns all three participants tested during the same hour to receive the same distraction type.\n\nWhy is this a problem if reaction time may depend on time of day?\nWhat would be a better way to assign distraction types within each hour?"
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#randomized-complete-block-design-rcbd",
-    "href": "2-slides/01.2-controlling-for-variability.html#randomized-complete-block-design-rcbd",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Randomized Complete Block Design (RCBD)",
-    "text": "Randomized Complete Block Design (RCBD)"
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#randomization-1",
-    "href": "2-slides/01.2-controlling-for-variability.html#randomization-1",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Randomization",
-    "text": "Randomization\n\n\n\n\n\n\nNote\n\n\nRandomization is the process of _________________________ to experimental units using a random mechanism. This ensures that every unit has an equal chance of receiving any treatment, preventing systematic bias.\nBIG IDEA: Randomization eliminates the influence of hidden or unknown factors (often called extraneous variables) not under the direct control of the researcher so that comparisons between treatments measure only the true treatment effects. Without randomization, extraneous variables could confound the results, leading to misleading conclusions.\nThink of randomization as insurance – protecting your experiment from unknown biases, just as insurance shields you from unforeseen risks."
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-times",
-    "href": "2-slides/01.2-controlling-for-variability.html#example-1.1-reaction-times",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction Times…",
-    "text": "Example 1.1: Reaction Times…\nSuppose the first ten participants to sign up are assigned to the “no distraction” group, the next ten to the “visual distraction” group, and the final ten to the “auditory distraction” group.\nNow, suppose that early sign-ups tend to be more motivated or well-rested, while later sign-ups are more fatigued or distracted by other commitments. As a result, differences in reaction times between groups could reflect not just the type of distraction but also differences in motivation or fatigue.\nWhy is this problematic?"
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#experimental-design-vs-observational-study",
-    "href": "2-slides/01.2-controlling-for-variability.html#experimental-design-vs-observational-study",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Experimental Design vs Observational Study",
-    "text": "Experimental Design vs Observational Study\n\n\n\n\n\n\nNote\n\n\n\n\nDesigned Experiment: A treatment is __________________ (and randomly) imposed on an experimental unit in the interest of observing the response.\nObservational Study: This involves collecting and analyzing data __________________ randomly assigning treatments to experimental units.\n\nBIG IDEA: Because designed experiments use random assignment of the treatments (as well as other types of randomization) cause-and-effect conclusions may be made. In observational studies, because no random assignment is used, only associations may be concluded, because there are likely to be confounding variables."
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html",
-    "href": "0-course-info/syllabus-f26.html",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "",
-    "text": "Dr. Charlotte Zilber Mann1 (she/her/ella)\nYou can call me Dr. C, Professor/Prof. C., Dr. Mann, or Professor.2\n Email: czmann@calpoly.edu\n Office: Building 25 Office 201\nEmail:\n\nOnly email me with your @calpoly.edu email – I cannot respond to other email addresses\nPlease start your email subject line with “[STAT 3540]” or “[STAT 5440]” to get my attention!\nI will do my best to respond within 24 hours during the week\nIf you send me an email past 6pm or on the weekend, I will likely not respond until the morning of the next working day\nIf I don’t respond within 48 hours, please email me again!\nYou should only email me about things that relate to you as an individual. Any other questions should be posted on the course Discord (more details below).\n\nCourse Discord Page:\n\n\n\n\n\n\n\n\nFor questions of general interest, such as course clarifications or conceptual questions, please use the course Discord page (you will join this Week 1). If you have a question, someone else in class does too! I encourage you all to respond to each other. I will do my best to check Discord twice each weekday during working hours (8-6) to ensure that questions are being answered accurately.\n\n\nI encourage you to give your post a concise and informative initial sentence, so that other people can find it. You may post snippets of code, errors or problem attempts on Discord, but please do not post full solutions.\n While your posts are not anonymous, in this case there is no such thing as a bad question!",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#communication",
-    "href": "0-course-info/syllabus-f26.html#communication",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "",
-    "text": "Dr. Charlotte Zilber Mann1 (she/her/ella)\nYou can call me Dr. C, Professor/Prof. C., Dr. Mann, or Professor.2\n Email: czmann@calpoly.edu\n Office: Building 25 Office 201\nEmail:\n\nOnly email me with your @calpoly.edu email – I cannot respond to other email addresses\nPlease start your email subject line with “[STAT 3540]” or “[STAT 5440]” to get my attention!\nI will do my best to respond within 24 hours during the week\nIf you send me an email past 6pm or on the weekend, I will likely not respond until the morning of the next working day\nIf I don’t respond within 48 hours, please email me again!\nYou should only email me about things that relate to you as an individual. Any other questions should be posted on the course Discord (more details below).\n\nCourse Discord Page:\n\n\n\n\n\n\n\n\nFor questions of general interest, such as course clarifications or conceptual questions, please use the course Discord page (you will join this Week 1). If you have a question, someone else in class does too! I encourage you all to respond to each other. I will do my best to check Discord twice each weekday during working hours (8-6) to ensure that questions are being answered accurately.\n\n\nI encourage you to give your post a concise and informative initial sentence, so that other people can find it. You may post snippets of code, errors or problem attempts on Discord, but please do not post full solutions.\n While your posts are not anonymous, in this case there is no such thing as a bad question!",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#course-logistics",
-    "href": "0-course-info/syllabus-f26.html#course-logistics",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Course Logistics",
-    "text": "Course Logistics\nClass Meeting Times: Tuesdays / Thursdays\n\nSection 01: 8:00am - 9:50am\nSection 02: 10:00am - 11:50am\nSection 03: 2:00pm - 3:50pm\n\nClassrooms:\n\nSections 01 & 02: 180-272\nSection 03: 180-0102\n\nOffice Hours are held in my office (25-201) during the following times:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOffice hours are for you! During this time, I am available to talk about anything related to the course.\nOffice hours are also helpful for me… this is my chance to get to know you all better and also get a good idea of what is most challenging and most interesting to you.\nSee this resource for ways that students use office hours.\nOne thing I will not do during office hours is tell you whether an answer to a problem is “correct” or not. We can talk through your thinking that led to your solution, but will leave the final assessment to once you have submitted an assignment.\nNote that office hours are not just for when you have content questions. Stop by to introduce yourself, ask questions about the broader field of statistics, or share what you are working on!\nI am always open to students joining remotely via Zoom – just email me.\nI LOVE office hours! Please come by – you are never inconveniencing me.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#course-description",
-    "href": "0-course-info/syllabus-f26.html#course-description",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Course Description",
-    "text": "Course Description\nStudy designs to address statistical research questions. Ethical considerations when designing studies and analyzing data. Experimental designs, completely randomized, block designs, factorial, and nested designs. Survey planning, execution, and analysis. Survey research, non-sampling, and sampling errors. Use of weights in surveys. Estimate parameters and calculate sample size. Course may be offered in classroom-based, online, or hybrid format\nPrerequisites\nSTAT 252, STAT 1220, STAT 302, STAT 313 or STAT 3520.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#learning-objectives",
-    "href": "0-course-info/syllabus-f26.html#learning-objectives",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of this course, you should be able to:\n\nCommunicate the ethical implications of research questions, study designs, and analysis choices.\nDetermine which type of study (observational or experimental) is appropriate given a research context.\nDesign and explain a plan for conducting an experiment (e.g., RCBD) or a sample survey (e.g., stratified sample design).\nAnalyze data by applying an appropriate model that accounts for the study design and attempts to isolate and quantify the effects of the factors of interest.\nDescribe the limitations of study designs and propose alternative designs.\nProduce a written and/or oral summary of an appropriate study design and analysis.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#course-materials",
-    "href": "0-course-info/syllabus-f26.html#course-materials",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Course Materials",
-    "text": "Course Materials\nCourse Webpage (Canvas)\n\n\n\n\n\n\n\n\nAll course material will be made available on our Canvas page. Canvas will also contain detailed weekly schedules throughout the term. You are responsible for checking the Canvas page every day and making sure you see Canvas Announcements.\n\n\nI will also be posting material on this website (which is actually where you are right now!) for easy access to materials. Please note that this website does not include deadlines and links to all material will additionally be posted to Canvas. Canvas will always contain the most updated information about course deadlines and details, so always defer to these.\nClass Preparation\nFor each topic, you will prepare for class by  watching 1-3 short lecture videos following a set of lecture slide notes  containing definitions and examples. You are expected to either print  or save  the lecture slide notes to your device and follow along, filling  out your set of notes while watching the videos.\nDuring class, I will highlight any key points from the lecture videos and we will complete activities meant to reinforce the ideas learned in the videos.\nSupplemental reading from the following open source books will be recommended throughout the course:\n\n A First Course in Design and Analysis of Experiments by Gary W. Oehlert\n Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method by Don A Dillman, Jolene D Smyth, and Leah Melani Christian\n\nComputing\n You will need access to a laptop for this course. If this requirement is limiting for you, please contact me ASAP.\n\n\n\n\n\n\n\n\nWe will be using the R statistical software and RStudio IDE throughout this course . Both R and RStudio are freely available. Download instructions are available on Canvas. If you can, please work on downloading this software before class begins.\n\n\n We will also be using Gradescope – an app on your phone or computer browser.\n\n\n\n\n\n\nWarning\n\n\n\nChromebooks and iPads will not be sufficient to use R. If this requirement is limiting for you, please contact me ASAP.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#class-schedule-topic-outline",
-    "href": "0-course-info/syllabus-f26.html#class-schedule-topic-outline",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Class Schedule & Topic Outline",
-    "text": "Class Schedule & Topic Outline\nThis schedule is tentative and subject to change. See Canvas and the course Schedule for up-to-date information.\n\n\n\n\n\nNote that all Cal Poly holidays other than Fall Break fall on Mondays or Wednesdays, so we will have regularly scheduled class throughout the entire semester.\n\n\n\n\n\n\n\nTentative schedule of class topics and important due dates\n\n\nDate\nTopic\n\n\n\n\nAug 25, Aug 27\nIntroduction to Design of Experiments\n\n\nSep 1, Sep 3\nCompletely Randomized Design (CRD)\n\n\nSep 8, Sep 10\nPower and Sample Size + Factorials\n\n\nSep 15\nFactorials\n\n\nSep 17\nMidterm Exam I\n\n\nSep 22, Sep 24\nMore Complex Experimental Designs\n\n\nSep 29, Oct 1\nMore Complex Experimental Models\n\n\nOct 6, Oct 8\nExtensions and Considerations\n\n\nOct 13, Oct 15\nExtensions and Considerations\n\n\nOct 20\nMidterm Exam II\n\n\nOct 22\nObservational Studies\n\n\nOct 27, Oct 29\nIntro to Surveys and Writing Survey Instrucments\n\n\nNov 3, Nov 5\nWriting Survey Instruments\n\n\nNov 10, Nov 12\nSurvey Sampling\n\n\nNov 17, Nov 19\nSurvey Sampling and Survey Weights\n\n\nDec 1, Dec 3\nPutting it all Together!\n\n\nDec 8\nPutting it all Together!\n\n\nDec 10\nProject Presentations\n\n\nDec 15\nSec 03 Final Exam 4-6:30pm\n\n\nDec 17\nSec 02 Final Exam 10am-12:30pm & Sec 01 Final Exam 7-9:30pm",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#assessments",
-    "href": "0-course-info/syllabus-f26.html#assessments",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Assessments",
-    "text": "Assessments\n\nGeneral Evaluation Criteria\nIn every assignment, discussion, and written component of this class, you are expected to demonstrate that you are intellectually engaging with the material. I will evaluate you based on this engagement, which means that technically correct but low effort answers which do not demonstrate engagement or understanding will receive no credit.\nWhen you answer questions in this class, your goal is to show that you either understand the material or are actively engaging with it. If you did not achieve this goal, then your answer is incomplete, regardless of whether or not it is technically correct. This is not to encourage you to add unnecessary complexity to your answer - simple, elegant solutions are always preferable to unwieldly, complex solutions that accomplish the same task.\nWhile this is not an English class, grammar and spelling are important, as is your ability to communicate technical information in writing; both of these criteria will be used in addition to assignment-specific rubrics to evaluate your work.\n\n\nFormative Assessments\n\n📺📘📋✅ Class Preparation, Participation, & Professionalism\nThis course uses a flipped classroom model. Core content is introduced before class through assigned videos or readings, and class time is devoted to activities and practice. Coming to class prepared is essential for your own learning and for your group’s success. Preparation will occasionally be checked using short, closed-note learning quizzes or entry/exit tickets\nParticipation credit is earned by being present, prepared, and engaged during class. You must be in class to receive participation credit. Part of this grade also reflects professionalism, including arriving on time, being mentally present, treating others with respect, and contributing constructively to group work.\n\n2 participation grades will be dropped; think of these as “sick days”.\n\n\n\n\n\n\n\nNote\n\n\n\nIf you are feeling ill, please do not come to class. If you miss more than 2 class days for illness, we will work something out!\nSee Section 8.1 for more information. You do not need to notify me, but instead do your best to complete the in-class activity found on Canvas and get any questions answered from your classmates, Discord, and office hours.\n\n\n\n\n🧩 In-class Activities\nMost class meetings will include in-class activities designed to reinforce and apply course content. Class time will be dedicated to working on these activities. You will collaborate with your group members; however, each student must submit their own original work.\n\nIn-class activities will be submitted and graded through Gradescope, which is integrated with Canvas.\nUnless otherwise noted, activities are due at 11:59pm the day after class.\n\n\n\n\n\n\n\nNote\n\n\n\nCal Poly provides access to Gradescope. There will be more instructions on using Gradescope as a student during the first week of class.\n\n\n\n\n🏝 Lab Reports\nYou will complete 4-6 lab assignments (I am still figuring this out!) in groups of 3-4. Each lab will involve designing a study and collecting data, often using The Islands. A written report summarizing your methods and findings will be submitted for each lab. More details will be provided in class.\n\nOne report per group should be submitted as a PDF on Canvas.\nSee the course schedule on Canvas for tentative deadlines.\n\n\n\n\nEvaluative Assessments\n\n📓 Final Project\nYou will complete a paired final project in which you design and propose a study, including all necessary details. The project will culminate in a 10-minute presentation during the last week of class. Additional details and expectations will be provided later in the term.\n\n\n📝 Exams\nThere will be two midterm exams and a final exam, designed to assess your individual understanding and progress in the course. You may bring a one-sided notesheet to each midterm exams and a two-sided notesheet to the final exam. Exam dates are listed in the course calendar.\n\n\n\n\n\n\nNote\n\n\n\nIf you have a known conflict with an exam, please discuss it with me at least three weeks prior to the exam date. (See Section 8.6 for more information.)\n\n\n\n\n\nCourse Grade\nYour grade in STAT 3540/5440 will contain the following components:\n\n\n\n\n\nAssignments\nWeight\n\n\n\n\nClass Preparation, Participation, & Professionalism\n5%\n\n\nIn-class Activities\n10%\n\n\nLab Reports\n15%\n\n\nFinal Project\n10%\n\n\nMidterm Exams I & II *\n35%\n\n\nFinal Exam\n25%\n\n\n\n\n\n* At the end of the semester, your higher-scoring midterm exam will be weighted to 20% of your final grade, while the lower-scoring midterm will be weighted to 15%.\nLower bounds for grade cutoffs are shown in the following table. It is possible that I could lower any of the grade cutoffs. You will only have the opportunity for grade rounding to the nearest tenth of a percent if you completed all assignments in the course.\n\n\n\nLetter grade\nX +\nX\nX -\n\n\n\n\nA\n.\n93\n90\n\n\nB\n87\n83\n80\n\n\nC\n77\n73\n70\n\n\nD\n67\n63\n60\n\n\nF\n&lt;60\n\n\n\n\n\nInterpretation of this table:\n\nA grade of 85 will receive a B.\nA grade of 77 will receive a C+.\nA grade of 70 will receive a C-.\nAnything below a 60 will receive an F.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#course-policies",
-    "href": "0-course-info/syllabus-f26.html#course-policies",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Course Policies",
-    "text": "Course Policies\n\nAttendance & Participation\nAs stated above, if you are feeling ill, please do not come to class. Two participation grades will be dropped as “sick days.” If you really just have a cold and really want to come to class be polite to your classmates and wear a mask!\nHere’s what you should do if you do miss a class:\n\nYou do not need to notify me, unless there is a special circumstance you want to discuss.\nComplete the in-class activities on your own, which are posted on Canvas.\nCheck Canvas for any other necessary notes or changes to assignments.\nTalk to a classmate to figure out what information you missed.\nPost on Discord with any questions you have after reviewing notes and activities.\nCome by office hours when you are feeling better.\n\n\n\n\n\n\n\nTipDon’t be a stranger!\n\n\n\nIf you miss a bunch of classes, please do come talk to me. I’m working from the assumption that you care and are trying, but something is getting in your way (health issues? college stress? work?); let’s figure out what that is and how I can help.\n\n\n\n\nAccessibility and Accommodations\nI have taken numerous steps to ensure that all of the materials presented in this course are accessible to all participants, regardless of physical or learning disabilities. I know that everyone is unique and I may have unintentionally overlooked something that limits access to some materials or activities. Please let me know if you cannot access any content. If you find you need additional accommodations to complete the required course work, please contact me as soon as possible! I want to support your success.\nIf you wish to request disability-related accommodations such as extra exam time for this or any other course, please contact the Disability Resource Center. It’s important to do this with as much advanced notice as possible, so you have full access to your course materials and activities in a timely manner. Please also email me to let me know that I should expect an email from the DRC to get you the accommodations that you need.\n\n\nInclusive Classroom\nBecause data are collected by and about humans, data necessarily encode aspects of our proclivities and biases. As a result, this course may touch upon difficult topics related to race, gender, inequality, class, and oppression. We each come into this class with different perspectives that can be shared to enhance our understanding of these issues. I ask that you enter these conversations with respect, curiosity, and cultural humility. You should be open to alternative perspectives and be willing to revise beliefs that are based on misinformation. As a general rule, your ideas and experiences can always be shared during these conversations, but please refrain from dismissing the experiences of others. Personal attacks of any kind will not be tolerated.\n\n\nGroup Work\nThis course will rely heavily on in-class group work. You will be expected to work with classmates on in-class material. If you have concerns about random group assignment, please talk to me at the start of the term.\nThe community standards for student-to-student and student-to-instructor interactions include the following:\n\nListen actively and attentively.\nAsk for clarification if you are confused.\nChallenge one another respectfully.\nGracefully accept constructive criticism.\nTake responsibility for the quality of the discussion and the work.\nDo not monopolize discussion.\nAcknowledge that everyone has something to offer.\nSpeak from your own experience, without generalizing.\n\n\n\nLate Policy\nEveryone will be given a “bank” of 4 deadline extensions which can be used on in-class activities or lab reports at any point in the quarter. One deadline extension will get you a 24 hour extension on a given assignment. You can use all of your deadline extensions on one assignment or split them up in any way.\n\nLike how the “real world” works, you must request a deadline extension before the deadline. To use your deadline extensions, you need to email me before the assignment deadline. You don’t need to get a response from me, you just need to email me at least a minute before the deadline.\nIf you do not email me before the assignment deadline (or you run out of late days), you will be docked 20% for each day that the assignment is late. (e.g. you can get a maximum of 80% on the assignment if it is submitted within 24 hours after the original due date and time.)\nIn order to use deadline extensions on group lab reports:\n\neveryone in your lab group must agree to use one of their extensions.\nYou must cc everyone in your group to your email to me asking for the extension.\n\n\nA note on this policy: my priority is for all of you to engage with and understand the course materials. The best way to achieve this is to complete all assignments and receive feedback on your work. At the same time, I understand that things happen outside of our control and that you are balancing many responsibilities.\n\n\n\n\n\n\nWarningAutomatic Canvas Settings\n\n\n\nCanvas is set up to automatically input 0% for missing assignments (as an incentive to go complete the assignment) and apply the 20% grade deduction policy. I will need to manually adjust your grade when you use your “deadline extensions.” You are responsible for double checking your grade to make sure I didn’t miss anything.\n\n\nIf you find yourself with extenuating circumstances beyond the defined late policy, please email me before the due date.\n\n\nExam Conflicts\nIf you have a known conflict with an exam, please discuss it with me at least three weeks prior to the exam date. If an illness or a family emergency arises, please let me know as soon as possible, and we will work out a solution. This may involve taking the exam at a later date or replacing the missed exam score with the final exam score. If you are unable to take the final exam, you will likely receive an Incomplete in the course.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#course-expectations",
-    "href": "0-course-info/syllabus-f26.html#course-expectations",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Course Expectations",
-    "text": "Course Expectations\nFor Students, I expect:\n\nYou will ask lots of questions.\nYou will do the reading, video watching, and other assignments outside of class and be prepared for each class meeting.\nYou will engage in some productive struggle/challenge when working on assignments (i.e. not give up and google or use ChatGPT immediately!)\nIf you find yourself struggling in general or feel that you are falling behind, please reach out to me as soon as possible so that we can develop a plan for your success together.\nYou will take advantage of the resources that I provide and to seek out additional resources if you find that you are struggling with the material. You do not need to seek out additional resources all on your own – we can figure out what additional resources you may need.\n\nYou will be doing your best to engage with what we are all doing together during class. This means that you are using technology (i.e. laptops/tablets/phones) for class activities and not in ways that distract you.\nYou will approach the course with academic integrity.\nYou will come to class on time and work on class material with your peers.\nEveryone can learn the material in this course.\n\nFor Me:\n\nI am responsible for ensuring that all students feel welcome and valued in the classroom.\nI am responsible for providing the resources necessary so that all students in the course can achieve the learning objectives.\nI am responsible for providing prompt and clear feedback on your coursework.\nI welcome and appreciate any actionable feedback regarding how the class is meeting your learning needs. We can discuss ways to adjust the course to ensure it is supporting your learning and do more of anything that is working well!",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#academic-integrity-and-class-conduct",
-    "href": "0-course-info/syllabus-f26.html#academic-integrity-and-class-conduct",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Academic Integrity and Class Conduct",
-    "text": "Academic Integrity and Class Conduct\nOur academic community is at its best when we treat each other with fairness, honesty, respect, and trust. Unfortunately, sometimes students slip up and do something that gives themselves (or someone else) an unfair advantage over other students. Such actions will not be tolerated in this class.\nIt is most likely that a student will slip up if they are feeling overwhelmed or unsure of how to approach a problem that they are stuck on. So let’s be proactive to prevent those situations!! If you are helpless in an assignment or in studying, post on discord, come to office hours, or email me or one of your classmates! I am working hard to provide all of the resources you need to succeed\nHowever, the college doesn’t really care if you break the rules on purpose or by accident. If I suspect you have done something that violates academic integrity on any graded elements of the course (included those graded for completion), you will receive an email to tell you about my suspicion and how the situation will be handled. Typically, students earn a 0 for the assignment on which academic misconduct is found. University policy dictates that we must report every instance of suspected academic dishonesty to the Office of Student Rights and Responsibilities, no matter how small. For more information on academic misconduct and what constitutes cheating and plagiarism, please see academicprograms.calpoly.edu/content/academicpolicies/Cheating.\nIt is important to note that paraphrasing or quoting another’s work without proper citation is a form of academic misconduct. This includes the R code produced by someone else! Writing code is like writing a paper, it is obvious if you copied-and-pasted a sentence from someone else into your paper because the way each person writes is different.\nEven inadvertent or unintentional misuse or appropriation of another’s work (such as relying heavily on source material that is not expressly acknowledged) is considered plagiarism. This includes using Generative AI, which should only be used to help you problem solve just as a tutor or peer would, and not as a substitute for your own work. If you are struggling with an assignment, please reach out to me and post to Discord. If you use Generative AI to help, make sure that you understand the solution it provides.\n\n\n\n\n\n\nTipAlways Cite Outside Resources!\n\n\n\nIn this class the assumed knowledge is the course materials, including the course textbook, coursework pages, and course slides. If you use outside resources on assignments I expect that you will cite those resources. This means that\n\nIf you use Google you are expected to “inform” me of any resources you used by pasting the link to the resource at the end of your assignment with a note of how it was used.\nIf you use AI you are expected to “inform” me by stating that you used at the end of your assignment including the full prompt that you gave AI (like ChatGPT). See an example of an appropriate citation below.\nIf you work with classmates on an assignment, you are expected to “inform” me by including a note with their names.\n\n\n\nIf you have any questions about using and citing sources, you are expected to ask for clarification.\n\nGenerative AI Policy\nGenerative AI (like Chat GPT) is an extremely and increasingly powerful tool for many many tasks. It is true that in some (how many, I am not sure!) workplaces, employees are encouraged to use AI for a number of tasks. However, in this class, you are students, not employees! Your primary goal here is to learn, so I want us to think critically about how to use Generative AI (if you choose to use it at all) to assist your learning, not to undermine it.\n\n\n\n\n\n\nImportantNo copy-paste, seriously\n\n\n\nYou may not copy and paste any course materials into generative AI. That includes slides and assignments. All course materials are my or other faculty’s intellectual property, and we have not consented to you contributing it to generative AI model data.\n\n\n\nIn Class:\nClass time is structured around active learning and I expect you to actively engage with the software, so you may not use generative AI for in-class work and activities. You have each other and me to grapple with the material during class. If you use generative AI in class, you will not get participation credit for that day.\n\n\nOutside of Class:\nYou can use generative AI outside of class on assignments. However, I encourage you to give all problems a full effort on your own, referencing the provided course materials before turning to AI. You will learn SO much more this way!! You should also give thought to how you are using AI, and approach it as a tutor, asking it specific questions to help you solve a problem. Again, you may not copy and paste course materials, including problems, into AI. When you do use AI to help with a problem, make sure you understand why the code it provides works or why the solution make sense. If you choose to use AI, you must cite your use including the prompt that you gave.\n\n\n\n\n\n\nTipAI Citation Guidelines\n\n\n\nGeneral form:3\nPrompt: [[provide exact prompt in quoations]]\nAI Company Name. (year, month day). Title of chat in italics [Generative AI chat]. Tool Name/Model. URL of the chat itself.\nExample:\nPrompt: “How can you randomly assign a vector a names to five treatments in R?”\nAnthropic. (2026, August 17). Random assignment in R [Generative AI chat]. Claude Sonnet 4.5. https://claude.ai/share/0c6f2224-8839-4150-80d3-c02194358cc0\n\n\nNote that work created by AI tools may not be considered original work and instead, considered automated plagiarism. It is derived from previously created texts from other sources that the models were trained on, yet doesn’t cite sources. Thus, there is a high risk that you can unintentionally plagiarize other sources from the web.\n\n\nMy 2-cents\nA final personal opinion is that I find YOU so much more interesting than AI! I would so much rather see and read what you are thinking and how you approach a problem than something you may think looks more “clean” from AI.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#learning-environment-and-support",
-    "href": "0-course-info/syllabus-f26.html#learning-environment-and-support",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Learning Environment and Support",
-    "text": "Learning Environment and Support\nMy priority is your success in this course. I understand that things happen unexpectedly and obtaining official accommodations can be slow.\nIf you feel that any circumstances or factors beyond your control may affect your presence and work in this class, please reach out to me and we will work to accommodate your needs. You do not need to share personal information with me when you reach out, unless you would like to.\n\nMental Health\nNational surveys of college students have consistently found that stress, sleep problems, anxiety, depression, interpersonal concerns, death of a significant other and alcohol use are among the top ten health impediments to academic performance. If you are experiencing any mental health issues, I and Cal Poly are here to help you. Cal Poly’s Counseling Services (805-756-2511) is a free and confidential resource for assistance, support and advocacy https://chw.calpoly.edu/counseling.\n\n\nSupport Services\nIf you are experiencing food insecurity, housing instability, or other challenges that may impact your ability to succeed in this course, please refer to the resources listed on Canvas under “Student Support and Basic Needs”. These resources provide a range of essential support services, including emergency financial assistance, counseling, and academic support.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/syllabus-f26.html#footnotes",
-    "href": "0-course-info/syllabus-f26.html#footnotes",
-    "title": "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllabus",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nWhy do I include my middle name? It’s my mom’s last name!↩︎\nAs an FYI for folks who don’t know, it is considered rude to use “Ms.” or “Mrs.” when addressing instructors. I will get annoyed if you do this and will correct you.↩︎\nAdapted from the Dalhousie University Library Guide. https://dal.ca.libguides.com/CitationStyleGuide/citing-ai↩︎",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "0-course-info/course-resources.html",
-    "href": "0-course-info/course-resources.html",
-    "title": "Course Resources",
-    "section": "",
-    "text": "R Cheatsheets\n\nRStudio IDE\nQuarto\nBase R\nGit & GitHub\nData Visualization with ggplot2\nData Import with readr\nData Wrangling with dplyr\nData Tidying with tidyr\nFactors with forcats\nDates with lubridate\nStrings with stringr\nRegular Expressions\nTidy Evaluation\nIteration with purrr",
-    "crumbs": [
-      "Course information",
-      "Resources"
-    ]
-  },
-  {
-    "objectID": "1-prep/1.1-prep.html",
-    "href": "1-prep/1.1-prep.html",
-    "title": "1.1 Preparation: Syllabus and Intro to DOE",
-    "section": "",
-    "text": "📖 Readings: 15 minutes\n\n\n📽 Watch Videos: 30 min\n\n\n\n\n\n\n\nNoneLearning Objectives\n\n\n\n\nIdentify the factors, levels, treatments, and responses in a designed experiment.\nIdentify experimental units, measurement units, and the role of subsampling in experimental design.\n\n\n\n\n\nSyllabus\n\n📖 Review Canvas and the syllabus after watching the introduction!\n\n\n\nBasics of Design of Experiments (DOE)\n\nFollow along with the slides.\nNote: you can export the slides to a pdf for notetaking via the bottom left three horizontal stacked lines &gt; Tools &gt; PDF Export Mode &gt; Print + Save as PDF"
-  },
-  {
-    "objectID": "1-prep/1.2-prep.html",
-    "href": "1-prep/1.2-prep.html",
-    "title": "1.1 Preparation: R & RStudio",
-    "section": "",
-    "text": "For the first portion of this week’s coursework, we are going to learn about / refresh our memory on R and RStudio. This course is all about you learning skills for working with data in R, so you will need to have local installations of both R and RStudio on your computer."
-  },
-  {
-    "objectID": "1-prep/1.2-prep.html#updating-your-version-of-r",
-    "href": "1-prep/1.2-prep.html#updating-your-version-of-r",
-    "title": "1.1 Preparation: R & RStudio",
-    "section": "1.1 Updating Your Version of R",
-    "text": "1.1 Updating Your Version of R\nIf you already have R downloaded, you need to confirm that you have the most up to date version of R. Do not ignore these instructions. If you neglect to update your version of R, you may find that updating a package will make it so your code will not run.\n\nStep 1: Open RStudio\nStep 2: At the top of the the Console it will say what version of R you are using\n\n\nIf the version is not 4.5.3 (like the image above), you need to update your version of R! The simplest way to do this is to follow the instructions below to install R."
-  },
-  {
-    "objectID": "1-prep/1.2-prep.html#installing-r-1",
-    "href": "1-prep/1.2-prep.html#installing-r-1",
-    "title": "1.1 Preparation: R & RStudio",
-    "section": "1.2 Installing R",
-    "text": "1.2 Installing R\nDownload and install R by going to https://cloud.r-project.org/. Here, you will find three options for installing R—click on the option for your computer’s operating system.\n\n\n\n\nIf you are a Windows user:\n\nClick on “Download R for Windows”\nClick on “base”\nClick on the Download link.\nWhen you open the execution file (.exe) you will be prompted with a variety of questions about installing R. Feel free to use the default features / settings that come with R (continue to click “Ok” until the download starts).\n\n\n\n\n\n\n\nWarningMultiple Versions of R\n\n\n\nBeware that if you had a previous version of R downloaded on your PC, that old version will not be deleted when you download the most recent version of R. We do not want to have two versions of R installed, as your computer can get confused what version of R to use. So, you need to remove the old version of R.\nTo do this you need to:\n\nNavigate to your computer’s settings\nClick on the “Apps” option on the left-hand panel\nSearch for or scroll down to R\nFind the older version of R\n\n\n\nClick on the ... on the right side\nSelect “Uninstall”\n\n\n\n\n\n\nIf you are macOS user:\n\nClick on “Download R for (Mac) OS X”\nUnder “Latest release:” click on R-X.X.X.pkg, where R-X.X.X is the version number. For example, the latest version of R as of March 11, 2026 was R-4.5.3 (Reassured Reassurer).\nWhen installing, use the default features / settings that come with R (click Ok until the download starts).\n\n\n\n\n\n\n\nTipTroubleshooting for Macs\n\n\n\nFirst, identify which version of OSx you are running. How-to\nNext, find out which version of R your computer can run. Link\nIf this version is 3.6 or later, download the latest version that your computer can handle.\nIf this version is 3.4 or earlier, you’re going to run in to some trouble. I recommend updating your version of OSx, if you are willing. If you can’t, then you can use Posit Cloud to run R and RStudio on a free server. However, I recommend strongly against this option; your files will not be saved indefinitely, you will have limited hours to complete your work, your computing power will be limited, and you will need an internet connection at all times to do your work.\n\n\n\n\nIf you are a Linux user:\nClick on “Download R for Linux” and choose your distribution for more information on installing R for your setup."
-  },
-  {
-    "objectID": "1-prep/1.2-prep.html#updating-your-version-of-rstudio",
-    "href": "1-prep/1.2-prep.html#updating-your-version-of-rstudio",
-    "title": "1.1 Preparation: R & RStudio",
-    "section": "2.1 Updating Your Version of RStudio",
-    "text": "2.1 Updating Your Version of RStudio\nIf you already have RStudio, you need to double check if you have the most recent version. You will not have access to the newest features for Quarto documents unless you have the most recent version of RStudio.\n\nStep 1: Open RStudio\nStep 2: Click on “Help” in the upper menu\nStep 3: Click on “Check for Updates”\n\nIf there are no updates to RStudio since you installed it, you are good to go! If you need to update RStudio, you will be sent to Posit (the parent company) to download the most recent version of RStudio desktop."
-  },
-  {
-    "objectID": "1-prep/1.2-prep.html#installing-rstudio",
-    "href": "1-prep/1.2-prep.html#installing-rstudio",
-    "title": "1.1 Preparation: R & RStudio",
-    "section": "2.2 Installing RStudio",
-    "text": "2.2 Installing RStudio\n\n\n\n\nDownloading the most recent version of RStudio works the same way regardless of whether you’ve never downloaded RStudio before or if you just need to update your version of RStudio.\nWhen you navigate to the RStudio download page (https://rstudio.com/products/rstudio/download/), the website should automatically detect your computer’s operating system. So, you should be able to simply click the blue “Download RStudio Desktop for [insert operating system here]” button.\nClicking the button will begin installing RStudio. Once the download has completed, you will need to open the application file (on a Mac this is a .dmg file, on Windows this is an exe file)."
-  },
-  {
-    "objectID": "1-prep/1.2-prep.html#ensure-quarto-is-installed",
-    "href": "1-prep/1.2-prep.html#ensure-quarto-is-installed",
-    "title": "1.1 Preparation: R & RStudio",
-    "section": "2.3 ✅ Ensure Quarto is Installed",
-    "text": "2.3 ✅ Ensure Quarto is Installed\nWe will learn more about Quarto notebooks later in the week, so for now, just make sure that you have the software set up! It is likely that it was already installed automatically.\nTo check, open a new Rstudio window click the + icon in the top left of the Rstudio window and see if Quarto is an option. See screenshot below.\n\nIf you do not see Quarto, download and install the latest version of Quarto for your operating system."
-  },
-  {
-    "objectID": "1-prep/1.2-prep.html#create-an-r-project",
-    "href": "1-prep/1.2-prep.html#create-an-r-project",
-    "title": "1.1 Preparation: R & RStudio",
-    "section": "2.4 ✅ Create an R Project",
-    "text": "2.4 ✅ Create an R Project\nSince there are often many files necessary for a project (e.g. data sources, images, etc.), R has a nice built in system for setting up your project organization with RProjects. You can either create a new folder on your computer containing an Rproject (e.g., you have not yet created a folder for this class) or you can add an Rproject to an existing folder on your computer (e.g., you have already created a folder for this class).\n\nCreate with a new folderAdd to an existing folder\n\n\nTo create a Rproject, first open RStudio on your computer and click File &gt; New Project, then:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGive your folder a name (it doesn’t have to be my-stat331). However, it is good practice for this file folder name to not contain spaces.\nThen, browse on your computer for a location to save this folder to. For example, mine is saved in my Documents. Make sure you know how to find this; it should NOT be saved in your Downloads!\n\n\n\n\n\n\n\n\n\nThis new folder, my-stat331 should now live in your Documents folder (or wherever you save it to) and contain a my-stat331.Rproj file. This is your new “home” base for this class - whenever you refer to a file with a relative path it will begin to look for it here.\n\n\nTo add a Rproject to an existing folder on your computer (e.g., you already created a folder for this class), first open RStudio on your computer and click File &gt; New Project, then:\n\n\n\n\n\n\n\n\n\nThen, browse on your computer to select the existing folder you wish to add your Rproject to. For example, mine is saved in my Documents and called my-stat331.\n\n\n\n\n\n\n\n\n\nYour existing folder, my-stat331 should now contain a my-stat331.Rproj file. This is your new “home” base for this class - whenever you refer to a file with a relative path it will begin to look for it here."
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#outline",
-    "href": "2-slides/01.1-basics-of-doe.html#outline",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Outline",
-    "text": "Outline\n\nWhy experiments?\nSources of Variation\nBasic Terminology\nDesign Blueprints\nExample 1.1: Reaction Time"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#why-design-of-experiments-doe",
-    "href": "2-slides/01.1-basics-of-doe.html#why-design-of-experiments-doe",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Why Design of Experiments (DOE)?",
-    "text": "Why Design of Experiments (DOE)?\n“If the design of an experiment is faulty, any method of interpretation which makes it out to be decisive must be faulty too.”\n– Fisher, 1935, Design of Experiments\nOur Goal: How to obtain useful data and work with it."
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#why-conduct-experiments",
-    "href": "2-slides/01.1-basics-of-doe.html#why-conduct-experiments",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Why Conduct Experiments?",
-    "text": "Why Conduct Experiments?\n\nTo identify the main causes of variation in a measured response.\nTo determine the conditions that lead to maximum or minimum responses.\nTo compare responses at different settings of controllable variables.\nTo develop a mathematical model for predicting future responses."
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#sources-of-variation-sv",
-    "href": "2-slides/01.1-basics-of-doe.html#sources-of-variation-sv",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Sources of Variation (SV)",
-    "text": "Sources of Variation (SV)\nIn any experiment, variation is inevitable and it can stem from:\n\ndifferences in treatments\nmeasurement errors\nnatural fluctuations in the environment.\n\nIdentifying and accounting for these sources is essential to ensure that the observed effects reflect real differences, not random noise."
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time",
-    "href": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction Time",
-    "text": "Example 1.1: Reaction Time\nReaction time is the time taken to respond to a stimulus. Suppose we would like to study reaction time in human adults. We recruit 30 adults. Each participant sits at a computer and is instructed to press the space bar as quickly as possible when a visual stimulus (a green circle) appears on the screen. Reaction time (in milliseconds) is recorded for each participant.\n\nWhat are some possible sources of variability in the reaction times? That is, what might explain why reaction times in human adults differ from each other?"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#treatment-structure-vs-design-structure",
-    "href": "2-slides/01.1-basics-of-doe.html#treatment-structure-vs-design-structure",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Treatment Structure vs Design Structure",
-    "text": "Treatment Structure vs Design Structure\n\nTreatment structure (Treatment Design): Set of treatments, factors, treatment combinations, or populations that the experimenter has selected to study and/or compare - the “what” of the experiment.\nDesign structure (Experimental Design): Grouping of the experimental units into similar groups of blocks - the “how” of the experiment."
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#treatment-structures",
-    "href": "2-slides/01.1-basics-of-doe.html#treatment-structures",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Treatment Structures",
-    "text": "Treatment Structures\n\n\n\n\n\n\n\nStructure Type\nExample Methods\n\n\n\n\nOne-way\nOne-way ANOVA, Simple Linear Regression\n\n\nTwo-way and n-way\nn-way ANOVA, Factorial Designs, Multiple Regression"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#design-structures",
-    "href": "2-slides/01.1-basics-of-doe.html#design-structures",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Design Structures",
-    "text": "Design Structures\n\n\n\n\n\n\n\nStructure Type\nExample Methods\n\n\n\n\nCompletely Randomized\nCRD\n\n\nOne-way Blocked\nRCBD, BIBD, IBD\n\n\nTwo-way Blocked\nLatin Square, Youden Square\n\n\nSplit Plot (Repeated Measures)\nSplit plot designs, repeated measures designs"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#terminology",
-    "href": "2-slides/01.1-basics-of-doe.html#terminology",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Terminology",
-    "text": "Terminology\n\n\n\n\n\n\nNote\n\n\n\nFactor: An explanatory (or independent) variable to be studied in an investigation.\nLevel: A particular form of a factor.\nTreatment: A treatment is determined by the set of factors and the levels of each factor.\nResponse: Something you measure during or after an investigation.\n\nNOTE: A factor HAS an effect on the response if different levels of the factor produce differing responses!"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-1",
-    "href": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-1",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction Time…",
-    "text": "Example 1.1: Reaction Time…\nNow suppose that the experiment is conducted to determine what (if any) impact the type of distraction has on reaction time. Three different types of distraction (auditory, visual, and none) are used in the experiment.\n\nFactor(s):\nLevel(s):\nResponse(s):\nA treatment corresponds to the levels. Thus, this experiment has 3 treatments which are…"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#replication",
-    "href": "2-slides/01.1-basics-of-doe.html#replication",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Replication",
-    "text": "Replication\n\n\n\n\n\n\nNote\n\n\nThe number of replications in an experiment is the number of experimental units per treatment or treatment combination. An experiment is said to be replicated if each treatment is applied independently to each of two or more experimental units.\n\nExperimental Unit (e.u.): The smallest unit of experimental material to which a treatment is independently assigned.\nMeasurement Unit (m.u.): The unit at which the response is measured (aka: sampling unit). This may involve subsampling within an experimental unit.\nExperimental Error: Differences that occur from one repetition (or replication) of an experiment to another.\n\nNOTE: Replication makes it possible to estimate the variance of the experimental error."
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-times",
-    "href": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-times",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction times…",
-    "text": "Example 1.1: Reaction times…\nAdditional information: Each individual completes one task under their assigned distraction condition.\n\nIdentify the experimental unit (e.u.)\nMeasurement/Sampling unit (m.u.):\nHow many replications exist per treatment? r = _______"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#design-blueprint",
-    "href": "2-slides/01.1-basics-of-doe.html#design-blueprint",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Design Blueprint",
-    "text": "Design Blueprint\n\nknitr::include_graphics(\"_images/reaction-time-crd.png\")"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#section",
-    "href": "2-slides/01.1-basics-of-doe.html#section",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "",
-    "text": "Treatment structure: One-way treatment structure with 3 levels of distraction type (auditory, visual, and none) making up the 3 treatments.\nExperimental structure: Distraction type is assigned to each individual (e.u.) in a completely randomized design (CRD) with r = 10. The reaction time (ms) is measured on each individual (m.u.)."
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-2",
-    "href": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-2",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction time…",
-    "text": "Example 1.1: Reaction time…\nAdditional information: Now suppose the researchers want to increase their sample size by having each of the 30 individuals repeat their task 5 times under their assigned distraction condition, resulting in 150 reaction times.\n\nIdentify the experimental unit:\nMeasurement unit:\nHow many replications exist per treatment?"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#subsampling",
-    "href": "2-slides/01.1-basics-of-doe.html#subsampling",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Subsampling",
-    "text": "Subsampling\n\n\n\n\n\n\nNote\n\n\nSubsampling – taking multiple measurement units from the same experimental unit.\nTreating these measurements as independent inflates the sample size, leading to overoptimistic results and increased type I errors.\nIt is best practice to aggregate subsamples (e.g., average) to get one response per experimental unit and ensure the analysis reflects the true number of experimental units."
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-3",
-    "href": "2-slides/01.1-basics-of-doe.html#example-1.1-reaction-time-3",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Example 1.1: Reaction time…",
-    "text": "Example 1.1: Reaction time…\nNow suppose that instead of assigning distraction types individually, we place 10 individuals in a room at a time and apply the same distraction type to the entire group. This process is repeated three times – once for each distraction type.\n\nIdentify the experimental unit:\nMeasurement unit:\nHow many replications exist per treatment?"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#section-1",
-    "href": "2-slides/01.1-basics-of-doe.html#section-1",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "",
-    "text": "knitr::include_graphics(\"_images/reaction-time-unreplicated.png\")"
-  },
-  {
-    "objectID": "2-slides/01.1-basics-of-doe.html#unreplicated-designs",
-    "href": "2-slides/01.1-basics-of-doe.html#unreplicated-designs",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Unreplicated Designs",
-    "text": "Unreplicated Designs\n\n\n\n\n\n\nWarning\n\n\nUnreplicated Designs – a study design with experimental unit replication of r = 1 causes issues since we cannot estimate the experimental error."
-  },
-  {
-    "objectID": "0-course-info/getting-started-r.html",
-    "href": "0-course-info/getting-started-r.html",
-    "title": "Getting Started with R and RStudio",
-    "section": "",
-    "text": "You need local installations of both R (the software) and RStudio (the interface for working in R). Do not skip this step if you already have both R and RStudio installed on your computer, as you need to ensure you are using the most up to date version of R and RStudio.\n\n\nIf you already have R downloaded, you need to confirm that you have the most up to date version of R. Do not ignore these instructions. If you neglect to update your version of R, you may find that updating a package will make it so your code will not run.\n\nStep 1: Open RStudio\nStep 2: At the top of the the Console it will say what version of R you are using\n\n\nYou can also see the version right under the word “Console” or by running the following code in the console: R.version.\nIf the version is not 4.6.1 (like the image above), you need to update your version of R! The simplest way to do this is to follow the instructions below to install R.\nDownload and install R by going to https://cloud.r-project.org/. Here, you will find three options for installing R—click on the option for your computer’s operating system.\n\n\n\n\n\n\nClick on “Download R for Windows”\nClick on “base”\nClick on the Download link.\nWhen you open the execution file (.exe) you will be prompted with a variety of questions about installing R. Feel free to use the default features / settings that come with R (continue to click “Ok” until the download starts).\n\n\n\n\n\n\n\nWarningMultiple Versions of R\n\n\n\nBeware that if you had a previous version of R downloaded on your PC, that old version will not be deleted when you download the most recent version of R. We do not want to have two versions of R installed, as your computer can get confused what version of R to use. So, you need to remove the old version of R.\nTo do this you need to:\n\nNavigate to your computer’s settings\nClick on the “Apps” option on the left-hand panel\nSearch for or scroll down to R\nFind the older version of R\n\n\n\nClick on the ... on the right side\nSelect “Uninstall”\n\n\n\n\n\n\n\n\nClick on “Download R for (Mac) OS X”\nUnder “Latest release:” click on R-X.X.X.pkg, where R-X.X.X is the version number. For example, the latest version of R as of August 2026 is 4.6.1 Happy Hop\nWhen installing, use the default features / settings that come with R (click Ok until the download starts).\n\n\n\n\n\n\n\nTipTroubleshooting for Macs\n\n\n\nFirst, identify which version of OSx you are running. How-to\nNext, find out which version of R your computer can run. Link\nIf this version is 3.6 or later, download the latest version that your computer can handle.\nIf this version is 3.4 or earlier, you’re going to run in to some trouble. I recommend updating your version of OSx, if you are willing. If you can’t, then you can use Posit Cloud to run R and RStudio on a free server. However, I recommend strongly against this option; your files will not be saved indefinitely, you will have limited hours to complete your work, your computing power will be limited, and you will need an internet connection at all times to do your work.\n\n\n\n\n\nClick on “Download R for Linux” and choose your distribution for more information on installing R for your setup."
-  },
-  {
-    "objectID": "0-course-info/getting-started-r.html#updating-your-version-of-r",
-    "href": "0-course-info/getting-started-r.html#updating-your-version-of-r",
-    "title": "Getting Started with R and RStudio",
-    "section": "",
-    "text": "If you already have R downloaded, you need to confirm that you have the most up to date version of R. Do not ignore these instructions. If you neglect to update your version of R, you may find that updating a package will make it so your code will not run.\n\nStep 1: Open RStudio\nStep 2: At the top of the the Console it will say what version of R you are using\n\n\nYou can also see the version right under the word “Console” or by running the following code in the console: R.version.\nIf the version is not 4.6.1 (like the image above), you need to update your version of R! The simplest way to do this is to follow the instructions below to install R.\nDownload and install R by going to https://cloud.r-project.org/. Here, you will find three options for installing R—click on the option for your computer’s operating system.\n\n\n\n\n\n\nClick on “Download R for Windows”\nClick on “base”\nClick on the Download link.\nWhen you open the execution file (.exe) you will be prompted with a variety of questions about installing R. Feel free to use the default features / settings that come with R (continue to click “Ok” until the download starts).\n\n\n\n\n\n\n\nWarningMultiple Versions of R\n\n\n\nBeware that if you had a previous version of R downloaded on your PC, that old version will not be deleted when you download the most recent version of R. We do not want to have two versions of R installed, as your computer can get confused what version of R to use. So, you need to remove the old version of R.\nTo do this you need to:\n\nNavigate to your computer’s settings\nClick on the “Apps” option on the left-hand panel\nSearch for or scroll down to R\nFind the older version of R\n\n\n\nClick on the ... on the right side\nSelect “Uninstall”\n\n\n\n\n\n\n\n\nClick on “Download R for (Mac) OS X”\nUnder “Latest release:” click on R-X.X.X.pkg, where R-X.X.X is the version number. For example, the latest version of R as of August 2026 is 4.6.1 Happy Hop\nWhen installing, use the default features / settings that come with R (click Ok until the download starts).\n\n\n\n\n\n\n\nTipTroubleshooting for Macs\n\n\n\nFirst, identify which version of OSx you are running. How-to\nNext, find out which version of R your computer can run. Link\nIf this version is 3.6 or later, download the latest version that your computer can handle.\nIf this version is 3.4 or earlier, you’re going to run in to some trouble. I recommend updating your version of OSx, if you are willing. If you can’t, then you can use Posit Cloud to run R and RStudio on a free server. However, I recommend strongly against this option; your files will not be saved indefinitely, you will have limited hours to complete your work, your computing power will be limited, and you will need an internet connection at all times to do your work.\n\n\n\n\n\nClick on “Download R for Linux” and choose your distribution for more information on installing R for your setup."
-  },
-  {
-    "objectID": "0-course-info/getting-started-r.html#install-rstudio",
-    "href": "0-course-info/getting-started-r.html#install-rstudio",
-    "title": "Getting Started with R and RStudio",
-    "section": "",
-    "text": "RStudio is an Integrated Development Environment (IDE) for R. What does that mean? Well, if you think of R as a language, which it is, you can think of RStudio as a program that helps you write and work in the language. Back in the dark ages, people wrote programs in text editors and then used the command line to compile those programs and run them. RStudio makes programming in R much easier and this course requires you to use it!\n\n\nIf you already have RStudio, you need to double check if you have the most recent version. You will not have access to the newest features for Quarto documents unless you have the most recent version of RStudio.\n\nStep 1: Open RStudio\nStep 2: Click on “Help” in the upper menu\nStep 3: Click on “Check for Updates”\n\nIf there are no updates to RStudio since you installed it, you are good to go! If you need to update RStudio, you will be sent to Posit (the parent company) to download the most recent version of RStudio desktop.\n\n\n\n\n\n\n\nDownloading the most recent version of RStudio works the same way regardless of whether you’ve never downloaded RStudio before or if you just need to update your version of RStudio.\nWhen you navigate to the RStudio download page (https://rstudio.com/products/rstudio/download/), the website should automatically detect your computer’s operating system. So, you should be able to simply click the blue “Download RStudio Desktop for [insert operating system here]” button.\nClicking the button will begin installing RStudio. Once the download has completed, you will need to open the application file (on a Mac this is a .dmg file, on Windows this is an exe file)."
-  },
-  {
-    "objectID": "0-course-info/getting-started-r.html#ensure-quarto-is-installed",
-    "href": "0-course-info/getting-started-r.html#ensure-quarto-is-installed",
-    "title": "Getting Started with R and RStudio",
-    "section": "",
-    "text": "We will learn more about Quarto notebooks next week, so for now, just make sure that you have the software set up! It is likely that it was already installed automatically.\nTo check, open a new Rstudio window click the + icon in the top left of the Rstudio window and see if Quarto is an option. See screenshot below.\n\nIf you do not see Quarto, download and install the latest version of Quarto for your operating system."
-  },
-  {
-    "objectID": "0-course-info/getting-started-r.html#create-an-r-project",
-    "href": "0-course-info/getting-started-r.html#create-an-r-project",
-    "title": "Getting Started with R and RStudio",
-    "section": "",
-    "text": "Since there are often many files necessary for a project (e.g. data sources, images, etc.), R has a nice built in system for setting up your project organization with RProjects. You can either create a new folder on your computer containing an Rproject (e.g., you have not yet created a folder for this class) or you can add an Rproject to an existing folder on your computer (e.g., you have already created a folder for this class).\n\nCreate with a new folderAdd to an existing folder\n\n\nTo create a Rproject, first open RStudio on your computer and click File &gt; New Project, then:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGive your folder a name. It is good practice for this file folder name to not contain spaces. For this course you might want stat-3540 or something like that.\nThen, browse on your computer for a location to save this folder to. For example, mine is saved in my Documents. Make sure you know how to find this; it should NOT be saved in your Downloads!\n\n\n\n\n\n\n\n\n\nThis new folder, my-stat331 or whatever you called it should now live in your Documents folder (or wherever you save it to) and contain a my-stat331.Rproj file. This is your new “home” base for this class - whenever you refer to a file with a relative path it will begin to look for it here.\n\n\nTo add a Rproject to an existing folder on your computer (e.g., you already created a folder for this class), first open RStudio on your computer and click File &gt; New Project, then:\n\n\n\n\n\n\n\n\n\nThen, browse on your computer to select the existing folder you wish to add your Rproject to. For example, mine is saved in my Documents and called my-stat331.\n\n\n\n\n\n\n\n\n\nYour existing folder, my-stat331 should now contain a my-stat331.Rproj file. This is your new “home” base for this class - whenever you refer to a file with a relative path it will begin to look for it here."
-  },
-  {
-    "objectID": "0-course-info/getting-started-r.html#installing-packages",
-    "href": "0-course-info/getting-started-r.html#installing-packages",
-    "title": "Getting Started with R and RStudio",
-    "section": "Installing Packages",
-    "text": "Installing Packages\n\n📽 Video: Installing R Packages (4 minutes)"
-  },
-  {
-    "objectID": "1-prep/1.2-prep.html#controlling-for-variability",
-    "href": "1-prep/1.2-prep.html#controlling-for-variability",
-    "title": "1.2 Preparation: Controlling for Variability and R & RStudio",
-    "section": "1 Controlling for Variability",
-    "text": "1 Controlling for Variability\n\n📽 Follow along with the slides."
-  },
-  {
-    "objectID": "1-prep/1.2-prep.html#getting-started-with-r-and-rstudio",
-    "href": "1-prep/1.2-prep.html#getting-started-with-r-and-rstudio",
-    "title": "1.2 Preparation: Controlling for Variability and R & RStudio",
-    "section": "3 Getting Started with R and RStudio",
-    "text": "3 Getting Started with R and RStudio\nWe are going to use R and RStudio throughout this course. You may have used Posit Cloud in previous courses, but in this course we will all work with a local version of the software.\nBy the start of week 2, you will need to have the latest versions R and RStudio installed and working on your computer! Come by office hours and reach out if you are having trouble.\n\n\n\n\n\n\nWarningCannot Install R or RStudio\n\n\n\nIf for any reason you cannot download R or RStudio onto your laptop, please let me know as soon as possible so we can figure something out.\n\n\n\nSet up R and RStudio for STAT 3540 / 5440\n\n✅ Follow the instructions to Install / Update R.\n✅ Follow the instructions to Install / Update RStudio\n✅ Follow the instructions to ensure Quarto is installed\n✅ Follow the instructions to create an RStudio Project for this course\n\n\n\nLearn About / Refresh R\nIf you have not taken STAT 331 / STAT 1810 or used R in previous courses, please take some time to get yourself acquainted with our good friend R!\nI will give you all of the code that you need throughout the course, but it will help you be less overwhelmed if you take some time in these first weeks to watch videos and do some tutorials. Please come by office hours if you are overwhelmed and ask lots of questions on Discord!!\n😎 Get started at Introduction to R and RStudio"
-  },
-  {
-    "objectID": "1-prep/1.1-prep.html#syllabus",
-    "href": "1-prep/1.1-prep.html#syllabus",
-    "title": "1.1 Preparation: Syllabus and Intro to DOE",
-    "section": "1 Syllabus",
-    "text": "1 Syllabus\n\n📖 Review Canvas and the syllabus.\n📽 Watch at least the first 6 minutes of this introduction. The rest is if you would like a video walk-through of the syllabus!"
-  },
-  {
-    "objectID": "1-prep/1.1-prep.html#basics-of-design-of-experiments-doe",
-    "href": "1-prep/1.1-prep.html#basics-of-design-of-experiments-doe",
-    "title": "1.1 Preparation: Syllabus and Intro to DOE",
-    "section": "2 Basics of Design of Experiments (DOE)",
-    "text": "2 Basics of Design of Experiments (DOE)\n\nWe will be using many preparation videos made by the indomitable Dr. Emily Robinson! I (Dr. C) will occasionally add/edit slides used in these videos and record short follow-ups.\n📽 Follow along with the slides.\n\nNote: you can export the slides to a pdf for notetaking via the bottom left three horizontal stacked lines &gt; Tools &gt; PDF Export Mode &gt; Print + Save as PDF"
-  },
-  {
-    "objectID": "0-course-info/getting-started-r.html#updating-your-version-of-rstudio",
-    "href": "0-course-info/getting-started-r.html#updating-your-version-of-rstudio",
-    "title": "Getting Started with R and RStudio",
-    "section": "Updating Your Version of RStudio",
-    "text": "Updating Your Version of RStudio\nIf you already have RStudio, you need to double check if you have the most recent version. You will not have access to the newest features for Quarto documents unless you have the most recent version of RStudio.\n\nStep 1: Open RStudio\nStep 2: Click on “Help” in the upper menu\nStep 3: Click on “Check for Updates”\n\nIf there are no updates to RStudio since you installed it, you are good to go! If you need to update RStudio, you will be sent to Posit (the parent company) to download the most recent version of RStudio desktop."
-  },
-  {
-    "objectID": "0-course-info/getting-started-r.html#installing-rstudio",
-    "href": "0-course-info/getting-started-r.html#installing-rstudio",
-    "title": "Getting Started with R and RStudio",
-    "section": "Installing RStudio",
-    "text": "Installing RStudio\n\n\n\n\nDownloading the most recent version of RStudio works the same way regardless of whether you’ve never downloaded RStudio before or if you just need to update your version of RStudio.\nWhen you navigate to the RStudio download page (https://rstudio.com/products/rstudio/download/), the website should automatically detect your computer’s operating system. So, you should be able to simply click the blue “Download RStudio Desktop for [insert operating system here]” button.\nClicking the button will begin installing RStudio. Once the download has completed, you will need to open the application file (on a Mac this is a .dmg file, on Windows this is an exe file)."
-  },
-  {
-    "objectID": "0-course-info/getting-started-r.html#navigating-rstudio",
-    "href": "0-course-info/getting-started-r.html#navigating-rstudio",
-    "title": "Getting Started with R and RStudio",
-    "section": "Navigating RStudio",
-    "text": "Navigating RStudio\n\n📽 Video – A Tour of RStudio:\n\n\n\nDownload a “cheetsheet” (easy reference page) for navigating the RStudio IDE.\n\n\nExploring the RStudio Panes\n\n\n\n\n\nThe RStudio window will look something like this.\n\n\n\n\n\nTop-leftTop-rightBottom-leftBottom-right\n\n\nIncludes the text editor. This is where you’ll do most of your work.\n\n\n\n\n\n\n\n\n\nThe logo on the script file indicates the file type. When an R file is open, there are Run and Source buttons on the top which allow you to run selected lines of code (Run) or source (run) the entire file. Code line numbers are provided on the left (this is a handy way to see where in the code the errors occur), and you can see line:character numbers at the bottom left. At the bottom right, there is another indicator of what type of file Rstudio thinks this is.\n\n\nIn the top right, you’ll find the environment, history, and connections tabs. The environment tab shows you the objects available in R (variables, data files, etc.), the history tab shows you what code you’ve run recently, and the connections tab is useful for setting up database connections.\n\n\nOn the bottom left is the console. There are also other tabs to give you a terminal (command line) prompt, and a jobs tab to monitor progress of long-running jobs. In this class we’ll primarily use the console tab.\n\nknitr::include_graphics(\"https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-terminal-R.png\")\n\n\n\n\n\n\n\n\n\n\nOn the bottom right, there are a set of tabs:\n\nfiles (to give you an idea of where you are working, and what files are present),\n\n\n\n\n\n\n\n\n\n\n\nplots (which will be self-explanatory),\npackages (which extensions to R are installed and loaded),\n\n\nknitr::include_graphics(\"https://srvanderplas.github.io/stat-computing-r-python/images/tools/Rstudio-packages-tab.png\")\n\n\n\n\n\n\n\n\n\nthe help tab (where documentation will show up), and\n\n\n\n\n\n\n\n\n\n\n\nthe viewer window, which is used for interactive graphics or previewing HTML documents."
-  },
-  {
-    "objectID": "0-course-info/getting-started-r.html#programming-in-r",
-    "href": "0-course-info/getting-started-r.html#programming-in-r",
-    "title": "Getting Started with R and RStudio",
-    "section": "Programming in R",
-    "text": "Programming in R\n\n📖 Reading: R4DS: Basics of R\n💻 Tutorial: R Programming Basics\n\n\n\n\n\n\n\nNoteProgramming in R\n\n\n\nThis tutorial gives you an overview of the foundations that make up the R programming language, including:\n\nfunctions and their arguments\naccessing help files\nmaking code comments\nobject types (e.g., vectors, lists, )\ndata types (e.g., numeric, integer, double, character)\nR’s package system\n\n\n\n\n📽 Video – Installing R Packages"
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#randomized-experiment-vs-observational-study",
-    "href": "2-slides/01.2-controlling-for-variability.html#randomized-experiment-vs-observational-study",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Randomized Experiment vs Observational Study",
-    "text": "Randomized Experiment vs Observational Study\n\n\n\n\n\n\nNote\n\n\n\nRandomized Experiment: A treatment is __________________ and randomly imposed on an experimental unit in the interest of observing the response.\nObservational Study: This involves collecting and analyzing data __________________ randomly assigning treatments to experimental units.\n\nBIG IDEA: Because randomized experiments use random assignment of the treatments (as well as other types of randomization) cause-and-effect conclusions may be made. In observational studies, because no random assignment is used, only associations may be concluded, because there are likely to be confounding variables."
-  },
-  {
-    "objectID": "2-slides/01.2-controlling-for-variability.html#complicating-the-dichotomy",
-    "href": "2-slides/01.2-controlling-for-variability.html#complicating-the-dichotomy",
-    "title": "Module 1: Introduction to Design of Experiments (DOE)",
-    "section": "Complicating the dichotomy…",
-    "text": "Complicating the dichotomy…\n\nCausal conclusions can be drawn from a couple different types of well-designed studies:\n\nRandomized experiments\nQuasi-experiments\nSpecifically designed and analyzed observational studies\n\nThe key issue is whether you can convince yourself (an others) that confounding has been eliminated through your design and analysis"
-  },
-  {
-    "objectID": "1-prep/1.2-prep.html#get-started-with-discord",
-    "href": "1-prep/1.2-prep.html#get-started-with-discord",
-    "title": "1.2 Preparation: Controlling for Variability and R & RStudio",
-    "section": "2 Get Started with Discord",
-    "text": "2 Get Started with Discord\n\n✅ Follow the instructions to Join the STAT 3540 Discord Server. Make sure that you complete all of the “Get Started” tasks you will be prompted to do once you are in!"
-  },
-  {
-    "objectID": "0-course-info/discord-instructions.html",
-    "href": "0-course-info/discord-instructions.html",
-    "title": "Course Discord Instructions",
-    "section": "",
-    "text": "We’ll be using Discord to interact with our peers and group members.\nDiscord is a platform for text chatting, voice chatting, and screen sharing."
-  },
-  {
-    "objectID": "0-course-info/discord-instructions.html#join-the-server",
-    "href": "0-course-info/discord-instructions.html#join-the-server",
-    "title": "Course Discord Instructions",
-    "section": "1 Join the server",
-    "text": "1 Join the server\nJoin the Stat 3540 Server to start experimenting with the interface. (STAT 5440 are also part of this server – that name just got too long!)\nWhen you join the server, you will be given some suggestions to get started.\n\nI recommend you click through these - and in particular, it is probably a good idea to download the desktop version of Discord, and perhaps to install it on your phone if you wish."
-  },
-  {
-    "objectID": "0-course-info/discord-instructions.html#set-up-your-account",
-    "href": "0-course-info/discord-instructions.html#set-up-your-account",
-    "title": "Course Discord Instructions",
-    "section": "2 Set up your account",
-    "text": "2 Set up your account\n\nVerify your email\nTo use this Discord server, you must have a verified email.\nNobody (including your professors) will be able to see this email, and it does not have to be your Cal Poly email. This is simply to keep the server from being overrun by temporary accounts.\n\n\nCreate your identity\nThe first thing you should do is decide what name and picture you would like to use.\n\nI would like to strongly encourage you to use your real name and picture, so that everyone can get to know you. This also helps me know who I am talking to! However, if you prefer to remain anonymous, you are free to do so.\n\n(Do not be like Regina and use the name of another student, however!\nThis kind of impersonation will result in a permanent ban from the server.)\nRemember that this is still a professional space for this course. Ensure that your profile photo and name is appropriate. If a picture of a human is used, it should be you. This doesn’t have to cramp your style for your other Discord servers! You can make an identity just for our course server.\n\n\nComplete the “Get Started” tasks\nI have set up a slightly fancier entry to this Discord channel which will hopefully orient you and make things easy!\nOne of the first things you will do is indicate which section of class you are in. This will help me send messages to sections separately if needed. You will also be prompted to introduce yourself and to click through a couple of channels. If this get’s too complicated, I will disable this, but it seemed worth a shot!\n\n\nDecide about privacy and notifications\nThe default settings on the channel are probably just fine for you.\nFeel free to make any changes that work for you, though.\nYou can change your message notifications:\n\nYou can edit your privacy settings, although most things are already private:"
-  },
-  {
-    "objectID": "0-course-info/discord-instructions.html#using-the-channels",
-    "href": "0-course-info/discord-instructions.html#using-the-channels",
-    "title": "Course Discord Instructions",
-    "section": "3 Using the Channels",
-    "text": "3 Using the Channels\nThe server is made up of many channels. Some are text chatrooms, while some are “Voice Channels” that connect you via audio to everyone else in the channel.\n\nText Channels\nUse the #general channel for anything and everything:\n\nIf your question is about course logistics, rather than the material itself, consider using the #class-logistics channel:\n\nYou can use the specific weekly channels to ask questions about the material…\n\n… or the specific assignment.\n\nNotice that you can use tick marks (```), like in Markdown, to make your code appear in a formatted code box.\n\n\nPrivate messages\nIt is also easy to send private messages, to your professor or to each other. These private messages can also easily be used to launch a private video chat and / or screen sharing."
-  },
-  {
-    "objectID": "0-course-info/discord-instructions.html#creating-your-own-server",
-    "href": "0-course-info/discord-instructions.html#creating-your-own-server",
-    "title": "Course Discord Instructions",
-    "section": "4 Creating your own server",
-    "text": "4 Creating your own server\nLast but not least - for the teams you are a part of, you may want to use Discord to communicate with each other about the weekly assignments. You can do this by creating your own server! You can easily hop between servers during work parties, to ask each other questions or just to take a break and chat about life."
-  },
-  {
-    "objectID": "3-activities/01.1-activity-turkey-in-pens.html",
-    "href": "3-activities/01.1-activity-turkey-in-pens.html",
+    "objectID": "3-activities/main-version/01.1-activity-turkey-in-pens.html",
+    "href": "3-activities/main-version/01.1-activity-turkey-in-pens.html",
     "title": "Activity 1.1: Design Blueprints",
     "section": "",
-    "text": "We will be using R and Rstudio in this course. To keep things simple for this first day, you can use PositCloud if you do not have R and RStudio set up already for a different Class.\nAlternatively, for this activity only you can use any software that you like to generate the plots and conduct the analysis."
+    "text": "We will be using R and Rstudio in this course. To keep things simple for this first day, you can use PositCloud if you do not have R and RStudio set up already for a different Class.\nIf you have R and Rstudio on your computer, you can download and use this template qmd: 01.1-activity-turkey-in-pens.qmd\nAlternatively, for this activity only you can use any software that you like to generate the plots and conduct the analysis.\nlibrary(tidyverse)\nlibrary(knitr)"
   },
   {
-    "objectID": "3-activities/01.1-activity-turkey-in-pens.html#software.",
-    "href": "3-activities/01.1-activity-turkey-in-pens.html#software.",
+    "objectID": "3-activities/main-version/01.1-activity-turkey-in-pens.html#software.",
+    "href": "3-activities/main-version/01.1-activity-turkey-in-pens.html#software.",
     "title": "Activity 1.1: Design Blueprints",
     "section": "",
-    "text": "We will be using R and Rstudio in this course. To keep things simple for this first day, you can use PositCloud if you do not have R and RStudio set up already for a different Class.\nAlternatively, for this activity only you can use any software that you like to generate the plots and conduct the analysis."
+    "text": "We will be using R and Rstudio in this course. To keep things simple for this first day, you can use PositCloud if you do not have R and RStudio set up already for a different Class.\nIf you have R and Rstudio on your computer, you can download and use this template qmd: 01.1-activity-turkey-in-pens.qmd\nAlternatively, for this activity only you can use any software that you like to generate the plots and conduct the analysis."
   },
   {
-    "objectID": "3-activities/01.1-activity-turkey-in-pens.html#scenario",
-    "href": "3-activities/01.1-activity-turkey-in-pens.html#scenario",
+    "objectID": "3-activities/main-version/01.1-activity-turkey-in-pens.html#scenario",
+    "href": "3-activities/main-version/01.1-activity-turkey-in-pens.html#scenario",
     "title": "Activity 1.1: Design Blueprints",
     "section": "Scenario",
     "text": "Scenario\nWe are interested in examining the effect of dietary protein on growth in Standard Bronze farm-raised turkeys. There are 24 turkeys available for the study.\nThe turkeys are housed 3 to a pen, and each pen has a single feed trough, meaning all turkeys within a pen receive the same diet.\nTwo diets are studied:\n\nLow-protein diet: 15% protein\n\nHigh-protein diet: 30% protein\n\nDiets are assigned at random to pens, with 4 pens receiving each diet (8 pens total).\nThe turkeys are fed their assigned diet for 6 weeks. The primary outcome measured on each turkey is average daily weight gain (ADG), in lbs/day."
   },
   {
-    "objectID": "3-activities/01.1-activity-turkey-in-pens.html#sketch-a-blueprint-for-this-study.",
-    "href": "3-activities/01.1-activity-turkey-in-pens.html#sketch-a-blueprint-for-this-study.",
+    "objectID": "3-activities/main-version/01.1-activity-turkey-in-pens.html#sketch-a-blueprint-for-this-study.",
+    "href": "3-activities/main-version/01.1-activity-turkey-in-pens.html#sketch-a-blueprint-for-this-study.",
     "title": "Activity 1.1: Design Blueprints",
     "section": "1. Sketch a blueprint for this study.",
-    "text": "1. Sketch a blueprint for this study."
+    "text": "1. Sketch a blueprint for this study.\n\n\n\n\nInclude an image of your blueprint here"
   },
   {
-    "objectID": "3-activities/01.1-activity-turkey-in-pens.html#describe-the-study-structure",
-    "href": "3-activities/01.1-activity-turkey-in-pens.html#describe-the-study-structure",
+    "objectID": "3-activities/main-version/01.1-activity-turkey-in-pens.html#describe-the-study-structure",
+    "href": "3-activities/main-version/01.1-activity-turkey-in-pens.html#describe-the-study-structure",
     "title": "Activity 1.1: Design Blueprints",
     "section": "2. Describe the study structure",
-    "text": "2. Describe the study structure\n\nTreatment structure:\n\n\nDesign structure:"
+    "text": "2. Describe the study structure\n\nTreatment structure:\n\n\n\n\n\nDesign structure:"
   },
   {
-    "objectID": "3-activities/01.1-activity-turkey-in-pens.html#pen-level-data",
-    "href": "3-activities/01.1-activity-turkey-in-pens.html#pen-level-data",
+    "objectID": "3-activities/main-version/01.1-activity-turkey-in-pens.html#pen-level-data",
+    "href": "3-activities/main-version/01.1-activity-turkey-in-pens.html#pen-level-data",
     "title": "Activity 1.1: Design Blueprints",
     "section": "3. Pen-Level Data",
-    "text": "3. Pen-Level Data\n\nOpen the file turkey_pen_data.csv.\nWhat does each row in this data file represent?\nHow many observations are there per diet? Why?\nCreate a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots).\nCreate a summary table showing the mean and standard deviation of pen-level ADG for each diet.\n\n\n\n\nDiet\nMean pen ADG\nSD pen ADG\n\n\n\n\nLow (15%)\n\n\n\n\nHigh (30%)"
+    "text": "3. Pen-Level Data\n\nOpen the file turkey_pen_data.csv.\n\n\npen_dat &lt;- read_csv(\"../_data/01_turkey_pen_data.csv\")\n\n\n# read in pen data\n\npen_dat &lt;- read_csv(\"FILE PATH\")\n\nError:\n! 'FILE PATH' does not exist in current working directory:\n  '/Users/czmann/Documents/teaching/stat3540/3-activities/main-version'.\n\n\n\nWhat does each row in this data file represent?\nHow many observations are there per diet? Why?\nCreate a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots). Don’t forget to make sure your plot has clear axis labels and a title!\n\n\nggplot(pen_dat) +\n  geom_point(aes(x = Diet,\n                 y = Pen_ADG))\n\n\n\n\n\n\n\n\n\n# plot code \n# hint: think about what kind of plot makes sense and\n# then look up how to make that with ggplot\n\n\nCreate a summary table showing the mean and standard deviation of pen-level ADG for each diet.\n\n\npen_dat |&gt; \n  group_by(Diet) |&gt; \n  summarize(mean_pen_adg = mean(Pen_ADG),\n            sd_pen_adg = sd(Pen_ADG)) |&gt; \n  kable(digits = 3)\n\n\n\n\nDiet\nmean_pen_adg\nsd_pen_adg\n\n\n\n\n15% (low)\n1.415\n0.304\n\n\n30% (high)\n1.315\n0.271\n\n\n\n\n\n\n# table code\n\n\nYou can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.\n\n\n\n\nDiet\nMean pen ADG\nSD pen ADG\n\n\n\n\nLow (15%)\n\n\n\n\nHigh (30%)"
   },
   {
-    "objectID": "3-activities/01.1-activity-turkey-in-pens.html#animal-level-data",
-    "href": "3-activities/01.1-activity-turkey-in-pens.html#animal-level-data",
+    "objectID": "3-activities/main-version/01.1-activity-turkey-in-pens.html#animal-level-data",
+    "href": "3-activities/main-version/01.1-activity-turkey-in-pens.html#animal-level-data",
     "title": "Activity 1.1: Design Blueprints",
     "section": "4. Animal-Level Data",
-    "text": "4. Animal-Level Data\n\nOpen the file turkey_animal_data.csv.\nWhat does each row in this data file represent? How many rows are there? Why?\nCreate a plot of animal-level ADG on the y-axis and Diet on the x-axis.\nHow many measurement/sampling units are there per diet in this plot?\nCreate a summary table showing the mean and standard deviation of ADG for each diet.\n\n\n\n\nDiet\nMean ADG\nSD ADG\n\n\n\n\nLow (15%)\n\n\n\n\nHigh (30%)\n\n\n\n\n\n\nCompare the animal-level means and standard deviations to the pen-level results. What do you notice?"
+    "text": "4. Animal-Level Data\n\nOpen the file turkey_animal_data.csv.\n\n\nanimal_dat &lt;- read_csv(\"../_data/01_turkey_animal_data.csv\")\n\n\n# read in animal data\n\nanimal_dat &lt;- read_csv(\"FILE PATH\")\n\nError:\n! 'FILE PATH' does not exist in current working directory:\n  '/Users/czmann/Documents/teaching/stat3540/3-activities/main-version'.\n\n\n\nWhat does each row in this data file represent? How many rows are there? Why?\nCreate a plot of animal-level ADG on the y-axis and Diet on the x-axis.\n\n\nggplot(animal_dat) +\n  geom_jitter(aes(x = Diet,\n                 y = ADG),\n              height = 0,\n              width = .1,\n              alpha = .8)\n\n\n\n\n\n\n\n\n\n# plot code \n# hint: think about what kind of plot makes sense and\n# then look up how to make that with ggplot\n\n\nHow many measurement/sampling units are there per diet in this plot?\n\n\nCreate a summary table showing the mean and standard deviation of ADG for each diet.\n\n\nanimal_dat |&gt; \n  group_by(Diet) |&gt; \n  summarize(mean_adg = mean(ADG),\n            sd_adg = sd(ADG)) |&gt; \n  kable(digits = 3)\n\n\n\n\nDiet\nmean_adg\nsd_adg\n\n\n\n\n15% (low)\n1.408\n0.297\n\n\n30% (high)\n1.308\n0.271\n\n\n\n\n\n\n# table code\n\n\nYou can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.\n\n\n\n\nDiet\nMean ADG\nSD ADG\n\n\n\n\nLow (15%)\n\n\n\n\nHigh (30%)\n\n\n\n\n\n\nCompare the animal-level means and standard deviations to the pen-level results. What do you notice?"
   },
   {
-    "objectID": "3-activities/01.1-activity-turkey-in-pens.html#comparing-analyses",
-    "href": "3-activities/01.1-activity-turkey-in-pens.html#comparing-analyses",
+    "objectID": "3-activities/main-version/01.1-activity-turkey-in-pens.html#comparing-analyses",
+    "href": "3-activities/main-version/01.1-activity-turkey-in-pens.html#comparing-analyses",
     "title": "Activity 1.1: Design Blueprints",
     "section": "5. Comparing Analyses",
-    "text": "5. Comparing Analyses\nNow consider a two-sample t-test comparing the low-protein and high-protein diets.\n\nPen-level analysis\n\nUsing turkey_pen_data.csv, conduct a two-sample independent t-test (assume unequal variances).\n\nReport:\n\nDifference in mean ADG\n\nStandard error\n\nt-statistic, degrees of freedom, and p-value\n\n\n\nAnimal-level analysis\n\nUsing turkey_animal_data.csv, conduct the same two-sample independent t-test (assume unequal variances).\n\nReport:\n\nDifference in mean ADG\n\nStandard error\n\nt-statistic, degrees of freedom, and p-value"
+    "text": "5. Comparing Analyses\nNow consider a two-sample t-test comparing the low-protein and high-protein diets.\n\nPen-level analysis\n\nUsing turkey_pen_data.csv, conduct a two-sample independent t-test (assume unequal variances).\n\n\nt.test(Pen_ADG ~ Diet, data = pen_dat)\n\n\n    Welch Two Sample t-test\n\ndata:  Pen_ADG by Diet\nt = 0.49128, df = 5.9222, p-value = 0.6409\nalternative hypothesis: true difference in means between group 15% (low) and group 30% (high) is not equal to 0\n95 percent confidence interval:\n -0.3996644  0.5996644\nsample estimates:\n mean in group 15% (low) mean in group 30% (high) \n                   1.415                    1.315 \n\n\n\n# t-test code\n\nReport:\n\nDifference in mean ADG\n\nStandard error\n\nt-statistic, degrees of freedom, and p-value\n\n\n\nAnimal-level analysis\n\nUsing turkey_animal_data.csv, conduct the same two-sample independent t-test (assume unequal variances).\n\n\nt.test(ADG ~ Diet, data = animal_dat)\n\n\n    Welch Two Sample t-test\n\ndata:  ADG by Diet\nt = 0.86155, df = 21.823, p-value = 0.3983\nalternative hypothesis: true difference in means between group 15% (low) and group 30% (high) is not equal to 0\n95 percent confidence interval:\n -0.1408273  0.3408273\nsample estimates:\n mean in group 15% (low) mean in group 30% (high) \n                1.408333                 1.308333 \n\n\n\n# t-test code\n\nReport:\n\nDifference in mean ADG\n\nStandard error\n\nt-statistic, degrees of freedom, and p-value"
   },
   {
-    "objectID": "3-activities/01.1-activity-turkey-in-pens.html#interpretation",
-    "href": "3-activities/01.1-activity-turkey-in-pens.html#interpretation",
+    "objectID": "3-activities/main-version/01.1-activity-turkey-in-pens.html#interpretation",
+    "href": "3-activities/main-version/01.1-activity-turkey-in-pens.html#interpretation",
     "title": "Activity 1.1: Design Blueprints",
     "section": "6. Interpretation",
     "text": "6. Interpretation\n\nWhich analysis is correct for answering the research question? Explain.\n\nYour explanation should address:\n\nWhat the experimental unit is\n\nWhy one analysis artificially inflates the sample size\n\nWhy this matters for statistical inference"
   },
   {
-    "objectID": "3-activities/01.1-activity-turkey-in-pens.html#submit-on-gradescope",
-    "href": "3-activities/01.1-activity-turkey-in-pens.html#submit-on-gradescope",
+    "objectID": "3-activities/main-version/01.1-activity-turkey-in-pens.html#submit-on-gradescope",
+    "href": "3-activities/main-version/01.1-activity-turkey-in-pens.html#submit-on-gradescope",
     "title": "Activity 1.1: Design Blueprints",
     "section": "7. Submit on Gradescope",
-    "text": "7. Submit on Gradescope\nWhen you are finished, submit your work to Gradescope:\n\nMake sure your submission includes:\n\nYour study blueprint sketch\nYour written answers for parts (b)–(n)\nAny requested tables/values from JMP or R\n\nCombine everything into one PDF.\n\nIf you wrote on paper: take clear photos and save/print to PDF.\nIf you typed responses: export to PDF.\n\nGo to Canvas &gt; Gradescope &gt; Activity 1.1: Design Blueprints and upload your PDF.\nIf Gradescope asks you to assign pages to questions, do so before submitting."
+    "text": "7. Submit on Gradescope\nWhen you are finished, submit your work to Gradescope:\n\nMake sure your submission includes:\n\nYour study blueprint sketch\nYour written answers for parts (b)–(n)\nAny requested tables/values from R\n\nCombine everything into one PDF.\n\nIf you wrote on paper: take clear photos and save/print to PDF.\nIf you typed responses: export to PDF.\nIf you used Quarto: render your report (it is set to render as PDF).\n\nGo to Canvas &gt; Gradescope &gt; Activity 1.1: Design Blueprints and upload your PDF.\nIf Gradescope asks you to assign pages to questions, do so before submitting."
   },
   {
-    "objectID": "1-prep/01.2-prep.html#controlling-for-variability",
-    "href": "1-prep/01.2-prep.html#controlling-for-variability",
-    "title": "1.2 Preparation: Controlling for Variability and R & RStudio",
-    "section": "1 Controlling for Variability",
-    "text": "1 Controlling for Variability\n\n📽 Follow along with the slides."
+    "objectID": "3-activities/student/01.1-activity-turkey-in-pens.html",
+    "href": "3-activities/student/01.1-activity-turkey-in-pens.html",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "",
+    "text": "- student\n\nError:\n! object 'student' not found\n\n  - solution\n\nError:\n! object 'solution' not found\n\n#| label: setup\n\nlibrary(tidyverse)\nlibrary(knitr)"
   },
   {
-    "objectID": "1-prep/01.2-prep.html#get-started-with-discord",
-    "href": "1-prep/01.2-prep.html#get-started-with-discord",
-    "title": "1.2 Preparation: Controlling for Variability and R & RStudio",
-    "section": "2 Get Started with Discord",
-    "text": "2 Get Started with Discord\n\n✅ Follow the instructions to Join the STAT 3540 Discord Server. Make sure that you complete all of the “Get Started” tasks you will be prompted to do once you are in!"
+    "objectID": "3-activities/student/01.1-activity-turkey-in-pens.html#scenario",
+    "href": "3-activities/student/01.1-activity-turkey-in-pens.html#scenario",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "Scenario",
+    "text": "Scenario\nWe are interested in examining the effect of dietary protein on growth in Standard Bronze farm-raised turkeys. There are 24 turkeys available for the study.\nThe turkeys are housed 3 to a pen, and each pen has a single feed trough, meaning all turkeys within a pen receive the same diet.\nTwo diets are studied:\n\nLow-protein diet: 15% protein\n\nHigh-protein diet: 30% protein\n\nDiets are assigned at random to pens, with 4 pens receiving each diet (8 pens total).\nThe turkeys are fed their assigned diet for 6 weeks. The primary outcome measured on each turkey is average daily weight gain (ADG), in lbs/day."
   },
   {
-    "objectID": "1-prep/01.2-prep.html#getting-started-with-r-and-rstudio",
-    "href": "1-prep/01.2-prep.html#getting-started-with-r-and-rstudio",
-    "title": "1.2 Preparation: Controlling for Variability and R & RStudio",
-    "section": "3 Getting Started with R and RStudio",
-    "text": "3 Getting Started with R and RStudio\nWe are going to use R and RStudio throughout this course. You may have used Posit Cloud in previous courses, but in this course we will all work with a local version of the software.\nBy the start of week 2, you will need to have the latest versions R and RStudio installed and working on your computer! Come by office hours and reach out if you are having trouble.\n\n\n\n\n\n\nWarningCannot Install R or RStudio\n\n\n\nIf for any reason you cannot download R or RStudio onto your laptop, please let me know as soon as possible so we can figure something out.\n\n\n\nSet up R and RStudio for STAT 3540 / 5440\n\n✅ Follow the instructions to Install / Update R.\n✅ Follow the instructions to Install / Update RStudio\n✅ Follow the instructions to ensure Quarto is installed\n✅ Follow the instructions to create an RStudio Project for this course\n\n\n\nLearn About / Refresh R\nIf you have not taken STAT 331 / STAT 1810 or used R in previous courses, please take some time to get yourself acquainted with our good friend R!\nI will give you all of the code that you need throughout the course, but it will help you be less overwhelmed if you take some time in these first weeks to watch videos and do some tutorials. Please come by office hours if you are overwhelmed and ask lots of questions on Discord!!\n😎 Get started at Introduction to R and RStudio"
+    "objectID": "3-activities/student/01.1-activity-turkey-in-pens.html#sketch-a-blueprint-for-this-study.",
+    "href": "3-activities/student/01.1-activity-turkey-in-pens.html#sketch-a-blueprint-for-this-study.",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "1. Sketch a blueprint for this study.",
+    "text": "1. Sketch a blueprint for this study.\nInclude an image of your blueprint here"
   },
   {
-    "objectID": "1-prep/01.1-prep.html#syllabus",
-    "href": "1-prep/01.1-prep.html#syllabus",
-    "title": "1.1 Preparation: Syllabus and Intro to DOE",
-    "section": "1 Syllabus",
-    "text": "1 Syllabus\n\n📖 Review Canvas and the syllabus.\n📽 Watch at least the first 6 minutes of this introduction. The rest is if you would like a video walk-through of the syllabus!"
+    "objectID": "3-activities/student/01.1-activity-turkey-in-pens.html#describe-the-study-structure",
+    "href": "3-activities/student/01.1-activity-turkey-in-pens.html#describe-the-study-structure",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "2. Describe the study structure",
+    "text": "2. Describe the study structure\n\nTreatment structure:\nDesign structure:"
   },
   {
-    "objectID": "1-prep/01.1-prep.html#basics-of-design-of-experiments-doe",
-    "href": "1-prep/01.1-prep.html#basics-of-design-of-experiments-doe",
-    "title": "1.1 Preparation: Syllabus and Intro to DOE",
-    "section": "2 Basics of Design of Experiments (DOE)",
-    "text": "2 Basics of Design of Experiments (DOE)\n\nWe will be using many preparation videos made by the indomitable Dr. Emily Robinson! I (Dr. C) will occasionally add/edit slides used in these videos and record short follow-ups.\n📽 Follow along with the slides.\n\nNote: you can export the slides to a pdf for notetaking via the bottom left three horizontal stacked lines &gt; Tools &gt; PDF Export Mode &gt; Print + Save as PDF"
+    "objectID": "3-activities/student/01.1-activity-turkey-in-pens.html#pen-level-data",
+    "href": "3-activities/student/01.1-activity-turkey-in-pens.html#pen-level-data",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "3. Pen-Level Data",
+    "text": "3. Pen-Level Data\n\nOpen the file turkey_pen_data.csv.\n\n\n# read in pen data\n\npen_dat &lt;- read_csv(\"FILE PATH\")\n\nError:\n! 'FILE PATH' does not exist in current working directory:\n  '/Users/czmann/Documents/teaching/stat3540/3-activities/student'.\n\n\n\nWhat does each row in this data file represent?\nHow many observations are there per diet? Why?\nCreate a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots). Don’t forget to make sure your plot has clear axis labels and a title!\n\n\n# plot code \n# hint: think about what kind of plot makes sense and\n# then look up how to make that with ggplot\n\n\nCreate a summary table showing the mean and standard deviation of pen-level ADG for each diet.\n\n\n# table code\n\nYou can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.\n\n\n\nDiet\nMean pen ADG\nSD pen ADG\n\n\n\n\nLow (15%)\n\n\n\n\nHigh (30%)"
+  },
+  {
+    "objectID": "3-activities/student/01.1-activity-turkey-in-pens.html#animal-level-data",
+    "href": "3-activities/student/01.1-activity-turkey-in-pens.html#animal-level-data",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "4. Animal-Level Data",
+    "text": "4. Animal-Level Data\n\nOpen the file turkey_animal_data.csv.\n\n\n# read in animal data\n\nanimal_dat &lt;- read_csv(\"FILE PATH\")\n\nError:\n! 'FILE PATH' does not exist in current working directory:\n  '/Users/czmann/Documents/teaching/stat3540/3-activities/student'.\n\n\n\nWhat does each row in this data file represent? How many rows are there? Why?\nCreate a plot of animal-level ADG on the y-axis and Diet on the x-axis.\n\n\n# plot code \n# hint: think about what kind of plot makes sense and\n# then look up how to make that with ggplot\n\n\nHow many measurement/sampling units are there per diet in this plot?\n\n\nCreate a summary table showing the mean and standard deviation of ADG for each diet.\n\n\n# table code\n\nYou can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.\n\n\n\nDiet\nMean ADG\nSD ADG\n\n\n\n\nLow (15%)\n\n\n\n\nHigh (30%)\n\n\n\n\n\n\nCompare the animal-level means and standard deviations to the pen-level results. What do you notice?"
+  },
+  {
+    "objectID": "3-activities/student/01.1-activity-turkey-in-pens.html#comparing-analyses",
+    "href": "3-activities/student/01.1-activity-turkey-in-pens.html#comparing-analyses",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "5. Comparing Analyses",
+    "text": "5. Comparing Analyses\nNow consider a two-sample t-test comparing the low-protein and high-protein diets.\n\nPen-level analysis\n\nUsing turkey_pen_data.csv, conduct a two-sample independent t-test (assume unequal variances).\n\n\n# t-test code\n\nReport:\n\nDifference in mean ADG\n\nStandard error\n\nt-statistic, degrees of freedom, and p-value\n\n\n\nAnimal-level analysis\n\nUsing turkey_animal_data.csv, conduct the same two-sample independent t-test (assume unequal variances).\n\n\n# t-test code\n\nReport:\n\nDifference in mean ADG\n\nStandard error\n\nt-statistic, degrees of freedom, and p-value"
+  },
+  {
+    "objectID": "3-activities/student/01.1-activity-turkey-in-pens.html#interpretation",
+    "href": "3-activities/student/01.1-activity-turkey-in-pens.html#interpretation",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "6. Interpretation",
+    "text": "6. Interpretation\n\nWhich analysis is correct for answering the research question? Explain.\n\nYour explanation should address:\n\nWhat the experimental unit is\n\nWhy one analysis artificially inflates the sample size\n\nWhy this matters for statistical inference"
+  },
+  {
+    "objectID": "3-activities/student/01.1-activity-turkey-in-pens.html#submit-on-gradescope",
+    "href": "3-activities/student/01.1-activity-turkey-in-pens.html#submit-on-gradescope",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "7. Submit on Gradescope",
+    "text": "7. Submit on Gradescope\nWhen you are finished, submit your work to Gradescope:\n\nMake sure your submission includes:\n\nYour study blueprint sketch\nYour written answers for parts (b)–(n)\nAny requested tables/values from R\n\nCombine everything into one PDF.\n\nIf you wrote on paper: take clear photos and save/print to PDF.\nIf you typed responses: export to PDF.\nIf you used Quarto: render your report (it is set to render as PDF).\n\nGo to Canvas &gt; Gradescope &gt; Activity 1.1: Design Blueprints and upload your PDF.\nIf Gradescope asks you to assign pages to questions, do so before submitting."
+  },
+  {
+    "objectID": "3-activities/instructions/01.1-activity-turkey-in-pens.html",
+    "href": "3-activities/instructions/01.1-activity-turkey-in-pens.html",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "",
+    "text": "We will be using R and Rstudio in this course. To keep things simple for this first day, you can use PositCloud if you do not have R and RStudio set up already for a different Class.\nIf you have R and Rstudio on your computer, you can download and use this template qmd: 01.1-activity-turkey-in-pens.qmd\nAlternatively, for this activity only you can use any software that you like to generate the plots and conduct the analysis."
+  },
+  {
+    "objectID": "3-activities/instructions/01.1-activity-turkey-in-pens.html#software.",
+    "href": "3-activities/instructions/01.1-activity-turkey-in-pens.html#software.",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "",
+    "text": "We will be using R and Rstudio in this course. To keep things simple for this first day, you can use PositCloud if you do not have R and RStudio set up already for a different Class.\nIf you have R and Rstudio on your computer, you can download and use this template qmd: 01.1-activity-turkey-in-pens.qmd\nAlternatively, for this activity only you can use any software that you like to generate the plots and conduct the analysis."
+  },
+  {
+    "objectID": "3-activities/instructions/01.1-activity-turkey-in-pens.html#scenario",
+    "href": "3-activities/instructions/01.1-activity-turkey-in-pens.html#scenario",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "Scenario",
+    "text": "Scenario\nWe are interested in examining the effect of dietary protein on growth in Standard Bronze farm-raised turkeys. There are 24 turkeys available for the study.\nThe turkeys are housed 3 to a pen, and each pen has a single feed trough, meaning all turkeys within a pen receive the same diet.\nTwo diets are studied:\n\nLow-protein diet: 15% protein\n\nHigh-protein diet: 30% protein\n\nDiets are assigned at random to pens, with 4 pens receiving each diet (8 pens total).\nThe turkeys are fed their assigned diet for 6 weeks. The primary outcome measured on each turkey is average daily weight gain (ADG), in lbs/day."
+  },
+  {
+    "objectID": "3-activities/instructions/01.1-activity-turkey-in-pens.html#sketch-a-blueprint-for-this-study.",
+    "href": "3-activities/instructions/01.1-activity-turkey-in-pens.html#sketch-a-blueprint-for-this-study.",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "1. Sketch a blueprint for this study.",
+    "text": "1. Sketch a blueprint for this study."
+  },
+  {
+    "objectID": "3-activities/instructions/01.1-activity-turkey-in-pens.html#describe-the-study-structure",
+    "href": "3-activities/instructions/01.1-activity-turkey-in-pens.html#describe-the-study-structure",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "2. Describe the study structure",
+    "text": "2. Describe the study structure\n\nTreatment structure:\n\n\nDesign structure:"
+  },
+  {
+    "objectID": "3-activities/instructions/01.1-activity-turkey-in-pens.html#pen-level-data",
+    "href": "3-activities/instructions/01.1-activity-turkey-in-pens.html#pen-level-data",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "3. Pen-Level Data",
+    "text": "3. Pen-Level Data\n\nOpen the file turkey_pen_data.csv.\nWhat does each row in this data file represent?\nHow many observations are there per diet? Why?\nCreate a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots). Don’t forget to make sure your plot has clear axis labels and a title!\nCreate a summary table showing the mean and standard deviation of pen-level ADG for each diet.\n\n\n\n\nDiet\nMean pen ADG\nSD pen ADG\n\n\n\n\nLow (15%)\n\n\n\n\nHigh (30%)"
+  },
+  {
+    "objectID": "3-activities/instructions/01.1-activity-turkey-in-pens.html#animal-level-data",
+    "href": "3-activities/instructions/01.1-activity-turkey-in-pens.html#animal-level-data",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "4. Animal-Level Data",
+    "text": "4. Animal-Level Data\n\nOpen the file turkey_animal_data.csv.\nWhat does each row in this data file represent? How many rows are there? Why?\nCreate a plot of animal-level ADG on the y-axis and Diet on the x-axis.\nHow many measurement/sampling units are there per diet in this plot?\nCreate a summary table showing the mean and standard deviation of ADG for each diet.\n\n\n\n\nDiet\nMean ADG\nSD ADG\n\n\n\n\nLow (15%)\n\n\n\n\nHigh (30%)\n\n\n\n\n\n\nCompare the animal-level means and standard deviations to the pen-level results. What do you notice?"
+  },
+  {
+    "objectID": "3-activities/instructions/01.1-activity-turkey-in-pens.html#comparing-analyses",
+    "href": "3-activities/instructions/01.1-activity-turkey-in-pens.html#comparing-analyses",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "5. Comparing Analyses",
+    "text": "5. Comparing Analyses\nNow consider a two-sample t-test comparing the low-protein and high-protein diets.\n\nPen-level analysis\n\nUsing turkey_pen_data.csv, conduct a two-sample independent t-test (assume unequal variances).\n\nReport:\n\nDifference in mean ADG\n\nStandard error\n\nt-statistic, degrees of freedom, and p-value\n\n\n\nAnimal-level analysis\n\nUsing turkey_animal_data.csv, conduct the same two-sample independent t-test (assume unequal variances).\n\nReport:\n\nDifference in mean ADG\n\nStandard error\n\nt-statistic, degrees of freedom, and p-value"
+  },
+  {
+    "objectID": "3-activities/instructions/01.1-activity-turkey-in-pens.html#interpretation",
+    "href": "3-activities/instructions/01.1-activity-turkey-in-pens.html#interpretation",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "6. Interpretation",
+    "text": "6. Interpretation\n\nWhich analysis is correct for answering the research question? Explain.\n\nYour explanation should address:\n\nWhat the experimental unit is\n\nWhy one analysis artificially inflates the sample size\n\nWhy this matters for statistical inference"
+  },
+  {
+    "objectID": "3-activities/instructions/01.1-activity-turkey-in-pens.html#submit-on-gradescope",
+    "href": "3-activities/instructions/01.1-activity-turkey-in-pens.html#submit-on-gradescope",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "7. Submit on Gradescope",
+    "text": "7. Submit on Gradescope\nWhen you are finished, submit your work to Gradescope:\n\nMake sure your submission includes:\n\nYour study blueprint sketch\nYour written answers for parts (b)–(n)\nAny requested tables/values from R\n\nCombine everything into one PDF.\n\nIf you wrote on paper: take clear photos and save/print to PDF.\nIf you typed responses: export to PDF.\nIf you used Quarto: render your report (it is set to render as PDF).\n\nGo to Canvas &gt; Gradescope &gt; Activity 1.1: Design Blueprints and upload your PDF.\nIf Gradescope asks you to assign pages to questions, do so before submitting."
+  },
+  {
+    "objectID": "3-activities/solution/01.1-activity-solution.html",
+    "href": "3-activities/solution/01.1-activity-solution.html",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "",
+    "text": "- student\n\nError:\n! object 'student' not found\n\n  - solution\n\nError:\n! object 'solution' not found\n\n#| label: setup\n\nlibrary(tidyverse)\nlibrary(knitr)"
+  },
+  {
+    "objectID": "3-activities/solution/01.1-activity-solution.html#scenario",
+    "href": "3-activities/solution/01.1-activity-solution.html#scenario",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "Scenario",
+    "text": "Scenario\nWe are interested in examining the effect of dietary protein on growth in Standard Bronze farm-raised turkeys. There are 24 turkeys available for the study.\nThe turkeys are housed 3 to a pen, and each pen has a single feed trough, meaning all turkeys within a pen receive the same diet.\nTwo diets are studied:\n\nLow-protein diet: 15% protein\n\nHigh-protein diet: 30% protein\n\nDiets are assigned at random to pens, with 4 pens receiving each diet (8 pens total).\nThe turkeys are fed their assigned diet for 6 weeks. The primary outcome measured on each turkey is average daily weight gain (ADG), in lbs/day."
+  },
+  {
+    "objectID": "3-activities/solution/01.1-activity-solution.html#sketch-a-blueprint-for-this-study.",
+    "href": "3-activities/solution/01.1-activity-solution.html#sketch-a-blueprint-for-this-study.",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "1. Sketch a blueprint for this study.",
+    "text": "1. Sketch a blueprint for this study."
+  },
+  {
+    "objectID": "3-activities/solution/01.1-activity-solution.html#describe-the-study-structure",
+    "href": "3-activities/solution/01.1-activity-solution.html#describe-the-study-structure",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "2. Describe the study structure",
+    "text": "2. Describe the study structure\n\nTreatment structure:\nDesign structure:"
+  },
+  {
+    "objectID": "3-activities/solution/01.1-activity-solution.html#pen-level-data",
+    "href": "3-activities/solution/01.1-activity-solution.html#pen-level-data",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "3. Pen-Level Data",
+    "text": "3. Pen-Level Data\n\nOpen the file turkey_pen_data.csv.\n\n\npen_dat &lt;- read_csv(\"../_data/01_turkey_pen_data.csv\")\n\n\nWhat does each row in this data file represent?\nHow many observations are there per diet? Why?\nCreate a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots). Don’t forget to make sure your plot has clear axis labels and a title!\n\n\nggplot(pen_dat) +\n  geom_point(aes(x = Diet,\n                 y = Pen_ADG))\n\n\n\n\n\n\n\n\n\nCreate a summary table showing the mean and standard deviation of pen-level ADG for each diet.\n\n\npen_dat |&gt; \n  group_by(Diet) |&gt; \n  summarize(mean_pen_adg = mean(Pen_ADG),\n            sd_pen_adg = sd(Pen_ADG)) |&gt; \n  kable(digits = 3)\n\n\n\n\nDiet\nmean_pen_adg\nsd_pen_adg\n\n\n\n\n15% (low)\n1.415\n0.304\n\n\n30% (high)\n1.315\n0.271\n\n\n\n\n\n\n\n\nDiet\nMean pen ADG\nSD pen ADG\n\n\n\n\nLow (15%)\n\n\n\n\nHigh (30%)"
+  },
+  {
+    "objectID": "3-activities/solution/01.1-activity-solution.html#animal-level-data",
+    "href": "3-activities/solution/01.1-activity-solution.html#animal-level-data",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "4. Animal-Level Data",
+    "text": "4. Animal-Level Data\n\nOpen the file turkey_animal_data.csv.\n\n\nanimal_dat &lt;- read_csv(\"../_data/01_turkey_animal_data.csv\")\n\n\nWhat does each row in this data file represent? How many rows are there? Why?\nCreate a plot of animal-level ADG on the y-axis and Diet on the x-axis.\n\n\nggplot(animal_dat) +\n  geom_jitter(aes(x = Diet,\n                 y = ADG),\n              height = 0,\n              width = .1,\n              alpha = .8)\n\n\n\n\n\n\n\n\n\nHow many measurement/sampling units are there per diet in this plot?\n\n\nCreate a summary table showing the mean and standard deviation of ADG for each diet.\n\n\nanimal_dat |&gt; \n  group_by(Diet) |&gt; \n  summarize(mean_adg = mean(ADG),\n            sd_adg = sd(ADG)) |&gt; \n  kable(digits = 3)\n\n\n\n\nDiet\nmean_adg\nsd_adg\n\n\n\n\n15% (low)\n1.408\n0.297\n\n\n30% (high)\n1.308\n0.271\n\n\n\n\n\n\n\n\nDiet\nMean ADG\nSD ADG\n\n\n\n\nLow (15%)\n\n\n\n\nHigh (30%)\n\n\n\n\n\n\nCompare the animal-level means and standard deviations to the pen-level results. What do you notice?"
+  },
+  {
+    "objectID": "3-activities/solution/01.1-activity-solution.html#comparing-analyses",
+    "href": "3-activities/solution/01.1-activity-solution.html#comparing-analyses",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "5. Comparing Analyses",
+    "text": "5. Comparing Analyses\nNow consider a two-sample t-test comparing the low-protein and high-protein diets.\n\nPen-level analysis\n\nUsing turkey_pen_data.csv, conduct a two-sample independent t-test (assume unequal variances).\n\n\nt.test(Pen_ADG ~ Diet, data = pen_dat)\n\n\n    Welch Two Sample t-test\n\ndata:  Pen_ADG by Diet\nt = 0.49128, df = 5.9222, p-value = 0.6409\nalternative hypothesis: true difference in means between group 15% (low) and group 30% (high) is not equal to 0\n95 percent confidence interval:\n -0.3996644  0.5996644\nsample estimates:\n mean in group 15% (low) mean in group 30% (high) \n                   1.415                    1.315 \n\n\nReport:\n\nDifference in mean ADG\n\nStandard error\n\nt-statistic, degrees of freedom, and p-value\n\n\n\nAnimal-level analysis\n\nUsing turkey_animal_data.csv, conduct the same two-sample independent t-test (assume unequal variances).\n\n\nt.test(ADG ~ Diet, data = animal_dat)\n\n\n    Welch Two Sample t-test\n\ndata:  ADG by Diet\nt = 0.86155, df = 21.823, p-value = 0.3983\nalternative hypothesis: true difference in means between group 15% (low) and group 30% (high) is not equal to 0\n95 percent confidence interval:\n -0.1408273  0.3408273\nsample estimates:\n mean in group 15% (low) mean in group 30% (high) \n                1.408333                 1.308333 \n\n\nReport:\n\nDifference in mean ADG\n\nStandard error\n\nt-statistic, degrees of freedom, and p-value"
+  },
+  {
+    "objectID": "3-activities/solution/01.1-activity-solution.html#interpretation",
+    "href": "3-activities/solution/01.1-activity-solution.html#interpretation",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "6. Interpretation",
+    "text": "6. Interpretation\n\nWhich analysis is correct for answering the research question? Explain.\n\nYour explanation should address:\n\nWhat the experimental unit is\n\nWhy one analysis artificially inflates the sample size\n\nWhy this matters for statistical inference"
+  },
+  {
+    "objectID": "3-activities/solution/01.1-activity-solution.html#submit-on-gradescope",
+    "href": "3-activities/solution/01.1-activity-solution.html#submit-on-gradescope",
+    "title": "Activity 1.1: Design Blueprints",
+    "section": "7. Submit on Gradescope",
+    "text": "7. Submit on Gradescope\nWhen you are finished, submit your work to Gradescope:\n\nMake sure your submission includes:\n\nYour study blueprint sketch\nYour written answers for parts (b)–(n)\nAny requested tables/values from R\n\nCombine everything into one PDF.\n\nIf you wrote on paper: take clear photos and save/print to PDF.\nIf you typed responses: export to PDF.\nIf you used Quarto: render your report (it is set to render as PDF).\n\nGo to Canvas &gt; Gradescope &gt; Activity 1.1: Design Blueprints and upload your PDF.\nIf Gradescope asks you to assign pages to questions, do so before submitting."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistical Methods for Study Design and Analysis",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the quarter. Note that this schedule will be updated as the quarter progresses, with all changes documented here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPreparation\n\n\n\n\nIn-Class\n\n\n\nLab\n\n\n\n\nWatch/Do\n\n\nSlides\n\n\nSlides\n\n\nActivity\n\n\n\n\n\n\nIntro to DOE\n\n\n\n\nWeek 1\n\n\nTue, 8/25\n\n\nMod 1: Introduction to Study Design\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\n\n\nThu, 8/27\n\n\nMod 1: Introduction to Study Design\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\nTue, 9/1\n\n\nMod 2: CRD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\nThu, 9/3\n\n\nMod 2: CRD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\nTue, 9/8\n\n\nMod 3: Power and Sample Size\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\n\n\nThu, 9/10\n\n\nMod 4: Factorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\nTue, 9/15\n\n\nMod 4: Factorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\n\n\nThu, 9/17\n\n\nMidterm Exam I\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComplex Experimental Design\n\n\n\n\nWeek 5\n\n\nTue, 9/22\n\n\nMod 4: Factorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\n\n\nThu, 9/24\n\n\nMod 5: RCBD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\nTue, 9/29\n\n\nMod 5: RCBD\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 6\n\n\nThu, 10/1\n\n\nMod 6: Random / Fixed Effects Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\nTue, 10/6\n\n\nMod 6: Random / Fixed Effects Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\n\n\nThu, 10/8\n\n\nMod 7: Extensions + Considerations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\nTue, 10/13\n\n\nMod 7: Extensions + Considerations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\n\n\nThu, 10/15\n\n\nMod 8: Causal Inference\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 9\n\n\nTue, 10/20\n\n\nMidterm Exam II\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservational Studies and Survey Design\n\n\n\n\nWeek 9\n\n\nThu, 10/22\n\n\nMod 9: Observational Studies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\nTue, 10/27\n\n\nMod 9: Observational Studies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\n\n\nThu, 10/29\n\n\nMod 10: Writing Survey Instruments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 11\n\n\nTue, 11/3\n\n\nMod 10: Writing Survey Instruments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 11\n\n\nThu, 11/5\n\n\nMod 10: Writing Survey Instruments\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 12\n\n\nTue, 11/10\n\n\nMod 11: Survey Sampling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 12\n\n\nThu, 11/12\n\n\nMod 11: Survey Sampling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 13\n\n\nTue, 11/17\n\n\nMod 11: Survey Sampling\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 13\n\n\nThu, 11/19\n\n\nMod 12: Survey Weights\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTue, 11/24\n\n\nFall Break\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThu, 11/26\n\n\nFall Break\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudy Design through Case Studies\n\n\n\n\nWeek 14\n\n\nTue, 12/1\n\n\nMod 13: Putting it all Together!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 14\n\n\nThu, 12/3\n\n\nMod 13: Putting it all Together!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 15\n\n\nTue, 12/8\n\n\nMod 13: Putting it all Together!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 15\n\n\nThu, 12/10\n\n\nFinal Project Presentations",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
   }
 ]

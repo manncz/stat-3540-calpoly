@@ -1,0 +1,183 @@
+---
+title: "Activity 1.1: Design Blueprints"
+subtitle: "Turkeys in Pens"
+execute: 
+  error: true
+  echo: true
+  message: false
+  warning: false
+
+author: Your Name
+format: typst
+---
+```{r}
+#| label: setup
+
+library(tidyverse)
+library(knitr)
+```
+
+## Scenario
+
+We are interested in examining the effect of dietary protein on growth in Standard Bronze farm-raised turkeys. There are 24 turkeys available for the study.
+
+The turkeys are housed 3 to a pen, and each pen has a single feed trough, meaning all turkeys within a pen receive the same diet.
+
+Two diets are studied:
+
+- Low-protein diet: 15% protein  
+- High-protein diet: 30% protein  
+
+Diets are assigned at random to pens, with 4 pens receiving each diet (8 pens total).
+
+The turkeys are fed their assigned diet for 6 weeks. The primary outcome measured on each turkey is average daily weight gain (ADG), in lbs/day.
+
+## 1. Sketch a blueprint for this study.
+
+*Include an image of your blueprint here*
+
+## 2. Describe the study structure
+
+- **Treatment structure:**  
+
+- **Design structure:**  
+
+## 3. Pen-Level Data
+
+a. Open the file `turkey_pen_data.csv`.
+
+```{r}
+# read in pen data
+
+pen_dat <- read_csv("FILE PATH")
+```
+
+b. What does each row in this data file represent?
+
+c. How many observations are there per diet? Why?
+
+d. Create a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots). Don't forget to make sure your plot has clear axis labels and a title!
+
+```{r}
+# plot code 
+# hint: think about what kind of plot makes sense and
+# then look up how to make that with ggplot
+
+
+```
+
+e. Create a summary table showing the mean and standard deviation of pen-level ADG for each diet.
+
+```{r}
+# table code
+
+```
+
+You can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.
+
+| Diet | Mean pen ADG | SD pen ADG |
+|------|--------------|------------|
+| Low (15%) | | |
+| High (30%) | | |
+
+## 4. Animal-Level Data
+
+f. Open the file `turkey_animal_data.csv`.
+
+```{r}
+# read in animal data
+
+animal_dat <- read_csv("FILE PATH")
+```
+
+g. What does each row in this data file represent? How many rows are there? Why?
+
+h. Create a plot of animal-level ADG on the y-axis and Diet on the x-axis.
+
+```{r}
+# plot code 
+# hint: think about what kind of plot makes sense and
+# then look up how to make that with ggplot
+
+
+```
+
+i. How many measurement/sampling units are there per diet in this plot?
+
+j. Create a summary table showing the mean and standard deviation of ADG for each diet.
+
+```{r}
+# table code
+
+```
+
+You can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.
+
+| Diet | Mean ADG | SD ADG |
+|------|----------|--------|
+| Low (15%) | | |
+| High (30%) | | |
+
+k. Compare the animal-level means and standard deviations to the pen-level results. What do you notice?
+
+## 5. Comparing Analyses
+
+Now consider a two-sample t-test comparing the low-protein and high-protein diets.
+
+### Pen-level analysis
+
+l. Using `turkey_pen_data.csv`, conduct a two-sample independent t-test (assume unequal variances).
+
+```{r}
+# t-test code
+```
+
+Report:
+
+- Difference in mean ADG  
+- Standard error  
+- t-statistic, degrees of freedom, and p-value  
+
+### Animal-level analysis
+
+m. Using `turkey_animal_data.csv`, conduct the same two-sample independent t-test (assume unequal variances).
+
+```{r}
+# t-test code
+```
+
+Report:
+
+- Difference in mean ADG  
+- Standard error  
+- t-statistic, degrees of freedom, and p-value  
+
+## 6. Interpretation
+
+n. Which analysis is *correct* for answering the research question? Explain.
+
+Your explanation should address:
+
+- What the experimental unit is  
+- Why one analysis artificially inflates the sample size  
+- Why this matters for statistical inference
+
+## 7. Submit on Gradescope
+
+When you are finished, submit your work to **Gradescope**:
+
+1. Make sure your submission includes:
+
+   - Your study blueprint sketch
+   - Your written answers for parts (b)–(n)
+   - Any requested tables/values from R
+   
+2. Combine everything into **one PDF**.
+
+   - If you wrote on paper: take clear photos and save/print to PDF.
+   - If you typed responses: export to PDF.
+   - If you used Quarto: render your report (it is set to render as PDF).
+   
+3. Go to **Canvas > Gradescope > Activity 1.1: Design Blueprints** and upload your PDF.
+
+4. If Gradescope asks you to assign pages to questions, do so before submitting.

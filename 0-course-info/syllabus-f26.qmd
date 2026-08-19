@@ -3,7 +3,6 @@ title: "Stat 3540/5440: Statistical Methods for Study Design and Analysis Syllab
 subtitle: "Fall 2026"
 format:
   html: default
-  pdf: default
 ---
 
 ```{r}

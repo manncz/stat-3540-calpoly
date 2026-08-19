@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Course Discord Instructions – Statistical Methods for Study Design and Analysis</title>
+<title>Activity 1.1: Design Blueprints – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,29 +23,64 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-99d69ffe6c78a8b0d43fb0abb952d9a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-99d69ffe6c78a8b0d43fb0abb952d9a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -265,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Statistical Methods for Study Design and Analysis</a> 
+      <a href="../../">Statistical Methods for Study Design and Analysis</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/manncz/stat-3540-calpoly" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://canvas.calpoly.edu" title="Cal Poly Canvas" class="quarto-navigation-tool px-1" aria-label="Cal Poly Canvas"><i class="bi bi-person-fill"></i></a>
@@ -291,19 +326,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
+  <a href="../../0-course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../course-info/course-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -319,20 +354,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#join-the-server" id="toc-join-the-server" class="nav-link active" data-scroll-target="#join-the-server"><span class="header-section-number">1</span> Join the server</a></li>
-  <li><a href="#set-up-your-account" id="toc-set-up-your-account" class="nav-link" data-scroll-target="#set-up-your-account"><span class="header-section-number">2</span> Set up your account</a>
+  <li><a href="#software." id="toc-software." class="nav-link active" data-scroll-target="#software.">0. Software.</a></li>
+  <li><a href="#scenario" id="toc-scenario" class="nav-link" data-scroll-target="#scenario">Scenario</a></li>
+  <li><a href="#sketch-a-blueprint-for-this-study." id="toc-sketch-a-blueprint-for-this-study." class="nav-link" data-scroll-target="#sketch-a-blueprint-for-this-study.">1. Sketch a blueprint for this study.</a></li>
+  <li><a href="#describe-the-study-structure" id="toc-describe-the-study-structure" class="nav-link" data-scroll-target="#describe-the-study-structure">2. Describe the study structure</a></li>
+  <li><a href="#pen-level-data" id="toc-pen-level-data" class="nav-link" data-scroll-target="#pen-level-data">3. Pen-Level Data</a></li>
+  <li><a href="#animal-level-data" id="toc-animal-level-data" class="nav-link" data-scroll-target="#animal-level-data">4. Animal-Level Data</a></li>
+  <li><a href="#comparing-analyses" id="toc-comparing-analyses" class="nav-link" data-scroll-target="#comparing-analyses">5. Comparing Analyses</a>
   <ul class="collapse">
-  <li><a href="#verify-your-email" id="toc-verify-your-email" class="nav-link" data-scroll-target="#verify-your-email">Verify your email</a></li>
-  <li><a href="#create-your-identity" id="toc-create-your-identity" class="nav-link" data-scroll-target="#create-your-identity">Create your identity</a></li>
-  <li><a href="#complete-the-get-started-tasks" id="toc-complete-the-get-started-tasks" class="nav-link" data-scroll-target="#complete-the-get-started-tasks">Complete the “Get Started” tasks</a></li>
-  <li><a href="#decide-about-privacy-and-notifications" id="toc-decide-about-privacy-and-notifications" class="nav-link" data-scroll-target="#decide-about-privacy-and-notifications">Decide about privacy and notifications</a></li>
+  <li><a href="#pen-level-analysis" id="toc-pen-level-analysis" class="nav-link" data-scroll-target="#pen-level-analysis">Pen-level analysis</a></li>
+  <li><a href="#animal-level-analysis" id="toc-animal-level-analysis" class="nav-link" data-scroll-target="#animal-level-analysis">Animal-level analysis</a></li>
   </ul></li>
-  <li><a href="#using-the-channels" id="toc-using-the-channels" class="nav-link" data-scroll-target="#using-the-channels"><span class="header-section-number">3</span> Using the Channels</a>
-  <ul class="collapse">
-  <li><a href="#text-channels" id="toc-text-channels" class="nav-link" data-scroll-target="#text-channels">Text Channels</a></li>
-  <li><a href="#private-messages" id="toc-private-messages" class="nav-link" data-scroll-target="#private-messages">Private messages</a></li>
-  </ul></li>
-  <li><a href="#creating-your-own-server" id="toc-creating-your-own-server" class="nav-link" data-scroll-target="#creating-your-own-server"><span class="header-section-number">4</span> Creating your own server</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">6. Interpretation</a></li>
+  <li><a href="#submit-on-gradescope" id="toc-submit-on-gradescope" class="nav-link" data-scroll-target="#submit-on-gradescope">7. Submit on Gradescope</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/manncz/stat-3540-calpoly/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -342,7 +376,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Course Discord Instructions</h1>
+<h1 class="title">Activity 1.1: Design Blueprints</h1>
+<p class="subtitle lead">Turkeys in Pens</p>
 </div>
 
 
@@ -359,72 +394,366 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>We’ll be using Discord to interact with our peers and group members.</p>
-<p>Discord is a platform for text chatting, voice chatting, and screen sharing.</p>
-<section id="join-the-server" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="join-the-server"><span class="header-section-number">1</span> Join the server</h2>
-<p>Join the <a href="https://discord.gg/CZCQhvfTfm">Stat 3540 Server</a> to start experimenting with the interface. (STAT 5440 are also part of this server – that name just got too long!)</p>
-<p>When you join the server, you will be given some suggestions to get started.</p>
-<p><img src="images/welcome_discord.png" class="img-fluid" alt="A picture of the welcome page when you join the Discord server. The page has links to learn more aboud Discord, customize your server, invite your friends, download the desktop app, access Discord from your phone, and how to reach the help desk."></p>
-<p>I recommend you click through these - and in particular, it is probably a good idea to download the desktop version of Discord, and perhaps to install it on your phone if you wish.</p>
+<section id="software." class="level2 version-instructions">
+<h2 class="anchored" data-anchor-id="software.">0. Software.</h2>
+<p>We will be using R and Rstudio in this course. To keep things simple for this first day, you can use <a href="https://posit.cloud/content/12747010">PositCloud</a> if you do not have R and RStudio set up already for a different Class.</p>
+<p>If you have R and Rstudio on your computer, you can download and use this template qmd: <a href="../student/01.1-activity-turkey-in-pens.qmd">01.1-activity-turkey-in-pens.qmd</a></p>
+<p>Alternatively, for <strong>this activity only</strong> you can use any software that you like to generate the plots and conduct the analysis.</p>
 </section>
-<section id="set-up-your-account" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="set-up-your-account"><span class="header-section-number">2</span> Set up your account</h2>
-<section id="verify-your-email" class="level3">
-<h3 class="anchored" data-anchor-id="verify-your-email">Verify your email</h3>
-<p>To use this Discord server, you <strong>must</strong> have a verified email.</p>
-<p>Nobody (including your professors) will be able to see this email, and it does not have to be your Cal Poly email. This is simply to keep the server from being overrun by temporary accounts.</p>
+<div class="cell" data-version="[&quot;student&quot;,&quot;solution&quot;]">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="scenario" class="level2">
+<h2 class="anchored" data-anchor-id="scenario">Scenario</h2>
+<p>We are interested in examining the effect of dietary protein on growth in Standard Bronze farm-raised turkeys. There are 24 turkeys available for the study.</p>
+<p>The turkeys are housed 3 to a pen, and each pen has a single feed trough, meaning all turkeys within a pen receive the same diet.</p>
+<p>Two diets are studied:</p>
+<ul>
+<li>Low-protein diet: 15% protein<br>
+</li>
+<li>High-protein diet: 30% protein</li>
+</ul>
+<p>Diets are assigned at random to pens, with 4 pens receiving each diet (8 pens total).</p>
+<p>The turkeys are fed their assigned diet for 6 weeks. The primary outcome measured on each turkey is average daily weight gain (ADG), in lbs/day.</p>
 </section>
-<section id="create-your-identity" class="level3">
-<h3 class="anchored" data-anchor-id="create-your-identity">Create your identity</h3>
-<p>The first thing you should do is decide what name and picture you would like to use.</p>
-<p><img src="images/pic.gif" class="img-fluid" alt="A gif showing the process of changing the name displayed on your account and the picture associated with your account."></p>
-<p>I would like to <strong>strongly</strong> encourage you to use your <strong>real name and picture</strong>, so that everyone can get to know you. This also helps me know who I am talking to! However, if you prefer to remain anonymous, you are free to do so.</p>
-<p><img src="images/pic_name.gif" class="img-fluid" alt="A gif of Regina changing the nickname of her Discord account to Gretchen Weiners, to impersonate her friend."></p>
-<p>(Do not be like Regina and use the name of another student, however!<br>
-This kind of impersonation will result in a permanent ban from the server.)</p>
-<p>Remember that this is still a professional space for this course. <strong>Ensure that your profile photo and name is appropriate.</strong> If a picture of a human is used, it should be you. This doesn’t have to cramp your style for your other Discord servers! <strong>You can make an identity just for our course server.</strong></p>
+<section id="sketch-a-blueprint-for-this-study." class="level2">
+<h2 class="anchored" data-anchor-id="sketch-a-blueprint-for-this-study.">1. Sketch a blueprint for this study.</h2>
+<div class="version-instructions">
+
+</div>
+<div class="version-student">
+<p><em>Include an image of your blueprint here</em></p>
+</div>
 </section>
-<section id="complete-the-get-started-tasks" class="level3">
-<h3 class="anchored" data-anchor-id="complete-the-get-started-tasks">Complete the “Get Started” tasks</h3>
-<p>I have set up a slightly fancier entry to this Discord channel which will hopefully orient you and make things easy!</p>
-<p>One of the first things you will do is indicate which section of class you are in. This will help me send messages to sections separately if needed. You will also be prompted to introduce yourself and to click through a couple of channels. If this get’s too complicated, I will disable this, but it seemed worth a shot!</p>
+<section id="describe-the-study-structure" class="level2">
+<h2 class="anchored" data-anchor-id="describe-the-study-structure">2. Describe the study structure</h2>
+<ul>
+<li><strong>Treatment structure:</strong></li>
+</ul>
+<div class="version-instructions">
+
+</div>
+<ul>
+<li><strong>Design structure:</strong></li>
+</ul>
+<div class="version-instructions">
+
+</div>
 </section>
-<section id="decide-about-privacy-and-notifications" class="level3">
-<h3 class="anchored" data-anchor-id="decide-about-privacy-and-notifications">Decide about privacy and notifications</h3>
-<p>The default settings on the channel are probably just fine for you.<br>
-Feel free to make any changes that work for you, though.</p>
-<p>You can change your message notifications:</p>
-<p><img src="images/notifications.gif" class="img-fluid" alt="A gif showing how to change the default notifications on the 'Notifications' and 'Text &amp; Images' sidebars."></p>
-<p>You can edit your privacy settings, although most things are already private:</p>
-<p><img src="images/privacy.gif" class="img-fluid" alt="A gif of changing the privacy settings on the 'Privacy &amp; Safety' tab. The user is toggling between the 'Keep me safe', 'My friends are nice', and 'I live on the edge' options for whether DMs sent to you should be scanned for explicit content."></p>
+<section id="pen-level-data" class="level2">
+<h2 class="anchored" data-anchor-id="pen-level-data">3. Pen-Level Data</h2>
+<ol type="a">
+<li>Open the file <code>turkey_pen_data.csv</code>.</li>
+</ol>
+<div class="cell" data-version="solution">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pen_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../_data/01_turkey_pen_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-version="student">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read in pen data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>pen_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"FILE PATH"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! 'FILE PATH' does not exist in current working directory:
+  '/Users/czmann/Documents/teaching/stat3540/3-activities/main-version'.</code></pre>
+</div>
+</div>
+<ol start="2" type="a">
+<li><p>What does each row in this data file represent?</p></li>
+<li><p>How many observations are there per diet? Why?</p></li>
+<li><p>Create a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots). Don’t forget to make sure your plot has clear axis labels and a title!</p></li>
+</ol>
+<div class="cell" data-version="solution">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pen_dat) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> Diet,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> Pen_ADG))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01.1-activity-turkey-in-pens_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-version="student">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot code </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># hint: think about what kind of plot makes sense and</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># then look up how to make that with ggplot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="5" type="a">
+<li>Create a summary table showing the mean and standard deviation of pen-level ADG for each diet.</li>
+</ol>
+<div class="cell" data-version="solution">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pen_dat <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Diet) <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_pen_adg =</span> <span class="fu">mean</span>(Pen_ADG),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd_pen_adg =</span> <span class="fu">sd</span>(Pen_ADG)) <span class="sc">|&gt;</span> </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Diet</th>
+<th style="text-align: right;">mean_pen_adg</th>
+<th style="text-align: right;">sd_pen_adg</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">15% (low)</td>
+<td style="text-align: right;">1.415</td>
+<td style="text-align: right;">0.304</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30% (high)</td>
+<td style="text-align: right;">1.315</td>
+<td style="text-align: right;">0.271</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-version="student">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># table code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="version-student">
+<p>You can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.</p>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Diet</th>
+<th>Mean pen ADG</th>
+<th>SD pen ADG</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Low (15%)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>High (30%)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="animal-level-data" class="level2">
+<h2 class="anchored" data-anchor-id="animal-level-data">4. Animal-Level Data</h2>
+<ol start="6" type="a">
+<li>Open the file <code>turkey_animal_data.csv</code>.</li>
+</ol>
+<div class="cell" data-version="solution">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>animal_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../_data/01_turkey_animal_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell" data-version="student">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read in animal data</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>animal_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"FILE PATH"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! 'FILE PATH' does not exist in current working directory:
+  '/Users/czmann/Documents/teaching/stat3540/3-activities/main-version'.</code></pre>
+</div>
+</div>
+<ol start="7" type="a">
+<li><p>What does each row in this data file represent? How many rows are there? Why?</p></li>
+<li><p>Create a plot of animal-level ADG on the y-axis and Diet on the x-axis.</p></li>
+</ol>
+<div class="cell" data-version="solution">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(animal_dat) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(<span class="at">x =</span> Diet,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> ADG),</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">height =</span> <span class="dv">0</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">width =</span> .<span class="dv">1</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> .<span class="dv">8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01.1-activity-turkey-in-pens_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-version="student">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot code </span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># hint: think about what kind of plot makes sense and</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># then look up how to make that with ggplot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol type="i">
+<li>How many measurement/sampling units are there per diet in this plot?</li>
+</ol>
+<ol start="10" type="a">
+<li>Create a summary table showing the mean and standard deviation of ADG for each diet.</li>
+</ol>
+<div class="cell" data-version="solution">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>animal_dat <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Diet) <span class="sc">|&gt;</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_adg =</span> <span class="fu">mean</span>(ADG),</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd_adg =</span> <span class="fu">sd</span>(ADG)) <span class="sc">|&gt;</span> </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Diet</th>
+<th style="text-align: right;">mean_adg</th>
+<th style="text-align: right;">sd_adg</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">15% (low)</td>
+<td style="text-align: right;">1.408</td>
+<td style="text-align: right;">0.297</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30% (high)</td>
+<td style="text-align: right;">1.308</td>
+<td style="text-align: right;">0.271</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell" data-version="student">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># table code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="version-student">
+<p>You can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.</p>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Diet</th>
+<th>Mean ADG</th>
+<th>SD ADG</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Low (15%)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>High (30%)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="11" type="a">
+<li>Compare the animal-level means and standard deviations to the pen-level results. What do you notice?</li>
+</ol>
+</section>
+<section id="comparing-analyses" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-analyses">5. Comparing Analyses</h2>
+<p>Now consider a two-sample t-test comparing the low-protein and high-protein diets.</p>
+<section id="pen-level-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="pen-level-analysis">Pen-level analysis</h3>
+<ol start="12" type="a">
+<li>Using <code>turkey_pen_data.csv</code>, conduct a two-sample independent t-test (assume unequal variances).</li>
+</ol>
+<div class="cell" data-version="solution">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Pen_ADG <span class="sc">~</span> Diet, <span class="at">data =</span> pen_dat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  Pen_ADG by Diet
+t = 0.49128, df = 5.9222, p-value = 0.6409
+alternative hypothesis: true difference in means between group 15% (low) and group 30% (high) is not equal to 0
+95 percent confidence interval:
+ -0.3996644  0.5996644
+sample estimates:
+ mean in group 15% (low) mean in group 30% (high) 
+                   1.415                    1.315 </code></pre>
+</div>
+</div>
+<div class="cell" data-version="student">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># t-test code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Report:</p>
+<ul>
+<li>Difference in mean ADG<br>
+</li>
+<li>Standard error<br>
+</li>
+<li>t-statistic, degrees of freedom, and p-value</li>
+</ul>
+</section>
+<section id="animal-level-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="animal-level-analysis">Animal-level analysis</h3>
+<ol start="13" type="a">
+<li>Using <code>turkey_animal_data.csv</code>, conduct the same two-sample independent t-test (assume unequal variances).</li>
+</ol>
+<div class="cell" data-version="solution">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(ADG <span class="sc">~</span> Diet, <span class="at">data =</span> animal_dat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  ADG by Diet
+t = 0.86155, df = 21.823, p-value = 0.3983
+alternative hypothesis: true difference in means between group 15% (low) and group 30% (high) is not equal to 0
+95 percent confidence interval:
+ -0.1408273  0.3408273
+sample estimates:
+ mean in group 15% (low) mean in group 30% (high) 
+                1.408333                 1.308333 </code></pre>
+</div>
+</div>
+<div class="cell" data-version="student">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># t-test code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Report:</p>
+<ul>
+<li>Difference in mean ADG<br>
+</li>
+<li>Standard error<br>
+</li>
+<li>t-statistic, degrees of freedom, and p-value</li>
+</ul>
 </section>
 </section>
-<section id="using-the-channels" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="using-the-channels"><span class="header-section-number">3</span> Using the Channels</h2>
-<p>The server is made up of many channels. Some are text chatrooms, while some are “Voice Channels” that connect you via audio to everyone else in the channel.</p>
-<section id="text-channels" class="level3">
-<h3 class="anchored" data-anchor-id="text-channels">Text Channels</h3>
-<p>Use the <code>#general</code> channel for anything and everything:</p>
-<p><img src="images/saying_hi.gif" class="img-fluid" alt="A gif showing Regina (the user) posting a comment to the 'general' text channel. After Regina posts 'Hi Everyone!', Dr. Bodwin (her teacher) responds 'Welcome to Stat 431, Regina'."></p>
-<p>If your question is about course logistics, rather than the material itself, consider using the <code>#class-logistics</code> channel:</p>
-<p><img src="images/logistics.gif" class="img-fluid" alt="A gif showing Regina navigating to the class-logistics text channel to ask a question--'What time are the work parties with the professors?'. Dr. Bodwin responds to Regina's message saying that the work parties are 'Mondays and Wednesdays from 2-4pm' and reminds Regina that she can 'Feel free to use this Discord channel anytime!'"></p>
-<p>You can use the specific weekly channels to ask questions about the material…</p>
-<p><img src="images/github.gif" class="img-fluid" alt="A gif showing Regina posting a question to the general-questions text channel, inside Week 0. Week 0 is shown as a subheading and general-questions is tab indented below Week 0, displaying that it is a channel associated with the Week 0 group. Regina asks 'So wait, is GitHub a programming language?', and Dr. Bodwin responds 'Good question, but no. GitHub is a website that is good for tracking changes'."></p>
-<p>… or the specific assignment.</p>
-<p><img src="images/code_in_chat.gif" class="img-fluid" alt="A gif showing Regina typing code in the lab-0 text channel. Regina uses the ` symbol (immediately below the escape key) to tell Discord that the text she is typing should be formatted as code."></p>
-<p>Notice that you can use tick marks (<code>```</code>), like in Markdown, to make your code appear in a formatted code box.</p>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">6. Interpretation</h2>
+<ol start="14" type="a">
+<li>Which analysis is <em>correct</em> for answering the research question? Explain.</li>
+</ol>
+<p>Your explanation should address:</p>
+<ul>
+<li>What the experimental unit is<br>
+</li>
+<li>Why one analysis artificially inflates the sample size<br>
+</li>
+<li>Why this matters for statistical inference</li>
+</ul>
 </section>
-<section id="private-messages" class="level3">
-<h3 class="anchored" data-anchor-id="private-messages">Private messages</h3>
-<p>It is also easy to send private messages, to your professor or to each other. These private messages can also easily be used to launch a private video chat and / or screen sharing.</p>
-<p><img src="images/private_message.gif" class="img-fluid" alt="A gif showing Regina sending Dr. Bodwin a DM. Regina clicks on Dr. Bodwin's name in the lab-0 Discord channel, which prompts a pop-up to appear. Regina then types a message in the lower text box titled 'Note'. Once Regina hits enter to send her message, a new page opens displaying her conversation with Dr. Bodwin."></p>
-</section>
-</section>
-<section id="creating-your-own-server" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="creating-your-own-server"><span class="header-section-number">4</span> Creating your own server</h2>
-<p>Last but not least - for the teams you are a part of, you may want to use Discord to communicate with each other about the weekly assignments. You can do this by creating your own server! You can easily hop between servers during work parties, to ask each other questions or just to take a break and chat about life.</p>
-<p><img src="images/new_server.gif" class="img-fluid" alt="A gif showing the process of creating your own server. On the left sidebar, the square with a plus symbol (immediately below the icon for her Stat 431 server. When Regina clicks on the + icon, a box appears saying 'Oh, another server, hun?', with two options below it, 'Create a Server' (in blue) or 'Join a server' (in green). Regina clicks on the blue, 'Create a Server' button. After she clicks on this button a new pop-up appears asking her to enter the name of her server. Regina changes the name from 'Regina George's Server' to 'Mean Girls Only'. Once Regina has changed the name of her server, she clicks 'Create'. This takes her to her new Discord server. She then clicks on the link to invite people to join her server, which brings up a pop-up box with the HTTPS link she can give to her friends for them to join the server."></p>
+<section id="submit-on-gradescope" class="level2">
+<h2 class="anchored" data-anchor-id="submit-on-gradescope">7. Submit on Gradescope</h2>
+<p>When you are finished, submit your work to <strong>Gradescope</strong>:</p>
+<ol type="1">
+<li><p>Make sure your submission includes:</p>
+<ul>
+<li>Your study blueprint sketch</li>
+<li>Your written answers for parts (b)–(n)</li>
+<li>Any requested tables/values from R</li>
+</ul></li>
+<li><p>Combine everything into <strong>one PDF</strong>.</p>
+<ul>
+<li>If you wrote on paper: take clear photos and save/print to PDF.</li>
+<li>If you typed responses: export to PDF.</li>
+<li>If you used Quarto: render your report (it is set to render as PDF).</li>
+</ul></li>
+<li><p>Go to <strong>Canvas &gt; Gradescope &gt; Activity 1.1: Design Blueprints</strong> and upload your PDF.</p></li>
+<li><p>If Gradescope asks you to assign pages to questions, do so before submitting.</p></li>
+</ol>
 
 
 </section>
