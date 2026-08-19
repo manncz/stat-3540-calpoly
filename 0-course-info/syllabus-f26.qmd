@@ -721,7 +721,7 @@ expected to ask for clarification.**
 
 ### Generative AI Policy
 
-Generative AI (like Chat GPT) is an extremely and increasingly powerful tool for many many tasks. It is true that in some (how many, I am not sure!) workplaces, employees are encouraged to use AI for a number of tasks. However, in this class, you are students, not employees! Your primary goal here is to learn, so I want us to think critically about how to use Generative AI (if you choose to use it at all) to **assist your learning**, not to undermine it.
+Generative AI (such as ChatGPT, Google Gemini, Microsoft Copilot, Claude, etc.) is an extremely and increasingly powerful tool for many many tasks. It is true that in some (how many, I am not sure!) workplaces, employees are encouraged to use AI for a number of tasks. However, in this class, you are students, not employees! Your primary goal here is to learn, so I want us to think critically about how to use Generative AI (if you choose to use it at all) to **assist your learning**, not to undermine it.
 
 :::callout-important
 # No copy-paste, seriously
@@ -734,6 +734,8 @@ Class time is structured around active learning and I expect you to actively eng
 #### Outside of Class:
 
 You can use generative AI outside of class on assignments. However, I encourage you to give all problems a full effort on your own, referencing the provided course materials **before** turning to AI. You will learn SO much more this way!! You should also give thought to how you are using AI, and approach it as a tutor, asking it specific questions to help you solve a problem. Again, you may not copy and paste course materials, including problems, into AI. When you do use AI to help with a problem, make sure you understand **why** the code it provides works or why the solution make sense. **If you choose to use AI, you must cite your use including the prompt that you gave.**
+
+If you do not or insufficiently cite AI use on a graded assignment, then you will recieve a minimum of a 25% deduction on the assignment grade. Depending on the situation, you may recieve a 0 on the assignment.
 
 :::callout-tip
 ## AI Citation Guidelines
