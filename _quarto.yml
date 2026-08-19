@@ -64,3 +64,9 @@ format:
 #    highlight-style: a11y-dark
 
 editor: source
+
+execute: 
+  echo: true
+  warning: false
+  error: true
+  freeze: auto

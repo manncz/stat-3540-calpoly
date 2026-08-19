@@ -18,7 +18,7 @@ We will be using R and Rstudio in this course. To keep things simple for this fi
 
 If you have R and Rstudio on your computer, you can download and use this template qmd: [01.1-activity-turkey-in-pens.qmd](../student/01.1-activity-turkey-in-pens.qmd)
 
-Alternatively, for **this activity only** you can use any software that you like to generate the plots and conduct the analysis.
+Alternatively, for **this activity only** you can use any software that you like to generate the plots and conduct the analysis. In this case, I would recommend downloading the Word version of this (under "Other Formats" the the right!) and filling it out in Word (or Google Docs).
 
 ## Scenario
 

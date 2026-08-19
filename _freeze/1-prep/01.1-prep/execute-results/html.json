@@ -1,0 +1,15 @@
+{
+  "hash": "4d8cd0d0e0b2c81aaa4f527d31c69c5e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"1.1 Preparation: Syllabus and Intro to DOE\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n#### 📖 Read: 15 minutes\n\n#### 📽 Watch Videos: 30-45 min\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n\n- Identify the factors, levels, treatments, and responses in a designed experiment.\n- Identify experimental units, measurement units, and the role of subsampling in experimental design.\n:::\n\n\n## Syllabus\n\n- 📖 Review Canvas and the [syllabus](../0-course-info/syllabus-f26.qmd).\n\n- 📽 Watch at least the first 6 minutes of this introduction. The rest is if you would like a video walk-through of the syllabus!\n\n\n{{< video https://youtu.be/D1y80v4FHrE >}}\n\n\n\n## Basics of Design of Experiments (DOE)\n\n- We will be using many preparation videos made by the indomitable [Dr. Emily Robinson](https://github.com/earobinson95)! I (Dr. C) will occasionally add/edit slides used in these videos and record short follow-ups.\n- 📽 Follow along with the [slides](../2-slides/01.1-basics-of-doe.qmd).\n  - Note: you can export the slides to a pdf for notetaking via the bottom left three horizontal stacked lines > Tools > PDF Export Mode > Print + Save as PDF\n\n{{< video https://www.youtube.com/watch?v=R65yHRQIBlc >}}\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
