@@ -48,10 +48,15 @@ t <- d |>
                    ifelse(is.na(x), fontawesome::fa('book', fill_opacity = 0.1), 
                           glue::glue('<a href="{x}"><i class="fa fa-book" style="color: #238b45;"></i></a>'))
                  }) |> 
-  text_transform(cells_body(columns = c(slides)),
+    text_transform(cells_body(columns = c(prep_slides)),
                  fn = function(x){
                    ifelse(is.na(x), fontawesome::fa('laptop', fill_opacity = 0.1), 
                            glue::glue('<a href="{x}"><i class="fa fa-laptop" style="color: #005a32;"></i></a>'))
+                 }) |> 
+  text_transform(cells_body(columns = c(class_slides)),
+                 fn = function(x){
+                   ifelse(is.na(x), fontawesome::fa('file-powerpoint', fill_opacity = 0.1), 
+                           glue::glue('<a href="{x}"><i class="far fa-file-powerpoint" style="color: #005a32;"></i></a>'))
                  }) |> 
   text_transform(cells_body(columns = c(activity)),
                  fn = function(x){
@@ -105,12 +110,21 @@ t <- d |>
     )  |> 
   cols_align(align = "center",
              columns = !topic) |> 
+  tab_spanner(
+    label = md("**Preparation**"),
+    columns = starts_with("prep")
+  ) |> 
+  tab_spanner(
+    label = md("**In-Class**"),
+    columns = class_slides:activity
+  ) |> 
   cols_label(
     week = "",
     topic = "",
     day = "",
-    prepare = md("**Preparation**"),
-    slides = md("**In-Class\nSlides**"), 
+    prepare = md("**Watch/Do**"),
+    prep_slides = md("**Slides**"),
+    class_slides = md("**Slides**"), 
     activity = md("**Activity**"),
     lab = md("**Lab**")
     ) 

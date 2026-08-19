@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1.1 Preparation: Syllabus and Intro to DOE – Statistical Methods for Study Design and Analysis</title>
+<title>Activity 1.1: Design Blueprints – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -319,10 +319,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#syllabus" id="toc-syllabus" class="nav-link active" data-scroll-target="#syllabus"><span class="header-section-number">1</span> Syllabus</a></li>
-  <li><a href="#basics-of-design-of-experiments-doe" id="toc-basics-of-design-of-experiments-doe" class="nav-link" data-scroll-target="#basics-of-design-of-experiments-doe"><span class="header-section-number">2</span> Basics of Design of Experiments (DOE)</a></li>
+  <li><a href="#software." id="toc-software." class="nav-link active" data-scroll-target="#software.">0. Software.</a></li>
+  <li><a href="#scenario" id="toc-scenario" class="nav-link" data-scroll-target="#scenario">Scenario</a></li>
+  <li><a href="#sketch-a-blueprint-for-this-study." id="toc-sketch-a-blueprint-for-this-study." class="nav-link" data-scroll-target="#sketch-a-blueprint-for-this-study.">1. Sketch a blueprint for this study.</a></li>
+  <li><a href="#describe-the-study-structure" id="toc-describe-the-study-structure" class="nav-link" data-scroll-target="#describe-the-study-structure">2. Describe the study structure</a></li>
+  <li><a href="#pen-level-data" id="toc-pen-level-data" class="nav-link" data-scroll-target="#pen-level-data">3. Pen-Level Data</a></li>
+  <li><a href="#animal-level-data" id="toc-animal-level-data" class="nav-link" data-scroll-target="#animal-level-data">4. Animal-Level Data</a></li>
+  <li><a href="#comparing-analyses" id="toc-comparing-analyses" class="nav-link" data-scroll-target="#comparing-analyses">5. Comparing Analyses</a>
+  <ul class="collapse">
+  <li><a href="#pen-level-analysis" id="toc-pen-level-analysis" class="nav-link" data-scroll-target="#pen-level-analysis">Pen-level analysis</a></li>
+  <li><a href="#animal-level-analysis" id="toc-animal-level-analysis" class="nav-link" data-scroll-target="#animal-level-analysis">Animal-level analysis</a></li>
+  </ul></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">6. Interpretation</a></li>
+  <li><a href="#submit-on-gradescope" id="toc-submit-on-gradescope" class="nav-link" data-scroll-target="#submit-on-gradescope">7. Submit on Gradescope</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/manncz/stat-3540-calpoly/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/manncz/stat-3540-calpoly/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="01.1-activity-turkey-in-pens.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="01.1-activity-turkey-in-pens.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -330,7 +341,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">1.1 Preparation: Syllabus and Intro to DOE</h1>
+<h1 class="title">Activity 1.1: Design Blueprints</h1>
+<p class="subtitle lead">Turkeys in Pens</p>
 </div>
 
 
@@ -347,47 +359,166 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="read-15-minutes" class="level4">
-<h4 class="anchored" data-anchor-id="read-15-minutes">📖 Read: 15 minutes</h4>
+<section id="software." class="level2">
+<h2 class="anchored" data-anchor-id="software.">0. Software.</h2>
+<p>We will be using R and Rstudio in this course. To keep things simple for this first day, you can use PositCloud if you do not have R and RStudio set up already for a different Class.</p>
+<p>Alternatively, for <strong>this activity only</strong> you can use any software that you like to generate the plots and conduct the analysis.</p>
 </section>
-<section id="watch-videos-30-45-min" class="level4">
-<h4 class="anchored" data-anchor-id="watch-videos-30-45-min">📽 Watch Videos: 30-45 min</h4>
-<hr>
-<div class="callout callout-style-simple callout-none no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">None</span>Learning Objectives
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="scenario" class="level2">
+<h2 class="anchored" data-anchor-id="scenario">Scenario</h2>
+<p>We are interested in examining the effect of dietary protein on growth in Standard Bronze farm-raised turkeys. There are 24 turkeys available for the study.</p>
+<p>The turkeys are housed 3 to a pen, and each pen has a single feed trough, meaning all turkeys within a pen receive the same diet.</p>
+<p>Two diets are studied:</p>
 <ul>
-<li>Identify the factors, levels, treatments, and responses in a designed experiment.</li>
-<li>Identify experimental units, measurement units, and the role of subsampling in experimental design.</li>
+<li>Low-protein diet: 15% protein<br>
+</li>
+<li>High-protein diet: 30% protein</li>
 </ul>
-</div>
-</div>
+<p>Diets are assigned at random to pens, with 4 pens receiving each diet (8 pens total).</p>
+<p>The turkeys are fed their assigned diet for 6 weeks. The primary outcome measured on each turkey is average daily weight gain (ADG), in lbs/day.</p>
 </section>
-<section id="syllabus" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="syllabus"><span class="header-section-number">1</span> Syllabus</h2>
+<section id="sketch-a-blueprint-for-this-study." class="level2">
+<h2 class="anchored" data-anchor-id="sketch-a-blueprint-for-this-study.">1. Sketch a blueprint for this study.</h2>
+
+</section>
+<section id="describe-the-study-structure" class="level2">
+<h2 class="anchored" data-anchor-id="describe-the-study-structure">2. Describe the study structure</h2>
 <ul>
-<li><p>📖 Review Canvas and the <a href="../0-course-info/syllabus-f26.html">syllabus</a>.</p></li>
-<li><p>📽 Watch at least the first 6 minutes of this introduction. The rest is if you would like a video walk-through of the syllabus!</p></li>
+<li><strong>Treatment structure:</strong></li>
 </ul>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/D1y80v4FHrE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<ul>
+<li><strong>Design structure:</strong></li>
+</ul>
 </section>
-<section id="basics-of-design-of-experiments-doe" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="basics-of-design-of-experiments-doe"><span class="header-section-number">2</span> Basics of Design of Experiments (DOE)</h2>
+<section id="pen-level-data" class="level2">
+<h2 class="anchored" data-anchor-id="pen-level-data">3. Pen-Level Data</h2>
+<ol type="a">
+<li><p>Open the file <code>turkey_pen_data.csv</code>.</p></li>
+<li><p>What does each row in this data file represent?</p></li>
+<li><p>How many observations are there per diet? Why?</p></li>
+<li><p>Create a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots).</p></li>
+<li><p>Create a summary table showing the mean and standard deviation of pen-level ADG for each diet.</p></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Diet</th>
+<th>Mean pen ADG</th>
+<th>SD pen ADG</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Low (15%)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>High (30%)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="animal-level-data" class="level2">
+<h2 class="anchored" data-anchor-id="animal-level-data">4. Animal-Level Data</h2>
+<ol start="6" type="a">
+<li><p>Open the file <code>turkey_animal_data.csv</code>.</p></li>
+<li><p>What does each row in this data file represent? How many rows are there? Why?</p></li>
+<li><p>Create a plot of animal-level ADG on the y-axis and Diet on the x-axis.</p></li>
+<li><p>How many measurement/sampling units are there per diet in this plot?</p></li>
+<li><p>Create a summary table showing the mean and standard deviation of ADG for each diet.</p></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Diet</th>
+<th>Mean ADG</th>
+<th>SD ADG</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Low (15%)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>High (30%)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="11" type="a">
+<li>Compare the animal-level means and standard deviations to the pen-level results. What do you notice?</li>
+</ol>
+</section>
+<section id="comparing-analyses" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-analyses">5. Comparing Analyses</h2>
+<p>Now consider a two-sample t-test comparing the low-protein and high-protein diets.</p>
+<section id="pen-level-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="pen-level-analysis">Pen-level analysis</h3>
+<ol start="12" type="a">
+<li>Using <code>turkey_pen_data.csv</code>, conduct a two-sample independent t-test (assume unequal variances).</li>
+</ol>
+<p>Report:</p>
 <ul>
-<li>We will be using many preparation videos made by the indomitable <a href="https://github.com/earobinson95">Dr.&nbsp;Emily Robinson</a>! I (Dr.&nbsp;C) will occasionally add/edit slides used in these videos and record short follow-ups.</li>
-<li>📽 Follow along with the <a href="../2-slides/01.1-basics-of-doe.html">slides</a>.
+<li>Difference in mean ADG<br>
+</li>
+<li>Standard error<br>
+</li>
+<li>t-statistic, degrees of freedom, and p-value</li>
+</ul>
+</section>
+<section id="animal-level-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="animal-level-analysis">Animal-level analysis</h3>
+<ol start="13" type="a">
+<li>Using <code>turkey_animal_data.csv</code>, conduct the same two-sample independent t-test (assume unequal variances).</li>
+</ol>
+<p>Report:</p>
 <ul>
-<li>Note: you can export the slides to a pdf for notetaking via the bottom left three horizontal stacked lines &gt; Tools &gt; PDF Export Mode &gt; Print + Save as PDF</li>
+<li>Difference in mean ADG<br>
+</li>
+<li>Standard error<br>
+</li>
+<li>t-statistic, degrees of freedom, and p-value</li>
+</ul>
+</section>
+</section>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">6. Interpretation</h2>
+<ol start="14" type="a">
+<li>Which analysis is <em>correct</em> for answering the research question? Explain.</li>
+</ol>
+<p>Your explanation should address:</p>
+<ul>
+<li>What the experimental unit is<br>
+</li>
+<li>Why one analysis artificially inflates the sample size<br>
+</li>
+<li>Why this matters for statistical inference</li>
+</ul>
+</section>
+<section id="submit-on-gradescope" class="level2">
+<h2 class="anchored" data-anchor-id="submit-on-gradescope">7. Submit on Gradescope</h2>
+<p>When you are finished, submit your work to <strong>Gradescope</strong>:</p>
+<ol type="1">
+<li><p>Make sure your submission includes:</p>
+<ul>
+<li>Your study blueprint sketch</li>
+<li>Your written answers for parts (b)–(n)</li>
+<li>Any requested tables/values from JMP or R</li>
 </ul></li>
-</ul>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/R65yHRQIBlc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<li><p>Combine everything into <strong>one PDF</strong>.</p>
+<ul>
+<li>If you wrote on paper: take clear photos and save/print to PDF.</li>
+<li>If you typed responses: export to PDF.</li>
+</ul></li>
+<li><p>Go to <strong>Canvas &gt; Gradescope &gt; Activity 1.1: Design Blueprints</strong> and upload your PDF.</p></li>
+<li><p>If Gradescope asks you to assign pages to questions, do so before submitting.</p></li>
+</ol>
 
 
 </section>
