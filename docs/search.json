@@ -274,7 +274,7 @@
     "href": "0-course-info/course-resources.html",
     "title": "Course Resources",
     "section": "",
-    "text": "R Cheatsheets\n\nRStudio IDE\nQuarto\nBase R\nGit & GitHub\nData Visualization with ggplot2\nData Import with readr\nData Wrangling with dplyr\nData Tidying with tidyr\nFactors with forcats\nDates with lubridate\nStrings with stringr\nRegular Expressions\nTidy Evaluation\nIteration with purrr",
+    "text": "STAT 313 R Reference Sheets\nThese are reference sheets Dr. C made for STAT 313 F25, which include relevant examples for the beginning of this course.\n\nBasics\nVariables by Groups + T-test + ANOVA\n\nNote, this sheet only specifies a pooled t-test (assuming equal variances).\nChange the argument to var.equal = FALSE for an un-pooled test and look at the documentation ?t.test for more options.\n\n\n\n\nOfficial R Cheatsheets\n\nRStudio IDE\nQuarto\nBase R\nGit & GitHub\nData Visualization with ggplot2\nData Import with readr\nData Wrangling with dplyr\nData Tidying with tidyr\nFactors with forcats\nDates with lubridate\nStrings with stringr",
     "crumbs": [
       "Course information",
       "Resources"

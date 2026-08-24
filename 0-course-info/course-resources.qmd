@@ -2,8 +2,16 @@
 title: "Course Resources"
 ---
 
+# STAT 313 R Reference Sheets
 
-# R Cheatsheets
+These are reference sheets Dr. C made for STAT 313 F25, which include relevant examples for the beginning of this course.
+
+- [Basics](r-resources/stat313-rsheet1.pdf)
+- [Variables by Groups + T-test + ANOVA](r-resources/stat313-rsheet1.pdf)
+  - Note, this sheet only specifies a *pooled* t-test (assuming equal variances). 
+  - Change the argument to `var.equal = FALSE` for an un-pooled test and look at the documentation `?t.test` for more options.
+
+# Official R Cheatsheets
 
 - [RStudio IDE](https://rstudio.github.io/cheatsheets/html/rstudio-ide.html?_gl=1*1bgdjez*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjEuMTcxODkxNjk4OC4wLjAuMA..)
 
@@ -27,10 +35,4 @@ title: "Course Resources"
 
 - [Strings with stringr](https://rstudio.github.io/cheatsheets/html/strings.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..)
 
-- [Regular Expressions](https://rstudio.github.io/cheatsheets/regex.pdf)
 
-
-- [Tidy Evaluation](https://rstudio.github.io/cheatsheets/tidyeval.pdf)
-
-
-- [Iteration with purrr](https://rstudio.github.io/cheatsheets/html/purrr.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..)

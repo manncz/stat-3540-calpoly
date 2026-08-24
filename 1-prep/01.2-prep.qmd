@@ -13,7 +13,7 @@ library(tidyverse)
 
 #### 📖 Read: 15 minutes
 
-#### 📽 Watch Videos: 15 min
+#### 📽 Watch Videos: 20 min
  
 #### ✅  Complete Activity: 20 min
 
@@ -34,6 +34,10 @@ library(tidyverse)
     - Note: the last two slides are a little different from Dr. Robinson's video. The explanation is continued in the second video (with Dr. C).
 
 {{< video https://www.youtube.com/watch?v=aDxl9b4f2Lo >}}
+
+
+{{< video https://www.youtube.com/watch?v=vTgW0CZLACs >}}
+
 
 ## Get Started with Discord
 

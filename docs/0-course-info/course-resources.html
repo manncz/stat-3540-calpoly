@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../index.html" rel="prev">
+<link href="../0-course-info/canvas/stat-3540-logo" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -318,9 +319,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-cheatsheets" id="toc-r-cheatsheets" class="nav-link active" data-scroll-target="#r-cheatsheets">R Cheatsheets</a></li>
+  <li><a href="#stat-313-r-reference-sheets" id="toc-stat-313-r-reference-sheets" class="nav-link active" data-scroll-target="#stat-313-r-reference-sheets">STAT 313 R Reference Sheets</a></li>
+  <li><a href="#official-r-cheatsheets" id="toc-official-r-cheatsheets" class="nav-link" data-scroll-target="#official-r-cheatsheets">Official R Cheatsheets</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/manncz/stat-3540-calpoly/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -345,8 +347,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="r-cheatsheets" class="level1">
-<h1>R Cheatsheets</h1>
+<section id="stat-313-r-reference-sheets" class="level1">
+<h1>STAT 313 R Reference Sheets</h1>
+<p>These are reference sheets Dr.&nbsp;C made for STAT 313 F25, which include relevant examples for the beginning of this course.</p>
+<ul>
+<li><a href="r-resources/stat313-rsheet1.pdf">Basics</a></li>
+<li><a href="r-resources/stat313-rsheet1.pdf">Variables by Groups + T-test + ANOVA</a>
+<ul>
+<li>Note, this sheet only specifies a <em>pooled</em> t-test (assuming equal variances).</li>
+<li>Change the argument to <code>var.equal = FALSE</code> for an un-pooled test and look at the documentation <code>?t.test</code> for more options.</li>
+</ul></li>
+</ul>
+</section>
+<section id="official-r-cheatsheets" class="level1">
+<h1>Official R Cheatsheets</h1>
 <ul>
 <li><p><a href="https://rstudio.github.io/cheatsheets/html/rstudio-ide.html?_gl=1*1bgdjez*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjEuMTcxODkxNjk4OC4wLjAuMA..">RStudio IDE</a></p></li>
 <li><p><a href="https://rstudio.github.io/cheatsheets/html/quarto.html?_gl=1*1li2kb5*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjEuMTcxODkxNjk4OC4wLjAuMA..">Quarto</a></p></li>
@@ -359,9 +373,6 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://rstudio.github.io/cheatsheets/html/factors.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..">Factors with forcats</a></p></li>
 <li><p><a href="https://rstudio.github.io/cheatsheets/html/lubridate.html?_gl=1*12ke444*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA">Dates with lubridate</a></p></li>
 <li><p><a href="https://rstudio.github.io/cheatsheets/html/strings.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..">Strings with stringr</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/regex.pdf">Regular Expressions</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/tidyeval.pdf">Tidy Evaluation</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/purrr.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..">Iteration with purrr</a></p></li>
 </ul>
 
 
@@ -798,7 +809,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/manncz/stat-3540-calpoly/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    </div>
     <div class="nav-footer-right">
 <p>This page is built with ❤️️ and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
