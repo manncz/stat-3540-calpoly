@@ -729,7 +729,7 @@ You **may not copy and paste any course materials into generative AI**. That inc
 :::
 
 #### In Class:
-Class time is structured around active learning and I expect you to actively engage with the software, so **you may not use generative AI for in-class work and activities**. You have each other and me to grapple with the material during class.  If you use generative AI in class, you will not get participation credit for that day.
+Class time is structured around active learning and I expect you to actively engage with the material, so **you may not use generative AI for in-class work and activities**. You have each other and me to grapple with the material during class.  If you use generative AI in class, you will not get participation credit for that day.
 
 #### Outside of Class:
 
