@@ -10,6 +10,7 @@ project:
     - "!/0-course-info/stud-info/"
     - "!/project/"
     - "!/prev-materials/"
+    - "!/5-participation/"
 
 website:
   page-navigation: true

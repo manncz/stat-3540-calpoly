@@ -1,0 +1,91 @@
+---
+title: "Learning 'Quiz' 0"
+subtitle: "Introductions Survey"
+format: 
+  pdf:
+    fontsize: 12pt
+    include-in-header: 
+      text: |
+        \usepackage{enumitem}
+        \setlist[enumerate]{leftmargin=*}
+---
+
+
+\vspace{-2cm}
+
+"Official" Cal Poly Name:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Section: 8am  $\hspace{1cm}$   10am    $\hspace{1cm}$     2pm $\hspace{1cm}$ Waitlist
+
+\vspace{.25cm}
+
+1.  What is your preferred name :\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\vspace{.15cm}
+
+2.  How do I pronounce your first name:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\vspace{.15cm}
+
+3.  What are your pronouns:\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+\vspace{.15cm}
+
+4. What year are you (first, second, third, etc.):______________________
+    
+   
+
+\vspace{.15cm}
+
+5.  What is your major: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_______________
+
+\vspace{.15cm}
+
+6. What is your favorite fruit or vegetable right now and why!?
+
+\vspace{2cm}
+
+9. Which of the following hour slots of my office hours can you attend (at least part of)?
+
+    a. Monday 1-2pm
+    b. Monday 2-3pm
+    c. Wednesday 9-10am
+    d. Wednesday 10-11am
+    e. none (indicate times you are available if you plan to attend OH in the last question)
+    
+\vspace{.15cm}
+
+8. We will be using computers in this course to access course content on Canvas and complete all assignments. You should have a computer you can install required software on to complete assignments outside of class. 
+If you need a computer, there are computers available to rent for the quarter at CalPoly Tech Rentals. How do you access a computer?
+
+    a. own laptop
+    b. library computers or other computer lab on campus
+    c. tech rentals
+    d. I don't know... can we talk about it?
+\vspace{.15cm}
+
+7.  What is your experience / comfort with R? (circle all that apply)
+
+    | Experience            | Comfort                   |
+    |-----------------------|---------------------------|
+    | I have used it a lot  | I am very comfortable     |
+    | I have used it some   | I am somewhat comfortable |
+    | I have barely used it | I am not comfortable      |
+    | What is R?            | I am nervous              |
+
+\vspace{.15cm}
+
+
+
+
+
+
+
+10. What is one thing you hope to get out of this course?
+
+\vspace{2.5cm}
+
+
+
+
+11. What other information would you like me to know? It can be **anything** that might help me understand and support you better!
