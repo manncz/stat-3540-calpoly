@@ -54,7 +54,8 @@ rsconnect/
 
 # Non-Shareable Material
 prev-materials/*
-course-info/*
+0-course-info/stud-info/*
+
 
 */solution/*
 */main-version/*
