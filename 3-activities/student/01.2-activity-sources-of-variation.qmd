@@ -1,0 +1,115 @@
+---
+title: "Activity 1.2: Sources of Variation & Randomization"
+subtitle: "Fuel Additives and Carbon Monoxide Emissions + Cardiovascular Events"
+execute: 
+  error: true
+  echo: true
+  message: false
+  warning: false
+
+author: Your Name
+format: typst
+---
+# 1. Scenario: Sources of Variation
+
+Researchers are studying the effect of a polyether amine dispersant additive on carbon monoxide (CO) emissions in gasoline-powered vehicles under non-laboratory driving conditions.
+
+Twenty vehicles from a variety of manufacturers are used in the study. Five additive levels (2%, 3%, 4%, 5%, and 6%) are considered. Each additive level is randomly assigned to four vehicles, resulting in a balanced design.
+
+For each vehicle, 16 ounces of the assigned additive are added to the fuel tank. A sensor attached to each vehicle measures CO emissions in the exhaust every 5 seconds while the vehicle is driven for 300 miles.
+
+The primary outcomes of interest are computed for each vehicle and include:
+
+- the maximum CO emission, and
+- the area under the CO emission curve (AUC) over the 300-mile drive.
+
+## a. Sketch a Design Blueprint
+
+\vspace{1in}
+
+\newpage
+
+## b. Describe the following:
+
++ Treatment structure
+
+\vspace{0.7in}
+
++ Design structure
+
+\vspace{0.7in}
+
++ Response variable(s)
+
+\vspace{0.5in}
+
+## c. Inclusion Criteria
+
+To reduce variability in CO emissions that is unrelated to the additive, researchers may restrict which vehicles are eligible for the study. Provide **two reasonable inclusion criteria** for the experimental units (vehicles) that could reduce variability in the response.
+
+\vspace{0.8in}
+
+## d. Statistical Limitation of Inclusion Criteria
+
+Explain, in the context of this study, one statistical limitation of using strict inclusion criteria such as those described in the previous question. Your explanation should address how inclusion criteria affect the interpretation or scope of the study results.
+
+\vspace{0.8in}
+
+## e. Other Sources of Variability
+
+Besides variability introduced by differences between vehicles, describe **two other sources of variability** in CO emissions that could reasonably be controlled or standardized during this study. Briefly explain how each source could be controlled.
+
+\vspace{0.8in}
+
+## f. Reflection
+
+Suppose the researchers use very strict inclusion criteria so that all vehicles in the study are nearly identical.
+
+Briefly discuss how this choice would affect:
+
+- variability in the response,
+- the ability to detect differences among additive levels, and
+- the generalizability of the study conclusions.
+
+\vspace{0.8in}
+
+# 2 Scenario: Observational Study vs Designed Experiment
+
+The following was the headline for an article published on *ScienceDaily* (January 4, 2016):
+
+> **“People who have a higher sense of purpose in life are at lower risk of death and death from a cardiovascular event.”**  
+> (*Psychosomatic Medicine: Journal of Biobehavioral Medicine*)
+
+The article reports that 136,000 subjects (average age 67) were followed for an average of 7 years. During that time, 14,500 participants died from any cause and 4,000 died from a cardiovascular event.
+
+At the beginning of the study period, participants completed a questionnaire designed to measure their sense of purpose in life. Individuals were then classified as having either a low or high sense of purpose.
+
+Depending on how it is read, the headline could be interpreted as suggesting that a higher sense of purpose *causes* a lower risk of death. However, this is not a valid cause-and-effect conclusion.
+
+## a. Extraneous Variables
+
+List **three extraneous variables** that may influence whether a person dies from a cardiovascular event.
+
+> *Note:* Sense of purpose is **not** an extraneous variable in this study, it is the explanatory variable.
+
+\vspace{0.8in}
+
+## b. Confounding
+
+Choose **one** extraneous variable from part (b) and explain how it could act as a **confounding variable** in this study.
+
+Your explanation should clearly describe how this variable is related to:
+- sense of purpose, and
+- cardiovascular mortality.
+
+\vspace{0.8in}
+
+## c. Why an Experiment Is Not Feasible
+
+Suppose researchers wanted to design an experiment to support the causal claim:
+
+> “A higher sense of purpose causes a lower risk of cardiovascular death.”
+
+Explain why designing such an experiment is *practically impossible*, even though this is a design of experiments course.
+
+\vspace{0.8in}

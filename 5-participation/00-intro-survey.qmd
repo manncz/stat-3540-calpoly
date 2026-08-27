@@ -45,25 +45,6 @@ Section: 8am  $\hspace{1cm}$   10am    $\hspace{1cm}$     2pm $\hspace{1cm}$ Wai
 
 \vspace{2cm}
 
-9. Which of the following hour slots of my office hours can you attend (at least part of)?
-
-    a. Monday 1-2pm
-    b. Monday 2-3pm
-    c. Wednesday 9-10am
-    d. Wednesday 10-11am
-    e. none (indicate times you are available if you plan to attend OH in the last question)
-    
-\vspace{.15cm}
-
-8. We will be using computers in this course to access course content on Canvas and complete all assignments. You should have a computer you can install required software on to complete assignments outside of class. 
-If you need a computer, there are computers available to rent for the quarter at CalPoly Tech Rentals. How do you access a computer?
-
-    a. own laptop
-    b. library computers or other computer lab on campus
-    c. tech rentals
-    d. I don't know... can we talk about it?
-\vspace{.15cm}
-
 7.  What is your experience / comfort with R? (circle all that apply)
 
     | Experience            | Comfort                   |
@@ -74,6 +55,30 @@ If you need a computer, there are computers available to rent for the quarter at
     | What is R?            | I am nervous              |
 
 \vspace{.15cm}
+
+8. We will be using computers in this course to access course content on Canvas and complete all assignments. You should have a computer you can install required software on to complete assignments outside of class. 
+If you need a computer, there are computers available to rent for the quarter at CalPoly Tech Rentals. How do you access a computer?
+
+    a. own laptop
+    b. library computers or other computer lab on campus
+    c. tech rentals
+    d. I don't know... can we talk about it?
+
+\vspace{.15cm}
+
+9. Which of the following hour slots of my office hours can you attend (at least part of)?
+
+    a. Monday 1-2pm
+    b. Monday 2-3pm
+    c. Wednesday 9-10am
+    d. Wednesday 10-11am
+    e. none (indicate times you are available if you plan to attend OH in the last question)
+    
+\vspace{.15cm}
+
+
+
+
 
 
 

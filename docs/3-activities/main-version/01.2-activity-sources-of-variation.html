@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Activity 1.1: Design Blueprints – Statistical Methods for Study Design and Analysis</title>
+<title>Activity 1.2: Sources of Variation &amp; Randomization – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -320,21 +320,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#software." id="toc-software." class="nav-link active" data-scroll-target="#software.">0. Software.</a></li>
-  <li><a href="#scenario" id="toc-scenario" class="nav-link" data-scroll-target="#scenario">Scenario</a></li>
-  <li><a href="#sketch-a-blueprint-for-this-study." id="toc-sketch-a-blueprint-for-this-study." class="nav-link" data-scroll-target="#sketch-a-blueprint-for-this-study.">1. Sketch a blueprint for this study.</a></li>
-  <li><a href="#describe-the-study-structure" id="toc-describe-the-study-structure" class="nav-link" data-scroll-target="#describe-the-study-structure">2. Describe the study structure</a></li>
-  <li><a href="#pen-level-data" id="toc-pen-level-data" class="nav-link" data-scroll-target="#pen-level-data">3. Pen-Level Data</a></li>
-  <li><a href="#animal-level-data" id="toc-animal-level-data" class="nav-link" data-scroll-target="#animal-level-data">4. Animal-Level Data</a></li>
-  <li><a href="#comparing-analyses" id="toc-comparing-analyses" class="nav-link" data-scroll-target="#comparing-analyses">5. Comparing Analyses</a>
+  <li><a href="#scenario-sources-of-variation" id="toc-scenario-sources-of-variation" class="nav-link active" data-scroll-target="#scenario-sources-of-variation">1. Scenario: Sources of Variation</a>
   <ul class="collapse">
-  <li><a href="#pen-level-analysis" id="toc-pen-level-analysis" class="nav-link" data-scroll-target="#pen-level-analysis">Pen-level analysis</a></li>
-  <li><a href="#animal-level-analysis" id="toc-animal-level-analysis" class="nav-link" data-scroll-target="#animal-level-analysis">Animal-level analysis</a></li>
+  <li><a href="#a.-sketch-a-design-blueprint" id="toc-a.-sketch-a-design-blueprint" class="nav-link" data-scroll-target="#a.-sketch-a-design-blueprint">a. Sketch a Design Blueprint</a></li>
+  <li><a href="#b.-describe-the-following" id="toc-b.-describe-the-following" class="nav-link" data-scroll-target="#b.-describe-the-following">b. Describe the following:</a></li>
+  <li><a href="#c.-inclusion-criteria" id="toc-c.-inclusion-criteria" class="nav-link" data-scroll-target="#c.-inclusion-criteria">c.&nbsp;Inclusion Criteria</a></li>
+  <li><a href="#d.-statistical-limitation-of-inclusion-criteria" id="toc-d.-statistical-limitation-of-inclusion-criteria" class="nav-link" data-scroll-target="#d.-statistical-limitation-of-inclusion-criteria">d.&nbsp;Statistical Limitation of Inclusion Criteria</a></li>
+  <li><a href="#e.-other-sources-of-variability" id="toc-e.-other-sources-of-variability" class="nav-link" data-scroll-target="#e.-other-sources-of-variability">e. Other Sources of Variability</a></li>
+  <li><a href="#f.-sources-of-variability-table" id="toc-f.-sources-of-variability-table" class="nav-link" data-scroll-target="#f.-sources-of-variability-table">f.&nbsp;Sources of Variability Table</a></li>
+  <li><a href="#g.-reflection" id="toc-g.-reflection" class="nav-link" data-scroll-target="#g.-reflection">g. Reflection</a></li>
   </ul></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">6. Interpretation</a></li>
-  <li><a href="#submit-on-gradescope" id="toc-submit-on-gradescope" class="nav-link" data-scroll-target="#submit-on-gradescope">7. Submit on Gradescope</a></li>
+  <li><a href="#scenario-observational-study-vs-designed-experiment" id="toc-scenario-observational-study-vs-designed-experiment" class="nav-link" data-scroll-target="#scenario-observational-study-vs-designed-experiment">2 Scenario: Observational Study vs Designed Experiment</a>
+  <ul class="collapse">
+  <li><a href="#a.-extraneous-variables" id="toc-a.-extraneous-variables" class="nav-link" data-scroll-target="#a.-extraneous-variables">a. Extraneous Variables</a></li>
+  <li><a href="#b.-confounding" id="toc-b.-confounding" class="nav-link" data-scroll-target="#b.-confounding">b. Confounding</a></li>
+  <li><a href="#c.-why-an-experiment-is-not-feasible" id="toc-c.-why-an-experiment-is-not-feasible" class="nav-link" data-scroll-target="#c.-why-an-experiment-is-not-feasible">c.&nbsp;Why an Experiment Is Not Feasible</a></li>
+  </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="01.1-activity-turkey-in-pens.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -342,8 +345,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Activity 1.1: Design Blueprints</h1>
-<p class="subtitle lead">Turkeys in Pens</p>
+<h1 class="title">Activity 1.2: Sources of Variation &amp; Randomization</h1>
+<p class="subtitle lead">Fuel Additives and Carbon Monoxide Emissions + Cardiovascular Events</p>
 </div>
 
 
@@ -360,173 +363,121 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="software." class="level2">
-<h2 class="anchored" data-anchor-id="software.">0. Software.</h2>
-<p>We will be using R and Rstudio in this course. To keep things simple for this first day, you can use <a href="https://posit.cloud/content/12747010">PositCloud</a> if you do not have R and RStudio set up already for a different Class.</p>
-<p>If you have R and Rstudio on your computer, you can download and use this template qmd: <a href="../student/01.1-activity-turkey-in-pens.qmd">01.1-activity-turkey-in-pens.qmd</a></p>
-<p>Alternatively, for <strong>this activity only</strong> you can use any software that you like to generate the plots and conduct the analysis. In this case, I would recommend downloading the Word version of this (under “Other Formats” the the right!) and filling it out in Word (or Google Docs).</p>
-</section>
-<section id="scenario" class="level2">
-<h2 class="anchored" data-anchor-id="scenario">Scenario</h2>
-<p>We are interested in examining the effect of dietary protein on growth in Standard Bronze farm-raised turkeys. There are 24 turkeys available for the study.</p>
-<p>The turkeys are housed 3 to a pen, and each pen has a single feed trough, meaning all turkeys within a pen receive the same diet.</p>
-<p>Two diets are studied:</p>
+<div class="version-instructions">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Submit via Gradescope.</p>
+<p>I would recommend using the Word template.</p>
+</div>
+</div>
+</div>
+<section id="scenario-sources-of-variation" class="level1">
+<h1>1. Scenario: Sources of Variation</h1>
+<p>Researchers are studying the effect of a polyether amine dispersant additive on carbon monoxide (CO) emissions in gasoline-powered vehicles under non-laboratory driving conditions.</p>
+<p>Twenty vehicles from a variety of manufacturers are used in the study. Five additive levels (2%, 3%, 4%, 5%, and 6%) are considered. Each additive level is randomly assigned to four vehicles, resulting in a balanced design.</p>
+<p>For each vehicle, 16 ounces of the assigned additive are added to the fuel tank. A sensor attached to each vehicle measures CO emissions in the exhaust every 5 seconds while the vehicle is driven for 300 miles.</p>
+<p>The primary outcomes of interest are computed for each vehicle and include:</p>
 <ul>
-<li>Low-protein diet: 15% protein<br>
-</li>
-<li>High-protein diet: 30% protein</li>
+<li>the maximum CO emission (a single number), and</li>
+<li>the area under the CO emission curve (AUC) over the 300-mile drive (a single number).</li>
 </ul>
-<p>Diets are assigned at random to pens, with 4 pens receiving each diet (8 pens total).</p>
-<p>The turkeys are fed their assigned diet for 6 weeks. The primary outcome measured on each turkey is average daily weight gain (ADG), in lbs/day.</p>
+<section id="a.-sketch-a-design-blueprint" class="level2">
+<h2 class="anchored" data-anchor-id="a.-sketch-a-design-blueprint">a. Sketch a Design Blueprint</h2>
+<p><em>Include image of sketch here</em></p>
 </section>
-<section id="sketch-a-blueprint-for-this-study." class="level2">
-<h2 class="anchored" data-anchor-id="sketch-a-blueprint-for-this-study.">1. Sketch a blueprint for this study.</h2>
-
-</section>
-<section id="describe-the-study-structure" class="level2">
-<h2 class="anchored" data-anchor-id="describe-the-study-structure">2. Describe the study structure</h2>
+<section id="b.-describe-the-following" class="level2">
+<h2 class="anchored" data-anchor-id="b.-describe-the-following">b. Describe the following:</h2>
 <ul>
-<li><strong>Treatment structure:</strong></li>
+<li>Treatment structure</li>
 </ul>
 <ul>
-<li><strong>Design structure:</strong></li>
+<li>Design structure</li>
 </ul>
-</section>
-<section id="pen-level-data" class="level2">
-<h2 class="anchored" data-anchor-id="pen-level-data">3. Pen-Level Data</h2>
-<ol type="a">
-<li><p>Open the file <code>turkey_pen_data.csv</code>.</p></li>
-<li><p>What does each row in this data file represent?</p></li>
-<li><p>How many observations are there per diet? Why?</p></li>
-<li><p>Create a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots). Don’t forget to make sure your plot has clear axis labels and a title!</p></li>
-<li><p>Create a summary table showing the mean and standard deviation of pen-level ADG for each diet.</p></li>
-</ol>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Diet</th>
-<th>Mean pen ADG</th>
-<th>SD pen ADG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Low (15%)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>High (30%)</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="animal-level-data" class="level2">
-<h2 class="anchored" data-anchor-id="animal-level-data">4. Animal-Level Data</h2>
-<ol start="6" type="a">
-<li><p>Open the file <code>turkey_animal_data.csv</code>.</p></li>
-<li><p>What does each row in this data file represent? How many rows are there? Why?</p></li>
-<li><p>Create a plot of animal-level ADG on the y-axis and Diet on the x-axis.</p></li>
-<li><p>How many measurement/sampling units are there per diet in this plot?</p></li>
-<li><p>Create a summary table showing the mean and standard deviation of ADG for each diet.</p></li>
-</ol>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Diet</th>
-<th>Mean ADG</th>
-<th>SD ADG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Low (15%)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>High (30%)</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ol start="11" type="a">
-<li>Compare the animal-level means and standard deviations to the pen-level results. What do you notice?</li>
-</ol>
-</section>
-<section id="comparing-analyses" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-analyses">5. Comparing Analyses</h2>
-<p>Now consider a two-sample t-test comparing the low-protein and high-protein diets.</p>
-<section id="pen-level-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="pen-level-analysis">Pen-level analysis</h3>
-<ol start="12" type="a">
-<li>Using <code>turkey_pen_data.csv</code>, conduct a two-sample independent t-test (assume unequal variances).</li>
-</ol>
-<p>Report:</p>
 <ul>
-<li>Difference in mean ADG<br>
-</li>
-<li>Standard error<br>
-</li>
-<li>t-statistic, degrees of freedom, and p-value</li>
+<li>Response variable(s)</li>
 </ul>
 </section>
-<section id="animal-level-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="animal-level-analysis">Animal-level analysis</h3>
-<ol start="13" type="a">
-<li>Using <code>turkey_animal_data.csv</code>, conduct the same two-sample independent t-test (assume unequal variances).</li>
-</ol>
-<p>Report:</p>
+<section id="c.-inclusion-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="c.-inclusion-criteria">c.&nbsp;Inclusion Criteria</h2>
+<p>To reduce variability in CO emissions that is unrelated to the additive, researchers may restrict which vehicles are eligible for the study. Provide <strong>two reasonable inclusion criteria</strong> for the experimental units (vehicles) that could reduce variability in the response.</p>
+</section>
+<section id="d.-statistical-limitation-of-inclusion-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="d.-statistical-limitation-of-inclusion-criteria">d.&nbsp;Statistical Limitation of Inclusion Criteria</h2>
+<p>Explain, in the context of this study, one statistical limitation of using strict inclusion criteria such as those described in the previous question. Your explanation should address how inclusion criteria affect the interpretation or scope of the study results.</p>
+</section>
+<section id="e.-other-sources-of-variability" class="level2">
+<h2 class="anchored" data-anchor-id="e.-other-sources-of-variability">e. Other Sources of Variability</h2>
+<p>Besides variability introduced by differences between vehicles, describe <strong>two other sources of variability</strong> in CO emissions that could reasonably be controlled or standardized during this study. Briefly explain how each source could be controlled.</p>
+</section>
+<section id="f.-sources-of-variability-table" class="level2">
+<h2 class="anchored" data-anchor-id="f.-sources-of-variability-table">f.&nbsp;Sources of Variability Table</h2>
+<p>Fill out a sources of variability table (see 1.2 slides), summarizing your answers to c and e (plus the response variable from b). Add some potential sources of unexplained variation in the response.</p>
+<p><em>Include table here</em></p>
+</section>
+<section id="g.-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="g.-reflection">g. Reflection</h2>
+<p>Suppose the researchers use very strict inclusion criteria so that all vehicles in the study are nearly identical.</p>
+<p>Briefly discuss how this choice would affect:</p>
 <ul>
-<li>Difference in mean ADG<br>
-</li>
-<li>Standard error<br>
-</li>
-<li>t-statistic, degrees of freedom, and p-value</li>
+<li>variability in the response,</li>
+<li>the ability to detect differences among additive levels, and</li>
+<li>the generalizability of the study conclusions.</li>
 </ul>
 </section>
 </section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">6. Interpretation</h2>
-<ol start="14" type="a">
-<li>Which analysis is <em>correct</em> for answering the research question? Explain.</li>
-</ol>
-<p>Your explanation should address:</p>
+<section id="scenario-observational-study-vs-designed-experiment" class="level1">
+<h1>2 Scenario: Observational Study vs Designed Experiment</h1>
+<p>The following was the headline for an article published on <em>ScienceDaily</em> (January 4, 2016):</p>
+<blockquote class="blockquote">
+<p><strong>“People who have a higher sense of purpose in life are at lower risk of death and death from a cardiovascular event.”</strong><br>
+(<em>Psychosomatic Medicine: Journal of Biobehavioral Medicine</em>)</p>
+</blockquote>
+<p>The article in science daily was referencing a study<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> which reported that 136,000 subjects (average age 67) were followed for an average of 7 years. During that time, 14,500 participants died from any cause and 4,000 died from a cardiovascular event.</p>
+<p>At the beginning of the study period, participants completed a questionnaire designed to measure their sense of purpose in life. Individuals were then classified as having either a low or high sense of purpose.</p>
+<p>Depending on how it is read, the headline could be interpreted as suggesting that a higher sense of purpose <em>causes</em> a lower risk of death. However, the study design does not support a causal conclusion.</p>
+<section id="a.-extraneous-variables" class="level2">
+<h2 class="anchored" data-anchor-id="a.-extraneous-variables">a. Extraneous Variables</h2>
+<p>List <strong>three extraneous variables</strong> that may influence whether a person dies from a cardiovascular event.</p>
+<blockquote class="blockquote">
+<p><em>Note:</em> Sense of purpose is <strong>not</strong> an extraneous variable in this study, it is the explanatory variable.</p>
+</blockquote>
+</section>
+<section id="b.-confounding" class="level2">
+<h2 class="anchored" data-anchor-id="b.-confounding">b. Confounding</h2>
+<p>Choose <strong>one</strong> extraneous variable from part (b) and explain how it could act as a <strong>confounding variable</strong> in this study.</p>
+<p>Your explanation should clearly describe how this variable is related to:</p>
 <ul>
-<li>What the experimental unit is<br>
-</li>
-<li>Why one analysis artificially inflates the sample size<br>
-</li>
-<li>Why this matters for statistical inference</li>
+<li>sense of purpose, and</li>
+<li>cardiovascular mortality.</li>
 </ul>
 </section>
-<section id="submit-on-gradescope" class="level2">
-<h2 class="anchored" data-anchor-id="submit-on-gradescope">7. Submit on Gradescope</h2>
-<p>When you are finished, submit your work to <strong>Gradescope</strong>:</p>
-<ol type="1">
-<li><p>Make sure your submission includes:</p>
-<ul>
-<li>Your study blueprint sketch</li>
-<li>Your written answers for parts (b)–(n)</li>
-<li>Any requested tables/values from R</li>
-</ul></li>
-<li><p>Combine everything into <strong>one PDF</strong>.</p>
-<ul>
-<li>If you wrote on paper: take clear photos and save/print to PDF.</li>
-<li>If you typed responses: export to PDF.</li>
-<li>If you used Quarto: render your report (it is set to render as PDF).</li>
-</ul></li>
-<li><p>Go to <strong>Canvas &gt; Gradescope &gt; Activity 1.1: Design Blueprints</strong> and upload your PDF.</p></li>
-<li><p>If Gradescope asks you to assign pages to questions, do so before submitting.</p></li>
-</ol>
+<section id="c.-why-an-experiment-is-not-feasible" class="level2">
+<h2 class="anchored" data-anchor-id="c.-why-an-experiment-is-not-feasible">c.&nbsp;Why an Experiment Is Not Feasible</h2>
+<p>Suppose researchers wanted to design an experiment to support the causal claim:</p>
+<blockquote class="blockquote">
+<p>“A higher sense of purpose causes a lower risk of cardiovascular death.”</p>
+</blockquote>
+<p>Explain why designing such an experiment is <em>practically impossible</em>.</p>
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Cohen R, Bavishi C, Rozanski A. Purpose in life and its relationship to all-cause mortality and cardiovascular events: a meta-analysis. Psychosom Med. 2016;78:122–33.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

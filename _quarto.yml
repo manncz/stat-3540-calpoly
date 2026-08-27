@@ -18,7 +18,7 @@ website:
   description: "Homepage for STAT 3540/5440 at Cal Poly Fall 2026"
   site-url: "https://github.com/manncz/stat-3540-calpoly"
   repo-url: https://github.com/manncz/stat-3540-calpoly
-  favicon: "0-course-info/canvas/stat-3540-logo"
+  favicon: "0-course-info/canvas/stat-3540-logo.png"
 
   page-footer:
     right: "This page is built with ❤️️ and [Quarto](https://quarto.org/)."
