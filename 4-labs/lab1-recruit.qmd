@@ -1,0 +1,105 @@
+---
+title: "Lab 1: Recruit Islanders"
+format: 
+  html:
+    number-sections: true 
+    number-depth: 3
+---
+
+
+#### Lab Objectives
+
+- Register and set up your Islands account.
+- Gain familiarity with the Islands simulation environment.
+- Understand the ethical considerations of obtaining informed consent.
+- Apply inclusion criteria to recruit a contact list of 60 Islanders for future lab assignments.
+
+-----------------------------------------------------------------------------------------------------------------
+
+:::callout-note
+
+Remember this is a group assignment! You should be working with your group through all elements of this lab and you are all responsible for the final report.
+
+Unless you are having a private issue with your group, **anything communication with me via email relating to labs should include all of your group members!!** 'cc them all!
+
+:::
+
+
+
+## Register for the Islands Simulation
+
+- Go to the [Islands simulation website](https://islands.smp.uq.edu.au/) 
+- Create an account using your @calpoly.edu email
+    - **Click “Need to set or reset password” to begin.**
+    - Verify your email, set a password, and log in.
+
+
+## Explore the Islands' Environment
+
+- Spend 15-20 minutes exploring the different areas of the Islands.
+- Pay attention to:
+    - The different populations and environments.
+    - The types of data available
+    - The tasks – which ones might make good factors? Which might be appropriate response variables?
+
+
+## Ethical Considerations and Consent
+Before collecting any data, it’s important to understand your ethical responsibilities as a researcher.
+
+1. Read this article:
+    - 📖 [Five Principles for Research Ethics (APA)](https://www.apa.org/monitor/jan03/principles)
+    
+    
+2. Read two of the following articles:
+    - 📖 [Indigenous Peoples and research: self-determination in research governance](https://www.frontiersin.org/journals/research-metrics-and-analytics/articles/10.3389/frma.2023.1272318/full)
+    - 📖 [Emerging Issues in the Responsible Conduct of Psychological Science](https://psycnet-apa-org.calpoly.idm.oclc.org/fulltext/2020-68425-001.html)
+    - 📖 [The 3Rs: Replacement, Reduction, and Refinement of Animals in Research](https://nc3rs.org.uk/who-we-are/3rs)
+    - 📖 [Feminist Research Ethics, Informed Consent, and Potential Harms](https://scholarworks.wmich.edu/hilltopreview/vol6/iss1/5/)
+    
+3. Read one of the following articles and/or watch the following video about the Untreated Syphilis Tuskegee Study:
+    - 📖 Read [40 Years of Human Experimentation in America: The Tuskegee Study](https://www.mcgill.ca/oss/article/history/40-years-human-experimentation-america-tuskegee-study)
+    - 📖 Read [CDC: About The Untreated Syphilis Study at Tuskegee](https://www.cdc.gov/tuskegee/about/index.html)
+    - 📺 Watch [NLM’s Collection on the US Public Health Service Syphilis Study at Tuskegee](https://www.youtube.com/watch?v=O1LE6gED9LI)
+
+    
+    
+    
+We will ensure that all participants provide consent before inclusion in your study.
+
+
+## Recruit Participants 
+
+You will recruit 60 Islanders total, which will be shared across your lab group and used for the remainder of the quarter. Document everything!
+
+  - **Determine Your Sampling Plan**
+    - Establish your inclusion criteria
+    - Using a random sampling mechanism
+
+  - **Implement a Random Sampling Mechanism**
+    - Use R or a random number generator to implement a logical sampling plan (we will formally talk about sampling later in the course, but you should give it thought at this point as well).
+    - For example, you might randomly select a village, then randomly choose a household within that village, and include all individuals over age 18 from that household.
+    - If you use Generative AI to help create your sampling mechanism, follow our standard procedure citing it and including a link to your prompt and response for transparency.
+    - We have not formally learneda about sampling methods in this class yet, but you should have a logical process. For example, maybe you randomly select a village, then randomly select a household from within that village, and recruit all individuals over 18 in that household.
+
+
+  - **Obtain Consent and Document Your Sample**
+    - For each Islander you recruit:
+        - Navigate to the 'Consent Form' section and obtain approval. This will save the Islander to your ‘Contacts’.
+    - Record the following details in a shared dataset (.csv, .xlsx, GoogleSheets):
+      - participant_id (assign this ID1:ID60 – you may wish to add a “Note” to your Contact)
+      - name
+      - age
+      - village
+      - house_number
+
+:::callout-warning
+Be careful to avoid duplicates across group members.
+:::
+ 
+
+## Assignment Submission
+
+Download the lab template [[COMING SOON]] -- this will include all of questions you should answer.
+
+- Note, the box sizes don’t have any meaning other than they fit nicely on a page when in an empty template. Please change the sizes to fit your needs.
+- I’m not concerned with how long your report is, but if you make me read through unnecessary words to find the point, I will get grumpy, which isn't good for anyone involved. Keep it clear, concise, and to the point.
