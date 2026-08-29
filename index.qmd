@@ -56,7 +56,7 @@ t <- d |>
   text_transform(cells_body(columns = c(class_slides)),
                  fn = function(x){
                    ifelse(is.na(x), fontawesome::fa('file-powerpoint', fill_opacity = 0.1), 
-                           glue::glue('<a href="{x}"><i class="far fa-file-powerpoint" style="color: #005a32;"></i></a>'))
+                           glue::glue('<a href="{x}"><i class="far fa-file-powerpoint" style="color: #6baed6;"></i></a>'))
                  }) |> 
   text_transform(cells_body(columns = c(activity)),
                  fn = function(x){
@@ -66,7 +66,7 @@ t <- d |>
   text_transform(cells_body(columns = c(lab)),
                  fn = function(x){
                    ifelse(is.na(x), fontawesome::fa('pencil', fill_opacity = 0.1), 
-                          glue::glue('<a href="{x}"><i class="fa fa-pencil" style="color: #084594;"></i></a>'))
+                          glue::glue('<a href="{x}"><i class="fa fa-pencil" style="color: #feb24c;"></i></a>'))
                  }) |> 
   sub_missing(columns = week, missing_text = "")  |> 
   tab_row_group(

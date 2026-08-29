@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/manncz/stat-3540-calpoly/index.html</loc>
-    <lastmod>2026-08-19T19:58:04.374Z</lastmod>
+    <lastmod>2026-08-29T22:58:27.183Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/manncz/stat-3540-calpoly/3-activities/main-version/01.1-activity-turkey-in-pens.html</loc>
@@ -55,5 +55,21 @@
   <url>
     <loc>https://github.com/manncz/stat-3540-calpoly/4-labs/lab1-recruit.html</loc>
     <lastmod>2026-08-27T04:23:59.992Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/manncz/stat-3540-calpoly/1-prep/2.1-prep.html</loc>
+    <lastmod>2026-08-29T18:11:33.568Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/manncz/stat-3540-calpoly/2-slides/02.1-designing-a-crd.html</loc>
+    <lastmod>2026-08-29T22:08:55.621Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/manncz/stat-3540-calpoly/2-slides/02.1-crd-design-analysis-model.html</loc>
+    <lastmod>2026-08-29T22:54:43.551Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/manncz/stat-3540-calpoly/1-prep/02.1-prep.html</loc>
+    <lastmod>2026-08-29T22:40:51.679Z</lastmod>
   </url>
 </urlset>
