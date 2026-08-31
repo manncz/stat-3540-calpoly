@@ -56,3 +56,10 @@ library(tidyverse)
 - 📽 Follow along with the [slides](../2-slides/02.1-crd-design-analysis-model.qmd#/statistical-model-for-a-crd) until 15:45.
 
 {{< video https://www.youtube.com/watch?v=r3AePcSjfR8 >}}
+
+## R Tips
+
+If you are struggling a bit with R so far, please watch this video!
+
+{{< video https://www.youtube.com/watch?v=GAWBuyq5HIk >}}
+ 
