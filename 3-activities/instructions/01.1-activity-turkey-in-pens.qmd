@@ -39,6 +39,11 @@ The turkeys are fed their assigned diet for 6 weeks. The primary outcome measure
 
 \vspace{1.5in}
 
+Notes:
+
+- The study description **did not** indicate any grouping of the pens!
+- This is an example of **subsampling**
+
 ## 2. Describe the study structure
 
 - **Treatment structure:**  
@@ -52,6 +57,8 @@ The turkeys are fed their assigned diet for 6 weeks. The primary outcome measure
 ## 3. Pen-Level Data
 
 a. Open the file `turkey_pen_data.csv`.
+
+Note: I have a slightly more complicated folder structure than you should so my **file path** is a bit more complicated! Look up "relative file path" for more information.
 
 b. What does each row in this data file represent?
 
@@ -78,8 +85,8 @@ i. How many measurement/sampling units are there per diet in this plot?
 
 j. Create a summary table showing the mean and standard deviation of ADG for each diet.
 
-| Diet | Mean ADG | SD ADG |
-|------|----------|--------|
+| Diet | Mean pen ADG | SD pen ADG |
+|------|--------------|------------|
 | Low (15%) | | |
 | High (30%) | | |
 

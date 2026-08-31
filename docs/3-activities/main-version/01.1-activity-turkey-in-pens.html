@@ -426,6 +426,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="version-student">
 <p><em>Include an image of your blueprint here</em></p>
 </div>
+<div class="version-solution">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../_images/1.1-turkey_blueprint.png" class="img-fluid figure-img"></p>
+<figcaption>Design Blueprint</figcaption>
+</figure>
+</div>
+</div>
+<p>Notes:</p>
+<ul>
+<li>The study description <strong>did not</strong> indicate any grouping of the pens!</li>
+<li>This is an example of <strong>subsampling</strong></li>
+</ul>
 </section>
 <section id="describe-the-study-structure" class="level2">
 <h2 class="anchored" data-anchor-id="describe-the-study-structure">2. Describe the study structure</h2>
@@ -435,11 +448,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="version-instructions">
 
 </div>
+<div class="version-solution">
+<pre><code>- Name: One-way
+- Factor: Diet
+- Levels: Low (15%) and High (30%)
+- t = 2</code></pre>
+</div>
 <ul>
 <li><strong>Design structure:</strong></li>
 </ul>
 <div class="version-instructions">
 
+</div>
+<div class="version-solution">
+<pre><code>- Randomization: CRD
+- e.u.: one pen
+  - r = 4
+  - n = 8
+- m.u.: one turkey
+  - N = 24</code></pre>
 </div>
 </section>
 <section id="pen-level-data" class="level2">
@@ -448,12 +475,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Open the file <code>turkey_pen_data.csv</code>.</li>
 </ol>
 <div class="cell" data-version="solution">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pen_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../_data/01_turkey_pen_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pen_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../_data/01_turkey_pen_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p>Note: I have a slightly more complicated folder structure than you should so my <strong>file path</strong> is a bit more complicated! Look up “relative file path” for more information.</p>
 <div class="cell" data-version="student">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read in pen data</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>pen_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"FILE PATH"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read in pen data</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>pen_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"FILE PATH"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error:
 ! 'FILE PATH' does not exist in current working directory:
@@ -461,14 +489,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <ol start="2" type="a">
-<li><p>What does each row in this data file represent?</p></li>
-<li><p>How many observations are there per diet? Why?</p></li>
-<li><p>Create a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots). Don’t forget to make sure your plot has clear axis labels and a title!</p></li>
+<li>What does each row in this data file represent?</li>
+</ol>
+<div class="version-solution">
+<p><em>One pen</em></p>
+</div>
+<ol start="3" type="a">
+<li>How many observations are there per diet? Why?</li>
+</ol>
+<div class="version-solution">
+<p><em>4 per diet since r = 4</em></p>
+</div>
+<ol start="4" type="a">
+<li>Create a plot of pen-level ADG on the y-axis and Diet on the x-axis (Hint: each diet should have 4 dots). Don’t forget to make sure your plot has clear axis labels and a title!</li>
 </ol>
 <div class="cell" data-version="solution">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pen_dat) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> Diet,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> Pen_ADG))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pen_dat) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> Diet,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> Pen_ADG)) <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Pen-Level ADG by Diet"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Average Pen ADG"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -478,19 +518,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell" data-version="student">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot code </span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># hint: think about what kind of plot makes sense and</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># then look up how to make that with ggplot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot code </span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># hint: think about what kind of plot makes sense and</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># then look up how to make that with ggplot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ol start="5" type="a">
 <li>Create a summary table showing the mean and standard deviation of pen-level ADG for each diet.</li>
 </ol>
 <div class="cell" data-version="solution">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pen_dat <span class="sc">|&gt;</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Diet) <span class="sc">|&gt;</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_pen_adg =</span> <span class="fu">mean</span>(Pen_ADG),</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd_pen_adg =</span> <span class="fu">sd</span>(Pen_ADG)) <span class="sc">|&gt;</span> </span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pen_dat <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Diet) <span class="sc">|&gt;</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_pen_adg =</span> <span class="fu">mean</span>(Pen_ADG),</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd_pen_adg =</span> <span class="fu">sd</span>(Pen_ADG)) <span class="sc">|&gt;</span> </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -516,11 +556,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell" data-version="student">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># table code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># table code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="version-student">
 <p>You can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.</p>
 </div>
+<div class="version-student version-instructions">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -542,6 +583,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="animal-level-data" class="level2">
 <h2 class="anchored" data-anchor-id="animal-level-data">4. Animal-Level Data</h2>
@@ -549,12 +591,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Open the file <code>turkey_animal_data.csv</code>.</li>
 </ol>
 <div class="cell" data-version="solution">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>animal_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../_data/01_turkey_animal_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>animal_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../_data/01_turkey_animal_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell" data-version="student">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read in animal data</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>animal_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"FILE PATH"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read in animal data</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>animal_dat <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"FILE PATH"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error:
 ! 'FILE PATH' does not exist in current working directory:
@@ -562,16 +604,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <ol start="7" type="a">
-<li><p>What does each row in this data file represent? How many rows are there? Why?</p></li>
-<li><p>Create a plot of animal-level ADG on the y-axis and Diet on the x-axis.</p></li>
+<li>What does each row in this data file represent? How many rows are there? Why?</li>
+</ol>
+<div class="version-solution">
+<p><em>Each row represents one turkey, therefore there are 24 rows, one for each turkey</em></p>
+</div>
+<ol start="8" type="a">
+<li>Create a plot of animal-level ADG on the y-axis and Diet on the x-axis.</li>
 </ol>
 <div class="cell" data-version="solution">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(animal_dat) <span class="sc">+</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(<span class="at">x =</span> Diet,</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> ADG),</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">height =</span> <span class="dv">0</span>,</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">width =</span> .<span class="dv">1</span>,</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> .<span class="dv">8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(animal_dat) <span class="sc">+</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="fu">aes</span>(<span class="at">x =</span> Diet,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> ADG),</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">height =</span> <span class="dv">0</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>              <span class="at">width =</span> .<span class="dv">1</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>              <span class="at">alpha =</span> .<span class="dv">8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -580,23 +627,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="version-solution">
+<p><em>Note that some of the turkeys have the same ADG level, so if you just used <code>geom_point()</code>, you wouldn’t see all 24 points. <code>geom_jitter()</code> adds some random noise to the points and <code>alpha</code> impacts the transparency.</em></p>
+</div>
 <div class="cell" data-version="student">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot code </span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># hint: think about what kind of plot makes sense and</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># then look up how to make that with ggplot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot code </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># hint: think about what kind of plot makes sense and</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># then look up how to make that with ggplot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ol type="i">
 <li>How many measurement/sampling units are there per diet in this plot?</li>
 </ol>
+<div class="version-solution">
+<p><em>12 (if you did not use jitter, you might only see 7 per diet).</em></p>
+</div>
 <ol start="10" type="a">
 <li>Create a summary table showing the mean and standard deviation of ADG for each diet.</li>
 </ol>
 <div class="cell" data-version="solution">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>animal_dat <span class="sc">|&gt;</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Diet) <span class="sc">|&gt;</span> </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_adg =</span> <span class="fu">mean</span>(ADG),</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd_adg =</span> <span class="fu">sd</span>(ADG)) <span class="sc">|&gt;</span> </span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>animal_dat <span class="sc">|&gt;</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Diet) <span class="sc">|&gt;</span> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_adg =</span> <span class="fu">mean</span>(ADG),</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">sd_adg =</span> <span class="fu">sd</span>(ADG)) <span class="sc">|&gt;</span> </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -622,17 +675,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell" data-version="student">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># table code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># table code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="version-student">
 <p>You can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.</p>
 </div>
+<div class="version-student version-instructions">
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Diet</th>
-<th>Mean ADG</th>
-<th>SD ADG</th>
+<th>Mean pen ADG</th>
+<th>SD pen ADG</th>
 </tr>
 </thead>
 <tbody>
@@ -648,9 +702,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+</div>
 <ol start="11" type="a">
 <li>Compare the animal-level means and standard deviations to the pen-level results. What do you notice?</li>
 </ol>
+<div class="version-solution">
+<p><em>The means and stardard deviations are somewhat similar. The difference in the means between the two groups is the same!</em></p>
+</div>
 </section>
 <section id="comparing-analyses" class="level2">
 <h2 class="anchored" data-anchor-id="comparing-analyses">5. Comparing Analyses</h2>
@@ -661,7 +719,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Using <code>turkey_pen_data.csv</code>, conduct a two-sample independent t-test (assume unequal variances).</li>
 </ol>
 <div class="cell" data-version="solution">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(Pen_ADG <span class="sc">~</span> Diet, <span class="at">data =</span> pen_dat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># saving the t.test object like this helps us get more results</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>pen_test <span class="ot">&lt;-</span> <span class="fu">t.test</span>(Pen_ADG <span class="sc">~</span> Diet, <span class="at">data =</span> pen_dat)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>pen_test</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Welch Two Sample t-test
@@ -676,17 +736,34 @@ sample estimates:
                    1.415                    1.315 </code></pre>
 </div>
 </div>
-<div class="cell" data-version="student">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># t-test code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell" data-version="solution">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># extract standard error from results</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>pen_test<span class="sc">$</span>stderr</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2035518</code></pre>
 </div>
+</div>
+<div class="cell" data-version="student">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># t-test code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="version-instructions version-student">
 <p>Report:</p>
 <ul>
 <li>Difference in mean ADG<br>
 </li>
 <li>Standard error<br>
 </li>
-<li>t-statistic, degrees of freedom, and p-value</li>
+<li>t-statistic, degrees of freedom, and p-value<br>
+</li>
 </ul>
+</div>
+<div class="version-solution">
+<ul>
+<li>Difference (Low - High) = .1 lbs</li>
+<li>Standard error: 0.204 lbs</li>
+<li>t = 0.49, df = 5.9, p-value = 0.64</li>
+</ul>
+</div>
 </section>
 <section id="animal-level-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="animal-level-analysis">Animal-level analysis</h3>
@@ -694,7 +771,8 @@ sample estimates:
 <li>Using <code>turkey_animal_data.csv</code>, conduct the same two-sample independent t-test (assume unequal variances).</li>
 </ol>
 <div class="cell" data-version="solution">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(ADG <span class="sc">~</span> Diet, <span class="at">data =</span> animal_dat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>animal_test <span class="ot">&lt;-</span> <span class="fu">t.test</span>(ADG <span class="sc">~</span> Diet, <span class="at">data =</span> animal_dat)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>animal_test</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Welch Two Sample t-test
@@ -709,17 +787,33 @@ sample estimates:
                 1.408333                 1.308333 </code></pre>
 </div>
 </div>
-<div class="cell" data-version="student">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># t-test code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell" data-version="solution">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>animal_test<span class="sc">$</span>stderr</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1160699</code></pre>
 </div>
+</div>
+<div class="cell" data-version="student">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># t-test code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="version-instructions version-student">
 <p>Report:</p>
 <ul>
 <li>Difference in mean ADG<br>
 </li>
 <li>Standard error<br>
 </li>
-<li>t-statistic, degrees of freedom, and p-value</li>
+<li>t-statistic, degrees of freedom, and p-value<br>
+</li>
 </ul>
+</div>
+<div class="version-solution">
+<ul>
+<li>Difference (Low - High) = .1 lbs</li>
+<li>Standard error: 0.116 lbs</li>
+<li>t = 0.86, df = 21.8, p-value = 0.40</li>
+</ul>
+</div>
 </section>
 </section>
 <section id="interpretation" class="level2">
@@ -727,6 +821,7 @@ sample estimates:
 <ol start="14" type="a">
 <li>Which analysis is <em>correct</em> for answering the research question? Explain.</li>
 </ol>
+<div class="version-instructions version-student">
 <p>Your explanation should address:</p>
 <ul>
 <li>What the experimental unit is<br>
@@ -735,8 +830,12 @@ sample estimates:
 </li>
 <li>Why this matters for statistical inference</li>
 </ul>
+</div>
+<div class="version-solution">
+<p><em>The correct analysis is the pen-level analysis. The experimental unit is a pen, and we should analyse the experiment at the experimental unit level. This is an example of sub-sampling! The turkey is the measurement unit, and there are multiple per experimental unit. Treating the turkey as the unit of analysis artificially inflates the sample size, and our estimates for the standard error and p-value are therefore too small.</em></p>
+</div>
 </section>
-<section id="submit-on-gradescope" class="level2">
+<section id="submit-on-gradescope" class="level2 version-instructions version-student">
 <h2 class="anchored" data-anchor-id="submit-on-gradescope">7. Submit on Gradescope</h2>
 <p>When you are finished, submit your work to <strong>Gradescope</strong>:</p>
 <ol type="1">
@@ -755,9 +854,9 @@ sample estimates:
 <li><p>Go to <strong>Canvas &gt; Gradescope &gt; Activity 1.1: Design Blueprints</strong> and upload your PDF.</p></li>
 <li><p>If Gradescope asks you to assign pages to questions, do so before submitting.</p></li>
 </ol>
-
-
 </section>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

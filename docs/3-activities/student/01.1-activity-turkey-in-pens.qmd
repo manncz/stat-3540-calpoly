@@ -36,6 +36,11 @@ The turkeys are fed their assigned diet for 6 weeks. The primary outcome measure
 
 *Include an image of your blueprint here*
 
+Notes:
+
+- The study description **did not** indicate any grouping of the pens!
+- This is an example of **subsampling**
+
 ## 2. Describe the study structure
 
 - **Treatment structure:**  
@@ -45,6 +50,8 @@ The turkeys are fed their assigned diet for 6 weeks. The primary outcome measure
 ## 3. Pen-Level Data
 
 a. Open the file `turkey_pen_data.csv`.
+
+Note: I have a slightly more complicated folder structure than you should so my **file path** is a bit more complicated! Look up "relative file path" for more information.
 
 ```{r}
 # read in pen data
@@ -113,8 +120,8 @@ j. Create a summary table showing the mean and standard deviation of ADG for eac
 
 You can delete the blank table below if you just want to output your result with reasonable column names. Or you can fill in the numbers.
 
-| Diet | Mean ADG | SD ADG |
-|------|----------|--------|
+| Diet | Mean pen ADG | SD pen ADG |
+|------|--------------|------------|
 | Low (15%) | | |
 | High (30%) | | |
 
