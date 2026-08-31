@@ -99,7 +99,15 @@ Be careful to avoid duplicates across group members.
 
 ## Assignment Submission
 
-Download the lab template [[COMING SOON]] -- this will include all of questions you should answer.
+Download the [lab template](01-lab-recruit-islanders-template.docx) -- this will include all of questions you should answer.
 
 - Note, the box sizes don’t have any meaning other than they fit nicely on a page when in an empty template. Please change the sizes to fit your needs.
 - I’m not concerned with how long your report is, but if you make me read through unnecessary words to find the point, I will get grumpy, which isn't good for anyone involved. Keep it clear, concise, and to the point.
+
+
+:::callout-warning
+## Generative AI
+
+As a reminder, you are allowed to use generative AI on this assignment outside of class. However, your group should agree on how it will be used and you must disclose how you used in in your report. Finally, as always, follow the [syllabus](../0-course-info/syllabus-f26.qmd) guidelines for citing AI.
+
+:::

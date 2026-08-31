@@ -719,7 +719,7 @@ In this class the assumed knowledge is the course materials, including the cours
 **If you have any questions about using and citing sources, you are
 expected to ask for clarification.**
 
-### Generative AI Policy
+### Generative AI Policy {#sec-ai}
 
 Generative AI (such as ChatGPT, Google Gemini, Microsoft Copilot, Claude, etc.) is an extremely and increasingly powerful tool for many many tasks. It is true that in some (how many, I am not sure!) workplaces, employees are encouraged to use AI for a number of tasks. However, in this class, you are students, not employees! Your primary goal here is to learn, so I want us to think critically about how to use Generative AI (if you choose to use it at all) to **assist your learning**, not to undermine it.
 
