@@ -17,6 +17,8 @@ Submit via Gradescope, don't forget to assign pages to the questions in the outl
 Note: while you are using the .qmd or Word template the links won't work -- make sure to also reference the online instructions!!
 :::
 
+*I worked on this activity with:* ______________________________
+
 A traffic engineering study was conducted to investigate traffic delay at urban intersections. Three types of traffic signals were studied: pretimed, semi-actuated, and fully actuated. Fifteen intersections were completely randomly assigned to one of the three types of signals. The response variable was the average stopped time per vehicle (seconds) at each intersection.
 
 ```{r}

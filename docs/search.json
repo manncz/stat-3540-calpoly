@@ -1674,7 +1674,7 @@
     "href": "3-activities/instructions/02.1-activity-intro-to-crd.html",
     "title": "Activity 2.1: ANOVA & Statistical Model for a CRD",
     "section": "",
-    "text": "Note\n\n\n\nSubmit via Gradescope, don’t forget to assign pages to the questions in the outline!\nNote: while you are using the .qmd or Word template the links won’t work – make sure to also reference the online instructions!!\nA traffic engineering study was conducted to investigate traffic delay at urban intersections. Three types of traffic signals were studied: pretimed, semi-actuated, and fully actuated. Fifteen intersections were completely randomly assigned to one of the three types of signals. The response variable was the average stopped time per vehicle (seconds) at each intersection.\nThe data for this study is provided in traffic_data.csv.\nDownload the data here or on Canvas and save it in your nicely organized “activities” or “data” folder!\nThis is what the data looks like:\nid\ntraffic_signal\navg_stop_time_secs\n\n\n\n\n1\nPretimed\n36.6\n\n\n2\nPretimed\n37.1\n\n\n3\nSemi-actuated\n18.7\n\n\n4\nFully actuated\n15.0\n\n\n5\nFully actuated\n18.9\n\n\n6\nFully actuated\n15.2\n\n\n7\nPretimed\n39.2\n\n\n8\nSemi-actuated\n17.5\n\n\n9\nPretimed\n30.4\n\n\n10\nSemi-actuated\n25.7\n\n\n11\nFully actuated\n10.4\n\n\n12\nFully actuated\n10.5\n\n\n13\nSemi-actuated\n22.0\n\n\n14\nPretimed\n34.1\n\n\n15\nSemi-actuated\n20.6"
+    "text": "Note\n\n\n\nSubmit via Gradescope, don’t forget to assign pages to the questions in the outline!\nNote: while you are using the .qmd or Word template the links won’t work – make sure to also reference the online instructions!!\nI worked on this activity with: ______________________________\nA traffic engineering study was conducted to investigate traffic delay at urban intersections. Three types of traffic signals were studied: pretimed, semi-actuated, and fully actuated. Fifteen intersections were completely randomly assigned to one of the three types of signals. The response variable was the average stopped time per vehicle (seconds) at each intersection.\nThe data for this study is provided in traffic_data.csv.\nDownload the data here or on Canvas and save it in your nicely organized “activities” or “data” folder!\nThis is what the data looks like:\nid\ntraffic_signal\navg_stop_time_secs\n\n\n\n\n1\nPretimed\n36.6\n\n\n2\nPretimed\n37.1\n\n\n3\nSemi-actuated\n18.7\n\n\n4\nFully actuated\n15.0\n\n\n5\nFully actuated\n18.9\n\n\n6\nFully actuated\n15.2\n\n\n7\nPretimed\n39.2\n\n\n8\nSemi-actuated\n17.5\n\n\n9\nPretimed\n30.4\n\n\n10\nSemi-actuated\n25.7\n\n\n11\nFully actuated\n10.4\n\n\n12\nFully actuated\n10.5\n\n\n13\nSemi-actuated\n22.0\n\n\n14\nPretimed\n34.1\n\n\n15\nSemi-actuated\n20.6"
   },
   {
     "objectID": "3-activities/instructions/02.1-activity-intro-to-crd.html#a.-study-structure",
@@ -1724,5 +1724,12 @@
     "title": "Activity 2.1: ANOVA & Statistical Model for a CRD",
     "section": "g. Provide a conclusion",
     "text": "g. Provide a conclusion\nIn context of the data, write out your conclusion from the overall ANOVA F-test from (c). Make sure to provide all evidence – (F = , df = , p = )."
+  },
+  {
+    "objectID": "1-prep/02.1-prep.html#r-tips",
+    "href": "1-prep/02.1-prep.html#r-tips",
+    "title": "2.1 Preparation: Completely Randomized Designs",
+    "section": "4 R Tips",
+    "text": "4 R Tips\nIf you are struggling a bit with R so far, please watch this video!"
   }
 ]
