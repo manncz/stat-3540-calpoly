@@ -42,7 +42,7 @@ library(tidyverse)
 
 {{< video https://www.youtube.com/watch?v=STK99inn1jY >}}
 
-[[DR C FOLLOW-UP VIDEO COMING SOON]]
+{{< video https://youtu.be/2rxSpWWMq1A >}}
 
 ## Analyzing a CRD
 
