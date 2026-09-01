@@ -75,6 +75,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -383,7 +412,10 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="1" class="anchored" data-anchor-id="designing-a-crd"><span class="header-section-number">1</span> Designing a CRD</h2>
 <ul>
 <li>📽 Follow along with the <a href="../2-slides/02.1-crd-design-analysis-model.html">slides</a>.</li>
-<li>Note that there are a couple of changes to the slides from the video. See Dr.&nbsp;C’s follow-up video for clarification.</li>
+<li>Note that there are a couple of changes to the slides from the video. See Dr.&nbsp;C’s follow-up video for clarification.
+<ul>
+<li>Correction: there are 90 permutations of the treatment vector in the shoe study, and each has a <span class="math inline">\(\frac{1}{90}\)</span> chance of occurring.</li>
+</ul></li>
 </ul>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/STK99inn1jY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/2rxSpWWMq1A" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
@@ -391,8 +423,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="analyzing-a-crd" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="analyzing-a-crd"><span class="header-section-number">2</span> Analyzing a CRD</h2>
 <ul>
-<li>📽 Follow along with the <a href="../2-slides/02.1-crd-design-analysis-model.html#/analyzing-a-crd-anova">slides</a>.</li>
+<li>📽 Follow along with the <a href="../2-slides/02.1-crd-design-analysis-model.html#/analyzing-a-crd-anova">slides</a>.
+<ul>
 <li>Skip JMP slide 16:53-17:38.</li>
+<li>Correction: 15:35, the labels for the error df and treatment df are swapped.</li>
+</ul></li>
 </ul>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/Fi1YjAvSQLY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>

@@ -6,13 +6,10 @@ execute:
   message: false
   warning: false
 
-echo: false
-format:
-  docx: default
-  html:
-    html-table-processing: none
-    toc: true
-  pdf: default
+author: Your Name
+echo: true
+embed-resources: true
+format: typst
 ---
 ::: callout-note
 Submit via Gradescope, don't forget to assign pages to the questions in the outline!
@@ -24,14 +21,6 @@ Note: while you are using the .qmd or Word template the links won't work -- make
 
 A traffic engineering study was conducted to investigate traffic delay at urban intersections. Three types of traffic signals were studied: pretimed, semi-actuated, and fully actuated. Fifteen intersections were completely randomly assigned to one of the three types of signals. The response variable was the average stopped time per vehicle (seconds) at each intersection.
 
-Download and use this template qmd: [2.1-activity-intro-to-crd.qmd](../student/02.1-activity-intro-to-crd.qmd)
-
-The data for this study is provided in [`traffic_data.csv`](../_data/02_traffic_data.csv).
-
-Download the data here or on Canvas and save it in your nicely organized "activities" or "data" folder!
-
-This is what the data looks like:
-
 ```{r}
 #| label: setup
 
@@ -42,18 +31,20 @@ library(knitr)
 library(janitor)
 ```
 
-```{r}
-traffic_data <- read_csv("../_data/02_traffic_data.csv") |> 
-  clean_names() |> 
-  mutate(traffic_signal = factor(traffic_signal, 
-                                levels = c("Pretimed", 
-                                           "Semi-actuated", 
-                                           "Fully actuated")))
-```
+This code below reads in the data (`read_csv()`), makes the variable names nicer in R (`clean_names()`), and makes sure sure the order of the levels
+of the treatment are in a nice order for us (`factor()`).
+
+:::{.callout-note}
+`factor` is a special data type in R. This is distinct from our term "factor" in relation to study design.
+:::
 
 ```{r}
-traffic_data |>
-  kable()
+traffic_data <- read_csv("PATH/02_traffic_data.csv") |> 
+  clean_names() |> 
+  mutate(traffic_signal = factor(traffic_signal, 
+                                 levels = c("Pretimed", 
+                                            "Semi-actuated", 
+                                            "Fully actuated")))
 ```
 
 ## a. Study Structure
@@ -86,6 +77,10 @@ Make sure to use context of the data!
 
 ## c. ANOVA Table
 
+```{r}
+# chunk for calculations if desired
+```
+
 Use the data provided to calculate the following (you can use R):
 
 $\bar y_{\cdot\cdot}$ = \_\_\_\_\_\_\_\_\_
@@ -99,6 +94,10 @@ $\bar y_{3\cdot}$ = \_\_\_\_\_\_\_\_\_
 for $i=1$ (Pretimed), $i=2$ (Semi-actuated), $i=3$ (Fully actuated)
 
 -   Show (by hand, using a calculator) how the SSE is calculated:
+
+```{r}
+# se calculation here if you want
+```
 
 \vspace{0.6in}
 
