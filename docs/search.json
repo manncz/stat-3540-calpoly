@@ -1394,7 +1394,7 @@
     "href": "2-slides/02.1-crd-design-analysis-model.html#sum-of-squares-error-sse",
     "title": "Module 2: Completely Randomized Designs",
     "section": "Sum of Squares Error (SSE)",
-    "text": "Sum of Squares Error (SSE)\n\n\nThis remaining variability is:\n\nVariation within shoe types\n\nExperimental error\n\n\n\\[SSE = \\sum_{i=1}^t\\sum_{j=1}^r(y_{ij}-\\bar y_{i\\cdot})^2 =\\]\n\\[(-1)^2+(1)^2+(-1)^2+(1)^2(2)^2+(-2)^2=\\]"
+    "text": "Sum of Squares Error (SSE)\n\n\nThis remaining variability is:\n\nVariation within shoe types\n\nExperimental error\n\n\n\\[SSE = \\sum_{i=1}^t\\sum_{j=1}^r(y_{ij}-\\bar y_{i\\cdot})^2 =\\]\n\\[(-1)^2+(1)^2+(-1)^2+(1)^2+ (2)^2+(-2)^2=\\]"
   },
   {
     "objectID": "2-slides/02.1-crd-design-analysis-model.html#sum-of-square-treatment-sstrt-or-ssg",
@@ -1569,7 +1569,7 @@
     "href": "2-slides/02.1-crd-design-analysis-model.html#r-sum-to-zero-estimating-parameters",
     "title": "Module 2: Completely Randomized Designs",
     "section": "R (sum to zero): Estimating Parameters",
-    "text": "R (sum to zero): Estimating Parameters\n⚠️⚠️⚠️Change settings in R to “sum to zero”⚠️⚠️⚠️\n\n# change options for sum to 0\noptions(contrasts = c(\"contr.sum\", \"contr.poly\"))\n\nshoe_mod &lt;- lm(lap_time_seconds ~ shoe, data = shoe_data)\nsummary(shoe_mod)\n\n\nCall:\nlm(formula = lap_time_seconds ~ shoe, data = shoe_data)\n\nResiduals:\n 1  2  3  4  5  6 \n-1  1 -1  1  2 -2 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  62.0000     0.8165  75.934 5.03e-06 ***\nshoe1        -1.0000     1.1547  -0.866  0.45018    \nshoe2         7.0000     1.1547   6.062  0.00901 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2 on 3 degrees of freedom\nMultiple R-squared:  0.9348,    Adjusted R-squared:  0.8913 \nF-statistic:  21.5 on 2 and 3 DF,  p-value: 0.01666\n\n\n\n# change options back to R default\noptions(contrasts = c(\"contr.treatment\", \"contr.poly\"))"
+    "text": "R (sum to zero): Estimating Parameters\n⚠️⚠️⚠️Change settings in R to “sum to zero”⚠️⚠️⚠️\n\ncontrasts(shoe_data$shoe) &lt;- contr.sum\n\n# change options for sum to 0\noptions(contrasts = c(unordered = \"contr.sum\", ordered = \"contr.poly\"))\n\nshoe_mod &lt;- lm(lap_time_seconds ~ shoe, data = shoe_data)\nsummary(shoe_mod)\n\n\nCall:\nlm(formula = lap_time_seconds ~ shoe, data = shoe_data)\n\nResiduals:\n 1  2  3  4  5  6 \n-1  1 -1  1  2 -2 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  62.0000     0.8165  75.934 5.03e-06 ***\nshoe1        -1.0000     1.1547  -0.866  0.45018    \nshoe2         7.0000     1.1547   6.062  0.00901 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2 on 3 degrees of freedom\nMultiple R-squared:  0.9348,    Adjusted R-squared:  0.8913 \nF-statistic:  21.5 on 2 and 3 DF,  p-value: 0.01666\n\noptions(contrasts = c(\"contr.treatment\", \"contr.poly\"))\n\n\n# change options back to R default\noptions(contrasts = c(\"contr.treatment\", \"contr.poly\"))"
   },
   {
     "objectID": "2-slides/02.1-crd-design-analysis-model.html#r-estimating-hat-sigma2",
@@ -1590,14 +1590,14 @@
     "href": "1-prep/02.1-prep.html#designing-a-crd",
     "title": "2.1 Preparation: Completely Randomized Designs",
     "section": "1 Designing a CRD",
-    "text": "1 Designing a CRD\n\n📽 Follow along with the slides.\nNote that there are a couple of changes to the slides from the video. See Dr. C’s follow-up video for clarification."
+    "text": "1 Designing a CRD\n\n📽 Follow along with the slides.\nNote that there are a couple of changes to the slides from the video. See Dr. C’s follow-up video for clarification.\n\nCorrection: there are 90 permutations of the treatment vector in the shoe study, and each has a \\(\\frac{1}{90}\\) chance of occurring."
   },
   {
     "objectID": "1-prep/02.1-prep.html#analyzing-a-crd",
     "href": "1-prep/02.1-prep.html#analyzing-a-crd",
     "title": "2.1 Preparation: Completely Randomized Designs",
     "section": "2 Analyzing a CRD",
-    "text": "2 Analyzing a CRD\n\n📽 Follow along with the slides.\nSkip JMP slide 16:53-17:38."
+    "text": "2 Analyzing a CRD\n\n📽 Follow along with the slides.\n\nSkip JMP slide 16:53-17:38.\nCorrection: 15:35, the labels for the error df and treatment df are swapped."
   },
   {
     "objectID": "1-prep/02.1-prep.html#statistical-model-for-crd",
@@ -1674,7 +1674,7 @@
     "href": "3-activities/instructions/02.1-activity-intro-to-crd.html",
     "title": "Activity 2.1: ANOVA & Statistical Model for a CRD",
     "section": "",
-    "text": "Note\n\n\n\nSubmit via Gradescope, don’t forget to assign pages to the questions in the outline!\nNote: while you are using the .qmd or Word template the links won’t work – make sure to also reference the online instructions!!\nI worked on this activity with: ______________________________\nA traffic engineering study was conducted to investigate traffic delay at urban intersections. Three types of traffic signals were studied: pretimed, semi-actuated, and fully actuated. Fifteen intersections were completely randomly assigned to one of the three types of signals. The response variable was the average stopped time per vehicle (seconds) at each intersection.\nThe data for this study is provided in traffic_data.csv.\nDownload the data here or on Canvas and save it in your nicely organized “activities” or “data” folder!\nThis is what the data looks like:\nid\ntraffic_signal\navg_stop_time_secs\n\n\n\n\n1\nPretimed\n36.6\n\n\n2\nPretimed\n37.1\n\n\n3\nSemi-actuated\n18.7\n\n\n4\nFully actuated\n15.0\n\n\n5\nFully actuated\n18.9\n\n\n6\nFully actuated\n15.2\n\n\n7\nPretimed\n39.2\n\n\n8\nSemi-actuated\n17.5\n\n\n9\nPretimed\n30.4\n\n\n10\nSemi-actuated\n25.7\n\n\n11\nFully actuated\n10.4\n\n\n12\nFully actuated\n10.5\n\n\n13\nSemi-actuated\n22.0\n\n\n14\nPretimed\n34.1\n\n\n15\nSemi-actuated\n20.6"
+    "text": "Note\n\n\n\nSubmit via Gradescope, don’t forget to assign pages to the questions in the outline!\nNote: while you are using the .qmd or Word template the links won’t work – make sure to also reference the online instructions!!\nI worked on this activity with: ______________________________\nA traffic engineering study was conducted to investigate traffic delay at urban intersections. Three types of traffic signals were studied: pretimed, semi-actuated, and fully actuated. Fifteen intersections were completely randomly assigned to one of the three types of signals. The response variable was the average stopped time per vehicle (seconds) at each intersection.\nDownload and use this template qmd: 2.1-activity-intro-to-crd.qmd\nThe data for this study is provided in traffic_data.csv.\nDownload the data here or on Canvas and save it in your nicely organized “activities” or “data” folder!\nThis is what the data looks like:\nid\ntraffic_signal\navg_stop_time_secs\n\n\n\n\n1\nPretimed\n36.6\n\n\n2\nPretimed\n37.1\n\n\n3\nSemi-actuated\n18.7\n\n\n4\nFully actuated\n15.0\n\n\n5\nFully actuated\n18.9\n\n\n6\nFully actuated\n15.2\n\n\n7\nPretimed\n39.2\n\n\n8\nSemi-actuated\n17.5\n\n\n9\nPretimed\n30.4\n\n\n10\nSemi-actuated\n25.7\n\n\n11\nFully actuated\n10.4\n\n\n12\nFully actuated\n10.5\n\n\n13\nSemi-actuated\n22.0\n\n\n14\nPretimed\n34.1\n\n\n15\nSemi-actuated\n20.6"
   },
   {
     "objectID": "3-activities/instructions/02.1-activity-intro-to-crd.html#a.-study-structure",

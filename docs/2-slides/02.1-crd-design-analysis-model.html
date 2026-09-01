@@ -598,7 +598,7 @@
 </ul>
 <div style="font-size: 80%;">
 <p><span class="math display">\[SSE = \sum_{i=1}^t\sum_{j=1}^r(y_{ij}-\bar y_{i\cdot})^2 =\]</span></p>
-<p><span class="math display">\[(-1)^2+(1)^2+(-1)^2+(1)^2(2)^2+(-2)^2=\]</span></p>
+<p><span class="math display">\[(-1)^2+(1)^2+(-1)^2+(1)^2+ (2)^2+(-2)^2=\]</span></p>
 </div>
 </div><div class="column" style="width:30%;">
 <div class="cell">
@@ -1009,11 +1009,13 @@ F-statistic:  21.5 on 2 and 3 DF,  p-value: 0.01666</code></pre>
 <h2>R (sum to zero): Estimating Parameters</h2>
 <p>⚠️⚠️⚠️Change settings in R to “sum to zero”⚠️⚠️⚠️</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># change options for sum to 0</span></span>
-<span id="cb13-2"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.sum"</span>, <span class="st">"contr.poly"</span>))</span>
-<span id="cb13-3"><a></a></span>
-<span id="cb13-4"><a></a>shoe_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(lap_time_seconds <span class="sc">~</span> shoe, <span class="at">data =</span> shoe_data)</span>
-<span id="cb13-5"><a></a><span class="fu">summary</span>(shoe_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">contrasts</span>(shoe_data<span class="sc">$</span>shoe) <span class="ot">&lt;-</span> contr.sum</span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a><span class="co"># change options for sum to 0</span></span>
+<span id="cb13-4"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="at">unordered =</span> <span class="st">"contr.sum"</span>, <span class="at">ordered =</span> <span class="st">"contr.poly"</span>))</span>
+<span id="cb13-5"><a></a></span>
+<span id="cb13-6"><a></a>shoe_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(lap_time_seconds <span class="sc">~</span> shoe, <span class="at">data =</span> shoe_data)</span>
+<span id="cb13-7"><a></a><span class="fu">summary</span>(shoe_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -1035,18 +1037,19 @@ Residual standard error: 2 on 3 degrees of freedom
 Multiple R-squared:  0.9348,    Adjusted R-squared:  0.8913 
 F-statistic:  21.5 on 2 and 3 DF,  p-value: 0.01666</code></pre>
 </div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.treatment"</span>, <span class="st">"contr.poly"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># change options back to R default</span></span>
-<span id="cb15-2"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.treatment"</span>, <span class="st">"contr.poly"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># change options back to R default</span></span>
+<span id="cb16-2"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.treatment"</span>, <span class="st">"contr.poly"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="r-estimating-hatsigma2" class="slide level2">
 <h2>R: Estimating <span class="math inline">\(\hat{\sigma}^2\)</span></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.sum"</span>, <span class="st">"contr.poly"</span>))</span>
-<span id="cb16-2"><a></a>shoe_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(lap_time_seconds <span class="sc">~</span> shoe, <span class="at">data =</span> shoe_data)</span>
-<span id="cb16-3"><a></a><span class="fu">anova</span>(shoe_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.sum"</span>, <span class="st">"contr.poly"</span>))</span>
+<span id="cb17-2"><a></a>shoe_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(lap_time_seconds <span class="sc">~</span> shoe, <span class="at">data =</span> shoe_data)</span>
+<span id="cb17-3"><a></a><span class="fu">anova</span>(shoe_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 

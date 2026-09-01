@@ -263,7 +263,8 @@ Suppose the experiment was carried out, and the following lap times were recorde
 ```{r}
 #| echo: false
 shoe_data <- read_csv("_data/02-shoes.csv") |> 
-  janitor::clean_names() 
+  janitor::clean_names() |> 
+  mutate(shoe = factor(shoe))
  
 shoe_data |> 
   knitr::kable()
@@ -346,7 +347,7 @@ This remaining variability is:
 <div style="font-size: 80%;">
 $$SSE = \sum_{i=1}^t\sum_{j=1}^r(y_{ij}-\bar y_{i\cdot})^2 =$$
 
-$$(-1)^2+(1)^2+(-1)^2+(1)^2(2)^2+(-2)^2=$$
+$$(-1)^2+(1)^2+(-1)^2+(1)^2+ (2)^2+(-2)^2=$$
 </div>
 :::
 ::: {.column width="30%"}
@@ -661,11 +662,15 @@ summary(shoe_mod)
 #| code-line-numbers: "2"
 #| echo: true
 
+contrasts(shoe_data$shoe) <- contr.sum
+
 # change options for sum to 0
-options(contrasts = c("contr.sum", "contr.poly"))
+options(contrasts = c(unordered = "contr.sum", ordered = "contr.poly"))
 
 shoe_mod <- lm(lap_time_seconds ~ shoe, data = shoe_data)
 summary(shoe_mod)
+
+options(contrasts = c("contr.treatment", "contr.poly"))
 ```
 
 ```{r}
