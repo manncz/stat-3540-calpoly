@@ -1,0 +1,571 @@
+---
+title: "Module 2: Completely Randomized Designs"
+subtitle: "Inference and Contrasts"
+format: 
+  revealjs:
+    # theme: simple # other modern-ish options: dark, simple, solarized
+    theme: simple
+    slide-number: c/t 
+    chalkboard: true # lets you draw on top of slides (keyboard: c) or open a board (b)
+    width: 1200
+    height: 675
+    css: modern-slides.css
+    auto-stretch: false
+# format: 
+#   html:
+#     toc: true
+#   pdf:
+#     toc: false
+execute: 
+  warning: false
+  message: false
+---
+
+# Infernce for Treatment Means
+
+## Inference for Treatment Means
+
+ANOVA tells us whether *any* means differ.
+
+Now we want:
+
+- Estimates of each treatment mean ($\mu_i$)
+- Uncertainty of those treatment means (SEs + CIs)  
+- Interpretation in context
+
+## Example 2.1: Running Shoes
+
+```{r}
+#| include: false
+library(tidyverse)
+shoe_data <- read_csv("_data/02-shoes.csv") |> 
+  janitor::clean_names() |> 
+  mutate(shoe = factor(shoe))
+```
+
+:::: columns
+::: column
+**Response:** Lap time (seconds)
+
+**Treatment structure:** 
+
++ One-way
++ Factor: Shoe type 
++ 3 Levels: control, lightweight, and stability
++ t = 3
+:::
+::: column
+**Experimental structure:** 
+
++ CRD
++ Experimental Unit: Individual (n = 6, r = 2) 
++ Measurement Unit: Individual (N = 6)
+:::
+::::
+
+**Goal:** Determine whether shoe type affects mean lap time.
+
+## Example 2.1: Running Shoes (Blueprint)
+
+![](_images/021-blueprint-shoe-type.png){width=55%}
+
+## Example 2.1: Running Shoes (Effects Model)
+
+$$y_{ij} = \mu + \tau_i + \varepsilon_{ij} \text{ with } \varepsilon_{ij} \text{ iid } \sim N(0, \sigma^2)$$
+for 	$i = 1, 2, 3$ and $j = 1, 2$
+
+Where:
+
++ $y_{ij}$ - the *observed* lap time for the $j^{th}$ runner wearing the $i^{th}$ shoe type.
+
++	$\mu$ - the overall mean lap time.
+
++ $\tau_i$ - the effect of the $i^{th}$ shoe type.
+
++	$\epsilon_{ij}$ - the experimental error associated with the $j^{th}$ runner wearing the $i^{th}$ shoe type.
+
+## What we Estimated {.scrollable}
+
+Model Reminder: $y_{ij} = \mu + \tau_i + \varepsilon_{ij}$ 
+
+```{r}
+options(contrasts = c("contr.sum", "contr.poly"))
+
+shoe_mod <- lm(lap_time_seconds ~ shoe, data = shoe_data)
+
+anova(shoe_mod)
+
+levels(shoe_data$shoe)
+summary(shoe_mod)
+```
+
+
+
+## Estimating Treatment Means $\hat \mu_i$ (Balanced CRD)
+
+From the data, each treatment has a sample mean:
+
+$$\bar y_{i\cdot}$$
+
+From the model, each treatment has an estimated *least squares mean*:
+
+$$\hat\mu_i = \hat\mu + \hat\tau_i$$
+
+In a **balanced** CRD (i.e., each treatment has $r$ replications), these are the same quantity:
+
+$$\hat\mu_i = \bar y_{i\cdot}$$
+
+## Sampling Variability of $\bar y_{i\cdot}$
+
+Under the model:
+
+$$Var(\bar y_{i\cdot}) = \frac{\sigma^2}{r}$$
+
+We don’t know $\sigma^2$, so we estimate it with:
+
+$$\widehat{\sigma}^2 = MSE$$
+
+## Standard Error of a Treatment Mean $SE(\hat \mu_i)$
+
+Balanced CRD (each treatment has $r$ replications):
+
+$$SE(\hat\mu_i) = \sqrt{\frac{MSE}{r}}$$
+
+## Degrees of Freedom
+
+All inference uses the **error degrees of freedom**:
+
+$$df_E = N - t = (r-1)t$$
+
+This is the same df used for the F-test in ANOVA.
+
+## Confidence Interval for a Treatment Mean
+
+A CI for $\mu_i$:
+
+$$\hat\mu_i \pm t^*_{df_E, \alpha/2}\;SE(\hat\mu_i)$$
+
+where $t^*$ comes from the t distribution with $df_E = N-t = (r-1)t$ and the $\alpha/2$ quantile associated with the confidence level.
+
+## R: Estimated Means + SE + CI
+
+:::: columns
+::: column
+```{r}
+#| echo: true
+#| message: false
+library(emmeans)
+shoe_lsmeans <- emmeans(shoe_mod, specs = ~ shoe)
+shoe_lsmeans
+```
+:::
+::: column
+```{r}
+#| echo: true
+#| message: false
+#| fig-width: 6
+#| fig-height: 6
+#| out-width: 60%
+emmip(shoe_mod, ~ shoe, CIs = T) +
+  labs(y = "Estimated Lap Time (seconds)")
+```
+:::
+::::
+
+## Interpretation of Results
+
+The estimated mean 400m lap time for runners wearing the control shoe is 61 seconds (s.e. = 1.41). 
+
+We are 95% confident the population mean 400m lap time for all runners wearing the control shoe is between 56.5 and 65.5 seconds.
+   
+These results apply to all runner similar to those in our study under similar conditions.
+
+
+
+
+# Contrasts
+
+## From Means to Comparisons
+
+ANOVA tells us whether *any* means differ.
+
+Inference for means tells us *what each mean looks like*.
+
+**Contrasts let us ask specific questions about those means.**
+
+## What Is a Contrast?
+
+::: callout-note
+A **contrast** is a linear combination of treatment means:
+
+$$
+C = c_1 \mu_1 + c_2 \mu_2 + \cdots + c_t \mu_t
+$$
+
+with the constraint:
+
+$$
+\sum_{i=1}^t c_i = 0
+$$
+:::
+
+## What We Actually Estimate
+
+We estimate contrasts using the estimated least squares means $\hat \mu_i$:
+
+$$
+\hat C = c_1 \hat\mu_1 + c_2\hat\mu_2 + \cdots + c_t \hat\mu_t
+$$
+
+## Example 2.1: Running Shoes
+
+
+:::: columns
+::: column
+**Response:** Lap time (seconds)
+
+**Treatment structure:** 
+
++ One-way
++ Factor: Shoe type 
++ 3 Levels: control, lightweight, and stability
++ t = 3
+:::
+::: column
+**Experimental structure:** 
+
++ CRD
++ Experimental Unit: Individual (r = 2) 
++ Measurement Unit: Individual (N = 6)
+:::
+::::
+
+## Example 2.1: Running Shoes ($\hat \mu_i$ + $\hat \sigma^2$)
+
+
+```{r}
+#| echo: true
+#| message: false
+anova(shoe_mod)
+
+shoe_lsmeans <- emmeans(shoe_mod, specs = ~ shoe)
+shoe_lsmeans
+```
+
+
+## Contrast 1: Lightweight vs Stability
+
+> Does the mean lap time differ between lightweight and stability shoes?
+
+> $H_0:$
+
+> $H_A:$
+
+
+Contrast:
+
+$C =$ 
+
+Coefficients: $(0,\;1,\;-1)$
+
+
+## Standard Error of a Contrast (Balanced CRD)
+
+::: callout-note
+For a balanced CRD with $r$ replications per treatment:
+
+$$
+SE(\hat C) = \sqrt{ MSE \sum_{i=1}^t \frac{c_i^2}{r} }
+$$
+:::
+
+## Hypothesis Test for a Contrast
+
+$$
+H_0: \mu_2-\mu_3 = 0
+\qquad\text{vs}\qquad
+H_A: \mu_2-\mu_3 \neq 0
+$$
+
+Test statistic:
+
+$$
+t = \frac{\hat C}{SE(\hat C)}
+$$
+
+with $df = (r-1)t$.
+
+## Confidence Interval for a Contrast
+
+A CI for $C$:
+
+$$
+\hat C \pm t^*_{(r-1)t,
+\alpha/2} \; SE(\hat C)
+$$
+
+## R: Contrasts {.scrollable}
+
+```{r}
+#| echo: true
+
+shoe_mod <- lm(lap_time_seconds ~ shoe, data = shoe_data)
+shoe_lsmeans <- emmeans(shoe_mod, ~ shoe)
+levels(shoe_data$shoe)
+contrast(shoe_lsmeans,
+         method = list("Lightweight vs Stability" = c(0, 1, -1)),
+         infer = c(TRUE, TRUE)
+)
+```
+
+
+
+## Interpretation: Lightweight vs Stability
+
+At an $\alpha = 0.05$, we have evidence to conclude the mean 400m lap time for lightweight shoes is 13 seconds (s.e. = 2) slower than the mean 400m lap time for stability shoes (t = 6.5; df = 3; p = 0.0074).
+
+We are 95% confident the population mean 400m lap time for lightweight shoes is between 6.64 and 19.4 seconds slower than for stability shoes.
+
+These results apply to all runner similar to those in our study under similar conditions.
+
+
+## Contrast 2: Average of Control + Stability vs Lightweight
+
+> Is the lightweight shoe different from the average of the other two?
+
+> $H_0:$
+
+> $H_A:$
+
+
+Contrast:
+
+$C =$ 
+
+Coefficients: $(0.5,\;-1,\;0.5)$
+
+## Contrast 2: Average of Control + Stability vs Lightweight
+
+$\hat C =$
+
+$SE(\hat C) =$
+
+$t =$
+
+## R: Contrasts {.scrollable}
+
+```{r}
+#| echo: true
+contrast(shoe_lsmeans,
+         method = list("Control & Stability vs Lightweight" = c(0.5, -1, 0.5)),
+         infer = c(TRUE, TRUE)
+)
+```
+
+::: callout
+*Note: flipping the contrasts arounds just changes the direction of the estimate and t-statistic*
+
+```{r}
+#| echo: true
+contrast(shoe_lsmeans,
+         method = list("Control & Stability vs Lightweight" = c(-0.5, 1, -0.5)),
+         infer = c(TRUE, TRUE)
+)
+```
+:::
+
+
+## Interpretation: Average of Control + Stability vs Lightweight
+
+At an $\alpha = 0.05$, we have evidence to conclude the mean 400m lap time for control and stability shoes combined is 10.5 seconds (s.e. = 1.73) faster than the mean 400m lap time for lightweight shoes (t = -6.06; df = 3; p = 0.009).
+
+We are 95% confident the population mean 400m lap time for control and stability shoes combined is between 4.99 and 16 seconds faster than for lightweight shoes.
+
+These results apply to all runner similar to those in our study under similar conditions.
+
+## Preplanned vs Post Hoc Contrasts
+
+**Preplanned contrasts:**
+
+- Chosen before seeing the data  
+- Limited in number  
+- Do not require p-value multiplicity adjustment
+
+**Post hoc contrasts:**
+
+- Chosen after ANOVA  
+- Require multiplicity adjustment
+
+## Why Contrasts Matter
+
+Contrasts:
+
+- Align analysis with scientific questions  
+- Avoid unnecessary multiple testing  
+- Provide interpretable comparisons  
+
+They are often more informative than “all pairwise comparisons.”
+
+# Pairwise Comparisons
+
+## What Are Pairwise Comparisons?
+
+> Which treatment means differ from each other?
+
+Pairwise comparisons test:
+
+- $\mu_1$ vs $\mu_2$  
+- $\mu_1$ vs $\mu_3$  
+- $\mu_2$ vs $\mu_3$  
+
+For $t$ treatments, there are: $\binom{t}{2} = \frac{t(t-1)}{2}$ possible pairwise comparisons.
+
+
+## Example 2.1: Running Shoes
+
+
+:::: columns
+::: column
+**Response:** Lap time (seconds)
+
+**Treatment structure:** 
+
++ One-way
++ Factor: Shoe type 
++ 3 Levels: control, lightweight, and stability
++ t = 3
+:::
+::: column
+**Experimental structure:** 
+
++ CRD
++ Experimental Unit: Individual (r = 2) 
++ Measurement Unit: Individual (N = 6)
+:::
+::::
+
+## Example 2.1: Shoes
+
+With $t = 3$ shoe types:
+
+- Control vs Lightweight  $(H_0: \mu_1 - \mu_2 = 0)$
+- Control vs Stability  $(H_0: \mu_1 - \mu_3 = 0)$
+- Lightweight vs Stability  $(H_0: \mu_2 - \mu_3 = 0)$
+
+That’s _______ comparisons.
+
+## Pairwise Comparisons as Contrasts
+
+Each pairwise comparison is a contrast:
+
+- Control vs Lightweight: $C = (1, -1, 0)$  
+- Control vs Stability: $C = (1, 0, -1)$  
+- Lightweight vs Stability: $C = (0, 1, -1)$
+
+## The Multiple Testing Problem
+
+Each comparison is a valid t-test.
+
+But performing *many tests* increases the chance of a:
+
+- Type I error (false positive)
+
+This is called the *family-wise error rate*.
+
+## Why Error Rates Inflate
+
+Suppose each test uses $\alpha = 0.05$. Then:
+
+- Probability of *no* false positives (i.e., correctly fail to reject the null): $1-\alpha = 1 - 0.05 = 0.95$
+  
+- Assuming independence, the probability of all tests leading to *no* false positives: $(1-\alpha)^\text{# tests}=(0.95)^3=0.857$
+
+- Probability of *at least one* false positive (i.e., a Type I error): $1-[(1-\alpha)^\text{# tests}] = 1-0.857=0.143$.
+
+Note this increases with the number of tests.
+
+## What We Need
+
+When doing many comparisons, we want to:
+
+- Control the overall Type I error rate  
+- While still detecting real differences  
+
+**Post Hoc Tests:** adjustments to the p-values (making them larger) and/or confidence intervals (making them wider).
+
+## Fisher’s Protected LSD {.scrollable}
+
+1. First perform the overall ANOVA F-test
+2. Only if F is significant, perform all pairwise t-tests  
+
+::: callout
+Note: From the ANOVA on Example 2.1 Shoe Types: (F = 21.5; df = 2,3; p = 0.017)
+
+```{r}
+#| echo: true
+#| message: false
+
+shoe_lsmeans <- emmeans(shoe_mod, specs = ~ shoe)
+pairs(shoe_lsmeans, infer = c(TRUE, TRUE), adjust = "none")
+
+library(multcomp)
+cld(shoe_lsmeans, adjust = "none", Letters = LETTERS, decreasing = T)
+```
+:::
+  
+
+## Tukey’s Honestly Significant Difference (HSD) {.scrollable}
+
+- Designed specifically for *all* pairwise comparisons  
+- Controls family-wise error rate  
+
+::: callout
+
+
+```{r}
+#| echo: true
+#| message: false
+library(emmeans)
+shoe_lsmeans <- emmeans(shoe_mod, specs = ~ shoe)
+pairs(shoe_lsmeans, infer = c(TRUE, TRUE), adjust = "tukey")
+cld(shoe_lsmeans, adjust = "tukey", Letters = LETTERS, decreasing = T)
+```
+
+:::
+
+## Bonferroni Adjustment 
+
+Bonferroni controls error by:
+
+- Using a smaller significance level  
+
+$$
+\alpha^* = \frac{\alpha}{\text{number of tests}}
+$$
+
+Simple, but often conservative.
+
+
+## Dunnet's Test {.scrollable}
+ 
+Useful when interest lies in comparing all treatments to a control.
+
+::: callout
+
+
+```{r}
+#| echo: true
+#| message: false
+library(emmeans)
+shoe_lsmeans <- emmeans(shoe_mod, specs = ~ shoe)
+contrast(shoe_lsmeans, 
+         method = "trt.vs.ctrl", # Treatment vs. control contrast
+         adjust = "dunnet", # Dunnett adjustment
+         infer = c(TRUE, TRUE),
+         ref = "Control"
+)
+```
+
+:::
+
+
