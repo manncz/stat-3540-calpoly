@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Activity 2.1: ANOVA &amp; Statistical Model for a CRD – Statistical Methods for Study Design and Analysis</title>
+<title>Activity 2.2: Comparing Treatment Means – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -349,15 +349,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a.-study-structure" id="toc-a.-study-structure" class="nav-link active" data-scroll-target="#a.-study-structure">a. Study Structure</a></li>
-  <li><a href="#b.-complete-the-skeleton-anova-table-below" id="toc-b.-complete-the-skeleton-anova-table-below" class="nav-link" data-scroll-target="#b.-complete-the-skeleton-anova-table-below">b. Complete the skeleton ANOVA table below</a></li>
-  <li><a href="#c.-anova-table" id="toc-c.-anova-table" class="nav-link" data-scroll-target="#c.-anova-table">c.&nbsp;ANOVA Table</a></li>
-  <li><a href="#d.-statistical-model" id="toc-d.-statistical-model" class="nav-link" data-scroll-target="#d.-statistical-model">d.&nbsp;Statistical Model</a></li>
-  <li><a href="#e.-using-r-obtain-the-parametercoefficient-estimates-for-the-following" id="toc-e.-using-r-obtain-the-parametercoefficient-estimates-for-the-following" class="nav-link" data-scroll-target="#e.-using-r-obtain-the-parametercoefficient-estimates-for-the-following">e. Using R, obtain the parameter/coefficient estimates for the following:</a></li>
-  <li><a href="#f.-interpret-parameter-estimates" id="toc-f.-interpret-parameter-estimates" class="nav-link" data-scroll-target="#f.-interpret-parameter-estimates">f.&nbsp;Interpret Parameter Estimates</a></li>
-  <li><a href="#g.-provide-a-conclusion" id="toc-g.-provide-a-conclusion" class="nav-link" data-scroll-target="#g.-provide-a-conclusion">g. Provide a conclusion</a></li>
+  <li><a href="#a.-skeleton-anova" id="toc-a.-skeleton-anova" class="nav-link active" data-scroll-target="#a.-skeleton-anova">a. Skeleton ANOVA</a></li>
+  <li><a href="#b.-overall-anova-f-test" id="toc-b.-overall-anova-f-test" class="nav-link" data-scroll-target="#b.-overall-anova-f-test">b. Overall ANOVA F-test</a></li>
+  <li><a href="#c.-least-squares-means" id="toc-c.-least-squares-means" class="nav-link" data-scroll-target="#c.-least-squares-means">c.&nbsp;Least Squares Means</a></li>
+  <li><a href="#d.-interpret-estimated-means" id="toc-d.-interpret-estimated-means" class="nav-link" data-scroll-target="#d.-interpret-estimated-means">d.&nbsp;Interpret Estimated Means</a></li>
+  <li><a href="#e.-planned-contrast-1-any-females-vs-no-females" id="toc-e.-planned-contrast-1-any-females-vs-no-females" class="nav-link" data-scroll-target="#e.-planned-contrast-1-any-females-vs-no-females">e. Planned Contrast 1: Any Females vs No Females</a></li>
+  <li><a href="#f.-pairwise-comparisons" id="toc-f.-pairwise-comparisons" class="nav-link" data-scroll-target="#f.-pairwise-comparisons">f.&nbsp;Pairwise Comparisons</a></li>
+  <li><a href="#g.-tukey-letter-groupings" id="toc-g.-tukey-letter-groupings" class="nav-link" data-scroll-target="#g.-tukey-letter-groupings">g. Tukey Letter Groupings</a></li>
+  <li><a href="#h.-optional-extra-practice-with-contrasts" id="toc-h.-optional-extra-practice-with-contrasts" class="nav-link" data-scroll-target="#h.-optional-extra-practice-with-contrasts">h. (Optional) Extra practice with contrasts</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="02.1-activity-intro-to-crd.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="02.1-activity-intro-to-crd.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="02.2-activity-comparing-means.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="02.2-activity-comparing-means.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -365,8 +366,8 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Activity 2.1: ANOVA &amp; Statistical Model for a CRD</h1>
-<p class="subtitle lead">Traffic Signals</p>
+<h1 class="title">Activity 2.2: Comparing Treatment Means</h1>
+<p class="subtitle lead">Fruit Flies</p>
 </div>
 
 
@@ -389,260 +390,372 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>Submission
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Submit via Gradescope, don’t forget to assign pages to the questions in the outline!</p>
-<p>Note: while you are using the .qmd or Word template the links won’t work – make sure to also reference the online instructions!!</p>
+<p>Submit via Gradescope, don’t forget to assign pages to the questions in the outline! Your submission will not be graded, if you don’t assign pages.</p>
+<p>Please delete any extraneous instructions (like this box) before submission.</p>
+<p>You can also delete anything like <code>\vspace{}</code></p>
 </div>
 </div>
-<p><em>I worked on this activity with:</em> ______________________________</p>
-<p>A traffic engineering study was conducted to investigate traffic delay at urban intersections. Three types of traffic signals were studied: pretimed, semi-actuated, and fully actuated. Fifteen intersections were completely randomly assigned to one of the three types of signals. The response variable was the average stopped time per vehicle (seconds) at each intersection.</p>
-<p>Download and use this template qmd: <a href="../student/02.1-activity-intro-to-crd.qmd">01.1-activity-turkey-in-pens.qmd</a></p>
-<p>The data for this study is provided in <a href="../_data/02_traffic_data.csv"><code>traffic_data.csv</code></a>.</p>
-<p>Download the data here or on Canvas and save it in your nicely organized “activities” or “data” folder!</p>
-<p>This is what the data looks like:</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: right;">id</th>
-<th style="text-align: left;">traffic_signal</th>
-<th style="text-align: right;">avg_stop_time_secs</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">Pretimed</td>
-<td style="text-align: right;">36.6</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">Pretimed</td>
-<td style="text-align: right;">37.1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">Semi-actuated</td>
-<td style="text-align: right;">18.7</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: left;">Fully actuated</td>
-<td style="text-align: right;">15.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5</td>
-<td style="text-align: left;">Fully actuated</td>
-<td style="text-align: right;">18.9</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">6</td>
-<td style="text-align: left;">Fully actuated</td>
-<td style="text-align: right;">15.2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">7</td>
-<td style="text-align: left;">Pretimed</td>
-<td style="text-align: right;">39.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">8</td>
-<td style="text-align: left;">Semi-actuated</td>
-<td style="text-align: right;">17.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">9</td>
-<td style="text-align: left;">Pretimed</td>
-<td style="text-align: right;">30.4</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">10</td>
-<td style="text-align: left;">Semi-actuated</td>
-<td style="text-align: right;">25.7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">11</td>
-<td style="text-align: left;">Fully actuated</td>
-<td style="text-align: right;">10.4</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">12</td>
-<td style="text-align: left;">Fully actuated</td>
-<td style="text-align: right;">10.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">13</td>
-<td style="text-align: left;">Semi-actuated</td>
-<td style="text-align: right;">22.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">14</td>
-<td style="text-align: left;">Pretimed</td>
-<td style="text-align: right;">34.1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">15</td>
-<td style="text-align: left;">Semi-actuated</td>
-<td style="text-align: right;">20.6</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<section id="a.-study-structure" class="level2">
-<h2 class="anchored" data-anchor-id="a.-study-structure">a. Study Structure</h2>
-<p>Describe the following components of the study.</p>
-<ul>
-<li>Treatment structure</li>
-</ul>
-<ul>
-<li>Design structure</li>
-</ul>
-<ul>
-<li>Response variable</li>
-</ul>
-</section>
-<section id="b.-complete-the-skeleton-anova-table-below" class="level2">
-<h2 class="anchored" data-anchor-id="b.-complete-the-skeleton-anova-table-below">b. Complete the skeleton ANOVA table below</h2>
-<p>Make sure to use context of the data!</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Source of Variation (SV)</th>
-<th>DF: Total = ___________</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="c.-anova-table" class="level2">
-<h2 class="anchored" data-anchor-id="c.-anova-table">c.&nbsp;ANOVA Table</h2>
-<p>Use the data provided to calculate the following (you can use R):</p>
-<p><span class="math inline">\(\bar y_{\cdot\cdot}\)</span> = _________</p>
-<p><span class="math inline">\(\bar y_{1\cdot}\)</span> = _________</p>
-<p><span class="math inline">\(\bar y_{2\cdot}\)</span> = _________</p>
-<p><span class="math inline">\(\bar y_{3\cdot}\)</span> = _________</p>
-<p>for <span class="math inline">\(i=1\)</span> (Pretimed), <span class="math inline">\(i=2\)</span> (Semi-actuated), <span class="math inline">\(i=3\)</span> (Fully actuated)</p>
-<ul>
-<li>Show (by hand, using a calculator) how the SSE is calculated:</li>
-</ul>
-<p>Then, use your SSE calculation and the provided information to fill out the ANOVA table below. <em>You can check your answers by running the ANOVA in R, but know where the values come from.</em></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Source</th>
-<th>DF</th>
-<th>SS</th>
-<th>MS</th>
-<th>F</th>
-<th>Prob &gt; F</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>&lt;0.0001</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Total</td>
-<td>14</td>
-<td>1340.45</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="d.-statistical-model" class="level2">
-<h2 class="anchored" data-anchor-id="d.-statistical-model">d.&nbsp;Statistical Model</h2>
-<p>Write the <em>effects model</em> (sum to zero) for this study, make sure to provide the index values, assumptions, and clearly define each term in context.</p>
-</section>
-<section id="e.-using-r-obtain-the-parametercoefficient-estimates-for-the-following" class="level2">
-<h2 class="anchored" data-anchor-id="e.-using-r-obtain-the-parametercoefficient-estimates-for-the-following">e. Using R, obtain the parameter/coefficient estimates for the following:</h2>
-<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Reminder for R
+<span class="screen-reader-only">Note</span>Template .qmd + data
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When using R, you need to change the default settings to use “sum to zero”:</p>
-<pre><code>options(contrasts = c("contr.sum", "contr.poly"))
-mod &lt;- lm(...)</code></pre>
-<p>Check your factor order with:</p>
-<pre><code>levels(data$variable_name)</code></pre>
-</div>
-</div>
 <ul>
-<li><p><span class="math inline">\(\hat \mu\)</span> = ___________</p></li>
-<li><p><span class="math inline">\(\hat \tau_1\)</span> = ___________</p></li>
-<li><p><span class="math inline">\(\hat \tau_2\)</span> = ___________</p></li>
-<li><p><span class="math inline">\(\hat \tau_3\)</span> = ___________</p></li>
+<li><p>You should follow the template for coding: <a href="../student/02.2-activity-comparing-means.qmd">02.2-activity-comparing-means.qmd</a></p></li>
+<li><p>The data are provided here in <a href="../_data/02_fruitfly_data.csv"><code>02_fruitfly_data.csv</code></a> and on Canvas.</p></li>
 </ul>
-<p>for <span class="math inline">\(i=1\)</span> (Pretimed), <span class="math inline">\(i=2\)</span> (Semi-actuated), <span class="math inline">\(i=3\)</span> (Fully actuated).</p>
-<p><span class="math display">\[
-\begin{align*}
-\hat \tau_3 &amp;= -(\hat \tau_1 + \hat \tau_2 ) \\
-&amp;= -(12.020 - 2.56) \\
-&amp;= -9.452
-\end{align*}
-\]</span></p>
-<p><span class="math inline">\(\hat{\mu} = 23.46\)</span></p>
-<div class="cell">
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'traffic_mod' not found</code></pre>
 </div>
 </div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Sum to zero (effect coding)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In R, make sure to set your “sum to zero” constraint <em>before</em> fitting your model with <code>lm()</code>.</p>
+<p>I have included it in a chunk for you in the .qmd template (along with reading in data), make sure you have run that chunk before proceeding!</p>
+</div>
+</div>
+<p>Scientists are interested in whether the energy costs of reproduction affect longevity in male fruit flies.</p>
+<p>In this experiment:</p>
+<ul>
+<li><p>125 male fruit flies were randomly assigned to 5 treatment groups (25 flies per group).</p></li>
+<li><p>Males were housed individually.</p></li>
+<li><p>The treatments differed by the number and type of female companions provided per day:</p></li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Companion</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1P (i = 1)</td>
+<td>One pregnant female</td>
+</tr>
+<tr class="even">
+<td>8P (i = 2)</td>
+<td>Eight pregnant female</td>
+</tr>
+<tr class="odd">
+<td>1V (i = 3)</td>
+<td>One virgin females</td>
+</tr>
+<tr class="even">
+<td>8V (i = 4)</td>
+<td>Eight virgin female</td>
+</tr>
+<tr class="odd">
+<td>None (i = 5)</td>
+<td>No female companions</td>
+</tr>
+</tbody>
+</table>
+<p>The response variable was longevity (days alive) for each male fruit fly.</p>
+<section id="a.-skeleton-anova" class="level2">
+<h2 class="anchored" data-anchor-id="a.-skeleton-anova">a. Skeleton ANOVA</h2>
+<p>Fill out the skeleton ANOVA according to the study.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Source of Variation (SV)</th>
+<th>DF (total = ___________)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="f.-interpret-parameter-estimates" class="level2">
-<h2 class="anchored" data-anchor-id="f.-interpret-parameter-estimates">f.&nbsp;Interpret Parameter Estimates</h2>
-<p>In context of the data, provide an interpretation for <span class="math inline">\(\hat \tau_1 = 12.02\)</span>. It may be helpful to think about what <span class="math inline">\(\bar y_1\cdot\)</span> was from (c).</p>
+<section id="b.-overall-anova-f-test" class="level2">
+<h2 class="anchored" data-anchor-id="b.-overall-anova-f-test">b. Overall ANOVA F-test</h2>
+<p>Run an ANOVA in R to assess whether any differences in mean longevity exist among the treatments. <em>Get in the habit of checking your model assumptions – residual vs fitted &amp; qq-plots</em>.</p>
+<ul>
+<li><p>Complete the hypotheses using notation:</p>
+<ul>
+<li><p><span class="math inline">\(H_0:\)</span></p></li>
+<li><p><span class="math inline">\(H_A:\)</span></p></li>
+</ul></li>
+<li><p>Write your conclusion in context including all evidence (F = ; df = ; p = ).</p></li>
+</ul>
 </section>
-<section id="g.-provide-a-conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="g.-provide-a-conclusion">g. Provide a conclusion</h2>
-<p>In context of the data, write out your conclusion from the overall ANOVA F-test from (c). Make sure to provide all evidence – (F = , df = , p = ).</p>
+<section id="c.-least-squares-means" class="level2">
+<h2 class="anchored" data-anchor-id="c.-least-squares-means">c.&nbsp;Least Squares Means</h2>
+<p>Use R to obtain the estimated mean longevity and standard error for each treatment and fill out the table below.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Companion</th>
+<th>LSMean</th>
+<th>Standard Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1P</td>
+<td><span class="math inline">\(\hat\mu_1=\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8P</td>
+<td><span class="math inline">\(\hat\mu_2=\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1V</td>
+<td><span class="math inline">\(\hat\mu_3=\)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8V</td>
+<td><span class="math inline">\(\hat\mu_4=\)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>None</td>
+<td><span class="math inline">\(\hat\mu_5=\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Then, create a plot of the least square means (look at it!).</p>
+</section>
+<section id="d.-interpret-estimated-means" class="level2">
+<h2 class="anchored" data-anchor-id="d.-interpret-estimated-means">d.&nbsp;Interpret Estimated Means</h2>
+<p>Using the estimated parameters / coefficients (e.g., <span class="math inline">\(\hat \mu\)</span>, <span class="math inline">\(\hat \tau_1\)</span>, <span class="math inline">\(\hat{\sigma}^2\)</span>), show by hand how <span class="math inline">\(\hat \mu_1\)</span> and <span class="math inline">\(SE(\hat \mu_1)\)</span> is obtained. Interpret these values in context of the problem.</p>
+<ul>
+<li><p><span class="math inline">\(\hat \mu_1=\)</span></p></li>
+<li><p><span class="math inline">\(SE(\hat\mu_1)=\)</span></p></li>
+<li><p>Interpretation:</p></li>
+</ul>
+</section>
+<section id="e.-planned-contrast-1-any-females-vs-no-females" class="level2">
+<h2 class="anchored" data-anchor-id="e.-planned-contrast-1-any-females-vs-no-females">e. Planned Contrast 1: Any Females vs No Females</h2>
+<p>Scientists are interested in whether exposure to any females affects longevity.</p>
+<ul>
+<li><p>Write the Contrast:</p></li>
+<li><p>Using R, carry out the test and provide the following in context of the problem:</p>
+<ul>
+<li><p>Interpret the estimated mean:</p></li>
+<li><p>Interpret the confidence interval:</p></li>
+<li><p>Provide a conclusion for the test (include all evidence – t = , df = , p = ):</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="f.-pairwise-comparisons" class="level2">
+<h2 class="anchored" data-anchor-id="f.-pairwise-comparisons">f.&nbsp;Pairwise Comparisons</h2>
+<p>Scientists also want to know which specific treatments differ from each other.</p>
+<p>Perform all pairwise comparisons using <em>no</em> adjustment (i.e., Fishers LSD) and <em>Tukey’s</em> adjustment. Provide the p-value for each pairwise comparison in the table below.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 15%">
+<col style="width: 29%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comparison<br>
+(e.g.&nbsp;1P - 1V)</th>
+<th>Estimate</th>
+<th>Unadjusted p-value</th>
+<th>Adjusted p-value<br>
+Tukey)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>How do the <em>unadjusted</em> and <em>adjusted</em> p-values compare?</p></li>
+</ul>
+</section>
+<section id="g.-tukey-letter-groupings" class="level2">
+<h2 class="anchored" data-anchor-id="g.-tukey-letter-groupings">g. Tukey Letter Groupings</h2>
+<p>Using the <em>Tukey</em> pairwise comparisons in (f) and your table of estimated means in (c), fill out the compact letter display table below. <em>Note: you can check your answers in R.</em></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Companions</th>
+<th>LSMean</th>
+<th>Group</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="h.-optional-extra-practice-with-contrasts" class="level2">
+<h2 class="anchored" data-anchor-id="h.-optional-extra-practice-with-contrasts">h. (Optional) Extra practice with contrasts</h2>
+<p>Identify the contrast coefficients for the following comparisons. Can you test these in R? How are they tested by hand?</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 62%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comparison</th>
+<th>1P</th>
+<th>8P</th>
+<th>1V</th>
+<th>8V</th>
+<th>None</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Any Companion vs None</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Exposure to one female vs eight females</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>One virgin female vs eight virgin females</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

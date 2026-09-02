@@ -887,14 +887,36 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h2>Checking Model Assumptions: Constant Variance</h2>
 <p><strong>Type of Plot:</strong> Look at the residuals vs fitted/predicted values</p>
 <p><strong>Ideal Plot:</strong> Equally spread in residuals across all treatments (e.g., horizontal band)</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>shoe_mod <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a></a>  broom<span class="sc">::</span><span class="fu">augment</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb11-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> .fitted, <span class="at">y =</span> .resid)) <span class="sc">+</span></span>
+<span id="cb11-4"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb11-5"><a></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>,</span>
+<span id="cb11-6"><a></a>             <span class="at">color =</span> <span class="st">"#3a86d4"</span>) <span class="sc">+</span></span>
+<span id="cb11-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Fitted Values"</span>, <span class="at">y =</span> <span class="st">"Residuals"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 
-<img data-src="_images/023-shoe-type-jmp-residual-vs-fitted.png" style="width:50.0%" class="r-stretch"></section>
+</div>
+<img data-src="02.1-crd-design-analysis-model_files/figure-revealjs/unnamed-chunk-21-1.png" style="width:50.0%" class="r-stretch"></section>
 <section id="checking-model-assumptions-normality" class="slide level2">
 <h2>Checking Model Assumptions: Normality</h2>
 <p><strong>Type of Plot:</strong> Normal probability plot of the residuals (QQ-plot)</p>
 <p><strong>Ideal Plot:</strong> Points fall close to the reference line</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>shoe_mod <span class="sc">|&gt;</span> </span>
+<span id="cb12-2"><a></a>  broom<span class="sc">::</span><span class="fu">augment</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-3"><a></a>  ggpubr<span class="sc">::</span><span class="fu">ggqqplot</span>(<span class="at">x =</span> <span class="st">".resid"</span>,</span>
+<span id="cb12-4"><a></a>         <span class="at">color =</span> <span class="st">"#3a86d4"</span>) <span class="sc">+</span></span>
+<span id="cb12-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Normal QQ-Plot of Residuals"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 
-<img data-src="_images/023-shoe-type-jmp-qq-plot.png" style="width:40.0%" class="r-stretch"></section>
+</div>
+<img data-src="02.1-crd-design-analysis-model_files/figure-revealjs/unnamed-chunk-22-1.png" style="width:40.0%" class="r-stretch"></section>
 <section id="estimating-model-parameterscoefficients" class="slide level2">
 <h2>Estimating Model Parameters/Coefficients</h2>
 <p><strong>Recall:</strong> <span class="math inline">\(y_{ij} = \mu + \tau_i + \varepsilon_{ij} \text{ with } \varepsilon_{ij} \text{ iid } \sim N(0, \sigma^2)\)</span></p>
@@ -980,8 +1002,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <section id="r-set-to-zero-estimating-parameters" class="slide level2">
 <h2>R (set to zero): Estimating Parameters</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>shoe_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(lap_time_seconds <span class="sc">~</span> shoe, <span class="at">data =</span> shoe_data)</span>
-<span id="cb11-2"><a></a><span class="fu">summary</span>(shoe_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>shoe_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(lap_time_seconds <span class="sc">~</span> shoe, <span class="at">data =</span> shoe_data)</span>
+<span id="cb13-2"><a></a><span class="fu">summary</span>(shoe_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -1009,13 +1031,11 @@ F-statistic:  21.5 on 2 and 3 DF,  p-value: 0.01666</code></pre>
 <h2>R (sum to zero): Estimating Parameters</h2>
 <p>⚠️⚠️⚠️Change settings in R to “sum to zero”⚠️⚠️⚠️</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">contrasts</span>(shoe_data<span class="sc">$</span>shoe) <span class="ot">&lt;-</span> contr.sum</span>
-<span id="cb13-2"><a></a></span>
-<span id="cb13-3"><a></a><span class="co"># change options for sum to 0</span></span>
-<span id="cb13-4"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="at">unordered =</span> <span class="st">"contr.sum"</span>, <span class="at">ordered =</span> <span class="st">"contr.poly"</span>))</span>
-<span id="cb13-5"><a></a></span>
-<span id="cb13-6"><a></a>shoe_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(lap_time_seconds <span class="sc">~</span> shoe, <span class="at">data =</span> shoe_data)</span>
-<span id="cb13-7"><a></a><span class="fu">summary</span>(shoe_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="co"># change options for sum to 0</span></span>
+<span id="cb15-2"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="at">unordered =</span> <span class="st">"contr.sum"</span>, <span class="at">ordered =</span> <span class="st">"contr.poly"</span>))</span>
+<span id="cb15-3"><a></a></span>
+<span id="cb15-4"><a></a>shoe_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(lap_time_seconds <span class="sc">~</span> shoe, <span class="at">data =</span> shoe_data)</span>
+<span id="cb15-5"><a></a><span class="fu">summary</span>(shoe_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -1037,19 +1057,18 @@ Residual standard error: 2 on 3 degrees of freedom
 Multiple R-squared:  0.9348,    Adjusted R-squared:  0.8913 
 F-statistic:  21.5 on 2 and 3 DF,  p-value: 0.01666</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.treatment"</span>, <span class="st">"contr.poly"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># change options back to R default</span></span>
-<span id="cb16-2"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.treatment"</span>, <span class="st">"contr.poly"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="co"># change options back to R default</span></span>
+<span id="cb17-2"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.treatment"</span>, <span class="st">"contr.poly"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="r-estimating-hatsigma2" class="slide level2">
 <h2>R: Estimating <span class="math inline">\(\hat{\sigma}^2\)</span></h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.sum"</span>, <span class="st">"contr.poly"</span>))</span>
-<span id="cb17-2"><a></a>shoe_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(lap_time_seconds <span class="sc">~</span> shoe, <span class="at">data =</span> shoe_data)</span>
-<span id="cb17-3"><a></a><span class="fu">anova</span>(shoe_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.sum"</span>, <span class="st">"contr.poly"</span>))</span>
+<span id="cb18-2"><a></a>shoe_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(lap_time_seconds <span class="sc">~</span> shoe, <span class="at">data =</span> shoe_data)</span>
+<span id="cb18-3"><a></a><span class="fu">anova</span>(shoe_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -1255,7 +1274,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],

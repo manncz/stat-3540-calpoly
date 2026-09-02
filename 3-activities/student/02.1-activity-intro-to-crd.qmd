@@ -144,6 +144,20 @@ levels(data$variable_name)
 
 for $i=1$ (Pretimed), $i=2$ (Semi-actuated), $i=3$ (Fully actuated).
 
+$$
+\begin{align*}
+\hat \tau_3 &= -(\hat \tau_1 + \hat \tau_2 ) \\
+&= -(12.020 - 2.56) \\
+&= -9.452
+\end{align*}
+$$
+
+$\hat{\mu} = 23.46$
+
+```{r}
+emmeans(traffic_mod, ~ traffic_signal)
+```
+
 ## f. Interpret Parameter Estimates
 
 In context of the data, provide an interpretation for $\hat \tau_1 = 12.02$. It may be helpful to think about what $\bar y_1\cdot$ was from (c).

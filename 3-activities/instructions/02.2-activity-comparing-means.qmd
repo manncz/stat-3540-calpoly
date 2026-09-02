@@ -1,0 +1,196 @@
+---
+title: "Activity 2.2: Comparing Treatment Means"
+subtitle: "Fruit Flies"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+echo: false
+format:
+  docx: default
+  html:
+    html-table-processing: none
+    toc: true
+  pdf: default
+---
+::: callout-note
+## Submission
+
+Submit via Gradescope, don't forget to assign pages to the questions in the outline! Your submission will not be graded, if you don't assign pages.
+
+Please delete any extraneous instructions (like this box) before submission.
+
+You can also delete anything like `\vspace{}`
+:::
+
+:::callout-note
+# Template .qmd + data
+
+- You should follow the template for coding: [02.2-activity-comparing-means.qmd](../student/02.2-activity-comparing-means.qmd)
+
+-  The data are provided here in [`02_fruitfly_data.csv`](../_data/02_fruitfly_data.csv) and on Canvas.
+
+:::
+
+:::callout-warning
+# Sum to zero (effect coding) 
+
+In R, make sure to set your "sum to zero" constraint *before* fitting your model with `lm()`.
+
+I have included it in a chunk for you in the .qmd template (along with reading in data), make sure you have run that chunk before proceeding!
+
+:::
+
+Scientists are interested in whether the energy costs of reproduction affect longevity in male fruit flies.
+
+In this experiment:
+
+-   125 male fruit flies were randomly assigned to 5 treatment groups (25 flies per group).
+
+-   Males were housed individually.
+
+-   The treatments differed by the number and type of female companions provided per day:
+
+| Companion    | Description           |
+|--------------|-----------------------|
+| 1P (i = 1)   | One pregnant female   |
+| 8P (i = 2)   | Eight pregnant female |
+| 1V (i = 3)   | One virgin females    |
+| 8V (i = 4)   | Eight virgin female   |
+| None (i = 5) | No female companions  |
+
+The response variable was longevity (days alive) for each male fruit fly.
+
+## a. Skeleton ANOVA
+
+Fill out the skeleton ANOVA according to the study.
+
+| Source of Variation (SV) | DF (total = \_\_\_\_\_\_\_\_\_\_\_) |
+|--------------------------|-------------------------------------|
+|                          |                                     |
+|                          |                                     |
+
+## b. Overall ANOVA F-test
+
+Run an ANOVA in R to assess whether any differences in mean longevity exist among the treatments. *Get in the habit of checking your model assumptions – residual vs fitted & qq-plots*.
+
+-   Complete the hypotheses using notation:
+
+    -   $H_0:$
+
+    -   $H_A:$
+
+-   Write your conclusion in context including all evidence (F = ; df = ; p = ).
+
+\vspace{0.6in}
+
+## c. Least Squares Means
+
+Use R to obtain the estimated mean longevity and standard error for each treatment and fill out the table below. 
+
+| Companion | LSMean       | Standard Error |
+|-----------|--------------|----------------|
+| 1P        | $\hat\mu_1=$ |                |
+| 8P        | $\hat\mu_2=$ |                |
+| 1V        | $\hat\mu_3=$ |                |
+| 8V        | $\hat\mu_4=$ |                |
+| None      | $\hat\mu_5=$ |                |
+
+Then, create a plot of the least square means (look at it!).
+
+## d. Interpret Estimated Means
+
+Using the estimated parameters / coefficients (e.g., $\hat \mu$, $\hat \tau_1$, $\hat{\sigma}^2$), show by hand how $\hat \mu_1$ and $SE(\hat \mu_1)$ is obtained. Interpret these values in context of the problem.
+
+-   $\hat \mu_1=$
+
+    \vspace{0.6in}
+
+-   $SE(\hat\mu_1)=$
+
+    \vspace{0.6in}
+
+-   Interpretation:
+
+    \vspace{0.6in}
+
+## e. Planned Contrast 1: Any Females vs No Females
+
+Scientists are interested in whether exposure to any females affects longevity.
+
+-   Write the Contrast:
+
+-   Using R, carry out the test and provide the following in context of the problem:
+
+    -   Interpret the estimated mean:
+
+        \vspace{0.6in}
+
+    -   Interpret the confidence interval:
+
+        \vspace{0.6in}
+
+    -   Provide a conclusion for the test (include all evidence – t = , df = , p = ):
+
+        \vspace{0.6in}
+
+## f. Pairwise Comparisons
+
+Scientists also want to know which specific treatments differ from each other.
+
+Perform all pairwise comparisons using *no* adjustment (i.e., Fishers LSD) and *Tukey's* adjustment. Provide the p-value for each pairwise comparison in the table below.
+
++----------------+----------+--------------------+-------------------+
+| Comparison\    | Estimate | Unadjusted p-value | Adjusted p-value\ |
+| (e.g. 1P - 1V) |          |                    | Tukey)            |
++================+==========+====================+===================+
+|                |          |                    |                   |
++----------------+----------+--------------------+-------------------+
+|                |          |                    |                   |
++----------------+----------+--------------------+-------------------+
+|                |          |                    |                   |
++----------------+----------+--------------------+-------------------+
+|                |          |                    |                   |
++----------------+----------+--------------------+-------------------+
+|                |          |                    |                   |
++----------------+----------+--------------------+-------------------+
+|                |          |                    |                   |
++----------------+----------+--------------------+-------------------+
+|                |          |                    |                   |
++----------------+----------+--------------------+-------------------+
+|                |          |                    |                   |
++----------------+----------+--------------------+-------------------+
+|                |          |                    |                   |
++----------------+----------+--------------------+-------------------+
+|                |          |                    |                   |
++----------------+----------+--------------------+-------------------+
+
+-   How do the *unadjusted* and *adjusted* p-values compare?
+
+    \vspace{0.6in}
+
+## g. Tukey Letter Groupings
+
+Using the *Tukey* pairwise comparisons in (f) and your table of estimated means in (c), fill out the compact letter display table below. *Note: you can check your answers in R.*
+
+| Companions | LSMean | Group |
+|------------|--------|-------|
+|            |        |       |
+|            |        |       |
+|            |        |       |
+|            |        |       |
+|            |        |       |
+|            |        |       |
+|            |        |       |
+|            |        |       |
+
+## h. (Optional) Extra practice with contrasts
+
+Identify the contrast coefficients for the following comparisons. Can you test these in R? How are they tested by hand?
+
+| Comparison                                | 1P  | 8P  | 1V  | 8V  | None |
+|-------------------------------------------|-----|-----|-----|-----|------|
+| Any Companion vs None                     |     |     |     |     |      |
+| Exposure to one female vs eight females   |     |     |     |     |      |
+| One virgin female vs eight virgin females |     |     |     |     |      |

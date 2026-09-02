@@ -9,6 +9,7 @@ format:
     width: 1200
     height: 675
     css: modern-slides.css
+    html-math-method: mathjax
 # format: 
 #   html:
 #     toc: true
@@ -555,7 +556,16 @@ All ANOVA inference depends on these assumptions.
 
 ```{r}
 #| out-width: 50%
-knitr::include_graphics("_images/023-shoe-type-jmp-residual-vs-fitted.png")
+#| echo: true
+#| code-fold: true
+
+shoe_mod |> 
+  broom::augment() |> 
+  ggplot(aes(x = .fitted, y = .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0,
+             color = "#3a86d4") +
+  labs(x = "Fitted Values", y = "Residuals")
 ```
 
 ## Checking Model Assumptions: Normality
@@ -566,7 +576,14 @@ knitr::include_graphics("_images/023-shoe-type-jmp-residual-vs-fitted.png")
 
 ```{r}
 #| out-width: 40%
-knitr::include_graphics("_images/023-shoe-type-jmp-qq-plot.png")
+#| echo: true
+#| code-fold: true
+
+shoe_mod |> 
+  broom::augment() |> 
+  ggpubr::ggqqplot(x = ".resid",
+         color = "#3a86d4") +
+  labs(title = "Normal QQ-Plot of Residuals")
 ```
 
 ## Estimating Model Parameters/Coefficients
@@ -662,15 +679,11 @@ summary(shoe_mod)
 #| code-line-numbers: "2"
 #| echo: true
 
-contrasts(shoe_data$shoe) <- contr.sum
-
 # change options for sum to 0
 options(contrasts = c(unordered = "contr.sum", ordered = "contr.poly"))
 
 shoe_mod <- lm(lap_time_seconds ~ shoe, data = shoe_data)
 summary(shoe_mod)
-
-options(contrasts = c("contr.treatment", "contr.poly"))
 ```
 
 ```{r}
