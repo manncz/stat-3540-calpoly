@@ -1,0 +1,61 @@
+---
+title: "2.2 Preparation: Completely Randomized Designs"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+#### 📽 Watch Videos: 30-45 min
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+
+- Perform and interpret contrasts and multiple pairwise comparisons, such as Tukey’s HSD and Bonferroni, to evaluate differences between treatment means.
+
+:::
+
+
+**Notes:**
+
+- There is one slide deck to follow along with, but the links below go to the relevant starting point for each video.
+
+- Dr. Robinson discusses how to do analysis in JMP, you can **skip these!** We will not use JMP in this class and you will notice I removed those slides.
+
+- Take notes while you watch and summarize the main points for yourself!
+
+- If you want more or a different modality, read Oehlert Ch 4-5.
+
+## Estimating Treatment Means
+
+- 📽 Follow along with the [slides](../2-slides/02.2-crd-contrasts.qmd).
+
+{{< video https://www.youtube.com/watch?v=HM3sxJcPv2M >}}
+
+
+
+## Contrasts with CRDs
+
+- 📽 Follow along with the [slides](../2-slides/02.2-crd-contrasts.qmd#/contrasts). 
+
+{{< video  https://www.youtube.com/watch?v=YEw-DxtQ_rk >}}
+
+## Pairwise Comparisons for CRDs
+
+- 📽 Follow along with the [slides](../2-slides/02.2-crd-contrasts.qmd#/pairwise-comparisons).
+
+{{< video  https://www.youtube.com/watch?v=N827DGVwrZQ >}}
+
+## R Tips
+
+If you are struggling a bit with R so far, please watch this video!
+
+{{< video https://www.youtube.com/watch?v=GAWBuyq5HIk >}}
+ 

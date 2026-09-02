@@ -24,7 +24,7 @@ Note: while you are using the .qmd or Word template the links won't work -- make
 
 A traffic engineering study was conducted to investigate traffic delay at urban intersections. Three types of traffic signals were studied: pretimed, semi-actuated, and fully actuated. Fifteen intersections were completely randomly assigned to one of the three types of signals. The response variable was the average stopped time per vehicle (seconds) at each intersection.
 
-Download and use this template qmd: [2.1-activity-intro-to-crd.qmd](../student/02.1-activity-intro-to-crd.qmd)
+Download and use this template qmd: [01.1-activity-turkey-in-pens.qmd](../student/02.1-activity-intro-to-crd.qmd)
 
 The data for this study is provided in [`traffic_data.csv`](../_data/02_traffic_data.csv).
 

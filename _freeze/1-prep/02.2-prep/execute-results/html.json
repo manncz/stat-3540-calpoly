@@ -1,0 +1,15 @@
+{
+  "hash": "8842b5d6868be11a320b4846562dea5d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"2.2 Preparation: Completely Randomized Designs\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n#### 📽 Watch Videos: 30-45 min\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n\n- Perform and interpret contrasts and multiple pairwise comparisons, such as Tukey’s HSD and Bonferroni, to evaluate differences between treatment means.\n\n:::\n\n\n**Notes:**\n\n- There is one slide deck to follow along with, but the links below go to the relevant starting point for each video.\n\n- Dr. Robinson discusses how to do analysis in JMP, you can **skip these!** We will not use JMP in this class and you will notice I removed those slides.\n\n- Take notes while you watch and summarize the main points for yourself!\n\n- If you want more or a different modality, read Oehlert Ch 4-5.\n\n## Estimating Treatment Means\n\n- 📽 Follow along with the [slides](../2-slides/02.2-crd-contrasts.qmd).\n\n{{< video https://www.youtube.com/watch?v=HM3sxJcPv2M >}}\n\n\n\n## Contrasts with CRDs\n\n- 📽 Follow along with the [slides](../2-slides/02.2-crd-contrasts.qmd#/contrasts). \n\n{{< video  https://www.youtube.com/watch?v=YEw-DxtQ_rk >}}\n\n## Pairwise Comparisons for CRDs\n\n- 📽 Follow along with the [slides](../2-slides/02.2-crd-contrasts.qmd#/pairwise-comparisons).\n\n{{< video  https://www.youtube.com/watch?v=N827DGVwrZQ >}}\n\n## R Tips\n\nIf you are struggling a bit with R so far, please watch this video!\n\n{{< video https://www.youtube.com/watch?v=GAWBuyq5HIk >}}\n \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
