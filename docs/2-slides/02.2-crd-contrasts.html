@@ -716,8 +716,8 @@ Confidence level used: 0.95 </code></pre>
 <p>Suppose each test uses <span class="math inline">\(\alpha = 0.05\)</span>. Then:</p>
 <ul>
 <li><p>Probability of <em>no</em> false positives (i.e., correctly fail to reject the null): <span class="math inline">\(1-\alpha = 1 - 0.05 = 0.95\)</span></p></li>
-<li><p>Assuming independence, the probability of all tests leading to <em>no</em> false positives: <span class="math inline">\((1-\alpha)^\text{# tests}=(0.95)^3=0.857\)</span></p></li>
-<li><p>Probability of <em>at least one</em> false positive (i.e., a Type I error): <span class="math inline">\(1-[(1-\alpha)^\text{# tests}] = 1-0.857=0.143\)</span>.</p></li>
+<li><p>Assuming independence, the probability of all tests leading to <em>no</em> false positives: <span class="math inline">\((1-\alpha)^\text{\# tests}=(0.95)^3=0.857\)</span></p></li>
+<li><p>Probability of <em>at least one</em> false positive (i.e., a Type I error): <span class="math inline">\(1-[(1-\alpha)^\text{\# tests}] = 1-0.857=0.143\)</span>.</p></li>
 </ul>
 <p>Note this increases with the number of tests.</p>
 </section>
@@ -1048,7 +1048,7 @@ P value adjustment: dunnettx method for 2 tests </code></pre>
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],

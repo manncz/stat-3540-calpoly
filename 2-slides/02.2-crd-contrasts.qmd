@@ -11,6 +11,7 @@ format:
     height: 675
     css: modern-slides.css
     auto-stretch: false
+    html-math-method: mathjax
 # format: 
 #   html:
 #     toc: true
@@ -478,9 +479,9 @@ Suppose each test uses $\alpha = 0.05$. Then:
 
 - Probability of *no* false positives (i.e., correctly fail to reject the null): $1-\alpha = 1 - 0.05 = 0.95$
   
-- Assuming independence, the probability of all tests leading to *no* false positives: $(1-\alpha)^\text{# tests}=(0.95)^3=0.857$
+- Assuming independence, the probability of all tests leading to *no* false positives: $(1-\alpha)^\text{\# tests}=(0.95)^3=0.857$
 
-- Probability of *at least one* false positive (i.e., a Type I error): $1-[(1-\alpha)^\text{# tests}] = 1-0.857=0.143$.
+- Probability of *at least one* false positive (i.e., a Type I error): $1-[(1-\alpha)^\text{\# tests}] = 1-0.857=0.143$.
 
 Note this increases with the number of tests.
 
