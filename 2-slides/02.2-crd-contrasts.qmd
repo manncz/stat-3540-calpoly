@@ -510,7 +510,9 @@ shoe_lsmeans <- emmeans(shoe_mod, specs = ~ shoe)
 pairs(shoe_lsmeans, infer = c(TRUE, TRUE), adjust = "none")
 
 library(multcomp)
-cld(shoe_lsmeans, adjust = "none", Letters = LETTERS, decreasing = T)
+cld(shoe_lsmeans, 
+              adjust = "none", 
+              Letters = LETTERS, decreasing = T)
 ```
 :::
   
@@ -526,6 +528,7 @@ cld(shoe_lsmeans, adjust = "none", Letters = LETTERS, decreasing = T)
 ```{r}
 #| echo: true
 #| message: false
+
 library(emmeans)
 shoe_lsmeans <- emmeans(shoe_mod, specs = ~ shoe)
 pairs(shoe_lsmeans, infer = c(TRUE, TRUE), adjust = "tukey")

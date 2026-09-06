@@ -1,0 +1,46 @@
+---
+title: "3.1 Preparation: Power"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+#### 📽 Watch Videos: 20 min
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+
+- Explain the concept of power and its role in detecting meaningful effects in a study.
+- Describe how variability, sample size, and design choices influence the power of the F-test.
+- Use software tools to compute power and determine required sample sizes for different experimental designs.
+ 
+
+:::
+
+- If you want more or a different modality, read [Oehlert Ch 7](_text/oehlert_ch7.pdf).
+
+## Estimating Treatment Means
+
+- 📽 Follow along with the [slides](../2-slides/03.1-power.qmd).
+
+:::callout-warning
+For right now, just watch until 15:00. The software isn't working as in the video right now, and I need to sort it out.
+:::
+
+{{< video https://www.youtube.com/watch?v=ijZxpent9rs >}}
+
+
+## R Tips
+
+If you are struggling a bit with R so far, please watch this video!
+
+{{< video https://www.youtube.com/watch?v=GAWBuyq5HIk >}}
+ 

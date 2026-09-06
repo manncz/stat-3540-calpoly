@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Activity 1.2: Sources of Variation &amp; Randomization – Statistical Methods for Study Design and Analysis</title>
+<title>3.1 Preparation: Power – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,27 +26,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../0-course-info/canvas/stat-3540-logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-99d69ffe6c78a8b0d43fb0abb952d9a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../0-course-info/canvas/stat-3540-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-99d69ffe6c78a8b0d43fb0abb952d9a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -266,7 +266,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">Statistical Methods for Study Design and Analysis</a> 
+      <a href="../">Statistical Methods for Study Design and Analysis</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/manncz/stat-3540-calpoly" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://canvas.calpoly.edu" title="Cal Poly Canvas" class="quarto-navigation-tool px-1" aria-label="Cal Poly Canvas"><i class="bi bi-person-fill"></i></a>
@@ -292,19 +292,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../0-course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
+  <a href="../0-course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -320,24 +320,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#scenario-sources-of-variation" id="toc-scenario-sources-of-variation" class="nav-link active" data-scroll-target="#scenario-sources-of-variation">1. Scenario: Sources of Variation</a>
-  <ul class="collapse">
-  <li><a href="#a.-sketch-a-design-blueprint" id="toc-a.-sketch-a-design-blueprint" class="nav-link" data-scroll-target="#a.-sketch-a-design-blueprint">a. Sketch a Design Blueprint</a></li>
-  <li><a href="#b.-describe-the-following" id="toc-b.-describe-the-following" class="nav-link" data-scroll-target="#b.-describe-the-following">b. Describe the following:</a></li>
-  <li><a href="#c.-inclusion-criteria" id="toc-c.-inclusion-criteria" class="nav-link" data-scroll-target="#c.-inclusion-criteria">c.&nbsp;Inclusion Criteria</a></li>
-  <li><a href="#d.-statistical-limitation-of-inclusion-criteria" id="toc-d.-statistical-limitation-of-inclusion-criteria" class="nav-link" data-scroll-target="#d.-statistical-limitation-of-inclusion-criteria">d.&nbsp;Statistical Limitation of Inclusion Criteria</a></li>
-  <li><a href="#e.-other-sources-of-variability" id="toc-e.-other-sources-of-variability" class="nav-link" data-scroll-target="#e.-other-sources-of-variability">e. Other Sources of Variability</a></li>
-  <li><a href="#f.-sources-of-variability-table" id="toc-f.-sources-of-variability-table" class="nav-link" data-scroll-target="#f.-sources-of-variability-table">f.&nbsp;Sources of Variability Table</a></li>
-  <li><a href="#g.-reflection" id="toc-g.-reflection" class="nav-link" data-scroll-target="#g.-reflection">g. Reflection</a></li>
-  </ul></li>
-  <li><a href="#scenario-observational-study-vs-designed-experiment" id="toc-scenario-observational-study-vs-designed-experiment" class="nav-link" data-scroll-target="#scenario-observational-study-vs-designed-experiment">2 Scenario: Observational Study vs Designed Experiment</a>
-  <ul class="collapse">
-  <li><a href="#a.-extraneous-variables" id="toc-a.-extraneous-variables" class="nav-link" data-scroll-target="#a.-extraneous-variables">a. Extraneous Variables</a></li>
-  <li><a href="#b.-confounding" id="toc-b.-confounding" class="nav-link" data-scroll-target="#b.-confounding">b. Confounding</a></li>
-  <li><a href="#c.-why-an-experiment-is-not-feasible" id="toc-c.-why-an-experiment-is-not-feasible" class="nav-link" data-scroll-target="#c.-why-an-experiment-is-not-feasible">c.&nbsp;Why an Experiment Is Not Feasible</a></li>
-  </ul></li>
+  <li><a href="#estimating-treatment-means" id="toc-estimating-treatment-means" class="nav-link active" data-scroll-target="#estimating-treatment-means"><span class="header-section-number">1</span> Estimating Treatment Means</a></li>
+  <li><a href="#r-tips" id="toc-r-tips" class="nav-link" data-scroll-target="#r-tips"><span class="header-section-number">2</span> R Tips</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="01.2-activity-sources-of-variation.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -345,8 +331,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Activity 1.2: Sources of Variation &amp; Randomization</h1>
-<p class="subtitle lead">Fuel Additives and Carbon Monoxide Emissions + Cardiovascular Events</p>
+<h1 class="title">3.1 Preparation: Power</h1>
 </div>
 
 
@@ -363,196 +348,59 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="watch-videos-20-min" class="level4">
+<h4 class="anchored" data-anchor-id="watch-videos-20-min">📽 Watch Videos: 20 min</h4>
+<hr>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">None</span>Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Explain the concept of power and its role in detecting meaningful effects in a study.</li>
+<li>Describe how variability, sample size, and design choices influence the power of the F-test.</li>
+<li>Use software tools to compute power and determine required sample sizes for different experimental designs.</li>
+</ul>
+</div>
+</div>
+<ul>
+<li>If you want more or a different modality, read <a href="_text/oehlert_ch7.pdf">Oehlert Ch 7</a>.</li>
+</ul>
+</section>
+<section id="estimating-treatment-means" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="estimating-treatment-means"><span class="header-section-number">1</span> Estimating Treatment Means</h2>
+<ul>
+<li>📽 Follow along with the <a href="../2-slides/03.1-power.html">slides</a>.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Submit via Gradescope.</p>
-<p>I would recommend using the Word template.</p>
+<p>For right now, just watch until 15:00. The software isn’t working as in the video right now, and I need to sort it out.</p>
 </div>
 </div>
-<section id="scenario-sources-of-variation" class="level1">
-<h1>1. Scenario: Sources of Variation</h1>
-<p>Researchers are studying the effect of a polyether amine dispersant additive on carbon monoxide (CO) emissions in gasoline-powered vehicles under non-laboratory driving conditions.</p>
-<p>Twenty vehicles from a variety of manufacturers are used in the study. Five additive levels (2%, 3%, 4%, 5%, and 6%) are considered. Each additive level is randomly assigned to four vehicles, resulting in a balanced design.</p>
-<p>For each vehicle, 16 ounces of the assigned additive are added to the fuel tank. A sensor attached to each vehicle measures CO emissions in the exhaust every 5 seconds while the vehicle is driven for 300 miles.</p>
-<p>The primary outcomes of interest are computed for each vehicle and include:</p>
-<ul>
-<li>the maximum CO emission (a single number), and</li>
-<li>the area under the CO emission curve (AUC) over the 300-mile drive (a single number).</li>
-</ul>
-<section id="a.-sketch-a-design-blueprint" class="level2">
-<h2 class="anchored" data-anchor-id="a.-sketch-a-design-blueprint">a. Sketch a Design Blueprint</h2>
-<p><em>Include image of sketch here</em></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/ijZxpent9rs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="b.-describe-the-following" class="level2">
-<h2 class="anchored" data-anchor-id="b.-describe-the-following">b. Describe the following:</h2>
-<ul>
-<li>Treatment structure</li>
-</ul>
-<ul>
-<li>Design structure</li>
-</ul>
-<ul>
-<li>Response variable(s)</li>
-</ul>
-<div class="version-solution">
-<ul>
-<li><p>Treatment structure</p>
-<ul>
-<li>Name: one way</li>
-<li>Factor: (%) of polyether amine dispersant additive</li>
-<li>Levels: 2%, 3%, 4%, 5%, and 6%</li>
-<li>t = 5</li>
-</ul></li>
-<li><p>Design structure</p>
-<ul>
-<li>Randomization: CRD</li>
-<li>e.u.: one vehicle</li>
-<li>r = 4</li>
-<li>m.u.= one vehicle</li>
-<li>N = n = 20</li>
-</ul></li>
-<li><p>Response variable(s)</p>
-<ul>
-<li>maximum CO emission (a single number) over the 300-mile drive</li>
-<li>the area under the CO emission curve (AUC) over the 300-mile drive.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="c.-inclusion-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="c.-inclusion-criteria">c.&nbsp;Inclusion Criteria</h2>
-<p>To reduce variability in CO emissions that is unrelated to the additive, researchers may restrict which vehicles are eligible for the study. Provide <strong>two reasonable inclusion criteria</strong> for the experimental units (vehicles) that could reduce variability in the response.</p>
-<div class="version-instructions">
-
-</div>
-<div class="version-solution">
-<ul>
-<li>Year 2021-2026</li>
-<li>Less than 100k miles</li>
-<li>Same model (e.g., SUV)</li>
-<li>Only gas cars</li>
-</ul>
-</div>
-</section>
-<section id="d.-statistical-limitation-of-inclusion-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="d.-statistical-limitation-of-inclusion-criteria">d.&nbsp;Statistical Limitation of Inclusion Criteria</h2>
-<p>Explain, in the context of this study, one statistical limitation of using strict inclusion criteria such as those described in the previous question. Your explanation should address how inclusion criteria affect the interpretation or scope of the study results.</p>
-<div class="version-instructions">
-
-</div>
-<div class="version-solution">
-<p><em>Using too strict of inclusion criteria will limit what/who your results can apply to. If you only choose Toyota camrys to be in your study, then that is the only car you can generalize your results to!</em></p>
-</div>
-</section>
-<section id="e.-other-sources-of-variability" class="level2">
-<h2 class="anchored" data-anchor-id="e.-other-sources-of-variability">e. Other Sources of Variability</h2>
-<p>Besides variability introduced by differences between vehicles, describe <strong>two other sources of variability</strong> in CO emissions that could reasonably be controlled or standardized during this study. Briefly explain how each source could be controlled.</p>
-<div class="version-instructions">
-
-</div>
-<div class="version-solution">
-<ul>
-<li>the route
-<ul>
-<li>type of road (freeway, gravel, city..)</li>
-<li>the terrain (hilly, flat)</li>
-</ul></li>
-<li>fuel type</li>
-<li>driver</li>
-</ul>
-</div>
-</section>
-<section id="f.-sources-of-variability-table" class="level2">
-<h2 class="anchored" data-anchor-id="f.-sources-of-variability-table">f.&nbsp;Sources of Variability Table</h2>
-<p>Fill out a sources of variability table (see 1.2 slides), summarizing your answers to c and e (plus the response variable from b). Add some potential sources of unexplained variation in the response.</p>
-<div class="version-instructions">
-<p><em>Include table here</em></p>
-</div>
-<div class="version-solution">
-<p><img src="../_images/1.2-var-table.png" class="img-fluid"></p>
-</div>
-</section>
-<section id="g.-reflection" class="level2">
-<h2 class="anchored" data-anchor-id="g.-reflection">g. Reflection</h2>
-<p>Suppose the researchers use very strict inclusion criteria so that all vehicles in the study are nearly identical.</p>
-<p>Briefly discuss how this choice would affect:</p>
-<ul>
-<li>variability in the response,</li>
-<li>the ability to detect differences among additive levels, and</li>
-<li>the generalizability of the study conclusions.</li>
-</ul>
-<div class="version-solution">
-<p><em>If all vehicles are nearly identical then, there would presumably be very little variability in the response – CO that isn’t due to the explained variability from the additive level. This would make it easier todetect differences among additive levels. However, the study would only be generalized to that exact kind of car, so the results are not necessarily that useful.</em></p>
-</div>
-</section>
-</section>
-<section id="scenario-observational-study-vs-designed-experiment" class="level1">
-<h1>2 Scenario: Observational Study vs Designed Experiment</h1>
-<p>The following was the headline for an article published on <em>ScienceDaily</em> (January 4, 2016):</p>
-<blockquote class="blockquote">
-<p><strong>“People who have a higher sense of purpose in life are at lower risk of death and death from a cardiovascular event.”</strong><br>
-(<em>Psychosomatic Medicine: Journal of Biobehavioral Medicine</em>)</p>
-</blockquote>
-<p>The article in science daily was referencing a study<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> which reported that 136,000 subjects (average age 67) were followed for an average of 7 years. During that time, 14,500 participants died from any cause and 4,000 died from a cardiovascular event.</p>
-<p>At the beginning of the study period, participants completed a questionnaire designed to measure their sense of purpose in life. Individuals were then classified as having either a low or high sense of purpose.</p>
-<p>Depending on how it is read, the headline could be interpreted as suggesting that a higher sense of purpose <em>causes</em> a lower risk of death. However, the study design does not support a causal conclusion.</p>
-<section id="a.-extraneous-variables" class="level2">
-<h2 class="anchored" data-anchor-id="a.-extraneous-variables">a. Extraneous Variables</h2>
-<p>List <strong>three extraneous variables</strong> that may influence whether a person dies from a cardiovascular event.</p>
-<blockquote class="blockquote">
-<p><em>Note:</em> Sense of purpose is <strong>not</strong> an extraneous variable in this study, it is the explanatory variable.</p>
-</blockquote>
-<div class="version-solution">
-<ul>
-<li>genetics</li>
-<li>whether they smoke</li>
-<li>how much physical activity they engage in</li>
-<li>age</li>
-</ul>
-</div>
-</section>
-<section id="b.-confounding" class="level2">
-<h2 class="anchored" data-anchor-id="b.-confounding">b. Confounding</h2>
-<p>Choose <strong>one</strong> extraneous variable from part (b) and explain how it could act as a <strong>confounding variable</strong> in this study.</p>
-<p>Your explanation should clearly describe how this variable is related to:</p>
-<ul>
-<li>sense of purpose, and</li>
-<li>cardiovascular mortality.</li>
-</ul>
-<div class="version-solution">
-<p><em>We know that genetics influences people’s mental health conditions, so reasonably sense of purpose could be related to genetics in some way. We also know that propensity for certain diseases is related to genetics, so cardiovascular mortality may be related to genetics in some way.</em></p>
-</div>
-</section>
-<section id="c.-why-an-experiment-is-not-feasible" class="level2">
-<h2 class="anchored" data-anchor-id="c.-why-an-experiment-is-not-feasible">c.&nbsp;Why an Experiment Is Not Feasible</h2>
-<p>Suppose researchers wanted to design an experiment to support the causal claim:</p>
-<blockquote class="blockquote">
-<p>“A higher sense of purpose causes a lower risk of cardiovascular death.”</p>
-</blockquote>
-<p>Explain why designing such an experiment is <em>practically impossible</em>.</p>
-<div class="version-solution">
-<p><em>You clearly cannot manipulate the treatment – a person’s sense of purpose (even if you could think of a way, it would absolutely not be ethical!).</em></p>
-</div>
+<section id="r-tips" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="r-tips"><span class="header-section-number">2</span> R Tips</h2>
+<p>If you are struggling a bit with R so far, please watch this video!</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/GAWBuyq5HIk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 </section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Cohen R, Bavishi C, Rozanski A. Purpose in life and its relationship to all-cause mortality and cardiovascular events: a meta-analysis. Psychosom Med. 2016;78:122–33.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
