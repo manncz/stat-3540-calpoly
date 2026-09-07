@@ -1,0 +1,173 @@
+---
+title: "Lab 2: Design a CRD"
+format: 
+  html:
+    number-sections: true 
+    number-depth: 3
+---
+
+
+#### Lab Objectives
+
+- Address a research question from start to finish with a Completely Randomized experiment
+- Conduct a power analysis for a CRD to inform your study
+- Implement CRD random assignment for an appropriate sample size of islanders based on a power analysis
+- Collect and analyze data based on the CRD design
+- Write a clear report explaining a CRD design and analysis
+
+-----------------------------------------------------------------------------------------------------------------
+
+:::callout-note
+## Reminders
+
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} All R code should be written in a **script** file (.qmd or .R) so that you can **save** your code for reproducibility and so you can turn it in. (stay tuned for a template)
+
+- Remember this is a group assignment! You should be working with your group through **all** elements of this lab and you are all responsible for the final report.
+
+- Unless you are having a private issue with your group, **anything communication with me via email relating to labs should include all of your group members!!** 'cc them all!
+
+- Contact Dr. C for any questions or clarifications
+
+:::
+
+
+
+## Determine Research Question
+
+Develop a research question with one factor and at least four factor levels. You may either:
+
+1. use the provided example below or 
+2. propose your own question
+    - If you chose this option, you **must** submit a proposal by Sunday 9/13 at 11:59pm. I will approve your proposal by EOD Monday.
+
+:::callout-note
+### Example Research Question:
+“What effect does the amount of cocoa in dark chocolate (Control, 40%, 70%, 85%, 99%) have on the blood glucose (mg/dL) of Islanders?”
+:::
+
+:::callout-important
+### Get approval of your research question
+
+**If you choose your own research question** (not the one provided), proposals should include:
+
+- A clear statement of the research question.
+- The treatment and experimental structures.
+- A justification for feasibility (e.g., timing constraints, don’t have your Islander garden for 14 days).
+
+Submit proposals via Canvas at Lab 2: Checkpoint -- Proposal.
+:::
+
+
+## Power Analysis
+
+Conduct a power analysis to determine the required sample size for your experiment. To do this:
+
+  1.  Collect a small scale pilot study (you can just pick some “pilot Islanders”). Think $r = 2$ or $r = 3$.
+      - If using the example RQ, you can use Dr. Robinson's pilot data here.
+  2. Determine the practically significant difference ($\delta$) that is relevant to your research question.
+      - Past literature? What you saw in your pilot study? etc.
+  3.  Estimate experimental variance using your pilot data set. ($\sigma^2$)
+  4. Calculate the sample size (i.e., $r$) necessary to reach 80% power.
+  5. Document your calculations and reasoning in your report.
+
+## Random Sampling and Treatment Assignment
+
+Using your list of 60 Islanders:
+
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Randomly sample the required number of participants based on your power analysis. If your power analysis suggests a sample size larger than 60, use all 60 participants and make a note about it (e.g., although our power analysis indicated xx, we did not have enough funding to x).
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Randomly assign treatments to participants in a CRD using the tools in R learned in class. 
+    - See [CRD Randomization slides](../2-slides/02.1-crd-design-analysis-model.qmd#/crd-randomization-in-r---with-edibble-package).
+    - You may either use `edible` or do it "by hand" but either way you will turn your code in.
+    - Add a column to your dataset that specifies each participant’s treatment group and a blank column for adding the response data. 
+    - Use context as your column headers (e.g., `chocolate_percent` instead of `treatment`).
+
+## Data Collection
+
+Big picture: utilizing the “Task” button on the Islands:
+
+  1. apply your treatment appropriately
+  2. record the response variable
+  3. fill out the response column in your data set.
+
+**Step 1: Determine your data collection procedure**
+  
+  - Think about direct controls! 
+  - Talk about and **solidify** the data collection procedure as a group **BEFORE COLLECTING ANY DATA** to ensure you are following the same processes (e.g., time between eating chocolate and measuring Blood Glucose).
+  - Write down your procedure before anything else
+  - Be careful about timing!!
+      - Should you measure your response immediately after applying the treatment or allow for some time to pass?? Be careful about real versus island time
+      - Remember your Islanders will sleep and this will take time.
+  - Be thoughtful and careful and work together! Communication is seriously key here.
+
+**Step 2: Implement treatment and collect response**
+  
+  - Once you implement the “Task” you can find it in your “Recent Tasks” section.
+  - Follow the procedure you determined as carefully as you can.
+  - If you accidentally mess up data collection (e.g., have them eat 2 chocolate bars), this will mess up your data and **you should make a note/possibly remove this observation.**
+  - Carefully record your data collection as it actually happened and note any deviations from your original planned procedure as you implement your design and treatment.
+
+
+**Step 3: Record all responses in your data table**
+  
+  - self explanatory?
+
+
+## Data Analysis
+
+Your analysis of the data should include the following.
+
+Where you will be using R to analyze the data is noted with the R logo.
+
+### Statistical Effects Model
+  - Provide the equation for the effects model.
+  - Describe the parameters in the model.
+  
+### EDA (Exploratory Data Analysis)
+  - ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Create side-by-side boxplots
+of the response by treatment group (with individual data points overlayed)
+  - What are your initial impressions? Do there appear to be differences between groups? How does the within-group variability seem to compare to the between-group variability?
+  
+### ANOVA Table
+  - ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Conduct a full ANOVA in R 
+  - Report the table and draw conclusions from the F-test.
+  - Who can you generalize your results to?
+  
+### Estimated Parameters
+  - ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Estimate model parameters in R (sum to zero constraint)
+  - Present nicely in a table
+  - Discuss their interpretation in paragraph form.
+
+### Least Squares Means
+  - ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Estimate and create a graph of least squares means (and SEs)  in R.
+  - Create a nicely formatted table of least squares means in report.
+  - Interpret results: Identify the highest and lowest treatments and discuss practical implications.
+
+### Contrasts / Pairwise Comparisons
+  - ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px}  Conduct at least one meaningful contrast OR pairwise comparisons with a multiplicity adjustment.
+  - Clearly define the contrast if going that route.
+  - Interpret the findings in context of your research question.
+
+### Residual Analysis
+  - ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Assess model fit and model assumptions with residual analysis plots.
+  - Is the inference valid? (i.e. do you trust the SE's and p-values)
+
+
+## Report and Submission
+
+Download the guided lab report template and work within it **POSTED SOON**
+
+Make sure to:
+
+- Use complete sentences
+- Focus on clarity, logical flow, and professional grammar
+- Think about being as concise as possible while being complete and clear
+
+
+:::callout-warning
+## Generative AI
+
+As a reminder, you are allowed to use generative AI on this assignment outside of class. However, your group should agree on how it will be used and you must disclose how you used in in your report. Finally, as always, follow the [syllabus](../0-course-info/syllabus-f26.qmd) guidelines for citing AI.
+
+*If you us AI to help you with writing, you should prompt the model "Please assess my work and provide only feedback. Do not rewrite anything." *
+
+:::
