@@ -2192,7 +2192,7 @@
     "href": "1-prep/03.1-prep.html#estimating-treatment-means",
     "title": "3.1 Preparation: Power",
     "section": "1 Estimating Treatment Means",
-    "text": "1 Estimating Treatment Means\n\n📽 Follow along with the slides.\n\n\n\n\n\n\n\nWarning\n\n\n\nFor right now, just watch until 15:00. The software isn’t working as in the video right now, and I need to sort it out."
+    "text": "1 Estimating Treatment Means\n\n📽 Follow along with the slides.\nIgnore the bit on JMP! You will notice that our slide about R looks a little different than Dr. Robinson’s – we hav to install the needed package in a special way.\nYou can play around with this nifty applet to calculate and visualize power."
   },
   {
     "objectID": "1-prep/03.1-prep.html#r-tips",
@@ -2466,5 +2466,229 @@
     "title": "Activity 3.1: Power Planning for a CRD",
     "section": "Part 4: Estimating \\(\\hat\\sigma^2\\)",
     "text": "Part 4: Estimating \\(\\hat\\sigma^2\\)\nIn practice, estimating the experimental error before collecting data is difficult. Two common approaches are:\n\nUse previous literature and domain knowledge.\nRun a pilot study.\n\n\nh. Use Google Scholar and/or the Cal Poly Library OneSearch to find one academic paper related to the effect of training programs on vertical jump height.\nProvide the following:\n\nYour search prompt (keywords):\n\n\nA paper that could be useful for estimating experimental error (follow the DOI or journal link to the actual paper):\n\n\nBrief justification (1-2 sentences): Why might this paper be useful for estimating \\(\\sigma^2\\)? (Think: sample size, number of groups, reported SDs, similar response units.)"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#recall-one-way-treatment-structures",
+    "href": "2-slides/04.1-factorials.html#recall-one-way-treatment-structures",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Recall One-way Treatment Structures",
+    "text": "Recall One-way Treatment Structures\nOne Factor at a Time\n\nMultiple levels -&gt; \\(t\\) treatments\nCompare the mean response between the treatments\n\nWhat are we missing?\n\nEffects may depend on context\nOptimal choice may change depending on that context\nOne factor doesn’t always tell the full story"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#example-4.1-blood-pressure",
+    "href": "2-slides/04.1-factorials.html#example-4.1-blood-pressure",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Example 4.1: Blood Pressure",
+    "text": "Example 4.1: Blood Pressure\n\nIncidence of high blood pressure in the United States continues to rise, and optimal strategies for treatment remain an open question. Most physicians agree that effective treatment likely involves a combination of lifestyle changes and medication, rather than relying on a single approach.\nResearchers plan to study middle-aged U.S. women with moderate hypertension who are otherwise healthy (i.e., eating a standard diet and not taking regular medications).\nGoal: Identify optimal combinations of diet and medication for lowering and maintaining blood pressure as measured by the change in blood pressure (mmHg) for each participant."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#example-4.1-blood-pressure-1",
+    "href": "2-slides/04.1-factorials.html#example-4.1-blood-pressure-1",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Example 4.1: Blood Pressure",
+    "text": "Example 4.1: Blood Pressure\n\n\nDiet (2 levels):\n\nMediterranean diet (low sodium, low fat)\nStandard American diet\n\n\nMedication (4 levels):\n\nDiuretic (D): flushes excess water and salt\nACE inhibitor: widens blood vessels\nBeta blocker (BB): reduces heart and vessel signaling\nPlacebo (P)\n\n\n\n200 volunteers who meet the study inclusion criteria are recruited."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#study-design-a-a-common-first-attempt",
+    "href": "2-slides/04.1-factorials.html#study-design-a-a-common-first-attempt",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Study Design A (A common first attempt)",
+    "text": "Study Design A (A common first attempt)\n\n\n\nFirst, 100 participants are randomly assigned to one of two diets (50 Mediterranean, 50 Standard American).\nSeparately, 100 participants are randomly assigned to one of four medications (25 per medication)."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#study-design-a-a-common-first-attempt-1",
+    "href": "2-slides/04.1-factorials.html#study-design-a-a-common-first-attempt-1",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Study Design A (A common first attempt)",
+    "text": "Study Design A (A common first attempt)\nResearchers then find:\n\nThe Mediterranean diet lowers blood pressure, on average.\nACE inhibitors lower blood pressure more than other medications, on average.\n\nIs the optimal strategy to recommend the Mediterranean diet and ACE inhibitors together?"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#study-design-b-a-full-factorial",
+    "href": "2-slides/04.1-factorials.html#study-design-b-a-full-factorial",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Study Design B (A full factorial)",
+    "text": "Study Design B (A full factorial)\nEach participant is randomly assigned to one combination of:\n\n\n\nDiet (2 levels)\nMedication (4 levels)\n\n\n\n\n\n\n\n\n\n\n\n\nThis results in t = _____ treatment combinations, with r = _____ participants per combination.\nWhat can we learn from Design B that we can’t from Design A?"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#full-factorial-a-times-btimes-c-times-...",
+    "href": "2-slides/04.1-factorials.html#full-factorial-a-times-btimes-c-times-...",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Full Factorial \\((a \\times b\\times c \\times ...)\\)",
+    "text": "Full Factorial \\((a \\times b\\times c \\times ...)\\)\n\n\n\n\n\n\nDefinition: Full Factorial \\((a \\times b\\times c \\times ...)\\)\n\n\nA full factorial treatment structure (e.g., 2x2x2, 3x2 or 2x2, etc.) is a study in which there are two or more factors. Each factor will have at least two levels. The factor levels are combined to create the treatments (or treatment combinations).\n\n\n\nExample: 2 diets x 4 medications\n\n_____ x _______ full factorial\n\nExample (Extended): 2 diets x 4 medications x 2 exercise routines\n\n_____ x _______ x _______ full factorial"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#treatment-structure-for-a-full-factorial",
+    "href": "2-slides/04.1-factorials.html#treatment-structure-for-a-full-factorial",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Treatment Structure for a Full Factorial",
+    "text": "Treatment Structure for a Full Factorial\n\nName:\nFactors:\nLevels:\nt = _____ with Treatments:\n\nA 2 x 4 full factorial with factors Diet (2 levels - Standard American, Mediterranean) and Medication (4 levels - Diuretic, ACE inhibitor, Beta blocker, and Placebo) for a total of t = 8 treatment combinations (e.g., Standard American x Diuretic, Standard American x ACE, …, Mediterranean x Placebo)."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#experimental-structure-for-a-full-factorial",
+    "href": "2-slides/04.1-factorials.html#experimental-structure-for-a-full-factorial",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Experimental Structure for a Full Factorial",
+    "text": "Experimental Structure for a Full Factorial\n\nName:\nExperimental units: r = _____\nMeasurement unit:\n\nDiet and Medication treatment combinations are assigned to middle-aged U.S. women with moderate hypertension who are otherwise healthy (e.u.) in a CRD with r = 25. The change in blood pressure (mmHg) is measured for each woman in the study (m.u.)."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#create-a-full-factorial-crd-in-r",
+    "href": "2-slides/04.1-factorials.html#create-a-full-factorial-crd-in-r",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Create a Full Factorial CRD in R",
+    "text": "Create a Full Factorial CRD in R\n\n\nlibrary(edibble)\nlibrary(tidyverse)\n\ndes &lt;- design(name = \"BP 2 x 4 Full Facotrial CRD\") |&gt; \n  set_units(woman = 200) |&gt;                  \n  set_trts(Diet = c(\"Standard American\", \n                    \"Mediterranean\"),\n           Medication = c(\"Diuretic\", \n                          \"ACE\", \n                          \"Beta blocker\", \n                          \"Placebo\")\n           ) |&gt; \n  allot_trts(Diet*Medication ~ woman) |&gt;                \n  assign_trts(\"random\")  \n\nfactorial_table &lt;- serve_table(des)\nfactorial_table$change_bp &lt;- NA\n\nhead(factorial_table)\n\n\n# An edibble: 6 x 4\n     woman              Diet   Medication change_bp\n  &lt;U(200)&gt;            &lt;T(2)&gt;       &lt;T(4)&gt;          \n     &lt;chr&gt;             &lt;chr&gt;        &lt;chr&gt; &lt;lgl&gt;    \n1 woman001 Standard American          ACE NA       \n2 woman002     Mediterranean          ACE NA       \n3 woman003     Mediterranean     Diuretic NA       \n4 woman004     Mediterranean Beta blocker NA       \n5 woman005 Standard American     Diuretic NA       \n6 woman006     Mediterranean Beta blocker NA"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#example-4.2-bakery",
+    "href": "2-slides/04.1-factorials.html#example-4.2-bakery",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Example 4.2: Bakery",
+    "text": "Example 4.2: Bakery\n\nA bakery supplied Italian bread to a large number of supermarkets in a metropolitan area. An experiment was conducted to investigate the effects of the height of the shelf display (bottom, middle, or top) and the width of the shelf display (regular vs. wide) on the sales of this bakery’s bread. Twelve supermarkets, similar in terms of sales volume and clientele, were used in this study. The six treatment combinations were assigned at random to two stores, each according to a completely randomized design."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#study-design",
+    "href": "2-slides/04.1-factorials.html#study-design",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Study Design",
+    "text": "Study Design\n\n\nTreatment Structure\nA 3 x 2 full factorial with factors Shelf Height (3 levels - Bottom, Middle, Top) and Shelf Width (2 levels - Regular, Wide) for a total of t = 6 treatment combinations.\nDesign Structure\nShelf height and width treatment combinations are assigned to supermarket stores (e.u.) in a CRD with r = 2. The sales (number of bakery’s bread) are measured for each supermarket store (m.u.)."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#notation-y_ijk",
+    "href": "2-slides/04.1-factorials.html#notation-y_ijk",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Notation – \\(y_{ijk}\\)",
+    "text": "Notation – \\(y_{ijk}\\)\n\n\n\n\n\n\nNote\n\n\nSince we added a factor, we add an index to denote our observations. Let \\(y_{ijk}\\) denote the observed response for the \\(k^{th}\\) experimental unit given the \\(i^{th}\\) level of Factor A and the \\(j^{th}\\) level of Factor B.\n\n\n\nExample 4.2: \\(y_{ijk}\\) denotes the observed number of bread sales at the \\(k^{th}\\) supermarket store given the \\(i^{th}\\) shelf height and \\(j^{th}\\) shelf width."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#mean-sales-for-each-treatment-combination",
+    "href": "2-slides/04.1-factorials.html#mean-sales-for-each-treatment-combination",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Mean sales for each treatment combination",
+    "text": "Mean sales for each treatment combination\n\n\n\n\n\n\n\n\n\n\nRegular\n(j = 1)\nWide\n(j = 2)\nHeight Means\n\\(\\mu_{i \\cdot} \\rightarrow \\bar y_{i\\cdot\\cdot}\\)\n\n\n\n\nBottom (i = 1)\n\\(\\mu_{11} \\rightarrow \\bar y_{11\\cdot}=45\\)\n\\(\\mu_{12} \\rightarrow \\bar y_{12\\cdot}=43\\)\n\\(\\mu_{1\\cdot} \\rightarrow \\bar y_{1\\cdot\\cdot}=\\)\n\n\nMiddle (i = 2)\n\\(\\mu_{21} \\rightarrow \\bar y_{21\\cdot}=65\\)\n\\(\\mu_{22} \\rightarrow \\bar y_{22\\cdot}=69\\)\n\\(\\mu_{2\\cdot} \\rightarrow \\bar y_{2\\cdot\\cdot}=\\)\n\n\nTop (i = 3)\n\\(\\mu_{31} \\rightarrow \\bar y_{31\\cdot}=40\\)\n\\(\\mu_{32} \\rightarrow \\bar y_{32\\cdot}=44\\)\n\\(\\mu_{3\\cdot} \\rightarrow \\bar y_{3\\cdot\\cdot}=\\)\n\n\nWidth means \\(\\mu_{\\cdot j} \\rightarrow \\bar y_{\\cdot j\\cdot}\\)\n\\(\\mu_{\\cdot 1} \\rightarrow \\bar y_{\\cdot 1\\cdot}=\\)\n\\(\\mu_{\\cdot 2} \\rightarrow \\bar y_{\\cdot 2\\cdot}=\\)\n\\(\\mu \\rightarrow \\bar y_{\\cdot\\cdot\\cdot}=\\)"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#interaction-plot-of-mean-sales",
+    "href": "2-slides/04.1-factorials.html#interaction-plot-of-mean-sales",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Interaction Plot of Mean Sales",
+    "text": "Interaction Plot of Mean Sales\n We will revisit these!"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#simple-effects",
+    "href": "2-slides/04.1-factorials.html#simple-effects",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Simple Effects",
+    "text": "Simple Effects\n\n\n\n\n\n\nNote\n\n\nA contrast comparing levels of one factor at a fixed level of the other factor.\n“Hold one factor constant.”"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#simple-effect-between-width-height-bottom",
+    "href": "2-slides/04.1-factorials.html#simple-effect-between-width-height-bottom",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Simple Effect: Between Width | Height = Bottom",
+    "text": "Simple Effect: Between Width | Height = Bottom\n What contrast measures the difference in sales between Regular and Wide shelves when they are placed at the Bottom? \n\n\n\n\n\n\nRegular\nWide\n\n\n\n\nBottom\n\n\n\n\nMiddle\n\n\n\n\nTop\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \\(C = \\_\\_\\_\\ \\mu_{11} + \\_\\_\\_\\ \\mu_{21} + \\_\\_\\_\\ \\mu_{31}  + \\_\\_\\_\\ \\mu_{12}  + \\_\\_\\_\\ \\mu_{22}  + \\_\\_\\_\\ \\mu_{32}\\)\n\\(\\hat C =\\) \nAt Bottom, Regular shelves average 2 more sales than Wide."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#simple-effects-between-width-height",
+    "href": "2-slides/04.1-factorials.html#simple-effects-between-width-height",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Simple Effects: Between Width | Height",
+    "text": "Simple Effects: Between Width | Height\n\n\n\n\n\n\n\n\n\n\n\n\n\nBottom: \\(\\mu_{11} - \\mu_{12} = 45-43=2\\)\nMiddle: \\(\\mu_{21} - \\mu_{22} = 65-69=-4\\)\nTop: \\(\\mu_{31} - \\mu_{32}=40-44=-4\\)\n\nAre these the same across heights?"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#simple-effect-height-b-v-m-regular",
+    "href": "2-slides/04.1-factorials.html#simple-effect-height-b-v-m-regular",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Simple Effect: Height (B v M) | Regular",
+    "text": "Simple Effect: Height (B v M) | Regular\n What contrast measures the difference in sales between the Bottom and Top shelf when they both Regular?  \n\n\n\n\n\n\nRegular\nWide\n\n\n\n\nBottom\n\n\n\n\nMiddle\n\n\n\n\nTop\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \\(C = \\_\\_\\_\\ \\mu_{11} + \\_\\_\\_\\ \\mu_{21} + \\_\\_\\_\\ \\mu_{31}  +\\_\\_\\_\\ \\mu_{12}  + \\_\\_\\_\\ \\mu_{22}  + \\_\\_\\_\\ \\mu_{32}\\)\n\\(\\hat C =\\) \nFor Regular shelves, the Bottom shelves average 20 fewer sales than Middle shelves"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#main-effects",
+    "href": "2-slides/04.1-factorials.html#main-effects",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Main Effects",
+    "text": "Main Effects\n\n\n\n\n\n\nNote\n\n\nA contrast comparing levels of one factor averaged over the other factor.\n“Average first, then compare.”"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#main-effects-height",
+    "href": "2-slides/04.1-factorials.html#main-effects-height",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Main Effects: Height",
+    "text": "Main Effects: Height\n Do you think bottom, middle, or top shelves have more sales?"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#main-effects-height-1",
+    "href": "2-slides/04.1-factorials.html#main-effects-height-1",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Main Effects: Height",
+    "text": "Main Effects: Height\n Do you think bottom or top shelves have more sales?  \n\n\n\n\n\n\nRegular\nWide\n\n\n\n\nBottom\n\n\n\n\nMiddle\n\n\n\n\nTop\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \\(C = \\_\\_\\_\\ \\mu_{11} + \\_\\_\\_\\ \\mu_{21} + \\_\\_\\_\\ \\mu_{31}  +\\_\\_\\_\\ \\mu_{12}  + \\_\\_\\_\\ \\mu_{22}  + \\_\\_\\_\\ \\mu_{32}\\)\n\\(\\hat C =\\) \nOn average, bottom shelves sell 2 more loaves than top shelves."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#main-effects-width",
+    "href": "2-slides/04.1-factorials.html#main-effects-width",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Main Effects: Width",
+    "text": "Main Effects: Width\n Do you think regular or wide shelves have more sales?"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#main-effects-width-1",
+    "href": "2-slides/04.1-factorials.html#main-effects-width-1",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Main Effects: Width",
+    "text": "Main Effects: Width\n Do you think regular or wide shelves have more sales? \n\n\n\n\n\n\nRegular\nWide\n\n\n\n\nBottom\n\n\n\n\nMiddle\n\n\n\n\nTop\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \\(C = \\_\\_\\_\\ \\mu_{11} + \\_\\_\\_\\ \\mu_{21} + \\_\\_\\_\\ \\mu_{31}  +\\_\\_\\_\\ \\mu_{12}  + \\_\\_\\_\\ \\mu_{22}  + \\_\\_\\_\\ \\mu_{32}\\)\n\\(\\hat C =\\) \nOn average, wide shelves sell 2 more loaves than regular shelves."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#interaction-effects",
+    "href": "2-slides/04.1-factorials.html#interaction-effects",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Interaction Effects",
+    "text": "Interaction Effects\n\n\n\n\n\n\nNote\n\n\nWhen the difference between two levels of one factor is not the same at all levels of the other. The difference between two levels of a factor depends on the level of the other factor.\n“Interaction = difference of differences”"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#interaction-effects-r-v-w-bottom---r-v-w-middle",
+    "href": "2-slides/04.1-factorials.html#interaction-effects-r-v-w-bottom---r-v-w-middle",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Interaction Effects: (R v W | Bottom) - (R v W | Middle)",
+    "text": "Interaction Effects: (R v W | Bottom) - (R v W | Middle)\n Do you think the difference in mean sales between Regular and Wide shelves is the same given the Bottom shelf as it is given the Middle shelf? \n\n\n\n\n\n\nRegular\nWide\n\n\n\n\nBottom\n\n\n\n\nMiddle\n\n\n\n\nTop\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \\(C = \\_\\_\\_\\ \\mu_{11} + \\_\\_\\_\\ \\mu_{21} + \\_\\_\\_\\ \\mu_{31}  +\\_\\_\\_\\ \\mu_{12}  + \\_\\_\\_\\ \\mu_{22}  + \\_\\_\\_\\ \\mu_{32}\\)\n\\(\\hat C =\\) \nThe increase in sales achieved by using a Wide shelf instead of a Regular shelf is 6 loaves greater for the Middle as compared to the Bottom."
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#interaction-plot-of-mean-sales-1",
+    "href": "2-slides/04.1-factorials.html#interaction-plot-of-mean-sales-1",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Interaction Plot of Mean Sales",
+    "text": "Interaction Plot of Mean Sales\n We often view graphics to investigate interaction effects"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#interaction-plots",
+    "href": "2-slides/04.1-factorials.html#interaction-plots",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Interaction Plots",
+    "text": "Interaction Plots"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#create-a-full-factorial-crd-in-r-with-edible-package",
+    "href": "2-slides/04.1-factorials.html#create-a-full-factorial-crd-in-r-with-edible-package",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Create a Full Factorial CRD in R with edible package",
+    "text": "Create a Full Factorial CRD in R with edible package\n\n\nlibrary(edibble)\nlibrary(tidyverse)\n\ndes &lt;- design(name = \"BP 2 x 4 Full Facotrial CRD\") |&gt; \n  set_units(indv = 200) |&gt;                  \n  set_trts(Diet = c(\"Standard American\", \n                    \"Mediterranean\"),\n           Medication = c(\"Diuretic\", \n                          \"ACE\", \n                          \"Beta blocker\", \n                          \"Placebo\")\n           ) |&gt; \n  allot_trts(Diet*Medication ~ indv) |&gt;                \n  assign_trts(\"random\")  \n\nfactorial_table &lt;- serve_table(des)\nfactorial_table$change_bp &lt;- NA\n\nhead(factorial_table)\n\n\n# An edibble: 6 x 4\n      indv              Diet   Medication change_bp\n  &lt;U(200)&gt;            &lt;T(2)&gt;       &lt;T(4)&gt;          \n     &lt;chr&gt;             &lt;chr&gt;        &lt;chr&gt; &lt;lgl&gt;    \n1  indv001     Mediterranean Beta blocker NA       \n2  indv002 Standard American Beta blocker NA       \n3  indv003 Standard American      Placebo NA       \n4  indv004 Standard American Beta blocker NA       \n5  indv005 Standard American Beta blocker NA       \n6  indv006     Mediterranean          ACE NA"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#create-a-full-factorial-crd-in-r-by-hand",
+    "href": "2-slides/04.1-factorials.html#create-a-full-factorial-crd-in-r-by-hand",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Create a Full Factorial CRD in R “by hand”",
+    "text": "Create a Full Factorial CRD in R “by hand”\n\n# number of replications (e.u.s per treatment)\nr &lt;- 25\n\n# vector of factor levels for first factor\ndiets &lt;- c(\"Standard American\", \"Mediterranean\")\n\n# vector of factor levels for second factor\nmedications &lt;- c(\"Diuretic\", \"ACE\", \n                 \"Beta blocker\", \"Placebo\")\n\n# create a dataset with t rows -- one for every treatment combo\ntreats &lt;- tidyr::crossing(diets, medications) |&gt; \n  unite(col = treatment, everything(), \n        remove = F, sep = \" + \") # create a new treatment column\n\ntreats \n\n# A tibble: 8 × 3\n  treatment                        diets             medications \n  &lt;chr&gt;                            &lt;chr&gt;             &lt;chr&gt;       \n1 Mediterranean + ACE              Mediterranean     ACE         \n2 Mediterranean + Beta blocker     Mediterranean     Beta blocker\n3 Mediterranean + Diuretic         Mediterranean     Diuretic    \n4 Mediterranean + Placebo          Mediterranean     Placebo     \n5 Standard American + ACE          Standard American ACE         \n6 Standard American + Beta blocker Standard American Beta blocker\n7 Standard American + Diuretic     Standard American Diuretic    \n8 Standard American + Placebo      Standard American Placebo     \n\n\n\n\nError:\n! object 'rand' not found\n\n\n\n\nError in `kable()`:\n! could not find function \"kable\""
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#create-a-full-factorial-crd-in-r-by-hand-step-1",
+    "href": "2-slides/04.1-factorials.html#create-a-full-factorial-crd-in-r-by-hand-step-1",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Create a Full Factorial CRD in R “by hand”: Step 1",
+    "text": "Create a Full Factorial CRD in R “by hand”: Step 1\n\n\n\n# number of replications (e.u.s per treatment)\nr &lt;- 25\n\n# vector of factor levels for first factor\ndiets &lt;- c(\"Standard American\", \"Mediterranean\")\n\n# vector of factor levels for second factor\nmedications &lt;- c(\"Diuretic\", \"ACE\", \n                 \"Beta blocker\", \"Placebo\")\n\n# create a dataset with t rows -- \n# one for every treatment combo\ntreats &lt;- crossing(diets, medications) |&gt; \n  unite(col = treatment, everything(), \n        remove = F, sep = \" + \") # create a new treatment column\n\n\n\n\n\n\n\ntreatment\ndiets\nmedications\n\n\n\n\nMediterranean + ACE\nMediterranean\nACE\n\n\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\n\n\nMediterranean + Diuretic\nMediterranean\nDiuretic\n\n\nMediterranean + Placebo\nMediterranean\nPlacebo\n\n\nStandard American + ACE\nStandard American\nACE\n\n\nStandard American + Beta blocker\nStandard American\nBeta blocker\n\n\nStandard American + Diuretic\nStandard American\nDiuretic\n\n\nStandard American + Placebo\nStandard American\nPlacebo"
+  },
+  {
+    "objectID": "2-slides/04.1-factorials.html#create-a-full-factorial-crd-in-r-by-hand-step-2",
+    "href": "2-slides/04.1-factorials.html#create-a-full-factorial-crd-in-r-by-hand-step-2",
+    "title": "Module 4: Factorial Treatment Structure",
+    "section": "Create a Full Factorial CRD in R “by hand”: Step 2",
+    "text": "Create a Full Factorial CRD in R “by hand”: Step 2\n\nbp_factorial_design &lt;- treats |&gt; \n  slice(rep(1:n(), each = r)) |&gt;  #repeat each treatment r times\n  mutate(rand = sample(1:n(), n(), \n                       replace = F)) |&gt;  # random permute\n  arrange(rand) |&gt; \n  mutate(indv = str_c(\"indv_\",rand), .before = treatment) |&gt; #create id var\n  mutate(change_bp = NA) |&gt;  # create blank variable for data entry\n  select(-rand) # clean up columns\n\n\nhead(bp_factorial_design, n = 20)\n\n\n\n\n\n\n\nindv\ntreatment\ndiets\nmedications\nchange_bp\n\n\n\n\nindv_1\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_2\nStandard American + Placebo\nStandard American\nPlacebo\nNA\n\n\nindv_3\nStandard American + Placebo\nStandard American\nPlacebo\nNA\n\n\nindv_4\nStandard American + Beta blocker\nStandard American\nBeta blocker\nNA\n\n\nindv_5\nMediterranean + Diuretic\nMediterranean\nDiuretic\nNA\n\n\nindv_6\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_7\nStandard American + Diuretic\nStandard American\nDiuretic\nNA\n\n\nindv_8\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_9\nStandard American + Beta blocker\nStandard American\nBeta blocker\nNA\n\n\nindv_10\nMediterranean + Diuretic\nMediterranean\nDiuretic\nNA\n\n\nindv_11\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_12\nMediterranean + Placebo\nMediterranean\nPlacebo\nNA\n\n\nindv_13\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_14\nStandard American + Placebo\nStandard American\nPlacebo\nNA\n\n\nindv_15\nMediterranean + ACE\nMediterranean\nACE\nNA\n\n\nindv_16\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_17\nMediterranean + Diuretic\nMediterranean\nDiuretic\nNA\n\n\nindv_18\nMediterranean + ACE\nMediterranean\nACE\nNA\n\n\nindv_19\nMediterranean + Placebo\nMediterranean\nPlacebo\nNA\n\n\nindv_20\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA"
   }
 ]
