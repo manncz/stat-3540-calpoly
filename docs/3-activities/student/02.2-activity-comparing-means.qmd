@@ -11,32 +11,6 @@ echo: true
 embed-resources: true
 format: typst
 ---
-::: callout-note
-Submit via Gradescope, don't forget to assign pages to the questions in the outline! Your submission will not be graded, if you don't assign pages.
-
-Please delete any extraneous instructions (like this box) before submission.
-
-You can also delete anything like `\vspace{}`
-:::
-
-:::callout-note
-# Template .qmd + data
-
-- You should follow the template for coding: [02.2-activity-comparing-means.qmd](../student/02.2-activity-comparing-means.qmd)
-
-- The data are provided here in [`02_fruitfly_data.csv`](../_data/02_fruitfly_data.csv) and on Canvas.
-
-:::
-
-:::callout-warning
-# Sum to zero (effect coding) 
-
-In R, make sure to set your "sum to zero" constraint *before* fitting your model with `lm()`.
-
-I have included it in a chunk for you in the .qmd template (along with reading in data), make sure you have run that chunk before proceeding!
-
-:::
-
 Scientists are interested in whether the energy costs of reproduction affect longevity in male fruit flies.
 
 In this experiment:
@@ -63,6 +37,7 @@ The response variable was longevity (days alive) for each male fruit fly.
 library(tidyverse)
 library(janitor)
 library(emmeans)
+library(multcomp)
 ```
 
 ```{r}
@@ -96,9 +71,9 @@ Run an ANOVA in R to assess whether any differences in mean longevity exist amon
 
 -   Complete the hypotheses using notation:
 
-    -   $H_0:$
+  -   $H_0:$
 
-    -   $H_A:$
+  -   $H_A:$
 
 ```{r}
 # R code for ANOVA here
@@ -153,6 +128,10 @@ Scientists are interested in whether exposure to any females affects longevity.
 
 -   Using R, carry out the test and provide the following in context of the problem:
 
+```{r}
+# code for test
+```
+
     -   Interpret the estimated mean:
 
     -   Interpret the confidence interval:
@@ -164,31 +143,6 @@ Scientists are interested in whether exposure to any females affects longevity.
 Scientists also want to know which specific treatments differ from each other.
 
 Perform all pairwise comparisons using *no* adjustment (i.e., Fishers LSD) and *Tukey's* adjustment. Provide the p-value for each pairwise comparison in the table below.
-
-+----------------+----------+--------------------+-------------------+
-| Comparison\    | Estimate | Unadjusted p-value | Adjusted p-value\ |
-| (e.g. 1P - 1V) |          |                    | Tukey)            |
-+================+==========+====================+===================+
-|                |          |                    |                   |
-+----------------+----------+--------------------+-------------------+
-|                |          |                    |                   |
-+----------------+----------+--------------------+-------------------+
-|                |          |                    |                   |
-+----------------+----------+--------------------+-------------------+
-|                |          |                    |                   |
-+----------------+----------+--------------------+-------------------+
-|                |          |                    |                   |
-+----------------+----------+--------------------+-------------------+
-|                |          |                    |                   |
-+----------------+----------+--------------------+-------------------+
-|                |          |                    |                   |
-+----------------+----------+--------------------+-------------------+
-|                |          |                    |                   |
-+----------------+----------+--------------------+-------------------+
-|                |          |                    |                   |
-+----------------+----------+--------------------+-------------------+
-|                |          |                    |                   |
-+----------------+----------+--------------------+-------------------+
 
 -   How do the *unadjusted* and *adjusted* p-values compare?
 
@@ -206,6 +160,12 @@ Using the *Tukey* pairwise comparisons in (f) and your table of estimated means 
 |            |        |       |
 |            |        |       |
 |            |        |       |
+
+```{r}
+cld(fly_lsmeans, adjust = "tukey", 
+    Letters = LETTERS, 
+    decreasing = T)
+```
 
 ## h. (Optional) Extra practice with contrasts
 

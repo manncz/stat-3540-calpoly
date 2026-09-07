@@ -24,6 +24,15 @@ You should follow the qmd template for coding: [03.1-activity-what-impacts-power
 
 :::
 
+```{r}
+#| label: setup
+
+# the only package you need today is the pwr2 package
+
+pak::pak("cran/pwr2")
+library(pwr2)
+```
+
 You are planning a study to evaluate the effect of 5 different training programs (speed, power, agility, endurance, balance) on improvement in vertical jump height (measured in inches).
 
 From previous studies, the experimental error (i.e., $\sigma^2$) is estimated to be about 16 inches.
@@ -80,6 +89,10 @@ We will treat the $\delta$ from above as our *specific alternative*.
 -   Desired Power = _______
 :::
 
+```{r}
+# code to calculate sample size
+```
+
 Report your result:
 
 -   Required $r$ (per group) = _______
@@ -96,6 +109,10 @@ The point here is **direction + magnitude**: how design decisions change the pla
 
 Start with the baseline for each scenario and only make the specified changes (i.e., you always go back to the input information you specified in (c))
 
+```{r}
+# code to calculate sample sizes for table
+```
+
 | Scenario change | What you change | New required $r$ | More / fewer players? |
 |-----------------|-----------------|--------------------:|-----------------|
 | Baseline | $\sigma^2=16$, $\alpha=0.05$, means = (13,11,17,15,9), target power = 0.90 | \_\_\_\_\_ |  |
@@ -110,6 +127,10 @@ Start with the baseline for each scenario and only make the specified changes (i
 
 Using the **baseline** setup ($\hat\sigma^2=16$, $\alpha=0.05$, baseline means), compute the resulting power using software.
 
+```{r}
+# code to calculate power
+```
+
 -   Power when $r=2$ = _______
 
 ### f. Interpret the power from (e) in one sentence (in context).
@@ -118,7 +139,11 @@ Using the **baseline** setup ($\hat\sigma^2=16$, $\alpha=0.05$, baseline means),
 
 Using the **baseline** setup ($\hat\sigma^2=16$, $\alpha=0.05$), compute the difference $\delta$.
 
-*If using R, you might have to use a guess & check method.*
+*If using R, you will have to use a guess & check method.*
+
+```{r}
+# code to calculate smallest detectable difference
+```
 
 -   Detectable difference at a power of 90% when $r=2$: $\delta$ = _____________
 

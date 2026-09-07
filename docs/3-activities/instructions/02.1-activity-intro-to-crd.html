@@ -399,7 +399,7 @@ Note
 </div>
 <p><em>I worked on this activity with:</em> ______________________________</p>
 <p>A traffic engineering study was conducted to investigate traffic delay at urban intersections. Three types of traffic signals were studied: pretimed, semi-actuated, and fully actuated. Fifteen intersections were completely randomly assigned to one of the three types of signals. The response variable was the average stopped time per vehicle (seconds) at each intersection.</p>
-<p>Download and use this template qmd: <a href="../student/02.1-activity-intro-to-crd.qmd">01.1-activity-turkey-in-pens.qmd</a></p>
+<p>Download and use this template qmd: <a href="../student/02.1-activity-intro-to-crd.qmd">02.1-activity-intro-to-crd.qmd</a></p>
 <p>The data for this study is provided in <a href="../_data/02_traffic_data.csv"><code>traffic_data.csv</code></a>.</p>
 <p>Download the data here or on Canvas and save it in your nicely organized “activities” or “data” folder!</p>
 <p>This is what the data looks like:</p>
@@ -505,6 +505,29 @@ Note
 <ul>
 <li>Response variable</li>
 </ul>
+<div class="version-solution">
+<ul>
+<li><p>Treatment structure</p>
+<ul>
+<li>Name: one way</li>
+<li>Factor: type of traffic signal</li>
+<li>Levels: pretimed, semi-actuated, fully-actuated</li>
+<li>t = 3</li>
+</ul></li>
+<li><p>Design structure</p>
+<ul>
+<li>Randomization: CRD</li>
+<li>e.u.: one intersection</li>
+<li>r = 5</li>
+<li>m.u.= one intersection</li>
+<li>N = n = 15</li>
+</ul></li>
+<li><p>Response variable(s)</p>
+<ul>
+<li>average stopped time per vehicle (seconds)</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="b.-complete-the-skeleton-anova-table-below" class="level2">
 <h2 class="anchored" data-anchor-id="b.-complete-the-skeleton-anova-table-below">b. Complete the skeleton ANOVA table below</h2>
@@ -542,8 +565,7 @@ Note
 </section>
 <section id="c.-anova-table" class="level2">
 <h2 class="anchored" data-anchor-id="c.-anova-table">c.&nbsp;ANOVA Table</h2>
-<p>Use the data provided to calculate the following (you can use R):</p>
-<p><span class="math inline">\(\bar y_{\cdot\cdot}\)</span> = _________</p>
+<p>Use the data provided to calculate the following (you can use R): <span class="math inline">\(\bar y_{\cdot\cdot}\)</span> = _________</p>
 <p><span class="math inline">\(\bar y_{1\cdot}\)</span> = _________</p>
 <p><span class="math inline">\(\bar y_{2\cdot}\)</span> = _________</p>
 <p><span class="math inline">\(\bar y_{3\cdot}\)</span> = _________</p>
@@ -621,20 +643,6 @@ mod &lt;- lm(...)</code></pre>
 <li><p><span class="math inline">\(\hat \tau_3\)</span> = ___________</p></li>
 </ul>
 <p>for <span class="math inline">\(i=1\)</span> (Pretimed), <span class="math inline">\(i=2\)</span> (Semi-actuated), <span class="math inline">\(i=3\)</span> (Fully actuated).</p>
-<p><span class="math display">\[
-\begin{align*}
-\hat \tau_3 &amp;= -(\hat \tau_1 + \hat \tau_2 ) \\
-&amp;= -(12.020 - 2.56) \\
-&amp;= -9.452
-\end{align*}
-\]</span></p>
-<p><span class="math inline">\(\hat{\mu} = 23.46\)</span></p>
-<div class="cell">
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'traffic_mod' not found</code></pre>
-</div>
-</div>
 </section>
 <section id="f.-interpret-parameter-estimates" class="level2">
 <h2 class="anchored" data-anchor-id="f.-interpret-parameter-estimates">f.&nbsp;Interpret Parameter Estimates</h2>
@@ -643,6 +651,7 @@ mod &lt;- lm(...)</code></pre>
 <section id="g.-provide-a-conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="g.-provide-a-conclusion">g. Provide a conclusion</h2>
 <p>In context of the data, write out your conclusion from the overall ANOVA F-test from (c). Make sure to provide all evidence – (F = , df = , p = ).</p>
+<p>We can also double check the ANOVA table above with R. Some of the decimals are just off because of rounding.</p>
 
 
 </section>

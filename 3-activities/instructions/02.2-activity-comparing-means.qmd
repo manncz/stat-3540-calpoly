@@ -15,8 +15,6 @@ format:
   pdf: default
 ---
 ::: callout-note
-## Submission
-
 Submit via Gradescope, don't forget to assign pages to the questions in the outline! Your submission will not be graded, if you don't assign pages.
 
 Please delete any extraneous instructions (like this box) before submission.
@@ -29,7 +27,7 @@ You can also delete anything like `\vspace{}`
 
 - You should follow the template for coding: [02.2-activity-comparing-means.qmd](../student/02.2-activity-comparing-means.qmd)
 
--  The data are provided here in [`02_fruitfly_data.csv`](../_data/02_fruitfly_data.csv) and on Canvas.
+- The data are provided here in [`02_fruitfly_data.csv`](../_data/02_fruitfly_data.csv) and on Canvas.
 
 :::
 
@@ -77,9 +75,9 @@ Run an ANOVA in R to assess whether any differences in mean longevity exist amon
 
 -   Complete the hypotheses using notation:
 
-    -   $H_0:$
+  -   $H_0:$
 
-    -   $H_A:$
+  -   $H_A:$
 
 -   Write your conclusion in context including all evidence (F = ; df = ; p = ).
 
@@ -184,6 +182,12 @@ Using the *Tukey* pairwise comparisons in (f) and your table of estimated means 
 |            |        |       |
 |            |        |       |
 |            |        |       |
+
+```{r}
+cld(fly_lsmeans, adjust = "tukey", 
+    Letters = LETTERS, 
+    decreasing = T)
+```
 
 ## h. (Optional) Extra practice with contrasts
 

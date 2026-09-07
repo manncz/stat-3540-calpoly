@@ -63,6 +63,28 @@ Describe the following components of the study.
 
 \vspace{0.4in}
 
+::: version-solution
+- Treatment structure
+
+  - Name: one way
+  - Factor: type of traffic signal
+  - Levels: pretimed, semi-actuated, fully-actuated
+  - t = 3
+
+- Design structure
+
+  - Randomization: CRD
+  - e.u.: one intersection
+  - r = 5
+  - m.u.= one intersection
+  - N = n = 15
+
+- Response variable(s)
+
+  - average stopped time per vehicle (seconds)
+  
+:::
+
 ## b. Complete the skeleton ANOVA table below
 
 Make sure to use context of the data!
@@ -82,7 +104,6 @@ Make sure to use context of the data!
 ```
 
 Use the data provided to calculate the following (you can use R):
-
 $\bar y_{\cdot\cdot}$ = \_\_\_\_\_\_\_\_\_
 
 $\bar y_{1\cdot}$ = \_\_\_\_\_\_\_\_\_
@@ -144,28 +165,12 @@ levels(data$variable_name)
 
 for $i=1$ (Pretimed), $i=2$ (Semi-actuated), $i=3$ (Fully actuated).
 
-$$
-\begin{align*}
-\hat \tau_3 &= -(\hat \tau_1 + \hat \tau_2 ) \\
-&= -(12.020 - 2.56) \\
-&= -9.452
-\end{align*}
-$$
-
-$\hat{\mu} = 23.46$
-
-```{r}
-emmeans(traffic_mod, ~ traffic_signal)
-```
-
 ## f. Interpret Parameter Estimates
 
 In context of the data, provide an interpretation for $\hat \tau_1 = 12.02$. It may be helpful to think about what $\bar y_1\cdot$ was from (c).
-
-\vspace{1in}
 
 ## g. Provide a conclusion
 
 In context of the data, write out your conclusion from the overall ANOVA F-test from (c). Make sure to provide all evidence -- (F = , df = , p = ).
 
-\vspace{1in}
+We can also double check the ANOVA table above with R. Some of the decimals are just off because of rounding.

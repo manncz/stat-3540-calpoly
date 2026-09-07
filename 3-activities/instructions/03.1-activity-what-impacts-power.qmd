@@ -8,10 +8,10 @@ execute:
 
 echo: false
 format:
+  docx: default
   html:
     html-table-processing: none
     toc: true
-  docx: default
   pdf: default
 ---
 ::: callout-note
@@ -125,7 +125,7 @@ Using the **baseline** setup ($\hat\sigma^2=16$, $\alpha=0.05$, baseline means),
 
 Using the **baseline** setup ($\hat\sigma^2=16$, $\alpha=0.05$), compute the difference $\delta$.
 
-*If using R, you might have to use a guess & check method.*
+*If using R, you will have to use a guess & check method.*
 
 -   Detectable difference at a power of 90% when $r=2$: $\delta$ = _____________
 
