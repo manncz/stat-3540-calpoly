@@ -30,10 +30,8 @@ library(tidyverse)
 ## Estimating Treatment Means
 
 - 📽 Follow along with the [slides](../2-slides/03.1-power.qmd).
-
-:::callout-warning
-For right now, just watch until 15:00. The software isn't working as in the video right now, and I need to sort it out.
-:::
+- Ignore the bit on JMP! You will notice that our slide about R looks a little different than Dr. Robinson's -- we hav to install the needed package in a special way.
+- You can play around with [this nifty applet](https://smzr97-test0student-ear.shinyapps.io/power-explorer-323/) to calculate and visualize.
 
 {{< video https://www.youtube.com/watch?v=ijZxpent9rs >}}
 
