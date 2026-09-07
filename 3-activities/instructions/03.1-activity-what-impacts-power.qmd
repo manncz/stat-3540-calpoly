@@ -1,0 +1,151 @@
+---
+title: "Activity 3.1: Power Planning for a CRD"
+subtitle: "Training Programs & Vertical Jump"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+echo: false
+format:
+  html:
+    html-table-processing: none
+    toc: true
+  docx: default
+  pdf: default
+---
+::: callout-note
+Submit via Gradescope, don't forget to assign pages to the questions in the outline!
+
+Please delete any extraneous instructions (like this box) before submission.
+
+You can also delete anything like `\vspace{}`
+
+Remember that it's okay if you cannot get the .qmd to render to submit this!! I will help you but you can also use any of the other formats.
+
+You should follow the qmd template for coding: [03.1-activity-what-impacts-power.qm](../student/03.1-activity-what-impacts-power.qmd)
+
+:::
+
+I worked with: _______________________________
+
+You are planning a study to evaluate the effect of 5 different training programs (speed, power, agility, endurance, balance) on improvement in vertical jump height (measured in inches).
+
+From previous studies, the experimental error (i.e., $\sigma^2$) is estimated to be about 16 inches.
+
+Talking to a PT, the expected treatment means (in inches) are:
+
+| Program       | Speed | Power | Agility | Endurance | Balance |
+|---------------|------:|------:|--------:|----------:|--------:|
+| Expected mean |    13 |    11 |      17 |        15 |       9 |
+
+We will use a significance level of $\alpha = 0.05$ and we want 90% power. Even though the configuration above shows "equally spaced" mean configuration, you can use "minimial power" configuration throughout this activity.
+
+## Setup
+
+### a. Identify the study structure:
+
+-   Treatment Structure: (name, factor, levels, treatments)
+
+:::{.instructions}
+\vspace{0.3in}
+:::
+
+-   Design Structure: (name, e.u., m.u.; note, we don't know the reps yet!)
+
+:::{.instructions}
+\vspace{0.3in}
+:::
+
+-   Response:
+
+:::{.instructions}
+\vspace{0.25in}
+:::
+
+### b. What is the value of $\delta$ in this setting? What does this represent (in words)?
+
+:::{.instructions}
+\vspace{0.7in}
+:::
+
+## Part 1: Baseline Power
+
+We will treat the $\delta$ from above as our *specific alternative*.
+
+### c. Use R to find the required sample size per group $r$ to achieve 90% power.
+
+::: callout-tip
+## What information do you have?
+
+-   t = _______
+-   $\hat\sigma^2$ = _______
+-   $\delta$ = _______ *Use minimal power configuration!*
+-   Set $\alpha =$ _______
+-   Desired Power = _______
+:::
+
+Report your result:
+
+-   Required $r$ (per group) = _______
+
+## Part 2: What changes the required sample size?
+
+Complete the table below. For each scenario, you do **NOT** need to show steps, just use software and record the new required $r$.
+
+::: callout-note
+The point here is **direction + magnitude**: how design decisions change the planning.
+:::
+
+### d. Fill in the table
+
+Start with the baseline for each scenario and only make the specified changes (i.e., you always go back to the input information you specified in (c))
+
+| Scenario change | What you change | New required $r$ | More / fewer players? |
+|-----------------|-----------------|--------------------:|-----------------|
+| Baseline | $\sigma^2=16$, $\alpha=0.05$, means = (13,11,17,15,9), target power = 0.90 | \_\_\_\_\_ |  |
+| Higher variability | $\hat\sigma^2=36$ (instead of $\hat\sigma^2 = 16$) | \_\_\_\_\_ | More  /  Fewer? |
+| More conservative test | $\alpha=0.01$ (instead of 0.05) | \_\_\_\_\_ | More  /  Fewer? |
+| Smaller effect | means = (11,10,13,12,9) | \_\_\_\_\_ | More  /  Fewer? |
+| Fewer groups | only 3 programs with means (9,13,17) | \_\_\_\_\_ | More  /  Fewer? |
+
+## Part 3: What happens to power if we *can’t* afford the sample size?
+
+### e. Suppose you only have $r = 2$ players per group.
+
+Using the **baseline** setup ($\hat\sigma^2=16$, $\alpha=0.05$, baseline means), compute the resulting power using software.
+
+-   Power when $r=2$ = _______
+
+### f. Interpret the power from (e) in one sentence (in context).
+
+\vspace{0.9in}
+
+### g. Suppose you only have $r = 2$ players per group, what is the difference you could detect at 90% power?
+
+Using the **baseline** setup ($\hat\sigma^2=16$, $\alpha=0.05$), compute the difference $\delta$.
+
+*If using R, you might have to use a guess & check method.*
+
+-   Detectable difference at a power of 90% when $r=2$: $\delta$ = _____________
+
+## Part 4: Estimating $\hat\sigma^2$
+
+In practice, estimating the experimental error before collecting data is difficult. Two common approaches are:
+
+1. Use previous literature and domain knowledge.
+2. Run a pilot study.
+
+### h. Use [Google Scholar](https://scholar.google.com/) and/or the [Cal Poly Library OneSearch](https://csu-calpoly.primo.exlibrisgroup.com/discovery/search?vid=01CALS_PSU:01CALS_PSU&lang=en) to find one **academic paper** related to the effect of training programs on vertical jump height. 
+
+Provide the following:
+
++ Your search prompt (keywords):
+
+\vspace{0.25in}
+
++ A paper that could be useful for estimating experimental error *(follow the DOI or journal link to the actual paper)*:
+
+\vspace{0.25in}
+
++ Brief justification (1-2 sentences): Why might this paper be useful for estimating $\sigma^2$? *(Think: sample size, number of groups, reported SDs, similar response units.)*
