@@ -366,7 +366,12 @@ plot_central_f_rr
 ## Power as area
 :::: columns
 ::: column
-Now, we must incorporate the part about the **specific alternative being true**. If our particular alternative is true, then the F-statistic actually follows a non-central F-distribution with the aforementioned parameters. This is plotted on the same plot as the central F-distribution below:
+Now, we must incorporate the part about the **specific alternative being true**. If our particular alternative is true, then the F-statistic actually follows a non-central F-distribution with the aforementioned parameters. This is plotted on the same plot as the central F-distribution below here.
+
+:::callout-tip
+Play around with this visualization at [this nifty applet](https://smzr97-test0student-ear.shinyapps.io/power-explorer-323/) that Dr. Robinson made!
+:::
+
 :::
 ::: column
 ```{r}
@@ -405,80 +410,29 @@ knitr::include_graphics("_images/power-configurations.png")
 | Equally spaced    |            0.51 |
 | All but one equal |            0.65 |
 
-<!--
-# Using JMP
 
-## JMP: Power Explorer
 
-`DOE` > `Sample Size Explorers` > `Power` > `Power for ANOVA`
+## Power in R with `pwr2` package {.scrollable}
 
 ```{r}
-#| out-width: 45%
-#| fig-align: center
-knitr::include_graphics("images/jmp-power-1.png")
+#| echo: true
+#| code-fold: true
+
+# Install pwr2 this special way
+pak::pak("cran/pwr2")
+library(pwr2)
 ```
 
-
-## JMP: Power Explorer
-
-Minimum Power = `Maximum Difference` > `Worst Case`
-
-:::: columns
-::: column
-```{r}
-#| out-width: 90%
-#| fig-align: center
-knitr::include_graphics("images/jmp-power-2.png")
-```
-:::
-::: column
-```{r}
-#| out-width: 90%
-#| fig-align: center
-knitr::include_graphics("images/jmp-power-3.png")
-```
-:::
-::::
-
-## JMP: Power Explorer
-
-::::: columns
-::: column
-### How many reps do we need?
-
-Fix $\alpha$, $\sigma^2$, $\delta$, power\
-Solve for $r$
-
-```{r}
-#| out-width: 90%
-#| fig-align: center
-knitr::include_graphics("images/jmp-power-4.png")
-```
-:::
-
-::: column
-### What difference can we detect?
-
-Fix $\alpha$, $\sigma^2$, $r$, power\
-Solve for $\delta$
-
-```{r}
-#| out-width: 90%
-#| fig-align: center
-knitr::include_graphics("images/jmp-power-5.png")
-```
-:::
-:::::
-
-## Power in R
 
 :::: columns
 ::: column
 What is the the power of my test?
 
+
+
+
 ```{r}
 #| echo: true
-library(pwr2)
 pwr.1way(
   k = 4,              # Number of groups
   n = 3,              # Sample size per group
@@ -487,15 +441,6 @@ pwr.1way(
   sigma = sqrt(17.46) # Standard deviation of obs
 )
 ```
-
-```{r}
-pwr.anova.test(k = 4,
-               n = 3,
-               sig.level = .05,
-               f = 10 / 17.46)
-
-```
-
 :::
 ::: column
 What is the sample size I need?
@@ -513,4 +458,4 @@ ss.1way(
 ```
 :::
 ::::
--->
+
