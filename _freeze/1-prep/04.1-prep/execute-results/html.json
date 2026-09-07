@@ -1,0 +1,15 @@
+{
+  "hash": "01304a9016d4145fb95ab435e3c5340f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"4.1 Preparation: Factorials Part I -- Design and Contrasts\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n#### 📽 Watch Videos: 30 min\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n\n- Define factorial treatment structures, differentiate treatment and design structures, and determine the skeleton ANOVA table.\n- Design a CRD using a factorial treatment structure using R and communicate the design\n- Explain what a statistical interaction is in the context of a specific experiment and identify whether statistical interaction exists when given an interaction plot or table of treatment means.\n \n\n:::\n\n**Notes:**\n\n- If you want more or a different modality, read Oehlert Ch 8-9. \n    - Warning: we jump a bit more around Ch 8-9 for Module 4... we have three whole class days on this topic, so just skip around to sections that align with the day's lecture videos and slides.\n- There is **one slide deck** to follow along with, but the links below go to the relevant starting point for each video.\n- Skip JMP discussions\n- **Take notes** while you watch and summarize the main points for yourself!\n\n## Why Factorials? Treatment vs. Design Structure\n\n- 📽 Follow along with the [slides](../2-slides/04.1-factorials.qmd).\n- I again added some additional slides on implementing this study design \"by hand\" in R. I will post a separate video explaining.\n\n{{< video https://www.youtube.com/watch?v=OqSS0Qqc_dM >}}\n\n\n## Factorial Contrasts: Main, Simple, and Interaction Effects\n\n- 📽 Follow along with the [slides](../2-slides/04.1-factorials.qmd#/factorial-contrasts-main-simple-and-interaction-effects).\n\n{{< video https://www.youtube.com/watch?v=GVBrrMQTW7Y >}}\n\n\n\n \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

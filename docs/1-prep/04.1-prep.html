@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3.1 Preparation: Power – Statistical Methods for Study Design and Analysis</title>
+<title>4.1 Preparation: Factorials Part I – Design and Contrasts – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -320,8 +320,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#power" id="toc-power" class="nav-link active" data-scroll-target="#power"><span class="header-section-number">1</span> Power</a></li>
-  <li><a href="#r-tips" id="toc-r-tips" class="nav-link" data-scroll-target="#r-tips"><span class="header-section-number">2</span> R Tips</a></li>
+  <li><a href="#why-factorials-treatment-vs.-design-structure" id="toc-why-factorials-treatment-vs.-design-structure" class="nav-link active" data-scroll-target="#why-factorials-treatment-vs.-design-structure"><span class="header-section-number">1</span> Why Factorials? Treatment vs.&nbsp;Design Structure</a></li>
+  <li><a href="#factorial-contrasts-main-simple-and-interaction-effects" id="toc-factorial-contrasts-main-simple-and-interaction-effects" class="nav-link" data-scroll-target="#factorial-contrasts-main-simple-and-interaction-effects"><span class="header-section-number">2</span> Factorial Contrasts: Main, Simple, and Interaction Effects</a></li>
   </ul>
 </nav>
     </div>
@@ -331,7 +331,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">3.1 Preparation: Power</h1>
+<h1 class="title">4.1 Preparation: Factorials Part I – Design and Contrasts</h1>
 </div>
 
 
@@ -348,8 +348,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="watch-videos-20-min" class="level4">
-<h4 class="anchored" data-anchor-id="watch-videos-20-min">📽 Watch Videos: 20 min</h4>
+<section id="watch-videos-30-min" class="level4">
+<h4 class="anchored" data-anchor-id="watch-videos-30-min">📽 Watch Videos: 30 min</h4>
 <hr>
 <div class="callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -362,29 +362,37 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Explain the concept of power and its role in detecting meaningful effects in a study.</li>
-<li>Describe how variability, sample size, and design choices influence the power of the F-test.</li>
-<li>Use software tools to compute power and determine required sample sizes for different experimental designs.</li>
+<li>Define factorial treatment structures, differentiate treatment and design structures, and determine the skeleton ANOVA table.</li>
+<li>Design a CRD using a factorial treatment structure using R and communicate the design</li>
+<li>Explain what a statistical interaction is in the context of a specific experiment and identify whether statistical interaction exists when given an interaction plot or table of treatment means.</li>
 </ul>
 </div>
 </div>
+<p><strong>Notes:</strong></p>
 <ul>
-<li>If you want more or a different modality, read <a href="_text/oehlert_ch7.pdf">Oehlert Ch 7</a>.</li>
+<li>If you want more or a different modality, read Oehlert Ch 8-9.
+<ul>
+<li>Warning: we jump a bit more around Ch 8-9 for Module 4… we have three whole class days on this topic, so just skip around to sections that align with the day’s lecture videos and slides.</li>
+</ul></li>
+<li>There is <strong>one slide deck</strong> to follow along with, but the links below go to the relevant starting point for each video.</li>
+<li>Skip JMP discussions</li>
+<li><strong>Take notes</strong> while you watch and summarize the main points for yourself!</li>
 </ul>
 </section>
-<section id="power" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="power"><span class="header-section-number">1</span> Power</h2>
+<section id="why-factorials-treatment-vs.-design-structure" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="why-factorials-treatment-vs.-design-structure"><span class="header-section-number">1</span> Why Factorials? Treatment vs.&nbsp;Design Structure</h2>
 <ul>
-<li>📽 Follow along with the <a href="../2-slides/03.1-power.html">slides</a>.</li>
-<li>Ignore the bit on JMP! You will notice that our slide about R looks a little different than Dr.&nbsp;Robinson’s – we hav to install the needed package in a special way.</li>
-<li>You can play around with <a href="https://smzr97-test0student-ear.shinyapps.io/power-explorer-323/">this nifty applet</a> to calculate and visualize.</li>
+<li>📽 Follow along with the <a href="../2-slides/04.1-factorials.html">slides</a>.</li>
+<li>I again added some additional slides on implementing this study design “by hand” in R. I will post a separate video explaining.</li>
 </ul>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/ijZxpent9rs" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/OqSS0Qqc_dM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="r-tips" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="r-tips"><span class="header-section-number">2</span> R Tips</h2>
-<p>If you are struggling a bit with R so far, please watch this video!</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/GAWBuyq5HIk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<section id="factorial-contrasts-main-simple-and-interaction-effects" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="factorial-contrasts-main-simple-and-interaction-effects"><span class="header-section-number">2</span> Factorial Contrasts: Main, Simple, and Interaction Effects</h2>
+<ul>
+<li>📽 Follow along with the <a href="../2-slides/04.1-factorials.html#/factorial-contrasts-main-simple-and-interaction-effects">slides</a>.</li>
+</ul>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/GVBrrMQTW7Y" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 </section>

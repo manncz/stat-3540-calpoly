@@ -2690,5 +2690,47 @@
     "title": "Module 4: Factorial Treatment Structure",
     "section": "Create a Full Factorial CRD in R “by hand”: Step 2",
     "text": "Create a Full Factorial CRD in R “by hand”: Step 2\n\nbp_factorial_design &lt;- treats |&gt; \n  slice(rep(1:n(), each = r)) |&gt;  #repeat each treatment r times\n  mutate(rand = sample(1:n(), n(), \n                       replace = F)) |&gt;  # random permute\n  arrange(rand) |&gt; \n  mutate(indv = str_c(\"indv_\",rand), .before = treatment) |&gt; #create id var\n  mutate(change_bp = NA) |&gt;  # create blank variable for data entry\n  select(-rand) # clean up columns\n\n\nhead(bp_factorial_design, n = 20)\n\n\n\n\n\n\n\nindv\ntreatment\ndiets\nmedications\nchange_bp\n\n\n\n\nindv_1\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_2\nStandard American + Placebo\nStandard American\nPlacebo\nNA\n\n\nindv_3\nStandard American + Placebo\nStandard American\nPlacebo\nNA\n\n\nindv_4\nStandard American + Beta blocker\nStandard American\nBeta blocker\nNA\n\n\nindv_5\nMediterranean + Diuretic\nMediterranean\nDiuretic\nNA\n\n\nindv_6\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_7\nStandard American + Diuretic\nStandard American\nDiuretic\nNA\n\n\nindv_8\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_9\nStandard American + Beta blocker\nStandard American\nBeta blocker\nNA\n\n\nindv_10\nMediterranean + Diuretic\nMediterranean\nDiuretic\nNA\n\n\nindv_11\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_12\nMediterranean + Placebo\nMediterranean\nPlacebo\nNA\n\n\nindv_13\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_14\nStandard American + Placebo\nStandard American\nPlacebo\nNA\n\n\nindv_15\nMediterranean + ACE\nMediterranean\nACE\nNA\n\n\nindv_16\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA\n\n\nindv_17\nMediterranean + Diuretic\nMediterranean\nDiuretic\nNA\n\n\nindv_18\nMediterranean + ACE\nMediterranean\nACE\nNA\n\n\nindv_19\nMediterranean + Placebo\nMediterranean\nPlacebo\nNA\n\n\nindv_20\nMediterranean + Beta blocker\nMediterranean\nBeta blocker\nNA"
+  },
+  {
+    "objectID": "1-prep/03.1-prep.html#power",
+    "href": "1-prep/03.1-prep.html#power",
+    "title": "3.1 Preparation: Power",
+    "section": "1 Power",
+    "text": "1 Power\n\n📽 Follow along with the slides.\nIgnore the bit on JMP! You will notice that our slide about R looks a little different than Dr. Robinson’s – we hav to install the needed package in a special way.\nYou can play around with this nifty applet to calculate and visualize."
+  },
+  {
+    "objectID": "1-prep/04.1-prep.html",
+    "href": "1-prep/04.1-prep.html",
+    "title": "4.1 Preparation: Factorials Part I – Design and Contrasts",
+    "section": "",
+    "text": "NoneLearning Objectives\n\n\n\n\nDefine factorial treatment structures, differentiate treatment and design structures, and determine the skeleton ANOVA table.\nDesign a CRD using a factorial treatment structure using R and communicate the design\nExplain what a statistical interaction is in the context of a specific experiment and identify whether statistical interaction exists when given an interaction plot or table of treatment means.\n\n\n\nNotes:\n\nIf you want more or a different modality, read Oehlert Ch 8-9.\n\nWarning: we jump a bit more around Ch 8-9 for Module 4… we have three whole class days on this topic, so just skip around to sections that align with the day’s lecture videos and slides.\n\nThere is one slide deck to follow along with, but the links below go to the relevant starting point for each video.\nSkip JMP discussions\nTake notes while you watch and summarize the main points for yourself!"
+  },
+  {
+    "objectID": "1-prep/04.1-prep.html#estimating-treatment-means",
+    "href": "1-prep/04.1-prep.html#estimating-treatment-means",
+    "title": "4.1 Preparation: Factorials Part I – Design and Contrasts",
+    "section": "1 Estimating Treatment Means",
+    "text": "1 Estimating Treatment Means\n\n📽 Follow along with the slides.\nIgnore the bit on JMP! You will notice that our slide about R looks a little different than Dr. Robinson’s – we hav to install the needed package in a special way.\nYou can play around with this nifty applet to calculate and visualize."
+  },
+  {
+    "objectID": "1-prep/04.1-prep.html#r-tips",
+    "href": "1-prep/04.1-prep.html#r-tips",
+    "title": "4.1 Preparation: Factorials Part I – Design and Contrasts",
+    "section": "2 R Tips",
+    "text": "2 R Tips\nIf you are struggling a bit with R so far, please watch this video!"
+  },
+  {
+    "objectID": "1-prep/04.1-prep.html#why-factorials-treatment-vs.-design-structure",
+    "href": "1-prep/04.1-prep.html#why-factorials-treatment-vs.-design-structure",
+    "title": "4.1 Preparation: Factorials Part I – Design and Contrasts",
+    "section": "1 Why Factorials? Treatment vs. Design Structure",
+    "text": "1 Why Factorials? Treatment vs. Design Structure\n\n📽 Follow along with the slides.\nI again added some additional slides on implementing this study design “by hand” in R. I will post a separate video explaining."
+  },
+  {
+    "objectID": "1-prep/04.1-prep.html#factorial-contrasts-main-simple-and-interaction-effects",
+    "href": "1-prep/04.1-prep.html#factorial-contrasts-main-simple-and-interaction-effects",
+    "title": "4.1 Preparation: Factorials Part I – Design and Contrasts",
+    "section": "2 Factorial Contrasts: Main, Simple, and Interaction Effects",
+    "text": "2 Factorial Contrasts: Main, Simple, and Interaction Effects\n\n📽 Follow along with the slides."
   }
 ]
