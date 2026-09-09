@@ -1,0 +1,136 @@
+---
+title: "Activity 4.1: Factorial Treatment Structures and Contrasts"
+subtitle: "Baking Cookies"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+echo: false
+format:
+  html: default
+  docx: default
+  pdf: default
+---
+\vspace{-.8in}
+
+::: callout-warning
+Submit via Gradescope, don't forget to assign pages to the questions in the outline!
+
+Please delete any extraneous instructions (**like this box**) before submission.
+
+You can also delete anything like `\vspace{}`
+
+Remember that it's okay if you cannot get the .qmd to render to submit this!! I will help you but you can also use any of the other formats.
+
+You should follow the qmd template for coding: [04.1-activity-contrasts-for-factorials.qmd](../student/04.1-activity-contrasts-for-factorials.qmd)
+
+:::
+
+The following data come from an experiment investigating the crispiness of cookies. The researchers studied the effects of temperature, studied at two levels (325°F and 350°F), and the amount of flour, studied at three levels (2 cups, 2.25 cups, and 2.5 cups).
+
+The response variable of interest was cookie crispiness, measured as the amount of force (in Newtons) required to break the cookie in half. Three cookies were baked separately for each treatment combination.
+
+The crispiness measurements for each cookie are shown below.
+
+| Temperature | 2 cups     | 2.25 cups  | 2.5 cups   |
+| ----------- | ---------- | ---------- | ---------- |
+| 325°F       | 78, 74, 75 | 85, 86, 86 | 72, 75, 73 |
+| 350°F       | 79, 82, 82 | 89, 87, 86 | 71, 70, 68 |
+
+## a. Identify the structure of the experiment
+
+**Sketch a blueprint**
+
+\vspace{1.2in}
+
+\newpage
+
+**Treatment structure**
+
+  + Name of the treatment structure: ________________________
+  + Factors + Levels: ________________________
+  + t = ______
+
+\vspace{0.15in}
+
+**Experimental structure**
+
++ Randomization method: ______
++ Experimental unit (e.u.): ________________________
+  + r = ______
++ Measurement unit (m.u.): ________________________
+  + N = ______
+
+\vspace{0.15in}
+
+## b. Set up notation for treatment means
+
+Let $y_{ijk}$ represent the observed crispiness for the $k^{th}$ cookie baked at the $i^{th}$ temperature with the $j^{th}$ amount of flour.
+
+For i = _____________, j = _________________, and k = ________________
+
+\vspace{0.15in}
+
+## c. Compute treatment-combination means
+
+Compute the mean crispiness for each treatment combination and record your values below.
+
+| Temperature | 2 cups     | 2.25 cups  | 2.5 cups   |
+| ----------- | ---------- | ---------- | ---------- |
+| 325°F       |            |            |            |
+| 350°F       |            |            |            |
+
+\newpage
+
+## d. Simple effects of temperature (holding flour constant)
+
+For each flour level $j$, compute the simple effect of temperature, i.e. our **estimate** for:
+
+$$\mu_{1j}-\mu_{2j}$$
+
++ $j=1$: _____________________________
++ $j=2$: _____________________________
++ $j=3$: _____________________________
+
+Interpret the estimated simple effect for $j = 1$ in context of the cookies.
+
+\vspace{0.8in}
+
+## e. Main effect of temperature
+
+Compute the main effect of temperature (i.e. our estimate for $\mu_{1\cdot}-\mu_{2\cdot}$). 
+
+_________ - ________ =
+
+\vspace{0.15in}
+
+Interpret this estimated contrast value in context.
+
+\vspace{0.8in}
+
+## f. Main effect of flour amount
+
+Compute *two* main effects contrasts comparing flour levels. Clearly show notation ($\mu_{ij}$).
+
+\vspace{0.8in}
+
+\newpage
+
+## g. Interaction: difference of differences
+
++ By hand (or using excalidraw.com), draw an interaction plot of the treatment means.
+
+\vspace{2in}
+
++ Visually, does there appear to be evidence of interaction? Explain briefly.
+
+\vspace{0.8in}
+
++ Compute the interaction contrast comparing flour levels 2 cups and 2.5 cups. Clearly show notation ($\mu_{ij}$).
+
+\vspace{0.8in}
+
++ Interpret this value in context. What question is this contrast answering?
+
+\vspace{0.8in}

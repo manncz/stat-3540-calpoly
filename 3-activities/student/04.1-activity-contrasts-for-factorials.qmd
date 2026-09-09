@@ -1,0 +1,90 @@
+---
+title: "Activity 4.1: Factorial Treatment Structures and Contrasts"
+subtitle: "Baking Cookies"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+author: Your Name
+echo: true
+embed-resources: true
+format: typst
+---
+The following data come from an experiment investigating the crispiness of cookies. The researchers studied the effects of temperature, studied at two levels (325°F and 350°F), and the amount of flour, studied at three levels (2 cups, 2.25 cups, and 2.5 cups).
+
+The response variable of interest was cookie crispiness, measured as the amount of force (in Newtons) required to break the cookie in half. Three cookies were baked separately for each treatment combination.
+
+The crispiness measurements for each cookie are shown below.
+
+| Temperature | 2 cups     | 2.25 cups  | 2.5 cups   |
+| ----------- | ---------- | ---------- | ---------- |
+| 325°F       | 78, 74, 75 | 85, 86, 86 | 72, 75, 73 |
+| 350°F       | 79, 82, 82 | 89, 87, 86 | 71, 70, 68 |
+
+## a. Identify the structure of the experiment
+
+**Sketch a blueprint**
+
+**Treatment structure**
+
+  + Name of the treatment structure: ________________________
+  + Factors + Levels: ________________________
+  + t = ______
+
+**Experimental structure**
+
++ Randomization method: ______
++ Experimental unit (e.u.): ________________________
+  + r = ______
++ Measurement unit (m.u.): ________________________
+  + N = ______
+
+## b. Set up notation for treatment means
+
+Let $y_{ijk}$ represent the observed crispiness for the $k^{th}$ cookie baked at the $i^{th}$ temperature with the $j^{th}$ amount of flour.
+
+For i = _____________, j = _________________, and k = ________________
+
+## c. Compute treatment-combination means
+
+Compute the mean crispiness for each treatment combination and record your values below.
+
+| Temperature | 2 cups     | 2.25 cups  | 2.5 cups   |
+| ----------- | ---------- | ---------- | ---------- |
+| 325°F       |            |            |            |
+| 350°F       |            |            |            |
+
+## d. Simple effects of temperature (holding flour constant)
+
+For each flour level $j$, compute the simple effect of temperature, i.e. our **estimate** for:
+
+$$\mu_{1j}-\mu_{2j}$$
+
++ $j=1$: _____________________________
++ $j=2$: _____________________________
++ $j=3$: _____________________________
+
+Interpret the estimated simple effect for $j = 1$ in context of the cookies.
+
+## e. Main effect of temperature
+
+Compute the main effect of temperature (i.e. our estimate for $\mu_{1\cdot}-\mu_{2\cdot}$). 
+
+_________ - ________ =
+
+Interpret this estimated contrast value in context.
+
+## f. Main effect of flour amount
+
+Compute *two* main effects contrasts comparing flour levels. Clearly show notation ($\mu_{ij}$).
+
+## g. Interaction: difference of differences
+
++ By hand (or using excalidraw.com), draw an interaction plot of the treatment means.
+
++ Visually, does there appear to be evidence of interaction? Explain briefly.
+
++ Compute the interaction contrast comparing flour levels 2 cups and 2.5 cups. Clearly show notation ($\mu_{ij}$).
+
++ Interpret this value in context. What question is this contrast answering?
