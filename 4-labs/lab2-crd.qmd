@@ -20,7 +20,10 @@ format:
 :::callout-note
 ## Reminders
 
-- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} All R code should be written in a **script** file (.qmd or .R) so that you can **save** your code for reproducibility and so you can turn it in. (stay tuned for a template)
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} All R code should be written in a **script** file (.qmd) so that you can **save** your code for reproducibility. 
+    
+  - I **highly** recommend using this template! [02-lab-code-template.qmd](templates/02-lab-code-template.qmd)
+  - You will **turn in your code** with the report. 
 
 - Remember this is a group assignment! You should be working with your group through **all** elements of this lab and you are all responsible for the final report.
 
@@ -67,7 +70,7 @@ Conduct a power analysis to determine the required sample size for your experime
   2. Determine the practically significant difference ($\delta$) that is relevant to your research question.
       - Past literature? What you saw in your pilot study? etc.
   3.  Estimate experimental variance using your pilot data set. ($\sigma^2$)
-  4. Calculate the sample size (i.e., $r$) necessary to reach 80% power.
+  4. ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Calculate the sample size (i.e., $r$) necessary to reach 80% power.
   5. Document your calculations and reasoning in your report.
 
 ## Random Sampling and Treatment Assignment
@@ -114,7 +117,7 @@ Big picture: utilizing the “Task” button on the Islands:
 
 ## Data Analysis
 
-Your analysis of the data should include the following.
+Your analysis of the data should include the following. Include all that is described below in the appropriate spot in the report template.
 
 Where you will be using R to analyze the data is noted with the R logo.
 
@@ -154,13 +157,21 @@ of the response by treatment group (with individual data points overlayed)
 
 ## Report and Submission
 
-Download the guided lab report template and work within it **POSTED SOON**
+Download the guided lab report template and work within it [02-lab-conduct-a-crd-template.docx](templates/02-lab-conduct-a-crd-template.docx).
 
 Make sure to:
 
 - Use complete sentences
 - Focus on clarity, logical flow, and professional grammar
 - Think about being as concise as possible while being complete and clear
+- Clean up the report at the end so that it is readable and professional.
+- Make sure you have addressed all instructions in this document in the report.
+
+In your final submission you will submit:
+
+1. Your report following [02-lab-conduct-a-crd-template.docx](templates/02-lab-conduct-a-crd-template.docx).
+2. A .qmd with all of your code [02-lab-code-template.qmd](templates/02-lab-code-template.qmd)
+3. Your dataset (.csv or .xlsx)
 
 
 :::callout-warning

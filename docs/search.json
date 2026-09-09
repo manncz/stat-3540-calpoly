@@ -2738,7 +2738,7 @@
     "href": "4-labs/lab2-crd.html",
     "title": "Lab 2: Design a CRD",
     "section": "",
-    "text": "Address a research question from start to finish with a Completely Randomized experiment\nConduct a power analysis for a CRD to inform your study\nImplement CRD random assignment for an appropriate sample size of islanders based on a power analysis\nCollect and analyze data based on the CRD design\nWrite a clear report explaining a CRD design and analysis\n\n\n\n\n\n\n\n\nNoteReminders\n\n\n\n\n All R code should be written in a script file (.qmd or .R) so that you can save your code for reproducibility and so you can turn it in. (stay tuned for a template)\nRemember this is a group assignment! You should be working with your group through all elements of this lab and you are all responsible for the final report.\nUnless you are having a private issue with your group, anything communication with me via email relating to labs should include all of your group members!! ’cc them all!\nContact Dr. C for any questions or clarifications"
+    "text": "Address a research question from start to finish with a Completely Randomized experiment\nConduct a power analysis for a CRD to inform your study\nImplement CRD random assignment for an appropriate sample size of islanders based on a power analysis\nCollect and analyze data based on the CRD design\nWrite a clear report explaining a CRD design and analysis\n\n\n\n\n\n\n\n\nNoteReminders\n\n\n\n\n All R code should be written in a script file (.qmd) so that you can save your code for reproducibility.\n\nI highly recommend using this template! 02-lab-code-template.qmd\nYou will turn in your code with the report.\n\nRemember this is a group assignment! You should be working with your group through all elements of this lab and you are all responsible for the final report.\nUnless you are having a private issue with your group, anything communication with me via email relating to labs should include all of your group members!! ’cc them all!\nContact Dr. C for any questions or clarifications"
   },
   {
     "objectID": "4-labs/lab2-crd.html#determine-research-question",
@@ -2752,7 +2752,7 @@
     "href": "4-labs/lab2-crd.html#power-analysis",
     "title": "Lab 2: Design a CRD",
     "section": "2 Power Analysis",
-    "text": "2 Power Analysis\nConduct a power analysis to determine the required sample size for your experiment. To do this:\n\nCollect a small scale pilot study (you can just pick some “pilot Islanders”). Think \\(r = 2\\) or \\(r = 3\\).\n\nIf using the example RQ, you can use Dr. Robinson’s pilot data here.\n\nDetermine the practically significant difference (\\(\\delta\\)) that is relevant to your research question.\n\nPast literature? What you saw in your pilot study? etc.\n\nEstimate experimental variance using your pilot data set. (\\(\\sigma^2\\))\nCalculate the sample size (i.e., \\(r\\)) necessary to reach 80% power.\nDocument your calculations and reasoning in your report."
+    "text": "2 Power Analysis\nConduct a power analysis to determine the required sample size for your experiment. To do this:\n\nCollect a small scale pilot study (you can just pick some “pilot Islanders”). Think \\(r = 2\\) or \\(r = 3\\).\n\nIf using the example RQ, you can use Dr. Robinson’s pilot data here.\n\nDetermine the practically significant difference (\\(\\delta\\)) that is relevant to your research question.\n\nPast literature? What you saw in your pilot study? etc.\n\nEstimate experimental variance using your pilot data set. (\\(\\sigma^2\\))\n Calculate the sample size (i.e., \\(r\\)) necessary to reach 80% power.\nDocument your calculations and reasoning in your report."
   },
   {
     "objectID": "4-labs/lab2-crd.html#random-sampling-and-treatment-assignment",
@@ -2773,14 +2773,14 @@
     "href": "4-labs/lab2-crd.html#data-analysis",
     "title": "Lab 2: Design a CRD",
     "section": "5 Data Analysis",
-    "text": "5 Data Analysis\nYour analysis of the data should include the following.\nWhere you will be using R to analyze the data is noted with the R logo.\n\n5.1 Statistical Effects Model\n\nProvide the equation for the effects model.\nDescribe the parameters in the model.\n\n\n\n5.2 EDA (Exploratory Data Analysis)\n\n Create side-by-side boxplots of the response by treatment group (with individual data points overlayed)\nWhat are your initial impressions? Do there appear to be differences between groups? How does the within-group variability seem to compare to the between-group variability?\n\n\n\n5.3 ANOVA Table\n\n Conduct a full ANOVA in R\nReport the table and draw conclusions from the F-test.\nWho can you generalize your results to?\n\n\n\n5.4 Estimated Parameters\n\n Estimate model parameters in R (sum to zero constraint)\nPresent nicely in a table\nDiscuss their interpretation in paragraph form.\n\n\n\n5.5 Least Squares Means\n\n Estimate and create a graph of least squares means (and SEs) in R.\nCreate a nicely formatted table of least squares means in report.\nInterpret results: Identify the highest and lowest treatments and discuss practical implications.\n\n\n\n5.6 Contrasts / Pairwise Comparisons\n\n Conduct at least one meaningful contrast OR pairwise comparisons with a multiplicity adjustment.\nClearly define the contrast if going that route.\nInterpret the findings in context of your research question.\n\n\n\n5.7 Residual Analysis\n\n Assess model fit and model assumptions with residual analysis plots.\nIs the inference valid? (i.e. do you trust the SE’s and p-values)"
+    "text": "5 Data Analysis\nYour analysis of the data should include the following. Include all that is described below in the appropriate spot in the report template.\nWhere you will be using R to analyze the data is noted with the R logo.\n\n5.1 Statistical Effects Model\n\nProvide the equation for the effects model.\nDescribe the parameters in the model.\n\n\n\n5.2 EDA (Exploratory Data Analysis)\n\n Create side-by-side boxplots of the response by treatment group (with individual data points overlayed)\nWhat are your initial impressions? Do there appear to be differences between groups? How does the within-group variability seem to compare to the between-group variability?\n\n\n\n5.3 ANOVA Table\n\n Conduct a full ANOVA in R\nReport the table and draw conclusions from the F-test.\nWho can you generalize your results to?\n\n\n\n5.4 Estimated Parameters\n\n Estimate model parameters in R (sum to zero constraint)\nPresent nicely in a table\nDiscuss their interpretation in paragraph form.\n\n\n\n5.5 Least Squares Means\n\n Estimate and create a graph of least squares means (and SEs) in R.\nCreate a nicely formatted table of least squares means in report.\nInterpret results: Identify the highest and lowest treatments and discuss practical implications.\n\n\n\n5.6 Contrasts / Pairwise Comparisons\n\n Conduct at least one meaningful contrast OR pairwise comparisons with a multiplicity adjustment.\nClearly define the contrast if going that route.\nInterpret the findings in context of your research question.\n\n\n\n5.7 Residual Analysis\n\n Assess model fit and model assumptions with residual analysis plots.\nIs the inference valid? (i.e. do you trust the SE’s and p-values)"
   },
   {
     "objectID": "4-labs/lab2-crd.html#report-and-submission",
     "href": "4-labs/lab2-crd.html#report-and-submission",
     "title": "Lab 2: Design a CRD",
     "section": "6 Report and Submission",
-    "text": "6 Report and Submission\nDownload the guided lab report template and work within it POSTED SOON\nMake sure to:\n\nUse complete sentences\nFocus on clarity, logical flow, and professional grammar\nThink about being as concise as possible while being complete and clear\n\n\n\n\n\n\n\nWarningGenerative AI\n\n\n\nAs a reminder, you are allowed to use generative AI on this assignment outside of class. However, your group should agree on how it will be used and you must disclose how you used in in your report. Finally, as always, follow the syllabus guidelines for citing AI.\nIf you us AI to help you with writing, you should prompt the model “Please assess my work and provide only feedback. Do not rewrite anything.”"
+    "text": "6 Report and Submission\nDownload the guided lab report template and work within it 02-lab-conduct-a-crd-template.docx.\nMake sure to:\n\nUse complete sentences\nFocus on clarity, logical flow, and professional grammar\nThink about being as concise as possible while being complete and clear\nClean up the report at the end so that it is readable and professional.\nMake sure you have addressed all instructions in this document in the report.\n\nIn your final submission you will submit:\n\nYour report following 02-lab-conduct-a-crd-template.docx.\nA .qmd with all of your code 02-lab-code-template.qmd\nYour dataset (.csv or .xlsx)\n\n\n\n\n\n\n\nWarningGenerative AI\n\n\n\nAs a reminder, you are allowed to use generative AI on this assignment outside of class. However, your group should agree on how it will be used and you must disclose how you used in in your report. Finally, as always, follow the syllabus guidelines for citing AI.\nIf you us AI to help you with writing, you should prompt the model “Please assess my work and provide only feedback. Do not rewrite anything.”"
   },
   {
     "objectID": "3-activities/main-version/04.1-activity-contrasts-for-factorials.html",
@@ -2893,5 +2893,61 @@
     "title": "Activity 4.1: Factorial Treatment Structures and Contrasts",
     "section": "g. Interaction: difference of differences",
     "text": "g. Interaction: difference of differences\n\nBy hand (or using excalidraw.com), draw an interaction plot of the treatment means.\n\n\nVisually, does there appear to be evidence of interaction? Explain briefly.\n\n\nCompute the interaction contrast comparing flour levels 2 cups and 2.5 cups. Clearly show notation (\\(\\mu_{ij}\\)).\n\n\nInterpret this value in context. What question is this contrast answering?"
+  },
+  {
+    "objectID": "4-labs/02-lab-code-template.html",
+    "href": "4-labs/02-lab-code-template.html",
+    "title": "Lab 2 Analysis Appendix",
+    "section": "",
+    "text": "# I believe these are the main packages you will need\n# add any more that you end up needing here!\n\nlibrary(tidyverse)\nlibrary(emmeans)\nlibrary(pwr2)\nlibrary(multcomp)"
+  },
+  {
+    "objectID": "4-labs/02-lab-code-template.html#power-analysis",
+    "href": "4-labs/02-lab-code-template.html#power-analysis",
+    "title": "Lab 2 Analysis Appendix",
+    "section": "Power Analysis",
+    "text": "Power Analysis\nStep 1: determine \\(\\sigma^2\\)\n\n# code here if needed\n\nStep 2: calculate sample size to achieve 80% power, using the \\(\\sigma^2\\), \\(\\delta\\), and \\(t\\) for your study and \\(\\alpha = 0.05\\).\n\n# code here if needed"
+  },
+  {
+    "objectID": "4-labs/02-lab-code-template.html#random-sampling-treatment-assignment",
+    "href": "4-labs/02-lab-code-template.html#random-sampling-treatment-assignment",
+    "title": "Lab 2 Analysis Appendix",
+    "section": "Random Sampling & Treatment Assignment",
+    "text": "Random Sampling & Treatment Assignment\nWe haven’t talked about set.seed() yet in class, but it makes random procedures give you the same output every time! This makes your results reproducible. You are welcome to change the numbers that I provided before you start, but you shouldn’t change them once you have determined your sample and your assignment.\nFirst, randomly sample the required number of participants based on your power analysis (\\(r\\times t\\)).\n\n# code for random sampling\nset.seed(243)\n\nN &lt;- ### FILL THIS IN WITH YOUR SAMPLE SIZE\n\nsample_ids &lt;- sample(1:60, size = N, replace = F)\n\nError:\n! object 'N' not found\n\nsort(sample_ids)\n\nError:\n! object 'sample_ids' not found\n\n\nThen, randomly assign treatments to participants using a CRD.\nCall the dataset you create crd_table\nSee instructions for additional details.\n\n# code for creating random assignment dataset\nset.seed(393)\n\ncrd_table &lt;- ###.... CODE\n\nError in parse(text = input): &lt;text&gt;:7:0: unexpected end of input\n5:   \n6: \n  ^\n\n\nSave your table for data entry:\n\nwrite_csv(crd_table,\n          file = \"lab2_crd_randomization.csv\")\n\nError:\n! object 'crd_table' not found"
+  },
+  {
+    "objectID": "4-labs/02-lab-code-template.html#data-analysis",
+    "href": "4-labs/02-lab-code-template.html#data-analysis",
+    "title": "Lab 2 Analysis Appendix",
+    "section": "Data Analysis",
+    "text": "Data Analysis\nRead in your study data.\nDon’t forget to change your treatment variable into a FACTOR variable type!\n\ne.g. in Activity 2.2: mutate(companions = factor(companions))\n\nCheck the order of the levels of your variable. Do you want to change the order?\n\n# read in data\n\n\nEDA\nFill in the ____ below in the code to create your plot! Typically, the EV should be the x-axis and the RV should be the y-axis.\n\n# code for side-by-side boxplots + individual points\n\nggplot(data = ___________,\n       aes(x = __________,\n           y = __________)) +\n  geom_boxplot() +\n  geom_jitter(alpha = .6, \n              color = \"blue\",\n              height = 0,\n              width = .1) +\n  labs(title = \"GIVE THIS A GOOD TITLE\",\n       x = \"GOOD EV AXIS LABEL\",\n       y = \"GOOD RV AXIS LABEL\")\n\nError in parse(text = input): &lt;text&gt;:3:16: unexpected input\n2: \n3: ggplot(data = __\n                  ^\n\n\n\n\nANOVA\n\n# code to conduct ANOVA \n\noptions(contrasts = c(\"contr.sum\", \"contr.poly\"))\n\n\n\nEstimate Model Parameters\n\n# code to estimate model parameters\n\n\n\nContrasts or Pairwise Comparisons\n\n# code to estimate model parameters\n\n\n\nAssess Model Fit\n\n# code for residual vs fitted value plot\n\n\n# code for qqplot"
+  },
+  {
+    "objectID": "4-labs/templates/02-lab-code-template.html",
+    "href": "4-labs/templates/02-lab-code-template.html",
+    "title": "Lab 2 Analysis Appendix",
+    "section": "",
+    "text": "# I believe these are the main packages you will need\n# add any more that you end up needing here!\n\nlibrary(tidyverse)\nlibrary(emmeans)\nlibrary(pwr2)\nlibrary(multcomp)"
+  },
+  {
+    "objectID": "4-labs/templates/02-lab-code-template.html#power-analysis",
+    "href": "4-labs/templates/02-lab-code-template.html#power-analysis",
+    "title": "Lab 2 Analysis Appendix",
+    "section": "Power Analysis",
+    "text": "Power Analysis\nStep 1: determine \\(\\sigma^2\\)\n\n# code here if needed\n\nStep 2: calculate sample size to achieve 80% power, using the \\(\\sigma^2\\), \\(\\delta\\), and \\(t\\) for your study and \\(\\alpha = 0.05\\).\n\n# code here if needed"
+  },
+  {
+    "objectID": "4-labs/templates/02-lab-code-template.html#random-sampling-treatment-assignment",
+    "href": "4-labs/templates/02-lab-code-template.html#random-sampling-treatment-assignment",
+    "title": "Lab 2 Analysis Appendix",
+    "section": "Random Sampling & Treatment Assignment",
+    "text": "Random Sampling & Treatment Assignment\nWe haven’t talked about set.seed() yet in class, but it makes random procedures give you the same output every time! This makes your results reproducible. You are welcome to change the numbers that I provided before you start, but you shouldn’t change them once you have determined your sample and your assignment.\nFirst, randomly sample the required number of participants based on your power analysis (\\(r\\times t\\)).\n\n# code for random sampling\nset.seed(243)\n\nN &lt;- ### FILL THIS IN WITH YOUR SAMPLE SIZE\n\nsample_ids &lt;- sample(1:60, size = N, replace = F)\n\nError:\n! object 'N' not found\n\nsort(sample_ids)\n\nError:\n! object 'sample_ids' not found\n\n\nThen, randomly assign treatments to participants using a CRD.\nCall the dataset you create crd_table\nSee instructions for additional details.\n\n# code for creating random assignment dataset\nset.seed(393)\n\ncrd_table &lt;- ###.... CODE\n\nError in parse(text = input): &lt;text&gt;:7:0: unexpected end of input\n5:   \n6: \n  ^\n\n\nSave your table for data entry:\n\nwrite_csv(crd_table,\n          file = \"lab2_crd_randomization.csv\")\n\nError:\n! object 'crd_table' not found"
+  },
+  {
+    "objectID": "4-labs/templates/02-lab-code-template.html#data-analysis",
+    "href": "4-labs/templates/02-lab-code-template.html#data-analysis",
+    "title": "Lab 2 Analysis Appendix",
+    "section": "Data Analysis",
+    "text": "Data Analysis\nRead in your study data.\nDon’t forget to change your treatment variable into a FACTOR variable type!\n\ne.g. in Activity 2.2: mutate(companions = factor(companions))\n\nCheck the order of the levels of your variable. Do you want to change the order?\n\n# read in data\n\n\nEDA\nFill in the ____ below in the code to create your plot! Typically, the EV should be the x-axis and the RV should be the y-axis.\n\n# code for side-by-side boxplots + individual points\n\nggplot(data = ___________,\n       aes(x = __________,\n           y = __________)) +\n  geom_boxplot() +\n  geom_jitter(alpha = .6, \n              color = \"blue\",\n              height = 0,\n              width = .1) +\n  labs(title = \"GIVE THIS A GOOD TITLE\",\n       x = \"GOOD EV AXIS LABEL\",\n       y = \"GOOD RV AXIS LABEL\")\n\nError in parse(text = input): &lt;text&gt;:3:16: unexpected input\n2: \n3: ggplot(data = __\n                  ^\n\n\n\n\nANOVA\n\n# code to conduct ANOVA \n\noptions(contrasts = c(\"contr.sum\", \"contr.poly\"))\n\n\n\nEstimate Model Parameters\n\n# code to estimate model parameters\n\n\n\nContrasts or Pairwise Comparisons\n\n# code to estimate model parameters\n\n\n\nAssess Model Fit\n\n# code for residual vs fitted value plot\n\n\n# code for qqplot"
   }
 ]

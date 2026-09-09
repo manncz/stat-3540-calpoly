@@ -1,0 +1,162 @@
+---
+title: "Lab 2 Analysis Appendix"
+subtitle: "YOUR REPORT TITLE"
+author: "YOUR NAMES"
+execute: 
+  error: true
+  message: false
+  warning: false
+  echo: true
+embed-resources: true
+format: html
+---
+
+```{r}
+#| label: setup
+
+# I believe these are the main packages you will need
+# add any more that you end up needing here!
+
+library(tidyverse)
+library(emmeans)
+library(pwr2)
+library(multcomp)
+```
+
+## Power Analysis
+
+Step 1: determine $\sigma^2$
+
+```{r}
+# code here if needed
+
+```
+
+Step 2: calculate sample size to achieve 80% power, using the $\sigma^2$, $\delta$, and $t$ for your study and $\alpha = 0.05$.
+
+```{r}
+# code here if needed
+
+```
+
+
+## Random Sampling & Treatment Assignment
+
+We haven't talked about `set.seed()` yet in class, but it makes random procedures give you the same output every time! This makes your results **reproducible**. You are welcome to change the numbers that I provided before you start, but you shouldn't change them once you have determined your sample and your assignment.
+
+First, randomly sample the required number of participants based on your power analysis ($r\times t$).
+
+```{r}
+# code for random sampling
+set.seed(243)
+
+N <- ### FILL THIS IN WITH YOUR SAMPLE SIZE
+
+sample_ids <- sample(1:60, size = N, replace = F)
+
+sort(sample_ids)
+```
+
+Then, randomly assign treatments to participants using a CRD.
+
+Call the dataset you create `crd_table`
+
+See instructions for additional details.
+
+```{r}
+# code for creating random assignment dataset
+set.seed(393)
+
+crd_table <- ###.... CODE
+  
+
+```
+
+Save your table for data entry:
+
+```{r}
+write_csv(crd_table,
+          file = "lab2_crd_randomization.csv")
+```
+
+## Data Analysis
+
+Read in your study data.
+
+Don't forget to change your treatment variable into a FACTOR variable type!
+
+  - e.g. in Activity 2.2: `mutate(companions = factor(companions))`
+  
+Check the order of the levels of your variable. Do you want to change the order?
+
+```{r}
+# read in data
+
+```
+
+### EDA
+
+Fill in the ____ below in the code to create your plot! Typically, the EV should be the x-axis and the RV should be the y-axis.
+
+```{r}
+# code for side-by-side boxplots + individual points
+
+ggplot(data = ___________,
+       aes(x = __________,
+           y = __________)) +
+  geom_boxplot() +
+  geom_jitter(alpha = .6, 
+              color = "blue",
+              height = 0,
+              width = .1) +
+  labs(title = "GIVE THIS A GOOD TITLE",
+       x = "GOOD EV AXIS LABEL",
+       y = "GOOD RV AXIS LABEL")
+
+```
+
+
+### ANOVA
+
+
+```{r}
+# code to conduct ANOVA 
+
+options(contrasts = c("contr.sum", "contr.poly"))
+
+
+```
+
+### Estimate Model Parameters
+
+
+```{r}
+# code to estimate model parameters
+
+
+```
+
+
+### Contrasts or Pairwise Comparisons
+
+
+```{r}
+# code to estimate model parameters
+
+
+```
+
+### Assess Model Fit
+
+
+```{r}
+# code for residual vs fitted value plot
+
+
+```
+
+```{r}
+# code for qqplot
+
+
+```
