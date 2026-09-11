@@ -1,0 +1,175 @@
+---
+title: "Midterm Exam 1"
+subtitle: "Practice Problems"
+format:
+  html: default
+  pdf: default
+  docx: default
+execute:
+  message: false
+  warning: false
+  echo: false
+---
+
+## Scenario 1. Service Recovery Study.
+
+(The following is based on a study by J. Maxham, published in the Journal of Business Research in 1999.)
+
+The purpose of the study was to examine the effects of different levels of service recovery on consumer perception of purchase intention. A convenience sample of 405 university students at a major southeastern university was used in this study. Participants were randomly assigned to one of three experimental groups so that sample sizes were balanced across the three groups. The 3 groups were exposed to the same scenario of service failure, but each was given a different type of attempted service recovery. The service recovery scenarios included a ‘high service recovery’ scenario (e.g., listening to the complaint, apologizing, fixing the problem, offering a refund or future discount), a ‘moderate service recovery’ scenario (e.g., listening to the complaint, apologizing, fixing the problem) and a ‘low service recovery’ scenario (e.g., listening only).
+
+Students were handed a booklet which contained an introductory scenario. The scenario provided a brief description of a hypothetical service history with a haircut establishment. Students were then given a description of a service failure (e.g., bad haircut), and were asked to rate their baseline intent to return to the establishment for another haircut. Intent to return was measured using three 7-point Likert scale questions (1 = never return, 7 = definitely return). The three question scores were summed to provide an overall baseline intent to return score out of 21-possible points for each participant. Each student was then given a booklet containing their randomly assigned service recovery scenario and was asked the same three intent to return questions. The responses on these questions were summed to provide a post service recovery intent to return score out of 21-possible points. The researchers then determined the change in intent to return (post minus baseline).
+
+After establishing the baseline intent to return, the students were then exposed to their randomly assigned service recovery scenario (high, moderate, or low) and were again asked to rate their intent to return for a haircut.
+
+-   Completely describe the treatment structure for this experiment. (Include the factor(s), levels of the factors, treatments and the “name” of the treatment structure.)
+
+-   Completely describe the design structure for this experiment. (Include the inclusion criteria, experimental unit, randomization method, the number of replicates and total n.)
+
+-   Describe the response variable(s) and how it was obtained. Include measurement units. What does it mean for an individual participant to have a negative response.
+
+-   List/describe 3 potential sources of variability in the response variable(s). How are these controlled? Inclusion criteria? Direct control? Randomization?
+
+-   Consider the extraneous variable student attitude towards the study. Using this specific extraneous source of variation explain the purpose of random assignment of the treatments to the experimental units, in the context of this study.
+
+## Scenario 2. Albion Strawberries
+An experiment was carried out to assess the effects of four different pre-plant soil treatments in reducing the severity of black root rot in Albion strawberries. The experiment was carried out near Watsonville, CA on four commercial fields that were thought to all be quite similar in terms of drainage, soil quality, etc. The fields were divided into 6 plots each, for a total of 24 plots. There were four pre-plant treatments: metham-sodium, metalaxyl, methyl-bromide, and no treatment. The methyl-bromide was applied as a gas 60 days before planting under polyethylene tarps. The metham-sodium and metalaxyl were each applied through a low-pressure drip irrigation system 7 days before planting. A pre-plant treatment was assigned at random to a plot, such that there were 6 replications of each pre-plant treatment. The performance metric used is strawberry yield (in bushels/acre) collected over a period of 4-weeks during the growing season for each plot. A higher yield indicates reduced severity of black root rot.
+
++ Sketch a blueprint of the plot plan.
+
++ Completely describe all components of:
+  + Treatment structure:
+  + Design structure:
+  + Response variable(s):
+  
++ Write out the skeleton ANOVA table (Source of Variation and DF) we should expect to see in the analysis of this study if the goal is investigate the effect of the treatments on the response.
+
++ Write out the statistical effects model for analyzing the strawberry yield. Make sure to include numerical indices for $i$ and $j$, your model assumptions, and define what each term represents. 
+
++ In context of this study, explain what $\hat\sigma^2$ measures.
+
++ In the context of this study, name two sources of variation in the response variable(s) which are likely contributing to the unexplained variability, $\hat\sigma^2$. Only one source should be from the plot. That is, only one of your sources may contribute to the plot-to-plot variability of the field.
+
++ Write the contrast for comparing the mean strawberry yield between the pre-plant treatments to the mean of the no treatment group.
+
++ Write the contrast for comparing the mean strawberry yield between the metham-sodium and methyl-bromide treatments.
+
++ How would your study/design structure change if instead of measuring the strawberry yield for each plot, you collected the root length (cm) from 10 randomly selected plants in each plot? How might you address this in your analysis? *Hint: think about where you are measuring each response.*
+
+## Scenario 3. Lung Volume
+
+Download [`lung_volume.csv`](01-lung-volume-data.csv).
+
+A study was conducted to evaluate the effect of elevation on the lung volume of birds raised at specified elevations. Thirty-five environmental chambers which simulated elevations by regulating the air pressure were used. Five elevations (1000ft, 2000ft, 3000ft, 4000ft and 5000ft) were randomly assigned, one-at-a-time, to each of seven chambers, so that there were 7 reps/treatment. Thirty-five baby birds were then randomly assigned, one to each of the chambers. When the birds reached adult age, their lung volumes were determined.
+
++ Determine the following.
+  + Treatment Structure:
+  + Design Structure:
+
++ Run the ANOVA in R and confirm that we should Reject the Null for the ANOVA F-test. Do you know how all of these components are related? e.g., MSTrt = SSTrt/dfTrt; F = MSTrt/MSE? If I gave you a partially filled ANOVA table, could you complete it?
+
++ Obtain the estimated parameters/coefficients (e.g., $\hat \mu$, $\hat \tau_i$, $\hat \sigma^2$) (remember to use the sum-to-zero constraint). What do each of these represent in context of the data?
+
++ Obtain the estimated LSMeans (e.g., $\hat\mu_i$). How do these relate to the estimated parameters/coefficients found above?
+
++ Now, run all pairwise comparisons using no multiple comparisons adjustment to the p-values (i.e., Fisher’s Protected Least Significant Difference (LSD) Test ). 
+  + Copy/paste the table showing the estimated difference and p-value for each comparison.
+
++ Re-run all pairwise comparisons, but this time use the Tukey adjusted p-values.
+	+ Copy/paste the table showing  the estimated difference and T-statistic/p-value for each comparison.
+
++ Discuss how the results of the pairwise comparisons change, when the Tukey adjustment is incorporated.
+
++ Could you reverse engineer to create a compact letter display table from the Tukey pairwise comparisons table you found above?
+
++ Explain why it could be preferable to choose one or two defined contrasts before the start of the study to test.
+
++ Let's test the contrast of 5000ft versus all of the other treatments.
+  - Define the population contrast $C$
+  - Write out the estimated contrast $\hat{C}$
+  - Test the contrast using R
+  - What conclusion can you make?
+
+## Scenario 4. Donuts
+
+Suppose an experiment was conducted to determine what (if any) impact the type of fat used in frying donuts has on the amount of fat absorbed (grams) by the donuts.  Researchers are interested in comparing two types of animal fats with two types of vegetable fats used to fry the donuts. Six batches of donuts were fried for each type of fat under consideration and a pilot study showed the MSE is expected to be 100.9 with the expected treatment means given below. Assume a significance level of $\alpha=0.05$.
+
+$$\bar y_{A1\cdot}=70, \bar y_{A2\cdot}=75, \bar y_{V1\cdot}=75, \bar y_{V2\cdot} = 80$$
+
++ Identify the following for this experiment.
+  + Treatment Design:
+  + Experimental Design:
+
+
++ Identify the following components needed for a power analysis:
+
+  + $\delta=$ ______
+  + $\hat\sigma^2=$ ______
+  + $\alpha=$ ______
+  + $r =$ ______ and $t=$ ______
+
++ Using R, calculate the power associated with a minimal power configurations and your estimates from above. Is this very good?
+
++ How many replicates per type of fat are needed to achieve a power of 80% with a minimal power configuration?
+
++ How would the power change from the original study (i.e., six batches of doughnuts per fat type) if the estimated experimental error decreased from 100.9 to 70.9?
+
+## Scenario 5. Colonic Hydrogen Production; Q7.2 from Oehlert text
+Nondigestible carbohydrates are commonly used in diet foods, but they may affect colonic hydrogen production in humans. We want to test whether inulin, fructooligosaccharide, and lactulose result in equivalent hydrogen production. Preliminary data suggest that the treatment means are approximately 45, 32, and 60, respectively, with the experimental error variance estimated to be 35.
+
++ Write out the null and alternative hypotheses for this study.
+
++ Using the minimum power configuration (e.g., what is $\delta$?). How many subjects per treatment group are needed to achieve a power of 0.95, assuming a significance level of $\alpha=0.01$?
+
++ Explain what it means to have a power of 0.95 in this context. How confident can you be that the study will detect a difference in treatments if one exists?
+
+## Scenario 6. Wafer processing.
+
+Silicon wafers are the most widely used substrates for making microprocessors. Microprocessors power everything from cell phones to toasters. Fine grinding is a technique that silicon wafer manufacturers use to prepare the wafers before they are sent to chip companies like Intel which use them to fabricate their microprocessors.
+
+An experiment was carried out to investigate how the combinations of 3 fine grinding process parameters (grinding wheel speed, chuck speed and feed-rate) affect the surface roughness (in nm) of 200mm diameter silicon wafers. (Lower surface roughness is better.) A low and high level of each process parameter was investigated (see table below). The settings of the process parameters were combined to form treatments and each treatment was assigned at random to 3 raw silicon wafers. The order of processing the silicon wafers and the testing-order of surface roughness for each wafer were also both randomized. Because the surface roughness can vary across the wafer, a profile of roughness was obtained by taking measurements at 10 different sites across each of the wafers. Those 10 roughness measurements were then averaged to determine the surface roughness of the wafer.
+
+|                 | Low Level      | High Level     |
+|-----------------|----------------|----------------|
+| **Grinding**    | 2175 rpm       | 4350 rpm       |
+| **Chuck speed** | 40 rpm         | 590 rpm        |
+| **Feed Rate**   | 0.1 $\mu$m/sec | 0.3 $\mu$m/sec |
+
+-   Completely describe the treatment structure for this experiment. (Include the name, factor(s), levels of the factors, and treatments.)
+
+-   Completely describe the design structure for this experiment. (Include the inclusion criteria, experimental unit, randomization method, the number of replicates and total n.)
+
+-   Describe the response variable and how it was obtained. Include measurement units.
+
+-   Is there any sub-sampling in this study? Explain.
+
+-   Explain the purpose of randomizing the order of processing and the testing-order for surface roughness.
+
+
+## Scenario 7. Loaves of Bread 
+
+Download [`loaf_bread_simulated.csv`](01-simulated-bread.csv).
+
+A small commercial bakery is working to improve the consistency and quality of its sandwich loaves. One key quality metric is loaf volume (measured in cubic centimeters), where higher volume is associated with a lighter, fluffier loaf.
+
+The head baker suspects that both the type of fat used in the dough and the brand of yeast may influence loaf volume. To investigate this, the baker compares three commonly used fats (butter, oil, and margarine) and three commercially available yeast brands, referred to as Yeast A, Yeast B, and Yeast C.
+
+An experiment is conducted in which four loaves are baked using all possible combinations of fat type and yeast brand. Each loaf is prepared using the same base recipe, given the same amount of time to rise, and baked independently under identical oven conditions. For each fat-yeast combination, multiple loaves are prepared independently, and the final loaf volume of each loaf is recorded.
+
++ Describe the treatment and experimental structures.
+
++ Draw a blueprint of the study.
+
++ Calculate the estimated treatment means using the data.
+
++ Calculate one of the the main effects of fat (butter vs. oil). Define the population effect using notation (i.e. $\mu_{ij}$) and calculate the estimated main effect. Interpret your estimated effect.
+
++ Calculate the interaction effect of fat (butter vs. oil) and yeast (Brand A vs. Brand B). Define the population effect using notation (i.e. $\mu_{ij}$) and calculate the estimated effect. Interpret your estimated effect.
+
+
++ What if the baker decided to save time that instead of mixing up four independent batches to bake independent loaves, they mix up one batch with each of the fat and yeast combinations and split this into 4 loaves which they put in the oven at the same time.
+  + What is the experimental unit?
+  + How many *independent* replications of fat x yeast will the baker have?
+  + What issue does this cause statistically?
+	
+	
+

@@ -8,8 +8,8 @@ execute:
 
 echo: false
 format:
-  html: default
   docx: default
+  html: default
   pdf: default
 ---
 \vspace{-.8in}
