@@ -11,18 +11,7 @@ echo: true
 embed-resources: true
 format: typst
 ---
-::: callout-note
-Submit via Gradescope, don't forget to assign pages to the questions in the outline!
-
-Please delete any extraneous instructions (like this box) before submission.
-
-You can also delete anything like `\vspace{}`
-
-Remember that it's okay if you cannot get the .qmd to render to submit this!! I will help you but you can also use any of the other formats.
-
-You should follow the qmd template for coding: [03.1-activity-what-impacts-power.qm](../student/03.1-activity-what-impacts-power.qmd)
-
-:::
+I worked with: _______________________________
 
 ```{r}
 #| label: setup
@@ -51,27 +40,11 @@ We will use a significance level of $\alpha = 0.05$ and we want 90% power. Even 
 
 -   Treatment Structure: (name, factor, levels, treatments)
 
-:::{.instructions}
-\vspace{0.3in}
-:::
-
 -   Design Structure: (name, e.u., m.u.; note, we don't know the reps yet!)
-
-:::{.instructions}
-\vspace{0.3in}
-:::
 
 -   Response:
 
-:::{.instructions}
-\vspace{0.25in}
-:::
-
 ### b. What is the value of $\delta$ in this setting? What does this represent (in words)?
-
-:::{.instructions}
-\vspace{0.7in}
-:::
 
 ## Part 1: Baseline Power
 

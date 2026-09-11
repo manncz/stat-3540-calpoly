@@ -27,8 +27,6 @@ You should follow the qmd template for coding: [03.1-activity-what-impacts-power
 
 :::
 
-I worked with: _______________________________
-
 You are planning a study to evaluate the effect of 5 different training programs (speed, power, agility, endurance, balance) on improvement in vertical jump height (measured in inches).
 
 From previous studies, the experimental error (i.e., $\sigma^2$) is estimated to be about 16 inches.
@@ -47,27 +45,19 @@ We will use a significance level of $\alpha = 0.05$ and we want 90% power. Even 
 
 -   Treatment Structure: (name, factor, levels, treatments)
 
-:::{.instructions}
 \vspace{0.3in}
-:::
 
 -   Design Structure: (name, e.u., m.u.; note, we don't know the reps yet!)
 
-:::{.instructions}
 \vspace{0.3in}
-:::
 
 -   Response:
 
-:::{.instructions}
 \vspace{0.25in}
-:::
 
 ### b. What is the value of $\delta$ in this setting? What does this represent (in words)?
 
-:::{.instructions}
 \vspace{0.7in}
-:::
 
 ## Part 1: Baseline Power
 
