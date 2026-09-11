@@ -31,7 +31,7 @@ The crispiness measurements for each cookie are shown below.
   + Name of the treatment structure: ________________________
   + Factors + Levels: ________________________
   + t = ______
-
+  
 **Experimental structure**
 
 + Randomization method: ______

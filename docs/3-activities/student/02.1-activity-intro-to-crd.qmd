@@ -63,28 +63,6 @@ Describe the following components of the study.
 
 \vspace{0.4in}
 
-::: version-solution
-- Treatment structure
-
-  - Name: one way
-  - Factor: type of traffic signal
-  - Levels: pretimed, semi-actuated, fully-actuated
-  - t = 3
-
-- Design structure
-
-  - Randomization: CRD
-  - e.u.: one intersection
-  - r = 5
-  - m.u.= one intersection
-  - N = n = 15
-
-- Response variable(s)
-
-  - average stopped time per vehicle (seconds)
-  
-:::
-
 ## b. Complete the skeleton ANOVA table below
 
 Make sure to use context of the data!
