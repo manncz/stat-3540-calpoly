@@ -66,7 +66,7 @@ Submit proposals via Canvas at Lab 2: Checkpoint -- Proposal.
 Conduct a power analysis to determine the required sample size for your experiment. To do this:
 
   1.  Collect a small scale pilot study (you can just pick some “pilot Islanders”). Think $r = 2$ or $r = 3$.
-      - If using the example RQ, you can use Dr. Robinson's pilot data here.
+      - If using the example RQ, you can use Dr. Robinson's pilot data [here](templates/lab2-chocolate-pilot.xlsx).
   2. Determine the practically significant difference ($\delta$) that is relevant to your research question.
       - Past literature? What you saw in your pilot study? etc.
   3.  Estimate experimental variance using your pilot data set. ($\sigma^2$)
