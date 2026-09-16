@@ -22,7 +22,7 @@ format:
 
 - ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} All R code should be written in a **script** file (.qmd) so that you can **save** your code for reproducibility. 
     
-  - I **highly** recommend using this template! [02-lab-code-template.qmd](templates/02-lab-code-template.qmd)
+  - You **must** write R code in this template! [02-lab-code-template.qmd](templates/02-lab-code-template.qmd)
   - You will **turn in your code** with the report. 
 
 - Remember this is a group assignment! You should be working with your group through **all** elements of this lab and you are all responsible for the final report.

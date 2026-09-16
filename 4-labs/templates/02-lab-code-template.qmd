@@ -25,10 +25,25 @@ library(multcomp)
 
 ## Power Analysis
 
+
+
+
 Step 1: determine $\sigma^2$
 
+Delete this chunk if you are not running your own pilot
 ```{r}
-# code here if needed
+# code for random sampling pilot study islanders
+set.seed(43)
+
+pilotN <- ### FILL THIS IN WITH YOUR SAMPLE SIZE for the pilot study
+
+pilot_ids <- sample(1:60, size = pilotN, replace = F)
+
+sort(pilot_ids)
+```
+
+```{r}
+# code here if needed to calculate sigma2 from pilot
 
 ```
 
