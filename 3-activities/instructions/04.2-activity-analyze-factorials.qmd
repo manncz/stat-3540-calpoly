@@ -73,19 +73,12 @@ Make sure to define **all** terms, denote $i,j,k$ values, and include assumption
 
 -   Based on your conclusion above, should you proceed by looking at (circle or only keep one):
 
- A. Main Effects                  
- B. Joint/Simple Effects
-
-::: callout-note
-## $\epsilon_{ijk} \text{ iid } \sim N(0,\sigma^2)$
-
-Get in the habit of looking at your residual plots for model assumptions here!
-:::
+**B. Joint / Simple Effects** Since there is evidence of an interaction.
 
 ## e. Visualizing the interaction
 
 -   Create a plot that illustrates how Lysine (x-axis) modifies the effect of Soy Protein (separate colored lines) on ADG.
--   Copy/paste/sketch your plot.
+-   Copy/paste/sketch your plot (if you are not using this .qmd and integrating your plot directly.)
 -   In 2–3 sentences, describe what you notice in the plot.
 
 \vspace{2in}
@@ -93,6 +86,8 @@ Get in the habit of looking at your residual plots for model assumptions here!
 ## f. Simple effects: Protein within Lysine
 
 Conduct slice tests to compare mean ADG between 12% and 14% Protein at each level of Lysine.
+
+This aligns with the plot, which showed evidence of an effect of protein amount when lysine is 0 or .05, but not evidence of an effect of protein amount when lysine is .1 or .15 (the intervals overlap).
 
 -   Lysine = 0: F = \_\_\_\_\_\_\_; df = \_\_\_\_\_, \_\_\_\_\_; p = \_\_\_\_\_\_\_\_
 
@@ -115,5 +110,11 @@ Support your recommendation with:
 -   treatment means (with units),
 
 -   and appropriate multiple comparisons (e.g., compact letter display).
+
+```{r}
+cld(pig_lsmeans, Letters = LETTERS, 
+    decreasing = T, adjust = "tukey")
+```
+We recommend using 14% soy protein additive and either 0.05% or 0% lycine additive. The estimated mean ADG for male pigs fed 14% protein and 0.05% lycine was 3.12 pounds, which was not significantly different from that for male pigs fed 14% protein and 0% lycine of 3 pounds.
 
 \vspace{1.5in}

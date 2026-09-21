@@ -1,5 +1,5 @@
 ---
-title: "4.1 Preparation: Factorials Part II -- Analysis and Interactions"
+title: "4.2 Preparation: Factorials Part II -- Analysis and Interactions"
 number-sections: true
 number-depth: 2
 ---

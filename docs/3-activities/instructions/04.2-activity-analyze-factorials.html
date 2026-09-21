@@ -395,7 +395,7 @@ Warning
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>Submit via Gradescope, don’t forget to assign pages to the questions in the outline!</p></li>
-<li><p>Delete any extraneous instructions (<strong>like this box</strong>) before submission. You will be deducted points from now on if you do not follow this instruction!</p></li>
+<li><p>Delete any extraneous instructions (<strong>like this box</strong>) before submission. <em>You will be deducted points from now on if you do not follow this instruction!</em></p></li>
 <li><p>Delete anything like <code>\vspace{}</code></p></li>
 <li><p>Remember that it’s okay if you cannot get the .qmd to render to submit this!! I will help you but you can also use any of the other formats.</p></li>
 <li><p>You should follow the qmd template for coding: <a href="../student/04.2-activity-analyze-factorials.qmd">04.2-activity-analyze-factorials.qmd</a></p></li>
@@ -413,7 +413,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ensure <code>lysine</code> and <code>protein</code> are a character/factor data types after reading the data into R. By default it will be read these in as numeric.</p>
+<p>Ensure <code>lysine</code> and <code>protein</code> are a character/factor data types after reading the data into R. By default it will read these in as numeric. Code is provided in the .qmd template to do this!</p>
 </div>
 </div>
 <p>The researchers would like to determine which of these additives, if any, affect the pigs’ weight gain, and what trends there are, if any, among the different levels of the additives. In addition, the researchers would like to know if there is a combination of lysine and soy protein which results in the most weight gain over the 7-day period.</p>
@@ -483,33 +483,20 @@ Warning
 <ul>
 <li>Based on your conclusion above, should you proceed by looking at (circle or only keep one):</li>
 </ul>
-<p>A. Main Effects<br>
-B. Joint/Simple Effects</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span><span class="math inline">\(\epsilon_{ijk} \text{ iid } \sim N(0,\sigma^2)\)</span>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Get in the habit of looking at your residual plots for model assumptions here!</p>
-</div>
-</div>
+<p><strong>B. Joint / Simple Effects</strong> Since there is evidence of an interaction.</p>
 </section>
 <section id="e.-visualizing-the-interaction" class="level2">
 <h2 class="anchored" data-anchor-id="e.-visualizing-the-interaction">e. Visualizing the interaction</h2>
 <ul>
 <li>Create a plot that illustrates how Lysine (x-axis) modifies the effect of Soy Protein (separate colored lines) on ADG.</li>
-<li>Copy/paste/sketch your plot.</li>
+<li>Copy/paste/sketch your plot (if you are not using this .qmd and integrating your plot directly.)</li>
 <li>In 2–3 sentences, describe what you notice in the plot.</li>
 </ul>
 </section>
 <section id="f.-simple-effects-protein-within-lysine" class="level2">
 <h2 class="anchored" data-anchor-id="f.-simple-effects-protein-within-lysine">f.&nbsp;Simple effects: Protein within Lysine</h2>
 <p>Conduct slice tests to compare mean ADG between 12% and 14% Protein at each level of Lysine.</p>
+<p>This aligns with the plot, which showed evidence of an effect of protein amount when lysine is 0 or .05, but not evidence of an effect of protein amount when lysine is .1 or .15 (the intervals overlap).</p>
 <ul>
 <li><p>Lysine = 0: F = _______; df = _____, _____; p = ________</p></li>
 <li><p>Lysine = 0.05: F = _______; df = _____, _____; p = ________</p></li>
@@ -526,6 +513,13 @@ B. Joint/Simple Effects</p>
 <li><p>treatment means (with units),</p></li>
 <li><p>and appropriate multiple comparisons (e.g., compact letter display).</p></li>
 </ul>
+<div class="cell">
+<div class="cell-output cell-output-error">
+<pre><code>Error in `cld()`:
+! could not find function "cld"</code></pre>
+</div>
+</div>
+<p>We recommend using 14% soy protein additive and either 0.05% or 0% lycine additive. The estimated mean ADG for male pigs fed 14% protein and 0.05% lycine was 3.12 pounds, which was not significantly different from that for male pigs fed 14% protein and 0% lycine of 3 pounds.</p>
 
 
 </section>

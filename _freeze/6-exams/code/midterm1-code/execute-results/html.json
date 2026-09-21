@@ -1,0 +1,15 @@
+{
+  "hash": "78291e48568f73bf2b7d2830f739a4b5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"midterm1-code\"\nformat: html\n---\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# vector\nform <- c(\"Form A\", \"Form B\")\n\n# vector of levels\ninstruction <- c(\"Instruction 1\", \"Instruction 2\", \n                 \"Instruction 3\")\n\ntreatments <- crossing(form, instruction) |> \n  mutate(treat = paste(form, instruction)) |> \n  pull(treat)\n```\n\n::: {.cell-output .cell-output-error}\n\n```\nError in `pull()`:\n! could not find function \"pull\"\n```\n\n\n:::\n:::\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ntreatments\n```\n\n::: {.cell-output .cell-output-error}\n\n```\nError:\n! object 'treatments' not found\n```\n\n\n:::\n\n```{.r .cell-code}\n# create treatment vector of length N\ntreat_rep <- rep(treatments, each = 3)\n```\n\n::: {.cell-output .cell-output-error}\n\n```\nError:\n! object 'treatments' not found\n```\n\n\n:::\n\n```{.r .cell-code}\n# random assignment\nset.seed(343)\nsample(treat_rep, size = 6*3, replace = F)\n```\n\n::: {.cell-output .cell-output-error}\n\n```\nError:\n! object 'treat_rep' not found\n```\n\n\n:::\n:::\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
