@@ -20,6 +20,7 @@ format:
 execute: 
   warning: false
   message: false
+  echo: false
 ---
 
 ## Example 4.4: Exercise Performance
@@ -38,7 +39,7 @@ The effects of warm-up type (no warm-up vs. dynamic stretching), pre-workout sup
 ```{r}
 library(tidyverse)
 library(emmeans)
-stress_data <- read_csv("_data/04_stress_data.csv")
+stress_data <- read_csv("_data/04-stress_data.csv")
 head(stress_data) |> 
   knitr::kable()
 
@@ -160,23 +161,40 @@ summary(stress_mod)
 
 ## Check Model Assumptions: $\epsilon_{ijkl} iid \sim N(0, \sigma^2)$
 
-:::: columns
+
+::::: columns
 ::: column
 ```{r}
 #| echo: true
-#| code-fold: true
-#| fig-width: 6
-#| fig-height: 6
-
-
-plot(stress_mod)
+#| code-folding: true
+stress_mod |> 
+  broom::augment() |> 
+  ggplot(aes(x = .fitted, y = .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0,
+             color = "#3a86d4") +
+  labs(x = "Fitted Values", y = "Residuals")
 ```
+:::
+
+::: column
+```{r}
+#| echo: true
+#| code-folding: true
+stress_mod |> 
+  broom::augment() |> 
+  ggpubr::ggqqplot(x = ".resid",
+         color = "#3a86d4") +
+  labs(title = "Normal QQ-Plot of Residuals")
+```
+:::
+:::::
 
 
 ## 3-way Decision Flowchart
 
 ```{r}
-knitr::include_graphics("images/046-three-way-decision-flowchart.png")
+knitr::include_graphics("_images/046-three-way-decision-flowchart.png")
 ```
 
 ## What are we testing with the F-tests?
@@ -246,7 +264,7 @@ knitr::include_graphics("images/046-jmp-anova.png")
 ```{r}
 #| fig-align: center
 #| out-width: 40%
-knitr::include_graphics("images/046-three-way-decision-flowchart-stress.png")
+knitr::include_graphics("_images/046-three-way-decision-flowchart-stress.png")
 ```
 
 + 2-way interaction between preworkout x music (averaged over warm-up)
@@ -278,27 +296,6 @@ emmeans(stress_mod, specs = ~ Preworkout*Music) |>
 :::
 ::::
 
-## JMP: 2-way Interaction Effect: Preworkout x Music
-
-Scroll over to `r fontawesome::fa("caret-down", fill = "red")` `Preworkout*Music`
-
-:::: columns
-::: column
-```{r}
-#| fig-align: center
-#| out-width: 75%
-knitr::include_graphics("images/046-jmp-preworkoutxmusic.png")
-```
-:::
-::: column
-```{r}
-#| fig-align: center
-#| out-width: 75%
-knitr::include_graphics("images/046-jmp-preworkoutxmusic-letters.png")
-```
-:::
-::::
-
 ## Pairwise Comparisons: Preworkout x Music (avg over Workout)
 
 ```{r}
@@ -307,11 +304,7 @@ emmeans(stress_mod, specs = ~ Preworkout*Music) |>
   pairs(adjust = "tukey", infer = c(T,T))
 ```
 
-```{r}
-#| fig-align: center
-#| out-width: 65%
-knitr::include_graphics("images/046-jmp-preworkoutxmusic-pairwise.png")
-```
+
 
 ## R: Main effect of Warmup
 
@@ -339,25 +332,6 @@ emmeans(stress_mod, specs = ~ Warmup) |>
 :::
 ::::
 
-## JMP: Main effect of Warmup
-
-Scroll over to `r fontawesome::fa("caret-down", fill = "red")` `Warmup`
-
-:::: columns
-::: column
-```{r}
-#| out-width: 65%
-knitr::include_graphics("images/046-jmp-warmup-letters.png")
-```
-:::
-::: column
-```{r}
-#| out-width: 90%
-knitr::include_graphics("images/046-jmp-warmup-letters2.png")
-```
-:::
-::::
-
 ## R: *What if* there had been a 3-way interaction?
 
 :::: columns
@@ -378,13 +352,3 @@ emmeans(stress_mod, ~ Preworkout:Music:Warmup) |>
 ```
 :::
 ::::
-
-## JMP: *What if* there had been a 3-way interaction?
-
-Scroll over to `r fontawesome::fa("caret-down", fill = "red")` `Warmup*Preworkout*Music`
-
-```{r}
-#| fig-align: center
-#| out-width: 70%
-knitr::include_graphics("images/046-jmp-3way-lsmeans.png")
-```

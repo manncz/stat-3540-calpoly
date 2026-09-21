@@ -11,26 +11,30 @@ number-depth: 2
 library(tidyverse)
 ```
 
-#### 📽 Watch Videos: 45 min
+#### 📽 Watch Videos: 25 min
 
 ------------------------------------------------------------------------
 
 ::: callout
 ## Learning Objectives
 
-
+- Extend previous concepts to higher order interactions.
 :::
 
 **Notes:**
 
 - If you want more or a different modality, read Oehlert Ch 8-9. 
     - Warning: we jump a bit more around Ch 8-9 for Module 4... we have three whole class days on this topic, so just skip around to sections that align with the day's lecture videos and slides.
-- There is **one slide deck** to follow along with, but the links below go to the relevant starting point for each video.
 - Skip JMP discussions
 - **Take notes** while you watch and summarize the main points for yourself!
 
-## XX
+## Higher Order Interactions
+
+- 📽 Follow along with the [slides](../2-slides/04.3-higher-order-interactions.qmd).
+
+{{< video https://www.youtube.com/watch?v=wNzKFwYMsP4 >}}
 
 
-## R - Reading in Data
+
+
  

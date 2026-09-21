@@ -3424,7 +3424,7 @@
     "href": "1-prep/04.3-prep.html",
     "title": "4.3 Preparation: Factorials Part III –",
     "section": "",
-    "text": "NoneLearning Objectives\n\n\n\n\n\n\nNotes:\n\nIf you want more or a different modality, read Oehlert Ch 8-9.\n\nWarning: we jump a bit more around Ch 8-9 for Module 4… we have three whole class days on this topic, so just skip around to sections that align with the day’s lecture videos and slides.\n\nThere is one slide deck to follow along with, but the links below go to the relevant starting point for each video.\nSkip JMP discussions\nTake notes while you watch and summarize the main points for yourself!"
+    "text": "NoneLearning Objectives\n\n\n\n\nExtend previous concepts to higher order interactions.\n\n\n\nNotes:\n\nIf you want more or a different modality, read Oehlert Ch 8-9.\n\nWarning: we jump a bit more around Ch 8-9 for Module 4… we have three whole class days on this topic, so just skip around to sections that align with the day’s lecture videos and slides.\n\nSkip JMP discussions\nTake notes while you watch and summarize the main points for yourself!"
   },
   {
     "objectID": "1-prep/04.3-prep.html#xx",
@@ -3451,22 +3451,22 @@
     "objectID": "2-slides/04.3-higher-order-interactions.html#example-4.4-exercise-performance",
     "href": "2-slides/04.3-higher-order-interactions.html#example-4.4-exercise-performance",
     "title": "Module 4: Factorial Treatment Structure",
-    "section": "",
-    "text": "The effects of warm-up type (no warm-up vs. dynamic stretching), pre-workout supplement (none vs. pre-workout drink), and music type (no music vs. upbeat music) on exercise tolerance were studied in a small-scale experiment involving 24 adults aged 25-35. Exercise tolerance was measured as the number of minutes until the subject reached fatigue while performing on a stationary bicycle. Each participant was randomly assigned to a warm-up type – pre-workout supplement – music type condition before completing the exercise tolerance stress test. The data can be found in 04-stress_test.csv."
+    "section": "Example 4.4: Exercise Performance",
+    "text": "Example 4.4: Exercise Performance\n\nThe effects of warm-up type (no warm-up vs. dynamic stretching), pre-workout supplement (none vs. pre-workout drink), and music type (no music vs. upbeat music) on exercise tolerance were studied in a small-scale experiment involving 24 adults aged 25-35. Exercise tolerance was measured as the number of minutes until the subject reached fatigue while performing on a stationary bicycle. Each participant was randomly assigned to a warm-up type – pre-workout supplement – music type condition before completing the exercise tolerance stress test. The data can be found in 04-stress_test.csv."
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#example-4.4-the-data",
     "href": "2-slides/04.3-higher-order-interactions.html#example-4.4-the-data",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "Example 4.4: The Data",
-    "text": "Example 4.4: The Data\n\nlibrary(tidyverse)\nlibrary(emmeans)\nstress_data &lt;- read_csv(\"_data/04_stress_data.csv\")\n\nError:\n! '_data/04_stress_data.csv' does not exist in current working directory: '/Users/czmann/Documents/teaching/stat3540/2-slides'.\n\nhead(stress_data) |&gt; \n  knitr::kable()\n\nError:\n! object 'stress_data' not found\n\noptions(width = 200)\noptions(contrasts = c(\"contr.sum\", \"contr.poly\"))\nstress_mod &lt;- lm(Tolerance ~ Warmup*Preworkout*Music, data = stress_data)\n\nError:\n! object 'stress_data' not found"
+    "text": "Example 4.4: The Data\n\n\n\n\n\n\n\n\n\n\n\n\nSubject\nWarmup\nPreworkout\nMusic\nTolerance\n\n\n\n\n1\nDynamic stretching\nPre-workout drink\nUpbeat music\n29.2\n\n\n2\nNo warm-up\nPre-workout drink\nNo music\n14.8\n\n\n3\nDynamic stretching\nPre-workout drink\nUpbeat music\n24.1\n\n\n4\nNo warm-up\nNone\nNo music\n6.1\n\n\n5\nDynamic stretching\nNone\nUpbeat music\n14.6\n\n\n6\nDynamic stretching\nPre-workout drink\nNo music\n17.6"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#study-blueprint",
     "href": "2-slides/04.3-higher-order-interactions.html#study-blueprint",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "Study Blueprint",
-    "text": "Study Blueprint\n\nknitr::include_graphics(\"_images/046-stress-blueprint.png\")"
+    "text": "Study Blueprint"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#study-structure",
@@ -3480,14 +3480,14 @@
     "href": "2-slides/04.3-higher-order-interactions.html#adding-a-third-factor-2x2x2",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "Adding a Third Factor (2x2x2)",
-    "text": "Adding a Third Factor (2x2x2)\nWith three factors -&gt; t = 8 treatments\n\nknitr::include_graphics(\"_images/046-stress-trt-structure.png\")\n\n\n\n\n\n\n\n\n\nmain effects: Warm-up, Pre-workout, Music\ntwo-way interactions: Warm-up x Pre-workout, Warm-up x Music, Pre-workout x Music\nthree-way interaction: Warm-up x Pre-workout x Music"
+    "text": "Adding a Third Factor (2x2x2)\nWith three factors -&gt; t = 8 treatments\n\n\n\n\n\n\n\n\n\n\nmain effects: Warm-up, Pre-workout, Music\ntwo-way interactions: Warm-up x Pre-workout, Warm-up x Music, Pre-workout x Music\nthree-way interaction: Warm-up x Pre-workout x Music"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#what-is-a-three-way-interaction",
     "href": "2-slides/04.3-higher-order-interactions.html#what-is-a-three-way-interaction",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "What is a three-way interaction?",
-    "text": "What is a three-way interaction?\n\n A three-way interaction exists when the way two factors interact depends on the level of a third factor. \nAKA: a two-way interaction is not consistent across levels of a third factor. \n\n\nemmip(stress_mod, Preworkout ~ Music | Warmup) +\n  theme(aspect.ratio = 1) +\n  labs(y = \"Tolerance (seconds)\") +\n  guides(color = guide_legend(reverse = TRUE))\n\nError:\n! object 'stress_mod' not found"
+    "text": "What is a three-way interaction?\n\n A three-way interaction exists when the way two factors interact depends on the level of a third factor. \nAKA: a two-way interaction is not consistent across levels of a third factor."
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#way-treatment-effects-model",
@@ -3522,21 +3522,21 @@
     "href": "2-slides/04.3-higher-order-interactions.html#r-fit-3-way-analysis",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "R: Fit 3-way Analysis",
-    "text": "R: Fit 3-way Analysis\n\noptions(contrasts = c(\"contr.sum\", \"contr.poly\"))\n# same as Tolerance ~ Warmup + Preworkout + Music + Warmup:Preworkout + Warmup:Music + Preworkout:Music + Warmup:Preworkout:Music\nstress_mod &lt;- lm(Tolerance ~ Warmup*Preworkout*Music, data = stress_data)\n\nError:\n! object 'stress_data' not found\n\n\n\n\nThis is your roadmap!\n\nanova(stress_mod)\n\nError:\n! object 'stress_mod' not found\n\n\n\nThese are your parameter estimates!\n\nsummary(stress_mod) \n\nError:\n! object 'stress_mod' not found"
+    "text": "R: Fit 3-way Analysis\n\noptions(contrasts = c(\"contr.sum\", \"contr.poly\"))\n# same as Tolerance ~ Warmup + Preworkout + Music + Warmup:Preworkout + Warmup:Music + Preworkout:Music + Warmup:Preworkout:Music\nstress_mod &lt;- lm(Tolerance ~ Warmup*Preworkout*Music, data = stress_data)\n\n\n\nThis is your roadmap!\n\n\nAnalysis of Variance Table\n\nResponse: Tolerance\n                        Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nWarmup                   1 176.584 176.584 18.9155 0.0004971 ***\nPreworkout               1 242.570 242.570 25.9839 0.0001076 ***\nMusic                    1  70.384  70.384  7.5394 0.0143574 *  \nWarmup:Preworkout        1  13.650  13.650  1.4622 0.2441432    \nWarmup:Music             1  11.070  11.070  1.1859 0.2922989    \nPreworkout:Music         1  72.454  72.454  7.7612 0.0132205 *  \nWarmup:Preworkout:Music  1   1.870   1.870  0.2004 0.6604336    \nResiduals               16 149.367   9.335                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\nThese are your parameter estimates!\n\n\n\nCall:\nlm(formula = Tolerance ~ Warmup * Preworkout * Music, data = stress_data)\n\nResiduals:\n   Min     1Q Median     3Q    Max \n-4.100 -1.842 -0.950  2.217  4.367 \n\nCoefficients:\n                           Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)                 16.2708     0.6237  26.088 1.54e-14 ***\nWarmup1                      2.7125     0.6237   4.349 0.000497 ***\nPreworkout1                 -3.1792     0.6237  -5.097 0.000108 ***\nMusic1                      -1.7125     0.6237  -2.746 0.014357 *  \nWarmup1:Preworkout1         -0.7542     0.6237  -1.209 0.244143    \nWarmup1:Music1               0.6792     0.6237   1.089 0.292299    \nPreworkout1:Music1           1.7375     0.6237   2.786 0.013221 *  \nWarmup1:Preworkout1:Music1   0.2792     0.6237   0.448 0.660434    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 3.055 on 16 degrees of freedom\nMultiple R-squared:  0.7976,    Adjusted R-squared:  0.709 \nF-statistic: 9.007 on 7 and 16 DF,  p-value: 0.0001525"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#check-model-assumptions-epsilon_ijkl-iid-sim-n0-sigma2",
     "href": "2-slides/04.3-higher-order-interactions.html#check-model-assumptions-epsilon_ijkl-iid-sim-n0-sigma2",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "Check Model Assumptions: \\(\\epsilon_{ijkl} iid \\sim N(0, \\sigma^2)\\)",
-    "text": "Check Model Assumptions: \\(\\epsilon_{ijkl} iid \\sim N(0, \\sigma^2)\\)\n\n\n\n\nCode\nplot(stress_mod)\n\n\nError:\n! object 'stress_mod' not found\n\n\n\n3-way Decision Flowchart\n\nknitr::include_graphics(\"images/046-three-way-decision-flowchart.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-three-way-decision-flowchart.png\"\n\n\n\n\nWhat are we testing with the F-tests?\n\n\n3-way Interaction\n\\[\\scriptsize H_0:\\text{ All } \\alpha\\beta\\gamma_{ijk} = 0 \\text{  vs  } H_A: \\text{At least one } \\alpha\\beta\\gamma_{ijk} \\ne 0\\]\n2-way Interactions\n\\[\\scriptsize H_0:\\text{ All } \\alpha\\beta_{ij} = 0 \\text{  vs  } H_A: \\text{At least one } \\alpha\\beta_{ij} \\ne 0\\] \\[\\scriptsize H_0:\\text{ All } \\alpha\\gamma_{ik} = 0 \\text{  vs  } H_A: \\text{At least one } \\alpha\\gamma_{ik} \\ne 0\\] \\[\\scriptsize H_0:\\text{ All } \\beta\\gamma_{jk} = 0 \\text{  vs  } H_A: \\text{At least one } \\beta\\gamma_{jk} \\ne 0\\]\n\nMain Effects\n\\[\\scriptsize H_0:\\text{ All } \\alpha_{i} = 0 \\text{  vs  } H_A: \\text{At least one } \\alpha_{i} \\ne 0\\] \\[\\scriptsize H_0:\\text{ All } \\beta_{j} = 0 \\text{  vs  } H_A: \\text{At least one } \\beta_{j} \\ne 0\\] \\[\\scriptsize H_0:\\text{ All } \\gamma_{k} = 0 \\text{  vs  } H_A: \\text{At least one } \\gamma_{k} \\ne 0\\]\n\n\n\n\nLet’s go back to our ANOVA Table (i.e., Roadmap)\nWhat should we test first? Then what?\n\n\n\nanova(stress_mod)\n\nError:\n! object 'stress_mod' not found\n\n\n\n\nknitr::include_graphics(\"images/046-jmp-anova.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-anova.png\"\n\n\n\n\n\n\nWhat should we “dig into”?\n\n3-way interaction:\n\n\nAt an \\(\\alpha = 0.05\\) we do not have enough evidence to conclude there is a significant 3-way interaction between warmup, preworkout, and music on the tolerance (F = 0.2; df = 1,16; p = 0.6604).\n\n\n\nWhat should we “dig into”?\n\n2-way interactions:\n\n\nWe have enough evidence to conclude there is a significant 2-way interaction between preworkout and music on the tolerance (F = 7.76; df = 1,16; p = 0.0132).\nWe do not have enough evidence to conclude there is a significant 2-way interaction between warmup and music on the tolerance (F = 1.19; df = 1,16; p = 0.2922).\nWe do not have enough evidence to conclude there is a significant 2-way interaction between warmup and preworkout on the tolerance (F = 1.46; df = 1,16; p = 0.2441).\n\n\n\nWhat should we “dig into”?\n\nMain effects:\n\n\nMusic.. don’t care.\nPreworkout.. don’t care\nWe have enough evidence to conclude there is a significant main effect of warmup on the tolerance (F = 18.91; df = 1,16; p = 0.0005).\n\n\n\nWhat should we “dig into”?\n\nknitr::include_graphics(\"images/046-three-way-decision-flowchart-stress.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-three-way-decision-flowchart-stress.png\"\n\n\n\n2-way interaction between preworkout x music (averaged over warm-up)\nMain effect of warm-up (separately)\n\n\n\nR: 2-way Interaction Effect: Preworkout x Music\nAveraged over workout levels: none/stretching\n\n\n\nlibrary(emmeans)\nlibrary(multcomp)\nemmip(stress_mod, Music ~ Preworkout, CIs = TRUE, adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\n\n\n\nemmeans(stress_mod, specs = ~ Preworkout*Music) |&gt; \n  cld(Letters = LETTERS, decreasing = T, adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\n\n\n\n\n\nJMP: 2-way Interaction Effect: Preworkout x Music\nScroll over to  Preworkout*Music\n\n\n\nknitr::include_graphics(\"images/046-jmp-preworkoutxmusic.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-preworkoutxmusic.png\"\n\n\n\n\nknitr::include_graphics(\"images/046-jmp-preworkoutxmusic-letters.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-preworkoutxmusic-letters.png\"\n\n\n\n\n\n\nPairwise Comparisons: Preworkout x Music (avg over Workout)\n\nemmeans(stress_mod, specs = ~ Preworkout*Music) |&gt;\n  pairs(adjust = \"tukey\", infer = c(T,T))\n\nError:\n! object 'stress_mod' not found\n\n\n\nknitr::include_graphics(\"images/046-jmp-preworkoutxmusic-pairwise.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-preworkoutxmusic-pairwise.png\"\n\n\n\n\nR: Main effect of Warmup\n\n\n\nlibrary(emmeans)\nlibrary(multcomp)\nemmip(stress_mod, ~ Warmup, CIs = TRUE, adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\n\n\n\nemmeans(stress_mod, specs = ~ Warmup) |&gt; \n  cld(Letters = LETTERS, decreasing = T, adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\nemmeans(stress_mod, specs = ~ Warmup) |&gt; \n  pairs(adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\n\n\n\n\n\nJMP: Main effect of Warmup\nScroll over to  Warmup\n\n\n\nknitr::include_graphics(\"images/046-jmp-warmup-letters.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-warmup-letters.png\"\n\n\n\n\nknitr::include_graphics(\"images/046-jmp-warmup-letters2.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-warmup-letters2.png\"\n\n\n\n\n\n\nR: What if there had been a 3-way interaction?\n\n\n\nemmip(stress_mod, Preworkout ~ Music | Warmup, \n      CIs = TRUE, \n      adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\n\n\n\nemmeans(stress_mod, ~ Preworkout:Music:Warmup) |&gt;\n  cld(Letters = LETTERS, decreasing = T, adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\n\n\n\n\n\nJMP: What if there had been a 3-way interaction?\nScroll over to  Warmup*Preworkout*Music\n\nknitr::include_graphics(\"images/046-jmp-3way-lsmeans.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-3way-lsmeans.png\""
+    "text": "Check Model Assumptions: \\(\\epsilon_{ijkl} iid \\sim N(0, \\sigma^2)\\)\n\n\n\nstress_mod |&gt; \n  broom::augment() |&gt; \n  ggplot(aes(x = .fitted, y = .resid)) +\n  geom_point() +\n  geom_hline(yintercept = 0,\n             color = \"#3a86d4\") +\n  labs(x = \"Fitted Values\", y = \"Residuals\")\n\n\n\n\n\n\n\n\n\n\nstress_mod |&gt; \n  broom::augment() |&gt; \n  ggpubr::ggqqplot(x = \".resid\",\n         color = \"#3a86d4\") +\n  labs(title = \"Normal QQ-Plot of Residuals\")"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#way-decision-flowchart",
     "href": "2-slides/04.3-higher-order-interactions.html#way-decision-flowchart",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "3-way Decision Flowchart",
-    "text": "3-way Decision Flowchart\n\nknitr::include_graphics(\"images/046-three-way-decision-flowchart.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-three-way-decision-flowchart.png\""
+    "text": "3-way Decision Flowchart"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#what-are-we-testing-with-the-f-tests",
@@ -3550,7 +3550,7 @@
     "href": "2-slides/04.3-higher-order-interactions.html#lets-go-back-to-our-anova-table-i.e.-roadmap",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "Let’s go back to our ANOVA Table (i.e., Roadmap)",
-    "text": "Let’s go back to our ANOVA Table (i.e., Roadmap)\nWhat should we test first? Then what?\n\n\n\nanova(stress_mod)\n\nError:\n! object 'stress_mod' not found\n\n\n\n\nknitr::include_graphics(\"images/046-jmp-anova.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-anova.png\""
+    "text": "Let’s go back to our ANOVA Table (i.e., Roadmap)\nWhat should we test first? Then what?\n\n\n\n\nAnalysis of Variance Table\n\nResponse: Tolerance\n                        Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nWarmup                   1 176.584 176.584 18.9155 0.0004971 ***\nPreworkout               1 242.570 242.570 25.9839 0.0001076 ***\nMusic                    1  70.384  70.384  7.5394 0.0143574 *  \nWarmup:Preworkout        1  13.650  13.650  1.4622 0.2441432    \nWarmup:Music             1  11.070  11.070  1.1859 0.2922989    \nPreworkout:Music         1  72.454  72.454  7.7612 0.0132205 *  \nWarmup:Preworkout:Music  1   1.870   1.870  0.2004 0.6604336    \nResiduals               16 149.367   9.335                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-anova.png\""
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#what-should-we-dig-into",
@@ -3578,55 +3578,62 @@
     "href": "2-slides/04.3-higher-order-interactions.html#what-should-we-dig-into-3",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "What should we “dig into”?",
-    "text": "What should we “dig into”?\n\nknitr::include_graphics(\"images/046-three-way-decision-flowchart-stress.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-three-way-decision-flowchart-stress.png\"\n\n\n\n2-way interaction between preworkout x music (averaged over warm-up)\nMain effect of warm-up (separately)"
+    "text": "What should we “dig into”?\n\n\n\n\n\n\n\n\n\n\n2-way interaction between preworkout x music (averaged over warm-up)\nMain effect of warm-up (separately)"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#r-2-way-interaction-effect-preworkout-x-music",
     "href": "2-slides/04.3-higher-order-interactions.html#r-2-way-interaction-effect-preworkout-x-music",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "R: 2-way Interaction Effect: Preworkout x Music",
-    "text": "R: 2-way Interaction Effect: Preworkout x Music\nAveraged over workout levels: none/stretching\n\n\n\nlibrary(emmeans)\nlibrary(multcomp)\nemmip(stress_mod, Music ~ Preworkout, CIs = TRUE, adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\n\n\n\nemmeans(stress_mod, specs = ~ Preworkout*Music) |&gt; \n  cld(Letters = LETTERS, decreasing = T, adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found"
+    "text": "R: 2-way Interaction Effect: Preworkout x Music\nAveraged over workout levels: none/stretching\n\n\n\nlibrary(emmeans)\nlibrary(multcomp)\nemmip(stress_mod, Music ~ Preworkout, CIs = TRUE, adjust = \"tukey\")\n\n\n\n\n\n\n\n\n\n\nemmeans(stress_mod, specs = ~ Preworkout*Music) |&gt; \n  cld(Letters = LETTERS, decreasing = T, adjust = \"tukey\")\n\n Preworkout        Music        emmean   SE df lower.CL upper.CL .group\n Pre-workout drink Upbeat music   22.9 1.25 16    19.40     26.4  A    \n Pre-workout drink No music       16.0 1.25 16    12.50     19.5   B   \n None              No music       13.1 1.25 16     9.62     16.6   B   \n None              Upbeat music   13.1 1.25 16     9.57     16.6   B   \n\nResults are averaged over the levels of: Warmup \nConfidence level used: 0.95 \nConf-level adjustment: sidak method for 4 estimates \nP value adjustment: tukey method for comparing a family of 4 estimates \nsignificance level used: alpha = 0.05 \nNOTE: If two or more means share the same grouping symbol,\n      then we cannot show them to be different.\n      But we also did not show them to be the same."
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#jmp-2-way-interaction-effect-preworkout-x-music",
     "href": "2-slides/04.3-higher-order-interactions.html#jmp-2-way-interaction-effect-preworkout-x-music",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "JMP: 2-way Interaction Effect: Preworkout x Music",
-    "text": "JMP: 2-way Interaction Effect: Preworkout x Music\nScroll over to  Preworkout*Music\n\n\n\nknitr::include_graphics(\"images/046-jmp-preworkoutxmusic.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-preworkoutxmusic.png\"\n\n\n\n\nknitr::include_graphics(\"images/046-jmp-preworkoutxmusic-letters.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-preworkoutxmusic-letters.png\""
+    "text": "JMP: 2-way Interaction Effect: Preworkout x Music\nScroll over to  Preworkout*Music\n\n\n\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-preworkoutxmusic.png\"\n\n\n\n\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-preworkoutxmusic-letters.png\""
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#pairwise-comparisons-preworkout-x-music-avg-over-workout",
     "href": "2-slides/04.3-higher-order-interactions.html#pairwise-comparisons-preworkout-x-music-avg-over-workout",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "Pairwise Comparisons: Preworkout x Music (avg over Workout)",
-    "text": "Pairwise Comparisons: Preworkout x Music (avg over Workout)\n\nemmeans(stress_mod, specs = ~ Preworkout*Music) |&gt;\n  pairs(adjust = \"tukey\", infer = c(T,T))\n\nError:\n! object 'stress_mod' not found\n\n\n\nknitr::include_graphics(\"images/046-jmp-preworkoutxmusic-pairwise.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-preworkoutxmusic-pairwise.png\""
+    "text": "Pairwise Comparisons: Preworkout x Music (avg over Workout)\n\nemmeans(stress_mod, specs = ~ Preworkout*Music) |&gt;\n  pairs(adjust = \"tukey\", infer = c(T,T))\n\n contrast                                                        estimate   SE df lower.CL upper.CL t.ratio p.value\n None No music - (Pre-workout drink No music)                       -2.88 1.76 16    -7.93     2.16  -1.635  0.3883\n None No music - None Upbeat music                                   0.05 1.76 16    -5.00     5.10   0.028  1.0000\n None No music - (Pre-workout drink Upbeat music)                   -9.78 1.76 16   -14.83    -4.74  -5.546  0.0002\n (Pre-workout drink No music) - None Upbeat music                    2.93 1.76 16    -2.11     7.98   1.663  0.3740\n (Pre-workout drink No music) - (Pre-workout drink Upbeat music)    -6.90 1.76 16   -11.95    -1.85  -3.911  0.0061\n None Upbeat music - (Pre-workout drink Upbeat music)               -9.83 1.76 16   -14.88    -4.79  -5.574  0.0002\n\nResults are averaged over the levels of: Warmup \nConfidence level used: 0.95 \nConf-level adjustment: tukey method for comparing a family of 4 estimates \nP value adjustment: tukey method for comparing a family of 4 estimates"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#r-main-effect-of-warmup",
     "href": "2-slides/04.3-higher-order-interactions.html#r-main-effect-of-warmup",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "R: Main effect of Warmup",
-    "text": "R: Main effect of Warmup\n\n\n\nlibrary(emmeans)\nlibrary(multcomp)\nemmip(stress_mod, ~ Warmup, CIs = TRUE, adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\n\n\n\nemmeans(stress_mod, specs = ~ Warmup) |&gt; \n  cld(Letters = LETTERS, decreasing = T, adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\nemmeans(stress_mod, specs = ~ Warmup) |&gt; \n  pairs(adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found"
+    "text": "R: Main effect of Warmup\n\n\n\nlibrary(emmeans)\nlibrary(multcomp)\nemmip(stress_mod, ~ Warmup, CIs = TRUE, adjust = \"tukey\")\n\n\n\n\n\n\n\n\n\n\nemmeans(stress_mod, specs = ~ Warmup) |&gt; \n  cld(Letters = LETTERS, decreasing = T, adjust = \"tukey\")\n\n Warmup             emmean    SE df lower.CL upper.CL .group\n Dynamic stretching   19.0 0.882 16     16.8     21.2  A    \n No warm-up           13.6 0.882 16     11.4     15.7   B   \n\nResults are averaged over the levels of: Preworkout, Music \nConfidence level used: 0.95 \nConf-level adjustment: sidak method for 2 estimates \nsignificance level used: alpha = 0.05 \nNOTE: If two or more means share the same grouping symbol,\n      then we cannot show them to be different.\n      But we also did not show them to be the same. \n\nemmeans(stress_mod, specs = ~ Warmup) |&gt; \n  pairs(adjust = \"tukey\")\n\n contrast                          estimate   SE df t.ratio p.value\n Dynamic stretching - (No warm-up)     5.42 1.25 16   4.349  0.0005\n\nResults are averaged over the levels of: Preworkout, Music"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#jmp-main-effect-of-warmup",
     "href": "2-slides/04.3-higher-order-interactions.html#jmp-main-effect-of-warmup",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "JMP: Main effect of Warmup",
-    "text": "JMP: Main effect of Warmup\nScroll over to  Warmup\n\n\n\nknitr::include_graphics(\"images/046-jmp-warmup-letters.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-warmup-letters.png\"\n\n\n\n\nknitr::include_graphics(\"images/046-jmp-warmup-letters2.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-warmup-letters2.png\""
+    "text": "JMP: Main effect of Warmup\nScroll over to  Warmup\n\n\n\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-warmup-letters.png\"\n\n\n\n\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-warmup-letters2.png\""
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#r-what-if-there-had-been-a-3-way-interaction",
     "href": "2-slides/04.3-higher-order-interactions.html#r-what-if-there-had-been-a-3-way-interaction",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "R: What if there had been a 3-way interaction?",
-    "text": "R: What if there had been a 3-way interaction?\n\n\n\nemmip(stress_mod, Preworkout ~ Music | Warmup, \n      CIs = TRUE, \n      adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found\n\n\n\n\nemmeans(stress_mod, ~ Preworkout:Music:Warmup) |&gt;\n  cld(Letters = LETTERS, decreasing = T, adjust = \"tukey\")\n\nError:\n! object 'stress_mod' not found"
+    "text": "R: What if there had been a 3-way interaction?\n\n\n\nemmip(stress_mod, Preworkout ~ Music | Warmup, \n      CIs = TRUE, \n      adjust = \"tukey\")\n\n\n\n\n\n\n\n\n\n\nemmeans(stress_mod, ~ Preworkout:Music:Warmup) |&gt;\n  cld(Letters = LETTERS, decreasing = T, adjust = \"tukey\")\n\n Preworkout        Music        Warmup             emmean   SE df lower.CL upper.CL .group\n Pre-workout drink Upbeat music Dynamic stretching   26.0 1.76 16    20.44     31.5  A    \n Pre-workout drink No music     Dynamic stretching   19.9 1.76 16    14.34     25.4  AB   \n Pre-workout drink Upbeat music No warm-up           19.8 1.76 16    14.30     25.4  AB   \n None              No music     Dynamic stretching   16.0 1.76 16    10.50     21.6   BC  \n None              Upbeat music Dynamic stretching   14.1 1.76 16     8.54     19.6   BC  \n Pre-workout drink No music     No warm-up           12.1 1.76 16     6.60     17.7   BC  \n None              Upbeat music No warm-up           12.1 1.76 16     6.54     17.6   BC  \n None              No music     No warm-up           10.2 1.76 16     4.67     15.7    C  \n\nConfidence level used: 0.95 \nConf-level adjustment: sidak method for 8 estimates \nP value adjustment: tukey method for comparing a family of 8 estimates \nsignificance level used: alpha = 0.05 \nNOTE: If two or more means share the same grouping symbol,\n      then we cannot show them to be different.\n      But we also did not show them to be the same."
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#jmp-what-if-there-had-been-a-3-way-interaction",
     "href": "2-slides/04.3-higher-order-interactions.html#jmp-what-if-there-had-been-a-3-way-interaction",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "JMP: What if there had been a 3-way interaction?",
-    "text": "JMP: What if there had been a 3-way interaction?\nScroll over to  Warmup*Preworkout*Music\n\nknitr::include_graphics(\"images/046-jmp-3way-lsmeans.png\")\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-3way-lsmeans.png\""
+    "text": "JMP: What if there had been a 3-way interaction?\nScroll over to  Warmup*Preworkout*Music\n\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-3way-lsmeans.png\""
+  },
+  {
+    "objectID": "1-prep/04.3-prep.html#higher-order-interactions",
+    "href": "1-prep/04.3-prep.html#higher-order-interactions",
+    "title": "4.3 Preparation: Factorials Part III –",
+    "section": "1 Higher Order Interactions",
+    "text": "1 Higher Order Interactions\n\n📽 Follow along with the slides."
   }
 ]
