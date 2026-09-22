@@ -1,0 +1,15 @@
+{
+  "hash": "15fa10ea7c8b0ee289f51e85ae343654",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"5.1 Preparation: Designing and Analyzing Randombized Completely Blocked Designs\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n#### 📽 Watch Videos: 30 min\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n- Explain the purpose of blocking and when to use a RCBD.\n- Design and implement a RCBD, including appropriate blocking variables.\n- Compare the statistical models and ANOVA tables for CRD and RCBD.\n- Analyze RCBD data using statistical software and interpret results.\n- Evaluate the effectiveness of blocking in reducing experimental error.\n:::\n\n**Notes:**\n\n- If you want more or a different modality, read Oehlert Ch 13.1-13.2. \n- There is **one slide deck** to follow along with, but the links below go to the relevant starting point for each video.\n- Skip JMP discussions\n- **Take notes** while you watch and summarize the main points for yourself!\n\n## Designing a RCBD\n\n- 📽 Follow along with the [slides](../2-slides/05.1-design-analyze-rcbd.qmd).\n\n{{< video  https://youtu.be/5fpDQvuVtUA >}}\n\n\n\n\n## Analyzing a RCBD\n\n- 📽 Follow along with the [slides](../2-slides/05.1-design-analyze-rcbd.qmd#/analyzing-a-rcbd).\n- **Note:** I changed the notation slightly so that we use $M$ as the number of blocks (Dr. R uses $r$) and index the block with $m$ (rather than $j$ as in the video).\n\n{{< video  https://youtu.be/Bj6G8pi1_lU >}}\n\n\n\n \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
