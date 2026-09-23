@@ -1,0 +1,235 @@
+---
+title: "Activity 5.1: Reducing Variability with Blocking"
+subtitle: "Advertising Strategies"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+author: Your Name
+echo: true
+embed-resources: true
+format: typst
+---
+```{r}
+#| label: setup
+
+# load needed packages -- you may need to add
+
+library(tidyverse)
+```
+
+A marketing team for a regional grocery chain wants to compare the impact of four advertising strategies on sales.
+
+The four strategies are:
+
+-   (Discount) Discount-Driven Ads – highlight weekly price specials.
+-   (Storytelling) Brand Storytelling – focus on local farms and family ownership.
+-   (Digital) Digital-Only – social media and email ads only.
+-   (Events) Community Events – in-person promotions like pop-up tastings.
+
+There are 16 cities interested in participating in the study. Each city will use one advertising strategy for a 6-week campaign, and overall sales volume during that period will be recorded. However, cities differ greatly in their population size and baseline sales. Larger cities naturally have higher sales, regardless of the advertising strategy.
+
+# Part A: Setup
+
+## 1. How would you create blocks for this experiment?
+
+## 2. Sketch a design blueprint
+
+Clearly draw the blocks, show the experimental units, and how treatments are randomly assigned.
+
+## 3. Describe the treatment structure
+
+## 4. Describe the experimental structure
+
+# Part B: Incorrect Analysis
+
+:::callout-important
+# STOP!
+
+Before you proceed to read in the data, make sure that you have **moved the .qmd template AND the data to your STAT 3540 folder** (and whatever sub-folder you choose). You will need to add the relative file path to the code below to the data!
+
+:::
+
+```{r}
+# REMINDER -- YOU WILL NEED TO add your file path to the code below 
+# in read_csv(), but you can leave the rest!!
+
+ad_dat <- read_csv("") |> 
+  janitor::clean_names() |> 
+  mutate(advertising_strategy = factor(advertising_strategy),
+         city_size = factor(city_size))
+  
+levels(ad_dat$advertising_strategy)
+levels(ad_dat$city_size)
+```
+
+:::: callout-warning
+# INCORRECT ANALYSIS!
+
+## 5. Run a one-way ANOVA CRD analysis (ignoring block) and record the numeric values below
+
+$$y_{im} = \mu + \tau_{i} +\epsilon_{im} \text{ with } \epsilon_{im} \overset{\text{iid}}{\sim} N(0,\sigma^2)$$
+
+for $i=1,2,3,4$ and $m = 1,2,3,4$
+
+```{r}
+## code for one-way ANOVA
+
+```
+
+-   SST = \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+-   SSTrt = \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+-   SSE = \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ $\rightarrow$ MSE = $\hat\sigma^2$ = \_\_\_\_\_\_\_\_\_
+:::
+
+# Part C: Treatment and Block Means
+
+The observed sales volumes (in thousands of dollars) are shown below.
+
+### Original Sales
+
++------------------------------------------------------------------------------+------------------------+-------------+-------------+-----------------------+-------------------------------------------+
+| Advertising Strategy                                                         | Block m = 1 (Smallest) | Block m = 2 | Block m = 3 | Block m = 4 (Largest) | Treatment Mean Sales $\bar{y}_{i\cdot}$ |
++==============================================================================+========================+=============+=============+=======================+===========================================+
+| Digital                                                                      | 136                    | 153         | 203         | 200                   |                                           |
++------------------------------------------------------------------------------+------------------------+-------------+-------------+-----------------------+-------------------------------------------+
+| Discount                                                                     | 147                    | 146         | 217         | 225                   |                                           |
++------------------------------------------------------------------------------+------------------------+-------------+-------------+-----------------------+-------------------------------------------+
+| Events                                                                       | 162                    | 189         | 231         | 228                   |                                           |
++------------------------------------------------------------------------------+------------------------+-------------+-------------+-----------------------+-------------------------------------------+
+| Storytelling                                                                 | 184                    | 208         | 251         | 257                   |                                           |
++------------------------------------------------------------------------------+------------------------+-------------+-------------+-----------------------+-------------------------------------------+
+| **Block Mean Sales (**$\bar{y}_{\cdot m}$)                                   |                        |             |             |                       | $\bar{y}_{\cdot\cdot} =$                  |
++------------------------------------------------------------------------------+------------------------+-------------+-------------+-----------------------+-------------------------------------------+
+| **Block Effects** ($\hat \rho_m = \bar{y}_{\cdot m} - \bar{y}_{\cdot\cdot}$) |                        |             |             |                       |                                           |
++------------------------------------------------------------------------------+------------------------+-------------+-------------+-----------------------+-------------------------------------------+
+
+:::callout-note
+# Computations in R
+
+You can either do this computations with the data itself OR just using the numbers provided in the table above. You can use R as a calculator or any calculator your prefer... I would recommend using R as a calculator so that you can track exactly what you did and catch mistakes! 
+
+I included one for you below. Putting the parethesis around the whole line prints the output as well as saving the object `ybar1.` for use in a later calculation!
+
+**Delete the R chunks if you don't use them**
+
+:::
+
+## 6. Compute the treatment mean sales $\bar y_{i\cdot}$ for each advertising strategy. Record in the table above.
+
+```{r}
+# compute treatment means by advertising strategy
+
+# observed digital treatment mean 
+(ybar1. <- (136+153+203+200)/4)
+
+
+```
+
+## 7. Compute the block mean sales $\bar y_{\cdot m}$ for each city size block. Record in the table above.
+
+```{r}
+# compute block means
+```
+
+## 8. Compute the overall mean sales volume $\bar y_{\cdot\cdot}$ . Record in the table above.
+
+```{r}
+# compute overall mean
+```
+
+# Part C: Block Effects
+
+## 9. Compute the block effect for each block. Record in the table above.
+
+$$\hat \rho_m = \bar{y}_{\cdot m} - \bar{y}_{\cdot\cdot}$$
+```{r}
+# compute block effects
+```
+
+## 10. Use the block effects to compute SSBlk
+
+*Notice: the* $(\bar y_{\cdot m} - \bar y_{\cdot \cdot})$ inside the parentheses is the $\hat \rho_m$ you computed in (9).
+
+$$SSBlk = t\sum_m(\bar y_{\cdot m} - \bar y_{\cdot \cdot})^2=$$ 
+
+```{r}
+# compute SSBlk
+```
+
+## Part D: Block Adjusted Sales
+
+## 11. Using the block effects from the table above, adjust each observed sales volume value by the associated block effect $(y_{im}-\rho_m)$. Record in the table below.
+
+*Note, you are essentially "removing" the effect of city from the sales.*
+
+\newpage
+
+### Block-adjusted Sales
+
++----------------------+------------------------+-------------+-------------+-----------------------+-----------------+
+| Advertising Strategy | Block m = 1 (Smallest) | Block m = 2 | Block m = 3 | Block m = 4 (Largest) | Block-adjusted\ |
+|                      |                        |             |             |                       | Treatment Mean\ |
+|                      |                        |             |             |                       | Sales           |
++======================+========================+=============+=============+=======================+=================+
+| Digital              |                        |             |             |                       |                 |
++----------------------+------------------------+-------------+-------------+-----------------------+-----------------+
+| Discount             |                        |             |             |                       |                 |
++----------------------+------------------------+-------------+-------------+-----------------------+-----------------+
+| Events               |                        |             |             |                       |                 |
++----------------------+------------------------+-------------+-------------+-----------------------+-----------------+
+| Storytelling         |                        |             |             |                       |                 |
++----------------------+------------------------+-------------+-------------+-----------------------+-----------------+
+
+## 12. Calculate the block adjusted mean sales. Record in the table above.
+
+```{r}
+# compute block adjusted mean sales
+```
+
+-   What do you notice about the block-adjusted mean sales compared to the original mean sales?
+-   Would the SSTrt change when using the block-adjusted mean sales? Recall $SSTrt= M\sum_i(\bar y_{i\cdot}-\bar y_{\cdot\cdot})^2$.
+## 13. What do you notice about the variability of the block-adjusted sales within each advertising strategy compared to the original variability of sales (without block-adjusted sales)?
+
+```{r}
+#| fig-align: center
+#| out-width: 65%
+#| echo: false
+
+knitr::include_graphics("https://github.com/earobinson95/stat323-calpoly/blob/main/flipped-style/05-rcbd/images/block-adjusted-figure-city-size.png?raw=true")
+```
+## Part E: RCBD Analysis
+
+Consider the statistical effects model that accounts for the block effect.
+
+$$y_{im}=\mu+\tau_i+\rho_m+\epsilon_{im} \text{ with } \epsilon_{im} \overset{\text{iid}}{\sim} N(0,\sigma^2)$$
+
+for $i=1,2,3,4$ and $m = 1,2,3,4$
+
+## 14. Complete the skeleton ANOVA below
+
+| Source of Variation | DF: Total = \_\_\_\_\_\_\_\_\_ |
+|---------------------|--------------------------------|
+|                     |                                |
+|                     |                                |
+|                     |                                |
+|                     |                                |
+|                     |                                |
+|                     |                                |
+|                     |                                |
+|                     |                                |
+|                     |                                |
+|                     |                                |
+
+## 15. Use R to fit the statistical effects model specified above. Record the following:
+
+-   SSE = \_\_\_\_\_\_\_\_\_\_
+-   MSE = $\hat\sigma^2$ = \_\_\_\_\_\_\_\_\_\_
+
+```{r}
+## code for blocked ANOVA
+
+```
+
+## 16. How does your experimental error in (15) using the statistical effects model to account for the block effect compare to the experimental error calculated in (5) ignoring the effect of block?
