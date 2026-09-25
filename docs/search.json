@@ -4293,5 +4293,131 @@
     "title": "Activity 5.1: Reducing Variability with Blocking",
     "section": "16. How does your experimental error in (15) using the statistical effects model to account for the block effect compare to the experimental error calculated in (5) ignoring the effect of block?",
     "text": "16. How does your experimental error in (15) using the statistical effects model to account for the block effect compare to the experimental error calculated in (5) ignoring the effect of block?"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#example-5.2-dental",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#example-5.2-dental",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "Example 5.2: Dental",
+    "text": "Example 5.2: Dental\n\n\n\nAn anesthesiologist made a comparative study of the effects of acupuncture and codeine on postoperative dental pain in male subjects. The four treatment combinations were as follows:\n\nPlacebo treatment (a sugar pill and two inactive acupuncture points)\nCodeine treatment (a codeine pill and two inactive acupuncture points)\nAcupuncture only (a sugar pill and two active acupuncture points)\nCodeine and acupuncture (a codeine pill and two active acupuncture points)\n\n\n\nThirty-two subjects were grouped into 8 blocks of size 4 according to an initial evaluation of their pain tolerance. The subjects in each block were then randomly assigned to the four treatment combinations. The pain relief scores were obtained for all subjects two hours after dental treatment (data were collected on a double-blind basis). The higher the pain relief score the more effective the treatment."
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#example-5.2-blueprint",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#example-5.2-blueprint",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "Example 5.2 Blueprint",
+    "text": "Example 5.2 Blueprint\n\n\n\n\n\n\n\n\n\n\nWhy do you think pain tolerance was used as a blocking variable?"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#example-5.2-study-structure",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#example-5.2-study-structure",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "Example 5.2: Study Structure",
+    "text": "Example 5.2: Study Structure\nTreatment Structure\nA 2x2 full factorial between Drug (sugar/codeine) and Acupuncture (active/inactive) for a total of t = 4 treatment combinations.\nExperimental Structure\nDrug and acupuncture treatment combinations were randomly assigned to subjects (e.u.) in a RCBD with M = 8 replications (blocks) where pain tolerance is the blocking factor (block size = t = 4). We measured the pain releif scores on each subject (m.u.) for a total N = 32 subjects."
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#statistical-effects-model",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#statistical-effects-model",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "Statistical Effects Model",
+    "text": "Statistical Effects Model\n\n\\[y_{ijm} = \\mu + \\alpha_i + \\beta_j + \\alpha\\beta_{ij} + \\rho_m + \\epsilon_{ijm} \\text{ with } \\epsilon_{ijm} \\text{iid} \\sim N(0,\\sigma^2)\\] for \\(i = 1, 2; j = 1, 2; m = 1, 2, ..., 8\\)\nWhere:\n\n\\(y_{ijm}\\) is the pain relief score from the subject in the \\(m^{th}\\) pain tolerance block receiving the \\(i^{th}\\) level of drug and the \\(j^{th}\\) level acupuncture\n\\(\\mu\\) is the overall mean pain relief score\n\\(\\alpha_i\\) is the effect of the \\(i^{th}\\) level of drug\n\\(\\beta_j\\) is the effect of the \\(j^{th}\\) level of acupuncture\n\\(\\alpha\\beta_{ij}\\) is the interaction effect between the \\(i^{th}\\)level of drug and the \\(j^{th}\\) level of acupuncture\n\\(\\rho_m\\) is the effect of the \\(m^{th}\\) block\n\\(\\epsilon_{ijk}\\) is the experimental error associated with the subject from the \\(m^{th}\\) block receiving the \\(i^{th}\\) level of drug and the \\(j^{th}\\) level of acupuncture"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#anova-table",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#anova-table",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "ANOVA Table",
+    "text": "ANOVA Table\n\n\n\n\n\n\n\n\n\n\nSource of Variation\nDF\nSS\nMS\nF\n\n\n\n\nBlocks\nM-1\nSSBlk\nMSBlk\nMSBlk/MSE\n\n\nA\na-1\nSSA\nMSA\nMSA/MSE\n\n\nB\nb-1\nSSB\nMSB\nMSB/MSE\n\n\nAxB\n(a-1)(b-1)\nSSAB\nMSAB\nMSAB/MSE\n\n\nBlock x AB \\(\\rightarrow\\) error\n(M-1)(ab-1)\nSSE\nMSE\n\n\n\nTotal (N = Mab)\nN-1"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#skeleton-anova",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#skeleton-anova",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "Skeleton ANOVA",
+    "text": "Skeleton ANOVA\n\n\n\nSource of Variation\nDF"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#example-5.2-the-data",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#example-5.2-the-data",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "Example 5.2: The Data",
+    "text": "Example 5.2: The Data\n\n\n\n\n\n\nWarning\n\n\nEnsure “block” is a factor/character!\n\n\n\n\ndental_data &lt;- read_csv(\"_data/05-dental_data.csv\") |&gt; \n  mutate(pain_tol = factor(pain_tol))\n\nhead(dental_data, n = 8)\n\n# A tibble: 8 × 4\n  pain_tol drug    acupuncture score\n  &lt;fct&gt;    &lt;chr&gt;   &lt;chr&gt;       &lt;dbl&gt;\n1 1        sugar   active        0.6\n2 1        codeine inactive      0.5\n3 1        sugar   inactive      0  \n4 1        codeine active        1.2\n5 2        codeine inactive      0.6\n6 2        sugar   active        0.7\n7 2        sugar   inactive      0.3\n8 2        codeine active        1.3\n\nlevels(dental_data$pain_tol) # since pain_tol is factor, ths will work and show the order of the levels\n\n[1] \"1\" \"2\" \"3\" \"4\" \"5\" \"6\" \"7\" \"8\""
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#r-analysis",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#r-analysis",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "R: Analysis",
+    "text": "R: Analysis\n\noptions(contrasts = c(\"contr.sum\", \"contr.poly\"))\n# score ~ drug*acupuncture + pain_tol\ndental_mod &lt;- lm(score ~ drug + acupuncture + drug:acupuncture + pain_tol, \n                 data = dental_data)\nanova(dental_mod)\n\nAnalysis of Variance Table\n\nResponse: score\n                 Df Sum Sq Mean Sq  F value    Pr(&gt;F)    \ndrug              1 2.3112  2.3112 159.7901 2.773e-11 ***\nacupuncture       1 3.3800  3.3800 233.6790 7.465e-13 ***\npain_tol          7 5.5988  0.7998  55.2963 4.126e-12 ***\ndrug:acupuncture  1 0.0450  0.0450   3.1111    0.0923 .  \nResiduals        21 0.3038  0.0145                       \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\nsummary(dental_mod)\n\n\nCall:\nlm(formula = score ~ drug + acupuncture + drug:acupuncture + \n    pain_tol, data = dental_data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.18125 -0.06250  0.00000  0.04688  0.24375 \n\nCoefficients:\n                   Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)         1.15625    0.02126  54.385  &lt; 2e-16 ***\ndrug1               0.26875    0.02126  12.641 2.77e-11 ***\nacupuncture1        0.32500    0.02126  15.287 7.47e-13 ***\npain_tol1          -0.58125    0.05625 -10.333 1.09e-09 ***\npain_tol2          -0.43125    0.05625  -7.667 1.62e-07 ***\npain_tol3          -0.25625    0.05625  -4.556 0.000172 ***\npain_tol4          -0.28125    0.05625  -5.000 5.99e-05 ***\npain_tol5           0.09375    0.05625   1.667 0.110427    \npain_tol6           0.39375    0.05625   7.000 6.53e-07 ***\npain_tol7           0.49375    0.05625   8.778 1.80e-08 ***\ndrug1:acupuncture1  0.03750    0.02126   1.764 0.092304 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.1203 on 21 degrees of freedom\nMultiple R-squared:  0.9739,    Adjusted R-squared:  0.9615 \nF-statistic: 78.37 on 10 and 21 DF,  p-value: 2.521e-14"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#check-model-assumptions-epsilon_ijm-textiid-sim-n0sigma2",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#check-model-assumptions-epsilon_ijm-textiid-sim-n0sigma2",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "Check Model Assumptions \\(\\epsilon_{ijm} \\text{iid} \\sim N(0\\sigma^2)\\)",
+    "text": "Check Model Assumptions \\(\\epsilon_{ijm} \\text{iid} \\sim N(0\\sigma^2)\\)\n\n\n\n\n\n\nStill just need our mod_obj!\n\n\nNote that all you need to change in this code (as always) is the model object (in this example, delta_mod). How useful!\n\n\n\n\n\n\ndental_mod |&gt; \n  broom::augment() |&gt; \n  ggplot(aes(x = .fitted, y = .resid)) +\n  geom_point() +\n  geom_hline(yintercept = 0,\n             color = \"#3a86d4\") +\n  labs(x = \"Fitted Values\", y = \"Residuals\")\n\n\n\n\n\n\n\n\n\n\ndental_mod |&gt; \n  broom::augment() |&gt; \n  ggpubr::ggqqplot(x = \".resid\",\n         color = \"#3a86d4\") +\n  labs(title = \"Normal QQ-Plot of Residuals\")"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#factorial-flow-chart",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#factorial-flow-chart",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "Factorial flow chart",
+    "text": "Factorial flow chart\n\nWhere should we proceed with our analysis?\n\n\nanova(dental_mod)\n\nAnalysis of Variance Table\n\nResponse: score\n                 Df Sum Sq Mean Sq  F value    Pr(&gt;F)    \ndrug              1 2.3112  2.3112 159.7901 2.773e-11 ***\nacupuncture       1 3.3800  3.3800 233.6790 7.465e-13 ***\npain_tol          7 5.5988  0.7998  55.2963 4.126e-12 ***\ndrug:acupuncture  1 0.0450  0.0450   3.1111    0.0923 .  \nResiduals        21 0.3038  0.0145                       \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#main-effect-of-drug",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#main-effect-of-drug",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "Main Effect of Drug",
+    "text": "Main Effect of Drug\n\n\n\ndental_drug_lsmeans &lt;- emmeans(dental_mod, ~ drug)\nemmip(dental_mod, ~ drug, CIs = T)\n\n\n\n\n\n\n\ndental_drug_lsmeans |&gt; \n  pairs(infer = c(T,T))\n\n contrast        estimate     SE df lower.CL upper.CL t.ratio p.value\n codeine - sugar    0.537 0.0425 21    0.449    0.626  12.641 &lt;0.0001\n\nResults are averaged over the levels of: acupuncture, pain_tol \nConfidence level used: 0.95 \n\n\n\n\n\n\n\n\n\n\nR note\n\n\nFor theses follow-up analyses we need functions from the emmeans package.\nThe first step is creating an lsmeans object using the emmeans() function and our mod_obj object!\n\n\n\n\nCodeine results in the highest mean pain relief at 1.42 (s.e. 0.03). This is, on average, 0.53 points more relief than the sugar pill (t = 12.64; df = 21; p &lt; 0.0001)."
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#main-effect-of-acupuncture",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#main-effect-of-acupuncture",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "Main Effect of Acupuncture",
+    "text": "Main Effect of Acupuncture\n\n\n\ndental_acu_lsmeans &lt;- emmeans(dental_mod, ~ acupuncture)\nemmip(dental_mod, ~ acupuncture, CIs = T)\n\n\n\n\n\n\n\ndental_acu_lsmeans |&gt; \n  pairs(infer = c(T,T))\n\n contrast          estimate     SE df lower.CL upper.CL t.ratio p.value\n active - inactive     0.65 0.0425 21    0.562    0.738  15.287 &lt;0.0001\n\nResults are averaged over the levels of: drug, pain_tol \nConfidence level used: 0.95 \n\n\n\n\n\nActive acupuncture results in the highest mean pain releif at 1.48 (s.e. = 0.03). This is, on average, 0.65 points higher than inactive acupuncture (t = 15.29; df = 21; p &lt; 0.0001)."
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#r-analysis-fit-model-anova",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#r-analysis-fit-model-anova",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "R: Analysis – fit model + ANOVA",
+    "text": "R: Analysis – fit model + ANOVA\nFit model (don’t forget sum to zero contraints!):\n\noptions(contrasts = c(\"contr.sum\", \"contr.poly\"))\n# score ~ drug*acupuncture + pain_tol\ndental_mod &lt;- lm(score ~ drug + acupuncture + drug:acupuncture + pain_tol, \n                 data = dental_data)\n\nANOVA table:\n\nanova(dental_mod)\n\nAnalysis of Variance Table\n\nResponse: score\n                 Df Sum Sq Mean Sq  F value    Pr(&gt;F)    \ndrug              1 2.3112  2.3112 159.7901 2.773e-11 ***\nacupuncture       1 3.3800  3.3800 233.6790 7.465e-13 ***\npain_tol          7 5.5988  0.7998  55.2963 4.126e-12 ***\ndrug:acupuncture  1 0.0450  0.0450   3.1111    0.0923 .  \nResiduals        21 0.3038  0.0145                       \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#r-analysis-parameter-estimates",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#r-analysis-parameter-estimates",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "R: Analysis – parameter estimates",
+    "text": "R: Analysis – parameter estimates\n\n\n\n\n\n\nEstimated model\n\n\n\\[\\hat{y}_{ijm} = \\hat{\\mu} + \\hat{\\alpha}_i + \\hat{\\beta}_j + \\hat{\\alpha\\beta}_{ij} + \\hat{\\rho}_m \\]\nWe get all of these estimated parameters from the estimated coefficient output using summary(mod_obj)\n\n\n\n\nsummary(dental_mod)\n\n\nCall:\nlm(formula = score ~ drug + acupuncture + drug:acupuncture + \n    pain_tol, data = dental_data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.18125 -0.06250  0.00000  0.04688  0.24375 \n\nCoefficients:\n                   Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)         1.15625    0.02126  54.385  &lt; 2e-16 ***\ndrug1               0.26875    0.02126  12.641 2.77e-11 ***\nacupuncture1        0.32500    0.02126  15.287 7.47e-13 ***\npain_tol1          -0.58125    0.05625 -10.333 1.09e-09 ***\npain_tol2          -0.43125    0.05625  -7.667 1.62e-07 ***\npain_tol3          -0.25625    0.05625  -4.556 0.000172 ***\npain_tol4          -0.28125    0.05625  -5.000 5.99e-05 ***\npain_tol5           0.09375    0.05625   1.667 0.110427    \npain_tol6           0.39375    0.05625   7.000 6.53e-07 ***\npain_tol7           0.49375    0.05625   8.778 1.80e-08 ***\ndrug1:acupuncture1  0.03750    0.02126   1.764 0.092304 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.1203 on 21 degrees of freedom\nMultiple R-squared:  0.9739,    Adjusted R-squared:  0.9615 \nF-statistic: 78.37 on 10 and 21 DF,  p-value: 2.521e-14"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#r-analysis-fit-model",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#r-analysis-fit-model",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "R: Analysis – fit model",
+    "text": "R: Analysis – fit model\nFit model (don’t forget sum to zero contraints!):\n\n# set sum to zero constraint\noptions(contrasts = c(\"contr.sum\", \"contr.poly\"))\n\n# \"fit\" model -- saving model object to use in all of the rest of our analyses!\ndental_mod &lt;- lm(score ~ drug + acupuncture + drug:acupuncture + pain_tol, \n                 data = dental_data)\n\n\n\n\n\n\n\nR model formulas and lm objects\n\n\nThe way we fit models in R using lm is by providing data + an R formula. R formulas are great because they mirror the statistical effects model that we write out mathematically for linear models! e.g. for our two factor blocked model, the general formula looks like:\nresponse_var ~ factorA + factorB + factorA:factorB + block\nThat looks just like the statistical effects model!\nWe could also use the shorthand formula: response_var ~ factorA*factorB  + block\ndelta_mod is what we call a model object in R. All of the other functions that we use to do follow up analyses use this special kind of object – nice!"
+  },
+  {
+    "objectID": "2-slides/05.2-factorial-in-rcbd.html#r-analysis-anova-table",
+    "href": "2-slides/05.2-factorial-in-rcbd.html#r-analysis-anova-table",
+    "title": "Module 5: Randomized Complete Block Designs (RCBD)",
+    "section": "R: Analysis – ANOVA table",
+    "text": "R: Analysis – ANOVA table\n\nanova(dental_mod)\n\nAnalysis of Variance Table\n\nResponse: score\n                 Df Sum Sq Mean Sq  F value    Pr(&gt;F)    \ndrug              1 2.3112  2.3112 159.7901 2.773e-11 ***\nacupuncture       1 3.3800  3.3800 233.6790 7.465e-13 ***\npain_tol          7 5.5988  0.7998  55.2963 4.126e-12 ***\ndrug:acupuncture  1 0.0450  0.0450   3.1111    0.0923 .  \nResiduals        21 0.3038  0.0145                       \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n\n\n\n\nSST?\n\n\nR does not output the Total row of the ANOVA table, because it can be easily calculated by hand based on the other rows! It also does not go into the inference calculations for ANOVA itself."
+  },
+  {
+    "objectID": "1-prep/05.2-prep.html",
+    "href": "1-prep/05.2-prep.html",
+    "title": "5.2 Preparation: Factorials with Randomized Completely Blocked Designs",
+    "section": "",
+    "text": "NoneLearning Objectives\n\n\n\n\nDesign and implement a RCBD with a factorial treatment, including appropriate blocking variables.\nAnalyze RCBD data with a factorial treatment using statistical software and interpret results.\nEvaluate the effectiveness of blocking in reducing experimental error.\n\n\n\nNotes:\n\nIf you want more or a different modality, read Oehlert Ch 13.1-13.2.\nSkip JMP discussions\nTake notes while you watch and summarize the main points for yourself!"
+  },
+  {
+    "objectID": "1-prep/05.2-prep.html#factorials-with-a-rcbd",
+    "href": "1-prep/05.2-prep.html#factorials-with-a-rcbd",
+    "title": "5.2 Preparation: Factorials with Randomized Completely Blocked Designs",
+    "section": "1 Factorials with a RCBD",
+    "text": "1 Factorials with a RCBD\n\n📽 Follow along with the slides.\n\n\n\n\n\n\n\nWarningAttention\n\n\n\n\nThe slides differ a bit from Dr. Robinson’s video slides so that I could add more R explanations and help!! But you should still be able to follow along the videos, you will just need to go to the next slide sometimes.\nNote that I am still sticking with \\(M\\) for the number of blocks and \\(m\\) for the block index! This differs from Dr. Robinson as well."
   }
 ]

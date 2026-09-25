@@ -1,0 +1,51 @@
+---
+title: "5.2 Preparation: Factorials with Randomized Completely Blocked Designs"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+#### 📽 Watch Videos: 15 min
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+- Design and implement a RCBD with a factorial treatment, including appropriate blocking variables.
+- Analyze RCBD data with a factorial treatment using statistical software and interpret results.
+- Evaluate the effectiveness of blocking in reducing experimental error.
+:::
+
+**Notes:**
+
+- If you want more or a different modality, read Oehlert Ch 13.1-13.2. 
+- Skip JMP discussions
+- **Take notes** while you watch and summarize the main points for yourself!
+
+## Factorials with a RCBD
+
+- 📽 Follow along with the [slides](../2-slides/05.2-factorial-in-rcbd.qmd).
+
+:::callout-warning
+# Attention
+- **The slides differ a bit from Dr. Robinson's** video slides so that I could add more R explanations and help!! But you should still be able to follow along the videos, you will just need to go to the next slide sometimes.
+- Note that I am still sticking with $M$ for the number of blocks and $m$ for the block index! This differs from Dr. Robinson as well.
+
+:::
+
+
+{{< video  https://www.youtube.com/watch?v=glSdRrSlgqI >}}
+
+
+
+
+
+
+
+ 
