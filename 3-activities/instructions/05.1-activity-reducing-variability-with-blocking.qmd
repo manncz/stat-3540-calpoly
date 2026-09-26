@@ -5,10 +5,11 @@ execute:
   error: true
   message: false
   warning: false
+
 echo: false
 format:
-  html: default
   docx: default
+  html: default
   pdf: default
 ---
 \vspace{-.8in}
@@ -76,9 +77,12 @@ $$y_{im} = \mu + \tau_{i} +\epsilon_{im} \text{ with } \epsilon_{im} \overset{\t
 
 for $i=1,2,3,4$ and $m = 1,2,3,4$
 
+:::{,}
 -   SST = \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 -   SSTrt = \_\_\_\_\_\_\_\_\_\_\_\_\_\_
 -   SSE = \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ $\rightarrow$ MSE = $\hat\sigma^2$ = \_\_\_\_\_\_\_\_\_
+:::
+
 :::
 
 # Part C: Treatment and Block Means

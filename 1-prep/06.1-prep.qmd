@@ -1,0 +1,62 @@
+---
+title: "6.1 Preparation: Random Effects and Linear Mixed Models"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+#### 📽 Watch Videos: 30 min
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+- Distinguish between fixed effects and random effects in experimental design.
+- Understand how random effects influence variance and scope of inference.
+- Apply mixed models to account for random blocking and subsampling.
+- Use softwareto fit mixed models and interpret variance components, BLUPs, and hypothesis tests.
+:::
+
+**Notes:**
+
+- If you want more or a different modality, read Oehlert 11.1 - 11.3. 
+- Skip JMP discussions
+- There is **one slide deck** to follow along with, but the links below go to the relevant starting point for each video.
+- **Take notes** while you watch and summarize the main points for yourself!
+  - This includes breaking down R code to make sure you understand it!
+- Data to follow along:
+  - [06-turkey_animal_data.csv](../2-slides/_data/06-turkey_animal_data.csv)
+  - [06-personnel-data.csv](../2-slides/_data/06-personnel-data.csv)
+  - [06-kneebrace-data.csv](../2-slides/_data/06-kneebrace-data.csv)
+
+## Introduction to Random Effects
+
+- 📽 Follow along with the [slides](../2-slides/06.1-random-effects.qmd).
+
+{{< video https://www.youtube.com/watch?v=Zsp1N3O7PbM >}}
+
+
+
+## A Completely Randomized Design with Random Treatment Effects
+
+- 📽 Follow along with the [slides](../2-slides/06.1-random-effects.qmd#/a-completely-randomized-design-with-random-treatment-effects).
+
+{{< video  https://www.youtube.com/watch?v=obRVaF8ynp0 >}}
+
+
+## Linear Mixed Models
+
+- 📽 Follow along with the [slides](../2-slides/06.1-random-effects.qmd#/linear-mixed-models).
+
+- **Note:** I changed the notation slightly so that we use are still using $M$ as the number of blocks and index the block with $m$ (rather than $j$ as in the video).
+
+{{< video https://www.youtube.com/watch?v=2gKfkWEpqoQ >}}
+
+
+ 
