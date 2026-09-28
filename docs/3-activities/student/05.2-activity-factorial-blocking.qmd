@@ -46,22 +46,6 @@ The researchers would like to include different types of milk as a blocking fact
 
 > The appropriate data to use to analyze the cheese study is Data _______. The full dataset would have ____________ rows, where each row represents one ___________________. 
 
-::::columns
-:::column
-
-:::callout-note
-## Data A
-:::
-:::
-
-:::column
-
-:::callout-note
-## Data B
-:::
-:::
-::::
-
 # Part B: Statistical Model
 
 :::callout-important
@@ -95,22 +79,6 @@ cheese_mod <- lm(______________________________________________________________,
                  data = cheese_dat)
 ```
 
-:::callout-note
-## Output for Q8-10
-
-:::columns
-:::column
-:::
-
-:::column
-:::
-
-:::column
-:::
-:::
-
-:::
-
 **8.** Based on the output provided, was blocking helpful in this study? How do you know?
 
 **9.** Based on the output provided, what is the **estimated** mean moisture content for a cheese made from the following. Show all work!
@@ -123,21 +91,10 @@ cheese_mod <- lm(______________________________________________________________,
 
 **11.** Describe the nature of the interaction, if any, based on the plot below.
 
-:::callout-note
-## Output for Q11
-:::
-
 # Part D: Conclusions and Follow-Up
-
-:::callout-note
-## Output for Q12
-
-:::
 
 **12** Based on the analyses shown, do you have a recommendation in terms of salt and citric acid for cheese makers trying to make a mozzarella cheese with the highest moisture content?
 
 **13.** To what population can we generalize results from this study?
 
 **14.** Suppose the researchers were also interested in whether the effect of citric acid on the moisture depends on milk type. Why would this be difficult or impossible to assess using the current design?
-
-\vspace{0.8in}
