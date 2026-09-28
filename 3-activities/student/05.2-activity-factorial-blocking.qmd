@@ -1,0 +1,42 @@
+---
+title: "Activity 5.2: Analyzing Blocked Designs"
+subtitle: "Cheese"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+author: Your Name
+echo: true
+embed-resources: true
+format: typst
+---
+**Scenario:**
+
+An experiment is to be conducted to evaluate the effect of citric acid and salt on the moisture content of mozzarella cheese. Blocks of mozzarella cheese will be made by using 4 different amounts of citric acid (1 tsp, 1.25 tsp, 1.5 tsp, 1.75 tsp) and 2 different amounts of cheese salt (1 tsp and 2 tsp). (Mozzarella cheese can be made by mixing 1 gallon of milk, 1/4 tsp of liquid rennet, cheese salt, and citric acid.) After storage in a cooler for 3 months, the moisture content of each block will be measured at five different random locations within the block of cheese.
+
+The researchers would like to include different types of milk as a blocking factor in their study. They went to the store and bought six different types of whole milk (e.g. from different brands, organic or not, etc.) and will run a randomized complete block design making 8 blocks of cheese from each type of milk one block from each combination of levels of citric acid and salt. The order of mixing/making each block of cheese will be randomized within each milk type.
+
+**a. Sketch a design blueprint**
+
+-   Clearly indicate the experimental units *and* measurement units
+-   Clearly indicate the blocking factor (show grouping)
+-   Show how treatments are assigned within blocks
+
+\vspace{1.2in}
+
+\newpage
+
+**b. In one sentence, explain why blocking is preferable to using milk type as an inclusion criterion.**
+
+\vspace{1in}
+
+**c. For the RCBD analysis in this module, how should the researchers use the two measurements from each cheese block?**
+
+\vspace{1in}
+
+**d. Provide the skeleton ANOVA table for the analysis of this experiment.**
+
+**e. Suppose the researchers were also interested in whether the effect of citric acid on the moisture depends on milk type. Why would this be difficult or impossible to assess using the current design?**
+
+\vspace{0.8in}

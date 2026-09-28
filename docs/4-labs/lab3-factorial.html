@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Activity 5.1: Reducing Variability with Blocking – Statistical Methods for Study Design and Analysis</title>
+<title>Lab 3: Design a CRD – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,27 +26,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../0-course-info/canvas/stat-3540-logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-99d69ffe6c78a8b0d43fb0abb952d9a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../0-course-info/canvas/stat-3540-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-99d69ffe6c78a8b0d43fb0abb952d9a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -295,7 +295,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">Statistical Methods for Study Design and Analysis</a> 
+      <a href="../">Statistical Methods for Study Design and Analysis</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/manncz/stat-3540-calpoly" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://canvas.calpoly.edu" title="Cal Poly Canvas" class="quarto-navigation-tool px-1" aria-label="Cal Poly Canvas"><i class="bi bi-person-fill"></i></a>
@@ -321,19 +321,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../0-course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
+  <a href="../0-course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -349,38 +349,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#part-a-setup" id="toc-part-a-setup" class="nav-link active" data-scroll-target="#part-a-setup">Part A: Setup</a>
+  <li><a href="#determine-research-question-optional-checkpoint-due-102" id="toc-determine-research-question-optional-checkpoint-due-102" class="nav-link active" data-scroll-target="#determine-research-question-optional-checkpoint-due-102"><span class="header-section-number">1</span> Determine Research Question (Optional Checkpoint due 10/2)</a></li>
+  <li><a href="#create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit" id="toc-create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit" class="nav-link" data-scroll-target="#create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit"><span class="header-section-number">2</span> Create a 3-way Full Factorial CRD (with 2 subsamples per experimental unit!)</a></li>
+  <li><a href="#data-collection-due-109-on-canvas" id="toc-data-collection-due-109-on-canvas" class="nav-link" data-scroll-target="#data-collection-due-109-on-canvas"><span class="header-section-number">3</span> Data Collection – due 10/9 on Canvas</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis"><span class="header-section-number">4</span> Data Analysis</a>
   <ul class="collapse">
-  <li><a href="#how-would-you-create-blocks-for-this-experiment" id="toc-how-would-you-create-blocks-for-this-experiment" class="nav-link" data-scroll-target="#how-would-you-create-blocks-for-this-experiment">1. How would you create blocks for this experiment?</a></li>
-  <li><a href="#sketch-a-design-blueprint" id="toc-sketch-a-design-blueprint" class="nav-link" data-scroll-target="#sketch-a-design-blueprint">2. Sketch a design blueprint</a></li>
-  <li><a href="#describe-the-treatment-structure" id="toc-describe-the-treatment-structure" class="nav-link" data-scroll-target="#describe-the-treatment-structure">3. Describe the treatment structure</a></li>
-  <li><a href="#describe-the-experimental-structure" id="toc-describe-the-experimental-structure" class="nav-link" data-scroll-target="#describe-the-experimental-structure">4. Describe the experimental structure</a></li>
+  <li><a href="#step-1-data-processing-cleaning" id="toc-step-1-data-processing-cleaning" class="nav-link" data-scroll-target="#step-1-data-processing-cleaning"><span class="header-section-number">4.1</span> Step 1: Data Processing / Cleaning</a></li>
+  <li><a href="#step-2-analysis-and-inference" id="toc-step-2-analysis-and-inference" class="nav-link" data-scroll-target="#step-2-analysis-and-inference"><span class="header-section-number">4.2</span> Step 2: Analysis and Inference</a></li>
   </ul></li>
-  <li><a href="#part-b-incorrect-analysis" id="toc-part-b-incorrect-analysis" class="nav-link" data-scroll-target="#part-b-incorrect-analysis">Part B: Incorrect Analysis</a></li>
-  <li><a href="#part-c-treatment-and-block-means" id="toc-part-c-treatment-and-block-means" class="nav-link" data-scroll-target="#part-c-treatment-and-block-means">Part C: Treatment and Block Means</a>
-  <ul class="collapse">
-  <li><a href="#original-sales" id="toc-original-sales" class="nav-link" data-scroll-target="#original-sales">Original Sales</a></li>
-  <li><a href="#compute-the-treatment-mean-sales-bar-y_icdot-for-each-advertising-strategy.-record-in-the-table-above." id="toc-compute-the-treatment-mean-sales-bar-y_icdot-for-each-advertising-strategy.-record-in-the-table-above." class="nav-link" data-scroll-target="#compute-the-treatment-mean-sales-bar-y_icdot-for-each-advertising-strategy.-record-in-the-table-above.">6. Compute the treatment mean sales <span class="math inline">\(\bar y_{i\cdot}\)</span> for each advertising strategy. Record in the table above.</a></li>
-  <li><a href="#compute-the-block-mean-sales-bar-y_cdot-m-for-each-city-size-block.-record-in-the-table-above." id="toc-compute-the-block-mean-sales-bar-y_cdot-m-for-each-city-size-block.-record-in-the-table-above." class="nav-link" data-scroll-target="#compute-the-block-mean-sales-bar-y_cdot-m-for-each-city-size-block.-record-in-the-table-above.">7. Compute the block mean sales <span class="math inline">\(\bar y_{\cdot m}\)</span> for each city size block. Record in the table above.</a></li>
-  <li><a href="#compute-the-overall-mean-sales-volume-bar-y_cdotcdot-.-record-in-the-table-above." id="toc-compute-the-overall-mean-sales-volume-bar-y_cdotcdot-.-record-in-the-table-above." class="nav-link" data-scroll-target="#compute-the-overall-mean-sales-volume-bar-y_cdotcdot-.-record-in-the-table-above.">8. Compute the overall mean sales volume <span class="math inline">\(\bar y_{\cdot\cdot}\)</span> . Record in the table above.</a></li>
-  </ul></li>
-  <li><a href="#part-c-block-effects" id="toc-part-c-block-effects" class="nav-link" data-scroll-target="#part-c-block-effects">Part C: Block Effects</a>
-  <ul class="collapse">
-  <li><a href="#compute-the-block-effect-for-each-block.-record-in-the-table-above." id="toc-compute-the-block-effect-for-each-block.-record-in-the-table-above." class="nav-link" data-scroll-target="#compute-the-block-effect-for-each-block.-record-in-the-table-above.">9. Compute the block effect for each block. Record in the table above.</a></li>
-  <li><a href="#use-the-block-effects-to-compute-ssblk" id="toc-use-the-block-effects-to-compute-ssblk" class="nav-link" data-scroll-target="#use-the-block-effects-to-compute-ssblk">10. Use the block effects to compute SSBlk</a></li>
-  <li><a href="#part-d-block-adjusted-sales" id="toc-part-d-block-adjusted-sales" class="nav-link" data-scroll-target="#part-d-block-adjusted-sales">Part D: Block Adjusted Sales</a></li>
-  <li><a href="#using-the-block-effects-from-the-table-above-adjust-each-observed-sales-volume-value-by-the-associated-block-effect-y_im-rho_m.-record-in-the-table-below." id="toc-using-the-block-effects-from-the-table-above-adjust-each-observed-sales-volume-value-by-the-associated-block-effect-y_im-rho_m.-record-in-the-table-below." class="nav-link" data-scroll-target="#using-the-block-effects-from-the-table-above-adjust-each-observed-sales-volume-value-by-the-associated-block-effect-y_im-rho_m.-record-in-the-table-below.">11. Using the block effects from the table above, adjust each observed sales volume value by the associated block effect <span class="math inline">\((y_{im}-\rho_m)\)</span>. Record in the table below.</a>
-  <ul class="collapse">
-  <li><a href="#block-adjusted-sales" id="toc-block-adjusted-sales" class="nav-link" data-scroll-target="#block-adjusted-sales">Block-adjusted Sales</a></li>
-  </ul></li>
-  <li><a href="#calculate-the-block-adjusted-mean-sales.-record-in-the-table-above." id="toc-calculate-the-block-adjusted-mean-sales.-record-in-the-table-above." class="nav-link" data-scroll-target="#calculate-the-block-adjusted-mean-sales.-record-in-the-table-above.">12. Calculate the block adjusted mean sales. Record in the table above.</a></li>
-  <li><a href="#part-e-rcbd-analysis" id="toc-part-e-rcbd-analysis" class="nav-link" data-scroll-target="#part-e-rcbd-analysis">Part E: RCBD Analysis</a></li>
-  <li><a href="#complete-the-skeleton-anova-below" id="toc-complete-the-skeleton-anova-below" class="nav-link" data-scroll-target="#complete-the-skeleton-anova-below">14. Complete the skeleton ANOVA below</a></li>
-  <li><a href="#use-r-to-fit-the-statistical-effects-model-specified-above.-record-the-following" id="toc-use-r-to-fit-the-statistical-effects-model-specified-above.-record-the-following" class="nav-link" data-scroll-target="#use-r-to-fit-the-statistical-effects-model-specified-above.-record-the-following">15. Use R to fit the statistical effects model specified above. Record the following:</a></li>
-  <li><a href="#how-does-your-experimental-error-in-15-using-the-statistical-effects-model-to-account-for-the-block-effect-compare-to-the-experimental-error-calculated-in-5-ignoring-the-effect-of-block" id="toc-how-does-your-experimental-error-in-15-using-the-statistical-effects-model-to-account-for-the-block-effect-compare-to-the-experimental-error-calculated-in-5-ignoring-the-effect-of-block" class="nav-link" data-scroll-target="#how-does-your-experimental-error-in-15-using-the-statistical-effects-model-to-account-for-the-block-effect-compare-to-the-experimental-error-calculated-in-5-ignoring-the-effect-of-block">16. How does your experimental error in (15) using the statistical effects model to account for the block effect compare to the experimental error calculated in (5) ignoring the effect of block?</a></li>
-  </ul></li>
+  <li><a href="#report-and-submission" id="toc-report-and-submission" class="nav-link" data-scroll-target="#report-and-submission"><span class="header-section-number">5</span> Report and Submission</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="05.1-activity-reducing-variability-with-blocking.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="05.1-activity-reducing-variability-with-blocking.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -388,8 +367,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Activity 5.1: Reducing Variability with Blocking</h1>
-<p class="subtitle lead">Advertising Strategies</p>
+<h1 class="title">Lab 3: Design a CRD</h1>
 </div>
 
 
@@ -406,371 +384,342 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
+<section id="lab-objectives" class="level4">
+<h4 class="anchored" data-anchor-id="lab-objectives">Lab Objectives</h4>
+<ul>
+<li>Address a research question from start to finish with a Completely Randomized experiment with a factorial treatment structure and subsampling</li>
+<li>Implement CRD random assignment for an appropriate sample size of islanders</li>
+<li>Collect and analyze data based on the factorial treatment structure with subsampling</li>
+<li>Write a clear report explaining the design adn analysis</li>
+</ul>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+<span class="screen-reader-only">Note</span>Reminders
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p>Submit via Gradescope, don’t forget to assign pages to the questions in the outline!</p></li>
-<li><p>Delete any extraneous instructions (<strong>like this box</strong>) before submission. <em>You will be deducted points from now on if you do not follow this instruction!</em></p></li>
-<li><p>Delete anything like <code>\vspace{}</code></p></li>
-<li><p>Remember that it’s okay if you cannot get the .qmd to render to submit this!! I will help you but you can also use any of the other formats.</p></li>
-<li><p>You should follow the qmd template for coding: <a href="../student/05.1-activity-reducing-variability-with-blocking.qmd">05.1-activity-reducing-variability-with-blocking.qmd</a></p></li>
-<li><p>You can download the data on Canvas or here: <a href="../_data/05-advertising_sales_data.csv">05-advertising_sales_data.csv)</a></p></li>
-</ul>
-</div>
-</div>
-<p>A marketing team for a regional grocery chain wants to compare the impact of four advertising strategies on sales.</p>
-<p>The four strategies are:</p>
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> You <strong>must</strong> write R code in this template! (coming soon)</p>
 <ul>
-<li>(Discount) Discount-Driven Ads – highlight weekly price specials.</li>
-<li>(Storytelling) Brand Storytelling – focus on local farms and family ownership.</li>
-<li>(Digital) Digital-Only – social media and email ads only.</li>
-<li>(Events) Community Events – in-person promotions like pop-up tastings.</li>
+<li>You will <strong>turn in your code</strong> with the report.</li>
+<li>This is so that you can <strong>save</strong> your code for reproducibility.</li>
+</ul></li>
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Any lab element that should be completed in R will have this R logo next to it in these instructions.</p></li>
+<li><p>Remember this is a group assignment! You should be working with your group through <strong>all</strong> elements of this lab and you are all responsible for the final report.</p></li>
+<li><p>Unless you are having a private issue with your group, <strong>anything communication with me via email relating to labs should include all of your group members!!</strong> ’cc them all!</p></li>
+<li><p>Contact Dr.&nbsp;C for any questions or clarifications – even better, post questions to discord!</p></li>
 </ul>
-<p>There are 16 cities interested in participating in the study. Each city will use one advertising strategy for a 6-week campaign, and overall sales volume during that period will be recorded. However, cities differ greatly in their population size and baseline sales. Larger cities naturally have higher sales, regardless of the advertising strategy.</p>
-<section id="part-a-setup" class="level1">
-<h1>Part A: Setup</h1>
-<section id="how-would-you-create-blocks-for-this-experiment" class="level2">
-<h2 class="anchored" data-anchor-id="how-would-you-create-blocks-for-this-experiment">1. How would you create blocks for this experiment?</h2>
-
+</div>
+</div>
 </section>
-<section id="sketch-a-design-blueprint" class="level2">
-<h2 class="anchored" data-anchor-id="sketch-a-design-blueprint">2. Sketch a design blueprint</h2>
-<p>Clearly draw the blocks, show the experimental units, and how treatments are randomly assigned.</p>
-</section>
-<section id="describe-the-treatment-structure" class="level2">
-<h2 class="anchored" data-anchor-id="describe-the-treatment-structure">3. Describe the treatment structure</h2>
-
-</section>
-<section id="describe-the-experimental-structure" class="level2">
-<h2 class="anchored" data-anchor-id="describe-the-experimental-structure">4. Describe the experimental structure</h2>
-
-</section>
-</section>
-<section id="part-b-incorrect-analysis" class="level1">
-<h1>Part B: Incorrect Analysis</h1>
+<section id="determine-research-question-optional-checkpoint-due-102" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="determine-research-question-optional-checkpoint-due-102"><span class="header-section-number">1</span> Determine Research Question (Optional Checkpoint due 10/2)</h2>
+<p>Develop a research question with <strong>three factors</strong> with a total of <span class="math inline">\(t = 12\)</span> treatment combinations (e.g.&nbsp;3x2x2)</p>
+<p>You may either:</p>
+<ol type="1">
+<li>use the provided example below or</li>
+<li>propose your own question
+<ul>
+<li>If you chose this option, you <strong>must</strong> submit a proposal by Friday 10/2 at 11:59pm. I will approve your proposal the end of the weekend.</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example Research Question:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>How do ambient temperature (-20 C / 5 C / 40 C), hydration status (Water 250mL / Dehydrated), and acute salt intake (Fried Chips / No Salt) affect an islander’s systolic blood pressure after a 10-minute exposure period?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>STOP!
+<span class="screen-reader-only">Important</span>Get approval of your research question
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Before you proceed to read in the data, make sure that you have <strong>moved the .qmd template AND the data to your STAT 3540 folder</strong> (and whatever sub-folder you choose). You will need to add the relative file path to the code below to the data!</p>
+<p><strong>If you choose your own research question</strong> (not the one provided), proposals should include:</p>
+<ul>
+<li>A clear statement of the research question.</li>
+<li>The treatment and experimental structures.</li>
+<li>A justification for feasibility (e.g., timing constraints, don’t have your Islander garden for 14 days).</li>
+</ul>
+<p>Submit proposals via Canvas at Lab 3: Checkpoint – Proposal.</p>
 </div>
 </div>
+</section>
+<section id="create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit"><span class="header-section-number">2</span> Create a 3-way Full Factorial CRD (with 2 subsamples per experimental unit!)</h2>
+<p>We are going to use <span class="math inline">\(r = 4\)</span>. Recall, <span class="math inline">\(t = 12\)</span>.</p>
+<ol type="1">
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> In R, <strong>randomly sample</strong> 48 islanders from your 60 – You may want to sample 12 from each group member here, but ensure the random assignment of factors is conducted across the entire set of 48 islanders at once.</p></li>
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> <strong>Randomly assign treatments</strong> to participants in a CRD for your 3-way full factorial treatment structure (what are your 3 factors and levels?) using the tools in R learned in class.</p>
+<ul>
+<li>See <a href="../2-slides/04.1-factorials.html#/create-a-full-factorial-crd-in-r-with-edible-package">class slides</a> for an example</li>
+<li>At this point you should have a dataset with 48 rows (one for each islander), and four columns (1 column for your Islander name/id, and 3 for the factors).</li>
+</ul></li>
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Double your rows from 48 to 96 – <strong>adding two subsamples for each islander</strong> – by adding a <code>subsample</code> column with the values 1 and 2 for each islander.</p>
+<ul>
+<li>This does not entail applying ANOTHER treatment combo. Just recording the response twice.</li>
+<li><strong>There is provided code in the template to help you do this using <code>expand_grid()</code>!!</strong></li>
+<li>Your data should have 96 rows and 5 columns now.</li>
+</ul></li>
+<li><p>Finally, add an empty column for your outcome</p>
+<ul>
+<li>This means your final data set should have 96 rows and 6 columns for (as an example), <code>islander</code>, <code>temperature</code>, <code>hydration</code>, <code>salt</code>, <code>subsample</code>, and <code>blood_pressure</code>.</li>
+<li>Make sure you used context as your column headers (e.g., <code>temperature</code> instead of <code>factor_a</code>).</li>
+</ul></li>
+</ol>
+</section>
+<section id="data-collection-due-109-on-canvas" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="data-collection-due-109-on-canvas"><span class="header-section-number">3</span> Data Collection – due 10/9 on Canvas</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Stop!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure you have completed sections <strong>1</strong> Research Question and <strong>2</strong> Create 3-way Factorial CRD with subsamples above before moving on.</p>
+</div>
+</div>
+<p>Big picture: utilizing the “Task” button on the Islands:</p>
+<ol type="1">
+<li>apply your treatment appropriately</li>
+<li>record the response variable</li>
+<li>fill out the response column in your data set.</li>
+</ol>
+<p><strong>Step 1: Determine your data collection procedure</strong></p>
+<ul>
+<li>Think about direct controls!</li>
+<li>Talk about and <strong>solidify</strong> the data collection procedure as a group <strong>BEFORE COLLECTING ANY DATA</strong> to ensure you are following the same processes (e.g., time waiting before collecting blood pressure).</li>
+<li>Write down your procedure before anything else</li>
+<li>Be careful about timing!!
+<ul>
+<li>Should you measure your response immediately after applying the treatment or allow for some time to pass?? Be careful about real versus island time</li>
+<li>Remember your Islanders will sleep and this will take time.</li>
+</ul></li>
+<li>Be thoughtful and careful and work together! Communication is seriously key here.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Procedure for provided research question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Following the treatment combination randomly assigned to each islander that you created above, collect the data for each islander by:</p>
+<p><strong>Step 1:</strong> Apply the assigned Temperature level (wait the 10 minutes real time)</p>
+<ul>
+<li>Sit at -20*C 10 mins</li>
+<li>Sit at 5*C 10 mins</li>
+<li>Sit at 40*C 10 mins</li>
+</ul>
+<p><strong>Step 2:</strong> Apply the assigned Hydration level immediately after the 10-minute temperature exposure</p>
+<ul>
+<li>Drink Water 250mL</li>
+<li>Do not drink anything</li>
+</ul>
+<p><strong>Step 3:</strong> Apply the assigned Salty snack level immediately after the hydration is complete</p>
+<ul>
+<li>Fried Chips 50g</li>
+<li>Do not eat anything</li>
+</ul>
+<p><strong>Step 4:</strong> Measure Blood Pressure TWICE (subsamples)</p>
+<ul>
+<li>Click Blood Pressure (record as Subsample 1)</li>
+<li>Click Blood Pressure (record as Subsample 2)</li>
+</ul>
+<p><strong>SEE BELOW ABOUT BLOOD PRESSURE BEING MEASURED AS Systolic/Diastolic – RECORD BOTH!</strong></p>
+<p>Think about “direct control” for your data collection. For example, how many minutes between each subsample collection?</p>
+</div>
+</div>
+<p><strong>Step 2: Implement treatment and collect response</strong></p>
+<ul>
+<li>Once you implement the “Task” you can find it in your “Recent Tasks” section.</li>
+<li>Follow the procedure you determined as carefully as you can.</li>
+<li>If you accidentally mess up data collection, this will mess up your data and <strong>you should make a note/possibly remove this observation.</strong></li>
+<li>Carefully record your data collection as it actually happened and note any deviations from your original planned procedure as you implement your design and treatment.</li>
+</ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>INCORRECT ANALYSIS!
+<span class="screen-reader-only">Warning</span>Tips
 </div>
 </div>
-<section id="run-a-one-way-anova-crd-analysis-ignoring-block-and-record-the-numeric-values-below" class="level2 callout-body-container callout-body">
-<h2 class="anchored" data-anchor-id="run-a-one-way-anova-crd-analysis-ignoring-block-and-record-the-numeric-values-below">5. Run a one-way ANOVA CRD analysis (ignoring block) and record the numeric values below</h2>
-<p><span class="math display">\[y_{im} = \mu + \tau_{i} +\epsilon_{im} \text{ with } \epsilon_{im} \overset{\text{iid}}{\sim} N(0,\sigma^2)\]</span></p>
-<p>for <span class="math inline">\(i=1,2,3,4\)</span> and <span class="math inline">\(m = 1,2,3,4\)</span></p>
-<div class="{,}">
+<div class="callout-body-container callout-body">
 <ul>
-<li>SST = ________________</li>
-<li>SSTrt = ______________</li>
-<li>SSE = ________________ <span class="math inline">\(\rightarrow\)</span> MSE = <span class="math inline">\(\hat\sigma^2\)</span> = _________</li>
+<li>I would open 12 tabs and turn on your favorite movie to collect data.</li>
+<li>BE CAREFUL to assign the correct treatment combo to each islander!</li>
 </ul>
 </div>
-</section>
 </div>
-</section>
-<section id="part-c-treatment-and-block-means" class="level1">
-<h1>Part C: Treatment and Block Means</h1>
-<p>The observed sales volumes (in thousands of dollars) are shown below.</p>
-<section id="original-sales" class="level3">
-<h3 class="anchored" data-anchor-id="original-sales">Original Sales</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 38%">
-<col style="width: 12%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 11%">
-<col style="width: 21%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Advertising Strategy</th>
-<th>Block m = 1 (Smallest)</th>
-<th>Block m = 2</th>
-<th>Block m = 3</th>
-<th>Block m = 4 (Largest)</th>
-<th>Treatment Mean Sales <span class="math inline">\(\bar{y}_{i\cdot}\)</span> |</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Digital</td>
-<td>136</td>
-<td>153</td>
-<td>203</td>
-<td>200</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Discount</td>
-<td>147</td>
-<td>146</td>
-<td>217</td>
-<td>225</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Events</td>
-<td>162</td>
-<td>189</td>
-<td>231</td>
-<td>228</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Storytelling</td>
-<td>184</td>
-<td>208</td>
-<td>251</td>
-<td>257</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><strong>Block Mean Sales (</strong><span class="math inline">\(\bar{y}_{\cdot m}\)</span>)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><span class="math inline">\(\bar{y}_{\cdot\cdot} =\)</span></td>
-</tr>
-<tr class="even">
-<td><strong>Block Effects</strong> (<span class="math inline">\(\hat \rho_m = \bar{y}_{\cdot m} - \bar{y}_{\cdot\cdot}\)</span>)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Step 3: Record all responses in your data table</strong></p>
+<ul>
+<li>Remember, you should have <strong>TWO</strong> subsamples (responses measured) for each islander!</li>
+<li>Turn in your data with <strong>96 rows</strong></li>
+</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Computations in R
+<span class="screen-reader-only">Note</span>Provided Research Question – record both blood pressures!!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You can either do this computations with the data itself OR just using the numbers provided in the table above. You can use R as a calculator or any calculator your prefer… I would recommend using R as a calculator so that you can track exactly what you did and catch mistakes!</p>
-<p>I included one for you below. Putting the parethesis around the whole line prints the output as well as saving the object <code>ybar1.</code> for use in a later calculation!</p>
-<p><strong>Delete the R chunks if you don’t use them</strong></p>
+<p>As noted above – if you are doing the provided question, make sure you record <strong>BOTH</strong> Systolic AND Diastolic blood pressure. They are reported as Systolic/Diastolic. Record it either like that (“Systolic/Diastolic”) in your data or in separate columns, one for systolic and one for diastolic.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>End of Data Collection for Project Checkpoint Submission
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>No need to go farther than this for the data collection assignment!</p>
 </div>
 </div>
 </section>
-<section id="compute-the-treatment-mean-sales-bar-y_icdot-for-each-advertising-strategy.-record-in-the-table-above." class="level2">
-<h2 class="anchored" data-anchor-id="compute-the-treatment-mean-sales-bar-y_icdot-for-each-advertising-strategy.-record-in-the-table-above.">6. Compute the treatment mean sales <span class="math inline">\(\bar y_{i\cdot}\)</span> for each advertising strategy. Record in the table above.</h2>
-</section>
-<section id="compute-the-block-mean-sales-bar-y_cdot-m-for-each-city-size-block.-record-in-the-table-above." class="level2">
-<h2 class="anchored" data-anchor-id="compute-the-block-mean-sales-bar-y_cdot-m-for-each-city-size-block.-record-in-the-table-above.">7. Compute the block mean sales <span class="math inline">\(\bar y_{\cdot m}\)</span> for each city size block. Record in the table above.</h2>
-</section>
-<section id="compute-the-overall-mean-sales-volume-bar-y_cdotcdot-.-record-in-the-table-above." class="level2">
-<h2 class="anchored" data-anchor-id="compute-the-overall-mean-sales-volume-bar-y_cdotcdot-.-record-in-the-table-above.">8. Compute the overall mean sales volume <span class="math inline">\(\bar y_{\cdot\cdot}\)</span> . Record in the table above.</h2>
-</section>
-</section>
-<section id="part-c-block-effects" class="level1">
-<h1>Part C: Block Effects</h1>
-<section id="compute-the-block-effect-for-each-block.-record-in-the-table-above." class="level2">
-<h2 class="anchored" data-anchor-id="compute-the-block-effect-for-each-block.-record-in-the-table-above.">9. Compute the block effect for each block. Record in the table above.</h2>
-<p><span class="math display">\[\hat \rho_m = \bar{y}_{\cdot m} - \bar{y}_{\cdot\cdot}\]</span></p>
-</section>
-<section id="use-the-block-effects-to-compute-ssblk" class="level2">
-<h2 class="anchored" data-anchor-id="use-the-block-effects-to-compute-ssblk">10. Use the block effects to compute SSBlk</h2>
-<p><em>Notice: the</em> <span class="math inline">\((\bar y_{\cdot m} - \bar y_{\cdot \cdot})\)</span> inside the parentheses is the <span class="math inline">\(\hat \rho_m\)</span> you computed in (9).</p>
-<p><span class="math display">\[SSBlk = t\sum_m(\bar y_{\cdot m} - \bar y_{\cdot \cdot})^2=\]</span></p>
+<section id="data-analysis" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="data-analysis"><span class="header-section-number">4</span> Data Analysis</h2>
+<p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Use R to analyze the data you collected!</p>
+<ul>
+<li>There is some guidance for this analysis in the template, but you may need to add additional code chunks or remove them.</li>
+<li>Make sure to explain all code and clean up your .qmd file before your final submission.</li>
+</ul>
+<section id="step-1-data-processing-cleaning" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="step-1-data-processing-cleaning"><span class="header-section-number">4.1</span> Step 1: Data Processing / Cleaning</h3>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>Provided Research Question – Data Processing
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Recall, the purpose of the block design is to “remove” the variation explained by the blocking variable from the SSE, thus reducing the experimental error variation (MSE).</p>
-</div>
-</div>
-</section>
-<section id="part-d-block-adjusted-sales" class="level2">
-<h2 class="anchored" data-anchor-id="part-d-block-adjusted-sales">Part D: Block Adjusted Sales</h2>
-</section>
-<section id="using-the-block-effects-from-the-table-above-adjust-each-observed-sales-volume-value-by-the-associated-block-effect-y_im-rho_m.-record-in-the-table-below." class="level2">
-<h2 class="anchored" data-anchor-id="using-the-block-effects-from-the-table-above-adjust-each-observed-sales-volume-value-by-the-associated-block-effect-y_im-rho_m.-record-in-the-table-below.">11. Using the block effects from the table above, adjust each observed sales volume value by the associated block effect <span class="math inline">\((y_{im}-\rho_m)\)</span>. Record in the table below.</h2>
-<p><em>Note, you are essentially “removing” the effect of city from the sales.</em></p>
-<div style="page-break-after: always;"></div>
-<section id="block-adjusted-sales" class="level3">
-<h3 class="anchored" data-anchor-id="block-adjusted-sales">Block-adjusted Sales</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 20%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 19%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Advertising Strategy</th>
-<th>Block m = 1 (Smallest)</th>
-<th>Block m = 2</th>
-<th>Block m = 3</th>
-<th>Block m = 4 (Largest)</th>
-<th>Block-adjusted<br>
-Treatment Mean<br>
-Sales</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Digital</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Discount</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Events</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Storytelling</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="calculate-the-block-adjusted-mean-sales.-record-in-the-table-above." class="level2">
-<h2 class="anchored" data-anchor-id="calculate-the-block-adjusted-mean-sales.-record-in-the-table-above.">12. Calculate the block adjusted mean sales. Record in the table above.</h2>
+<p>BP is measured in Systolic/Diastolic… this is NOT division.</p>
 <ul>
-<li>What do you notice about the block-adjusted mean sales compared to the original mean sales? </li>
-<li>Would the SSTrt change when using the block-adjusted mean sales? Recall <span class="math inline">\(SSTrt= M\sum_i(\bar y_{i\cdot}-\bar y_{\cdot\cdot})^2\)</span>. ## 13. What do you notice about the variability of the block-adjusted sales within each advertising strategy compared to the original variability of sales (without block-adjusted sales)?</li>
+<li>Systolic (Top Number) Measures the pressure when the heart beats</li>
+<li>Diastolic (Bottom Number) Measures the pressure between beats</li>
 </ul>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/earobinson95/stat323-calpoly/blob/main/flipped-style/05-rcbd/images/block-adjusted-figure-city-size.png?raw=true" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%"></p>
-</figure>
+<p>BUT we want one single number for the response. So we are going to use the following:</p>
+<p>Mean Arterial Pressure (MAP) = <span class="math inline">\(\frac{Systolic + 2\cdot Diastolic}{3}\)</span></p>
+<p>Use Excel/Google Sheets <strong>or</strong> R to calculate the MAP from your recorded blood pressure. I have included code in the template to help with this.</p>
+<p><em>This is actually a nice touch to what real life data collection can entail.</em></p>
 </div>
 </div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</section>
-<section id="part-e-rcbd-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="part-e-rcbd-analysis">Part E: RCBD Analysis</h2>
-<p>Consider the statistical effects model that accounts for the block effect.</p>
-<p><span class="math display">\[y_{im}=\mu+\tau_i+\rho_m+\epsilon_{im} \text{ with } \epsilon_{im} \overset{\text{iid}}{\sim} N(0,\sigma^2)\]</span></p>
-<p>for <span class="math inline">\(i=1,2,3,4\)</span> and <span class="math inline">\(m = 1,2,3,4\)</span></p>
-</section>
-<section id="complete-the-skeleton-anova-below" class="level2">
-<h2 class="anchored" data-anchor-id="complete-the-skeleton-anova-below">14. Complete the skeleton ANOVA below</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Source of Variation</th>
-<th>DF: Total = _________</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="use-r-to-fit-the-statistical-effects-model-specified-above.-record-the-following" class="level2">
-<h2 class="anchored" data-anchor-id="use-r-to-fit-the-statistical-effects-model-specified-above.-record-the-following">15. Use R to fit the statistical effects model specified above. Record the following:</h2>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>BEFORE you move on! If you are using the provided question, for each of the subsamples, calculate the islanders MAP (you should have 96 of these). Then move onto the below.</p>
+</div>
+</div>
 <ul>
-<li>SSE = __________</li>
-<li>MSE = <span class="math inline">\(\hat\sigma^2\)</span> = __________</li>
+<li>You have a data set with 96 rows (2 subsamples per islander x treatment combo).</li>
+<li>Think about how you need to analyze this data!</li>
+<li>Aggregate/Average the your response across the 2 subsamples so you have a data set of 48 rows to analyze and your islander-level response is the average.
+<ul>
+<li>e.g.: for the provided question the response with be the <strong>average</strong> MAP</li>
+<li><code>group_by() |&gt; summarize()</code></li>
+<li>Make sure you keep each unique Islander and end up with one row per Islander!</li>
+</ul></li>
 </ul>
 </section>
-<section id="how-does-your-experimental-error-in-15-using-the-statistical-effects-model-to-account-for-the-block-effect-compare-to-the-experimental-error-calculated-in-5-ignoring-the-effect-of-block" class="level2">
-<h2 class="anchored" data-anchor-id="how-does-your-experimental-error-in-15-using-the-statistical-effects-model-to-account-for-the-block-effect-compare-to-the-experimental-error-calculated-in-5-ignoring-the-effect-of-block">16. How does your experimental error in (15) using the statistical effects model to account for the block effect compare to the experimental error calculated in (5) ignoring the effect of block?</h2>
-
-
+<section id="step-2-analysis-and-inference" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="step-2-analysis-and-inference"><span class="header-section-number">4.2</span> Step 2: Analysis and Inference</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>BEFORE you move on! Your dataset should be at the Islander level (48 rows) for the rest of the analysis.</p>
+</div>
+</div>
+<ul>
+<li>Fit a 3-way full factorial CRD analysis to the <strong>average</strong> response at the islander level</li>
+<li>Check model fit (residual analysis)</li>
+<li>Following the decision flow-chart for higher-order interaction factorial analysis (when to look at 3-way interactions, 2-way interactions, and main effects), carry out the rest of the analysis.
+<ul>
+<li>This should also include appropriate interaction <strong>plots</strong> or other plots displaying the effects</li>
+</ul></li>
+</ul>
 </section>
+</section>
+<section id="report-and-submission" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="report-and-submission"><span class="header-section-number">5</span> Report and Submission</h2>
+<p>Download the guided lab report template and work within it [[coming soon]].</p>
+<p>Make sure to:</p>
+<ul>
+<li>Use complete sentences</li>
+<li>Focus on clarity, logical flow, and professional grammar</li>
+<li>Think about being as concise as possible while being complete and clear</li>
+<li>Clean up the report at the end so that it is readable and professional.</li>
+<li>Make sure you have addressed all instructions in this document in the report.</li>
+</ul>
+<p>In your final submission you will submit:</p>
+<ol type="1">
+<li>Your report following the template.</li>
+<li>A .qmd with all of your code following the .qmd template.</li>
+<li>Your dataset (.csv or .xlsx)</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Generative AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As a reminder, you are allowed to use generative AI on this assignment outside of class. However, your group should agree on how it will be used and you must disclose how you used in in your report. Finally, as always, follow the <a href="../0-course-info/syllabus-f26.html">syllabus</a> guidelines for citing AI.</p>
+<p><em>If you us AI to help you with writing, you should prompt the model “Please assess my work and provide only feedback. Do not rewrite anything.” </em></p>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->

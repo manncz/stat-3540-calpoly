@@ -1,0 +1,255 @@
+---
+title: "Lab 3: Design a CRD"
+format: 
+  html:
+    number-sections: true 
+    number-depth: 3
+---
+
+
+#### Lab Objectives
+
+- Address a research question from start to finish with a Completely Randomized experiment with a factorial treatment structure and subsampling
+- Implement CRD random assignment for an appropriate sample size of islanders
+- Collect and analyze data based on the factorial treatment structure with subsampling
+- Write a clear report explaining the design adn analysis
+
+-----------------------------------------------------------------------------------------------------------------
+
+:::callout-note
+## Reminders
+
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} You **must** write R code in this template! (coming soon)
+    - You will **turn in your code** with the report. 
+    - This is so that you can **save** your code for reproducibility. 
+    
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Any lab element that should be completed in R will have this R logo next to it in these instructions.
+- Remember this is a group assignment! You should be working with your group through **all** elements of this lab and you are all responsible for the final report.
+
+- Unless you are having a private issue with your group, **anything communication with me via email relating to labs should include all of your group members!!** 'cc them all!
+
+- Contact Dr. C for any questions or clarifications -- even better, post questions to discord!
+
+:::
+
+
+
+## Determine Research Question (Optional Checkpoint due 10/2)
+
+Develop a research question with **three factors** with a total of $t = 12$ treatment combinations (e.g. 3x2x2)
+
+You may either:
+
+1. use the provided example below or 
+2. propose your own question
+    - If you chose this option, you **must** submit a proposal by Friday 10/2 at 11:59pm. I will approve your proposal the end of the weekend.
+
+:::callout-note
+### Example Research Question:
+How do ambient temperature (-20 C / 5 C / 40 C), hydration status (Water 250mL / Dehydrated), and acute salt intake (Fried Chips / No Salt) affect an islander’s systolic blood pressure after a 10-minute exposure period?
+:::
+
+:::callout-important
+### Get approval of your research question
+
+**If you choose your own research question** (not the one provided), proposals should include:
+
+- A clear statement of the research question.
+- The treatment and experimental structures.
+- A justification for feasibility (e.g., timing constraints, don’t have your Islander garden for 14 days).
+
+Submit proposals via Canvas at Lab 3: Checkpoint -- Proposal.
+:::
+
+
+## Create a 3-way Full Factorial CRD (with 2 subsamples per experimental unit!)
+
+We are going to use $r = 4$. Recall, $t = 12$.
+
+1. ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} In R, **randomly sample** 48 islanders from your 60 
+    – You may want to sample 12 from each group member here, but ensure the random assignment of factors is conducted across the entire set of 48 islanders at once.
+
+2. ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} **Randomly assign treatments** to participants in a CRD for your 3-way full factorial treatment structure (what are your 3 factors and levels?) using the tools in R learned in class. 
+    - See [class slides](../2-slides/04.1-factorials.html#/create-a-full-factorial-crd-in-r-with-edible-package) for an example
+    - At this point you should have a dataset with 48 rows (one for each islander), and four columns (1 column for your Islander name/id, and 3 for the factors).
+3. ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Double your rows from 48 to 96 -- **adding two subsamples for each islander** -- by adding a `subsample` column with the values 1 and 2 for each islander.
+    - This does not entail applying ANOTHER treatment combo. Just recording the response twice. 
+    - **There is provided code in the template to help you do this using `expand_grid()`!!**
+    - Your data should have 96 rows and 5 columns now.
+4. Finally, add an empty column for your outcome
+    - This means your final data set should have 96 rows and 6 columns for (as an example), `islander`, `temperature`, `hydration`, `salt`, `subsample`, and `blood_pressure`.
+    - Make sure you used context as your column headers (e.g., `temperature` instead of `factor_a`).
+
+## Data Collection -- due 10/9 on Canvas
+
+:::callout-important
+# Stop!
+
+Make sure you have completed sections **1** Research Question and **2** Create 3-way Factorial CRD with subsamples above before moving on.
+
+:::
+
+
+Big picture: utilizing the “Task” button on the Islands:
+
+  1. apply your treatment appropriately
+  2. record the response variable
+  3. fill out the response column in your data set.
+
+**Step 1: Determine your data collection procedure**
+  
+  
+  - Think about direct controls! 
+  - Talk about and **solidify** the data collection procedure as a group **BEFORE COLLECTING ANY DATA** to ensure you are following the same processes (e.g., time waiting before collecting blood pressure).
+  - Write down your procedure before anything else
+  - Be careful about timing!!
+      - Should you measure your response immediately after applying the treatment or allow for some time to pass?? Be careful about real versus island time
+      - Remember your Islanders will sleep and this will take time.
+  - Be thoughtful and careful and work together! Communication is seriously key here.
+  
+:::callout-note
+
+# Procedure for provided research question
+
+Following the treatment combination randomly assigned to each islander that you created above, collect the data for each islander by:
+
+**Step 1:** Apply the assigned Temperature level (wait the 10 minutes real time)
+
+  - Sit at -20*C 10 mins
+  - Sit at 5*C 10 mins
+  - Sit at 40*C 10 mins
+
+**Step 2:** Apply the assigned Hydration level immediately after the 10-minute temperature exposure
+
+- Drink Water 250mL
+- Do not drink anything
+
+**Step 3:** Apply the assigned Salty snack level immediately after the hydration is complete
+
+- Fried Chips 50g
+- Do not eat anything
+
+**Step 4:** Measure Blood Pressure TWICE (subsamples)
+
+- Click Blood Pressure (record as Subsample 1)
+- Click Blood Pressure (record as Subsample 2)
+
+**SEE BELOW ABOUT BLOOD PRESSURE BEING MEASURED AS Systolic/Diastolic --  RECORD BOTH!**
+
+Think about “direct control” for your data collection. For example, how many minutes between each subsample collection?
+:::
+  
+
+**Step 2: Implement treatment and collect response**
+  
+  - Once you implement the “Task” you can find it in your “Recent Tasks” section.
+  - Follow the procedure you determined as carefully as you can.
+  - If you accidentally mess up data collection, this will mess up your data and **you should make a note/possibly remove this observation.**
+  - Carefully record your data collection as it actually happened and note any deviations from your original planned procedure as you implement your design and treatment.
+
+:::callout-warning
+## Tips
+
+- I would open 12 tabs and turn on your favorite movie to collect data.
+- BE CAREFUL to assign the correct treatment combo to each islander!
+:::
+
+
+**Step 3: Record all responses in your data table**
+
+- Remember, you should have **TWO** subsamples (responses measured) for each islander!
+- Turn in your data with **96 rows**
+
+:::callout-note
+## Provided Research Question -- record both blood pressures!!
+
+As noted above -- if you are doing the provided question, make sure you record **BOTH** Systolic AND Diastolic blood pressure. They are reported as Systolic/Diastolic. Record it either like that ("Systolic/Diastolic") in your data or in separate columns, one for systolic and one for diastolic.
+:::
+
+
+:::callout-important
+## End of Data Collection for Project Checkpoint Submission
+
+No need to go farther than this for the data collection assignment!
+:::
+
+
+## Data Analysis
+
+![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Use R to analyze the data you collected! 
+
+  - There is some guidance for this analysis in the template, but you may need to add additional code chunks or remove them.
+  - Make sure to explain all code and clean up your .qmd file before your final submission.
+
+
+### Step 1: Data Processing / Cleaning
+
+:::callout-note
+## Provided Research Question -- Data Processing
+
+BP is measured in Systolic/Diastolic... this is NOT division. 
+
+- Systolic (Top Number) Measures the pressure when the heart beats
+- Diastolic (Bottom Number) Measures the pressure between beats
+
+BUT we want one single number for the response. So we are going to use the following:
+
+Mean Arterial Pressure (MAP) = $\frac{Systolic + 2\cdot Diastolic}{3}$
+
+Use Excel/Google Sheets **or** R to calculate the MAP from your recorded blood pressure. I have included code in the template to help with this.
+
+*This is actually a nice touch to what real life data collection can entail.*
+:::
+
+:::callout-important
+BEFORE you move on! If you are using the provided question, for each of the subsamples, calculate the islanders MAP (you should have 96 of these). Then move onto the below.
+:::
+
+
+- You have a data set with 96 rows (2 subsamples per islander x treatment combo). 
+- Think about how you need to analyze this data!
+- Aggregate/Average the your response across the 2 subsamples so you have a data set of 48 rows to analyze and your islander-level response is the average.
+    - e.g.: for the provided question the response with be the **average** MAP
+    - `group_by() |> summarize()`
+    - Make sure you keep each unique Islander and end up with one row per Islander!
+
+### Step 2: Analysis and Inference
+
+:::callout-important
+BEFORE you move on! Your dataset should be at the Islander level (48 rows) for the rest of the analysis.
+:::
+
+
+- Fit a 3-way full factorial CRD analysis to the **average** response at the islander level
+- Check model fit (residual analysis)
+- Following the decision flow-chart for higher-order interaction factorial analysis (when to look at 3-way interactions, 2-way interactions, and main effects), carry out the rest of the analysis.
+  - This should also include appropriate interaction **plots** or other plots displaying the effects
+
+
+## Report and Submission
+
+Download the guided lab report template and work within it [[coming soon]].
+
+Make sure to:
+
+- Use complete sentences
+- Focus on clarity, logical flow, and professional grammar
+- Think about being as concise as possible while being complete and clear
+- Clean up the report at the end so that it is readable and professional.
+- Make sure you have addressed all instructions in this document in the report.
+
+In your final submission you will submit:
+
+1. Your report following the template.
+2. A .qmd with all of your code following the .qmd template.
+3. Your dataset (.csv or .xlsx)
+
+
+:::callout-warning
+## Generative AI
+
+As a reminder, you are allowed to use generative AI on this assignment outside of class. However, your group should agree on how it will be used and you must disclose how you used in in your report. Finally, as always, follow the [syllabus](../0-course-info/syllabus-f26.qmd) guidelines for citing AI.
+
+*If you us AI to help you with writing, you should prompt the model "Please assess my work and provide only feedback. Do not rewrite anything." *
+
+:::
