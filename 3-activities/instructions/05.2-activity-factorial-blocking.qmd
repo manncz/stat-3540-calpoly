@@ -6,54 +6,231 @@ execute:
   message: false
   warning: false
 
-echo: false
 format:
   docx: default
   html: default
   pdf: default
 ---
+```{r}
+#| echo: false
+
+library(edibble)
+library(tidyverse)
+library(emmeans)
+library(multcomp)
+```
+
 \vspace{-.8in}
 
 ::: callout-warning
 - Submit via Gradescope, don't forget to assign pages to the questions in the outline!
 
-- Delete any extraneous instructions (**like this box**) before submission. *You will be deducted points from now on if you do not follow this instruction!*
+- Delete any extraneous instructions (**like this box**) before submission (unless you are using the PDF template). *You will be deducted points from now on if you do not follow this instruction!*
 
-- Delete anything like `\vspace{}`
-
-- Remember that it's okay if you cannot get the .qmd to render to submit this!! I will help you but you can also use any of the other formats.
-
-- You should follow the qmd template for coding:
-- You can download the data on Canvas or here:
+- There is no coding required for this activity! **I would recommend you complete it using the Word or PDF versions**, but you are still welcome to use the .qmd template: [05.2-activity-factorial-blocking.qm](../student/05.2-activity-factorial-blocking.qmd).
+  - If you use the .qmd template, you will need to refer to the online instructions to see the referenced output
 
 :::
 
-**Scenario:**
+# Scenario
 
-An experiment is to be conducted to evaluate the effect of citric acid and salt on the moisture content of mozzarella cheese. Blocks of mozzarella cheese will be made by using 4 different amounts of citric acid (1 tsp, 1.25 tsp, 1.5 tsp, 1.75 tsp) and 2 different amounts of cheese salt (1 tsp and 2 tsp). (Mozzarella cheese can be made by mixing 1 gallon of milk, 1/4 tsp of liquid rennet, cheese salt, and citric acid.) After storage in a cooler for 3 months, the moisture content of each block will be measured at five different random locations within the block of cheese.
+An experiment is to be conducted to evaluate the effect of citric acid and salt on the moisture content (in %) of [mozzarella cheese](https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/mozzarella-cheese). Typically, mozzarella cheese has a moisture content between 52 and 60%, but "low-moisture mozzarella" may have moisture content between 45-52%.^[Reference: https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/mozzarella-cheese]. Mozzarella cheese can be made by mixing 1 gallon of milk, 1/4 tsp of liquid rennet, cheese salt, and citric acid.
 
-The researchers would like to include different types of milk as a blocking factor in their study. They went to the store and bought six different types of whole milk (e.g. from different brands, organic or not, etc.) and will run a randomized complete block design making 8 blocks of cheese from each type of milk one block from each combination of levels of citric acid and salt. The order of mixing/making each block of cheese will be randomized within each milk type.
+Blocks of mozzarella cheese will be made by using 4 different amounts of citric acid (1 tsp, 1.25 tsp, 1.5 tsp, 1.75 tsp) and 2 different amounts of cheese salt (1 tsp and 2 tsp).  After storage in a cooler for 3 months, the moisture content of each block will be measured at three different random locations within the block of cheese.
 
-**a. Sketch a design blueprint**
+The researchers would like to include different types of milk as a blocking factor in their study. They went to the store and bought six different types of whole milk (e.g. from different brands, organic or not, etc.) and will run a randomized complete block design making 8 blocks of cheese from each type of milk (one block from each combination of levels of citric acid and salt). The order of mixing/making each block of cheese will be randomized within each milk type.
+
+# Part A: Setup
+
+**1.** Sketch a design blueprint
 
 -   Clearly indicate the experimental units *and* measurement units
 -   Clearly indicate the blocking factor (show grouping)
 -   Show how treatments are assigned within blocks
 
+\vspace{2in}
+
+**2.** Describe the treatment and experimental structures (bullets is fine!)
+
 \vspace{1.2in}
 
-\newpage
-
-**b. In one sentence, explain why blocking is preferable to using milk type as an inclusion criterion.**
+**3.** In one sentence, explain why blocking is preferable to using milk type as an inclusion criterion.
 
 \vspace{1in}
 
-**c. For the RCBD analysis in this module, how should the researchers use the two measurements from each cheese block?**
+**4.** For the RCBD analysis that we have learned so far, how should the researchers use the three measurements from each cheese block?
+
+\vspace{.5in}
+
+**5.** Which of the following shows the *first couple of rows* of the **appropriate** data to use to analyze this study based on what we know so far?  Fill in the blanks in the statement below to describe the data.
+
+> The appropriate data to use to analyze the cheese study is Data _______. The full dataset would have ____________ rows, where each row represents one ___________________. 
+
+::::columns
+:::column
+
+:::callout-note
+## Data A
+```{r}
+#| echo: false
+
+cheese_data <- read_csv("../_data/05-cheese-data.csv")
+
+cheese_data |> 
+  slice_head(n = 6) |> 
+  knitr::kable()
+```
+:::
+:::
+
+:::column
+
+:::callout-note
+## Data B
+```{r}
+#| echo: false
+
+cheese_data <- cheese_data |> 
+  group_by(milk, cheese_block, citric_acid, salt) |> 
+  summarize(mean_moisture_perc = mean(moisture_perc)) |> 
+  ungroup() |> 
+  mutate(across(milk:salt,
+                .f = factor))
+
+cheese_data |> 
+  slice_head(n = 6) |> 
+  knitr::kable()
+```
+:::
+:::
+::::
+
+# Part B: Statistical Model
+
+:::callout-important
+For the rest of the activity, assume we have used the appropriate data for the analysis!!
+:::
+
+**6.** State the statistical effects model for a two-factorial RCBD from Module 5.
+
+Make sure to define **all** terms, denote $i,j,m$ values, and include assumptions.
+
+\vspace{2in}
+
+**7.** Fill in the skeleton ANOVA table for the analysis of this experiment using the RCBD analyses we have learned so far. (delete rows you don't need)
+
+| Source of Variation                  |DF        |
+|--------------------------------------|----------|
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+
+# Part C: R Analysis
+
+**7.** Fill in the appropriate *R formula* to fit the model assuming that you are using the data (called  `cheese_dat`) from Q5:
+
+```
+cheese_mod <- lm(______________________________________________________________,
+                 data = cheese_dat)
+```
+
+:::callout-note
+## Output for Q8-10
+```{r}
+#| echo: false
+
+# set sum to zero constraint
+options(contrasts = c("contr.sum", "contr.poly"))
+
+# "fit" model -- saving model object to use in all of the rest of our analyses!
+cheese_mod <- lm(mean_moisture_perc ~ citric_acid + salt + citric_acid:salt + milk, 
+                 data = cheese_data)
+```
+
+:::columns
+:::column
+```{r}
+levels(cheese_data$milk)
+```
+:::
+
+:::column
+```{r}
+levels(cheese_data$citric_acid)
+```
+:::
+
+:::column
+```{r}
+levels(cheese_data$salt)
+```
+:::
+:::
+
+```{r}
+summary(cheese_mod)
+
+anova(cheese_mod)
+```
+
+:::
+
+**8.** Based on the output provided, was blocking helpful in this study? How do you know?
+
+\vspace{.5in}
+
+**9.** Based on the output provided, what is the **estimated** mean moisture content for a cheese made from the following. Show all work!
+
+  - local organic milk
+  - 1 tsp citric acid and
+  - 2 tsp cheese salt
 
 \vspace{1in}
 
-**d. Provide the skeleton ANOVA table for the analysis of this experiment.**
+**10.** Based on the output provided, what effects should we consider for further the analysis? (e.g. interaction effects of .... main effects of ....)
 
-**e. Suppose the researchers were also interested in whether the effect of citric acid on the moisture depends on milk type. Why would this be difficult or impossible to assess using the current design?**
+\vspace{1in}
+
+**11.** Describe the nature of the interaction, if any, based on the plot below.
+
+\vspace{1in}
+
+:::callout-note
+## Output for Q11
+```{r}
+emmip(cheese_mod, salt ~ citric_acid, CIs = TRUE, adjust = "tukey") +
+  labs(y = "Mean Moisture %",
+       x = "Citric Acid")
+```
+:::
+
+# Part D: Conclusions and Follow-Up
+
+:::callout-note
+## Output for Q12
+
+```{r}
+emmeans(cheese_mod, specs = ~ citric_acid*salt) |> 
+  joint_tests(by = "salt")
+
+emmeans(cheese_mod, specs = ~ citric_acid | salt) |> 
+  cld(Letters = LETTERS, decreasing = T, adjust = "tukey")
+```
+:::
+
+**12** Based on the analyses shown, do you have a recommendation in terms of salt and citric acid for cheese makers trying to make a mozzarella cheese with the highest moisture content?
+
+\vspace{1in}
+
+**13.** To what population can we generalize results from this study?
+
+\vspace{1in}
+**14.** Suppose the researchers were also interested in whether the effect of citric acid on the moisture depends on milk type. Why would this be difficult or impossible to assess using the current design?
 
 \vspace{0.8in}
