@@ -7,8 +7,8 @@ execute:
   warning: false
 
 format:
-  docx: default
   html: default
+  docx: default
   pdf: default
 ---
 ```{r}
@@ -27,7 +27,7 @@ library(multcomp)
 
 - Delete any extraneous instructions (**like this box**) before submission (unless you are using the PDF template). *You will be deducted points from now on if you do not follow this instruction!*
 
-- There is no coding required for this activity! **I would recommend you complete it using the Word or PDF versions**, but you are still welcome to use the .qmd template: [05.2-activity-factorial-blocking.qm](../student/05.2-activity-factorial-blocking.qmd).
+- There is no coding required for this activity! **I would recommend you complete it using the Word or PDF versions**, but you are still welcome to use the .qmd template: [05.2-activity-factorial-blocking.qmd](../student/05.2-activity-factorial-blocking.qmd).
   - If you use the .qmd template, you will need to refer to the online instructions to see the referenced output
 
 :::
@@ -36,9 +36,9 @@ library(multcomp)
 
 An experiment is to be conducted to evaluate the effect of citric acid and salt on the moisture content (in %) of [mozzarella cheese](https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/mozzarella-cheese). Typically, mozzarella cheese has a moisture content between 52 and 60%, but "low-moisture mozzarella" may have moisture content between 45-52%.^[Reference: https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/mozzarella-cheese]. Mozzarella cheese can be made by mixing 1 gallon of milk, 1/4 tsp of liquid rennet, cheese salt, and citric acid.
 
-Blocks of mozzarella cheese will be made by using 4 different amounts of citric acid (1 tsp, 1.25 tsp, 1.5 tsp, 1.75 tsp) and 2 different amounts of cheese salt (1 tsp and 2 tsp).  After storage in a cooler for 3 months, the moisture content of each block will be measured at three different random locations within the block of cheese.
+Balls of mozzarella cheese will be made by using 4 different amounts of citric acid (1 tsp, 1.25 tsp, 1.5 tsp, 1.75 tsp) and 2 different amounts of cheese salt (1 tsp and 2 tsp).  After storage in a cooler for 3 months, the moisture content of each mozzarella ball will be measured at three different random locations within the ball of cheese.
 
-The researchers would like to include different types of milk as a blocking factor in their study. They went to the store and bought six different types of whole milk (e.g. from different brands, organic or not, etc.) and will run a randomized complete block design making 8 blocks of cheese from each type of milk (one block from each combination of levels of citric acid and salt). The order of mixing/making each block of cheese will be randomized within each milk type.
+The researchers would like to include different types of milk as a blocking factor in their study. They went to the store and bought six different types of whole milk (e.g. from different brands, organic or not, etc.) and will run a randomized complete block design making 8 balls of cheese from each type of milk (one ball of cheese from each combination of levels of citric acid and salt). The order of mixing/making each ball of cheese will be randomized within each milk type.
 
 # Part A: Setup
 
@@ -58,7 +58,7 @@ The researchers would like to include different types of milk as a blocking fact
 
 \vspace{1in}
 
-**4.** For the RCBD analysis that we have learned so far, how should the researchers use the three measurements from each cheese block?
+**4.** For the RCBD analysis that we have learned so far, how should the researchers use the three measurements from each cheese ball?
 
 \vspace{.5in}
 
@@ -91,7 +91,7 @@ cheese_data |>
 #| echo: false
 
 cheese_data <- cheese_data |> 
-  group_by(milk, cheese_block, citric_acid, salt) |> 
+  group_by(milk, cheese_ball, citric_acid, salt) |> 
   summarize(mean_moisture_perc = mean(moisture_perc)) |> 
   ungroup() |> 
   mutate(across(milk:salt,

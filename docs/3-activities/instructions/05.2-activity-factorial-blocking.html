@@ -390,7 +390,7 @@ window.Quarto = {
   <li><a href="#part-c-r-analysis" id="toc-part-c-r-analysis" class="nav-link" data-scroll-target="#part-c-r-analysis">Part C: R Analysis</a></li>
   <li><a href="#part-d-conclusions-and-follow-up" id="toc-part-d-conclusions-and-follow-up" class="nav-link" data-scroll-target="#part-d-conclusions-and-follow-up">Part D: Conclusions and Follow-Up</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="05.2-activity-factorial-blocking.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="05.2-activity-factorial-blocking.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="05.2-activity-factorial-blocking.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="../../05.2-activity-factorial-blocking.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -429,7 +429,7 @@ Warning
 <ul>
 <li><p>Submit via Gradescope, don’t forget to assign pages to the questions in the outline!</p></li>
 <li><p>Delete any extraneous instructions (<strong>like this box</strong>) before submission (unless you are using the PDF template). <em>You will be deducted points from now on if you do not follow this instruction!</em></p></li>
-<li><p>There is no coding required for this activity! <strong>I would recommend you complete it using the Word or PDF versions</strong>, but you are still welcome to use the .qmd template: <a href="../student/05.2-activity-factorial-blocking.qmd">05.2-activity-factorial-blocking.qm</a>.</p>
+<li><p>There is no coding required for this activity! <strong>I would recommend you complete it using the Word or PDF versions</strong>, but you are still welcome to use the .qmd template: <a href="../student/05.2-activity-factorial-blocking.qmd">05.2-activity-factorial-blocking.qmd</a>.</p>
 <ul>
 <li>If you use the .qmd template, you will need to refer to the online instructions to see the referenced output</li>
 </ul></li>
@@ -439,8 +439,8 @@ Warning
 <section id="scenario" class="level1">
 <h1>Scenario</h1>
 <p>An experiment is to be conducted to evaluate the effect of citric acid and salt on the moisture content (in %) of <a href="https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/mozzarella-cheese">mozzarella cheese</a>. Typically, mozzarella cheese has a moisture content between 52 and 60%, but “low-moisture mozzarella” may have moisture content between 45-52%.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Mozzarella cheese can be made by mixing 1 gallon of milk, 1/4 tsp of liquid rennet, cheese salt, and citric acid.</p>
-<p>Blocks of mozzarella cheese will be made by using 4 different amounts of citric acid (1 tsp, 1.25 tsp, 1.5 tsp, 1.75 tsp) and 2 different amounts of cheese salt (1 tsp and 2 tsp). After storage in a cooler for 3 months, the moisture content of each block will be measured at three different random locations within the block of cheese.</p>
-<p>The researchers would like to include different types of milk as a blocking factor in their study. They went to the store and bought six different types of whole milk (e.g.&nbsp;from different brands, organic or not, etc.) and will run a randomized complete block design making 8 blocks of cheese from each type of milk (one block from each combination of levels of citric acid and salt). The order of mixing/making each block of cheese will be randomized within each milk type.</p>
+<p>Balls of mozzarella cheese will be made by using 4 different amounts of citric acid (1 tsp, 1.25 tsp, 1.5 tsp, 1.75 tsp) and 2 different amounts of cheese salt (1 tsp and 2 tsp). After storage in a cooler for 3 months, the moisture content of each mozzarella ball will be measured at three different random locations within the ball of cheese.</p>
+<p>The researchers would like to include different types of milk as a blocking factor in their study. They went to the store and bought six different types of whole milk (e.g.&nbsp;from different brands, organic or not, etc.) and will run a randomized complete block design making 8 balls of cheese from each type of milk (one ball of cheese from each combination of levels of citric acid and salt). The order of mixing/making each ball of cheese will be randomized within each milk type.</p>
 </section>
 <section id="part-a-setup" class="level1">
 <h1>Part A: Setup</h1>
@@ -452,7 +452,7 @@ Warning
 </ul>
 <p><strong>2.</strong> Describe the treatment and experimental structures (bullets is fine!)</p>
 <p><strong>3.</strong> In one sentence, explain why blocking is preferable to using milk type as an inclusion criterion.</p>
-<p><strong>4.</strong> For the RCBD analysis that we have learned so far, how should the researchers use the three measurements from each cheese block?</p>
+<p><strong>4.</strong> For the RCBD analysis that we have learned so far, how should the researchers use the three measurements from each cheese ball?</p>
 <p><strong>5.</strong> Which of the following shows the <em>first couple of rows</em> of the <strong>appropriate</strong> data to use to analyze this study based on what we know so far? Fill in the blanks in the statement below to describe the data.</p>
 <blockquote class="blockquote">
 <p>The appropriate data to use to analyze the cheese study is Data _______. The full dataset would have ____________ rows, where each row represents one ___________________.</p>
@@ -474,7 +474,7 @@ Warning
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 19%">
-<col style="width: 20%">
+<col style="width: 19%">
 <col style="width: 16%">
 <col style="width: 9%">
 <col style="width: 15%">
@@ -483,7 +483,7 @@ Warning
 <thead>
 <tr class="header">
 <th style="text-align: left;">milk</th>
-<th style="text-align: left;">cheese_block</th>
+<th style="text-align: left;">cheese_ball</th>
 <th style="text-align: left;">citric_acid</th>
 <th style="text-align: left;">salt</th>
 <th style="text-align: left;">location</th>
@@ -493,7 +493,7 @@ Warning
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block01</td>
+<td style="text-align: left;">cheese_ball01</td>
 <td style="text-align: left;">1.5 tsp.</td>
 <td style="text-align: left;">2 tsp.</td>
 <td style="text-align: left;">location01</td>
@@ -501,7 +501,7 @@ Warning
 </tr>
 <tr class="even">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block01</td>
+<td style="text-align: left;">cheese_ball01</td>
 <td style="text-align: left;">1.5 tsp.</td>
 <td style="text-align: left;">2 tsp.</td>
 <td style="text-align: left;">location02</td>
@@ -509,7 +509,7 @@ Warning
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block01</td>
+<td style="text-align: left;">cheese_ball01</td>
 <td style="text-align: left;">1.5 tsp.</td>
 <td style="text-align: left;">2 tsp.</td>
 <td style="text-align: left;">location03</td>
@@ -517,7 +517,7 @@ Warning
 </tr>
 <tr class="even">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block02</td>
+<td style="text-align: left;">cheese_ball02</td>
 <td style="text-align: left;">1.25 tsp.</td>
 <td style="text-align: left;">2 tsp.</td>
 <td style="text-align: left;">location01</td>
@@ -525,7 +525,7 @@ Warning
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block02</td>
+<td style="text-align: left;">cheese_ball02</td>
 <td style="text-align: left;">1.25 tsp.</td>
 <td style="text-align: left;">2 tsp.</td>
 <td style="text-align: left;">location02</td>
@@ -533,7 +533,7 @@ Warning
 </tr>
 <tr class="even">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block02</td>
+<td style="text-align: left;">cheese_ball02</td>
 <td style="text-align: left;">1.25 tsp.</td>
 <td style="text-align: left;">2 tsp.</td>
 <td style="text-align: left;">location03</td>
@@ -559,17 +559,10 @@ Warning
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 22%">
-<col style="width: 17%">
-<col style="width: 10%">
-<col style="width: 28%">
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">milk</th>
-<th style="text-align: left;">cheese_block</th>
+<th style="text-align: left;">cheese_ball</th>
 <th style="text-align: left;">citric_acid</th>
 <th style="text-align: left;">salt</th>
 <th style="text-align: right;">mean_moisture_perc</th>
@@ -578,42 +571,42 @@ Warning
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block01</td>
+<td style="text-align: left;">cheese_ball01</td>
 <td style="text-align: left;">1.5 tsp.</td>
 <td style="text-align: left;">2 tsp.</td>
 <td style="text-align: right;">58.90494</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block02</td>
+<td style="text-align: left;">cheese_ball02</td>
 <td style="text-align: left;">1.25 tsp.</td>
 <td style="text-align: left;">2 tsp.</td>
 <td style="text-align: right;">60.42562</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block03</td>
+<td style="text-align: left;">cheese_ball03</td>
 <td style="text-align: left;">1.25 tsp.</td>
 <td style="text-align: left;">1 tsp.</td>
 <td style="text-align: right;">56.82857</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block04</td>
+<td style="text-align: left;">cheese_ball04</td>
 <td style="text-align: left;">1.5 tsp.</td>
 <td style="text-align: left;">1 tsp.</td>
 <td style="text-align: right;">60.03801</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block05</td>
+<td style="text-align: left;">cheese_ball05</td>
 <td style="text-align: left;">1.75 tsp.</td>
 <td style="text-align: left;">1 tsp.</td>
 <td style="text-align: right;">61.50799</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Organic Local</td>
-<td style="text-align: left;">cheese_block06</td>
+<td style="text-align: left;">cheese_ball06</td>
 <td style="text-align: left;">1 tsp.</td>
 <td style="text-align: left;">1 tsp.</td>
 <td style="text-align: right;">58.82087</td>
