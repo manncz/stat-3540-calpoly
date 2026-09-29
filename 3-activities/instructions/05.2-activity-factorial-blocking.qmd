@@ -231,6 +231,6 @@ emmeans(cheese_mod, specs = ~ citric_acid | salt) |>
 **13.** To what population can we generalize results from this study?
 
 \vspace{1in}
-**14.** Suppose the researchers were also interested in whether the effect of citric acid on the moisture depends on milk type. Why would this be difficult or impossible to assess using the current design?
+**14.** Suppose the researchers were also interested in whether the effect of the treatments (citric acid $\times$ salt) on the moisture depends on milk type. Why would this be difficult or impossible to assess using the current design?
 
 \vspace{0.8in}
