@@ -1,0 +1,191 @@
+---
+title: "Activity 6.1: Random Block Effect vs Paired t-test"
+subtitle: "Color Interference"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+format:
+  docx: default
+  html: default
+---
+\vspace{-.8in}
+
+::: callout-warning
+- Submit via Gradescope, don't forget to assign pages to the questions in the outline!
+
+- Delete any extraneous instructions (**like this box**) before submission. *You will be deducted points from now on if you do not follow this instruction!*
+
+- Remember that it's okay if you cannot get the .qmd to render to submit this!! I will help you but you can also use any of the other formats.
+
+- You should follow the qmd template for coding: [06.1-activity-color-interference.qmd](../student/06.1-activity-color-interference.qmd)
+- You can download the data on Canvas or here: 
+  - **wide**: [06-color-interference-wide.csv](../_data/06-color-interference-wide.csv)
+  - **long**: [06-color-interference-long.csv](../_data/06-color-interference-long.csv)
+
+:::
+
+The abstract of the article *Studies of interference in serial verbal reactions* in the Journal of Experimental Psychology^[[https://psycnet.apa.org/record/1936-01863-001](https://psycnet.apa.org/record/1936-01863-001)] reads:
+
+> In this study pairs of conflicting stimuli, both being inherent aspects of the same symbols, were presented simultaneously (a name of one color printed in the ink of another color—a word stimulus and a color stimulus). The difference in time for reading the words printed in colors and the same words printed in black is the measure of interference of color stimuli upon reading words. The interference of conflicting color stimuli upon the time for reading 100 words (each word naming a color unlike the ink-color of its print) caused an increase of 2.3 seconds or 5.6% over the normal time for reading the same words printed in black.
+
+```{r}
+#| fig-align: center
+#| out-width: 60%
+#| echo: false
+knitr::include_graphics("https://github.com/earobinson95/stat323-calpoly/blob/main/flipped-style/06-random-and-mixed/images/black-diffcol-texts.png?raw=true")
+```
+
+The article reports on the results of a study in which seventy college undergraduates were given forms with 100 names of colors written in black ink, and the same 100 names of colors written in another color (i.e., the word purple written in green ink). The total time (in seconds) for
+reading the 100 words printed in black, and the total time (in seconds) for reading the 100 words printed in different colors were recorded for each subject. The order in which the forms (black or color) were given was randomized to the subjects.
+
+## Part A: Study Data
+
+### 1. Read in the data
+
+Remember you need to add the correct file path for how you have things set up in the code provided!
+
+```{r}
+# read in wide and long data
+# Remember, you need to add in the correct file paths in the ""!
+
+color_dat_wide <- read_csv("") |> 
+  janitor::clean_names() |> 
+  mutate(subj = factor(subj))
+
+color_dat_long <- read_csv("") |> 
+  janitor::clean_names() |> 
+  mutate(subj = factor(subj),
+         text_color = factor(text_color))
+```
+
+### 2. Take a look at the data in R 
+
+What are the differences between the wide and the long version of the data? **Fill in the prompts below:**
+
+**Wide data**
+
+- observational unit (i.e. one row):
+- What does one value in the `black` column represent?:
+- What does one value in the `color` column represent?:
+- What does one value in the `difference` column represent?:
+
+**Long data**
+
+- observational unit (i.e. one row):
+- What is the `text_color` column?:
+- What does one value in the `time_seconds` column represent?:
+
+## Part B: Paired t-test
+
+### 3.	Using the skills from your Stat I/II course, conduct and interpret a paired t-test. 
+
+:::callout-note
+# Paired t-test in R
+
+Most of you probably have not conducted this analysis in R! There are two ways to do it, which will get you the same answer! 
+
+You will want to use **wide** data for this.
+
+1. `pair_test <- t.test(wide_data$dif_var)`
+2. `pair_test <- t.test(wide_data$resp1, wide_data$resp2, paired = T)`
+
+(You should be able to figure out why both work based on your previous stat classes.)
+
+To get the standard error estimate:
+
+`pair_test$stderr`
+:::
+
+```{r}
+# paired t-test code here using wide data (color_dat_wide)
+
+```
+
+Report the following:
+
++ Supporting evidence: t = __________; df = ________; p = __________)
+
++ Estimated mean difference in time ($\mu_\text{black text - color text}$): __________________
+
++ Estimated standard error of the mean difference in time: _____________________
+
+## Part C: Study Design
+
+### 4.  Thinking about this in the experimental design framework, draw a blueprint and identify the treatment and design structures.
+
+  + Blueprint:
+
+  + Treatment structure:
+
+  + Design structure:
+
+### 5. Why is it important the researchers randomized the order in which the forms (black or different color) were given to subjects?
+
+## Part D: Linear Mixed Model
+
+::: callout-tip
+Use the **long** data `color_dat_long` for the rest of the assignment.
+:::
+
+### 6. Define the statistical effects model in context.
+
+Based on your treatment and design structure above, fill in the below to define the parameters and random variables given in the statistical effects model in the context of this study. Also indicate what values the indices can take.
+
+$$y_{im} = \mu + \tau_i + p_m + \epsilon_{im} \text{ where }  p_m \overset{iid}{\sim}  N(0,\sigma_{blk}^2) \text{ and }  \epsilon_{im} \overset{iid}{\sim}  N(0,\sigma_\epsilon^2)$$
+for $i=$________________;	$m=$________________
+
+where:
+
++ $y_{ij}$ is the...
+
++ $\mu$ is the... 
+
++ $\tau_i$ is the...
+
++ $p_m$ is the...
+
++ $\epsilon_{im}$ is the...
+
+### 7. Based on your treatment and design structure above, write out the skeleton ANOVA. 
+
+**For each source of variability, indicate whether it is a fixed or random effect.**
+
+| Source of Variation                  |DF        |
+|--------------------------------------|----------|
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+
+### 8. Now, fit the appropriate Linear Mixed Model (LMM) in R. 
+
+```{r}
+# LLM code (make sure you are using the long data!)
+
+# fit model
+
+
+# look at model results
+
+
+
+```
+
+Report the following:
+
++ $\hat\sigma^2_{blk} =$ _____________ and $\hat\sigma^2_\epsilon =$ _______________
+
++ Supporting evidence: F = __________; df = ____, _____; p = __________
+
++ Estimated difference in mean time between black and colored text (i.e., ordered difference report/pairs): ________________
+
++ Estimated standard error in the difference in mean time between black and colored text (i.e., ordered difference report/pairs): _____________
+
+### 9. Compare your results between (3) and (8). What do you notice?
