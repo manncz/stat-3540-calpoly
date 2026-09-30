@@ -363,7 +363,7 @@ Mixed models come about when one factor is fixed and one factor is random. A mix
 
 $$y_{im} = \mu + \tau_i + p_m + \epsilon_{im} \text{ with }  p_m \sim \text{iid } N(0,\sigma_{blk}^2) \text{ and } \epsilon_{im} \sim \text{iid }  N(0,\sigma_\epsilon^2)$$
 
-for $i=1,2,3;	j=1,2,…,10$
+for $i=1,2,3;	m=1,2,…,10$
 
 where:
 
@@ -371,7 +371,7 @@ where:
 + $\mu$ is the overall mean time to complete the agility course
 + $\tau_i$ is the fixed effect of the $i^{th}$ knee brace
 + $p_m$ is the random effect of the $m^{th}$ running back (block)
-+ $\epsilon_{im}$ is the random error term associated with the $j^{th}$ running back wearing the i^th knee brace 
++ $\epsilon_{im}$ is the random error term associated with the $m^{th}$ running back (block) wearing the $i^th$ knee brace 
 
 :::
 
@@ -458,8 +458,8 @@ In the mixed model:
 Thus, the estimated mean and variance are given by:
 
 + Mean: $\hat\mu_i=\hat\mu+\hat\tau_i$
-+ SE of Mean: $SE(\hat\mu_i)=\sqrt{\frac{\hat\sigma_{blk}^2+\hat\sigma_\epsilon^2}{r}}$
-+ SE of Diff in Means: $SE(\hat\mu_i-\hat\mu_{i'})=\sqrt{\frac{2}{r}\sigma_\epsilon^2}$
++ SE of Mean: $SE(\hat\mu_i)=\sqrt{\frac{\hat\sigma_{blk}^2+\hat\sigma_\epsilon^2}{M}}$
++ SE of Diff in Means: $SE(\hat\mu_i-\hat\mu_{i'})=\sqrt{\frac{2}{M}\sigma_\epsilon^2}$
 :::
 
 ## Estimating Treatment Means 

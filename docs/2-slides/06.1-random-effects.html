@@ -595,14 +595,14 @@ Fixed effects:
 <h2>Statistical Effecs Model</h2>
 <div style="font-size:0.75em">
 <p><span class="math display">\[y_{im} = \mu + \tau_i + p_m + \epsilon_{im} \text{ with }  p_m \sim \text{iid } N(0,\sigma_{blk}^2) \text{ and } \epsilon_{im} \sim \text{iid }  N(0,\sigma_\epsilon^2)\]</span></p>
-<p>for <span class="math inline">\(i=1,2,3;   j=1,2,…,10\)</span></p>
+<p>for <span class="math inline">\(i=1,2,3;   m=1,2,…,10\)</span></p>
 <p>where:</p>
 <ul>
 <li><span class="math inline">\(y_{ij}\)</span> is the time to complete a 40-yard agility course for the <span class="math inline">\(m^{th}\)</span> running back (block) wearing the <span class="math inline">\(i^{th}\)</span> knee brace</li>
 <li><span class="math inline">\(\mu\)</span> is the overall mean time to complete the agility course</li>
 <li><span class="math inline">\(\tau_i\)</span> is the fixed effect of the <span class="math inline">\(i^{th}\)</span> knee brace</li>
 <li><span class="math inline">\(p_m\)</span> is the random effect of the <span class="math inline">\(m^{th}\)</span> running back (block)</li>
-<li><span class="math inline">\(\epsilon_{im}\)</span> is the random error term associated with the <span class="math inline">\(j^{th}\)</span> running back wearing the i^th knee brace</li>
+<li><span class="math inline">\(\epsilon_{im}\)</span> is the random error term associated with the <span class="math inline">\(m^{th}\)</span> running back (block) wearing the <span class="math inline">\(i^th\)</span> knee brace</li>
 </ul>
 </div>
 </section>
@@ -737,8 +737,8 @@ knee_brace    3 8.2015  2.7338  139.14</code></pre>
 <p>Thus, the estimated mean and variance are given by:</p>
 <ul>
 <li>Mean: <span class="math inline">\(\hat\mu_i=\hat\mu+\hat\tau_i\)</span></li>
-<li>SE of Mean: <span class="math inline">\(SE(\hat\mu_i)=\sqrt{\frac{\hat\sigma_{blk}^2+\hat\sigma_\epsilon^2}{r}}\)</span></li>
-<li>SE of Diff in Means: <span class="math inline">\(SE(\hat\mu_i-\hat\mu_{i'})=\sqrt{\frac{2}{r}\sigma_\epsilon^2}\)</span></li>
+<li>SE of Mean: <span class="math inline">\(SE(\hat\mu_i)=\sqrt{\frac{\hat\sigma_{blk}^2+\hat\sigma_\epsilon^2}{M}}\)</span></li>
+<li>SE of Diff in Means: <span class="math inline">\(SE(\hat\mu_i-\hat\mu_{i'})=\sqrt{\frac{2}{M}\sigma_\epsilon^2}\)</span></li>
 </ul>
 </div>
 </section>
