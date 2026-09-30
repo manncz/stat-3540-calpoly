@@ -70,7 +70,7 @@ Where:
 -   $\beta_j$ is the effect of the $j^{th}$ level of acupuncture
 -   $\alpha\beta_{ij}$ is the interaction effect between the $i^{th}$level of drug and the $j^{th}$ level of acupuncture
 -   $\rho_m$ is the effect of the $m^{th}$ block
--   $\epsilon_{ijk}$ is the experimental error associated with the subject from the $m^{th}$ block receiving the $i^{th}$ level of drug and the $j^{th}$ level of acupuncture
+-   $\epsilon_{ijm}$ is the experimental error associated with the subject from the $m^{th}$ block receiving the $i^{th}$ level of drug and the $j^{th}$ level of acupuncture
 :::
 
 ## ANOVA Table

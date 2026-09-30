@@ -7,8 +7,8 @@ execute:
   warning: false
 
 format:
-  html: default
   docx: default
+  html: default
   pdf: default
 ---
 ```{r}
@@ -136,6 +136,10 @@ Make sure to define **all** terms, denote $i,j,m$ values, and include assumption
 **7.** Fill in the appropriate *R formula* to fit the model assuming that you are using the data (called  `cheese_dat`) from Q5:
 
 ```
+# set sum to zero constraint
+options(contrasts = c("contr.sum", "contr.poly"))
+
+# fit model
 cheese_mod <- lm(______________________________________________________________,
                  data = cheese_dat)
 ```
@@ -185,11 +189,20 @@ anova(cheese_mod)
 
 \vspace{.5in}
 
-**9.** Based on the output provided, what is the **estimated** mean moisture content for a cheese made from the following. Show all work!
+**9.** Based on the output provided, what is the **estimated** mean moisture content for a cheese made from all of the following. Show all work!
 
-  - local organic milk
-  - 1 tsp citric acid and
-  - 2 tsp cheese salt
+  - 1 tsp citric acid (i = ____)
+  - 2 tsp cheese salt (j = ____) **and**
+  - local organic milk (m = ____)
+
+:::callout-tip
+## Hints
+
+Think about what I am asking you for! It is one $\hat{y}_{ijm}$. To show all work, 
+(1) write out the *formula* for the appropriate $\hat{y}_{ijm}$ with all of the parameter estimates, using notation. Then (2) plug in the estimated coefficients from the output.
+
+Remember that we fit models using the **sum-to-zero constraint**!
+:::
 
 \vspace{1in}
 
@@ -231,6 +244,6 @@ emmeans(cheese_mod, specs = ~ citric_acid | salt) |>
 **13.** To what population can we generalize results from this study?
 
 \vspace{1in}
-**14.** Suppose the researchers were also interested in whether the effect of the treatments (citric acid $\times$ salt) on the moisture depends on milk type. Why would this be difficult or impossible to assess using the current design?
+**14.** Suppose the researchers were also interested in whether the effect of citric acid on the moisture depends on milk type. Why would this be difficult or impossible to assess using the current design?
 
 \vspace{0.8in}
