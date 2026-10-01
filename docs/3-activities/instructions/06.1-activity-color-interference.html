@@ -403,7 +403,7 @@ window.Quarto = {
   <li><a href="#define-the-statistical-effects-model-in-context." id="toc-define-the-statistical-effects-model-in-context." class="nav-link" data-scroll-target="#define-the-statistical-effects-model-in-context.">6. Define the statistical effects model in context.</a></li>
   <li><a href="#based-on-your-treatment-and-design-structure-above-write-out-the-skeleton-anova." id="toc-based-on-your-treatment-and-design-structure-above-write-out-the-skeleton-anova." class="nav-link" data-scroll-target="#based-on-your-treatment-and-design-structure-above-write-out-the-skeleton-anova.">7. Based on your treatment and design structure above, write out the skeleton ANOVA.</a></li>
   <li><a href="#now-fit-the-appropriate-linear-mixed-model-lmm-in-r." id="toc-now-fit-the-appropriate-linear-mixed-model-lmm-in-r." class="nav-link" data-scroll-target="#now-fit-the-appropriate-linear-mixed-model-lmm-in-r.">8. Now, fit the appropriate Linear Mixed Model (LMM) in R.</a></li>
-  <li><a href="#compare-your-results-between-3-and-9.-what-do-you-notice" id="toc-compare-your-results-between-3-and-9.-what-do-you-notice" class="nav-link" data-scroll-target="#compare-your-results-between-3-and-9.-what-do-you-notice">9. Compare your results between (3) and (9). What do you notice?</a></li>
+  <li><a href="#compare-your-results-between-3-and-8.-what-do-you-notice" id="toc-compare-your-results-between-3-and-8.-what-do-you-notice" class="nav-link" data-scroll-target="#compare-your-results-between-3-and-8.-what-do-you-notice">9. Compare your results between (3) and (8). What do you notice?</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="06.1-activity-color-interference.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
@@ -630,10 +630,14 @@ Tip
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># LLM code (make sure you are using the long data!)</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># fit model</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># sum to zero constraint</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.sum"</span>, <span class="st">"contr.poly"</span>))</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># look at model results</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># fit model</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># look at model results</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Report the following:</p>
 <ul>
@@ -643,8 +647,8 @@ Tip
 <li><p>Estimated standard error in the difference in mean time between black and colored text (i.e., ordered difference report/pairs): _____________</p></li>
 </ul>
 </section>
-<section id="compare-your-results-between-3-and-9.-what-do-you-notice" class="level3">
-<h3 class="anchored" data-anchor-id="compare-your-results-between-3-and-9.-what-do-you-notice">9. Compare your results between (3) and (9). What do you notice?</h3>
+<section id="compare-your-results-between-3-and-8.-what-do-you-notice" class="level3">
+<h3 class="anchored" data-anchor-id="compare-your-results-between-3-and-8.-what-do-you-notice">9. Compare your results between (3) and (8). What do you notice?</h3>
 
 
 </section>

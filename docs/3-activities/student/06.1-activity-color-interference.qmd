@@ -15,13 +15,6 @@ The abstract of the article *Studies of interference in serial verbal reactions*
 
 > In this study pairs of conflicting stimuli, both being inherent aspects of the same symbols, were presented simultaneously (a name of one color printed in the ink of another color—a word stimulus and a color stimulus). The difference in time for reading the words printed in colors and the same words printed in black is the measure of interference of color stimuli upon reading words. The interference of conflicting color stimuli upon the time for reading 100 words (each word naming a color unlike the ink-color of its print) caused an increase of 2.3 seconds or 5.6% over the normal time for reading the same words printed in black.
 
-```{r}
-#| fig-align: center
-#| out-width: 60%
-#| echo: false
-knitr::include_graphics("https://github.com/earobinson95/stat323-calpoly/blob/main/flipped-style/06-random-and-mixed/images/black-diffcol-texts.png?raw=true")
-```
-
 The article reports on the results of a study in which seventy college undergraduates were given forms with 100 names of colors written in black ink, and the same 100 names of colors written in another color (i.e., the word purple written in green ink). The total time (in seconds) for
 reading the 100 words printed in black, and the total time (in seconds) for reading the 100 words printed in different colors were recorded for each subject. The order in which the forms (black or color) were given was randomized to the subjects.
 
@@ -33,6 +26,8 @@ reading the 100 words printed in black, and the total time (in seconds) for read
 # load needed packages -- you may need to add
 
 library(tidyverse)
+library(lme4)
+library(lmerTest)
 ```
 
 ### 1. Read in the data
@@ -161,6 +156,10 @@ where:
 
 ```{r}
 # LLM code (make sure you are using the long data!)
+
+# sum to zero constraint
+options(contrasts = c("contr.sum", "contr.poly"))
+
 
 # fit model
 

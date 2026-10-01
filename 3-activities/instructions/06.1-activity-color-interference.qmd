@@ -6,9 +6,10 @@ execute:
   message: false
   warning: false
 
+eval: false
 format:
-  docx: default
   html: default
+  docx: default
 ---
 \vspace{-.8in}
 
@@ -168,6 +169,10 @@ where:
 
 ```{r}
 # LLM code (make sure you are using the long data!)
+
+# sum to zero constraint
+options(contrasts = c("contr.sum", "contr.poly"))
+
 
 # fit model
 
