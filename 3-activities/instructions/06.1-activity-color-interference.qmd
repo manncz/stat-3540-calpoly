@@ -178,7 +178,11 @@ options(contrasts = c("contr.sum", "contr.poly"))
 # fit model
 
 
-# look at model results
+
+```
+
+```{r}
+# look at model results to fill in the questions below -- this requires multiple different!
 
 
 

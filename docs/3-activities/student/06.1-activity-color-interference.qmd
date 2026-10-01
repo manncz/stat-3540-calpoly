@@ -28,6 +28,9 @@ reading the 100 words printed in black, and the total time (in seconds) for read
 library(tidyverse)
 library(lme4)
 library(lmerTest)
+library(emmeans)
+library(multcomp)
+library(multcompView)
 ```
 
 ### 1. Read in the data
@@ -164,7 +167,11 @@ options(contrasts = c("contr.sum", "contr.poly"))
 # fit model
 
 
-# look at model results
+
+```
+
+```{r}
+# look at model results to fill in the questions below -- this requires multiple different!
 
 
 
