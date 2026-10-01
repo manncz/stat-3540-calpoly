@@ -35,6 +35,7 @@ The abstract of the article *Studies of interference in serial verbal reactions*
 #| fig-align: center
 #| out-width: 60%
 #| echo: false
+#| eval: true
 knitr::include_graphics("https://github.com/earobinson95/stat323-calpoly/blob/main/flipped-style/06-random-and-mixed/images/black-diffcol-texts.png?raw=true")
 ```
 
