@@ -101,4 +101,4 @@ cheese_mod <- lm(______________________________________________________________,
 
 **13.** To what population can we generalize results from this study?
 
-**14.** Suppose the researchers were also interested in whether the effect of citric acid on the moisture depends on milk type. Why would this be difficult or impossible to assess using the current design?
+**14.** Suppose the researchers were also interested in whether the join effect of citric acid and salt on the moisture depends on milk type (i.e. the three-way interaction). Why would this be difficult or impossible to assess using the current design?

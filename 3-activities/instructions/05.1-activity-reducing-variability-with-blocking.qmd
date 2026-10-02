@@ -170,8 +170,10 @@ Recall, the purpose of the block design is to “remove” the variation explain
 
 -   What do you notice about the block-adjusted mean sales compared to the original mean sales?
 \vspace{0.3in}
+
 -   Would the SSTrt change when using the block-adjusted mean sales? Recall $SSTrt= M\sum_i(\bar y_{i\cdot}-\bar y_{\cdot\cdot})^2$.
 \vspace{0.3in}
+
 ## 13. What do you notice about the variability of the block-adjusted sales within each advertising strategy compared to the original variability of sales (without block-adjusted sales)?
 
 ```{r}
@@ -182,6 +184,7 @@ Recall, the purpose of the block design is to “remove” the variation explain
 knitr::include_graphics("https://github.com/earobinson95/stat323-calpoly/blob/main/flipped-style/05-rcbd/images/block-adjusted-figure-city-size.png?raw=true")
 ```
 \vspace{0.7in}
+
 ## Part E: RCBD Analysis
 
 Consider the statistical effects model that accounts for the block effect.
