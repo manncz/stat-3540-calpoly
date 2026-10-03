@@ -1,0 +1,258 @@
+---
+title: "Module 6: Random Effects & Mixed Models"
+subtitle: "Subsampling in Mixed Models"
+format: 
+  revealjs:
+    # theme: simple # other modern-ish options: dark, simple, solarized
+    theme: simple
+    slide-number: c/t 
+    # chalkboard: true # lets you draw on top of slides (keyboard: c) or open a board (b)
+    width: 1200
+    height: 675
+    css: modern-slides.css
+    auto-stretch: false
+    html-math-method: mathjax
+execute: 
+  warning: false
+  message: false
+  echo: false
+---
+
+```{r}
+library(tidyverse)
+```
+
+## Subsampling
+
+Occurs when multiple observations are taken within each experimental unit.
+
+-   Introduces additional variability that must be accounted for.
+-   Solutions:
+    -   Average over the subsamples for one observation per experimental unit.
+    -   Use Mixed models to capture the variability both at the experimental and subsample/measurement unit levels.
+
+## Example 6.4: Turkeys in Pens
+
+```{=html}
+<style>
+.reveal .slides .small table { font-size: 0.78em; line-height:1.05; }
+.reveal .slides .small table th, .reveal .slides .small table td { padding:6px 8px; }
+</style>
+```
+
+:::::: columns
+:::: column
+::: {style="font-size:0.75em"}
+> Researchers study the effect of protein % in diet on turkey growth.
+>
+> 48 turkeys total.
+>
+> 4 diets: 15%, 20%, 25%, 30% applied to each pen.
+>
+> 4 pens per diet
+>
+> 3 turkeys per pen
+>
+> Response: Average Daily Gain (ADG)
+:::
+::::
+
+::: column
+```{r}
+#| fig-align: center
+#| out-width: 100%
+knitr::include_graphics("images/064-turkey-blueprint.png")
+```
+:::
+::::::
+
+## Study Structure
+
+::::: columns
+::: column
+**Treatment Structure**
+
+A one-way treatment design with 4 levels of protein diet (15%, 20%, 25%, 30%) for t = 4.
+
+**Design Structure**
+
+Protein diet was randomly assigned to pens (e.u.) in a CRD with r = 4. However, ADG is measured on each turkey (m.u.) with $n_t$ = 3 turkeys per pen.
+
+:::callout-warning
+# notation
+
+Since we used $n$ to indicate the number of e.u. in this class, we will use $n_t$ as the number of m.u.s per experimental unit! So $N = n\times n_t$
+:::
+
+
+
+:::
+
+::: column
+```{r}
+#| echo: true
+turkey_data <- read_csv("_data/06-turkey_animal_data.csv") |> 
+  mutate(across(Diet:Turkey, as.factor))
+head(turkey_data)
+```
+:::
+:::::
+
+## The problem -- inflate Type I error! {.small}
+
+:::::: callout-caution
+### Incorrect Analysis - turkey level
+
+::::: columns
+::: column
+```{r}
+#| echo: true
+turkey_mod0 <- lm(ADG ~ Diet, data = turkey_data)
+anova(turkey_mod0)
+```
+
+```{r}
+subsample_fig <- turkey_data |> 
+  ggplot(aes(x = Diet, 
+             y = ADG,
+             color = Pen,
+             shape = Pen
+             )
+         ) +
+  geom_jitter(width = 0.1, 
+              height = 0,
+              size = 2.5) +
+  theme_bw() +
+  theme(aspect.ratio = 1,
+        legend.position = "none") +
+  scale_color_brewer(palette = "Dark2")
+
+subsample_fig
+```
+:::
+
+::: column
+| SV           | DF: 48 turkeys - 1 = 47 |
+|--------------|-------------------------|
+| Diet         | (4 - 1) = 3             |
+| Turkey(Diet) | (12-1)(4) = 44          |
+:::
+:::::
+::::::
+
+## Solution 1: Average over the turkeys {.small}
+
+$$y_{ij} = \mu + \tau_i + \epsilon_{ij} \text{ with } \epsilon_{ij} \text{ iid} \sim N(0, \sigma^2)$$
+
+::::: columns
+::: column
+```{r}
+#| echo: true
+pen_data <- turkey_data |> 
+  group_by(Diet, Pen) |> 
+  summarize(mean_ADG = mean(ADG))
+pen_data
+```
+:::
+
+::: column
+```{r}
+pen_data |> 
+  ggplot(aes(x = Diet, 
+             y = mean_ADG,
+             )
+         ) +
+  geom_jitter(width = 0, 
+              height = 0,
+              size = 2.5) +
+  theme_bw() +
+  theme(aspect.ratio = 1,
+        legend.position = "none")
+```
+:::
+:::::
+
+## Solution 1: Average over the turkeys {.small}
+
+::::: columns
+::: column
+```{r}
+#| echo: true
+pen_mod <- lm(mean_ADG ~ Diet, data = pen_data)
+anova(pen_mod)
+```
+:::
+
+::: column
+| SV        | DF: 16 pens - 1 = 15 |
+|-----------|----------------------|
+| Diet      | (4-1) = 3            |
+| Pen(Diet) | (4-1)(4) = 12        |
+:::
+:::::
+
+## Solution 2: Linear Mixed Model
+
+::: {style="font-size:0.75em"}
+$$y_{ijk}=\mu + \tau_i+\epsilon_{ij}+s_{ijk} \text{ with } \epsilon_{ij} \overset{iid}{\sim} N(0,\sigma_\epsilon^2) \text{ and } s_{ijk} \overset{iid}{\sim} N(0,\sigma_s^2)$$ for $i=1,2,3,4; j=1,2,3,4; k=1,2,3$
+
+where:
+
+-   $y_{ijk}$ is the ADG for the $k^{th}$ turkey in the $j^{th}$ pen receiving the $i^{th}$ diet
+-   $\mu$ is the overall mean ADG
+-   $\tau_i$ is the fixed effect of the $i^{th}$ diet
+-   $\epsilon_ij$ is the random error term associated with the $j^{th}$ pen within the $i^{th}$ diet
+-   $s_{ijk}$ is the random error term associated with the $k^{th}$ turkey within the $j^{th}$ pen within the $i^{th}$ diet
+:::
+
+## Solution 2: Linear Mixed Model {.small}
+
+| SV | DF: $N - 1$ where $N = n_t rt$ |
+|------------------------------------|------------------------------------|
+| Treatment | t - 1 |
+| e.u.(Treatment) $\rightarrow$ experimental error $\sigma_{\epsilon}^2$ | (r - 1)t |
+| m.u.(e.u x Treatment) $\rightarrow$ subsampling variability $\sigma_s^2$ | ($n_t$ - 1)rt |
+
+## Solution 2: Linear Mixed Model
+
+::::: columns
+::: column
+```{r}
+#| fig-width: 5
+#| fig-height: 5
+subsample_fig
+```
+:::
+
+::: column
+| SV  | DF: 48 turkeys - 1 = 47 |
+|-----|-------------------------|
+|     |                         |
+:::
+:::::
+
+## R: Fitting the LMM
+
+:::: columns
+::: column
+```{r}
+#| echo: true
+library(lme4)
+library(lmerTest)
+turkey_mod <- lmer(ADG ~ Diet + (1 | Diet:Pen), 
+                   data = turkey_data)
+summary(turkey_mod)
+```
+:::
+::: column
+```{r}
+#| echo: true
+library(emmeans)
+library(multcomp)
+anova(turkey_mod)
+turkey_emmeans <- emmeans(turkey_mod, ~ Diet, infer = c(T, T))
+turkey_emmeans |> 
+  cld(Letters = LETTERS, decreasing = T, adjust = 'tukey')
+```
+:::
+::::

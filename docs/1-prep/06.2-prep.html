@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Activity 5.1: Reducing Variability with Blocking – Statistical Methods for Study Design and Analysis</title>
+<title>6.2 Preparation: Linear Mixed Models for Subsampling – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,27 +26,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../0-course-info/canvas/stat-3540-logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e47b5f09565cef1e8b2fc4d77510aa64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-5baf755da9d91fdc6d970f362079751c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-e47b5f09565cef1e8b2fc4d77510aa64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../0-course-info/canvas/stat-3540-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e47b5f09565cef1e8b2fc4d77510aa64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5baf755da9d91fdc6d970f362079751c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e47b5f09565cef1e8b2fc4d77510aa64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -295,7 +295,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">Statistical Methods for Study Design and Analysis</a> 
+      <a href="../">Statistical Methods for Study Design and Analysis</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/manncz/stat-3540-calpoly" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://canvas.calpoly.edu" title="Cal Poly Canvas" class="quarto-navigation-tool px-1" aria-label="Cal Poly Canvas"><i class="bi bi-person-fill"></i></a>
@@ -321,19 +321,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../0-course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
+  <a href="../0-course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -349,39 +349,9 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#part-a-setup" id="toc-part-a-setup" class="nav-link active" data-scroll-target="#part-a-setup">Part A: Setup</a>
-  <ul class="collapse">
-  <li><a href="#how-would-you-create-blocks-for-this-experiment" id="toc-how-would-you-create-blocks-for-this-experiment" class="nav-link" data-scroll-target="#how-would-you-create-blocks-for-this-experiment">1. How would you create blocks for this experiment?</a></li>
-  <li><a href="#sketch-a-design-blueprint" id="toc-sketch-a-design-blueprint" class="nav-link" data-scroll-target="#sketch-a-design-blueprint">2. Sketch a design blueprint</a></li>
-  <li><a href="#describe-the-treatment-structure" id="toc-describe-the-treatment-structure" class="nav-link" data-scroll-target="#describe-the-treatment-structure">3. Describe the treatment structure</a></li>
-  <li><a href="#describe-the-experimental-structure" id="toc-describe-the-experimental-structure" class="nav-link" data-scroll-target="#describe-the-experimental-structure">4. Describe the experimental structure</a></li>
-  </ul></li>
-  <li><a href="#part-b-incorrect-analysis" id="toc-part-b-incorrect-analysis" class="nav-link" data-scroll-target="#part-b-incorrect-analysis">Part B: Incorrect Analysis</a></li>
-  <li><a href="#part-c-treatment-and-block-means" id="toc-part-c-treatment-and-block-means" class="nav-link" data-scroll-target="#part-c-treatment-and-block-means">Part C: Treatment and Block Means</a>
-  <ul class="collapse">
-  <li><a href="#original-sales" id="toc-original-sales" class="nav-link" data-scroll-target="#original-sales">Original Sales</a></li>
-  <li><a href="#compute-the-treatment-mean-sales-bar-y_icdot-for-each-advertising-strategy.-record-in-the-table-above." id="toc-compute-the-treatment-mean-sales-bar-y_icdot-for-each-advertising-strategy.-record-in-the-table-above." class="nav-link" data-scroll-target="#compute-the-treatment-mean-sales-bar-y_icdot-for-each-advertising-strategy.-record-in-the-table-above.">6. Compute the treatment mean sales <span class="math inline">\(\bar y_{i\cdot}\)</span> for each advertising strategy. Record in the table above.</a></li>
-  <li><a href="#compute-the-block-mean-sales-bar-y_cdot-m-for-each-city-size-block.-record-in-the-table-above." id="toc-compute-the-block-mean-sales-bar-y_cdot-m-for-each-city-size-block.-record-in-the-table-above." class="nav-link" data-scroll-target="#compute-the-block-mean-sales-bar-y_cdot-m-for-each-city-size-block.-record-in-the-table-above.">7. Compute the block mean sales <span class="math inline">\(\bar y_{\cdot m}\)</span> for each city size block. Record in the table above.</a></li>
-  <li><a href="#compute-the-overall-mean-sales-volume-bar-y_cdotcdot-.-record-in-the-table-above." id="toc-compute-the-overall-mean-sales-volume-bar-y_cdotcdot-.-record-in-the-table-above." class="nav-link" data-scroll-target="#compute-the-overall-mean-sales-volume-bar-y_cdotcdot-.-record-in-the-table-above.">8. Compute the overall mean sales volume <span class="math inline">\(\bar y_{\cdot\cdot}\)</span> . Record in the table above.</a></li>
-  </ul></li>
-  <li><a href="#part-c-block-effects" id="toc-part-c-block-effects" class="nav-link" data-scroll-target="#part-c-block-effects">Part C: Block Effects</a>
-  <ul class="collapse">
-  <li><a href="#compute-the-block-effect-for-each-block.-record-in-the-table-above." id="toc-compute-the-block-effect-for-each-block.-record-in-the-table-above." class="nav-link" data-scroll-target="#compute-the-block-effect-for-each-block.-record-in-the-table-above.">9. Compute the block effect for each block. Record in the table above.</a></li>
-  <li><a href="#use-the-block-effects-to-compute-ssblk" id="toc-use-the-block-effects-to-compute-ssblk" class="nav-link" data-scroll-target="#use-the-block-effects-to-compute-ssblk">10. Use the block effects to compute SSBlk</a></li>
-  <li><a href="#part-d-block-adjusted-sales" id="toc-part-d-block-adjusted-sales" class="nav-link" data-scroll-target="#part-d-block-adjusted-sales">Part D: Block Adjusted Sales</a></li>
-  <li><a href="#using-the-block-effects-from-the-table-above-adjust-each-observed-sales-volume-value-by-the-associated-block-effect-y_im-rho_m.-record-in-the-table-below." id="toc-using-the-block-effects-from-the-table-above-adjust-each-observed-sales-volume-value-by-the-associated-block-effect-y_im-rho_m.-record-in-the-table-below." class="nav-link" data-scroll-target="#using-the-block-effects-from-the-table-above-adjust-each-observed-sales-volume-value-by-the-associated-block-effect-y_im-rho_m.-record-in-the-table-below.">11. Using the block effects from the table above, adjust each observed sales volume value by the associated block effect <span class="math inline">\((y_{im}-\rho_m)\)</span>. Record in the table below.</a>
-  <ul class="collapse">
-  <li><a href="#block-adjusted-sales" id="toc-block-adjusted-sales" class="nav-link" data-scroll-target="#block-adjusted-sales">Block-adjusted Sales</a></li>
-  </ul></li>
-  <li><a href="#calculate-the-block-adjusted-mean-sales.-record-in-the-table-above." id="toc-calculate-the-block-adjusted-mean-sales.-record-in-the-table-above." class="nav-link" data-scroll-target="#calculate-the-block-adjusted-mean-sales.-record-in-the-table-above.">12. Calculate the block adjusted mean sales. Record in the table above.</a></li>
-  <li><a href="#what-do-you-notice-about-the-variability-of-the-block-adjusted-sales-within-each-advertising-strategy-compared-to-the-original-variability-of-sales-without-block-adjusted-sales" id="toc-what-do-you-notice-about-the-variability-of-the-block-adjusted-sales-within-each-advertising-strategy-compared-to-the-original-variability-of-sales-without-block-adjusted-sales" class="nav-link" data-scroll-target="#what-do-you-notice-about-the-variability-of-the-block-adjusted-sales-within-each-advertising-strategy-compared-to-the-original-variability-of-sales-without-block-adjusted-sales">13. What do you notice about the variability of the block-adjusted sales within each advertising strategy compared to the original variability of sales (without block-adjusted sales)?</a></li>
-  <li><a href="#part-e-rcbd-analysis" id="toc-part-e-rcbd-analysis" class="nav-link" data-scroll-target="#part-e-rcbd-analysis">Part E: RCBD Analysis</a></li>
-  <li><a href="#complete-the-skeleton-anova-below" id="toc-complete-the-skeleton-anova-below" class="nav-link" data-scroll-target="#complete-the-skeleton-anova-below">14. Complete the skeleton ANOVA below</a></li>
-  <li><a href="#use-r-to-fit-the-statistical-effects-model-specified-above.-record-the-following" id="toc-use-r-to-fit-the-statistical-effects-model-specified-above.-record-the-following" class="nav-link" data-scroll-target="#use-r-to-fit-the-statistical-effects-model-specified-above.-record-the-following">15. Use R to fit the statistical effects model specified above. Record the following:</a></li>
-  <li><a href="#how-does-your-experimental-error-in-15-using-the-statistical-effects-model-to-account-for-the-block-effect-compare-to-the-experimental-error-calculated-in-5-ignoring-the-effect-of-block" id="toc-how-does-your-experimental-error-in-15-using-the-statistical-effects-model-to-account-for-the-block-effect-compare-to-the-experimental-error-calculated-in-5-ignoring-the-effect-of-block" class="nav-link" data-scroll-target="#how-does-your-experimental-error-in-15-using-the-statistical-effects-model-to-account-for-the-block-effect-compare-to-the-experimental-error-calculated-in-5-ignoring-the-effect-of-block">16. How does your experimental error in (15) using the statistical effects model to account for the block effect compare to the experimental error calculated in (5) ignoring the effect of block?</a></li>
-  </ul></li>
+  <li><a href="#subsampling-in-mixed-models" id="toc-subsampling-in-mixed-models" class="nav-link active" data-scroll-target="#subsampling-in-mixed-models"><span class="header-section-number">1</span> Subsampling in Mixed Models</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="05.1-activity-reducing-variability-with-blocking.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="05.1-activity-reducing-variability-with-blocking.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -389,8 +359,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Activity 5.1: Reducing Variability with Blocking</h1>
-<p class="subtitle lead">Advertising Strategies</p>
+<h1 class="title">6.2 Preparation: Linear Mixed Models for Subsampling</h1>
 </div>
 
 
@@ -407,374 +376,61 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
+<section id="watch-videos-15-min" class="level4">
+<h4 class="anchored" data-anchor-id="watch-videos-15-min">📽 Watch Videos: 15 min</h4>
+<hr>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+<span class="screen-reader-only">None</span>Learning Objectives
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p>Submit via Gradescope, don’t forget to assign pages to the questions in the outline!</p></li>
-<li><p>Delete any extraneous instructions (<strong>like this box</strong>) before submission. <em>You will be deducted points from now on if you do not follow this instruction!</em></p></li>
-<li><p>Delete anything like <code>\vspace{}</code></p></li>
-<li><p>Remember that it’s okay if you cannot get the .qmd to render to submit this!! I will help you but you can also use any of the other formats.</p></li>
-<li><p>You should follow the qmd template for coding: <a href="../student/05.1-activity-reducing-variability-with-blocking.qmd">05.1-activity-reducing-variability-with-blocking.qmd</a></p></li>
-<li><p>You can download the data on Canvas or here: <a href="../_data/05-advertising_sales_data.csv">05-advertising_sales_data.csv)</a></p></li>
+<li>Apply mixed models to account for subsampling.</li>
+<li>Use software to fit mixed models and interpret variance components, BLUPs, and hypothesis tests.</li>
 </ul>
 </div>
 </div>
-<p>A marketing team for a regional grocery chain wants to compare the impact of four advertising strategies on sales.</p>
-<p>The four strategies are:</p>
+<p><strong>Notes:</strong></p>
 <ul>
-<li>(Discount) Discount-Driven Ads – highlight weekly price specials.</li>
-<li>(Storytelling) Brand Storytelling – focus on local farms and family ownership.</li>
-<li>(Digital) Digital-Only – social media and email ads only.</li>
-<li>(Events) Community Events – in-person promotions like pop-up tastings.</li>
-</ul>
-<p>There are 16 cities interested in participating in the study. Each city will use one advertising strategy for a 6-week campaign, and overall sales volume during that period will be recorded. However, cities differ greatly in their population size and baseline sales. Larger cities naturally have higher sales, regardless of the advertising strategy.</p>
-<section id="part-a-setup" class="level1">
-<h1>Part A: Setup</h1>
-<section id="how-would-you-create-blocks-for-this-experiment" class="level2">
-<h2 class="anchored" data-anchor-id="how-would-you-create-blocks-for-this-experiment">1. How would you create blocks for this experiment?</h2>
-
-</section>
-<section id="sketch-a-design-blueprint" class="level2">
-<h2 class="anchored" data-anchor-id="sketch-a-design-blueprint">2. Sketch a design blueprint</h2>
-<p>Clearly draw the blocks, show the experimental units, and how treatments are randomly assigned.</p>
-</section>
-<section id="describe-the-treatment-structure" class="level2">
-<h2 class="anchored" data-anchor-id="describe-the-treatment-structure">3. Describe the treatment structure</h2>
-
-</section>
-<section id="describe-the-experimental-structure" class="level2">
-<h2 class="anchored" data-anchor-id="describe-the-experimental-structure">4. Describe the experimental structure</h2>
-
-</section>
-</section>
-<section id="part-b-incorrect-analysis" class="level1">
-<h1>Part B: Incorrect Analysis</h1>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>STOP!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Before you proceed to read in the data, make sure that you have <strong>moved the .qmd template AND the data to your STAT 3540 folder</strong> (and whatever sub-folder you choose). You will need to add the relative file path to the code below to the data!</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>INCORRECT ANALYSIS!
-</div>
-</div>
-<section id="run-a-one-way-anova-crd-analysis-ignoring-block-and-record-the-numeric-values-below" class="level2 callout-body-container callout-body">
-<h2 class="anchored" data-anchor-id="run-a-one-way-anova-crd-analysis-ignoring-block-and-record-the-numeric-values-below">5. Run a one-way ANOVA CRD analysis (ignoring block) and record the numeric values below</h2>
-<p><span class="math display">\[y_{im} = \mu + \tau_{i} +\epsilon_{im} \text{ with } \epsilon_{im} \overset{\text{iid}}{\sim} N(0,\sigma^2)\]</span></p>
-<p>for <span class="math inline">\(i=1,2,3,4\)</span> and <span class="math inline">\(m = 1,2,3,4\)</span></p>
-<div class="{,}">
+<li>If you want more or a different modality, read Oehlert 11.1 - 11.3.</li>
+<li>Skip JMP discussions</li>
+<li><strong>Take notes</strong> while you watch and summarize the main points for yourself!
 <ul>
-<li>SST = ________________</li>
-<li>SSTrt = ______________</li>
-<li>SSE = ________________ <span class="math inline">\(\rightarrow\)</span> MSE = <span class="math inline">\(\hat\sigma^2\)</span> = _________</li>
-</ul>
-</div>
-</section>
-</div>
-</section>
-<section id="part-c-treatment-and-block-means" class="level1">
-<h1>Part C: Treatment and Block Means</h1>
-<p>The observed sales volumes (in thousands of dollars) are shown below.</p>
-<section id="original-sales" class="level3">
-<h3 class="anchored" data-anchor-id="original-sales">Original Sales</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 38%">
-<col style="width: 12%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 11%">
-<col style="width: 21%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Advertising Strategy</th>
-<th>Block m = 1 (Smallest)</th>
-<th>Block m = 2</th>
-<th>Block m = 3</th>
-<th>Block m = 4 (Largest)</th>
-<th>Treatment Mean Sales <span class="math inline">\(\bar{y}_{i\cdot}\)</span> |</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Digital</td>
-<td>136</td>
-<td>153</td>
-<td>203</td>
-<td>200</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Discount</td>
-<td>147</td>
-<td>146</td>
-<td>217</td>
-<td>225</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Events</td>
-<td>162</td>
-<td>189</td>
-<td>231</td>
-<td>228</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Storytelling</td>
-<td>184</td>
-<td>208</td>
-<td>251</td>
-<td>257</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><strong>Block Mean Sales (</strong><span class="math inline">\(\bar{y}_{\cdot m}\)</span>)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td><span class="math inline">\(\bar{y}_{\cdot\cdot} =\)</span></td>
-</tr>
-<tr class="even">
-<td><strong>Block Effects</strong> (<span class="math inline">\(\hat \rho_m = \bar{y}_{\cdot m} - \bar{y}_{\cdot\cdot}\)</span>)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Computations in R
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can either do this computations with the data itself OR just using the numbers provided in the table above. You can use R as a calculator or any calculator your prefer… I would recommend using R as a calculator so that you can track exactly what you did and catch mistakes!</p>
-<p>I included one for you below. Putting the parethesis around the whole line prints the output as well as saving the object <code>ybar1.</code> for use in a later calculation!</p>
-<p><strong>Delete the R chunks if you don’t use them</strong></p>
-</div>
-</div>
-</section>
-<section id="compute-the-treatment-mean-sales-bar-y_icdot-for-each-advertising-strategy.-record-in-the-table-above." class="level2">
-<h2 class="anchored" data-anchor-id="compute-the-treatment-mean-sales-bar-y_icdot-for-each-advertising-strategy.-record-in-the-table-above.">6. Compute the treatment mean sales <span class="math inline">\(\bar y_{i\cdot}\)</span> for each advertising strategy. Record in the table above.</h2>
-</section>
-<section id="compute-the-block-mean-sales-bar-y_cdot-m-for-each-city-size-block.-record-in-the-table-above." class="level2">
-<h2 class="anchored" data-anchor-id="compute-the-block-mean-sales-bar-y_cdot-m-for-each-city-size-block.-record-in-the-table-above.">7. Compute the block mean sales <span class="math inline">\(\bar y_{\cdot m}\)</span> for each city size block. Record in the table above.</h2>
-</section>
-<section id="compute-the-overall-mean-sales-volume-bar-y_cdotcdot-.-record-in-the-table-above." class="level2">
-<h2 class="anchored" data-anchor-id="compute-the-overall-mean-sales-volume-bar-y_cdotcdot-.-record-in-the-table-above.">8. Compute the overall mean sales volume <span class="math inline">\(\bar y_{\cdot\cdot}\)</span> . Record in the table above.</h2>
-</section>
-</section>
-<section id="part-c-block-effects" class="level1">
-<h1>Part C: Block Effects</h1>
-<section id="compute-the-block-effect-for-each-block.-record-in-the-table-above." class="level2">
-<h2 class="anchored" data-anchor-id="compute-the-block-effect-for-each-block.-record-in-the-table-above.">9. Compute the block effect for each block. Record in the table above.</h2>
-<p><span class="math display">\[\hat \rho_m = \bar{y}_{\cdot m} - \bar{y}_{\cdot\cdot}\]</span></p>
-</section>
-<section id="use-the-block-effects-to-compute-ssblk" class="level2">
-<h2 class="anchored" data-anchor-id="use-the-block-effects-to-compute-ssblk">10. Use the block effects to compute SSBlk</h2>
-<p><em>Notice: the</em> <span class="math inline">\((\bar y_{\cdot m} - \bar y_{\cdot \cdot})\)</span> inside the parentheses is the <span class="math inline">\(\hat \rho_m\)</span> you computed in (9).</p>
-<p><span class="math display">\[SSBlk = t\sum_m(\bar y_{\cdot m} - \bar y_{\cdot \cdot})^2=\]</span></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Recall, the purpose of the block design is to “remove” the variation explained by the blocking variable from the SSE, thus reducing the experimental error variation (MSE).</p>
-</div>
-</div>
-</section>
-<section id="part-d-block-adjusted-sales" class="level2">
-<h2 class="anchored" data-anchor-id="part-d-block-adjusted-sales">Part D: Block Adjusted Sales</h2>
-</section>
-<section id="using-the-block-effects-from-the-table-above-adjust-each-observed-sales-volume-value-by-the-associated-block-effect-y_im-rho_m.-record-in-the-table-below." class="level2">
-<h2 class="anchored" data-anchor-id="using-the-block-effects-from-the-table-above-adjust-each-observed-sales-volume-value-by-the-associated-block-effect-y_im-rho_m.-record-in-the-table-below.">11. Using the block effects from the table above, adjust each observed sales volume value by the associated block effect <span class="math inline">\((y_{im}-\rho_m)\)</span>. Record in the table below.</h2>
-<p><em>Note, you are essentially “removing” the effect of city from the sales.</em></p>
-<div style="page-break-after: always;"></div>
-<section id="block-adjusted-sales" class="level3">
-<h3 class="anchored" data-anchor-id="block-adjusted-sales">Block-adjusted Sales</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 20%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 19%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Advertising Strategy</th>
-<th>Block m = 1 (Smallest)</th>
-<th>Block m = 2</th>
-<th>Block m = 3</th>
-<th>Block m = 4 (Largest)</th>
-<th>Block-adjusted<br>
-Treatment Mean<br>
-Sales</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Digital</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Discount</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Events</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Storytelling</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="calculate-the-block-adjusted-mean-sales.-record-in-the-table-above." class="level2">
-<h2 class="anchored" data-anchor-id="calculate-the-block-adjusted-mean-sales.-record-in-the-table-above.">12. Calculate the block adjusted mean sales. Record in the table above.</h2>
+<li>This includes breaking down R code to make sure you understand it!</li>
+</ul></li>
+<li>Data to follow along:
 <ul>
-<li><p>What do you notice about the block-adjusted mean sales compared to the original mean sales? </p></li>
-<li><p>Would the SSTrt change when using the block-adjusted mean sales? Recall <span class="math inline">\(SSTrt= M\sum_i(\bar y_{i\cdot}-\bar y_{\cdot\cdot})^2\)</span>. </p></li>
+<li><a href="../2-slides/_data/06-turkey_animal_data.csv">06-turkey_animal_data.csv</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="what-do-you-notice-about-the-variability-of-the-block-adjusted-sales-within-each-advertising-strategy-compared-to-the-original-variability-of-sales-without-block-adjusted-sales" class="level2">
-<h2 class="anchored" data-anchor-id="what-do-you-notice-about-the-variability-of-the-block-adjusted-sales-within-each-advertising-strategy-compared-to-the-original-variability-of-sales-without-block-adjusted-sales">13. What do you notice about the variability of the block-adjusted sales within each advertising strategy compared to the original variability of sales (without block-adjusted sales)?</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/earobinson95/stat323-calpoly/blob/main/flipped-style/05-rcbd/images/block-adjusted-figure-city-size.png?raw=true" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:65.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="part-e-rcbd-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="part-e-rcbd-analysis">Part E: RCBD Analysis</h2>
-<p>Consider the statistical effects model that accounts for the block effect.</p>
-<p><span class="math display">\[y_{im}=\mu+\tau_i+\rho_m+\epsilon_{im} \text{ with } \epsilon_{im} \overset{\text{iid}}{\sim} N(0,\sigma^2)\]</span></p>
-<p>for <span class="math inline">\(i=1,2,3,4\)</span> and <span class="math inline">\(m = 1,2,3,4\)</span></p>
-</section>
-<section id="complete-the-skeleton-anova-below" class="level2">
-<h2 class="anchored" data-anchor-id="complete-the-skeleton-anova-below">14. Complete the skeleton ANOVA below</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Source of Variation</th>
-<th>DF: Total = _________</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="use-r-to-fit-the-statistical-effects-model-specified-above.-record-the-following" class="level2">
-<h2 class="anchored" data-anchor-id="use-r-to-fit-the-statistical-effects-model-specified-above.-record-the-following">15. Use R to fit the statistical effects model specified above. Record the following:</h2>
+<section id="subsampling-in-mixed-models" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="subsampling-in-mixed-models"><span class="header-section-number">1</span> Subsampling in Mixed Models</h2>
 <ul>
-<li>SSE = __________</li>
-<li>MSE = <span class="math inline">\(\hat\sigma^2\)</span> = __________</li>
+<li>📽 Follow along with the <a href="../2-slides/06.2-subsampling-with-random-effects.html">slides</a>.
+<ul>
+<li>Sorry, but there is another notation change for us vs.&nbsp;Dr.&nbsp;Robinsons… we will use <span class="math inline">\(n_t\)</span> to denote the number of m.u.s per e.u..</li>
+</ul></li>
 </ul>
-</section>
-<section id="how-does-your-experimental-error-in-15-using-the-statistical-effects-model-to-account-for-the-block-effect-compare-to-the-experimental-error-calculated-in-5-ignoring-the-effect-of-block" class="level2">
-<h2 class="anchored" data-anchor-id="how-does-your-experimental-error-in-15-using-the-statistical-effects-model-to-account-for-the-block-effect-compare-to-the-experimental-error-calculated-in-5-ignoring-the-effect-of-block">16. How does your experimental error in (15) using the statistical effects model to account for the block effect compare to the experimental error calculated in (5) ignoring the effect of block?</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/CBD6Z2dz0jQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<!--:::callout-warning
+
+There is a mistake in the video for slide 11 (the very last slide), where the labels for $\hat{\sigma}^2_s$ and $\hat{\sigma}^2_{\epsilon}$ are swapped.
+
+ Diet:Pen (Intercept) 0.07824  0.2797  
+ Residual             0.01708  0.1307  
+
+From the above output $\hat{\sigma}^2_s = 0.078$ and $\hat{\sigma}^2_{\epsilon} = 0.131$
+
+:::
+-->
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
