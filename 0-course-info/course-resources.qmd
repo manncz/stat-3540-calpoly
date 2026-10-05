@@ -35,4 +35,8 @@ These are reference sheets Dr. C made for STAT 313 F25, which include relevant e
 
 - [Strings with stringr](https://rstudio.github.io/cheatsheets/html/strings.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..)
 
+## Other
+
+- [R formulas cheetsheet](https://www.econometrics.blog/post/the-r-formula-cheatsheet/)
+
 

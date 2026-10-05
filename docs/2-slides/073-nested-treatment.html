@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Course Resources – Statistical Methods for Study Design and Analysis</title>
+<title>Module 7: Expanding Treatment &amp; Design Structures – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,7 +67,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../index.html" rel="prev">
 <link href="../0-course-info/canvas/stat-3540-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -76,6 +110,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -250,7 +313,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../0-course-info/syllabus-f26.html">Course information</a></li><li class="breadcrumb-item"><a href="../0-course-info/course-resources.html">Resources</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Statistical Methods for Study Design and Analysis
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -282,13 +347,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Course information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../0-course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
@@ -303,7 +368,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link active">
+  <a href="../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -319,21 +384,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#stat-313-r-reference-sheets" id="toc-stat-313-r-reference-sheets" class="nav-link active" data-scroll-target="#stat-313-r-reference-sheets">STAT 313 R Reference Sheets</a></li>
-  <li><a href="#official-r-cheatsheets" id="toc-official-r-cheatsheets" class="nav-link" data-scroll-target="#official-r-cheatsheets">Official R Cheatsheets</a>
-  <ul class="collapse">
-  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other">Other</a></li>
-  </ul></li>
+  <li><a href="#crossed-vs-nested-treatment-structure" id="toc-crossed-vs-nested-treatment-structure" class="nav-link active" data-scroll-target="#crossed-vs-nested-treatment-structure">Crossed vs Nested Treatment Structure</a></li>
+  <li><a href="#example-7.4-cookies-in-air-fryers" id="toc-example-7.4-cookies-in-air-fryers" class="nav-link" data-scroll-target="#example-7.4-cookies-in-air-fryers">Example 7.4: Cookies in Air Fryers</a></li>
+  <li><a href="#statistical-effects-model-for-nested-treatment-structures" id="toc-statistical-effects-model-for-nested-treatment-structures" class="nav-link" data-scroll-target="#statistical-effects-model-for-nested-treatment-structures">Statistical Effects Model for Nested Treatment Structures</a></li>
+  <li><a href="#anova-table" id="toc-anova-table" class="nav-link" data-scroll-target="#anova-table">ANOVA Table</a></li>
+  <li><a href="#skeleton-anova" id="toc-skeleton-anova" class="nav-link" data-scroll-target="#skeleton-anova">Skeleton ANOVA</a></li>
+  <li><a href="#r-analysis" id="toc-r-analysis" class="nav-link" data-scroll-target="#r-analysis">R: Analysis</a></li>
+  <li><a href="#jmp-analysis" id="toc-jmp-analysis" class="nav-link" data-scroll-target="#jmp-analysis">JMP: Analysis</a></li>
+  <li><a href="#r-results" id="toc-r-results" class="nav-link" data-scroll-target="#r-results">R: Results</a></li>
+  <li><a href="#jmp-results" id="toc-jmp-results" class="nav-link" data-scroll-target="#jmp-results">JMP: Results</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="073-nested-treatment.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../0-course-info/syllabus-f26.html">Course information</a></li><li class="breadcrumb-item"><a href="../0-course-info/course-resources.html">Resources</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Course Resources</h1>
+<h1 class="title">Module 7: Expanding Treatment &amp; Design Structures</h1>
+<p class="subtitle lead">Nested Treatment Structure</p>
 </div>
 
 
@@ -350,41 +420,207 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="stat-313-r-reference-sheets" class="level1">
-<h1>STAT 313 R Reference Sheets</h1>
-<p>These are reference sheets Dr.&nbsp;C made for STAT 313 F25, which include relevant examples for the beginning of this course.</p>
-<ul>
-<li><a href="r-resources/stat313-rsheet1.pdf">Basics</a></li>
-<li><a href="r-resources/stat313-rsheet2.pdf">Variables by Groups + T-test + ANOVA</a>
-<ul>
-<li>Note, this sheet only specifies a <em>pooled</em> t-test (assuming equal variances).</li>
-<li>Change the argument to <code>var.equal = FALSE</code> for an un-pooled test and look at the documentation <code>?t.test</code> for more options.</li>
-</ul></li>
-</ul>
+<section id="crossed-vs-nested-treatment-structure" class="level2">
+<h2 class="anchored" data-anchor-id="crossed-vs-nested-treatment-structure">Crossed vs Nested Treatment Structure</h2>
+<style>
+.reveal .slides .small table { font-size: 0.78em; line-height:1.05; }
+.reveal .slides .small table th, .reveal .slides .small table td { padding:6px 8px; }
+</style>
+<p><strong>Crossed/Full Factorial</strong></p>
+<p>Each level of factor B appears with every level of Factor A</p>
+<p><strong>Nested</strong></p>
+<p>Levels of facotr B are unique within each level of Factor A</p>
 </section>
-<section id="official-r-cheatsheets" class="level1">
-<h1>Official R Cheatsheets</h1>
+<section id="example-7.4-cookies-in-air-fryers" class="level2">
+<h2 class="anchored" data-anchor-id="example-7.4-cookies-in-air-fryers">Example 7.4: Cookies in Air Fryers</h2>
+<div style="font-size:0.7em">
+<blockquote class="blockquote">
+<p>Baking is a precise science, and small changes in baking methods can have a significant impact on the final texture of cookies. A food scientist is conducting an experiment to determine how different baking methods influence cookie crispiness. However, not all baking methods allow for the same range of baking temperatures. For example, a conventional oven can accommodate a wider range of temperatures than an air fryer, which operates at lower heat settings. The food scientist bakes 6 cookies at each of the method and temperature combinations.</p>
+</blockquote>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/073-nested-trt-structure.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `knitr::include_graphics()`:
+! Cannot find the file(s): "images/073-nested-trt-structure.png"</code></pre>
+</div>
+</div>
+<p>Therefore, we do not consider the main effect of Temperature. Instead, we will consider the individual effects of each Temperature within each Baking Method.</p>
+</div>
+</section>
+<section id="statistical-effects-model-for-nested-treatment-structures" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-effects-model-for-nested-treatment-structures">Statistical Effects Model for Nested Treatment Structures</h2>
+<div style="font-size:0.7em">
+<p><span class="math display">\[y_{ijk} = \mu + \alpha_i + \beta(\alpha)_{ij} + \epsilon_{ijk} \text{ with } \epsilon_{ijk} \text{ iid} \sim N(0,\sigma^2)\]</span> for <span class="math inline">\(i=1,2,3;  j=1,2,…b_i; k= 1,2,3,4,5,6\)</span></p>
+<p>where:</p>
 <ul>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/rstudio-ide.html?_gl=1*1bgdjez*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjEuMTcxODkxNjk4OC4wLjAuMA..">RStudio IDE</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/quarto.html?_gl=1*1li2kb5*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjEuMTcxODkxNjk4OC4wLjAuMA..">Quarto</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/base-r.pdf">Base R</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/git-github.pdf">Git &amp; GitHub</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..">Data Visualization with ggplot2</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/data-import.html?_gl=1*1bgdjez*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjEuMTcxODkxNjk4OC4wLjAuMA..">Data Import with readr</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/data-transformation.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..">Data Wrangling with dplyr</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/tidyr.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..">Data Tidying with tidyr</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/factors.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..">Factors with forcats</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/lubridate.html?_gl=1*12ke444*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA">Dates with lubridate</a></p></li>
-<li><p><a href="https://rstudio.github.io/cheatsheets/html/strings.html?_gl=1*1u8zjpq*_ga*MTM4Nzk4ODMyOC4xNzA2NzU3MjEx*_ga_2C0WZ1JHG0*MTcxODkxNjU5Ny43LjAuMTcxODkxNjU5Ny4wLjAuMA..">Strings with stringr</a></p></li>
+<li><span class="math inline">\(y_{ijk}\)</span>: the crispiness of the <span class="math inline">\(k^{th}\)</span> cookie baked at the <span class="math inline">\(j^{th}\)</span> temperature in the <span class="math inline">\(i^{th}\)</span> baking method.</li>
+<li><span class="math inline">\(\alpha_i\)</span>: the effect of the <span class="math inline">\(i^{th}\)</span> baking method</li>
+<li><span class="math inline">\(\beta(\alpha)_{ij}\)</span>: the effect of the <span class="math inline">\(j^{th}\)</span> temperature nested within the <span class="math inline">\(i^{th}\)</span> baking method</li>
+<li><span class="math inline">\(\epsilon_{ijk}\)</span>∶ the experimental error for the <span class="math inline">\(k^{th}\)</span> cookie baked at the <span class="math inline">\(j^{th}\)</span> temperature in the <span class="math inline">\(i^{th}\)</span> baking method.</li>
 </ul>
-<section id="other" class="level2">
-<h2 class="anchored" data-anchor-id="other">Other</h2>
-<ul>
-<li><a href="https://www.econometrics.blog/post/the-r-formula-cheatsheet/">R formulas cheetsheet</a></li>
-</ul>
+</div>
+</section>
+<section id="anova-table" class="level2 small">
+<h2 class="small anchored" data-anchor-id="anova-table">ANOVA Table</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>SV</th>
+<th>DF</th>
+<th>SS</th>
+<th>MS</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>(a-1)</td>
+<td>SSA</td>
+<td>MSA</td>
+<td>MSA/MSE</td>
+</tr>
+<tr class="even">
+<td>B(A)</td>
+<td>use subtraction</td>
+<td>SSB(A)</td>
+<td>MSB(A)</td>
+<td>MSB(A)/MSE</td>
+</tr>
+<tr class="odd">
+<td>e.u.(AB) - error</td>
+<td>use subtraction</td>
+<td>SSE</td>
+<td>MSE</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td>N-1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="skeleton-anova" class="level2">
+<h2 class="anchored" data-anchor-id="skeleton-anova">Skeleton ANOVA</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Source of Variation</th>
+<th>DF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="r-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="r-analysis">R: Analysis</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>cookie_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/07_cookie_data.csv"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(baking_method<span class="sc">:</span>cookie, as.factor))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! 'data/07_cookie_data.csv' does not exist in current working directory:
+  '/Users/czmann/Documents/teaching/stat3540/2-slides'.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cookie_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'cookie_data' not found</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>cookie_mod <span class="ot">&lt;-</span> <span class="fu">lm</span>(crispiness_score <span class="sc">~</span> baking_method <span class="sc">+</span> baking_method<span class="sc">/</span>temperature,</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">data =</span> cookie_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'cookie_data' not found</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(cookie_mod)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'cookie_mod' not found</code></pre>
+</div>
+</div>
+</section>
+<section id="jmp-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="jmp-analysis">JMP: Analysis</h2>
+<div class="columns">
+<div class="column">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/073-cookies-jmp-dialog.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `knitr::include_graphics()`:
+! Cannot find the file(s): "images/073-cookies-jmp-dialog.png"</code></pre>
+</div>
+</div>
+</div><div class="column">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/073-jmp-anova.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `knitr::include_graphics()`:
+! Cannot find the file(s): "images/073-jmp-anova.png"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="r-results" class="level2">
+<h2 class="anchored" data-anchor-id="r-results">R: Results</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(multcomp)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">emmip</span>(cookie_mod, baking_method <span class="sc">~</span> temperature, </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">CIs =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'cookie_mod' not found</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">emmeans</span>(cookie_mod, <span class="at">specs =</span> <span class="sc">~</span> baking_method<span class="sc">:</span>temperature) <span class="sc">|&gt;</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cld</span>(<span class="at">Letters =</span> LETTERS, <span class="at">decreasing =</span> <span class="cn">TRUE</span>, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'cookie_mod' not found</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="jmp-results" class="level2">
+<h2 class="anchored" data-anchor-id="jmp-results">JMP: Results</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/073-cookies-jmp-lsmeans-plot.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `knitr::include_graphics()`:
+! Cannot find the file(s): "images/073-cookies-jmp-lsmeans-plot.png"</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/073-cookies-jmp-lsmeanscld.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `knitr::include_graphics()`:
+! Cannot find the file(s): "images/073-cookies-jmp-lsmeanscld.png"</code></pre>
+</div>
+</div>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -801,15 +1037,6 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Schedule">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Schedule</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

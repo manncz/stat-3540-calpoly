@@ -1,0 +1,15 @@
+{
+  "hash": "36e7971683304c3748ec4fa58f74946e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"7.1 Preparation: Expanding Treatment & Design Structures\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n#### 📽 Watch Videos: 45 min\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n\n- Differentiate between standard experimental designs and extended structures like generalized block designs and Latin squares.\n- Recognize when and why generalized block designs are needed to account for systematic differences.\n- Understand how Latin square designs control for two blocking factors and when they are appropriate.\n- Apply appropriate statistical models to analyze data from these expanded design structures.\n:::\n\n**Notes:**\n\n- Skip JMP discussions\n- There is **one slide deck** to follow along with, but the links below go to the relevant starting point for each video.\n  - Some of the notation in our slides is different from Dr. Robinson to be **consistent** with our discussions throughout class **this semester**.\n- **Take notes** while you watch and summarize the main points for yourself!\n  - This includes breaking down R code to make sure you understand it!\n- Data to follow along:\n  - [07-cholesterol.csv](../2-slides/_data/07-cholesterol.csv)\n  - [07-green_roof_data.csv](../2-slides/_data/07-green_roof_data.csv)\n\n\n## Generalized Block Designs\n\n- 📽 Follow along with the [slides](../2-slides/07.1-more-designs.qmd).\n\n{{< video  https://www.youtube.com/watch?v=GAWmkKGzNp0 >}}\n\n\n\n## Latin Square Design\n\n- 📽 Follow along with the [slides](../2-slides/07.1-more-designs.qmd#/latin-square-design).\n\n{{< video https://www.youtube.com/watch?v=5frP6pozvr0 >}}\n\n\n\n\n \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
