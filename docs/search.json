@@ -4424,57 +4424,57 @@
     "objectID": "2-slides/06.1-random-effects.html#fixed-effects",
     "href": "2-slides/06.1-random-effects.html#fixed-effects",
     "title": "Module 6: Random Effects & Linear Mixed Models",
-    "section": "",
-    "text": "Up to this point, we have been concerned exclusively with fixed effects models.\nWhat were we always testing?"
+    "section": "Fixed Effects",
+    "text": "Fixed Effects\n\nUp to this point, we have been concerned exclusively with fixed effects models.\nWhat were we always testing?"
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#fixed-effects-1",
     "href": "2-slides/06.1-random-effects.html#fixed-effects-1",
     "title": "Module 6: Random Effects & Linear Mixed Models",
-    "section": "",
-    "text": "Fixed effects are appropriate when:\n\nInterest centers on the effects of the specific factor levels chosen.\nIf the experiment were to be repeated, the same levels would be chosen.\nInterest is focused on means."
+    "section": "Fixed Effects",
+    "text": "Fixed Effects\nFixed effects are appropriate when:\n\nInterest centers on the effects of the specific factor levels chosen.\nIf the experiment were to be repeated, the same levels would be chosen.\nInterest is focused on means."
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#random-effects",
     "href": "2-slides/06.1-random-effects.html#random-effects",
     "title": "Module 6: Random Effects & Linear Mixed Models",
-    "section": "",
-    "text": "Random effects are appropriate when:\n\nThe factor levels are a sample from a larger population of potential factor levels, and inferences are desired about the population of factor levels.\nIf the experiment were to be repeated, a new set of levels would be chosen.\nInterest is focused on variances."
+    "section": "Random Effects",
+    "text": "Random Effects\nRandom effects are appropriate when:\n\nThe factor levels are a sample from a larger population of potential factor levels, and inferences are desired about the population of factor levels.\nIf the experiment were to be repeated, a new set of levels would be chosen.\nInterest is focused on variances."
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#the-conceptual-contrast",
     "href": "2-slides/06.1-random-effects.html#the-conceptual-contrast",
     "title": "Module 6: Random Effects & Linear Mixed Models",
-    "section": "",
-    "text": "Fixed\nRandom\n\n\n\n\nSpecific levels\nSample of levels\n\n\nSame levels if repeated\nNew levels if repeated\n\n\nFocus: means\nFocus: variances\n\n\nCompare (\\(\\mu_i\\))\nEstimate (\\(\\sigma^2_{\\text{factor}}\\))"
+    "section": "The Conceptual Contrast",
+    "text": "The Conceptual Contrast\n\n\n\nFixed\nRandom\n\n\n\n\nSpecific levels\nSample of levels\n\n\nSame levels if repeated\nNew levels if repeated\n\n\nFocus: means\nFocus: variances\n\n\nCompare (\\(\\mu_i\\))\nEstimate (\\(\\sigma^2_{\\text{factor}}\\))"
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#example-6.1-retail-store.",
     "href": "2-slides/06.1-random-effects.html#example-6.1-retail-store.",
     "title": "Module 6: Random Effects & Linear Mixed Models",
-    "section": "",
-    "text": "Consider an experiment conducted by a company that owns several hundred retail stores. Approximately 50 of the stores are selected at random, and employees in each store was asked to evaluate management. The company is NOT interested in just the 50 stores chosen – it wants to generalize the results to ALL of its stores. Further, suppose that employees were asked from each department (e.g., clothing, kitchen, etc.) in all 50 stores. Therefore, the company is interested in the employee evaluations of management by department and store."
+    "section": "Example 6.1: Retail Store.",
+    "text": "Example 6.1: Retail Store.\n\nConsider an experiment conducted by a company that owns several hundred retail stores. Approximately 50 of the stores are selected at random, and employees in each store was asked to evaluate management. The company is NOT interested in just the 50 stores chosen – it wants to generalize the results to ALL of its stores. Further, suppose that employees were asked from each department (e.g., clothing, kitchen, etc.) in all 50 stores. Therefore, the company is interested in the employee evaluations of management by department and store."
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#is-store-fixed-or-random",
     "href": "2-slides/06.1-random-effects.html#is-store-fixed-or-random",
     "title": "Module 6: Random Effects & Linear Mixed Models",
-    "section": "",
-    "text": "Were stores randomly selected?\nDo we care about only these 50 stores?\nIf repeated, would we choose the same stores?"
+    "section": "Is store fixed or random?",
+    "text": "Is store fixed or random?\n\nWere stores randomly selected?\nDo we care about only these 50 stores?\nIf repeated, would we choose the same stores?"
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#is-department-fixed-or-random",
     "href": "2-slides/06.1-random-effects.html#is-department-fixed-or-random",
     "title": "Module 6: Random Effects & Linear Mixed Models",
-    "section": "",
-    "text": "Were departments randomly sampled?\nDo these departments represent all possible departments?\nIf repeated, would we choose different departments?"
+    "section": "Is department fixed or random?",
+    "text": "Is department fixed or random?\n\nWere departments randomly sampled?\nDo these departments represent all possible departments?\nIf repeated, would we choose different departments?"
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#it-turns-out-that-whether-a-factor-is-fixed-or-random",
     "href": "2-slides/06.1-random-effects.html#it-turns-out-that-whether-a-factor-is-fixed-or-random",
     "title": "Module 6: Random Effects & Linear Mixed Models",
-    "section": "",
-    "text": "Does NOT change the design much\nBut…Changes the analysis."
+    "section": "It turns out that whether a factor is fixed or random:",
+    "text": "It turns out that whether a factor is fixed or random:\nDoes NOT change the design much\nBut…Changes the analysis."
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#example-6.2-fast-food-company",
@@ -4502,7 +4502,7 @@
     "href": "2-slides/06.1-random-effects.html#the-data",
     "title": "Module 6: Random Effects & Linear Mixed Models",
     "section": "The Data",
-    "text": "The Data\n\n\n\npersonnel_data &lt;- read_csv(\"_data/06-personnel-data.csv\") |&gt; \n  mutate(officer = factor(officer),\n         candidate = factor(candidate))\n\n\nlevels(personnel_data$candidate)\n\n[1] \"1\" \"2\" \"3\" \"4\"\n\nlevels(personnel_data$officer)\n\n[1] \"A\" \"B\" \"C\" \"D\" \"E\"\n\n\n\n\n\n\n\n\nNoteMake experimental factors R factors!\n\n\n\nHere we wanted to make sure that any categorical variables or factors in our experimental design are treated as the special factor type in R!\n\n\n\n\n\n# A tibble: 20 × 3\n   officer candidate rating\n   &lt;fct&gt;   &lt;fct&gt;      &lt;dbl&gt;\n 1 A       1             76\n 2 A       2             65\n 3 A       3             85\n 4 A       4             74\n 5 B       1             59\n 6 B       2             75\n 7 B       3             81\n 8 B       4             67\n 9 C       1             49\n10 C       2             63\n11 C       3             61\n12 C       4             46\n13 D       1             74\n14 D       2             71\n15 D       3             85\n16 D       4             89\n17 E       1             66\n18 E       2             84\n19 E       3             80\n20 E       4             79"
+    "text": "The Data\n\n\n\npersonnel_data &lt;- read_csv(\"_data/06-personnel-data.csv\") |&gt; \n  mutate(officer = factor(officer),\n         candidate = factor(candidate))\n\n\nlevels(personnel_data$candidate)\n\n[1] \"1\" \"2\" \"3\" \"4\"\n\nlevels(personnel_data$officer)\n\n[1] \"A\" \"B\" \"C\" \"D\" \"E\"\n\n\n\n\n\n\n\n\nMake experimental factors R factors!\n\n\nHere we wanted to make sure that any categorical variables or factors in our experimental design are treated as the special factor type in R!\n\n\n\n\n\n\n# A tibble: 20 × 3\n   officer candidate rating\n   &lt;fct&gt;   &lt;fct&gt;      &lt;dbl&gt;\n 1 A       1             76\n 2 A       2             65\n 3 A       3             85\n 4 A       4             74\n 5 B       1             59\n 6 B       2             75\n 7 B       3             81\n 8 B       4             67\n 9 C       1             49\n10 C       2             63\n11 C       3             61\n12 C       4             46\n13 D       1             74\n14 D       2             71\n15 D       3             85\n16 D       4             89\n17 E       1             66\n18 E       2             84\n19 E       3             80\n20 E       4             79"
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#statistical-random-effects-model",
@@ -4551,7 +4551,7 @@
     "href": "2-slides/06.1-random-effects.html#when-one-factor-is-fixed-and-one-is-random",
     "title": "Module 6: Random Effects & Linear Mixed Models",
     "section": "When one factor is fixed and one is random",
-    "text": "When one factor is fixed and one is random\n\n\n\n\n\n\nNoteLinear Mixed Models (LMM)\n\n\n\nMixed models come about when one factor is fixed and one factor is random. A mixed model should be used to study the effects of one factor on the population mean and the effects of another factor on the population variance."
+    "text": "When one factor is fixed and one is random\n\n\n\n\n\n\nLinear Mixed Models (LMM)\n\n\nMixed models come about when one factor is fixed and one factor is random. A mixed model should be used to study the effects of one factor on the population mean and the effects of another factor on the population variance."
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#statistical-effecs-model",
@@ -4565,7 +4565,7 @@
     "href": "2-slides/06.1-random-effects.html#scope-of-inference",
     "title": "Module 6: Random Effects & Linear Mixed Models",
     "section": "Scope of Inference",
-    "text": "Scope of Inference\n\n\n\n\n\n\nNote\n\n\n\n\nIf blocks were fixed: Inference limited to these 10 running backs\nIf blocks are random: Inference extends to all similar running backs"
+    "text": "Scope of Inference\n\n\n\n\n\n\nNote\n\n\n\nIf blocks were fixed: Inference limited to these 10 running backs\nIf blocks are random: Inference extends to all similar running backs"
   },
   {
     "objectID": "2-slides/06.1-random-effects.html#the-data-1",
@@ -4607,7 +4607,7 @@
     "href": "2-slides/06.1-random-effects.html#effect-on-standard-errors",
     "title": "Module 6: Random Effects & Linear Mixed Models",
     "section": "Effect on Standard Errors",
-    "text": "Effect on Standard Errors\n\nTreating blocks as random (instead of fixed) (1) Increases SE of treatment means (2) Does NOT change SE of treatment differences\n\n\n\n\n\n\n\n\n\nNoteRunning back Fixed (LM)\n\n\n\n\nkneebrace_lm &lt;- lm(agility_time ~ knee_brace + running_back, \n                      data = kneebrace_data)\nemmeans(kneebrace_lm, specs = ~knee_brace)\n\n knee_brace emmean     SE df lower.CL upper.CL\n AirArmor    18.24 0.0443 27    18.15    18.33\n Breg        18.23 0.0443 27    18.14    18.32\n Control     19.22 0.0443 27    19.13    19.31\n DonJoy      18.07 0.0443 27    17.98    18.16\n\nResults are averaged over the levels of: running_back \nConfidence level used: 0.95 \n\nemmeans(kneebrace_lm, specs = ~knee_brace) |&gt; pairs()\n\n contrast           estimate     SE df t.ratio p.value\n AirArmor - Breg       0.010 0.0627 27   0.160  0.9985\n AirArmor - Control   -0.975 0.0627 27 -15.553 &lt;0.0001\n AirArmor - DonJoy     0.168 0.0627 27   2.680  0.0565\n Breg - Control       -0.985 0.0627 27 -15.713 &lt;0.0001\n Breg - DonJoy         0.158 0.0627 27   2.520  0.0792\n Control - DonJoy      1.143 0.0627 27  18.233 &lt;0.0001\n\nResults are averaged over the levels of: running_back \nP value adjustment: tukey method for comparing a family of 4 estimates \n\n\n\n\n\n\n\n\n\n\n\nNoteRunning back Random (LMM)\n\n\n\n\nkneebrace_lmer &lt;- lmer(agility_time ~ knee_brace + (1 | running_back), \n                      data = kneebrace_data)\nemmeans(kneebrace_lmer, specs = ~knee_brace)\n\n knee_brace emmean    SE   df lower.CL upper.CL\n AirArmor     18.2 0.132 10.7     18.0     18.5\n Breg         18.2 0.132 10.7     17.9     18.5\n Control      19.2 0.132 10.7     18.9     19.5\n DonJoy       18.1 0.132 10.7     17.8     18.4\n\nDegrees-of-freedom method: kenward-roger \nConfidence level used: 0.95 \n\nemmeans(kneebrace_lmer, specs = ~knee_brace) |&gt; pairs()\n\n contrast           estimate     SE df t.ratio p.value\n AirArmor - Breg       0.010 0.0627 27   0.160  0.9985\n AirArmor - Control   -0.975 0.0627 27 -15.553 &lt;0.0001\n AirArmor - DonJoy     0.168 0.0627 27   2.680  0.0565\n Breg - Control       -0.985 0.0627 27 -15.713 &lt;0.0001\n Breg - DonJoy         0.158 0.0627 27   2.520  0.0792\n Control - DonJoy      1.143 0.0627 27  18.233 &lt;0.0001\n\nDegrees-of-freedom method: kenward-roger \nP value adjustment: tukey method for comparing a family of 4 estimates"
+    "text": "Effect on Standard Errors\n\nTreating blocks as random (instead of fixed) (1) Increases SE of treatment means (2) Does NOT change SE of treatment differences\n\n\n\n\n\n\n\n\n\nRunning back Fixed (LM)\n\n\n\nkneebrace_lm &lt;- lm(agility_time ~ knee_brace + running_back, \n                      data = kneebrace_data)\nemmeans(kneebrace_lm, specs = ~knee_brace)\n\n knee_brace emmean     SE df lower.CL upper.CL\n AirArmor    18.24 0.0443 27    18.15    18.33\n Breg        18.23 0.0443 27    18.14    18.32\n Control     19.22 0.0443 27    19.13    19.31\n DonJoy      18.07 0.0443 27    17.98    18.16\n\nResults are averaged over the levels of: running_back \nConfidence level used: 0.95 \n\nemmeans(kneebrace_lm, specs = ~knee_brace) |&gt; pairs()\n\n contrast           estimate     SE df t.ratio p.value\n AirArmor - Breg       0.010 0.0627 27   0.160  0.9985\n AirArmor - Control   -0.975 0.0627 27 -15.553 &lt;0.0001\n AirArmor - DonJoy     0.168 0.0627 27   2.680  0.0565\n Breg - Control       -0.985 0.0627 27 -15.713 &lt;0.0001\n Breg - DonJoy         0.158 0.0627 27   2.520  0.0792\n Control - DonJoy      1.143 0.0627 27  18.233 &lt;0.0001\n\nResults are averaged over the levels of: running_back \nP value adjustment: tukey method for comparing a family of 4 estimates \n\n\n\n\n\n\n\n\n\n\n\n\nRunning back Random (LMM)\n\n\n\nkneebrace_lmer &lt;- lmer(agility_time ~ knee_brace + (1 | running_back), \n                      data = kneebrace_data)\nemmeans(kneebrace_lmer, specs = ~knee_brace)\n\n knee_brace emmean    SE   df lower.CL upper.CL\n AirArmor     18.2 0.132 10.7     18.0     18.5\n Breg         18.2 0.132 10.7     17.9     18.5\n Control      19.2 0.132 10.7     18.9     19.5\n DonJoy       18.1 0.132 10.7     17.8     18.4\n\nDegrees-of-freedom method: kenward-roger \nConfidence level used: 0.95 \n\nemmeans(kneebrace_lmer, specs = ~knee_brace) |&gt; pairs()\n\n contrast           estimate     SE df t.ratio p.value\n AirArmor - Breg       0.010 0.0627 27   0.160  0.9985\n AirArmor - Control   -0.975 0.0627 27 -15.553 &lt;0.0001\n AirArmor - DonJoy     0.168 0.0627 27   2.680  0.0565\n Breg - Control       -0.985 0.0627 27 -15.713 &lt;0.0001\n Breg - DonJoy         0.158 0.0627 27   2.520  0.0792\n Control - DonJoy      1.143 0.0627 27  18.233 &lt;0.0001\n\nDegrees-of-freedom method: kenward-roger \nP value adjustment: tukey method for comparing a family of 4 estimates"
   },
   {
     "objectID": "1-prep/06.1-prep.html",
@@ -4929,7 +4929,7 @@
     "href": "2-slides/06.2-subsampling-with-random-effects.html#solution-2-linear-mixed-model-1",
     "title": "Module 6: Random Effects & Mixed Models",
     "section": "Solution 2: Linear Mixed Model",
-    "text": "Solution 2: Linear Mixed Model\n\n\n\n\n\n\n\nSV\nDF: \\(N - 1\\) where \\(N = n_t rt\\)\n\n\n\n\nTreatment\nt - 1\n\n\ne.u.(Treatment) \\(\\rightarrow\\) experimental error \\(\\sigma_{\\epsilon}^2\\)\n(r - 1)t\n\n\nm.u.(e.u x Treatment) \\(\\rightarrow\\) subsampling variability \\(\\sigma_s^2\\)\n(\\(n_t\\) - 1)rt"
+    "text": "Solution 2: Linear Mixed Model\n\n\n\n\n\n\n\nSV\nDF: \\(N - 1\\) where \\(N = n_t rt\\)\n\n\n\n\nTreatment\nt - 1\n\n\ne.u.(Treatment) \\(\\rightarrow\\) experimental error \\(\\sigma_{\\epsilon}^2\\)\n(r - 1)(t -1)\n\n\nm.u.(e.u x Treatment) \\(\\rightarrow\\) subsampling variability \\(\\sigma_s^2\\)\n(\\(n_t\\) - 1)rt"
   },
   {
     "objectID": "2-slides/06.2-subsampling-with-random-effects.html#solution-2-linear-mixed-model-2",
