@@ -19,7 +19,7 @@ format:
 :::callout-note
 ## Reminders
 
-- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} You **must** write R code in this template! (coming soon)
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} You **must** write R code in this template! [03-lab-code-template.qmd](templates/03-lab-code-template.qmd)
     - You will **turn in your code** with the report. 
     - This is so that you can **save** your code for reproducibility. 
     

@@ -1,0 +1,135 @@
+---
+title: "Lab 3 Analysis Appendix"
+subtitle: "YOUR REPORT TITLE"
+author: "YOUR NAMES"
+execute: 
+  error: true
+  message: false
+  warning: false
+  echo: true
+embed-resources: true
+format: html
+---
+
+```{r}
+#| label: setup
+
+# I believe these are the main packages you will need
+# add any more that you end up needing here!
+
+library(tidyverse)
+library(emmeans)
+library(multcomp)
+library(multcompView)
+library(edibble)
+```
+
+
+## Random Sampling & Treatment Assignment
+
+### Random Sample
+
+First, randomly sample 48 participants
+
+```{r}
+# code for random sampling
+set.seed(340)
+
+N <- 48
+
+sample_ids <- sample(1:60, size = N, replace = F)
+
+sort(sample_ids)
+```
+
+### Random Assignment + Data Table
+
+Then, randomly assign treatments to participants using a CRD.
+
+Call the dataset you create `crd_3factor_table`
+
+See instructions for additional details -- you will want to use the `edibble` package.
+
+```{r}
+# code for creating random assignment dataset
+set.seed(3334)
+
+# create edibble design object
+
+des <- ### EDIBBLE CODE
+
+# create table WITH subsamples
+
+crd_3factor_table <- serve_table(des) |> 
+  expand_grid(subsample = 1:2) |> 
+  mutate(subsample = paste0("subsample0", subsample))
+
+# add response variable(s) -- 
+# if you are doing blood pressure you might want 
+# one column for systolic and one for diastolic
+
+crd_3factor_table <- crd_3factor_table |> 
+  mutate( )
+
+```
+
+Save your table to your computer for data entry:
+
+```{r}
+write_csv(crd_3factor_table,
+          file = "lab3_crd_randomization.csv")
+```
+
+You will want to copy and paste the data from that .csv to your shared Google sheet or OneDrive!
+
+## Data Analysis
+
+### Read in Data
+
+Read in your study data.
+
+Don't forget to change your treatment variables into FACTOR variable types!
+
+  - e.g. in Activity 2.2: `mutate(companions = factor(companions))`
+  
+Check the order of the levels of your variable. Do you want to change the order?
+
+```{r}
+# read in data
+
+```
+
+### Clean Data
+
+:::callout-warning
+Clean up your systolic / diastolic column if it is not already two columns!!
+
+This code is assuming that you entered your data in a column called `bp` like `"systolic/diastolic"` -- **delete anything you don't need and change variable names as needed!!** Ask Dr. C if you need help with this.
+:::
+
+```{r}
+# clean up blood pressure variable if needed and calculate MAP
+
+# YOU MAY NEED TO CHANGE / DELETE THINGS
+
+data_clean <- data |> 
+  separate(col = bp,
+           into = c("systolic", "diastolic"),
+           sep = "\\/",
+           remove = F, convert = T) |> 
+  mutate(map = (systolic + (2*diastolic))/3)
+
+```
+
+Aggregate your data to the islander level
+
+```{r}
+# use summarize and mean to get islander-level data
+
+
+```
+
+### Analysis
+
+Create R chunks as you need them for the analysis!
+
