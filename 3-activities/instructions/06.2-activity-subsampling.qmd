@@ -1,0 +1,168 @@
+---
+title: "Activity 6.2: Piecing it Together with Mixed Models for Subsampling"
+subtitle: "School Curriculum"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+format:
+  html: default
+  docx: default
+---
+```{r}
+#| echo: false
+
+library(edibble)
+library(tidyverse)
+library(emmeans)
+library(multcomp)
+library(lme4)
+library(lmerTest)
+```
+
+::: callout-warning
+- Submit via Gradescope, don't forget to assign pages to the questions in the outline!
+
+- Delete any extraneous instructions (**like this box**) before submission. *You will be deducted points from now on if you do not follow this instruction!*
+
+- There is no coding required for this activity! **I would recommend you complete it using the Word version**, but you are still welcome to use the .qmd template: [06.2-activity-subsampling.qmd](../student/06.2-activity-subsampling.qmd).
+  - If you use the .qmd template, you will need to refer to the online instructions to see the referenced output
+
+:::
+
+## Scenario
+
+To investigate the impact of a new algebra curriculum and different instructional methods on math skills on students in Texas, researchers randomly selected 20 high schools in Texas (all from different districts and that had at least 4 algebra classes at the school in a semester). 
+
+Within each school, four algebra classes were chosen, with each assigned to a unique combination of algebra curriculum and instructional method. The algebra curriculum included (1) a new online tutor-assisted curriculum (**novel tutor**) and (2) a standard curriculum for Texas high schools (**standard**). The instructional methods (1) teacher-led non-interactive lectures (**non-interactive**), and (2) teacher-led interactive lectures with group activities (**interactive**). 
+
+This resulted in a total of 80 classrooms, each with *approximately* 30 students, yielding a total of 1,800 students in the study. At the end of the school year, all students took standardized math test scored on a 0 to 100 scale. We also have their score on the test from the year *before* they took algebra.
+
+Here are the first couple of rows of our data:
+
+```{r}
+#| echo: false
+
+school_data <- read_csv("../_data/06-school-data.csv")
+
+school_data |> 
+  slice_head(n = 6) |> 
+  knitr::kable()
+```
+
+## Part A: Study Design
+
+###  1. Sketch a design blueprint
+
+-   Clearly indicate the blocking factor (show grouping)
+-   Clearly indicate the experimental units *and* measurement units
+-   Show how treatments are assigned within blocks
+
+### 2.	Identify the following:
+
+(bullets are fine)
+
+  + Treatment structure:
+  
+  + Design structure:
+
+###  3. What is an extraneous variable that the researchers should really account for in the design? (hint: think about what could vary OR be the same between Algebra classes in the same school...)
+
+:::callout-warning
+
+### Benefit of the doubt
+
+For the rest of the assignment, assume that all is well and the researchers thought about what you raised in Q3, they just forgot to include it in the study description.
+
+:::
+
+## Part B: Analysis
+
+### 4. Write out the statistical effects model, defining all terms and notation. Which elements are random? Which are (fixed) parameters?
+
+### 5.	Provide the skeleton of the ANOVA table for the analysis of this experiment, including the subsampling effect.
+
+Specify which effects should be fixed and which should be random.
+
+| Source of Variation                  |DF        |
+|--------------------------------------|----------|
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+|                                      |          |
+
+### 6. What is the denominator DF for testing the effect of instructional method? What about the interaction effect?
+
+### 7.  Write the appropriate *R formula* to fit the LMM assuming that you are using the data (called  `school_data`) shown in the scenario:
+
+Formula: 
+
+```
+# set sum to zero constraint
+options(contrasts = c("contr.sum", "contr.poly"))
+
+# fit model
+school_mod <- lmer([[WHAT FORMULA GOES HERE??]],
+                 data = school_data)
+```
+
+### 8. The output from `summary()` is shown for both the appropriate LMM (analyzing the data at the *student* level) and simple linear model (analyzing the data at the *classroom* level). What do you notice? What additional information do you gain from the LMM?
+
+:::callout-tip
+# R Analysis output for appropriate LMM for this study
+
+```
+Random effects:
+ Groups                        Name        Variance Std.Dev.
+ school:curriculum:instruction (Intercept)  0.5054  0.7109  
+ school                        (Intercept) 64.4051  8.0253  
+ Residual                                  99.4061  9.9703
+ 
+Fixed effects:
+                         Estimate Std. Error      df t value Pr(>|t|)    
+(Intercept)               70.9740     1.8078 19.0007  39.261  < 2e-16 ***
+curriculum1                1.9983     0.2185 56.9996   9.146 8.92e-13 ***
+instruction1               5.5518     0.2185 56.9996  25.410  < 2e-16 ***
+curriculum1:instruction1   0.2146     0.2185 56.9996   0.982     0.33 
+```  
+
+:::
+
+:::callout-tip
+# R Analysis output for appropriate linear model (averaging over students)
+
+```
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ school   (Intercept) 64.407   8.025   
+ Residual              3.819   1.954   
+
+Fixed effects:
+                         Estimate Std. Error      df t value Pr(>|t|)    
+(Intercept)               70.9740     1.8078 19.0000  39.260  < 2e-16 ***
+curriculum1                1.9983     0.2185 57.0000   9.146 8.92e-13 ***
+instruction1               5.5518     0.2185 57.0000  25.410  < 2e-16 ***
+curriculum1:instruction1   0.2146     0.2185 57.0000   0.982     0.33 
+```  
+
+:::
+
+:::callout-note
+# huh??
+
+What you saw here is **not always the case**! We will talk about when these two analyses will differ in class on Thursday.
+:::
+
+### 9.  In the LMM analysis, what does the "Residual" line in the "Random Effects" the give an estimate of? How would you interpret that estimate in context?
+
+## Part C: Thinking Ahead
+
+### 10. We have called these models LMMs, but some people also call them hierarchical models. Why does it make sense to describe this study as having a "hierarchical" structure? 
+
+### 11. Education is a very classic setting for hierarchical models when conducting studies! What is another setting / application that you could imagine hierarchical designs and analyses being common?

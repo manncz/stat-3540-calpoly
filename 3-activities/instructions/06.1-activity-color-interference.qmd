@@ -8,8 +8,8 @@ execute:
 
 eval: false
 format:
-  html: default
   docx: default
+  html: default
 ---
 \vspace{-.8in}
 
@@ -182,7 +182,7 @@ options(contrasts = c("contr.sum", "contr.poly"))
 ```
 
 ```{r}
-# look at model results to fill in the questions below -- this requires multiple different!
+# look at model results to fill in the questions below -- this requires multiple different analyses!!
 
 
 

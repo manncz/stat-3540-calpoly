@@ -220,6 +220,8 @@ personnel_data
 
 $$y_{ij}=\mu+t_i+\epsilon_{ij} \text{ for } i=1,2,3,4,5;	j=1,2,3,4$$
 
+$$y_{ij}=\mu+t_i+\epsilon_{ij} \text{ with } t_i \overset{iid}{\sim} N(0,\sigma_t^2) \text{ and } \epsilon_{ij} \overset{iid}{\sim} N(0,\sigma_\epsilon^2)$$
+
 with:
 
 + $t_i \sim$ independent $N(0,\sigma_t^2)$ 

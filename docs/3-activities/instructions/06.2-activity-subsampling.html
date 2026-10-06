@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Activity 6.1: Random Block Effect vs Paired t-test – Statistical Methods for Study Design and Analysis</title>
+<title>Activity 6.2: Piecing it Together with Mixed Models for Subsampling – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,41 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -110,35 +75,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -384,29 +320,29 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#part-a-study-data" id="toc-part-a-study-data" class="nav-link active" data-scroll-target="#part-a-study-data">Part A: Study Data</a>
+  <li><a href="#scenario" id="toc-scenario" class="nav-link active" data-scroll-target="#scenario">Scenario</a></li>
+  <li><a href="#part-a-study-design" id="toc-part-a-study-design" class="nav-link" data-scroll-target="#part-a-study-design">Part A: Study Design</a>
   <ul class="collapse">
-  <li><a href="#read-in-the-data" id="toc-read-in-the-data" class="nav-link" data-scroll-target="#read-in-the-data">1. Read in the data</a></li>
-  <li><a href="#take-a-look-at-the-data-in-r" id="toc-take-a-look-at-the-data-in-r" class="nav-link" data-scroll-target="#take-a-look-at-the-data-in-r">2. Take a look at the data in R</a></li>
+  <li><a href="#sketch-a-design-blueprint" id="toc-sketch-a-design-blueprint" class="nav-link" data-scroll-target="#sketch-a-design-blueprint">1. Sketch a design blueprint</a></li>
+  <li><a href="#identify-the-following" id="toc-identify-the-following" class="nav-link" data-scroll-target="#identify-the-following">2. Identify the following:</a></li>
+  <li><a href="#what-is-an-extraneous-variable-that-the-researchers-should-really-account-for-in-the-design-hint-think-about-what-could-vary-or-be-the-same-between-algebra-classes-in-the-same-school" id="toc-what-is-an-extraneous-variable-that-the-researchers-should-really-account-for-in-the-design-hint-think-about-what-could-vary-or-be-the-same-between-algebra-classes-in-the-same-school" class="nav-link" data-scroll-target="#what-is-an-extraneous-variable-that-the-researchers-should-really-account-for-in-the-design-hint-think-about-what-could-vary-or-be-the-same-between-algebra-classes-in-the-same-school">3. What is an extraneous variable that the researchers should really account for in the design? (hint: think about what could vary OR be the same between Algebra classes in the same school…)</a></li>
   </ul></li>
-  <li><a href="#part-b-paired-t-test" id="toc-part-b-paired-t-test" class="nav-link" data-scroll-target="#part-b-paired-t-test">Part B: Paired t-test</a>
+  <li><a href="#part-b-analysis" id="toc-part-b-analysis" class="nav-link" data-scroll-target="#part-b-analysis">Part B: Analysis</a>
   <ul class="collapse">
-  <li><a href="#using-the-skills-from-your-stat-iii-course-conduct-and-interpret-a-paired-t-test." id="toc-using-the-skills-from-your-stat-iii-course-conduct-and-interpret-a-paired-t-test." class="nav-link" data-scroll-target="#using-the-skills-from-your-stat-iii-course-conduct-and-interpret-a-paired-t-test.">3. Using the skills from your Stat I/II course, conduct and interpret a paired t-test.</a></li>
+  <li><a href="#write-out-the-statistical-effects-model-defining-all-terms-and-notation.-which-elements-are-random-which-are-fixed-parameters" id="toc-write-out-the-statistical-effects-model-defining-all-terms-and-notation.-which-elements-are-random-which-are-fixed-parameters" class="nav-link" data-scroll-target="#write-out-the-statistical-effects-model-defining-all-terms-and-notation.-which-elements-are-random-which-are-fixed-parameters">4. Write out the statistical effects model, defining all terms and notation. Which elements are random? Which are (fixed) parameters?</a></li>
+  <li><a href="#provide-the-skeleton-of-the-anova-table-for-the-analysis-of-this-experiment-including-the-subsampling-effect." id="toc-provide-the-skeleton-of-the-anova-table-for-the-analysis-of-this-experiment-including-the-subsampling-effect." class="nav-link" data-scroll-target="#provide-the-skeleton-of-the-anova-table-for-the-analysis-of-this-experiment-including-the-subsampling-effect.">5. Provide the skeleton of the ANOVA table for the analysis of this experiment, including the subsampling effect.</a></li>
+  <li><a href="#what-is-the-denominator-df-for-testing-the-effect-of-instructional-method-what-about-the-interaction-effect" id="toc-what-is-the-denominator-df-for-testing-the-effect-of-instructional-method-what-about-the-interaction-effect" class="nav-link" data-scroll-target="#what-is-the-denominator-df-for-testing-the-effect-of-instructional-method-what-about-the-interaction-effect">6. What is the denominator DF for testing the effect of instructional method? What about the interaction effect?</a></li>
+  <li><a href="#write-the-appropriate-r-formula-to-fit-the-lmm-assuming-that-you-are-using-the-data-called-school_data-shown-in-the-scenario" id="toc-write-the-appropriate-r-formula-to-fit-the-lmm-assuming-that-you-are-using-the-data-called-school_data-shown-in-the-scenario" class="nav-link" data-scroll-target="#write-the-appropriate-r-formula-to-fit-the-lmm-assuming-that-you-are-using-the-data-called-school_data-shown-in-the-scenario">7. Write the appropriate <em>R formula</em> to fit the LMM assuming that you are using the data (called <code>school_data</code>) shown in the scenario:</a></li>
+  <li><a href="#the-output-from-summary-is-shown-for-both-the-appropriate-lmm-analyzing-the-data-at-the-student-level-and-simple-linear-model-analyzing-the-data-at-the-classroom-level.-what-do-you-notice-what-additional-information-do-you-gain-from-the-lmm" id="toc-the-output-from-summary-is-shown-for-both-the-appropriate-lmm-analyzing-the-data-at-the-student-level-and-simple-linear-model-analyzing-the-data-at-the-classroom-level.-what-do-you-notice-what-additional-information-do-you-gain-from-the-lmm" class="nav-link" data-scroll-target="#the-output-from-summary-is-shown-for-both-the-appropriate-lmm-analyzing-the-data-at-the-student-level-and-simple-linear-model-analyzing-the-data-at-the-classroom-level.-what-do-you-notice-what-additional-information-do-you-gain-from-the-lmm">8. The output from <code>summary()</code> is shown for both the appropriate LMM (analyzing the data at the <em>student</em> level) and simple linear model (analyzing the data at the <em>classroom</em> level). What do you notice? What additional information do you gain from the LMM?</a></li>
+  <li><a href="#in-the-lmm-analysis-what-does-the-residual-line-in-the-random-effects-the-give-an-estimate-of-how-would-you-interpret-that-estimate-in-context" id="toc-in-the-lmm-analysis-what-does-the-residual-line-in-the-random-effects-the-give-an-estimate-of-how-would-you-interpret-that-estimate-in-context" class="nav-link" data-scroll-target="#in-the-lmm-analysis-what-does-the-residual-line-in-the-random-effects-the-give-an-estimate-of-how-would-you-interpret-that-estimate-in-context">9. In the LMM analysis, what does the “Residual” line in the “Random Effects” the give an estimate of? How would you interpret that estimate in context?</a></li>
   </ul></li>
-  <li><a href="#part-c-study-design" id="toc-part-c-study-design" class="nav-link" data-scroll-target="#part-c-study-design">Part C: Study Design</a>
+  <li><a href="#part-c-thinking-ahead" id="toc-part-c-thinking-ahead" class="nav-link" data-scroll-target="#part-c-thinking-ahead">Part C: Thinking Ahead</a>
   <ul class="collapse">
-  <li><a href="#thinking-about-this-in-the-experimental-design-framework-draw-a-blueprint-and-identify-the-treatment-and-design-structures." id="toc-thinking-about-this-in-the-experimental-design-framework-draw-a-blueprint-and-identify-the-treatment-and-design-structures." class="nav-link" data-scroll-target="#thinking-about-this-in-the-experimental-design-framework-draw-a-blueprint-and-identify-the-treatment-and-design-structures.">4. Thinking about this in the experimental design framework, draw a blueprint and identify the treatment and design structures.</a></li>
-  <li><a href="#why-is-it-important-the-researchers-randomized-the-order-in-which-the-forms-black-or-different-color-were-given-to-subjects" id="toc-why-is-it-important-the-researchers-randomized-the-order-in-which-the-forms-black-or-different-color-were-given-to-subjects" class="nav-link" data-scroll-target="#why-is-it-important-the-researchers-randomized-the-order-in-which-the-forms-black-or-different-color-were-given-to-subjects">5. Why is it important the researchers randomized the order in which the forms (black or different color) were given to subjects?</a></li>
-  </ul></li>
-  <li><a href="#part-d-linear-mixed-model" id="toc-part-d-linear-mixed-model" class="nav-link" data-scroll-target="#part-d-linear-mixed-model">Part D: Linear Mixed Model</a>
-  <ul class="collapse">
-  <li><a href="#define-the-statistical-effects-model-in-context." id="toc-define-the-statistical-effects-model-in-context." class="nav-link" data-scroll-target="#define-the-statistical-effects-model-in-context.">6. Define the statistical effects model in context.</a></li>
-  <li><a href="#based-on-your-treatment-and-design-structure-above-write-out-the-skeleton-anova." id="toc-based-on-your-treatment-and-design-structure-above-write-out-the-skeleton-anova." class="nav-link" data-scroll-target="#based-on-your-treatment-and-design-structure-above-write-out-the-skeleton-anova.">7. Based on your treatment and design structure above, write out the skeleton ANOVA.</a></li>
-  <li><a href="#now-fit-the-appropriate-linear-mixed-model-lmm-in-r." id="toc-now-fit-the-appropriate-linear-mixed-model-lmm-in-r." class="nav-link" data-scroll-target="#now-fit-the-appropriate-linear-mixed-model-lmm-in-r.">8. Now, fit the appropriate Linear Mixed Model (LMM) in R.</a></li>
-  <li><a href="#compare-your-results-between-3-and-8.-what-do-you-notice" id="toc-compare-your-results-between-3-and-8.-what-do-you-notice" class="nav-link" data-scroll-target="#compare-your-results-between-3-and-8.-what-do-you-notice">9. Compare your results between (3) and (8). What do you notice?</a></li>
+  <li><a href="#we-have-called-these-models-lmms-but-some-people-also-call-them-hierarchical-models.-why-does-it-make-sense-to-describe-this-study-as-having-a-hierarchical-structure" id="toc-we-have-called-these-models-lmms-but-some-people-also-call-them-hierarchical-models.-why-does-it-make-sense-to-describe-this-study-as-having-a-hierarchical-structure" class="nav-link" data-scroll-target="#we-have-called-these-models-lmms-but-some-people-also-call-them-hierarchical-models.-why-does-it-make-sense-to-describe-this-study-as-having-a-hierarchical-structure">10. We have called these models LMMs, but some people also call them hierarchical models. Why does it make sense to describe this study as having a “hierarchical” structure?</a></li>
+  <li><a href="#education-is-a-very-classic-setting-for-hierarchical-models-when-conducting-studies-what-is-another-setting-application-that-you-could-imagine-hierarchical-designs-and-analyses-being-common" id="toc-education-is-a-very-classic-setting-for-hierarchical-models-when-conducting-studies-what-is-another-setting-application-that-you-could-imagine-hierarchical-designs-and-analyses-being-common" class="nav-link" data-scroll-target="#education-is-a-very-classic-setting-for-hierarchical-models-when-conducting-studies-what-is-another-setting-application-that-you-could-imagine-hierarchical-designs-and-analyses-being-common">11. Education is a very classic setting for hierarchical models when conducting studies! What is another setting / application that you could imagine hierarchical designs and analyses being common?</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="06.1-activity-color-interference.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="06.2-activity-subsampling.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -414,8 +350,8 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Activity 6.1: Random Block Effect vs Paired t-test</h1>
-<p class="subtitle lead">Color Interference</p>
+<h1 class="title">Activity 6.2: Piecing it Together with Mixed Models for Subsampling</h1>
+<p class="subtitle lead">School Curriculum</p>
 </div>
 
 
@@ -445,148 +381,137 @@ Warning
 <ul>
 <li><p>Submit via Gradescope, don’t forget to assign pages to the questions in the outline!</p></li>
 <li><p>Delete any extraneous instructions (<strong>like this box</strong>) before submission. <em>You will be deducted points from now on if you do not follow this instruction!</em></p></li>
-<li><p>Remember that it’s okay if you cannot get the .qmd to render to submit this!! I will help you but you can also use any of the other formats.</p></li>
-<li><p>You should follow the qmd template for coding: <a href="../student/06.1-activity-color-interference.qmd">06.1-activity-color-interference.qmd</a></p></li>
-<li><p>You can download the data on Canvas or here:</p>
+<li><p>There is no coding required for this activity! <strong>I would recommend you complete it using the Word version</strong>, but you are still welcome to use the .qmd template: <a href="../student/06.2-activity-subsampling.qmd">06.2-activity-subsampling.qmd</a>.</p>
 <ul>
-<li><strong>wide</strong>: <a href="../_data/06-color-interference-wide.csv">06-color-interference-wide.csv</a></li>
-<li><strong>long</strong>: <a href="../_data/06-color-interference-long.csv">06-color-interference-long.csv</a></li>
+<li>If you use the .qmd template, you will need to refer to the online instructions to see the referenced output</li>
 </ul></li>
 </ul>
 </div>
 </div>
-<p>The abstract of the article <em>Studies of interference in serial verbal reactions</em> in the Journal of Experimental Psychology<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> reads:</p>
-<blockquote class="blockquote">
-<p>In this study pairs of conflicting stimuli, both being inherent aspects of the same symbols, were presented simultaneously (a name of one color printed in the ink of another color—a word stimulus and a color stimulus). The difference in time for reading the words printed in colors and the same words printed in black is the measure of interference of color stimuli upon reading words. The interference of conflicting color stimuli upon the time for reading 100 words (each word naming a color unlike the ink-color of its print) caused an increase of 2.3 seconds or 5.6% over the normal time for reading the same words printed in black.</p>
-</blockquote>
-<div class="cell" data-layout-align="center">
+<section id="scenario" class="level2">
+<h2 class="anchored" data-anchor-id="scenario">Scenario</h2>
+<p>To investigate the impact of a new algebra curriculum and different instructional methods on math skills on students in Texas, researchers randomly selected 20 high schools in Texas (all from different districts and that had at least 4 algebra classes at the school in a semester).</p>
+<p>Within each school, four algebra classes were chosen, with each assigned to a unique combination of algebra curriculum and instructional method. The algebra curriculum included (1) a new online tutor-assisted curriculum (<strong>novel tutor</strong>) and (2) a standard curriculum for Texas high schools (<strong>standard</strong>). The instructional methods (1) teacher-led non-interactive lectures (<strong>non-interactive</strong>), and (2) teacher-led interactive lectures with group activities (<strong>interactive</strong>).</p>
+<p>This resulted in a total of 80 classrooms, each with <em>approximately</em> 30 students, yielding a total of 1,800 students in the study. At the end of the school year, all students took standardized math test scored on a 0 to 100 scale. We also have their score on the test from the year <em>before</em> they took algebra.</p>
+<p>Here are the first couple of rows of our data:</p>
+<div class="cell">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/earobinson95/stat323-calpoly/blob/main/flipped-style/06-random-and-mixed/images/black-diffcol-texts.png?raw=true" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
-</figure>
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 17%">
+<col style="width: 20%">
+<col style="width: 23%">
+<col style="width: 13%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">school</th>
+<th style="text-align: left;">classroom</th>
+<th style="text-align: left;">curriculum</th>
+<th style="text-align: left;">instruction</th>
+<th style="text-align: left;">student</th>
+<th style="text-align: right;">math_score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">classroom01</td>
+<td style="text-align: left;">novel - tutor</td>
+<td style="text-align: left;">non-interactive</td>
+<td style="text-align: left;">student1</td>
+<td style="text-align: right;">70.72888</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">classroom01</td>
+<td style="text-align: left;">novel - tutor</td>
+<td style="text-align: left;">non-interactive</td>
+<td style="text-align: left;">student2</td>
+<td style="text-align: right;">59.49873</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">classroom01</td>
+<td style="text-align: left;">novel - tutor</td>
+<td style="text-align: left;">non-interactive</td>
+<td style="text-align: left;">student3</td>
+<td style="text-align: right;">84.85630</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">classroom01</td>
+<td style="text-align: left;">novel - tutor</td>
+<td style="text-align: left;">non-interactive</td>
+<td style="text-align: left;">student4</td>
+<td style="text-align: right;">74.62747</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">classroom01</td>
+<td style="text-align: left;">novel - tutor</td>
+<td style="text-align: left;">non-interactive</td>
+<td style="text-align: left;">student5</td>
+<td style="text-align: right;">80.15589</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">classroom01</td>
+<td style="text-align: left;">novel - tutor</td>
+<td style="text-align: left;">non-interactive</td>
+<td style="text-align: left;">student6</td>
+<td style="text-align: right;">75.21013</td>
+</tr>
+</tbody>
+</table>
 </div>
-</div>
-</div>
-<p>The article reports on the results of a study in which seventy college undergraduates were given forms with 100 names of colors written in black ink, and the same 100 names of colors written in another color (i.e., the word purple written in green ink). The total time (in seconds) for reading the 100 words printed in black, and the total time (in seconds) for reading the 100 words printed in different colors were recorded for each subject. The order in which the forms (black or color) were given was randomized to the subjects.</p>
-<section id="part-a-study-data" class="level2">
-<h2 class="anchored" data-anchor-id="part-a-study-data">Part A: Study Data</h2>
-<section id="read-in-the-data" class="level3">
-<h3 class="anchored" data-anchor-id="read-in-the-data">1. Read in the data</h3>
-<p>Remember you need to add the correct file path for how you have things set up in the code provided!</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># read in wide and long data</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Remember, you need to add in the correct file paths in the ""!</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>color_dat_wide <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">""</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subj =</span> <span class="fu">factor</span>(subj))</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>color_dat_long <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">""</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  janitor<span class="sc">::</span><span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subj =</span> <span class="fu">factor</span>(subj),</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">text_color =</span> <span class="fu">factor</span>(text_color))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="take-a-look-at-the-data-in-r" class="level3">
-<h3 class="anchored" data-anchor-id="take-a-look-at-the-data-in-r">2. Take a look at the data in R</h3>
-<p>What are the differences between the wide and the long version of the data? <strong>Fill in the prompts below:</strong></p>
-<p><strong>Wide data</strong></p>
+<section id="part-a-study-design" class="level2">
+<h2 class="anchored" data-anchor-id="part-a-study-design">Part A: Study Design</h2>
+<section id="sketch-a-design-blueprint" class="level3">
+<h3 class="anchored" data-anchor-id="sketch-a-design-blueprint">1. Sketch a design blueprint</h3>
 <ul>
-<li>observational unit (i.e.&nbsp;one row):</li>
-<li>What does one value in the <code>black</code> column represent?:</li>
-<li>What does one value in the <code>color</code> column represent?:</li>
-<li>What does one value in the <code>difference</code> column represent?:</li>
+<li>Clearly indicate the blocking factor (show grouping)</li>
+<li>Clearly indicate the experimental units <em>and</em> measurement units</li>
+<li>Show how treatments are assigned within blocks</li>
 </ul>
-<p><strong>Long data</strong></p>
+</section>
+<section id="identify-the-following" class="level3">
+<h3 class="anchored" data-anchor-id="identify-the-following">2. Identify the following:</h3>
+<p>(bullets are fine)</p>
 <ul>
-<li>observational unit (i.e.&nbsp;one row):</li>
-<li>What is the <code>text_color</code> column?:</li>
-<li>What does one value in the <code>time_seconds</code> column represent?:</li>
-</ul>
-</section>
-</section>
-<section id="part-b-paired-t-test" class="level2">
-<h2 class="anchored" data-anchor-id="part-b-paired-t-test">Part B: Paired t-test</h2>
-<section id="using-the-skills-from-your-stat-iii-course-conduct-and-interpret-a-paired-t-test." class="level3">
-<h3 class="anchored" data-anchor-id="using-the-skills-from-your-stat-iii-course-conduct-and-interpret-a-paired-t-test.">3. Using the skills from your Stat I/II course, conduct and interpret a paired t-test.</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Paired t-test in R
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Most of you probably have not conducted this analysis in R! There are two ways to do it, which will get you the same answer!</p>
-<p>You will want to use <strong>wide</strong> data for this.</p>
-<ol type="1">
-<li><code>pair_test &lt;- t.test(wide_data$dif_var)</code></li>
-<li><code>pair_test &lt;- t.test(wide_data$resp1, wide_data$resp2, paired = T)</code></li>
-</ol>
-<p>(You should be able to figure out why both work based on your previous stat classes.)</p>
-<p>To get the standard error estimate:</p>
-<p><code>pair_test$stderr</code></p>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># paired t-test code here using wide data (color_dat_wide)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Report the following:</p>
-<ul>
-<li><p>Supporting evidence: t = __________; df = ________; p = __________)</p></li>
-<li><p>Estimated mean difference in time (<span class="math inline">\(\mu_\text{black text - color text}\)</span>): __________________</p></li>
-<li><p>Estimated standard error of the mean difference in time: _____________________</p></li>
-</ul>
-</section>
-</section>
-<section id="part-c-study-design" class="level2">
-<h2 class="anchored" data-anchor-id="part-c-study-design">Part C: Study Design</h2>
-<section id="thinking-about-this-in-the-experimental-design-framework-draw-a-blueprint-and-identify-the-treatment-and-design-structures." class="level3">
-<h3 class="anchored" data-anchor-id="thinking-about-this-in-the-experimental-design-framework-draw-a-blueprint-and-identify-the-treatment-and-design-structures.">4. Thinking about this in the experimental design framework, draw a blueprint and identify the treatment and design structures.</h3>
-<ul>
-<li><p>Blueprint:</p></li>
 <li><p>Treatment structure:</p></li>
 <li><p>Design structure:</p></li>
 </ul>
 </section>
-<section id="why-is-it-important-the-researchers-randomized-the-order-in-which-the-forms-black-or-different-color-were-given-to-subjects" class="level3">
-<h3 class="anchored" data-anchor-id="why-is-it-important-the-researchers-randomized-the-order-in-which-the-forms-black-or-different-color-were-given-to-subjects">5. Why is it important the researchers randomized the order in which the forms (black or different color) were given to subjects?</h3>
-</section>
-</section>
-<section id="part-d-linear-mixed-model" class="level2">
-<h2 class="anchored" data-anchor-id="part-d-linear-mixed-model">Part D: Linear Mixed Model</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
+<section id="what-is-an-extraneous-variable-that-the-researchers-should-really-account-for-in-the-design-hint-think-about-what-could-vary-or-be-the-same-between-algebra-classes-in-the-same-school" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-an-extraneous-variable-that-the-researchers-should-really-account-for-in-the-design-hint-think-about-what-could-vary-or-be-the-same-between-algebra-classes-in-the-same-school">3. What is an extraneous variable that the researchers should really account for in the design? (hint: think about what could vary OR be the same between Algebra classes in the same school…)</h3>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+<span class="screen-reader-only">Warning</span>Benefit of the doubt
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Use the <strong>long</strong> data <code>color_dat_long</code> for the rest of the assignment.</p>
+<p>For the rest of the assignment, assume that all is well and the researchers thought about what you raised in Q3, they just forgot to include it in the study description.</p>
 </div>
 </div>
-<section id="define-the-statistical-effects-model-in-context." class="level3">
-<h3 class="anchored" data-anchor-id="define-the-statistical-effects-model-in-context.">6. Define the statistical effects model in context.</h3>
-<p>Based on your treatment and design structure above, fill in the below to define the parameters and random variables given in the statistical effects model in the context of this study. Also indicate what values the indices can take.</p>
-<p><span class="math display">\[y_{im} = \mu + \tau_i + p_m + \epsilon_{im} \text{ where }  p_m \overset{iid}{\sim}  N(0,\sigma_{blk}^2) \text{ and }  \epsilon_{im} \overset{iid}{\sim}  N(0,\sigma_\epsilon^2)\]</span> for <span class="math inline">\(i=\)</span>________________; <span class="math inline">\(m=\)</span>________________</p>
-<p>where:</p>
-<ul>
-<li><p><span class="math inline">\(y_{ij}\)</span> is the…</p></li>
-<li><p><span class="math inline">\(\mu\)</span> is the…</p></li>
-<li><p><span class="math inline">\(\tau_i\)</span> is the…</p></li>
-<li><p><span class="math inline">\(p_m\)</span> is the…</p></li>
-<li><p><span class="math inline">\(\epsilon_{im}\)</span> is the…</p></li>
-</ul>
 </section>
-<section id="based-on-your-treatment-and-design-structure-above-write-out-the-skeleton-anova." class="level3">
-<h3 class="anchored" data-anchor-id="based-on-your-treatment-and-design-structure-above-write-out-the-skeleton-anova.">7. Based on your treatment and design structure above, write out the skeleton ANOVA.</h3>
-<p><strong>For each source of variability, indicate whether it is a fixed or random effect.</strong></p>
+</section>
+<section id="part-b-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="part-b-analysis">Part B: Analysis</h2>
+<section id="write-out-the-statistical-effects-model-defining-all-terms-and-notation.-which-elements-are-random-which-are-fixed-parameters" class="level3">
+<h3 class="anchored" data-anchor-id="write-out-the-statistical-effects-model-defining-all-terms-and-notation.-which-elements-are-random-which-are-fixed-parameters">4. Write out the statistical effects model, defining all terms and notation. Which elements are random? Which are (fixed) parameters?</h3>
+</section>
+<section id="provide-the-skeleton-of-the-anova-table-for-the-analysis-of-this-experiment-including-the-subsampling-effect." class="level3">
+<h3 class="anchored" data-anchor-id="provide-the-skeleton-of-the-anova-table-for-the-analysis-of-this-experiment-including-the-subsampling-effect.">5. Provide the skeleton of the ANOVA table for the analysis of this experiment, including the subsampling effect.</h3>
+<p>Specify which effects should be fixed and which should be random.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -634,42 +559,99 @@ Tip
 </tbody>
 </table>
 </section>
-<section id="now-fit-the-appropriate-linear-mixed-model-lmm-in-r." class="level3">
-<h3 class="anchored" data-anchor-id="now-fit-the-appropriate-linear-mixed-model-lmm-in-r.">8. Now, fit the appropriate Linear Mixed Model (LMM) in R.</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># LLM code (make sure you are using the long data!)</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># sum to zero constraint</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">contrasts =</span> <span class="fu">c</span>(<span class="st">"contr.sum"</span>, <span class="st">"contr.poly"</span>))</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># fit model</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="what-is-the-denominator-df-for-testing-the-effect-of-instructional-method-what-about-the-interaction-effect" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-denominator-df-for-testing-the-effect-of-instructional-method-what-about-the-interaction-effect">6. What is the denominator DF for testing the effect of instructional method? What about the interaction effect?</h3>
+</section>
+<section id="write-the-appropriate-r-formula-to-fit-the-lmm-assuming-that-you-are-using-the-data-called-school_data-shown-in-the-scenario" class="level3">
+<h3 class="anchored" data-anchor-id="write-the-appropriate-r-formula-to-fit-the-lmm-assuming-that-you-are-using-the-data-called-school_data-shown-in-the-scenario">7. Write the appropriate <em>R formula</em> to fit the LMM assuming that you are using the data (called <code>school_data</code>) shown in the scenario:</h3>
+<p>Formula:</p>
+<pre><code># set sum to zero constraint
+options(contrasts = c("contr.sum", "contr.poly"))
+
+# fit model
+school_mod &lt;- lmer([[WHAT FORMULA GOES HERE??]],
+                 data = school_data)</code></pre>
+</section>
+<section id="the-output-from-summary-is-shown-for-both-the-appropriate-lmm-analyzing-the-data-at-the-student-level-and-simple-linear-model-analyzing-the-data-at-the-classroom-level.-what-do-you-notice-what-additional-information-do-you-gain-from-the-lmm" class="level3">
+<h3 class="anchored" data-anchor-id="the-output-from-summary-is-shown-for-both-the-appropriate-lmm-analyzing-the-data-at-the-student-level-and-simple-linear-model-analyzing-the-data-at-the-classroom-level.-what-do-you-notice-what-additional-information-do-you-gain-from-the-lmm">8. The output from <code>summary()</code> is shown for both the appropriate LMM (analyzing the data at the <em>student</em> level) and simple linear model (analyzing the data at the <em>classroom</em> level). What do you notice? What additional information do you gain from the LMM?</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># look at model results to fill in the questions below -- this requires multiple different analyses!!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>R Analysis output for appropriate LMM for this study
 </div>
-<p>Report the following:</p>
-<ul>
-<li><p><span class="math inline">\(\hat\sigma^2_{blk} =\)</span> _____________ and <span class="math inline">\(\hat\sigma^2_\epsilon =\)</span> _______________</p></li>
-<li><p>Supporting evidence: F = __________; df = ____, _____; p = __________</p></li>
-<li><p>Estimated difference in mean time between black and colored text (i.e., ordered difference report/pairs): ________________</p></li>
-<li><p>Estimated standard error in the difference in mean time between black and colored text (i.e., ordered difference report/pairs): _____________</p></li>
-</ul>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>Random effects:
+ Groups                        Name        Variance Std.Dev.
+ school:curriculum:instruction (Intercept)  0.5054  0.7109  
+ school                        (Intercept) 64.4051  8.0253  
+ Residual                                  99.4061  9.9703
+ 
+Fixed effects:
+                         Estimate Std. Error      df t value Pr(&gt;|t|)    
+(Intercept)               70.9740     1.8078 19.0007  39.261  &lt; 2e-16 ***
+curriculum1                1.9983     0.2185 56.9996   9.146 8.92e-13 ***
+instruction1               5.5518     0.2185 56.9996  25.410  &lt; 2e-16 ***
+curriculum1:instruction1   0.2146     0.2185 56.9996   0.982     0.33 </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>R Analysis output for appropriate linear model (averaging over students)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>Random effects:
+ Groups   Name        Variance Std.Dev.
+ school   (Intercept) 64.407   8.025   
+ Residual              3.819   1.954   
+
+Fixed effects:
+                         Estimate Std. Error      df t value Pr(&gt;|t|)    
+(Intercept)               70.9740     1.8078 19.0000  39.260  &lt; 2e-16 ***
+curriculum1                1.9983     0.2185 57.0000   9.146 8.92e-13 ***
+instruction1               5.5518     0.2185 57.0000  25.410  &lt; 2e-16 ***
+curriculum1:instruction1   0.2146     0.2185 57.0000   0.982     0.33 </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>huh??
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What you saw here is <strong>not always the case</strong>! We will talk about when these two analyses will differ in class on Thursday.</p>
+</div>
+</div>
 </section>
-<section id="compare-your-results-between-3-and-8.-what-do-you-notice" class="level3">
-<h3 class="anchored" data-anchor-id="compare-your-results-between-3-and-8.-what-do-you-notice">9. Compare your results between (3) and (8). What do you notice?</h3>
+<section id="in-the-lmm-analysis-what-does-the-residual-line-in-the-random-effects-the-give-an-estimate-of-how-would-you-interpret-that-estimate-in-context" class="level3">
+<h3 class="anchored" data-anchor-id="in-the-lmm-analysis-what-does-the-residual-line-in-the-random-effects-the-give-an-estimate-of-how-would-you-interpret-that-estimate-in-context">9. In the LMM analysis, what does the “Residual” line in the “Random Effects” the give an estimate of? How would you interpret that estimate in context?</h3>
+</section>
+</section>
+<section id="part-c-thinking-ahead" class="level2">
+<h2 class="anchored" data-anchor-id="part-c-thinking-ahead">Part C: Thinking Ahead</h2>
+<section id="we-have-called-these-models-lmms-but-some-people-also-call-them-hierarchical-models.-why-does-it-make-sense-to-describe-this-study-as-having-a-hierarchical-structure" class="level3">
+<h3 class="anchored" data-anchor-id="we-have-called-these-models-lmms-but-some-people-also-call-them-hierarchical-models.-why-does-it-make-sense-to-describe-this-study-as-having-a-hierarchical-structure">10. We have called these models LMMs, but some people also call them hierarchical models. Why does it make sense to describe this study as having a “hierarchical” structure?</h3>
+</section>
+<section id="education-is-a-very-classic-setting-for-hierarchical-models-when-conducting-studies-what-is-another-setting-application-that-you-could-imagine-hierarchical-designs-and-analyses-being-common" class="level3">
+<h3 class="anchored" data-anchor-id="education-is-a-very-classic-setting-for-hierarchical-models-when-conducting-studies-what-is-another-setting-application-that-you-could-imagine-hierarchical-designs-and-analyses-being-common">11. Education is a very classic setting for hierarchical models when conducting studies! What is another setting / application that you could imagine hierarchical designs and analyses being common?</h3>
 
 
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p><a href="https://psycnet.apa.org/record/1936-01863-001">https://psycnet.apa.org/record/1936-01863-001</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

@@ -1,0 +1,2401 @@
+school,classroom,curriculum,instruction,student,math_score
+A,classroom01,novel - tutor,non-interactive,student1,70.72888023482436
+A,classroom01,novel - tutor,non-interactive,student2,59.49872543124649
+A,classroom01,novel - tutor,non-interactive,student3,84.8563016709846
+A,classroom01,novel - tutor,non-interactive,student4,74.62746580748674
+A,classroom01,novel - tutor,non-interactive,student5,80.1558870246678
+A,classroom01,novel - tutor,non-interactive,student6,75.21012550715267
+A,classroom01,novel - tutor,non-interactive,student7,71.02410619557757
+A,classroom01,novel - tutor,non-interactive,student8,68.1494833043067
+A,classroom01,novel - tutor,non-interactive,student9,90.60944081770467
+A,classroom01,novel - tutor,non-interactive,student10,59.873460661431295
+A,classroom01,novel - tutor,non-interactive,student11,77.90734442678739
+A,classroom01,novel - tutor,non-interactive,student12,62.37931228864174
+A,classroom01,novel - tutor,non-interactive,student13,75.47849200232531
+A,classroom01,novel - tutor,non-interactive,student14,70.8122095137611
+A,classroom01,novel - tutor,non-interactive,student15,60.69423529317296
+A,classroom01,novel - tutor,non-interactive,student16,76.99069839517685
+A,classroom01,novel - tutor,non-interactive,student17,71.01631480507747
+A,classroom01,novel - tutor,non-interactive,student18,75.90281946265725
+A,classroom01,novel - tutor,non-interactive,student19,63.07352594653433
+A,classroom01,novel - tutor,non-interactive,student20,86.63678826779059
+A,classroom01,novel - tutor,non-interactive,student21,53.83658976138227
+A,classroom01,novel - tutor,non-interactive,student22,47.31084806149067
+A,classroom01,novel - tutor,non-interactive,student23,74.91803094678227
+A,classroom01,novel - tutor,non-interactive,student24,68.85782802434473
+A,classroom01,novel - tutor,non-interactive,student25,74.11169440249672
+A,classroom01,novel - tutor,non-interactive,student26,67.90835764856257
+A,classroom01,novel - tutor,non-interactive,student27,73.14119964391573
+A,classroom01,novel - tutor,non-interactive,student28,61.170135346460405
+A,classroom01,novel - tutor,non-interactive,student29,49.95135705812659
+A,classroom01,novel - tutor,non-interactive,student30,42.54086915192586
+A,classroom02,standard,non-interactive,student1,77.70194829250804
+A,classroom02,standard,non-interactive,student2,71.34884240025238
+A,classroom02,standard,non-interactive,student3,54.90248476649306
+A,classroom02,standard,non-interactive,student4,76.34369606017916
+A,classroom02,standard,non-interactive,student5,62.471186884059925
+A,classroom02,standard,non-interactive,student6,74.17818197770157
+A,classroom02,standard,non-interactive,student7,64.60988151586118
+A,classroom02,standard,non-interactive,student8,66.2813077902812
+A,classroom02,standard,non-interactive,student9,52.35867035576117
+A,classroom02,standard,non-interactive,student10,75.25091337941696
+A,classroom02,standard,non-interactive,student11,76.08787079586072
+A,classroom02,standard,non-interactive,student12,72.65782433220056
+A,classroom02,standard,non-interactive,student13,88.31852699643923
+A,classroom02,standard,non-interactive,student14,72.64005332262211
+A,classroom02,standard,non-interactive,student15,75.92822791171542
+A,classroom02,standard,non-interactive,student16,68.21680712758376
+A,classroom02,standard,non-interactive,student17,57.20966117212848
+A,classroom02,standard,non-interactive,student18,60.57238743146949
+A,classroom02,standard,non-interactive,student19,76.5455222610108
+A,classroom02,standard,non-interactive,student20,65.46969422396343
+A,classroom02,standard,non-interactive,student21,73.97608130088611
+A,classroom02,standard,non-interactive,student22,68.72050789913769
+A,classroom02,standard,non-interactive,student23,61.40312481742979
+A,classroom02,standard,non-interactive,student24,64.02395237938973
+A,classroom02,standard,non-interactive,student25,52.71067807267953
+A,classroom02,standard,non-interactive,student26,71.74202430496996
+A,classroom02,standard,non-interactive,student27,78.00435575866993
+A,classroom02,standard,non-interactive,student28,49.64220352211515
+A,classroom02,standard,non-interactive,student29,78.6213773772842
+A,classroom02,standard,non-interactive,student30,65.73058288166146
+A,classroom03,novel - tutor,interactive,student1,78.82012897587268
+A,classroom03,novel - tutor,interactive,student2,100
+A,classroom03,novel - tutor,interactive,student3,73.66872402182912
+A,classroom03,novel - tutor,interactive,student4,64.0004989415945
+A,classroom03,novel - tutor,interactive,student5,83.946419246836
+A,classroom03,novel - tutor,interactive,student6,88.87314374482627
+A,classroom03,novel - tutor,interactive,student7,81.01230700278425
+A,classroom03,novel - tutor,interactive,student8,86.10185225061535
+A,classroom03,novel - tutor,interactive,student9,71.67621825834212
+A,classroom03,novel - tutor,interactive,student10,61.971009109107854
+A,classroom03,novel - tutor,interactive,student11,74.87105807344918
+A,classroom03,novel - tutor,interactive,student12,74.51842686384319
+A,classroom03,novel - tutor,interactive,student13,80.49889157046441
+A,classroom03,novel - tutor,interactive,student14,88.10021540548215
+A,classroom03,novel - tutor,interactive,student15,71.75494285076161
+A,classroom03,novel - tutor,interactive,student16,70.07451812192943
+A,classroom03,novel - tutor,interactive,student17,72.72625706313322
+A,classroom03,novel - tutor,interactive,student18,69.72160792158506
+A,classroom03,novel - tutor,interactive,student19,68.5135613056859
+A,classroom03,novel - tutor,interactive,student20,70.05814696878691
+A,classroom03,novel - tutor,interactive,student21,75.90400762758148
+A,classroom03,novel - tutor,interactive,student22,76.7068098760026
+A,classroom03,novel - tutor,interactive,student23,70.64538976679493
+A,classroom03,novel - tutor,interactive,student24,81.37419803982444
+A,classroom03,novel - tutor,interactive,student25,62.485501608424585
+A,classroom03,novel - tutor,interactive,student26,88.87158580203734
+A,classroom03,novel - tutor,interactive,student27,81.8631100199681
+A,classroom03,novel - tutor,interactive,student28,87.54762481766741
+A,classroom03,novel - tutor,interactive,student29,84.03166706465562
+A,classroom03,novel - tutor,interactive,student30,72.87212813298245
+A,classroom04,standard,interactive,student1,83.48650635144611
+A,classroom04,standard,interactive,student2,89.7164278061667
+A,classroom04,standard,interactive,student3,82.12362173003596
+A,classroom04,standard,interactive,student4,76.79437738386282
+A,classroom04,standard,interactive,student5,70.581410442784
+A,classroom04,standard,interactive,student6,69.0964771293671
+A,classroom04,standard,interactive,student7,81.70129568269999
+A,classroom04,standard,interactive,student8,80.63354171145153
+A,classroom04,standard,interactive,student9,77.00816355053689
+A,classroom04,standard,interactive,student10,66.98422671187704
+A,classroom04,standard,interactive,student11,87.8732920442036
+A,classroom04,standard,interactive,student12,78.40787543988195
+A,classroom04,standard,interactive,student13,69.95626097479659
+A,classroom04,standard,interactive,student14,74.79335503299437
+A,classroom04,standard,interactive,student15,79.47918281935199
+A,classroom04,standard,interactive,student16,94.98596428027625
+A,classroom04,standard,interactive,student17,59.89757889038016
+A,classroom04,standard,interactive,student18,71.62046979146051
+A,classroom04,standard,interactive,student19,89.51478607426255
+A,classroom04,standard,interactive,student20,79.45373773210613
+A,classroom04,standard,interactive,student21,63.09047611053854
+A,classroom04,standard,interactive,student22,68.6784440219376
+A,classroom04,standard,interactive,student23,66.73005625028537
+A,classroom04,standard,interactive,student24,81.25433384837079
+A,classroom04,standard,interactive,student25,82.31976265676704
+A,classroom04,standard,interactive,student26,84.9800751272554
+A,classroom04,standard,interactive,student27,69.35387785072955
+A,classroom04,standard,interactive,student28,76.62110224181966
+A,classroom04,standard,interactive,student29,67.31086083584857
+A,classroom04,standard,interactive,student30,77.90973431190163
+B,classroom05,standard,interactive,student1,77.45159566997428
+B,classroom05,standard,interactive,student2,75.66193789814295
+B,classroom05,standard,interactive,student3,74.68940430533448
+B,classroom05,standard,interactive,student4,76.16057030998138
+B,classroom05,standard,interactive,student5,75.90767571291454
+B,classroom05,standard,interactive,student6,84.32986738113884
+B,classroom05,standard,interactive,student7,74.38433328286914
+B,classroom05,standard,interactive,student8,77.06776605666994
+B,classroom05,standard,interactive,student9,83.81672946480826
+B,classroom05,standard,interactive,student10,73.59901204071674
+B,classroom05,standard,interactive,student11,70.59023491705491
+B,classroom05,standard,interactive,student12,91.63702085734838
+B,classroom05,standard,interactive,student13,78.15152502185667
+B,classroom05,standard,interactive,student14,76.38716053902886
+B,classroom05,standard,interactive,student15,92.68044838585767
+B,classroom05,standard,interactive,student16,81.99727870871847
+B,classroom05,standard,interactive,student17,100
+B,classroom05,standard,interactive,student18,51.86765057571335
+B,classroom05,standard,interactive,student19,75.51631990439085
+B,classroom05,standard,interactive,student20,88.10860944207847
+B,classroom05,standard,interactive,student21,87.43429814413292
+B,classroom05,standard,interactive,student22,65.33731056488995
+B,classroom05,standard,interactive,student23,66.27371094735872
+B,classroom05,standard,interactive,student24,78.96727962458192
+B,classroom05,standard,interactive,student25,74.52051657403203
+B,classroom05,standard,interactive,student26,71.5800259253166
+B,classroom05,standard,interactive,student27,77.02882238332015
+B,classroom05,standard,interactive,student28,89.3558114634043
+B,classroom05,standard,interactive,student29,79.40164007867551
+B,classroom05,standard,interactive,student30,69.55562414802692
+B,classroom06,novel - tutor,non-interactive,student1,86.18081423294414
+B,classroom06,novel - tutor,non-interactive,student2,69.74000102383316
+B,classroom06,novel - tutor,non-interactive,student3,64.65269614869673
+B,classroom06,novel - tutor,non-interactive,student4,75.83243667920385
+B,classroom06,novel - tutor,non-interactive,student5,63.06542058541471
+B,classroom06,novel - tutor,non-interactive,student6,73.99466528861815
+B,classroom06,novel - tutor,non-interactive,student7,63.41137494110272
+B,classroom06,novel - tutor,non-interactive,student8,68.45099437177053
+B,classroom06,novel - tutor,non-interactive,student9,49.204375324647685
+B,classroom06,novel - tutor,non-interactive,student10,62.416163615322766
+B,classroom06,novel - tutor,non-interactive,student11,62.661626930021896
+B,classroom06,novel - tutor,non-interactive,student12,80.48903209570842
+B,classroom06,novel - tutor,non-interactive,student13,76.18655980587653
+B,classroom06,novel - tutor,non-interactive,student14,84.21326209779768
+B,classroom06,novel - tutor,non-interactive,student15,75.43227917425732
+B,classroom06,novel - tutor,non-interactive,student16,58.85030437391445
+B,classroom06,novel - tutor,non-interactive,student17,75.43166562617179
+B,classroom06,novel - tutor,non-interactive,student18,73.59989890944945
+B,classroom06,novel - tutor,non-interactive,student19,63.583958331023894
+B,classroom06,novel - tutor,non-interactive,student20,67.64290348948387
+B,classroom06,novel - tutor,non-interactive,student21,69.50725133193741
+B,classroom06,novel - tutor,non-interactive,student22,69.80014322303037
+B,classroom06,novel - tutor,non-interactive,student23,78.99440873147728
+B,classroom06,novel - tutor,non-interactive,student24,74.74385154996257
+B,classroom06,novel - tutor,non-interactive,student25,65.58483965378716
+B,classroom06,novel - tutor,non-interactive,student26,66.7546877475092
+B,classroom06,novel - tutor,non-interactive,student27,60.92181938912532
+B,classroom06,novel - tutor,non-interactive,student28,71.48001896991558
+B,classroom06,novel - tutor,non-interactive,student29,77.11634620259936
+B,classroom06,novel - tutor,non-interactive,student30,74.95415215473734
+B,classroom07,novel - tutor,interactive,student1,92.94471595393317
+B,classroom07,novel - tutor,interactive,student2,67.33382141557914
+B,classroom07,novel - tutor,interactive,student3,94.01169835172534
+B,classroom07,novel - tutor,interactive,student4,96.01749538019466
+B,classroom07,novel - tutor,interactive,student5,86.27324116901231
+B,classroom07,novel - tutor,interactive,student6,93.10099041193953
+B,classroom07,novel - tutor,interactive,student7,84.05949930254366
+B,classroom07,novel - tutor,interactive,student8,86.80124679181372
+B,classroom07,novel - tutor,interactive,student9,70.448206711563
+B,classroom07,novel - tutor,interactive,student10,69.20666236615853
+B,classroom07,novel - tutor,interactive,student11,95.41805694086558
+B,classroom07,novel - tutor,interactive,student12,82.84429721007446
+B,classroom07,novel - tutor,interactive,student13,68.96082789935924
+B,classroom07,novel - tutor,interactive,student14,81.94915182405867
+B,classroom07,novel - tutor,interactive,student15,97.68556930181971
+B,classroom07,novel - tutor,interactive,student16,92.57572174394862
+B,classroom07,novel - tutor,interactive,student17,80.43812010631683
+B,classroom07,novel - tutor,interactive,student18,75.86816824291037
+B,classroom07,novel - tutor,interactive,student19,78.45446996899422
+B,classroom07,novel - tutor,interactive,student20,82.674129961599
+B,classroom07,novel - tutor,interactive,student21,75.90279905754134
+B,classroom07,novel - tutor,interactive,student22,80.0661082909621
+B,classroom07,novel - tutor,interactive,student23,93.32878747634639
+B,classroom07,novel - tutor,interactive,student24,92.11572161166947
+B,classroom07,novel - tutor,interactive,student25,79.7504716508338
+B,classroom07,novel - tutor,interactive,student26,100
+B,classroom07,novel - tutor,interactive,student27,80.75917204981748
+B,classroom07,novel - tutor,interactive,student28,68.41846604634087
+B,classroom07,novel - tutor,interactive,student29,92.17904259199123
+B,classroom07,novel - tutor,interactive,student30,94.3467558508046
+B,classroom08,standard,non-interactive,student1,72.30655240261696
+B,classroom08,standard,non-interactive,student2,75.6955366851857
+B,classroom08,standard,non-interactive,student3,72.02938931064968
+B,classroom08,standard,non-interactive,student4,72.59761188997645
+B,classroom08,standard,non-interactive,student5,65.46885818827964
+B,classroom08,standard,non-interactive,student6,62.647052911186236
+B,classroom08,standard,non-interactive,student7,58.76836671795588
+B,classroom08,standard,non-interactive,student8,63.88482469281425
+B,classroom08,standard,non-interactive,student9,70.20491518887461
+B,classroom08,standard,non-interactive,student10,78.73893970534961
+B,classroom08,standard,non-interactive,student11,58.71699566113743
+B,classroom08,standard,non-interactive,student12,45.2818933357371
+B,classroom08,standard,non-interactive,student13,69.92875572056481
+B,classroom08,standard,non-interactive,student14,58.28436135719035
+B,classroom08,standard,non-interactive,student15,68.57171368209357
+B,classroom08,standard,non-interactive,student16,48.7787176185514
+B,classroom08,standard,non-interactive,student17,67.06291608108229
+B,classroom08,standard,non-interactive,student18,78.80398330366762
+B,classroom08,standard,non-interactive,student19,54.33652991205233
+B,classroom08,standard,non-interactive,student20,77.6706615595382
+B,classroom08,standard,non-interactive,student21,58.5181676340318
+B,classroom08,standard,non-interactive,student22,60.302674624002144
+B,classroom08,standard,non-interactive,student23,53.52735396910634
+B,classroom08,standard,non-interactive,student24,64.72587337681583
+B,classroom08,standard,non-interactive,student25,93.66863641714747
+B,classroom08,standard,non-interactive,student26,90.67946542631393
+B,classroom08,standard,non-interactive,student27,68.05903339911268
+B,classroom08,standard,non-interactive,student28,80.1013696653283
+B,classroom08,standard,non-interactive,student29,59.09347360604587
+B,classroom08,standard,non-interactive,student30,70.7341013081856
+C,classroom09,novel - tutor,non-interactive,student1,49.46801720333616
+C,classroom09,novel - tutor,non-interactive,student2,73.94922063376696
+C,classroom09,novel - tutor,non-interactive,student3,62.353832742517625
+C,classroom09,novel - tutor,non-interactive,student4,71.0361792770961
+C,classroom09,novel - tutor,non-interactive,student5,60.13595367241744
+C,classroom09,novel - tutor,non-interactive,student6,60.916803444249304
+C,classroom09,novel - tutor,non-interactive,student7,69.03786130225912
+C,classroom09,novel - tutor,non-interactive,student8,64.86577050053157
+C,classroom09,novel - tutor,non-interactive,student9,66.29957370250108
+C,classroom09,novel - tutor,non-interactive,student10,42.41092796748893
+C,classroom09,novel - tutor,non-interactive,student11,78.77580155728955
+C,classroom09,novel - tutor,non-interactive,student12,61.22278950825427
+C,classroom09,novel - tutor,non-interactive,student13,60.1947292640433
+C,classroom09,novel - tutor,non-interactive,student14,57.74079375682903
+C,classroom09,novel - tutor,non-interactive,student15,64.89457031666788
+C,classroom09,novel - tutor,non-interactive,student16,76.4941349051092
+C,classroom09,novel - tutor,non-interactive,student17,66.8232046603734
+C,classroom09,novel - tutor,non-interactive,student18,73.15775442421636
+C,classroom09,novel - tutor,non-interactive,student19,46.72149016590764
+C,classroom09,novel - tutor,non-interactive,student20,77.13821137383738
+C,classroom09,novel - tutor,non-interactive,student21,74.05552928402722
+C,classroom09,novel - tutor,non-interactive,student22,65.21663870680685
+C,classroom09,novel - tutor,non-interactive,student23,62.555437760273435
+C,classroom09,novel - tutor,non-interactive,student24,58.200660623493505
+C,classroom09,novel - tutor,non-interactive,student25,42.68755893594779
+C,classroom09,novel - tutor,non-interactive,student26,76.88201961000438
+C,classroom09,novel - tutor,non-interactive,student27,66.47997698648066
+C,classroom09,novel - tutor,non-interactive,student28,64.60804153984436
+C,classroom09,novel - tutor,non-interactive,student29,70.65247402993185
+C,classroom09,novel - tutor,non-interactive,student30,37.43591181868854
+C,classroom10,standard,non-interactive,student1,79.3492676868785
+C,classroom10,standard,non-interactive,student2,61.76791140681933
+C,classroom10,standard,non-interactive,student3,63.32099582882253
+C,classroom10,standard,non-interactive,student4,79.78328419719878
+C,classroom10,standard,non-interactive,student5,64.84069526767833
+C,classroom10,standard,non-interactive,student6,42.63871710273146
+C,classroom10,standard,non-interactive,student7,45.46765679860024
+C,classroom10,standard,non-interactive,student8,58.86863907174447
+C,classroom10,standard,non-interactive,student9,57.89962168378662
+C,classroom10,standard,non-interactive,student10,72.29019772269531
+C,classroom10,standard,non-interactive,student11,60.16906870815864
+C,classroom10,standard,non-interactive,student12,53.9518348473053
+C,classroom10,standard,non-interactive,student13,45.596605972489726
+C,classroom10,standard,non-interactive,student14,75.3605446439502
+C,classroom10,standard,non-interactive,student15,55.09934653660928
+C,classroom10,standard,non-interactive,student16,56.21833271060675
+C,classroom10,standard,non-interactive,student17,47.42711551752368
+C,classroom10,standard,non-interactive,student18,81.03071856802603
+C,classroom10,standard,non-interactive,student19,49.091304749397764
+C,classroom10,standard,non-interactive,student20,70.86169653891298
+C,classroom10,standard,non-interactive,student21,67.68196018194885
+C,classroom10,standard,non-interactive,student22,67.92100984881051
+C,classroom10,standard,non-interactive,student23,53.19765889947467
+C,classroom10,standard,non-interactive,student24,61.15157829201195
+C,classroom10,standard,non-interactive,student25,67.78679659853003
+C,classroom10,standard,non-interactive,student26,70.47487720028639
+C,classroom10,standard,non-interactive,student27,80.56602101173405
+C,classroom10,standard,non-interactive,student28,64.13999500511412
+C,classroom10,standard,non-interactive,student29,43.044180095444126
+C,classroom10,standard,non-interactive,student30,35.72803821244391
+C,classroom11,novel - tutor,interactive,student1,83.89212526825914
+C,classroom11,novel - tutor,interactive,student2,87.86567121141158
+C,classroom11,novel - tutor,interactive,student3,76.49392084791072
+C,classroom11,novel - tutor,interactive,student4,68.97622911633218
+C,classroom11,novel - tutor,interactive,student5,80.32061127921182
+C,classroom11,novel - tutor,interactive,student6,73.92757688513072
+C,classroom11,novel - tutor,interactive,student7,85.34835011204916
+C,classroom11,novel - tutor,interactive,student8,69.57539560091271
+C,classroom11,novel - tutor,interactive,student9,65.03054416082156
+C,classroom11,novel - tutor,interactive,student10,90.81323117020418
+C,classroom11,novel - tutor,interactive,student11,40.58668813610771
+C,classroom11,novel - tutor,interactive,student12,100
+C,classroom11,novel - tutor,interactive,student13,83.97946000558001
+C,classroom11,novel - tutor,interactive,student14,74.38217350274282
+C,classroom11,novel - tutor,interactive,student15,71.1652638447551
+C,classroom11,novel - tutor,interactive,student16,66.95418933585533
+C,classroom11,novel - tutor,interactive,student17,83.78998330874522
+C,classroom11,novel - tutor,interactive,student18,85.78408747798595
+C,classroom11,novel - tutor,interactive,student19,72.3709642751754
+C,classroom11,novel - tutor,interactive,student20,83.09676885025267
+C,classroom11,novel - tutor,interactive,student21,62.80907494418723
+C,classroom11,novel - tutor,interactive,student22,86.88989161628277
+C,classroom11,novel - tutor,interactive,student23,75.56511342707283
+C,classroom11,novel - tutor,interactive,student24,77.11648089661904
+C,classroom11,novel - tutor,interactive,student25,62.61646748300156
+C,classroom11,novel - tutor,interactive,student26,71.1232499441883
+C,classroom11,novel - tutor,interactive,student27,82.10953637235038
+C,classroom11,novel - tutor,interactive,student28,80.26276009435384
+C,classroom11,novel - tutor,interactive,student29,79.41990435876681
+C,classroom11,novel - tutor,interactive,student30,62.13060085097829
+C,classroom12,standard,interactive,student1,80.25483655587313
+C,classroom12,standard,interactive,student2,65.85928423509854
+C,classroom12,standard,interactive,student3,84.9707311592089
+C,classroom12,standard,interactive,student4,74.66647118823666
+C,classroom12,standard,interactive,student5,65.75444573354139
+C,classroom12,standard,interactive,student6,63.77729507268706
+C,classroom12,standard,interactive,student7,66.78120608630677
+C,classroom12,standard,interactive,student8,77.84908831984016
+C,classroom12,standard,interactive,student9,72.3597588322248
+C,classroom12,standard,interactive,student10,70.57742117190556
+C,classroom12,standard,interactive,student11,50.36114403870087
+C,classroom12,standard,interactive,student12,83.00613785202411
+C,classroom12,standard,interactive,student13,74.22124656715867
+C,classroom12,standard,interactive,student14,76.62387250054375
+C,classroom12,standard,interactive,student15,84.20124353428919
+C,classroom12,standard,interactive,student16,79.61670768515616
+C,classroom12,standard,interactive,student17,81.43176252161469
+C,classroom12,standard,interactive,student18,81.91332055316234
+C,classroom12,standard,interactive,student19,74.65508115688466
+C,classroom12,standard,interactive,student20,75.15186208164589
+C,classroom12,standard,interactive,student21,74.6103030265807
+C,classroom12,standard,interactive,student22,68.88453460652985
+C,classroom12,standard,interactive,student23,68.20911107069665
+C,classroom12,standard,interactive,student24,52.29399413862683
+C,classroom12,standard,interactive,student25,72.23900999741454
+C,classroom12,standard,interactive,student26,69.12676462842565
+C,classroom12,standard,interactive,student27,85.4490684169799
+C,classroom12,standard,interactive,student28,54.92222842881365
+C,classroom12,standard,interactive,student29,72.39977215320194
+C,classroom12,standard,interactive,student30,78.7604955373519
+D,classroom13,novel - tutor,non-interactive,student1,57.845571280758676
+D,classroom13,novel - tutor,non-interactive,student2,61.37820085156598
+D,classroom13,novel - tutor,non-interactive,student3,64.30876031526476
+D,classroom13,novel - tutor,non-interactive,student4,67.69247717811959
+D,classroom13,novel - tutor,non-interactive,student5,62.09896743026806
+D,classroom13,novel - tutor,non-interactive,student6,78.50261892557414
+D,classroom13,novel - tutor,non-interactive,student7,45.7356065591196
+D,classroom13,novel - tutor,non-interactive,student8,39.58986714674502
+D,classroom13,novel - tutor,non-interactive,student9,47.67501140015594
+D,classroom13,novel - tutor,non-interactive,student10,67.95459571034682
+D,classroom13,novel - tutor,non-interactive,student11,50.8617840662953
+D,classroom13,novel - tutor,non-interactive,student12,62.925806720424546
+D,classroom13,novel - tutor,non-interactive,student13,69.44638466026416
+D,classroom13,novel - tutor,non-interactive,student14,59.53708855264891
+D,classroom13,novel - tutor,non-interactive,student15,64.93323745750337
+D,classroom13,novel - tutor,non-interactive,student16,57.75801927094237
+D,classroom13,novel - tutor,non-interactive,student17,58.79074699664022
+D,classroom13,novel - tutor,non-interactive,student18,64.6400730138511
+D,classroom13,novel - tutor,non-interactive,student19,62.38746070614908
+D,classroom13,novel - tutor,non-interactive,student20,52.4178407671172
+D,classroom13,novel - tutor,non-interactive,student21,68.83709277430832
+D,classroom13,novel - tutor,non-interactive,student22,59.31719714819753
+D,classroom13,novel - tutor,non-interactive,student23,71.98608931986024
+D,classroom13,novel - tutor,non-interactive,student24,76.50454132887094
+D,classroom13,novel - tutor,non-interactive,student25,73.28037604162077
+D,classroom13,novel - tutor,non-interactive,student26,49.56549245281013
+D,classroom13,novel - tutor,non-interactive,student27,62.63217694234821
+D,classroom13,novel - tutor,non-interactive,student28,38.86006028476277
+D,classroom13,novel - tutor,non-interactive,student29,54.73603048518613
+D,classroom13,novel - tutor,non-interactive,student30,73.33277565454989
+D,classroom14,standard,non-interactive,student1,46.68006664635301
+D,classroom14,standard,non-interactive,student2,59.98114591484589
+D,classroom14,standard,non-interactive,student3,58.25577288910647
+D,classroom14,standard,non-interactive,student4,53.56128413348517
+D,classroom14,standard,non-interactive,student5,45.23615592622927
+D,classroom14,standard,non-interactive,student6,42.51832138702317
+D,classroom14,standard,non-interactive,student7,47.4431548434801
+D,classroom14,standard,non-interactive,student8,59.89390122723951
+D,classroom14,standard,non-interactive,student9,44.42761995489951
+D,classroom14,standard,non-interactive,student10,57.520253196310776
+D,classroom14,standard,non-interactive,student11,54.487503871997305
+D,classroom14,standard,non-interactive,student12,59.884916356718776
+D,classroom14,standard,non-interactive,student13,56.99121466989782
+D,classroom14,standard,non-interactive,student14,45.684955501782746
+D,classroom14,standard,non-interactive,student15,58.34440148145683
+D,classroom14,standard,non-interactive,student16,48.36060391344109
+D,classroom14,standard,non-interactive,student17,81.05414317523022
+D,classroom14,standard,non-interactive,student18,62.73960784526049
+D,classroom14,standard,non-interactive,student19,58.26220963429141
+D,classroom14,standard,non-interactive,student20,62.71390061036427
+D,classroom14,standard,non-interactive,student21,51.88056560631667
+D,classroom14,standard,non-interactive,student22,49.73187696701518
+D,classroom14,standard,non-interactive,student23,66.45646281392632
+D,classroom14,standard,non-interactive,student24,63.421152546915636
+D,classroom14,standard,non-interactive,student25,46.7291874244413
+D,classroom14,standard,non-interactive,student26,54.851424245811224
+D,classroom14,standard,non-interactive,student27,41.87046803705667
+D,classroom14,standard,non-interactive,student28,73.75608680001731
+D,classroom14,standard,non-interactive,student29,46.2699516767244
+D,classroom14,standard,non-interactive,student30,70.02824997302255
+D,classroom15,standard,interactive,student1,74.27101138567792
+D,classroom15,standard,interactive,student2,63.38455076521099
+D,classroom15,standard,interactive,student3,62.388020824033106
+D,classroom15,standard,interactive,student4,88.56243766975467
+D,classroom15,standard,interactive,student5,58.39809986441663
+D,classroom15,standard,interactive,student6,58.24370143951133
+D,classroom15,standard,interactive,student7,53.8804041614337
+D,classroom15,standard,interactive,student8,62.96417870386534
+D,classroom15,standard,interactive,student9,62.893878846844686
+D,classroom15,standard,interactive,student10,61.55044608733748
+D,classroom15,standard,interactive,student11,64.30450687485411
+D,classroom15,standard,interactive,student12,72.83562071309798
+D,classroom15,standard,interactive,student13,50.69022050758861
+D,classroom15,standard,interactive,student14,64.12742863197857
+D,classroom15,standard,interactive,student15,45.71267773991847
+D,classroom15,standard,interactive,student16,57.13059678088463
+D,classroom15,standard,interactive,student17,58.946607913919145
+D,classroom15,standard,interactive,student18,65.8780786680358
+D,classroom15,standard,interactive,student19,50.2729315803161
+D,classroom15,standard,interactive,student20,87.4467186834118
+D,classroom15,standard,interactive,student21,50.13297824562621
+D,classroom15,standard,interactive,student22,59.9246266012447
+D,classroom15,standard,interactive,student23,71.92699158049147
+D,classroom15,standard,interactive,student24,79.13111996308713
+D,classroom15,standard,interactive,student25,68.55637753764753
+D,classroom15,standard,interactive,student26,85.11845424472175
+D,classroom15,standard,interactive,student27,68.15044926111466
+D,classroom15,standard,interactive,student28,83.96489695843827
+D,classroom15,standard,interactive,student29,65.54395164134574
+D,classroom15,standard,interactive,student30,74.96139620907809
+D,classroom16,novel - tutor,interactive,student1,64.08819702023746
+D,classroom16,novel - tutor,interactive,student2,61.57241524267421
+D,classroom16,novel - tutor,interactive,student3,56.95267554488743
+D,classroom16,novel - tutor,interactive,student4,64.63224798888459
+D,classroom16,novel - tutor,interactive,student5,52.23013988206188
+D,classroom16,novel - tutor,interactive,student6,75.3402726390762
+D,classroom16,novel - tutor,interactive,student7,49.04450375705077
+D,classroom16,novel - tutor,interactive,student8,57.73274539810928
+D,classroom16,novel - tutor,interactive,student9,58.67430128056248
+D,classroom16,novel - tutor,interactive,student10,75.90718484280794
+D,classroom16,novel - tutor,interactive,student11,65.89039727802113
+D,classroom16,novel - tutor,interactive,student12,84.88606932793586
+D,classroom16,novel - tutor,interactive,student13,62.10033526878025
+D,classroom16,novel - tutor,interactive,student14,63.91086019562378
+D,classroom16,novel - tutor,interactive,student15,53.99113685129621
+D,classroom16,novel - tutor,interactive,student16,73.83659937763403
+D,classroom16,novel - tutor,interactive,student17,65.73832498818453
+D,classroom16,novel - tutor,interactive,student18,54.4438068711694
+D,classroom16,novel - tutor,interactive,student19,66.71479471605899
+D,classroom16,novel - tutor,interactive,student20,77.89074098774586
+D,classroom16,novel - tutor,interactive,student21,76.07863295283057
+D,classroom16,novel - tutor,interactive,student22,54.98128074030427
+D,classroom16,novel - tutor,interactive,student23,57.96526277767448
+D,classroom16,novel - tutor,interactive,student24,66.39968140632762
+D,classroom16,novel - tutor,interactive,student25,80.079466082614
+D,classroom16,novel - tutor,interactive,student26,73.12269055239338
+D,classroom16,novel - tutor,interactive,student27,81.33081687988962
+D,classroom16,novel - tutor,interactive,student28,99.95473832490309
+D,classroom16,novel - tutor,interactive,student29,57.51128389196178
+D,classroom16,novel - tutor,interactive,student30,84.7903049737138
+E,classroom17,standard,interactive,student1,89.62340716665817
+E,classroom17,standard,interactive,student2,83.56130467192203
+E,classroom17,standard,interactive,student3,72.91343484812033
+E,classroom17,standard,interactive,student4,78.30487486446583
+E,classroom17,standard,interactive,student5,59.38408322182301
+E,classroom17,standard,interactive,student6,60.17513980378827
+E,classroom17,standard,interactive,student7,81.68509400213978
+E,classroom17,standard,interactive,student8,79.66858494259424
+E,classroom17,standard,interactive,student9,80.01226835459036
+E,classroom17,standard,interactive,student10,62.926231700302594
+E,classroom17,standard,interactive,student11,82.89582490879725
+E,classroom17,standard,interactive,student12,76.40133691595916
+E,classroom17,standard,interactive,student13,76.69207336150046
+E,classroom17,standard,interactive,student14,74.4824787799849
+E,classroom17,standard,interactive,student15,66.63612569219397
+E,classroom17,standard,interactive,student16,61.53693609258165
+E,classroom17,standard,interactive,student17,77.80220330914857
+E,classroom17,standard,interactive,student18,75.82977286536985
+E,classroom17,standard,interactive,student19,66.07906230702254
+E,classroom17,standard,interactive,student20,90.13635510229807
+E,classroom17,standard,interactive,student21,80.00785941981243
+E,classroom17,standard,interactive,student22,82.03186361601888
+E,classroom17,standard,interactive,student23,91.95274180854213
+E,classroom17,standard,interactive,student24,62.90708848772844
+E,classroom17,standard,interactive,student25,83.61472563073987
+E,classroom17,standard,interactive,student26,61.85075811337802
+E,classroom17,standard,interactive,student27,76.44483678725248
+E,classroom17,standard,interactive,student28,61.15309170236805
+E,classroom17,standard,interactive,student29,85.48218641230885
+E,classroom17,standard,interactive,student30,67.61136276087737
+E,classroom18,novel - tutor,interactive,student1,78.90751072751304
+E,classroom18,novel - tutor,interactive,student2,95.03658396824838
+E,classroom18,novel - tutor,interactive,student3,82.1946051644324
+E,classroom18,novel - tutor,interactive,student4,72.7381753978688
+E,classroom18,novel - tutor,interactive,student5,78.79593902602555
+E,classroom18,novel - tutor,interactive,student6,80.93749228158336
+E,classroom18,novel - tutor,interactive,student7,83.59272822848257
+E,classroom18,novel - tutor,interactive,student8,92.24053504339004
+E,classroom18,novel - tutor,interactive,student9,70.82846949550645
+E,classroom18,novel - tutor,interactive,student10,88.93429751500172
+E,classroom18,novel - tutor,interactive,student11,83.62427004173648
+E,classroom18,novel - tutor,interactive,student12,76.12199748217277
+E,classroom18,novel - tutor,interactive,student13,74.13315941069413
+E,classroom18,novel - tutor,interactive,student14,69.10672071917183
+E,classroom18,novel - tutor,interactive,student15,81.66288290097037
+E,classroom18,novel - tutor,interactive,student16,72.68083559412365
+E,classroom18,novel - tutor,interactive,student17,74.9069849222583
+E,classroom18,novel - tutor,interactive,student18,84.09332363950213
+E,classroom18,novel - tutor,interactive,student19,75.19656490346875
+E,classroom18,novel - tutor,interactive,student20,68.0389655552127
+E,classroom18,novel - tutor,interactive,student21,65.4189843712262
+E,classroom18,novel - tutor,interactive,student22,82.42911975724954
+E,classroom18,novel - tutor,interactive,student23,74.21477319970788
+E,classroom18,novel - tutor,interactive,student24,76.59233982041087
+E,classroom18,novel - tutor,interactive,student25,57.818341976601914
+E,classroom18,novel - tutor,interactive,student26,80.72977773522472
+E,classroom18,novel - tutor,interactive,student27,92.57801237655241
+E,classroom18,novel - tutor,interactive,student28,90.29591104526523
+E,classroom18,novel - tutor,interactive,student29,100
+E,classroom18,novel - tutor,interactive,student30,78.098722526583515
+E,classroom19,standard,non-interactive,student1,58.372995746499896
+E,classroom19,standard,non-interactive,student2,74.2258961563793
+E,classroom19,standard,non-interactive,student3,59.908182311982614
+E,classroom19,standard,non-interactive,student4,65.21933685916875
+E,classroom19,standard,non-interactive,student5,50.7485753209811
+E,classroom19,standard,non-interactive,student6,50.96615031495913
+E,classroom19,standard,non-interactive,student7,56.65759920501838
+E,classroom19,standard,non-interactive,student8,70.14869495514023
+E,classroom19,standard,non-interactive,student9,60.89815367511664
+E,classroom19,standard,non-interactive,student10,63.01617064683329
+E,classroom19,standard,non-interactive,student11,72.31809629215498
+E,classroom19,standard,non-interactive,student12,51.22879990591762
+E,classroom19,standard,non-interactive,student13,83.73395663323613
+E,classroom19,standard,non-interactive,student14,44.00454563608532
+E,classroom19,standard,non-interactive,student15,80.19543807700553
+E,classroom19,standard,non-interactive,student16,64.655100552407
+E,classroom19,standard,non-interactive,student17,62.395489231107085
+E,classroom19,standard,non-interactive,student18,84.30128471199657
+E,classroom19,standard,non-interactive,student19,68.17161345918139
+E,classroom19,standard,non-interactive,student20,67.07623080044472
+E,classroom19,standard,non-interactive,student21,55.67164608550368
+E,classroom19,standard,non-interactive,student22,74.76819953493857
+E,classroom19,standard,non-interactive,student23,66.70399469789389
+E,classroom19,standard,non-interactive,student24,69.55589149037523
+E,classroom19,standard,non-interactive,student25,48.422745197213935
+E,classroom19,standard,non-interactive,student26,72.31547726379856
+E,classroom19,standard,non-interactive,student27,60.91838797629377
+E,classroom19,standard,non-interactive,student28,65.31281059344894
+E,classroom19,standard,non-interactive,student29,50.1339212233011
+E,classroom19,standard,non-interactive,student30,65.95315373335272
+E,classroom20,novel - tutor,non-interactive,student1,61.85949899089744
+E,classroom20,novel - tutor,non-interactive,student2,60.61017392480358
+E,classroom20,novel - tutor,non-interactive,student3,65.90522902985447
+E,classroom20,novel - tutor,non-interactive,student4,73.63011726976333
+E,classroom20,novel - tutor,non-interactive,student5,70.48883397904065
+E,classroom20,novel - tutor,non-interactive,student6,56.36713827782197
+E,classroom20,novel - tutor,non-interactive,student7,58.12936741936803
+E,classroom20,novel - tutor,non-interactive,student8,79.51879907253799
+E,classroom20,novel - tutor,non-interactive,student9,72.10685229734347
+E,classroom20,novel - tutor,non-interactive,student10,56.83711351700674
+E,classroom20,novel - tutor,non-interactive,student11,68.83521131044375
+E,classroom20,novel - tutor,non-interactive,student12,81.83179790124262
+E,classroom20,novel - tutor,non-interactive,student13,61.57929920312086
+E,classroom20,novel - tutor,non-interactive,student14,65.3548642505558
+E,classroom20,novel - tutor,non-interactive,student15,83.99456939334937
+E,classroom20,novel - tutor,non-interactive,student16,77.22835669734717
+E,classroom20,novel - tutor,non-interactive,student17,69.21548831256662
+E,classroom20,novel - tutor,non-interactive,student18,63.583533635750236
+E,classroom20,novel - tutor,non-interactive,student19,85.06713135769328
+E,classroom20,novel - tutor,non-interactive,student20,60.25308409263281
+E,classroom20,novel - tutor,non-interactive,student21,65.60085576652845
+E,classroom20,novel - tutor,non-interactive,student22,62.74646616394765
+E,classroom20,novel - tutor,non-interactive,student23,61.99458061053281
+E,classroom20,novel - tutor,non-interactive,student24,63.41062535112052
+E,classroom20,novel - tutor,non-interactive,student25,57.70596675261703
+E,classroom20,novel - tutor,non-interactive,student26,83.58757846290544
+E,classroom20,novel - tutor,non-interactive,student27,69.2116818011409
+E,classroom20,novel - tutor,non-interactive,student28,85.7214767540218
+E,classroom20,novel - tutor,non-interactive,student29,62.38522598783944
+E,classroom20,novel - tutor,non-interactive,student30,72.89015860211711
+F,classroom21,standard,non-interactive,student1,50.53126129088574
+F,classroom21,standard,non-interactive,student2,55.51237210110041
+F,classroom21,standard,non-interactive,student3,62.75123656759635
+F,classroom21,standard,non-interactive,student4,49.050507965914726
+F,classroom21,standard,non-interactive,student5,77.71304319245823
+F,classroom21,standard,non-interactive,student6,61.1622501311125
+F,classroom21,standard,non-interactive,student7,50.85874491461346
+F,classroom21,standard,non-interactive,student8,29.59514847348239
+F,classroom21,standard,non-interactive,student9,57.466950060717245
+F,classroom21,standard,non-interactive,student10,49.523542564760056
+F,classroom21,standard,non-interactive,student11,54.697175061755715
+F,classroom21,standard,non-interactive,student12,57.213058639230866
+F,classroom21,standard,non-interactive,student13,49.637677725683375
+F,classroom21,standard,non-interactive,student14,43.66095802554543
+F,classroom21,standard,non-interactive,student15,70.44865895440364
+F,classroom21,standard,non-interactive,student16,51.800324786134354
+F,classroom21,standard,non-interactive,student17,72.98813020427514
+F,classroom21,standard,non-interactive,student18,57.20165603588837
+F,classroom21,standard,non-interactive,student19,41.48488473249489
+F,classroom21,standard,non-interactive,student20,53.12879565834133
+F,classroom21,standard,non-interactive,student21,55.778740526604615
+F,classroom21,standard,non-interactive,student22,53.97488147138789
+F,classroom21,standard,non-interactive,student23,61.29552024343223
+F,classroom21,standard,non-interactive,student24,49.213869516684625
+F,classroom21,standard,non-interactive,student25,59.96368191496386
+F,classroom21,standard,non-interactive,student26,48.522114841806754
+F,classroom21,standard,non-interactive,student27,52.76530577975508
+F,classroom21,standard,non-interactive,student28,56.365562373290174
+F,classroom21,standard,non-interactive,student29,42.10535414400131
+F,classroom21,standard,non-interactive,student30,51.69112412070624
+F,classroom22,standard,interactive,student1,69.60961818685175
+F,classroom22,standard,interactive,student2,49.715189826889414
+F,classroom22,standard,interactive,student3,56.18961844924191
+F,classroom22,standard,interactive,student4,67.26504817948926
+F,classroom22,standard,interactive,student5,81.53364225039343
+F,classroom22,standard,interactive,student6,58.31716232672054
+F,classroom22,standard,interactive,student7,72.61643494631303
+F,classroom22,standard,interactive,student8,71.69502420618065
+F,classroom22,standard,interactive,student9,74.56542439152068
+F,classroom22,standard,interactive,student10,62.29271788992257
+F,classroom22,standard,interactive,student11,85.09614995194772
+F,classroom22,standard,interactive,student12,69.0937774568429
+F,classroom22,standard,interactive,student13,71.86385709725329
+F,classroom22,standard,interactive,student14,63.52826534262099
+F,classroom22,standard,interactive,student15,83.10621017644412
+F,classroom22,standard,interactive,student16,63.98233004361754
+F,classroom22,standard,interactive,student17,45.23347602414113
+F,classroom22,standard,interactive,student18,47.13776473545832
+F,classroom22,standard,interactive,student19,67.27955072227789
+F,classroom22,standard,interactive,student20,79.30463389214479
+F,classroom22,standard,interactive,student21,66.37479839835171
+F,classroom22,standard,interactive,student22,68.40738850912106
+F,classroom22,standard,interactive,student23,56.84454385637233
+F,classroom22,standard,interactive,student24,57.646134931667504
+F,classroom22,standard,interactive,student25,65.59675456287908
+F,classroom22,standard,interactive,student26,61.43687800013695
+F,classroom22,standard,interactive,student27,63.07745072653079
+F,classroom22,standard,interactive,student28,54.218340711525
+F,classroom22,standard,interactive,student29,50.92291481284404
+F,classroom22,standard,interactive,student30,60.20695941121173
+F,classroom23,novel - tutor,non-interactive,student1,55.81243491218991
+F,classroom23,novel - tutor,non-interactive,student2,66.22436964865446
+F,classroom23,novel - tutor,non-interactive,student3,56.81358244831305
+F,classroom23,novel - tutor,non-interactive,student4,55.80471651156188
+F,classroom23,novel - tutor,non-interactive,student5,63.875527344449495
+F,classroom23,novel - tutor,non-interactive,student6,47.057893203055414
+F,classroom23,novel - tutor,non-interactive,student7,62.17568924649338
+F,classroom23,novel - tutor,non-interactive,student8,59.90680196459422
+F,classroom23,novel - tutor,non-interactive,student9,59.14183224231439
+F,classroom23,novel - tutor,non-interactive,student10,50.59794368779245
+F,classroom23,novel - tutor,non-interactive,student11,59.058261210457324
+F,classroom23,novel - tutor,non-interactive,student12,71.78446357433444
+F,classroom23,novel - tutor,non-interactive,student13,44.223365497771084
+F,classroom23,novel - tutor,non-interactive,student14,67.20749813647
+F,classroom23,novel - tutor,non-interactive,student15,47.37746584575038
+F,classroom23,novel - tutor,non-interactive,student16,63.08414078268592
+F,classroom23,novel - tutor,non-interactive,student17,42.68935276012587
+F,classroom23,novel - tutor,non-interactive,student18,54.82913032432379
+F,classroom23,novel - tutor,non-interactive,student19,54.32933918318207
+F,classroom23,novel - tutor,non-interactive,student20,50.788063336256215
+F,classroom23,novel - tutor,non-interactive,student21,52.523390438928814
+F,classroom23,novel - tutor,non-interactive,student22,52.81164277177251
+F,classroom23,novel - tutor,non-interactive,student23,52.37035763704981
+F,classroom23,novel - tutor,non-interactive,student24,53.75105679761816
+F,classroom23,novel - tutor,non-interactive,student25,50.60474721881529
+F,classroom23,novel - tutor,non-interactive,student26,60.27109615239136
+F,classroom23,novel - tutor,non-interactive,student27,61.435740388842284
+F,classroom23,novel - tutor,non-interactive,student28,63.56730624960916
+F,classroom23,novel - tutor,non-interactive,student29,52.82883616955528
+F,classroom23,novel - tutor,non-interactive,student30,50.771460110474365
+F,classroom24,novel - tutor,interactive,student1,61.157144343445836
+F,classroom24,novel - tutor,interactive,student2,69.25583606011186
+F,classroom24,novel - tutor,interactive,student3,60.45939274486827
+F,classroom24,novel - tutor,interactive,student4,84.4776093345544
+F,classroom24,novel - tutor,interactive,student5,76.40841469372916
+F,classroom24,novel - tutor,interactive,student6,62.87135754669854
+F,classroom24,novel - tutor,interactive,student7,81.35055529684797
+F,classroom24,novel - tutor,interactive,student8,64.27834882872065
+F,classroom24,novel - tutor,interactive,student9,71.5622775314087
+F,classroom24,novel - tutor,interactive,student10,71.37322908428446
+F,classroom24,novel - tutor,interactive,student11,80.4586426329227
+F,classroom24,novel - tutor,interactive,student12,57.623968547872344
+F,classroom24,novel - tutor,interactive,student13,77.20761755472974
+F,classroom24,novel - tutor,interactive,student14,55.005452942693395
+F,classroom24,novel - tutor,interactive,student15,53.283772955243776
+F,classroom24,novel - tutor,interactive,student16,80.39702369192516
+F,classroom24,novel - tutor,interactive,student17,82.17444429571256
+F,classroom24,novel - tutor,interactive,student18,92.29194099265108
+F,classroom24,novel - tutor,interactive,student19,92.7355266085915
+F,classroom24,novel - tutor,interactive,student20,63.48512848798886
+F,classroom24,novel - tutor,interactive,student21,56.987133979112905
+F,classroom24,novel - tutor,interactive,student22,48.744431584009824
+F,classroom24,novel - tutor,interactive,student23,73.27143272349393
+F,classroom24,novel - tutor,interactive,student24,59.261502052604506
+F,classroom24,novel - tutor,interactive,student25,66.35690938413128
+F,classroom24,novel - tutor,interactive,student26,70.75438571569653
+F,classroom24,novel - tutor,interactive,student27,65.40588482116036
+F,classroom24,novel - tutor,interactive,student28,73.32806387912326
+F,classroom24,novel - tutor,interactive,student29,75.04601655634303
+F,classroom24,novel - tutor,interactive,student30,78.56758213150131
+G,classroom25,standard,interactive,student1,67.66880271608873
+G,classroom25,standard,interactive,student2,62.055786777142664
+G,classroom25,standard,interactive,student3,65.67443430495524
+G,classroom25,standard,interactive,student4,78.28284219019535
+G,classroom25,standard,interactive,student5,69.79293637555065
+G,classroom25,standard,interactive,student6,68.12468092773052
+G,classroom25,standard,interactive,student7,75.35902405704384
+G,classroom25,standard,interactive,student8,74.03656510521344
+G,classroom25,standard,interactive,student9,85.79953158034529
+G,classroom25,standard,interactive,student10,54.31045338785368
+G,classroom25,standard,interactive,student11,82.85636104868782
+G,classroom25,standard,interactive,student12,47.76823954035001
+G,classroom25,standard,interactive,student13,66.99505109661459
+G,classroom25,standard,interactive,student14,94.35455118054163
+G,classroom25,standard,interactive,student15,68.57113917809208
+G,classroom25,standard,interactive,student16,71.25865732306305
+G,classroom25,standard,interactive,student17,69.82379080185183
+G,classroom25,standard,interactive,student18,78.02516274291176
+G,classroom25,standard,interactive,student19,70.36873237039262
+G,classroom25,standard,interactive,student20,70.81972274423234
+G,classroom25,standard,interactive,student21,66.5689857746968
+G,classroom25,standard,interactive,student22,69.72863532775987
+G,classroom25,standard,interactive,student23,59.11223435673707
+G,classroom25,standard,interactive,student24,79.21891963405338
+G,classroom25,standard,interactive,student25,54.47462321643002
+G,classroom25,standard,interactive,student26,78.53574984894904
+G,classroom25,standard,interactive,student27,84.70566578476726
+G,classroom25,standard,interactive,student28,57.12538987669903
+G,classroom25,standard,interactive,student29,62.474224564400586
+G,classroom25,standard,interactive,student30,71.60969482920632
+G,classroom26,novel - tutor,non-interactive,student1,52.572407698715665
+G,classroom26,novel - tutor,non-interactive,student2,62.68711135045116
+G,classroom26,novel - tutor,non-interactive,student3,70.50148894445844
+G,classroom26,novel - tutor,non-interactive,student4,43.60354036316339
+G,classroom26,novel - tutor,non-interactive,student5,64.6414704845613
+G,classroom26,novel - tutor,non-interactive,student6,67.69678819244237
+G,classroom26,novel - tutor,non-interactive,student7,53.457230657829406
+G,classroom26,novel - tutor,non-interactive,student8,81.81877940044318
+G,classroom26,novel - tutor,non-interactive,student9,60.68151374247374
+G,classroom26,novel - tutor,non-interactive,student10,69.09111406334087
+G,classroom26,novel - tutor,non-interactive,student11,67.70322693477031
+G,classroom26,novel - tutor,non-interactive,student12,53.10726943783209
+G,classroom26,novel - tutor,non-interactive,student13,58.92221648028402
+G,classroom26,novel - tutor,non-interactive,student14,71.59259505748278
+G,classroom26,novel - tutor,non-interactive,student15,59.95687318629801
+G,classroom26,novel - tutor,non-interactive,student16,73.41816273446763
+G,classroom26,novel - tutor,non-interactive,student17,71.97911697029447
+G,classroom26,novel - tutor,non-interactive,student18,70.92377221436384
+G,classroom26,novel - tutor,non-interactive,student19,65.29266092280687
+G,classroom26,novel - tutor,non-interactive,student20,75.67346076454223
+G,classroom26,novel - tutor,non-interactive,student21,63.6133464026932
+G,classroom26,novel - tutor,non-interactive,student22,55.3482830230962
+G,classroom26,novel - tutor,non-interactive,student23,46.20384237418095
+G,classroom26,novel - tutor,non-interactive,student24,62.85316365876999
+G,classroom26,novel - tutor,non-interactive,student25,55.27003843861397
+G,classroom26,novel - tutor,non-interactive,student26,55.12914607327825
+G,classroom26,novel - tutor,non-interactive,student27,78.94081360936049
+G,classroom26,novel - tutor,non-interactive,student28,68.67643014644207
+G,classroom26,novel - tutor,non-interactive,student29,75.78605538727349
+G,classroom26,novel - tutor,non-interactive,student30,65.05746508086128
+G,classroom27,standard,non-interactive,student1,44.392843372822924
+G,classroom27,standard,non-interactive,student2,43.055183492063996
+G,classroom27,standard,non-interactive,student3,64.51077144552073
+G,classroom27,standard,non-interactive,student4,42.42329529459032
+G,classroom27,standard,non-interactive,student5,50.35196065849176
+G,classroom27,standard,non-interactive,student6,63.167364814082624
+G,classroom27,standard,non-interactive,student7,43.93958180193462
+G,classroom27,standard,non-interactive,student8,68.61281020125224
+G,classroom27,standard,non-interactive,student9,67.39491351171549
+G,classroom27,standard,non-interactive,student10,49.4596902336378
+G,classroom27,standard,non-interactive,student11,66.18378767643621
+G,classroom27,standard,non-interactive,student12,61.1880004448734
+G,classroom27,standard,non-interactive,student13,56.46128970986361
+G,classroom27,standard,non-interactive,student14,56.9428486707456
+G,classroom27,standard,non-interactive,student15,50.07487860266762
+G,classroom27,standard,non-interactive,student16,63.99127961152275
+G,classroom27,standard,non-interactive,student17,57.3517379622094
+G,classroom27,standard,non-interactive,student18,66.96402627190365
+G,classroom27,standard,non-interactive,student19,61.18980584840208
+G,classroom27,standard,non-interactive,student20,60.80194965665255
+G,classroom27,standard,non-interactive,student21,51.66384614584969
+G,classroom27,standard,non-interactive,student22,65.87733083258824
+G,classroom27,standard,non-interactive,student23,56.4305800820019
+G,classroom27,standard,non-interactive,student24,65.58606586498934
+G,classroom27,standard,non-interactive,student25,68.31216893018556
+G,classroom27,standard,non-interactive,student26,72.86191673146595
+G,classroom27,standard,non-interactive,student27,78.29509380576998
+G,classroom27,standard,non-interactive,student28,83.0766211250882
+G,classroom27,standard,non-interactive,student29,63.38730936645258
+G,classroom27,standard,non-interactive,student30,59.08883145326023
+G,classroom28,novel - tutor,interactive,student1,63.085776113700035
+G,classroom28,novel - tutor,interactive,student2,79.16894549468877
+G,classroom28,novel - tutor,interactive,student3,81.19378722200776
+G,classroom28,novel - tutor,interactive,student4,66.46018509942215
+G,classroom28,novel - tutor,interactive,student5,61.5441898104424
+G,classroom28,novel - tutor,interactive,student6,81.28410777297077
+G,classroom28,novel - tutor,interactive,student7,76.18547747898832
+G,classroom28,novel - tutor,interactive,student8,60.168828060319186
+G,classroom28,novel - tutor,interactive,student9,71.24484595315175
+G,classroom28,novel - tutor,interactive,student10,70.401336612504707
+G,classroom28,novel - tutor,interactive,student11,82.36558590035588
+G,classroom28,novel - tutor,interactive,student12,93.3109908102877
+G,classroom28,novel - tutor,interactive,student13,70.0375940114028
+G,classroom28,novel - tutor,interactive,student14,82.3481543960078
+G,classroom28,novel - tutor,interactive,student15,70.63836802448843
+G,classroom28,novel - tutor,interactive,student16,81.78473260447899
+G,classroom28,novel - tutor,interactive,student17,55.45710049451408
+G,classroom28,novel - tutor,interactive,student18,68.60925876027684
+G,classroom28,novel - tutor,interactive,student19,66.95708405721865
+G,classroom28,novel - tutor,interactive,student20,78.21969739136969
+G,classroom28,novel - tutor,interactive,student21,85.64943230815537
+G,classroom28,novel - tutor,interactive,student22,82.6672768626979
+G,classroom28,novel - tutor,interactive,student23,82.34244168793735
+G,classroom28,novel - tutor,interactive,student24,76.56666993625744
+G,classroom28,novel - tutor,interactive,student25,89.11248355880275
+G,classroom28,novel - tutor,interactive,student26,75.73578873752265
+G,classroom28,novel - tutor,interactive,student27,90.36348089221289
+G,classroom28,novel - tutor,interactive,student28,65.30781688412026
+G,classroom28,novel - tutor,interactive,student29,92.59351690693904
+G,classroom28,novel - tutor,interactive,student30,83.62268637343465
+H,classroom29,standard,non-interactive,student1,67.57512236674269
+H,classroom29,standard,non-interactive,student2,68.21861746331238
+H,classroom29,standard,non-interactive,student3,65.23911351416781
+H,classroom29,standard,non-interactive,student4,66.5955402580562
+H,classroom29,standard,non-interactive,student5,70.75652759535095
+H,classroom29,standard,non-interactive,student6,58.40547667385598
+H,classroom29,standard,non-interactive,student7,60.22333415417462
+H,classroom29,standard,non-interactive,student8,58.569335655885666
+H,classroom29,standard,non-interactive,student9,73.13328643230322
+H,classroom29,standard,non-interactive,student10,69.46494870000274
+H,classroom29,standard,non-interactive,student11,83.95213496164882
+H,classroom29,standard,non-interactive,student12,72.02805935939631
+H,classroom29,standard,non-interactive,student13,44.645189957897514
+H,classroom29,standard,non-interactive,student14,79.48337021214351
+H,classroom29,standard,non-interactive,student15,69.25383328015046
+H,classroom29,standard,non-interactive,student16,60.21198221505315
+H,classroom29,standard,non-interactive,student17,69.29486526729106
+H,classroom29,standard,non-interactive,student18,55.6148208750515
+H,classroom29,standard,non-interactive,student19,84.74490459051842
+H,classroom29,standard,non-interactive,student20,60.35818934962929
+H,classroom29,standard,non-interactive,student21,55.344019322652386
+H,classroom29,standard,non-interactive,student22,67.60995650923886
+H,classroom29,standard,non-interactive,student23,59.17246256474772
+H,classroom29,standard,non-interactive,student24,59.477887579848385
+H,classroom29,standard,non-interactive,student25,61.81163619469221
+H,classroom29,standard,non-interactive,student26,61.17902176081201
+H,classroom29,standard,non-interactive,student27,87.1837118966826
+H,classroom29,standard,non-interactive,student28,87.58510616166754
+H,classroom29,standard,non-interactive,student29,77.15175264632997
+H,classroom29,standard,non-interactive,student30,66.11007451084633
+H,classroom30,standard,interactive,student1,78.76200730226311
+H,classroom30,standard,interactive,student2,81.98972160777834
+H,classroom30,standard,interactive,student3,82.69751949414454
+H,classroom30,standard,interactive,student4,86.01376514860416
+H,classroom30,standard,interactive,student5,71.4015761335246
+H,classroom30,standard,interactive,student6,70.93805772167624
+H,classroom30,standard,interactive,student7,97.12805513356376
+H,classroom30,standard,interactive,student8,78.16506120091194
+H,classroom30,standard,interactive,student9,68.75920104380359
+H,classroom30,standard,interactive,student10,87.10826444471654
+H,classroom30,standard,interactive,student11,81.86800150521111
+H,classroom30,standard,interactive,student12,73.53471677688681
+H,classroom30,standard,interactive,student13,77.53878008620003
+H,classroom30,standard,interactive,student14,74.21948119486323
+H,classroom30,standard,interactive,student15,100
+H,classroom30,standard,interactive,student16,83.03050306548046
+H,classroom30,standard,interactive,student17,97.62398000521405
+H,classroom30,standard,interactive,student18,81.01202172877228
+H,classroom30,standard,interactive,student19,63.623839611750945
+H,classroom30,standard,interactive,student20,90.15747832033115
+H,classroom30,standard,interactive,student21,81.65793602399464
+H,classroom30,standard,interactive,student22,80.9223107368555
+H,classroom30,standard,interactive,student23,87.54497202798011
+H,classroom30,standard,interactive,student24,82.62705220501488
+H,classroom30,standard,interactive,student25,64.96034713547829
+H,classroom30,standard,interactive,student26,59.95179832072652
+H,classroom30,standard,interactive,student27,74.70613039736955
+H,classroom30,standard,interactive,student28,76.6410192842966
+H,classroom30,standard,interactive,student29,75.52630813384567
+H,classroom30,standard,interactive,student30,78.64862475172274
+H,classroom31,novel - tutor,non-interactive,student1,65.53026112102465
+H,classroom31,novel - tutor,non-interactive,student2,64.36276123677786
+H,classroom31,novel - tutor,non-interactive,student3,76.061321312754
+H,classroom31,novel - tutor,non-interactive,student4,70.13370220807849
+H,classroom31,novel - tutor,non-interactive,student5,69.47067715094612
+H,classroom31,novel - tutor,non-interactive,student6,82.95232962190336
+H,classroom31,novel - tutor,non-interactive,student7,66.70297469756574
+H,classroom31,novel - tutor,non-interactive,student8,59.10239833642997
+H,classroom31,novel - tutor,non-interactive,student9,66.17391139266032
+H,classroom31,novel - tutor,non-interactive,student10,59.2590804148816
+H,classroom31,novel - tutor,non-interactive,student11,78.09219083565159
+H,classroom31,novel - tutor,non-interactive,student12,83.6726706413128
+H,classroom31,novel - tutor,non-interactive,student13,70.9209417617742
+H,classroom31,novel - tutor,non-interactive,student14,76.0114564610607
+H,classroom31,novel - tutor,non-interactive,student15,54.194522527334186
+H,classroom31,novel - tutor,non-interactive,student16,69.55568471897467
+H,classroom31,novel - tutor,non-interactive,student17,79.61926998307861
+H,classroom31,novel - tutor,non-interactive,student18,82.20761569177375
+H,classroom31,novel - tutor,non-interactive,student19,72.1955146359313
+H,classroom31,novel - tutor,non-interactive,student20,83.63252214231306
+H,classroom31,novel - tutor,non-interactive,student21,83.42389971460841
+H,classroom31,novel - tutor,non-interactive,student22,60.5780189745623
+H,classroom31,novel - tutor,non-interactive,student23,68.08229478446076
+H,classroom31,novel - tutor,non-interactive,student24,84.99910068947011
+H,classroom31,novel - tutor,non-interactive,student25,74.96434770458083
+H,classroom31,novel - tutor,non-interactive,student26,75.67840380585874
+H,classroom31,novel - tutor,non-interactive,student27,54.38414727261479
+H,classroom31,novel - tutor,non-interactive,student28,63.14373289860862
+H,classroom31,novel - tutor,non-interactive,student29,73.87674158444233
+H,classroom31,novel - tutor,non-interactive,student30,69.13558306331622
+H,classroom32,novel - tutor,interactive,student1,72.94894523836362
+H,classroom32,novel - tutor,interactive,student2,72.64313749447588
+H,classroom32,novel - tutor,interactive,student3,71.6322569897684
+H,classroom32,novel - tutor,interactive,student4,70.65750447301383
+H,classroom32,novel - tutor,interactive,student5,58.9815844849596
+H,classroom32,novel - tutor,interactive,student6,82.37369464270103
+H,classroom32,novel - tutor,interactive,student7,89.66441876769092
+H,classroom32,novel - tutor,interactive,student8,78.96739735451021
+H,classroom32,novel - tutor,interactive,student9,89.35364246390604
+H,classroom32,novel - tutor,interactive,student10,86.93705694498497
+H,classroom32,novel - tutor,interactive,student11,83.64495842917326
+H,classroom32,novel - tutor,interactive,student12,79.50820936127296
+H,classroom32,novel - tutor,interactive,student13,72.988685032846
+H,classroom32,novel - tutor,interactive,student14,91.25458849441961
+H,classroom32,novel - tutor,interactive,student15,70.0928474310174
+H,classroom32,novel - tutor,interactive,student16,83.84903852831104
+H,classroom32,novel - tutor,interactive,student17,88.5891180697107
+H,classroom32,novel - tutor,interactive,student18,100
+H,classroom32,novel - tutor,interactive,student19,78.58778519450657
+H,classroom32,novel - tutor,interactive,student20,91.77090625206525
+H,classroom32,novel - tutor,interactive,student21,86.29836781406074
+H,classroom32,novel - tutor,interactive,student22,71.12735248051375
+H,classroom32,novel - tutor,interactive,student23,82.17563549794778
+H,classroom32,novel - tutor,interactive,student24,84.1470564867525
+H,classroom32,novel - tutor,interactive,student25,67.69360882418907
+H,classroom32,novel - tutor,interactive,student26,86.01718943206633
+H,classroom32,novel - tutor,interactive,student27,83.07755818938762
+H,classroom32,novel - tutor,interactive,student28,90.33202933371886
+H,classroom32,novel - tutor,interactive,student29,83.71615528867626
+H,classroom32,novel - tutor,interactive,student30,74.62155761875164
+I,classroom33,novel - tutor,interactive,student1,79.82488373806649
+I,classroom33,novel - tutor,interactive,student2,71.10642260817855
+I,classroom33,novel - tutor,interactive,student3,92.35879270702227
+I,classroom33,novel - tutor,interactive,student4,98.60996364817589
+I,classroom33,novel - tutor,interactive,student5,99.60314813759226
+I,classroom33,novel - tutor,interactive,student6,81.86784229869988
+I,classroom33,novel - tutor,interactive,student7,66.84536977568158
+I,classroom33,novel - tutor,interactive,student8,100
+I,classroom33,novel - tutor,interactive,student9,78.11330617830464
+I,classroom33,novel - tutor,interactive,student10,99.81736150335632
+I,classroom33,novel - tutor,interactive,student11,100
+I,classroom33,novel - tutor,interactive,student12,74.76113140515528
+I,classroom33,novel - tutor,interactive,student13,89.34705674797415
+I,classroom33,novel - tutor,interactive,student14,71.23448940426567
+I,classroom33,novel - tutor,interactive,student15,85.7712562978566
+I,classroom33,novel - tutor,interactive,student16,78.44189792100047
+I,classroom33,novel - tutor,interactive,student17,99.43851758236525
+I,classroom33,novel - tutor,interactive,student18,100
+I,classroom33,novel - tutor,interactive,student19,88.90909594534554
+I,classroom33,novel - tutor,interactive,student20,90.4266832525903
+I,classroom33,novel - tutor,interactive,student21,100
+I,classroom33,novel - tutor,interactive,student22,98.0080849490574
+I,classroom33,novel - tutor,interactive,student23,81.80726821029336
+I,classroom33,novel - tutor,interactive,student24,83.74323198395872
+I,classroom33,novel - tutor,interactive,student25,100
+I,classroom33,novel - tutor,interactive,student26,88.10749477130219
+I,classroom33,novel - tutor,interactive,student27,95.54447582983008
+I,classroom33,novel - tutor,interactive,student28,100
+I,classroom33,novel - tutor,interactive,student29,94.21006888790627
+I,classroom33,novel - tutor,interactive,student30,71.88963147737059
+I,classroom34,novel - tutor,non-interactive,student1,81.21475293304047
+I,classroom34,novel - tutor,non-interactive,student2,65.48714814395817
+I,classroom34,novel - tutor,non-interactive,student3,77.35236188625848
+I,classroom34,novel - tutor,non-interactive,student4,75.5886500774489
+I,classroom34,novel - tutor,non-interactive,student5,75.51928607383981
+I,classroom34,novel - tutor,non-interactive,student6,72.64388013559937
+I,classroom34,novel - tutor,non-interactive,student7,88.10701746977982
+I,classroom34,novel - tutor,non-interactive,student8,88.23216840531539
+I,classroom34,novel - tutor,non-interactive,student9,80.16176088054355
+I,classroom34,novel - tutor,non-interactive,student10,79.96706267710653
+I,classroom34,novel - tutor,non-interactive,student11,71.42329011909952
+I,classroom34,novel - tutor,non-interactive,student12,71.23618688871812
+I,classroom34,novel - tutor,non-interactive,student13,65.94328534680896
+I,classroom34,novel - tutor,non-interactive,student14,78.44428729944818
+I,classroom34,novel - tutor,non-interactive,student15,83.05953037538484
+I,classroom34,novel - tutor,non-interactive,student16,68.11560481490837
+I,classroom34,novel - tutor,non-interactive,student17,69.97948609243512
+I,classroom34,novel - tutor,non-interactive,student18,67.84153710937743
+I,classroom34,novel - tutor,non-interactive,student19,83.51529193108213
+I,classroom34,novel - tutor,non-interactive,student20,80.60448971277927
+I,classroom34,novel - tutor,non-interactive,student21,79.9900027993946
+I,classroom34,novel - tutor,non-interactive,student22,100
+I,classroom34,novel - tutor,non-interactive,student23,68.98937589389313
+I,classroom34,novel - tutor,non-interactive,student24,74.98720937086883
+I,classroom34,novel - tutor,non-interactive,student25,92.05921810214828
+I,classroom34,novel - tutor,non-interactive,student26,96.00407547864833
+I,classroom34,novel - tutor,non-interactive,student27,66.9636295668502
+I,classroom34,novel - tutor,non-interactive,student28,72.94377896907366
+I,classroom34,novel - tutor,non-interactive,student29,90.81821151600721
+I,classroom34,novel - tutor,non-interactive,student30,81.55743776763094
+I,classroom35,standard,interactive,student1,82.89688585925686
+I,classroom35,standard,interactive,student2,91.21233505106895
+I,classroom35,standard,interactive,student3,78.71964011716283
+I,classroom35,standard,interactive,student4,80.89619424516475
+I,classroom35,standard,interactive,student5,99.49372124176904
+I,classroom35,standard,interactive,student6,93.37618251191385
+I,classroom35,standard,interactive,student7,75.20917925865501
+I,classroom35,standard,interactive,student8,85.23305319757053
+I,classroom35,standard,interactive,student9,96.65350890443406
+I,classroom35,standard,interactive,student10,77.88571622768897
+I,classroom35,standard,interactive,student11,88.81690035749409
+I,classroom35,standard,interactive,student12,81.05860110580755
+I,classroom35,standard,interactive,student13,94.92822009690374
+I,classroom35,standard,interactive,student14,79.440111840044
+I,classroom35,standard,interactive,student15,93.59640522899544
+I,classroom35,standard,interactive,student16,85.05420199047089
+I,classroom35,standard,interactive,student17,82.27034636639121
+I,classroom35,standard,interactive,student18,90.8416562127032
+I,classroom35,standard,interactive,student19,81.62359533732014
+I,classroom35,standard,interactive,student20,77.71020360056329
+I,classroom35,standard,interactive,student21,98.04440951775109
+I,classroom35,standard,interactive,student22,82.97320571145919
+I,classroom35,standard,interactive,student23,61.11365014339796
+I,classroom35,standard,interactive,student24,84.33667311248799
+I,classroom35,standard,interactive,student25,83.02075363056346
+I,classroom35,standard,interactive,student26,82.77410786898892
+I,classroom35,standard,interactive,student27,77.58366469290615
+I,classroom35,standard,interactive,student28,100
+I,classroom35,standard,interactive,student29,85.05397965217718
+I,classroom35,standard,interactive,student30,85.69393961691533
+I,classroom36,standard,non-interactive,student1,72.19994752761818
+I,classroom36,standard,non-interactive,student2,90.35946232445201
+I,classroom36,standard,non-interactive,student3,58.42650392385987
+I,classroom36,standard,non-interactive,student4,93.77204032070246
+I,classroom36,standard,non-interactive,student5,58.178016111217865
+I,classroom36,standard,non-interactive,student6,74.28026590066975
+I,classroom36,standard,non-interactive,student7,64.95940972356935
+I,classroom36,standard,non-interactive,student8,79.04831260848646
+I,classroom36,standard,non-interactive,student9,60.829160192469566
+I,classroom36,standard,non-interactive,student10,66.6382672656244
+I,classroom36,standard,non-interactive,student11,90.2179534637732
+I,classroom36,standard,non-interactive,student12,79.6663488439423
+I,classroom36,standard,non-interactive,student13,63.37166846158443
+I,classroom36,standard,non-interactive,student14,75.41287170245424
+I,classroom36,standard,non-interactive,student15,76.40828536233089
+I,classroom36,standard,non-interactive,student16,81.57220056312339
+I,classroom36,standard,non-interactive,student17,90.2756385131393
+I,classroom36,standard,non-interactive,student18,84.22241368758621
+I,classroom36,standard,non-interactive,student19,97.49958128703597
+I,classroom36,standard,non-interactive,student20,74.24167495543472
+I,classroom36,standard,non-interactive,student21,73.519950184849293
+I,classroom36,standard,non-interactive,student22,59.69664025906441
+I,classroom36,standard,non-interactive,student23,53.67130537232454
+I,classroom36,standard,non-interactive,student24,81.79130881396527
+I,classroom36,standard,non-interactive,student25,71.1748028290755
+I,classroom36,standard,non-interactive,student26,97.04694794827688
+I,classroom36,standard,non-interactive,student27,95.90868845885423
+I,classroom36,standard,non-interactive,student28,85.64493567439963
+I,classroom36,standard,non-interactive,student29,79.11891157038305
+I,classroom36,standard,non-interactive,student30,89.93530755349157
+J,classroom37,novel - tutor,interactive,student1,75.08679703628468
+J,classroom37,novel - tutor,interactive,student2,69.1814375640887
+J,classroom37,novel - tutor,interactive,student3,78.38352904041095
+J,classroom37,novel - tutor,interactive,student4,81.04876541983604
+J,classroom37,novel - tutor,interactive,student5,85.21148272869596
+J,classroom37,novel - tutor,interactive,student6,64.7570395768777
+J,classroom37,novel - tutor,interactive,student7,74.32393824184625
+J,classroom37,novel - tutor,interactive,student8,76.38618897087044
+J,classroom37,novel - tutor,interactive,student9,86.07987545283117
+J,classroom37,novel - tutor,interactive,student10,70.79391335573042
+J,classroom37,novel - tutor,interactive,student11,68.2845623636319
+J,classroom37,novel - tutor,interactive,student12,69.5780998045171
+J,classroom37,novel - tutor,interactive,student13,60.748047765612924
+J,classroom37,novel - tutor,interactive,student14,83.5896021791717
+J,classroom37,novel - tutor,interactive,student15,73.21978202199386
+J,classroom37,novel - tutor,interactive,student16,86.1515582650212
+J,classroom37,novel - tutor,interactive,student17,70.1269500886303
+J,classroom37,novel - tutor,interactive,student18,90.42342911242451
+J,classroom37,novel - tutor,interactive,student19,89.73999246382475
+J,classroom37,novel - tutor,interactive,student20,80.20323900694004
+J,classroom37,novel - tutor,interactive,student21,84.7378968930634
+J,classroom37,novel - tutor,interactive,student22,88.18978215032439
+J,classroom37,novel - tutor,interactive,student23,61.977211816136744
+J,classroom37,novel - tutor,interactive,student24,70.50943721200336
+J,classroom37,novel - tutor,interactive,student25,86.08029878503385
+J,classroom37,novel - tutor,interactive,student26,86.99653732776851
+J,classroom37,novel - tutor,interactive,student27,90.93645758867079
+J,classroom37,novel - tutor,interactive,student28,77.22274322499854
+J,classroom37,novel - tutor,interactive,student29,83.874305647668
+J,classroom37,novel - tutor,interactive,student30,76.69357115331573
+J,classroom38,standard,interactive,student1,77.76633838494023
+J,classroom38,standard,interactive,student2,80.91621960994433
+J,classroom38,standard,interactive,student3,62.07330861628443
+J,classroom38,standard,interactive,student4,83.59316227014155
+J,classroom38,standard,interactive,student5,72.46425329988027
+J,classroom38,standard,interactive,student6,58.33461078609881
+J,classroom38,standard,interactive,student7,75.67863209275706
+J,classroom38,standard,interactive,student8,82.9069261472219
+J,classroom38,standard,interactive,student9,61.01668830284076
+J,classroom38,standard,interactive,student10,92.74581873714644
+J,classroom38,standard,interactive,student11,72.34715030530634
+J,classroom38,standard,interactive,student12,61.37379309815095
+J,classroom38,standard,interactive,student13,89.013311736753
+J,classroom38,standard,interactive,student14,61.50673612717533
+J,classroom38,standard,interactive,student15,66.00068938095914
+J,classroom38,standard,interactive,student16,73.9323579656533
+J,classroom38,standard,interactive,student17,68.86802515447691
+J,classroom38,standard,interactive,student18,72.44802498423654
+J,classroom38,standard,interactive,student19,73.68150827500865
+J,classroom38,standard,interactive,student20,85.260299607029
+J,classroom38,standard,interactive,student21,93.21463510838825
+J,classroom38,standard,interactive,student22,77.40973964713405
+J,classroom38,standard,interactive,student23,87.37613843806722
+J,classroom38,standard,interactive,student24,81.82902636466274
+J,classroom38,standard,interactive,student25,77.20763386348747
+J,classroom38,standard,interactive,student26,64.13555392342516
+J,classroom38,standard,interactive,student27,59.65314185194972
+J,classroom38,standard,interactive,student28,65.9610393551318
+J,classroom38,standard,interactive,student29,89.41878276040431
+J,classroom38,standard,interactive,student30,64.22680113258812
+J,classroom39,novel - tutor,non-interactive,student1,60.2449644495178
+J,classroom39,novel - tutor,non-interactive,student2,72.31654252337363
+J,classroom39,novel - tutor,non-interactive,student3,46.86740688801778
+J,classroom39,novel - tutor,non-interactive,student4,57.27854537589202
+J,classroom39,novel - tutor,non-interactive,student5,83.90529110758675
+J,classroom39,novel - tutor,non-interactive,student6,85.9620698804656
+J,classroom39,novel - tutor,non-interactive,student7,75.26424731373675
+J,classroom39,novel - tutor,non-interactive,student8,55.45258009649063
+J,classroom39,novel - tutor,non-interactive,student9,51.23954266652767
+J,classroom39,novel - tutor,non-interactive,student10,79.45055057054924
+J,classroom39,novel - tutor,non-interactive,student11,67.06946753063094
+J,classroom39,novel - tutor,non-interactive,student12,74.35713477145124
+J,classroom39,novel - tutor,non-interactive,student13,57.133926471042585
+J,classroom39,novel - tutor,non-interactive,student14,42.7396242080199
+J,classroom39,novel - tutor,non-interactive,student15,65.83125110752552
+J,classroom39,novel - tutor,non-interactive,student16,57.96599318622374
+J,classroom39,novel - tutor,non-interactive,student17,86.56918502805954
+J,classroom39,novel - tutor,non-interactive,student18,55.3029515625842
+J,classroom39,novel - tutor,non-interactive,student19,66.47866362736583
+J,classroom39,novel - tutor,non-interactive,student20,56.70660451465706
+J,classroom39,novel - tutor,non-interactive,student21,51.94761144313449
+J,classroom39,novel - tutor,non-interactive,student22,71.99475506584876
+J,classroom39,novel - tutor,non-interactive,student23,61.4148781477964
+J,classroom39,novel - tutor,non-interactive,student24,65.2950338601178
+J,classroom39,novel - tutor,non-interactive,student25,73.09104323288484
+J,classroom39,novel - tutor,non-interactive,student26,59.6188159124108
+J,classroom39,novel - tutor,non-interactive,student27,62.09402565951963
+J,classroom39,novel - tutor,non-interactive,student28,49.43925791438119
+J,classroom39,novel - tutor,non-interactive,student29,67.64270967748541
+J,classroom39,novel - tutor,non-interactive,student30,67.98090334320017
+J,classroom40,standard,non-interactive,student1,76.01120525615009
+J,classroom40,standard,non-interactive,student2,69.42235256714011
+J,classroom40,standard,non-interactive,student3,59.020482273638216
+J,classroom40,standard,non-interactive,student4,72.59616992090668
+J,classroom40,standard,non-interactive,student5,74.57134326569174
+J,classroom40,standard,non-interactive,student6,47.29206760782046
+J,classroom40,standard,non-interactive,student7,86.78925170494449
+J,classroom40,standard,non-interactive,student8,68.88015674467567
+J,classroom40,standard,non-interactive,student9,69.87906430167106
+J,classroom40,standard,non-interactive,student10,51.5331889395301
+J,classroom40,standard,non-interactive,student11,65.65681566377994
+J,classroom40,standard,non-interactive,student12,83.39532073586511
+J,classroom40,standard,non-interactive,student13,65.68160487841531
+J,classroom40,standard,non-interactive,student14,60.54369460288168
+J,classroom40,standard,non-interactive,student15,57.14177794676819
+J,classroom40,standard,non-interactive,student16,86.21547793432697
+J,classroom40,standard,non-interactive,student17,69.48945641341852
+J,classroom40,standard,non-interactive,student18,80.43881732093433
+J,classroom40,standard,non-interactive,student19,43.32260155731937
+J,classroom40,standard,non-interactive,student20,73.75188217240255
+J,classroom40,standard,non-interactive,student21,50.858904718843434
+J,classroom40,standard,non-interactive,student22,71.70773103311907
+J,classroom40,standard,non-interactive,student23,55.309920597639604
+J,classroom40,standard,non-interactive,student24,68.16451937968661
+J,classroom40,standard,non-interactive,student25,58.60653442961136
+J,classroom40,standard,non-interactive,student26,48.59081499273519
+J,classroom40,standard,non-interactive,student27,57.30168455933779
+J,classroom40,standard,non-interactive,student28,60.670491867315846
+J,classroom40,standard,non-interactive,student29,75.92778852551112
+J,classroom40,standard,non-interactive,student30,70.69309977838975
+K,classroom41,novel - tutor,interactive,student1,73.18404862763094
+K,classroom41,novel - tutor,interactive,student2,68.64740456263976
+K,classroom41,novel - tutor,interactive,student3,79.23353284722977
+K,classroom41,novel - tutor,interactive,student4,68.20682634919967
+K,classroom41,novel - tutor,interactive,student5,72.40223925528115
+K,classroom41,novel - tutor,interactive,student6,70.83141514744901
+K,classroom41,novel - tutor,interactive,student7,93.4807577558486
+K,classroom41,novel - tutor,interactive,student8,64.50163277052658
+K,classroom41,novel - tutor,interactive,student9,76.42503907079933
+K,classroom41,novel - tutor,interactive,student10,60.679273253643686
+K,classroom41,novel - tutor,interactive,student11,58.78432696160662
+K,classroom41,novel - tutor,interactive,student12,61.55816337402
+K,classroom41,novel - tutor,interactive,student13,61.58908107389857
+K,classroom41,novel - tutor,interactive,student14,79.87868040545966
+K,classroom41,novel - tutor,interactive,student15,74.97233537338539
+K,classroom41,novel - tutor,interactive,student16,69.76358373171402
+K,classroom41,novel - tutor,interactive,student17,76.92549777613203
+K,classroom41,novel - tutor,interactive,student18,94.51212470581135
+K,classroom41,novel - tutor,interactive,student19,100
+K,classroom41,novel - tutor,interactive,student20,67.3062316406605
+K,classroom41,novel - tutor,interactive,student21,84.66360439782427
+K,classroom41,novel - tutor,interactive,student22,90.08815354198286
+K,classroom41,novel - tutor,interactive,student23,79.37901982852804
+K,classroom41,novel - tutor,interactive,student24,80.81905026926228
+K,classroom41,novel - tutor,interactive,student25,80.70857572180584
+K,classroom41,novel - tutor,interactive,student26,73.7113336877014
+K,classroom41,novel - tutor,interactive,student27,85.17876698552615
+K,classroom41,novel - tutor,interactive,student28,70.3255947181045
+K,classroom41,novel - tutor,interactive,student29,85.32275498174936
+K,classroom41,novel - tutor,interactive,student30,97.12446915826943
+K,classroom42,standard,interactive,student1,79.77521321736258
+K,classroom42,standard,interactive,student2,60.06939019316701
+K,classroom42,standard,interactive,student3,48.15669189232474
+K,classroom42,standard,interactive,student4,68.71157627377933
+K,classroom42,standard,interactive,student5,64.88918106688752
+K,classroom42,standard,interactive,student6,69.37730365929394
+K,classroom42,standard,interactive,student7,80.3773717676877
+K,classroom42,standard,interactive,student8,86.36779170232364
+K,classroom42,standard,interactive,student9,74.08818655339766
+K,classroom42,standard,interactive,student10,63.926930151034
+K,classroom42,standard,interactive,student11,61.45796151997355
+K,classroom42,standard,interactive,student12,60.898921788203715
+K,classroom42,standard,interactive,student13,65.9747418804213
+K,classroom42,standard,interactive,student14,78.76034924073156
+K,classroom42,standard,interactive,student15,55.54312501974873
+K,classroom42,standard,interactive,student16,63.49115027857841
+K,classroom42,standard,interactive,student17,71.20945939083175
+K,classroom42,standard,interactive,student18,65.02795521732733
+K,classroom42,standard,interactive,student19,80.45643149083347
+K,classroom42,standard,interactive,student20,49.916062796058384
+K,classroom42,standard,interactive,student21,83.9377663696871
+K,classroom42,standard,interactive,student22,67.10247753709018
+K,classroom42,standard,interactive,student23,67.27575858156916
+K,classroom42,standard,interactive,student24,59.91908888747338
+K,classroom42,standard,interactive,student25,65.52094176609428
+K,classroom42,standard,interactive,student26,84.250451258227
+K,classroom42,standard,interactive,student27,77.87976780810813
+K,classroom42,standard,interactive,student28,53.71634273019508
+K,classroom42,standard,interactive,student29,55.8096309394644
+K,classroom42,standard,interactive,student30,61.054245790676696
+K,classroom43,standard,non-interactive,student1,72.27245577950939
+K,classroom43,standard,non-interactive,student2,56.98087273863076
+K,classroom43,standard,non-interactive,student3,50.310757222949505
+K,classroom43,standard,non-interactive,student4,42.76360076703967
+K,classroom43,standard,non-interactive,student5,50.829115906114936
+K,classroom43,standard,non-interactive,student6,53.98035544124627
+K,classroom43,standard,non-interactive,student7,66.68950633207164
+K,classroom43,standard,non-interactive,student8,51.60263698534345
+K,classroom43,standard,non-interactive,student9,45.15585580742179
+K,classroom43,standard,non-interactive,student10,79.28104574859415
+K,classroom43,standard,non-interactive,student11,76.85974090576157
+K,classroom43,standard,non-interactive,student12,71.50046563206226
+K,classroom43,standard,non-interactive,student13,45.893081583068515
+K,classroom43,standard,non-interactive,student14,73.5412661137091
+K,classroom43,standard,non-interactive,student15,57.79332292118464
+K,classroom43,standard,non-interactive,student16,44.615018855434144
+K,classroom43,standard,non-interactive,student17,54.56409887316573
+K,classroom43,standard,non-interactive,student18,59.638534224889895
+K,classroom43,standard,non-interactive,student19,69.52906328091944
+K,classroom43,standard,non-interactive,student20,48.57965943175282
+K,classroom43,standard,non-interactive,student21,69.24088839877528
+K,classroom43,standard,non-interactive,student22,58.63707093524393
+K,classroom43,standard,non-interactive,student23,57.52384090607409
+K,classroom43,standard,non-interactive,student24,67.71902730890342
+K,classroom43,standard,non-interactive,student25,51.776216283167095
+K,classroom43,standard,non-interactive,student26,55.22250501176394
+K,classroom43,standard,non-interactive,student27,72.97967310164562
+K,classroom43,standard,non-interactive,student28,52.67933260465838
+K,classroom43,standard,non-interactive,student29,64.7405476534948
+K,classroom43,standard,non-interactive,student30,63.11711850883253
+K,classroom44,novel - tutor,non-interactive,student1,63.71275045261342
+K,classroom44,novel - tutor,non-interactive,student2,77.32804795079227
+K,classroom44,novel - tutor,non-interactive,student3,57.52929395441992
+K,classroom44,novel - tutor,non-interactive,student4,51.564915856165705
+K,classroom44,novel - tutor,non-interactive,student5,53.62312526281714
+K,classroom44,novel - tutor,non-interactive,student6,63.00262605584754
+K,classroom44,novel - tutor,non-interactive,student7,64.81530796720146
+K,classroom44,novel - tutor,non-interactive,student8,52.30026624240033
+K,classroom44,novel - tutor,non-interactive,student9,63.71874591965001
+K,classroom44,novel - tutor,non-interactive,student10,72.28150657000594
+K,classroom44,novel - tutor,non-interactive,student11,58.427738171946935
+K,classroom44,novel - tutor,non-interactive,student12,80.3199088752256
+K,classroom44,novel - tutor,non-interactive,student13,82.80384608231742
+K,classroom44,novel - tutor,non-interactive,student14,58.945630677758125
+K,classroom44,novel - tutor,non-interactive,student15,57.13878655867532
+K,classroom44,novel - tutor,non-interactive,student16,46.38764046038896
+K,classroom44,novel - tutor,non-interactive,student17,56.20099120959555
+K,classroom44,novel - tutor,non-interactive,student18,35.52711163416471
+K,classroom44,novel - tutor,non-interactive,student19,45.50100223140025
+K,classroom44,novel - tutor,non-interactive,student20,48.11604514496188
+K,classroom44,novel - tutor,non-interactive,student21,68.84960140953471
+K,classroom44,novel - tutor,non-interactive,student22,60.01649362334198
+K,classroom44,novel - tutor,non-interactive,student23,50.76754561872654
+K,classroom44,novel - tutor,non-interactive,student24,46.05250783152077
+K,classroom44,novel - tutor,non-interactive,student25,52.80074448600715
+K,classroom44,novel - tutor,non-interactive,student26,61.32175613744083
+K,classroom44,novel - tutor,non-interactive,student27,57.098112461696076
+K,classroom44,novel - tutor,non-interactive,student28,66.62951568338075
+K,classroom44,novel - tutor,non-interactive,student29,62.06473236685658
+K,classroom44,novel - tutor,non-interactive,student30,74.95362586521229
+L,classroom45,standard,non-interactive,student1,78.38237660965264
+L,classroom45,standard,non-interactive,student2,65.00015667991812
+L,classroom45,standard,non-interactive,student3,68.35151712206189
+L,classroom45,standard,non-interactive,student4,57.60946620587326
+L,classroom45,standard,non-interactive,student5,86.78876159189699
+L,classroom45,standard,non-interactive,student6,80.56258085814139
+L,classroom45,standard,non-interactive,student7,46.8159457820587
+L,classroom45,standard,non-interactive,student8,74.16945265000922
+L,classroom45,standard,non-interactive,student9,69.67446736537296
+L,classroom45,standard,non-interactive,student10,67.23308724343224
+L,classroom45,standard,non-interactive,student11,44.574469302338365
+L,classroom45,standard,non-interactive,student12,68.83175050874954
+L,classroom45,standard,non-interactive,student13,62.10162392280527
+L,classroom45,standard,non-interactive,student14,55.569772835106704
+L,classroom45,standard,non-interactive,student15,63.93314350080597
+L,classroom45,standard,non-interactive,student16,65.01729894633202
+L,classroom45,standard,non-interactive,student17,41.0525371953279
+L,classroom45,standard,non-interactive,student18,80.01758351407253
+L,classroom45,standard,non-interactive,student19,79.85011342205274
+L,classroom45,standard,non-interactive,student20,53.94571914188539
+L,classroom45,standard,non-interactive,student21,79.5630453091281
+L,classroom45,standard,non-interactive,student22,58.721128979414544
+L,classroom45,standard,non-interactive,student23,59.51524201849548
+L,classroom45,standard,non-interactive,student24,73.62072768704705
+L,classroom45,standard,non-interactive,student25,73.34061800350494
+L,classroom45,standard,non-interactive,student26,79.68775941239764
+L,classroom45,standard,non-interactive,student27,58.06378825478005
+L,classroom45,standard,non-interactive,student28,72.74279348370106
+L,classroom45,standard,non-interactive,student29,59.7190666277984
+L,classroom45,standard,non-interactive,student30,68.75121569864045
+L,classroom46,novel - tutor,non-interactive,student1,68.8300133864951
+L,classroom46,novel - tutor,non-interactive,student2,78.56305208317785
+L,classroom46,novel - tutor,non-interactive,student3,71.3989474583172
+L,classroom46,novel - tutor,non-interactive,student4,72.27154494111814
+L,classroom46,novel - tutor,non-interactive,student5,65.24270552213639
+L,classroom46,novel - tutor,non-interactive,student6,68.40505513286368
+L,classroom46,novel - tutor,non-interactive,student7,75.58932493802446
+L,classroom46,novel - tutor,non-interactive,student8,70.09892409225122
+L,classroom46,novel - tutor,non-interactive,student9,89.87258030188339
+L,classroom46,novel - tutor,non-interactive,student10,52.615895375107634
+L,classroom46,novel - tutor,non-interactive,student11,52.53160588294999
+L,classroom46,novel - tutor,non-interactive,student12,88.85584482779603
+L,classroom46,novel - tutor,non-interactive,student13,85.94059741444578
+L,classroom46,novel - tutor,non-interactive,student14,86.35204678083346
+L,classroom46,novel - tutor,non-interactive,student15,83.80325686366575
+L,classroom46,novel - tutor,non-interactive,student16,80.36635400577255
+L,classroom46,novel - tutor,non-interactive,student17,66.91656857458581
+L,classroom46,novel - tutor,non-interactive,student18,70.43943955288574
+L,classroom46,novel - tutor,non-interactive,student19,85.27570010206891
+L,classroom46,novel - tutor,non-interactive,student20,76.40155653115568
+L,classroom46,novel - tutor,non-interactive,student21,49.972804913839845
+L,classroom46,novel - tutor,non-interactive,student22,86.53115894374606
+L,classroom46,novel - tutor,non-interactive,student23,83.53689576808218
+L,classroom46,novel - tutor,non-interactive,student24,81.17382642063885
+L,classroom46,novel - tutor,non-interactive,student25,63.85676566767751
+L,classroom46,novel - tutor,non-interactive,student26,60.37042428475094
+L,classroom46,novel - tutor,non-interactive,student27,64.68518528475153
+L,classroom46,novel - tutor,non-interactive,student28,61.04586630074572
+L,classroom46,novel - tutor,non-interactive,student29,78.59248359007137
+L,classroom46,novel - tutor,non-interactive,student30,75.07156255002151
+L,classroom47,novel - tutor,interactive,student1,100
+L,classroom47,novel - tutor,interactive,student2,80.07334053623586
+L,classroom47,novel - tutor,interactive,student3,88.57378438568325
+L,classroom47,novel - tutor,interactive,student4,77.14398971178005
+L,classroom47,novel - tutor,interactive,student5,96.53842911519763
+L,classroom47,novel - tutor,interactive,student6,81.36945131325122
+L,classroom47,novel - tutor,interactive,student7,78.03944229841717
+L,classroom47,novel - tutor,interactive,student8,82.46064450432989
+L,classroom47,novel - tutor,interactive,student9,81.52430090266152
+L,classroom47,novel - tutor,interactive,student10,100
+L,classroom47,novel - tutor,interactive,student11,93.17503987819478
+L,classroom47,novel - tutor,interactive,student12,97.81266063767332
+L,classroom47,novel - tutor,interactive,student13,88.82862798818579
+L,classroom47,novel - tutor,interactive,student14,77.86921826824204
+L,classroom47,novel - tutor,interactive,student15,80.55487508318697
+L,classroom47,novel - tutor,interactive,student16,87.96744615979084
+L,classroom47,novel - tutor,interactive,student17,99.31923884019865
+L,classroom47,novel - tutor,interactive,student18,100
+L,classroom47,novel - tutor,interactive,student19,79.43153418515384
+L,classroom47,novel - tutor,interactive,student20,88.33414131460017
+L,classroom47,novel - tutor,interactive,student21,78.37868963500725
+L,classroom47,novel - tutor,interactive,student22,88.40276775778014
+L,classroom47,novel - tutor,interactive,student23,99.54822157752415
+L,classroom47,novel - tutor,interactive,student24,74.69365771825917
+L,classroom47,novel - tutor,interactive,student25,99.06317966182469
+L,classroom47,novel - tutor,interactive,student26,81.68702214942734
+L,classroom47,novel - tutor,interactive,student27,90.34828107672611
+L,classroom47,novel - tutor,interactive,student28,77.54874015709916
+L,classroom47,novel - tutor,interactive,student29,82.98553764752154
+L,classroom47,novel - tutor,interactive,student30,78.41233544930512
+L,classroom48,standard,interactive,student1,87.6832474661678
+L,classroom48,standard,interactive,student2,77.71805787993587
+L,classroom48,standard,interactive,student3,91.96903531875755
+L,classroom48,standard,interactive,student4,87.30316068531204
+L,classroom48,standard,interactive,student5,79.30217863369019
+L,classroom48,standard,interactive,student6,82.60419110132362
+L,classroom48,standard,interactive,student7,96.64446029039075
+L,classroom48,standard,interactive,student8,79.57356653603865
+L,classroom48,standard,interactive,student9,83.48084686372096
+L,classroom48,standard,interactive,student10,83.21879437780285
+L,classroom48,standard,interactive,student11,88.58138909106398
+L,classroom48,standard,interactive,student12,76.5157443121833
+L,classroom48,standard,interactive,student13,72.83011343872258
+L,classroom48,standard,interactive,student14,82.23629062422235
+L,classroom48,standard,interactive,student15,68.8963440205831
+L,classroom48,standard,interactive,student16,76.13919841290388
+L,classroom48,standard,interactive,student17,83.03754873805623
+L,classroom48,standard,interactive,student18,71.839435822653
+L,classroom48,standard,interactive,student19,67.95757726705973
+L,classroom48,standard,interactive,student20,66.77893216877375
+L,classroom48,standard,interactive,student21,74.98100303444679
+L,classroom48,standard,interactive,student22,93.55508255745796
+L,classroom48,standard,interactive,student23,88.77177060712783
+L,classroom48,standard,interactive,student24,91.92404256634862
+L,classroom48,standard,interactive,student25,78.63267382799633
+L,classroom48,standard,interactive,student26,83.77667980298241
+L,classroom48,standard,interactive,student27,83.44092081417358
+L,classroom48,standard,interactive,student28,81.38939511802556
+L,classroom48,standard,interactive,student29,76.0097491537928
+L,classroom48,standard,interactive,student30,70.64838243151738
+M,classroom49,novel - tutor,non-interactive,student1,90.16160294779155
+M,classroom49,novel - tutor,non-interactive,student2,100
+M,classroom49,novel - tutor,non-interactive,student3,69.84683314098328
+M,classroom49,novel - tutor,non-interactive,student4,76.69461787510203
+M,classroom49,novel - tutor,non-interactive,student5,73.67351176189236
+M,classroom49,novel - tutor,non-interactive,student6,84.79802738697443
+M,classroom49,novel - tutor,non-interactive,student7,86.98226756598424
+M,classroom49,novel - tutor,non-interactive,student8,83.88338275270759
+M,classroom49,novel - tutor,non-interactive,student9,85.33861115093134
+M,classroom49,novel - tutor,non-interactive,student10,63.25182455621418
+M,classroom49,novel - tutor,non-interactive,student11,83.27447390863864
+M,classroom49,novel - tutor,non-interactive,student12,89.36723299503808
+M,classroom49,novel - tutor,non-interactive,student13,84.50733843343832
+M,classroom49,novel - tutor,non-interactive,student14,73.78887107010355
+M,classroom49,novel - tutor,non-interactive,student15,80.10223233203133
+M,classroom49,novel - tutor,non-interactive,student16,78.10518408238275
+M,classroom49,novel - tutor,non-interactive,student17,94.60322915736029
+M,classroom49,novel - tutor,non-interactive,student18,82.27419132686725
+M,classroom49,novel - tutor,non-interactive,student19,96.29865322459878
+M,classroom49,novel - tutor,non-interactive,student20,93.3395124587809
+M,classroom49,novel - tutor,non-interactive,student21,89.31478588890772
+M,classroom49,novel - tutor,non-interactive,student22,92.75980951350137
+M,classroom49,novel - tutor,non-interactive,student23,87.8861695952579
+M,classroom49,novel - tutor,non-interactive,student24,83.72435486658404
+M,classroom49,novel - tutor,non-interactive,student25,79.05644485630931
+M,classroom49,novel - tutor,non-interactive,student26,94.58947829789146
+M,classroom49,novel - tutor,non-interactive,student27,84.96094348536671
+M,classroom49,novel - tutor,non-interactive,student28,77.06021028077046
+M,classroom49,novel - tutor,non-interactive,student29,68.30748746075238
+M,classroom49,novel - tutor,non-interactive,student30,85.25717551054765
+M,classroom50,standard,non-interactive,student1,84.45528355032083
+M,classroom50,standard,non-interactive,student2,79.05308538584933
+M,classroom50,standard,non-interactive,student3,87.69812321735407
+M,classroom50,standard,non-interactive,student4,82.02047625211532
+M,classroom50,standard,non-interactive,student5,84.07574323672311
+M,classroom50,standard,non-interactive,student6,72.85419526127244
+M,classroom50,standard,non-interactive,student7,79.39171867863831
+M,classroom50,standard,non-interactive,student8,78.28073789609587
+M,classroom50,standard,non-interactive,student9,64.71866735461155
+M,classroom50,standard,non-interactive,student10,73.04437590177504
+M,classroom50,standard,non-interactive,student11,71.83686132239447
+M,classroom50,standard,non-interactive,student12,91.97742892013534
+M,classroom50,standard,non-interactive,student13,70.29341741963657
+M,classroom50,standard,non-interactive,student14,82.3452401378442
+M,classroom50,standard,non-interactive,student15,80.30515687101644
+M,classroom50,standard,non-interactive,student16,84.75802507289318
+M,classroom50,standard,non-interactive,student17,86.20229262335323
+M,classroom50,standard,non-interactive,student18,62.25004913796971
+M,classroom50,standard,non-interactive,student19,84.2505580552178
+M,classroom50,standard,non-interactive,student20,91.85832424702133
+M,classroom50,standard,non-interactive,student21,99.24601116845716
+M,classroom50,standard,non-interactive,student22,79.97850968363353
+M,classroom50,standard,non-interactive,student23,88.68781325409161
+M,classroom50,standard,non-interactive,student24,73.71520984504242
+M,classroom50,standard,non-interactive,student25,82.53531341030065
+M,classroom50,standard,non-interactive,student26,89.15224387872887
+M,classroom50,standard,non-interactive,student27,77.41018417738279
+M,classroom50,standard,non-interactive,student28,68.89396443392438
+M,classroom50,standard,non-interactive,student29,86.17105032208983
+M,classroom50,standard,non-interactive,student30,74.34133261905164
+M,classroom51,novel - tutor,interactive,student1,87.8418440491546
+M,classroom51,novel - tutor,interactive,student2,86.97510525808121
+M,classroom51,novel - tutor,interactive,student3,100
+M,classroom51,novel - tutor,interactive,student4,79.35647657282976
+M,classroom51,novel - tutor,interactive,student5,89.22830641319038
+M,classroom51,novel - tutor,interactive,student6,93.05449672326611
+M,classroom51,novel - tutor,interactive,student7,87.96463761504944
+M,classroom51,novel - tutor,interactive,student8,100
+M,classroom51,novel - tutor,interactive,student9,88.9353043891569
+M,classroom51,novel - tutor,interactive,student10,87.06313319745504
+M,classroom51,novel - tutor,interactive,student11,100
+M,classroom51,novel - tutor,interactive,student12,98.73023680481417
+M,classroom51,novel - tutor,interactive,student13,79.31753935347776
+M,classroom51,novel - tutor,interactive,student14,83.15667002917864
+M,classroom51,novel - tutor,interactive,student15,83.58944035790246
+M,classroom51,novel - tutor,interactive,student16,91.77307907965736
+M,classroom51,novel - tutor,interactive,student17,89.86961268842899
+M,classroom51,novel - tutor,interactive,student18,82.0210417463976
+M,classroom51,novel - tutor,interactive,student19,86.41096075071128
+M,classroom51,novel - tutor,interactive,student20,98.13925549554499
+M,classroom51,novel - tutor,interactive,student21,100
+M,classroom51,novel - tutor,interactive,student22,61.882914428422964
+M,classroom51,novel - tutor,interactive,student23,80.14145082321993
+M,classroom51,novel - tutor,interactive,student24,100
+M,classroom51,novel - tutor,interactive,student25,100
+M,classroom51,novel - tutor,interactive,student26,90.24636275829504
+M,classroom51,novel - tutor,interactive,student27,89.95801582517363
+M,classroom51,novel - tutor,interactive,student28,96.41965213412904
+M,classroom51,novel - tutor,interactive,student29,85.22196556722417
+M,classroom51,novel - tutor,interactive,student30,99.74291758027367
+M,classroom52,standard,interactive,student1,80.26011812539952
+M,classroom52,standard,interactive,student2,89.10346902127884
+M,classroom52,standard,interactive,student3,77.97210825146337
+M,classroom52,standard,interactive,student4,96.92856809092696
+M,classroom52,standard,interactive,student5,78.63257202448462
+M,classroom52,standard,interactive,student6,94.46008059820778
+M,classroom52,standard,interactive,student7,76.85845155135789
+M,classroom52,standard,interactive,student8,89.02303929526252
+M,classroom52,standard,interactive,student9,89.31480960500491
+M,classroom52,standard,interactive,student10,100
+M,classroom52,standard,interactive,student11,70.8403736212324
+M,classroom52,standard,interactive,student12,85.88976984364935
+M,classroom52,standard,interactive,student13,84.93495143416807
+M,classroom52,standard,interactive,student14,84.31115213427938
+M,classroom52,standard,interactive,student15,96.04456090627535
+M,classroom52,standard,interactive,student16,99.18163940299863
+M,classroom52,standard,interactive,student17,77.28586304513001
+M,classroom52,standard,interactive,student18,79.09078695011749
+M,classroom52,standard,interactive,student19,85.02462260791134
+M,classroom52,standard,interactive,student20,68.8131767772181
+M,classroom52,standard,interactive,student21,92.08436225156534
+M,classroom52,standard,interactive,student22,81.0565873653773
+M,classroom52,standard,interactive,student23,85.28282653865625
+M,classroom52,standard,interactive,student24,97.29230673209976
+M,classroom52,standard,interactive,student25,93.59451856937947
+M,classroom52,standard,interactive,student26,66.7129378080523
+M,classroom52,standard,interactive,student27,92.28632990919178
+M,classroom52,standard,interactive,student28,93.01361866997566
+M,classroom52,standard,interactive,student29,75.42958133344412
+M,classroom52,standard,interactive,student30,75.29184607817294
+N,classroom53,novel - tutor,interactive,student1,82.1400037452104
+N,classroom53,novel - tutor,interactive,student2,78.99967279610914
+N,classroom53,novel - tutor,interactive,student3,68.90098799136189
+N,classroom53,novel - tutor,interactive,student4,82.26484315282109
+N,classroom53,novel - tutor,interactive,student5,83.45843013020394
+N,classroom53,novel - tutor,interactive,student6,75.33337357777023
+N,classroom53,novel - tutor,interactive,student7,74.38819201892136
+N,classroom53,novel - tutor,interactive,student8,86.53782407333752
+N,classroom53,novel - tutor,interactive,student9,71.67444492905727
+N,classroom53,novel - tutor,interactive,student10,79.21924452877802
+N,classroom53,novel - tutor,interactive,student11,76.48972745523756
+N,classroom53,novel - tutor,interactive,student12,96.348235110340255
+N,classroom53,novel - tutor,interactive,student13,68.04433133580004
+N,classroom53,novel - tutor,interactive,student14,82.96573145658172
+N,classroom53,novel - tutor,interactive,student15,68.71982427491153
+N,classroom53,novel - tutor,interactive,student16,71.06373386170536
+N,classroom53,novel - tutor,interactive,student17,77.62071572638922
+N,classroom53,novel - tutor,interactive,student18,80.28523997377958
+N,classroom53,novel - tutor,interactive,student19,57.83689147538027
+N,classroom53,novel - tutor,interactive,student20,66.01599629477018
+N,classroom53,novel - tutor,interactive,student21,60.13294124728222
+N,classroom53,novel - tutor,interactive,student22,60.122849024415544
+N,classroom53,novel - tutor,interactive,student23,70.0389394210256
+N,classroom53,novel - tutor,interactive,student24,86.94410068510703
+N,classroom53,novel - tutor,interactive,student25,78.61346918158097
+N,classroom53,novel - tutor,interactive,student26,59.59206568572489
+N,classroom53,novel - tutor,interactive,student27,77.70399015234527
+N,classroom53,novel - tutor,interactive,student28,75.66549432301699
+N,classroom53,novel - tutor,interactive,student29,62.418552438622015
+N,classroom53,novel - tutor,interactive,student30,50.68868041213446
+N,classroom54,standard,interactive,student1,50.8011976005782
+N,classroom54,standard,interactive,student2,69.84850352387649
+N,classroom54,standard,interactive,student3,50.6213884991365
+N,classroom54,standard,interactive,student4,70.288912971775
+N,classroom54,standard,interactive,student5,72.52495417277058
+N,classroom54,standard,interactive,student6,59.2963530967525
+N,classroom54,standard,interactive,student7,57.94563621844278
+N,classroom54,standard,interactive,student8,75.28786378464697
+N,classroom54,standard,interactive,student9,71.7560667552719
+N,classroom54,standard,interactive,student10,59.25325041221826
+N,classroom54,standard,interactive,student11,60.232831936777224
+N,classroom54,standard,interactive,student12,60.84863331916989
+N,classroom54,standard,interactive,student13,90.6263076200766
+N,classroom54,standard,interactive,student14,59.18635792257918
+N,classroom54,standard,interactive,student15,67.22041239121702
+N,classroom54,standard,interactive,student16,58.23487434832033
+N,classroom54,standard,interactive,student17,58.465299868286394
+N,classroom54,standard,interactive,student18,73.09419872013532
+N,classroom54,standard,interactive,student19,54.05662853620042
+N,classroom54,standard,interactive,student20,72.23898811908091
+N,classroom54,standard,interactive,student21,93.49667940202438
+N,classroom54,standard,interactive,student22,58.81863007408378
+N,classroom54,standard,interactive,student23,52.50144739438015
+N,classroom54,standard,interactive,student24,69.88160329409412
+N,classroom54,standard,interactive,student25,74.00432175904095
+N,classroom54,standard,interactive,student26,42.128092316352756
+N,classroom54,standard,interactive,student27,56.435895358017504
+N,classroom54,standard,interactive,student28,50.575970214565565
+N,classroom54,standard,interactive,student29,80.1608458833023
+N,classroom54,standard,interactive,student30,55.81723911889727
+N,classroom55,standard,non-interactive,student1,46.37800682753804
+N,classroom55,standard,non-interactive,student2,53.353535411254484
+N,classroom55,standard,non-interactive,student3,49.36431547671428
+N,classroom55,standard,non-interactive,student4,50.02569696619274
+N,classroom55,standard,non-interactive,student5,41.86650646259821
+N,classroom55,standard,non-interactive,student6,64.80076899677184
+N,classroom55,standard,non-interactive,student7,49.83540375587827
+N,classroom55,standard,non-interactive,student8,52.235816450165466
+N,classroom55,standard,non-interactive,student9,48.91396048854192
+N,classroom55,standard,non-interactive,student10,69.96633245318652
+N,classroom55,standard,non-interactive,student11,38.521646469580986
+N,classroom55,standard,non-interactive,student12,59.13530763403619
+N,classroom55,standard,non-interactive,student13,44.21025511604279
+N,classroom55,standard,non-interactive,student14,47.521334778325695
+N,classroom55,standard,non-interactive,student15,50.27037885773318
+N,classroom55,standard,non-interactive,student16,54.36727856444963
+N,classroom55,standard,non-interactive,student17,57.042594512988465
+N,classroom55,standard,non-interactive,student18,48.97646716196552
+N,classroom55,standard,non-interactive,student19,70.53495299530208
+N,classroom55,standard,non-interactive,student20,35.74125207899097
+N,classroom55,standard,non-interactive,student21,45.7612611586697
+N,classroom55,standard,non-interactive,student22,44.0891664993991
+N,classroom55,standard,non-interactive,student23,56.66603209902869
+N,classroom55,standard,non-interactive,student24,45.114973002134825
+N,classroom55,standard,non-interactive,student25,57.65302945900225
+N,classroom55,standard,non-interactive,student26,51.17080745457982
+N,classroom55,standard,non-interactive,student27,46.29679406608266
+N,classroom55,standard,non-interactive,student28,38.69781555853349
+N,classroom55,standard,non-interactive,student29,64.79061235714026
+N,classroom55,standard,non-interactive,student30,69.05828981117963
+N,classroom56,novel - tutor,non-interactive,student1,76.10223951519738
+N,classroom56,novel - tutor,non-interactive,student2,55.068867178564005
+N,classroom56,novel - tutor,non-interactive,student3,60.41808401523937
+N,classroom56,novel - tutor,non-interactive,student4,73.01751839715669
+N,classroom56,novel - tutor,non-interactive,student5,58.46273275914331
+N,classroom56,novel - tutor,non-interactive,student6,53.12798979039347
+N,classroom56,novel - tutor,non-interactive,student7,61.85306041976464
+N,classroom56,novel - tutor,non-interactive,student8,64.355130104342
+N,classroom56,novel - tutor,non-interactive,student9,61.99297280718064
+N,classroom56,novel - tutor,non-interactive,student10,45.579496393573535
+N,classroom56,novel - tutor,non-interactive,student11,46.93606832071325
+N,classroom56,novel - tutor,non-interactive,student12,64.502316730635755
+N,classroom56,novel - tutor,non-interactive,student13,51.29842415987886
+N,classroom56,novel - tutor,non-interactive,student14,62.817650055087995
+N,classroom56,novel - tutor,non-interactive,student15,55.60232303322898
+N,classroom56,novel - tutor,non-interactive,student16,76.37462838925342
+N,classroom56,novel - tutor,non-interactive,student17,54.79406715626196
+N,classroom56,novel - tutor,non-interactive,student18,68.44655241344545
+N,classroom56,novel - tutor,non-interactive,student19,63.075577103453355
+N,classroom56,novel - tutor,non-interactive,student20,61.561057586349406
+N,classroom56,novel - tutor,non-interactive,student21,49.44085605156209
+N,classroom56,novel - tutor,non-interactive,student22,70.14607576158629
+N,classroom56,novel - tutor,non-interactive,student23,51.66765744752345
+N,classroom56,novel - tutor,non-interactive,student24,66.10565379323225
+N,classroom56,novel - tutor,non-interactive,student25,64.6935538624046
+N,classroom56,novel - tutor,non-interactive,student26,61.08069235156216
+N,classroom56,novel - tutor,non-interactive,student27,49.27001203980525
+N,classroom56,novel - tutor,non-interactive,student28,50.08658739552972
+N,classroom56,novel - tutor,non-interactive,student29,65.56644293796582
+N,classroom56,novel - tutor,non-interactive,student30,80.42261771446283
+O,classroom57,standard,interactive,student1,67.11205740776157
+O,classroom57,standard,interactive,student2,73.57086310581532
+O,classroom57,standard,interactive,student3,73.41101815526359
+O,classroom57,standard,interactive,student4,88.47212403011252
+O,classroom57,standard,interactive,student5,72.05805235461486
+O,classroom57,standard,interactive,student6,72.01284654145203
+O,classroom57,standard,interactive,student7,88.74927171153229
+O,classroom57,standard,interactive,student8,74.55838594626196
+O,classroom57,standard,interactive,student9,78.47747821691596
+O,classroom57,standard,interactive,student10,69.70293774905161
+O,classroom57,standard,interactive,student11,87.16084099950665
+O,classroom57,standard,interactive,student12,55.74096089980348
+O,classroom57,standard,interactive,student13,78.56534963463184
+O,classroom57,standard,interactive,student14,69.41486054776982
+O,classroom57,standard,interactive,student15,69.3405607529651
+O,classroom57,standard,interactive,student16,89.12291972222506
+O,classroom57,standard,interactive,student17,71.45262231155913
+O,classroom57,standard,interactive,student18,82.14191858234264
+O,classroom57,standard,interactive,student19,80.02726495946676
+O,classroom57,standard,interactive,student20,73.9811553218984
+O,classroom57,standard,interactive,student21,92.97220200093241
+O,classroom57,standard,interactive,student22,67.24758826298634
+O,classroom57,standard,interactive,student23,73.94989830105268
+O,classroom57,standard,interactive,student24,94.04553284157288
+O,classroom57,standard,interactive,student25,88.09616918540036
+O,classroom57,standard,interactive,student26,100
+O,classroom57,standard,interactive,student27,93.77925107878181
+O,classroom57,standard,interactive,student28,76.94498439463605
+O,classroom57,standard,interactive,student29,92.77929901135813
+O,classroom57,standard,interactive,student30,73.47738601362535
+O,classroom58,novel - tutor,non-interactive,student1,91.48319464373077
+O,classroom58,novel - tutor,non-interactive,student2,79.39186453227109
+O,classroom58,novel - tutor,non-interactive,student3,54.48769479600771
+O,classroom58,novel - tutor,non-interactive,student4,71.48303390422393
+O,classroom58,novel - tutor,non-interactive,student5,59.110893656765114
+O,classroom58,novel - tutor,non-interactive,student6,73.42951871865286
+O,classroom58,novel - tutor,non-interactive,student7,70.08116232682234
+O,classroom58,novel - tutor,non-interactive,student8,71.21870088697086
+O,classroom58,novel - tutor,non-interactive,student9,77.36565866435387
+O,classroom58,novel - tutor,non-interactive,student10,77.7229475103575
+O,classroom58,novel - tutor,non-interactive,student11,91.51475623154916
+O,classroom58,novel - tutor,non-interactive,student12,94.07707993646065
+O,classroom58,novel - tutor,non-interactive,student13,65.90096875997322
+O,classroom58,novel - tutor,non-interactive,student14,66.84612002703025
+O,classroom58,novel - tutor,non-interactive,student15,62.33916547232412
+O,classroom58,novel - tutor,non-interactive,student16,67.25933472709701
+O,classroom58,novel - tutor,non-interactive,student17,75.38517300700914
+O,classroom58,novel - tutor,non-interactive,student18,53.9753726595593
+O,classroom58,novel - tutor,non-interactive,student19,53.78759851526543
+O,classroom58,novel - tutor,non-interactive,student20,64.83767336170963
+O,classroom58,novel - tutor,non-interactive,student21,75.56914894383975
+O,classroom58,novel - tutor,non-interactive,student22,68.4736622773316
+O,classroom58,novel - tutor,non-interactive,student23,76.97552542379715
+O,classroom58,novel - tutor,non-interactive,student24,70.25653467083337
+O,classroom58,novel - tutor,non-interactive,student25,63.04074006666107
+O,classroom58,novel - tutor,non-interactive,student26,68.69363416888488
+O,classroom58,novel - tutor,non-interactive,student27,57.747099229973514
+O,classroom58,novel - tutor,non-interactive,student28,59.388226862934424
+O,classroom58,novel - tutor,non-interactive,student29,80.226846762306
+O,classroom58,novel - tutor,non-interactive,student30,74.3952860494134
+O,classroom59,standard,non-interactive,student1,52.31874031710918
+O,classroom59,standard,non-interactive,student2,62.76207296729309
+O,classroom59,standard,non-interactive,student3,67.32338563856908
+O,classroom59,standard,non-interactive,student4,63.14253151638247
+O,classroom59,standard,non-interactive,student5,82.61042402897962
+O,classroom59,standard,non-interactive,student6,66.10666703504788
+O,classroom59,standard,non-interactive,student7,47.735033074110845
+O,classroom59,standard,non-interactive,student8,78.83485813755709
+O,classroom59,standard,non-interactive,student9,55.26925174130635
+O,classroom59,standard,non-interactive,student10,74.9790622511193
+O,classroom59,standard,non-interactive,student11,84.56590157289601
+O,classroom59,standard,non-interactive,student12,65.19821762894628
+O,classroom59,standard,non-interactive,student13,68.8436755072647
+O,classroom59,standard,non-interactive,student14,55.091884872543446
+O,classroom59,standard,non-interactive,student15,54.486090692337484
+O,classroom59,standard,non-interactive,student16,58.04904351381571
+O,classroom59,standard,non-interactive,student17,70.58325046132474
+O,classroom59,standard,non-interactive,student18,69.19979807620483
+O,classroom59,standard,non-interactive,student19,74.91866582913671
+O,classroom59,standard,non-interactive,student20,57.134464850565266
+O,classroom59,standard,non-interactive,student21,58.64586756406272
+O,classroom59,standard,non-interactive,student22,63.30144692072811
+O,classroom59,standard,non-interactive,student23,57.701253498511534
+O,classroom59,standard,non-interactive,student24,47.173039907330505
+O,classroom59,standard,non-interactive,student25,68.38638076216341
+O,classroom59,standard,non-interactive,student26,64.27774337421026
+O,classroom59,standard,non-interactive,student27,57.16137656669542
+O,classroom59,standard,non-interactive,student28,80.71462635040527
+O,classroom59,standard,non-interactive,student29,73.26986277610597
+O,classroom59,standard,non-interactive,student30,68.85943771255074
+O,classroom60,novel - tutor,interactive,student1,90.78960204567998
+O,classroom60,novel - tutor,interactive,student2,86.16298572801428
+O,classroom60,novel - tutor,interactive,student3,79.1475548410247
+O,classroom60,novel - tutor,interactive,student4,82.52354324851042
+O,classroom60,novel - tutor,interactive,student5,86.12971716032011
+O,classroom60,novel - tutor,interactive,student6,89.16172710828933
+O,classroom60,novel - tutor,interactive,student7,89.11120906191996
+O,classroom60,novel - tutor,interactive,student8,80.00801748076107
+O,classroom60,novel - tutor,interactive,student9,95.92499213876853
+O,classroom60,novel - tutor,interactive,student10,83.96684103357853
+O,classroom60,novel - tutor,interactive,student11,92.24230885719831
+O,classroom60,novel - tutor,interactive,student12,70.96823065284757
+O,classroom60,novel - tutor,interactive,student13,90.65755803488852
+O,classroom60,novel - tutor,interactive,student14,86.78080860566457
+O,classroom60,novel - tutor,interactive,student15,70.964218586667
+O,classroom60,novel - tutor,interactive,student16,100
+O,classroom60,novel - tutor,interactive,student17,80.83220352416775
+O,classroom60,novel - tutor,interactive,student18,93.58122462101406
+O,classroom60,novel - tutor,interactive,student19,89.36196879253343
+O,classroom60,novel - tutor,interactive,student20,84.54042356874469
+O,classroom60,novel - tutor,interactive,student21,90.26931946149467
+O,classroom60,novel - tutor,interactive,student22,83.74489243204424
+O,classroom60,novel - tutor,interactive,student23,85.07496266841004
+O,classroom60,novel - tutor,interactive,student24,92.25782586007043
+O,classroom60,novel - tutor,interactive,student25,75.51411431399107
+O,classroom60,novel - tutor,interactive,student26,71.85031572039287
+O,classroom60,novel - tutor,interactive,student27,67.35724845196717
+O,classroom60,novel - tutor,interactive,student28,69.243111774856
+O,classroom60,novel - tutor,interactive,student29,71.60141095182601
+O,classroom60,novel - tutor,interactive,student30,100
+P,classroom61,novel - tutor,interactive,student1,74.35285862798666
+P,classroom61,novel - tutor,interactive,student2,82.57203256635738
+P,classroom61,novel - tutor,interactive,student3,73.105940269108
+P,classroom61,novel - tutor,interactive,student4,74.98766256525087
+P,classroom61,novel - tutor,interactive,student5,68.81435032719016
+P,classroom61,novel - tutor,interactive,student6,54.907198519448784
+P,classroom61,novel - tutor,interactive,student7,64.35024130019072
+P,classroom61,novel - tutor,interactive,student8,82.86718643790621
+P,classroom61,novel - tutor,interactive,student9,82.45303002844629
+P,classroom61,novel - tutor,interactive,student10,71.53682717979869
+P,classroom61,novel - tutor,interactive,student11,72.88111544895033
+P,classroom61,novel - tutor,interactive,student12,62.80166374348707
+P,classroom61,novel - tutor,interactive,student13,59.45207874386372
+P,classroom61,novel - tutor,interactive,student14,94.99983518364726
+P,classroom61,novel - tutor,interactive,student15,56.21845772539329
+P,classroom61,novel - tutor,interactive,student16,54.87327083957954
+P,classroom61,novel - tutor,interactive,student17,65.0813286613885
+P,classroom61,novel - tutor,interactive,student18,50.41026033004394
+P,classroom61,novel - tutor,interactive,student19,65.2578610622384
+P,classroom61,novel - tutor,interactive,student20,84.19951646985669
+P,classroom61,novel - tutor,interactive,student21,65.10925564410746
+P,classroom61,novel - tutor,interactive,student22,65.96026526705917
+P,classroom61,novel - tutor,interactive,student23,70.53188118115656
+P,classroom61,novel - tutor,interactive,student24,70.19064742725728
+P,classroom61,novel - tutor,interactive,student25,66.09976108898039
+P,classroom61,novel - tutor,interactive,student26,56.87479352140651
+P,classroom61,novel - tutor,interactive,student27,65.03309166427076
+P,classroom61,novel - tutor,interactive,student28,83.27083431142154
+P,classroom61,novel - tutor,interactive,student29,70.1899833259544
+P,classroom61,novel - tutor,interactive,student30,69.99332276435698
+P,classroom62,standard,non-interactive,student1,63.323290263307946
+P,classroom62,standard,non-interactive,student2,56.019651849676855
+P,classroom62,standard,non-interactive,student3,45.418765975532644
+P,classroom62,standard,non-interactive,student4,58.52558100340451
+P,classroom62,standard,non-interactive,student5,67.6684558569543
+P,classroom62,standard,non-interactive,student6,59.570231900750116
+P,classroom62,standard,non-interactive,student7,51.06818653536146
+P,classroom62,standard,non-interactive,student8,61.719035620736804
+P,classroom62,standard,non-interactive,student9,63.0110014281286
+P,classroom62,standard,non-interactive,student10,59.80897038860341
+P,classroom62,standard,non-interactive,student11,37.07554771489892
+P,classroom62,standard,non-interactive,student12,61.72909296051046
+P,classroom62,standard,non-interactive,student13,45.01923363239062
+P,classroom62,standard,non-interactive,student14,28.721330615148354
+P,classroom62,standard,non-interactive,student15,49.14427156718959
+P,classroom62,standard,non-interactive,student16,43.2904592247939
+P,classroom62,standard,non-interactive,student17,48.79486960006025
+P,classroom62,standard,non-interactive,student18,56.51850929341277
+P,classroom62,standard,non-interactive,student19,51.24441047845419
+P,classroom62,standard,non-interactive,student20,64.86120664005333
+P,classroom62,standard,non-interactive,student21,44.97951152364391
+P,classroom62,standard,non-interactive,student22,67.97532415618961
+P,classroom62,standard,non-interactive,student23,63.15520165309379
+P,classroom62,standard,non-interactive,student24,59.29797694770579
+P,classroom62,standard,non-interactive,student25,56.4082471814616
+P,classroom62,standard,non-interactive,student26,45.82692165981186
+P,classroom62,standard,non-interactive,student27,46.06718785539308
+P,classroom62,standard,non-interactive,student28,55.58032705858428
+P,classroom62,standard,non-interactive,student29,39.14326952966678
+P,classroom62,standard,non-interactive,student30,78.97387033857831
+P,classroom63,standard,interactive,student1,60.610106560234236
+P,classroom63,standard,interactive,student2,53.52649961799451
+P,classroom63,standard,interactive,student3,69.21049092042402
+P,classroom63,standard,interactive,student4,65.170457315866
+P,classroom63,standard,interactive,student5,50.71673795785266
+P,classroom63,standard,interactive,student6,67.63898273979189
+P,classroom63,standard,interactive,student7,68.92230995416948
+P,classroom63,standard,interactive,student8,71.26076883082351
+P,classroom63,standard,interactive,student9,54.83988123480801
+P,classroom63,standard,interactive,student10,58.55592320554043
+P,classroom63,standard,interactive,student11,81.98209432720066
+P,classroom63,standard,interactive,student12,70.08740968596778
+P,classroom63,standard,interactive,student13,68.80413143619664
+P,classroom63,standard,interactive,student14,73.77287102822467
+P,classroom63,standard,interactive,student15,75.72978362003786
+P,classroom63,standard,interactive,student16,70.73703461890672
+P,classroom63,standard,interactive,student17,60.94977943628803
+P,classroom63,standard,interactive,student18,80.9307747474345
+P,classroom63,standard,interactive,student19,66.44030108494255
+P,classroom63,standard,interactive,student20,72.84679308449037
+P,classroom63,standard,interactive,student21,61.47072081928447
+P,classroom63,standard,interactive,student22,72.5586906086128
+P,classroom63,standard,interactive,student23,80.5657663672921
+P,classroom63,standard,interactive,student24,70.60327439932904
+P,classroom63,standard,interactive,student25,65.97880805697761
+P,classroom63,standard,interactive,student26,53.24704384796186
+P,classroom63,standard,interactive,student27,69.68320955986664
+P,classroom63,standard,interactive,student28,78.54048433299039
+P,classroom63,standard,interactive,student29,70.2747646004687
+P,classroom63,standard,interactive,student30,57.158507207253336
+P,classroom64,novel - tutor,non-interactive,student1,43.33471931201276
+P,classroom64,novel - tutor,non-interactive,student2,69.7293615836215
+P,classroom64,novel - tutor,non-interactive,student3,59.84395796059059
+P,classroom64,novel - tutor,non-interactive,student4,62.856031715996735
+P,classroom64,novel - tutor,non-interactive,student5,58.104474462853545
+P,classroom64,novel - tutor,non-interactive,student6,70.82621694090194
+P,classroom64,novel - tutor,non-interactive,student7,54.46334253622729
+P,classroom64,novel - tutor,non-interactive,student8,63.48489740862021
+P,classroom64,novel - tutor,non-interactive,student9,69.32484930479231
+P,classroom64,novel - tutor,non-interactive,student10,76.42208411662152
+P,classroom64,novel - tutor,non-interactive,student11,65.56784909310797
+P,classroom64,novel - tutor,non-interactive,student12,72.28854998395036
+P,classroom64,novel - tutor,non-interactive,student13,68.5738779756598
+P,classroom64,novel - tutor,non-interactive,student14,55.19574846758853
+P,classroom64,novel - tutor,non-interactive,student15,52.57331163325004
+P,classroom64,novel - tutor,non-interactive,student16,67.52659161070906
+P,classroom64,novel - tutor,non-interactive,student17,76.4793864844714
+P,classroom64,novel - tutor,non-interactive,student18,38.10653507936385
+P,classroom64,novel - tutor,non-interactive,student19,64.44645668948864
+P,classroom64,novel - tutor,non-interactive,student20,62.32015680876913
+P,classroom64,novel - tutor,non-interactive,student21,52.87509431092261
+P,classroom64,novel - tutor,non-interactive,student22,75.91697431068741
+P,classroom64,novel - tutor,non-interactive,student23,60.97442107515364
+P,classroom64,novel - tutor,non-interactive,student24,56.96330145854256
+P,classroom64,novel - tutor,non-interactive,student25,66.14214059949042
+P,classroom64,novel - tutor,non-interactive,student26,61.18982827883749
+P,classroom64,novel - tutor,non-interactive,student27,56.47916421372054
+P,classroom64,novel - tutor,non-interactive,student28,49.18344203182927
+P,classroom64,novel - tutor,non-interactive,student29,51.88883795400869
+P,classroom64,novel - tutor,non-interactive,student30,59.18347176211946
+Q,classroom65,novel - tutor,interactive,student1,59.787576984147194
+Q,classroom65,novel - tutor,interactive,student2,58.44189468423102
+Q,classroom65,novel - tutor,interactive,student3,51.34957550679
+Q,classroom65,novel - tutor,interactive,student4,56.4692603817869
+Q,classroom65,novel - tutor,interactive,student5,75.14485634239375
+Q,classroom65,novel - tutor,interactive,student6,57.64417532859652
+Q,classroom65,novel - tutor,interactive,student7,59.604366688093876
+Q,classroom65,novel - tutor,interactive,student8,64.1412514706202
+Q,classroom65,novel - tutor,interactive,student9,63.29519130472266
+Q,classroom65,novel - tutor,interactive,student10,66.4280102748604
+Q,classroom65,novel - tutor,interactive,student11,65.37943450264281
+Q,classroom65,novel - tutor,interactive,student12,50.81342684882867
+Q,classroom65,novel - tutor,interactive,student13,49.91432068010384
+Q,classroom65,novel - tutor,interactive,student14,78.21088305893161
+Q,classroom65,novel - tutor,interactive,student15,73.77251068201106
+Q,classroom65,novel - tutor,interactive,student16,68.90984997980047
+Q,classroom65,novel - tutor,interactive,student17,45.83385582273321
+Q,classroom65,novel - tutor,interactive,student18,56.48384231762381
+Q,classroom65,novel - tutor,interactive,student19,64.86489755675979
+Q,classroom65,novel - tutor,interactive,student20,62.54923428837005
+Q,classroom65,novel - tutor,interactive,student21,56.72458381740752
+Q,classroom65,novel - tutor,interactive,student22,63.65934842728644
+Q,classroom65,novel - tutor,interactive,student23,77.39995770713749
+Q,classroom65,novel - tutor,interactive,student24,58.192517992133986
+Q,classroom65,novel - tutor,interactive,student25,44.52062335223121
+Q,classroom65,novel - tutor,interactive,student26,62.11858553254314
+Q,classroom65,novel - tutor,interactive,student27,60.75061856530872
+Q,classroom65,novel - tutor,interactive,student28,72.214106951838
+Q,classroom65,novel - tutor,interactive,student29,78.2548452211311
+Q,classroom65,novel - tutor,interactive,student30,58.39337841326541
+Q,classroom66,novel - tutor,non-interactive,student1,68.39618183794309
+Q,classroom66,novel - tutor,non-interactive,student2,45.242503103470106
+Q,classroom66,novel - tutor,non-interactive,student3,65.00743058703722
+Q,classroom66,novel - tutor,non-interactive,student4,71.29989216273813
+Q,classroom66,novel - tutor,non-interactive,student5,45.743729533056126
+Q,classroom66,novel - tutor,non-interactive,student6,64.06864946976812
+Q,classroom66,novel - tutor,non-interactive,student7,47.391472725618634
+Q,classroom66,novel - tutor,non-interactive,student8,66.25649265277053
+Q,classroom66,novel - tutor,non-interactive,student9,33.868518485378175
+Q,classroom66,novel - tutor,non-interactive,student10,63.5375789832929
+Q,classroom66,novel - tutor,non-interactive,student11,63.639775287848664
+Q,classroom66,novel - tutor,non-interactive,student12,36.66266888547831
+Q,classroom66,novel - tutor,non-interactive,student13,44.57917491717751
+Q,classroom66,novel - tutor,non-interactive,student14,40.42397300605569
+Q,classroom66,novel - tutor,non-interactive,student15,59.862696139132005
+Q,classroom66,novel - tutor,non-interactive,student16,64.26202743716533
+Q,classroom66,novel - tutor,non-interactive,student17,45.842654646157214
+Q,classroom66,novel - tutor,non-interactive,student18,67.20817732424769
+Q,classroom66,novel - tutor,non-interactive,student19,50.061752845134315
+Q,classroom66,novel - tutor,non-interactive,student20,32.27418134899632
+Q,classroom66,novel - tutor,non-interactive,student21,57.71677301868556
+Q,classroom66,novel - tutor,non-interactive,student22,43.569645278510535
+Q,classroom66,novel - tutor,non-interactive,student23,49.744050382612336
+Q,classroom66,novel - tutor,non-interactive,student24,65.82809235259026
+Q,classroom66,novel - tutor,non-interactive,student25,41.83585800862802
+Q,classroom66,novel - tutor,non-interactive,student26,46.04049608251351
+Q,classroom66,novel - tutor,non-interactive,student27,61.83238085022071
+Q,classroom66,novel - tutor,non-interactive,student28,50.3800029724375
+Q,classroom66,novel - tutor,non-interactive,student29,46.71981000030488
+Q,classroom66,novel - tutor,non-interactive,student30,35.63487057659704
+Q,classroom67,standard,non-interactive,student1,34.911963880320684
+Q,classroom67,standard,non-interactive,student2,46.404558682257715
+Q,classroom67,standard,non-interactive,student3,57.72174873185029
+Q,classroom67,standard,non-interactive,student4,27.392607452890797
+Q,classroom67,standard,non-interactive,student5,54.11298277733587
+Q,classroom67,standard,non-interactive,student6,55.66709527258234
+Q,classroom67,standard,non-interactive,student7,22.294752707537256
+Q,classroom67,standard,non-interactive,student8,48.172488636325156
+Q,classroom67,standard,non-interactive,student9,53.80374086674018
+Q,classroom67,standard,non-interactive,student10,61.52262058456263
+Q,classroom67,standard,non-interactive,student11,41.672734278197325
+Q,classroom67,standard,non-interactive,student12,61.5981776465232
+Q,classroom67,standard,non-interactive,student13,44.90382531330703
+Q,classroom67,standard,non-interactive,student14,55.053868669628486
+Q,classroom67,standard,non-interactive,student15,52.50324480569796
+Q,classroom67,standard,non-interactive,student16,32.656074958861
+Q,classroom67,standard,non-interactive,student17,52.86755800425208
+Q,classroom67,standard,non-interactive,student18,45.05565283492871
+Q,classroom67,standard,non-interactive,student19,43.569681479461444
+Q,classroom67,standard,non-interactive,student20,56.8841271983071
+Q,classroom67,standard,non-interactive,student21,51.11929106349034
+Q,classroom67,standard,non-interactive,student22,61.970879812997545
+Q,classroom67,standard,non-interactive,student23,41.47829788186333
+Q,classroom67,standard,non-interactive,student24,60.31844129933017
+Q,classroom67,standard,non-interactive,student25,45.38412486894532
+Q,classroom67,standard,non-interactive,student26,48.11029313671829
+Q,classroom67,standard,non-interactive,student27,31.624462747353803
+Q,classroom67,standard,non-interactive,student28,52.47275203007648
+Q,classroom67,standard,non-interactive,student29,32.348031851041824
+Q,classroom67,standard,non-interactive,student30,41.68986837400538
+Q,classroom68,standard,interactive,student1,49.08189856906108
+Q,classroom68,standard,interactive,student2,66.0013649130903
+Q,classroom68,standard,interactive,student3,42.00368497883389
+Q,classroom68,standard,interactive,student4,59.629668347505024
+Q,classroom68,standard,interactive,student5,57.358092768387984
+Q,classroom68,standard,interactive,student6,51.57671102839329
+Q,classroom68,standard,interactive,student7,54.730615122166256
+Q,classroom68,standard,interactive,student8,61.351808676717866
+Q,classroom68,standard,interactive,student9,46.3754224583615
+Q,classroom68,standard,interactive,student10,49.18091153831446
+Q,classroom68,standard,interactive,student11,58.07397798096023
+Q,classroom68,standard,interactive,student12,66.08541785190336
+Q,classroom68,standard,interactive,student13,58.517170156891616
+Q,classroom68,standard,interactive,student14,52.801095087808974
+Q,classroom68,standard,interactive,student15,72.30016972159915
+Q,classroom68,standard,interactive,student16,57.00758348006085
+Q,classroom68,standard,interactive,student17,67.75144972312327
+Q,classroom68,standard,interactive,student18,68.09009690527566
+Q,classroom68,standard,interactive,student19,66.74594057716939
+Q,classroom68,standard,interactive,student20,67.15310150113105
+Q,classroom68,standard,interactive,student21,50.48220087134206
+Q,classroom68,standard,interactive,student22,66.80934725156368
+Q,classroom68,standard,interactive,student23,44.247014764388794
+Q,classroom68,standard,interactive,student24,48.31597537955844
+Q,classroom68,standard,interactive,student25,74.92670070422159
+Q,classroom68,standard,interactive,student26,60.8367584175581
+Q,classroom68,standard,interactive,student27,71.19793485464959
+Q,classroom68,standard,interactive,student28,59.13343752224295
+Q,classroom68,standard,interactive,student29,41.614941930467864
+Q,classroom68,standard,interactive,student30,42.638922527209544
+R,classroom69,novel - tutor,non-interactive,student1,68.49401554752318
+R,classroom69,novel - tutor,non-interactive,student2,68.75593293267997
+R,classroom69,novel - tutor,non-interactive,student3,79.86901641781579
+R,classroom69,novel - tutor,non-interactive,student4,53.29045112491367
+R,classroom69,novel - tutor,non-interactive,student5,65.03160387940771
+R,classroom69,novel - tutor,non-interactive,student6,77.48578692730966
+R,classroom69,novel - tutor,non-interactive,student7,56.840025548508706
+R,classroom69,novel - tutor,non-interactive,student8,64.84249716772713
+R,classroom69,novel - tutor,non-interactive,student9,73.11585343048445
+R,classroom69,novel - tutor,non-interactive,student10,66.23523078299137
+R,classroom69,novel - tutor,non-interactive,student11,48.019314970113776
+R,classroom69,novel - tutor,non-interactive,student12,59.40062692999013
+R,classroom69,novel - tutor,non-interactive,student13,80.54807231193965
+R,classroom69,novel - tutor,non-interactive,student14,69.79742461481581
+R,classroom69,novel - tutor,non-interactive,student15,63.43315438535837
+R,classroom69,novel - tutor,non-interactive,student16,69.26803792442963
+R,classroom69,novel - tutor,non-interactive,student17,45.855736375768714
+R,classroom69,novel - tutor,non-interactive,student18,72.71213569663371
+R,classroom69,novel - tutor,non-interactive,student19,67.75554615768425
+R,classroom69,novel - tutor,non-interactive,student20,68.24457286806319
+R,classroom69,novel - tutor,non-interactive,student21,63.50552324852597
+R,classroom69,novel - tutor,non-interactive,student22,68.46321817214827
+R,classroom69,novel - tutor,non-interactive,student23,67.06031956724297
+R,classroom69,novel - tutor,non-interactive,student24,81.39779393901871
+R,classroom69,novel - tutor,non-interactive,student25,54.831307648933645
+R,classroom69,novel - tutor,non-interactive,student26,80.31861481493598
+R,classroom69,novel - tutor,non-interactive,student27,67.29635581991728
+R,classroom69,novel - tutor,non-interactive,student28,62.417258280545504
+R,classroom69,novel - tutor,non-interactive,student29,52.76246818634634
+R,classroom69,novel - tutor,non-interactive,student30,46.28107681113091
+R,classroom70,standard,non-interactive,student1,51.823156721723834
+R,classroom70,standard,non-interactive,student2,58.27986366154827
+R,classroom70,standard,non-interactive,student3,54.74095301176916
+R,classroom70,standard,non-interactive,student4,42.09618143562001
+R,classroom70,standard,non-interactive,student5,74.59924505238034
+R,classroom70,standard,non-interactive,student6,64.08792896586321
+R,classroom70,standard,non-interactive,student7,62.33598778961332
+R,classroom70,standard,non-interactive,student8,61.67640324830423
+R,classroom70,standard,non-interactive,student9,55.69500763554049
+R,classroom70,standard,non-interactive,student10,55.54635999781281
+R,classroom70,standard,non-interactive,student11,53.39264136956385
+R,classroom70,standard,non-interactive,student12,60.78983442042035
+R,classroom70,standard,non-interactive,student13,68.47702999444164
+R,classroom70,standard,non-interactive,student14,43.25749366624953
+R,classroom70,standard,non-interactive,student15,58.442196213170135
+R,classroom70,standard,non-interactive,student16,57.15668170045229
+R,classroom70,standard,non-interactive,student17,65.34919441964034
+R,classroom70,standard,non-interactive,student18,60.34112784364975
+R,classroom70,standard,non-interactive,student19,49.30879663478336
+R,classroom70,standard,non-interactive,student20,67.03031747849361
+R,classroom70,standard,non-interactive,student21,54.922446444644414
+R,classroom70,standard,non-interactive,student22,71.95250788824853
+R,classroom70,standard,non-interactive,student23,61.84857834868959
+R,classroom70,standard,non-interactive,student24,43.13335950752872
+R,classroom70,standard,non-interactive,student25,68.54433630400442
+R,classroom70,standard,non-interactive,student26,48.922635109021556
+R,classroom70,standard,non-interactive,student27,50.182329395050246
+R,classroom70,standard,non-interactive,student28,63.63081312918057
+R,classroom70,standard,non-interactive,student29,87.26299802397403
+R,classroom70,standard,non-interactive,student30,53.45906582691814
+R,classroom71,novel - tutor,interactive,student1,57.32074722262391
+R,classroom71,novel - tutor,interactive,student2,88.20916383663175
+R,classroom71,novel - tutor,interactive,student3,92.37451825312971
+R,classroom71,novel - tutor,interactive,student4,78.60872041702912
+R,classroom71,novel - tutor,interactive,student5,66.89677127551114
+R,classroom71,novel - tutor,interactive,student6,65.02675470387896
+R,classroom71,novel - tutor,interactive,student7,90.47149787185404
+R,classroom71,novel - tutor,interactive,student8,76.01300642806451
+R,classroom71,novel - tutor,interactive,student9,75.95227608196772
+R,classroom71,novel - tutor,interactive,student10,77.76383293149382
+R,classroom71,novel - tutor,interactive,student11,85.16480583515312
+R,classroom71,novel - tutor,interactive,student12,47.79066862767507
+R,classroom71,novel - tutor,interactive,student13,78.22328499344191
+R,classroom71,novel - tutor,interactive,student14,92.39316578631691
+R,classroom71,novel - tutor,interactive,student15,63.568751162168496
+R,classroom71,novel - tutor,interactive,student16,67.7313159008986
+R,classroom71,novel - tutor,interactive,student17,84.90214513058123
+R,classroom71,novel - tutor,interactive,student18,82.36524669495253
+R,classroom71,novel - tutor,interactive,student19,87.49826769969096
+R,classroom71,novel - tutor,interactive,student20,80.4938974513323
+R,classroom71,novel - tutor,interactive,student21,60.82369056905
+R,classroom71,novel - tutor,interactive,student22,66.32694925788905
+R,classroom71,novel - tutor,interactive,student23,87.11437103967516
+R,classroom71,novel - tutor,interactive,student24,67.5984019341558
+R,classroom71,novel - tutor,interactive,student25,62.52965649416135
+R,classroom71,novel - tutor,interactive,student26,71.55520925875683
+R,classroom71,novel - tutor,interactive,student27,74.22935963649803
+R,classroom71,novel - tutor,interactive,student28,80.33146756298117
+R,classroom71,novel - tutor,interactive,student29,80.14868880672958
+R,classroom71,novel - tutor,interactive,student30,75.96941379425643
+R,classroom72,standard,interactive,student1,55.35892399037233
+R,classroom72,standard,interactive,student2,57.76137486142777
+R,classroom72,standard,interactive,student3,71.43710233949727
+R,classroom72,standard,interactive,student4,67.91614141863066
+R,classroom72,standard,interactive,student5,53.337749901018775
+R,classroom72,standard,interactive,student6,86.91449116121598
+R,classroom72,standard,interactive,student7,63.048508941380526
+R,classroom72,standard,interactive,student8,71.20971718992885
+R,classroom72,standard,interactive,student9,56.50522751235194
+R,classroom72,standard,interactive,student10,59.82166564642982
+R,classroom72,standard,interactive,student11,62.50029160974407
+R,classroom72,standard,interactive,student12,65.33917339622349
+R,classroom72,standard,interactive,student13,82.32778032675682
+R,classroom72,standard,interactive,student14,67.68605387542334
+R,classroom72,standard,interactive,student15,81.22344067466211
+R,classroom72,standard,interactive,student16,63.80162840536743
+R,classroom72,standard,interactive,student17,71.49397833716849
+R,classroom72,standard,interactive,student18,60.34774772424642
+R,classroom72,standard,interactive,student19,68.53931843333132
+R,classroom72,standard,interactive,student20,88.98819491152713
+R,classroom72,standard,interactive,student21,71.42479027433761
+R,classroom72,standard,interactive,student22,82.84337255343505
+R,classroom72,standard,interactive,student23,66.93477336455219
+R,classroom72,standard,interactive,student24,80.68870432984558
+R,classroom72,standard,interactive,student25,67.42494571421318
+R,classroom72,standard,interactive,student26,78.83522212188623
+R,classroom72,standard,interactive,student27,72.37470951101412
+R,classroom72,standard,interactive,student28,73.30701447688728
+R,classroom72,standard,interactive,student29,77.97777218927207
+R,classroom72,standard,interactive,student30,76.64672978158352
+S,classroom73,novel - tutor,interactive,student1,96.94444030539134
+S,classroom73,novel - tutor,interactive,student2,93.07976698206572
+S,classroom73,novel - tutor,interactive,student3,93.75400691075757
+S,classroom73,novel - tutor,interactive,student4,90.41026482637709
+S,classroom73,novel - tutor,interactive,student5,71.17816661998818
+S,classroom73,novel - tutor,interactive,student6,80.21834923616534
+S,classroom73,novel - tutor,interactive,student7,75.2593753477559
+S,classroom73,novel - tutor,interactive,student8,100
+S,classroom73,novel - tutor,interactive,student9,82.0068123763399
+S,classroom73,novel - tutor,interactive,student10,85.63446370195327
+S,classroom73,novel - tutor,interactive,student11,85.14467582565982
+S,classroom73,novel - tutor,interactive,student12,91.31703053795366
+S,classroom73,novel - tutor,interactive,student13,93.92259782345263
+S,classroom73,novel - tutor,interactive,student14,89.91368397689767
+S,classroom73,novel - tutor,interactive,student15,95.29106226217912
+S,classroom73,novel - tutor,interactive,student16,72.89967016625235
+S,classroom73,novel - tutor,interactive,student17,97.45456953718337
+S,classroom73,novel - tutor,interactive,student18,95.15283103824905
+S,classroom73,novel - tutor,interactive,student19,89.03739944945019
+S,classroom73,novel - tutor,interactive,student20,90.27905792758065
+S,classroom73,novel - tutor,interactive,student21,83.35866514156857
+S,classroom73,novel - tutor,interactive,student22,100
+S,classroom73,novel - tutor,interactive,student23,77.95959359641806
+S,classroom73,novel - tutor,interactive,student24,100
+S,classroom73,novel - tutor,interactive,student25,87.85188417222297
+S,classroom73,novel - tutor,interactive,student26,88.81218280526585
+S,classroom73,novel - tutor,interactive,student27,78.5317876977175
+S,classroom73,novel - tutor,interactive,student28,73.61096346849489
+S,classroom73,novel - tutor,interactive,student29,76.93384654180635
+S,classroom73,novel - tutor,interactive,student30,92.54928533411571
+S,classroom74,standard,interactive,student1,77.43942291144076
+S,classroom74,standard,interactive,student2,92.57313559009437
+S,classroom74,standard,interactive,student3,87.64597636819848
+S,classroom74,standard,interactive,student4,70.64918147056396
+S,classroom74,standard,interactive,student5,96.22014081720205
+S,classroom74,standard,interactive,student6,89.74528406180146
+S,classroom74,standard,interactive,student7,84.06017304852156
+S,classroom74,standard,interactive,student8,76.28987213922015
+S,classroom74,standard,interactive,student9,81.63146341430804
+S,classroom74,standard,interactive,student10,78.50660291039097
+S,classroom74,standard,interactive,student11,86.09184031433296
+S,classroom74,standard,interactive,student12,88.76035761001579
+S,classroom74,standard,interactive,student13,73.77383109019242
+S,classroom74,standard,interactive,student14,70.63917129707436
+S,classroom74,standard,interactive,student15,79.34693118012179
+S,classroom74,standard,interactive,student16,78.30424694173657
+S,classroom74,standard,interactive,student17,78.34683304557595
+S,classroom74,standard,interactive,student18,75.53418592230645
+S,classroom74,standard,interactive,student19,91.0880271873995
+S,classroom74,standard,interactive,student20,67.12263362722723
+S,classroom74,standard,interactive,student21,76.77724385311654
+S,classroom74,standard,interactive,student22,95.46774028693592
+S,classroom74,standard,interactive,student23,92.63477312471518
+S,classroom74,standard,interactive,student24,83.65752428997942
+S,classroom74,standard,interactive,student25,97.03262574430013
+S,classroom74,standard,interactive,student26,66.69738399226766
+S,classroom74,standard,interactive,student27,83.61672509697105
+S,classroom74,standard,interactive,student28,93.79919770483713
+S,classroom74,standard,interactive,student29,83.08781337525554
+S,classroom74,standard,interactive,student30,85.98452678316904
+S,classroom75,novel - tutor,non-interactive,student1,65.72870995696684
+S,classroom75,novel - tutor,non-interactive,student2,68.1434145706229
+S,classroom75,novel - tutor,non-interactive,student3,70.17479447706525
+S,classroom75,novel - tutor,non-interactive,student4,80.28130772884062
+S,classroom75,novel - tutor,non-interactive,student5,49.81674097946369
+S,classroom75,novel - tutor,non-interactive,student6,58.637308258326385
+S,classroom75,novel - tutor,non-interactive,student7,72.986988501818
+S,classroom75,novel - tutor,non-interactive,student8,78.08276583198602
+S,classroom75,novel - tutor,non-interactive,student9,91.56996177890383
+S,classroom75,novel - tutor,non-interactive,student10,48.3731489710253
+S,classroom75,novel - tutor,non-interactive,student11,71.54872366990803
+S,classroom75,novel - tutor,non-interactive,student12,71.43028833663455
+S,classroom75,novel - tutor,non-interactive,student13,76.82969403214997
+S,classroom75,novel - tutor,non-interactive,student14,78.59702111174072
+S,classroom75,novel - tutor,non-interactive,student15,69.10438097311562
+S,classroom75,novel - tutor,non-interactive,student16,87.75190141378408
+S,classroom75,novel - tutor,non-interactive,student17,57.167973577284336
+S,classroom75,novel - tutor,non-interactive,student18,68.4741695545589
+S,classroom75,novel - tutor,non-interactive,student19,69.12686593943133
+S,classroom75,novel - tutor,non-interactive,student20,70.27592093113805
+S,classroom75,novel - tutor,non-interactive,student21,83.76426740273745
+S,classroom75,novel - tutor,non-interactive,student22,58.975690495219396
+S,classroom75,novel - tutor,non-interactive,student23,53.102793651704644
+S,classroom75,novel - tutor,non-interactive,student24,58.82832345883054
+S,classroom75,novel - tutor,non-interactive,student25,69.7870464362519
+S,classroom75,novel - tutor,non-interactive,student26,82.14714714025602
+S,classroom75,novel - tutor,non-interactive,student27,75.1300187017491
+S,classroom75,novel - tutor,non-interactive,student28,100
+S,classroom75,novel - tutor,non-interactive,student29,78.90946700649081
+S,classroom75,novel - tutor,non-interactive,student30,88.3564488904324
+S,classroom76,standard,non-interactive,student1,75.8362810052188
+S,classroom76,standard,non-interactive,student2,76.15517865889504
+S,classroom76,standard,non-interactive,student3,71.19789416121391
+S,classroom76,standard,non-interactive,student4,74.8016589853964
+S,classroom76,standard,non-interactive,student5,74.2252898112352
+S,classroom76,standard,non-interactive,student6,60.73990999225772
+S,classroom76,standard,non-interactive,student7,64.36783909800721
+S,classroom76,standard,non-interactive,student8,67.91661689563932
+S,classroom76,standard,non-interactive,student9,90.81169847596038
+S,classroom76,standard,non-interactive,student10,82.21595075978703
+S,classroom76,standard,non-interactive,student11,68.1147728656337
+S,classroom76,standard,non-interactive,student12,75.72246540316422
+S,classroom76,standard,non-interactive,student13,69.55432413375362
+S,classroom76,standard,non-interactive,student14,55.00358489329556
+S,classroom76,standard,non-interactive,student15,78.08099990152317
+S,classroom76,standard,non-interactive,student16,70.92129225292283
+S,classroom76,standard,non-interactive,student17,67.57261755603923
+S,classroom76,standard,non-interactive,student18,60.18475542458569
+S,classroom76,standard,non-interactive,student19,55.51984293156636
+S,classroom76,standard,non-interactive,student20,70.2664972795639
+S,classroom76,standard,non-interactive,student21,74.52910387206117
+S,classroom76,standard,non-interactive,student22,65.4049471229327
+S,classroom76,standard,non-interactive,student23,63.89554986080337
+S,classroom76,standard,non-interactive,student24,71.50947148636828
+S,classroom76,standard,non-interactive,student25,70.58018637204385
+S,classroom76,standard,non-interactive,student26,79.34703893766645
+S,classroom76,standard,non-interactive,student27,65.1784543587765
+S,classroom76,standard,non-interactive,student28,77.37204574449844
+S,classroom76,standard,non-interactive,student29,56.85995685258324
+S,classroom76,standard,non-interactive,student30,66.87072807007364
+T,classroom77,novel - tutor,interactive,student1,95.41848683177552
+T,classroom77,novel - tutor,interactive,student2,98.52145601229121
+T,classroom77,novel - tutor,interactive,student3,100
+T,classroom77,novel - tutor,interactive,student4,100
+T,classroom77,novel - tutor,interactive,student5,82.56775829092147
+T,classroom77,novel - tutor,interactive,student6,80.95719766731139
+T,classroom77,novel - tutor,interactive,student7,98.37925311159522
+T,classroom77,novel - tutor,interactive,student8,90.45291373611018
+T,classroom77,novel - tutor,interactive,student9,99.17598025421175
+T,classroom77,novel - tutor,interactive,student10,92.29347527792898
+T,classroom77,novel - tutor,interactive,student11,79.83895048147744
+T,classroom77,novel - tutor,interactive,student12,83.05655470705669
+T,classroom77,novel - tutor,interactive,student13,93.48824986248881
+T,classroom77,novel - tutor,interactive,student14,96.8533051285751
+T,classroom77,novel - tutor,interactive,student15,92.38062409236267
+T,classroom77,novel - tutor,interactive,student16,89.25241645426362
+T,classroom77,novel - tutor,interactive,student17,84.09910224763559
+T,classroom77,novel - tutor,interactive,student18,88.21158438097858
+T,classroom77,novel - tutor,interactive,student19,79.34767127019452
+T,classroom77,novel - tutor,interactive,student20,90.5524231892563
+T,classroom77,novel - tutor,interactive,student21,89.8383999385381
+T,classroom77,novel - tutor,interactive,student22,77.23223322843049
+T,classroom77,novel - tutor,interactive,student23,86.60080881552737
+T,classroom77,novel - tutor,interactive,student24,100
+T,classroom77,novel - tutor,interactive,student25,74.3106937542291
+T,classroom77,novel - tutor,interactive,student26,100
+T,classroom77,novel - tutor,interactive,student27,92.74431225170883
+T,classroom77,novel - tutor,interactive,student28,98.10049352774439
+T,classroom77,novel - tutor,interactive,student29,100
+T,classroom77,novel - tutor,interactive,student30,82.43128331276978
+T,classroom78,standard,non-interactive,student1,72.42479310003422
+T,classroom78,standard,non-interactive,student2,88.54866771008741
+T,classroom78,standard,non-interactive,student3,62.73818401683951
+T,classroom78,standard,non-interactive,student4,76.58300192705262
+T,classroom78,standard,non-interactive,student5,73.46738698395613
+T,classroom78,standard,non-interactive,student6,57.69989374347308
+T,classroom78,standard,non-interactive,student7,89.57528884094616
+T,classroom78,standard,non-interactive,student8,85.82985410219646
+T,classroom78,standard,non-interactive,student9,70.43740462901818
+T,classroom78,standard,non-interactive,student10,76.354739208001
+T,classroom78,standard,non-interactive,student11,77.48053047656059
+T,classroom78,standard,non-interactive,student12,85.55321295329185
+T,classroom78,standard,non-interactive,student13,63.25578121349749
+T,classroom78,standard,non-interactive,student14,100
+T,classroom78,standard,non-interactive,student15,99.82516389782793
+T,classroom78,standard,non-interactive,student16,83.96742732887613
+T,classroom78,standard,non-interactive,student17,77.76573824810879
+T,classroom78,standard,non-interactive,student18,83.39451555316617
+T,classroom78,standard,non-interactive,student19,63.75714402173726
+T,classroom78,standard,non-interactive,student20,82.71362813804915
+T,classroom78,standard,non-interactive,student21,67.67734482878488
+T,classroom78,standard,non-interactive,student22,83.90879490948912
+T,classroom78,standard,non-interactive,student23,72.53515640620157
+T,classroom78,standard,non-interactive,student24,83.0087178538324
+T,classroom78,standard,non-interactive,student25,88.87075144932801
+T,classroom78,standard,non-interactive,student26,67.14397582887088
+T,classroom78,standard,non-interactive,student27,82.4271460270053
+T,classroom78,standard,non-interactive,student28,71.33295501104651
+T,classroom78,standard,non-interactive,student29,68.6652336178397
+T,classroom78,standard,non-interactive,student30,77.18920128906885
+T,classroom79,novel - tutor,non-interactive,student1,93.04909367984115
+T,classroom79,novel - tutor,non-interactive,student2,85.4121384001479
+T,classroom79,novel - tutor,non-interactive,student3,91.77050486742348
+T,classroom79,novel - tutor,non-interactive,student4,61.59787733051894
+T,classroom79,novel - tutor,non-interactive,student5,75.07333942784194
+T,classroom79,novel - tutor,non-interactive,student6,69.76260171089314
+T,classroom79,novel - tutor,non-interactive,student7,83.08100404846422
+T,classroom79,novel - tutor,non-interactive,student8,69.80005703469988
+T,classroom79,novel - tutor,non-interactive,student9,81.87605480790147
+T,classroom79,novel - tutor,non-interactive,student10,76.2355068999825
+T,classroom79,novel - tutor,non-interactive,student11,89.06743986211393
+T,classroom79,novel - tutor,non-interactive,student12,75.2996138953183
+T,classroom79,novel - tutor,non-interactive,student13,48.608062462830716
+T,classroom79,novel - tutor,non-interactive,student14,85.67788114668365
+T,classroom79,novel - tutor,non-interactive,student15,76.35507903237679
+T,classroom79,novel - tutor,non-interactive,student16,69.0542918179619
+T,classroom79,novel - tutor,non-interactive,student17,76.18455586775144
+T,classroom79,novel - tutor,non-interactive,student18,73.14706813378737
+T,classroom79,novel - tutor,non-interactive,student19,69.74934639407536
+T,classroom79,novel - tutor,non-interactive,student20,66.5202074943462
+T,classroom79,novel - tutor,non-interactive,student21,94.1144200013684
+T,classroom79,novel - tutor,non-interactive,student22,85.81951657716127
+T,classroom79,novel - tutor,non-interactive,student23,66.73890330967154
+T,classroom79,novel - tutor,non-interactive,student24,82.60684291963723
+T,classroom79,novel - tutor,non-interactive,student25,81.356426615584
+T,classroom79,novel - tutor,non-interactive,student26,91.80994734863226
+T,classroom79,novel - tutor,non-interactive,student27,97.98370301102585
+T,classroom79,novel - tutor,non-interactive,student28,88.77405743837838
+T,classroom79,novel - tutor,non-interactive,student29,81.48978415299536
+T,classroom79,novel - tutor,non-interactive,student30,82.66800241303021
+T,classroom80,standard,interactive,student1,88.24006117528413
+T,classroom80,standard,interactive,student2,81.48554651987521
+T,classroom80,standard,interactive,student3,85.55895276328907
+T,classroom80,standard,interactive,student4,95.04307410971182
+T,classroom80,standard,interactive,student5,81.81190636688518
+T,classroom80,standard,interactive,student6,75.00060989136814
+T,classroom80,standard,interactive,student7,89.92001725443986
+T,classroom80,standard,interactive,student8,94.31820921237241
+T,classroom80,standard,interactive,student9,76.23826871906878
+T,classroom80,standard,interactive,student10,80.85262977784205
+T,classroom80,standard,interactive,student11,96.64662546976153
+T,classroom80,standard,interactive,student12,82.13556979324454
+T,classroom80,standard,interactive,student13,100
+T,classroom80,standard,interactive,student14,93.01177869927534
+T,classroom80,standard,interactive,student15,95.89181826567278
+T,classroom80,standard,interactive,student16,100
+T,classroom80,standard,interactive,student17,96.68870091560042
+T,classroom80,standard,interactive,student18,100
+T,classroom80,standard,interactive,student19,95.13538697354014
+T,classroom80,standard,interactive,student20,74.44430771469438
+T,classroom80,standard,interactive,student21,88.03912557868513
+T,classroom80,standard,interactive,student22,87.58585160541695
+T,classroom80,standard,interactive,student23,100
+T,classroom80,standard,interactive,student24,87.97980446644223
+T,classroom80,standard,interactive,student25,81.42686737558493
+T,classroom80,standard,interactive,student26,89.52403286626581
+T,classroom80,standard,interactive,student27,90.68748147723663
+T,classroom80,standard,interactive,student28,80.91702946964244
+T,classroom80,standard,interactive,student29,96.7155148601931
+T,classroom80,standard,interactive,student30,86.50250011792835
