@@ -58,9 +58,10 @@ set.seed(3334)
 
 des <- ### EDIBBLE CODE
 
-# create table WITH subsamples
-
+# create table WITH random ids AND subsamples
+  
 crd_3factor_table <- serve_table(des) |> 
+  mutate(islander_id = sample_ids) |> 
   expand_grid(subsample = 1:2) |> 
   mutate(subsample = paste0("subsample0", subsample))
 
