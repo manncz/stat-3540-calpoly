@@ -7,8 +7,8 @@ execute:
   warning: false
 
 format:
-  html: default
   docx: default
+  html: default
 ---
 ```{r}
 #| echo: false
@@ -37,7 +37,7 @@ To investigate the impact of a new algebra curriculum and different instructiona
 
 Within each school, four algebra classes were chosen, with each assigned to a unique combination of algebra curriculum and instructional method. The algebra curriculum included (1) a new online tutor-assisted curriculum (**novel tutor**) and (2) a standard curriculum for Texas high schools (**standard**). The instructional methods (1) teacher-led non-interactive lectures (**non-interactive**), and (2) teacher-led interactive lectures with group activities (**interactive**). 
 
-This resulted in a total of 80 classrooms, each with *approximately* 30 students, yielding a total of 1,800 students in the study. At the end of the school year, all students took standardized math test scored on a 0 to 100 scale. We also have their score on the test from the year *before* they took algebra.
+This resulted in a total of 80 classrooms, each with *approximately* 30 students, yielding a total of 2,400 students in the study. At the end of the school year, all students took standardized math test scored on a 0 to 100 scale. We also have their score on the test from the year *before* they took algebra.
 
 Here are the first couple of rows of our data:
 
