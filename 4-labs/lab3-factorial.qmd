@@ -207,11 +207,13 @@ BEFORE you move on! If you are using the provided question, for each of the subs
 
 
 - You have a data set with 96 rows (2 subsamples per islander x treatment combo). 
-- Think about how you need to analyze this data!
+- Think about how you might want to analyze this data!
+    - *Note* Even though we know how to use LMMs to account for subsampling, we are going to stick with the "aggregate" method for this lab.
 - Aggregate/Average the your response across the 2 subsamples so you have a data set of 48 rows to analyze and your islander-level response is the average.
     - e.g.: for the provided question the response with be the **average** MAP
     - `group_by() |> summarize()`
     - Make sure you keep each unique Islander and end up with one row per Islander!
+
 
 ### Step 2: Analysis and Inference
 
@@ -228,7 +230,7 @@ BEFORE you move on! Your dataset should be at the Islander level (48 rows) for t
 
 ## Report and Submission
 
-Download the guided lab report template and work within it [[coming soon]].
+Download the guided lab report template and work within it [03-lab-3way-factorial-template.docx](templates/03-lab-3way-factorial-template.docx).
 
 Make sure to:
 
