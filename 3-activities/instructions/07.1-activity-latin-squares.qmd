@@ -1,0 +1,61 @@
+---
+title: "Activity 7.1: Replicating Latin Squares"
+subtitle: "CO2 Emissions"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+format:
+  html: default
+  docx: default
+---
+::: callout-warning
+- Submit via Gradescope, don't forget to assign pages to the questions in the outline!
+
+- Delete any extraneous instructions (**like this box**) before submission (unless you are using the PDF template). *You will be deducted points from now on if you do not follow this instruction!*
+
+- There is no coding required for this activity! **I would recommend you complete it using the Word version**, but you are still welcome to use the .qmd template: [07.1-activity-latin-squares.qmd](../student/07.1-activity-latin-squares.qmd).
+
+:::
+
+Suppose researchers are interested in 2 gasoline blends (summer, winter), and an additive at 3 levels (2%, 3%, 4%).  The response is CO emission under real driving conditions. We know there will be differences in CO emission among types of cars, as well as among driving conditions/routes.
+
+### 1.	Structure
+
+Identify the following
+ 
+**Treatment Structure:**
+
++ Name:
++ Factor(s) + Levels:
++ t = 
+
+**Design Structure:**
+
++ Name: 
++ Blocking factor 1: 
++ Blocking factor 2: 
++ Response: 
++ Experimental unit:
++ How many rows and column blocking factor levels should be included in a Latin Square design for this study?
+  
+### 2. Unreplicated Blueprint 
+
+Sketch a blueprint for a possible study design for a standard unreplicated Latin Square (e.g., one "platform").
+
+### 3. Unreplicated Skeleton ANOVA
+
+Write out a skeleton ANOVA for the unreplicated latin square in (2).
+
+### 4. Replicating Blueprint 
+
+Sketch a blueprint for a possible study design for replicating the latin square by reusing cars (i.e., increase the number of routes to 12).
+  
+### 5. Replicating Skeleton ANOVA
+
+Write out a skeleton ANOVA for the replicated latin square in (4).
+
+### 6. Discussion
+
+Why was it beneficial to replicate the latin square? Use evidence from (3) and (5)!

@@ -210,7 +210,7 @@ where:
 | SV | DF: $N - 1$ where $N = n_t rt$ |
 |------------------------------------|------------------------------------|
 | Treatment | t - 1 |
-| e.u.(Treatment) $\rightarrow$ experimental error $\sigma_{\epsilon}^2$ | (r - 1)(t -1) |
+| e.u.(Treatment) $\rightarrow$ experimental error $\sigma_{\epsilon}^2$ | (r - 1)t |
 | m.u.(e.u x Treatment) $\rightarrow$ subsampling variability $\sigma_s^2$ | ($n_t$ - 1)rt |
 
 ## Solution 2: Linear Mixed Model
