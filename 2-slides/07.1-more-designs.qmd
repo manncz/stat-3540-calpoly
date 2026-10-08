@@ -544,8 +544,8 @@ where:
 | Source of Variation     | DF                   | SS    | MS    | F         |
 |-------------------------|----------------------|-------|-------|-----------|
 | Global Block            | blks - 1             | SSblk | MSblk | MSblk/MSE |
-| Rows(Global Block)\*    | (rows - 1)(blks - 1) | SSrow | MSrow | MSrow/MSE |
-| Columns(Global Block)\* | (cols - 1)(blks - 1) | SScol | MScol | MScol/MSE |
+| Rows(Global Block)\*    | (rows - 1)(blks) | SSrow | MSrow | MSrow/MSE |
+| Columns(Global Block)\* | (cols - 1)(blks) | SScol | MScol | MScol/MSE |
 | Treatment               | t - 1                | SSTrt | MSTrt | MSTrt/MSE |
 | Error                   | Use subtraction!     | SSE   | MSE   |           |
 | Total                   | N - 1                |       |       |           |

@@ -5206,7 +5206,7 @@
     "href": "2-slides/07.1-more-designs.html#anova-three-platforms",
     "title": "Module 7: Extensions and Considerations in Experimental Design and Analysis",
     "section": "ANOVA (Three Platforms)",
-    "text": "ANOVA (Three Platforms)\n\n\n\n\n\n\n\n\n\n\nSource of Variation\nDF\nSS\nMS\nF\n\n\n\n\nGlobal Block\nblks - 1\nSSblk\nMSblk\nMSblk/MSE\n\n\nRows(Global Block)*\n(rows - 1)(blks - 1)\nSSrow\nMSrow\nMSrow/MSE\n\n\nColumns(Global Block)*\n(cols - 1)(blks - 1)\nSScol\nMScol\nMScol/MSE\n\n\nTreatment\nt - 1\nSSTrt\nMSTrt\nMSTrt/MSE\n\n\nError\nUse subtraction!\nSSE\nMSE\n\n\n\nTotal\nN - 1"
+    "text": "ANOVA (Three Platforms)\n\n\n\n\n\n\n\n\n\n\nSource of Variation\nDF\nSS\nMS\nF\n\n\n\n\nGlobal Block\nblks - 1\nSSblk\nMSblk\nMSblk/MSE\n\n\nRows(Global Block)*\n(rows - 1)(blks)\nSSrow\nMSrow\nMSrow/MSE\n\n\nColumns(Global Block)*\n(cols - 1)(blks)\nSScol\nMScol\nMScol/MSE\n\n\nTreatment\nt - 1\nSSTrt\nMSTrt\nMSTrt/MSE\n\n\nError\nUse subtraction!\nSSE\nMSE\n\n\n\nTotal\nN - 1"
   },
   {
     "objectID": "2-slides/07.1-more-designs.html#skeleton-anova-three-platforms",
