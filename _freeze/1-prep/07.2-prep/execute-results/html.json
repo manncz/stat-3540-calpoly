@@ -1,0 +1,15 @@
+{
+  "hash": "c42461915e9d75032c8cc3608a8bad39",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"7.2 Preparation: Analysis Considerations -- ANOVA Assumptions not Met\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n\n- Identify strategies for appropriately analyzing data that does not meeet ANOVA model assumptions.\n:::\n\n\n**Note:** Sorry there isn't a video for this one, we will go through these slides on Tuesday.\n\n## ANOVA Assumptions\n\n- [slides](../2-slides/07.2-nonparametric.qmd).\n\n\n\n\n\n\n \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -28,7 +28,7 @@ To investigate the impact of a new algebra curriculum and different instructiona
 
 Within each school, four algebra classes were chosen, with each assigned to a unique combination of algebra curriculum and instructional method. The algebra curriculum included (1) a new online tutor-assisted curriculum (**novel tutor**) and (2) a standard curriculum for Texas high schools (**standard**). The instructional methods (1) teacher-led non-interactive lectures (**non-interactive**), and (2) teacher-led interactive lectures with group activities (**interactive**). 
 
-This resulted in a total of 80 classrooms, each with *approximately* 30 students, yielding a total of 2,400 students in the study. At the end of the school year, all students took standardized math test scored on a 0 to 100 scale. We also have their score on the test from the year *before* they took algebra.
+This resulted in a total of 80 classrooms, each with 30 students, yielding a total of 2,400 students in the study. At the end of the school year, all students took standardized math test scored on a 0 to 100 scale. We also have their score on the test from the year *before* they took algebra.
 
 Here are the first couple of rows of our data:
 
@@ -47,7 +47,7 @@ Here are the first couple of rows of our data:
   + Treatment structure:
   
   + Design structure:
-
+  
 ###  3. What is an extraneous variable that the researchers should really account for in the design? (hint: think about what could vary OR be the same between Algebra classes in the same school...)
 
 :::callout-warning
@@ -98,39 +98,10 @@ school_mod <- lmer([[WHAT FORMULA GOES HERE??]],
 :::callout-tip
 # R Analysis output for appropriate LMM for this study
 
-```
-Random effects:
- Groups                        Name        Variance Std.Dev.
- school:curriculum:instruction (Intercept)  0.5054  0.7109  
- school                        (Intercept) 64.4051  8.0253  
- Residual                                  99.4061  9.9703
- 
-Fixed effects:
-                         Estimate Std. Error      df t value Pr(>|t|)    
-(Intercept)               70.9740     1.8078 19.0007  39.261  < 2e-16 ***
-curriculum1                1.9983     0.2185 56.9996   9.146 8.92e-13 ***
-instruction1               5.5518     0.2185 56.9996  25.410  < 2e-16 ***
-curriculum1:instruction1   0.2146     0.2185 56.9996   0.982     0.33 
-```  
-
 :::
 
 :::callout-tip
 # R Analysis output for appropriate linear model (averaging over students)
-
-```
-Random effects:
- Groups   Name        Variance Std.Dev.
- school   (Intercept) 64.407   8.025   
- Residual              3.819   1.954   
-
-Fixed effects:
-                         Estimate Std. Error      df t value Pr(>|t|)    
-(Intercept)               70.9740     1.8078 19.0000  39.260  < 2e-16 ***
-curriculum1                1.9983     0.2185 57.0000   9.146 8.92e-13 ***
-instruction1               5.5518     0.2185 57.0000  25.410  < 2e-16 ***
-curriculum1:instruction1   0.2146     0.2185 57.0000   0.982     0.33 
-```  
 
 :::
 

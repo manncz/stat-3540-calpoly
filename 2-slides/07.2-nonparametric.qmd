@@ -1,0 +1,466 @@
+---
+title: "Module 7: Extensions and Considerations in Experimental Design and Analysis"
+subtitle: "Violating Assumptions + Non-parametric Tests"
+format: 
+  revealjs:
+    # theme: simple # other modern-ish options: dark, simple, solarized
+    theme: simple
+    slide-number: c/t 
+    # chalkboard: true # lets you draw on top of slides (keyboard: c) or open a board (b)
+    width: 1200
+    height: 675
+    css: modern-slides.css
+    auto-stretch: false
+    html-math-method: mathjax
+execute: 
+  warning: false
+  message: false
+  echo: false
+---
+
+```{r}
+
+library(tidyverse)
+library(emmeans)
+library(broom)
+```
+
+
+
+## Reminder: Linear Model Assumptions
+
+
+- In every model (discussed so far), we assume the experimental error is: $\epsilon \overset{iid}{\sim} N(0, \sigma^2)$
+
+- In other words, the errors are: 
+  - **Independent** (iid)
+  - **Normal** ($\sim$ N(,))
+  - & have **Equal Variance** ($\sigma^2$)
+
+## Reminder: Checking Linear Model Assumptions
+
+  - **Independence**: based on context...  
+  - **Normality**: QQplot of residuals
+  - **Equal Variance**: Scatter plot of residuals vs. predicted values
+  
+
+## What to do if our assumptions are broken...
+
+Big picture:
+
+:::callout-important
+### Not Independent
+
+There is nothing that you can do at the analysis stage for this... make sure that you have independent experimental units through your design!
+:::
+
+:::columns
+
+:::column
+
+:::callout-warning
+### Non-constant Residual Variance
+
+1. Welch's ANOVA
+2. Try transforming the outcomes ($y$'s)
+3. Generalized Linear Models (GLMs)
+
+:::
+:::
+
+:::column
+
+:::callout-warning
+### Non-normality of Residuals
+
+1. Try transforming the outcomes ($y$'s)
+2. Non-parametric tests
+3. Bootstrap simulation
+
+:::
+:::
+:::
+  
+Details to come...
+
+# Unequal Variance
+
+## Example -- unequal variance
+
+- Suppose we apply three treatments (A, B, and C) to 10 experimental units each (total n = N = 30) and measure a response, $y_{ij}$. 
+- If the variance differs across treatments, our standard ANOVA may not be appropriate.
+
+:::columns
+
+:::column
+```{r}
+set.seed(34)
+
+a <- rnorm(10, mean = 4, sd = 1)
+b <- rnorm(10, mean = 10, sd = 4)
+c <- rnorm(10, mean = 8, sd = 4)
+
+unvar_dat <- tibble(subj. = 1:30,
+                    treat = rep(c("A","B","C"), each = 10),
+                    y = c(a,b,c))
+
+unvar_dat |> 
+  group_by(treat) |> 
+  summarize(mean_resp = mean(y),
+            sd_resp = sd(y)) |>  
+  knitr::kable(digits = 2)
+
+```
+:::
+:::column
+```{r}
+
+unvar_dat |> 
+  ggplot(aes(x = treat, y = y)) + 
+  geom_boxplot() +
+  geom_jitter(height = 0) +
+  labs(x = "treatment")
+```
+:::
+:::
+
+
+## Example -- unequal variance - ANOVA
+
+
+::::columns
+
+:::column
+
+:::callout-warning
+# Incorrect Analysis 
+
+```{r}
+#| echo: true
+
+options(contrasts = c("contr.sum", "contr.poly"))
+
+bad_mod <- lm(y ~ treat, data = unvar_dat)
+
+anova(bad_mod)
+```
+```{r}
+#| echo: true
+
+emmeans(bad_mod, specs = ~treat)
+```
+:::
+:::
+
+
+:::column
+
+:::callout-warning
+# Uh-Oh!
+```{r}
+bad_mod |> 
+  broom::augment() |> 
+  ggplot(aes(x = .fitted, y = .resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0,
+             color = "#3a86d4") +
+  labs(x = "Fitted Values", y = "Residuals")
+```
+
+:::
+:::
+::::
+
+## Formal Test(s) for Unequal Variance
+
+$$H_0: \sigma_A = \sigma_B = \sigma_C$$
+$$H_A: \text{At least one } \sigma_i \text{ is different.}$$
+
+```{r}
+#| echo: true
+
+bartlett.test(y ~ treat, data = unvar_dat)
+```
+```{r}
+#| echo: true
+
+car::leveneTest(y ~ treat, data = unvar_dat)
+```
+
+
+## Welch's ANOVA
+
+
+```{r}
+#| echo: true
+
+welch_test <- oneway.test(y ~ treat, data = unvar_dat)
+
+welch_test
+```
+
+
+
+## Welch's ANOVA -- follow-up analyses {.scrollable}
+
+:::columns
+:::{.column width=47.5%}
+
+```{r}
+#| echo: true
+
+t.test(y ~ treat, 
+       data = unvar_dat |> filter(treat %in% c("A","B")),
+       var.equal = F)
+```
+
+```{r}
+#| echo: true
+#| 
+t.test(y ~ treat, 
+       data = unvar_dat |> filter(treat %in% c("C","B")),
+       var.equal = F)
+```
+:::
+
+:::{.column width=5%}
+
+:::
+
+:::{.column width=47.5%}
+
+:::callout-tip
+
+Follow-up analyses done "by hand" with all pairwise t-test  **assuming unequal variance**, then **apply Bonferroni adjustment** "by hand"
+
+:::
+```{r}
+#| echo: true
+#| 
+t.test(y ~ treat, 
+       data = unvar_dat |> filter(treat %in% c("A","C")),
+       var.equal = F)
+```
+
+
+
+:::
+
+:::
+
+## Generalized Linear Models (GLM)
+
+- If the response variable is **not** **continuous** (think counts or a binary 1/0 (yes/no)), then there may be unequal variation between groups.
+- If the sample size is big enough, you may be okay on normality, but not on equal variation.
+- One approach to this is using a GLM that is appropriate for that type of response
+  - Poisson (count response)
+  - Logistic (binary response)
+
+
+# Non-Normality
+
+## Assessing Non-Normality
+
+::: callout-tip
+
+## CLT is friend
+
+Especially when sample sizes are relatively large, we usually don't have to worry too much about whether the response variable is normally distributed
+:::
+
+- Check normality with QQ-plot
+- If normality is just a little off, try applying a log or square root transormation to the response (y)
+- If normality appears to be **severely violated,** use non-parametric tests
+
+
+
+
+## Non-Parametric Tests
+
+- Non-parametric tests don't make assumptions about the distribution of the errors (and responses!)
+- Take advantage of randomization for inference
+- They are typically **robust** to skew and outliers
+- Less powerful than ANOVA if ANOVA assumptions actually hold
+
+
+
+## Kruskal-Wallis / Wilcoxon Rank-Sum / Mann-Whitney U Test (CRD)
+
+$$H_0: \text{There is no true effect of the treatment on the response}$$
+
+$$H_A: \text{There is a true effect of the treatment on the response}$$
+
+**Big picture**: Create a test statistic based on the **ranks** of the responses that compares the treatment groups
+
+
+<br>
+
+
+:::callout-note
+### Why all the names?
+
+The Kruskal-Wallis test is an extension of the Wilcoxon Rank-Sum (or Mann-Whitney U) test, to accommodate more than two treatment groups. Wilcoxon and Mann & Whitney just came up with the same test independently at the same time (1945-47)!
+
+:::
+
+## Kruskal-Wallis Test - Example 
+
+:::columns
+
+:::{.column width=55%}
+
+
+**Example:** We got 48 friends to test what griddle temperature (levels 4 or 6) and time on the griddle (2 or 3 minutes) makes the best pancakes! You have each friend eat one short stack of pancakes made on the same griddle, with 2 oz of batter each and 1 oz of maple syrup on top. They rate the pancakes from 1-10 (10 is the best).
+
+
+```{r}
+set.seed(03)
+
+pancakes <- readxl::read_xlsx("_data/07-pancakes.xlsx") |> 
+  mutate(rating = rating + sample(0:5)) |> 
+  mutate(treatment = str_c(temperature, " & ", time))
+
+pancakes |> 
+  dplyr::select(temperature, time, rating, treatment) |> 
+  knitr::kable() |> 
+    kableExtra::scroll_box(height = "200px") |> 
+  kableExtra::kable_styling(font_size = 30)
+```
+:::
+
+:::{.column width=45%}
+
+```{r}
+pancakes |> 
+  ggplot(aes(x = treatment, 
+             y = rating, 
+             color = treatment)) + 
+  geom_jitter(height = 0,
+              width = .2,
+              alpha = .7,
+              size = 3) +
+  labs(x = "treatment") +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+
+
+:::
+:::
+
+
+
+
+## Kruskal-Wallis Test - Procedure
+
+1. Rank the responses from 1 to n
+    - $y_{ij} \rightarrow r_{ij}$ 
+2. Find the average rank within each treatment group
+3. Find the overall average rank
+4. Compute: $H = (n-1) \frac{\sum_{i=1}^n\sum_{j=1}^r (\bar{r}_{i\cdot}-  \bar{r}_{\cdot\cdot})^2}{\sum_{i=1}^n\sum_{j=1}^r (\bar{r}_{ij}-  \bar{r}_{\cdot\cdot})^2}$ 
+5. Compare $H$ to $\chi_{(t-1)}^2$
+
+
+## Kruskal-Wallis Test - in R
+
+
+
+
+```{r}
+#| echo: true
+
+kruskal.test(rating ~ treatment, 
+             data = pancakes)
+```
+
+
+:::columns
+
+:::column
+:::callout-warning
+### Definitely correct to use the non-parametric test here
+
+
+We could tell from the context that the outcome was not normally distributed... and the model diagnostics from the ANOVA would have confirmed, as shown to the right.
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| eval: false
+
+lm(rating ~ treatment, 
+   pancakes) |> 
+  broom::augment() |> 
+  ggpubr::ggqqplot(x = ".resid",
+         color = "#3a86d4") +
+  labs(title = "Normal QQ-Plot of Residuals for Pancake Data with ANOVA model")
+```
+
+:::
+:::
+
+:::column
+
+:::callout-warning
+###  QQplot
+
+```{r}
+lm(rating ~ treatment, 
+   pancakes) |> 
+  broom::augment() |> 
+  ggpubr::ggqqplot(x = ".resid",
+         color = "#3a86d4") +
+  labs(title = "Normal QQ-Plot of Residuals for Pancake Data with ANOVA model")
+```
+:::
+
+:::
+
+:::
+
+
+## Friedman's Test (RCBD)
+
+- Extension of Wilcoxon Ranked Sum for RCBDs
+- Same idea with ranks!
+
+
+1. Rank the responses **within blocks**
+2. Find the average rank within each treatment group **across blocks**
+3. Find the overall average rank
+4. Compute test statistic $Q$, which compares the rank differences across treatments (very similar to $H$)
+5. Compare $Q$ to $\chi_{(t-1)}^2$
+
+
+## Friedman's Test -- Example
+
+You realize that there is a lot of variability between raters for the pancakes. So you decide to re-do the study with just 12 of your friend, where each get a short stack made with each of the temperature & time combinations. You randomize the order, but making sure that each possible order occurs exactly 3 times.
+
+
+```{r}
+pancakes_blocked <- pancakes |> 
+  arrange(treatment, rating) |> 
+  group_by(treatment) |> 
+  mutate(block = row_number())
+```
+
+```{r}
+#| echo: true
+
+friedman.test(rating ~ treatment | block,
+              data = pancakes_blocked)
+```
+
+
+
+## Bootstrapping OR Randomization Tests
+
+- All you need for inference...
+  - A test statistic
+  - A **null distribution** for the test statistic (i.e. what would typical values be of the test statistic, assuming $H_0$ is true?)
+  
+- Given a test statistic, bootstrapping and randomization inference get you a null distribution when you don't have theory to back you up
+
+- More on randomization testing Thursday... you have actually seen a lot of these in STAT I & II at Cal Poly!
+

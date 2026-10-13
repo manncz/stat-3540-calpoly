@@ -1,0 +1,36 @@
+---
+title: "7.2 Preparation: Analysis Considerations -- ANOVA Assumptions not Met"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+
+- Identify strategies for appropriately analyzing data that does not meeet ANOVA model assumptions.
+:::
+
+
+**Note:** Sorry there isn't a video for this one, we will go through these slides on Tuesday.
+
+## ANOVA Assumptions
+
+- [slides](../2-slides/07.2-nonparametric.qmd).
+
+
+
+
+
+
+ 
