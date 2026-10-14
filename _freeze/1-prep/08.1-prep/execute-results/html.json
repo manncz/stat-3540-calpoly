@@ -1,8 +1,8 @@
 {
-  "hash": "cef6b1a0deedb886e7c3edc3ebd9dd7a",
+  "hash": "4476c6a32b51dbcd826040756b960ba4",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"8.1 Preparation: Intro to Causal Inference\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n#### 📽 Watch Videos: 30 min\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n- Have some fun learning about design-based causal inference -- another approach to analyzing experiments\n:::\n\n\n## Introduction to Causal Inference and Randomization-Based Inference\n\n- 📽 Follow along with the [slides](../2-slides/08.1-causal-inference.qmd).\n\nVideo coming soon!\n\n\n<!--{{< video https://www.youtube.com/watch?v=CBD6Z2dz0jQ >}}-->\n\n## Introduction to Causal Inference and Randomization-Based Inference\n\n- 📽 Follow along with the [slides](../2-slides/08.1-causal-inference.qmd#/potential-outcomes-framework-and-estimation).\n\nVideo coming soon!\n",
+    "markdown": "---\ntitle: \"8.1 Preparation: Intro to Causal Inference\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n#### 📽 Watch Videos: 40 min\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n- Have some fun learning about design-based causal inference -- another approach to analyzing experiments\n:::\n\n\n## Introduction to Causal Inference and Randomization-Based Inference\n\n- 📽 Follow along with the [slides](../2-slides/08.1-causal-inference.qmd).\n\nVideo coming soon!\n\n\n{{< video https://youtu.be/Ht1PehyraPI >}}\n\n## Potential Outcomes Framework and Estimation\n\n- 📽 Follow along with the [slides](../2-slides/08.1-causal-inference.qmd#/potential-outcomes-framework-and-estimation).\n\n{{< video https://youtu.be/s1_kNoP0IHE >}}\n\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

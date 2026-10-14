@@ -11,7 +11,7 @@ number-depth: 2
 library(tidyverse)
 ```
 
-#### 📽 Watch Videos: 30 min
+#### 📽 Watch Videos: 40 min
 
 ------------------------------------------------------------------------
 
@@ -28,10 +28,11 @@ library(tidyverse)
 Video coming soon!
 
 
-<!--{{< video https://www.youtube.com/watch?v=CBD6Z2dz0jQ >}}-->
+{{< video https://youtu.be/Ht1PehyraPI >}}
 
-## Introduction to Causal Inference and Randomization-Based Inference
+## Potential Outcomes Framework and Estimation
 
 - 📽 Follow along with the [slides](../2-slides/08.1-causal-inference.qmd#/potential-outcomes-framework-and-estimation).
 
-Video coming soon!
+{{< video https://youtu.be/s1_kNoP0IHE >}}
+

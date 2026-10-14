@@ -5963,5 +5963,12 @@
     "title": "Module 8: Causal Inference",
     "section": "A bit more notation",
     "text": "A bit more notation\nDefine the random treatment assignment variable as \\[\nT_i =\n  \\begin{cases}\n    1      & \\quad \\text{if subject } i \\text{ is assigned to treatment}\\\\\n    0      & \\quad \\text{if subject } i \\text{ is assigned to control}\n  \\end{cases}\n\\] Then we can write the observed outcome as:\n\\[Y_i = T_iy_i^t + (1-T_i)y_i^c\\]"
+  },
+  {
+    "objectID": "1-prep/08.1-prep.html#potential-outcomes-framework-and-estimation",
+    "href": "1-prep/08.1-prep.html#potential-outcomes-framework-and-estimation",
+    "title": "8.1 Preparation: Intro to Causal Inference",
+    "section": "2 Potential Outcomes Framework and Estimation",
+    "text": "2 Potential Outcomes Framework and Estimation\n\n📽 Follow along with the slides."
   }
 ]
