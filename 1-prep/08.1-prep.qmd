@@ -1,0 +1,37 @@
+---
+title: "8.1 Preparation: Intro to Causal Inference"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+#### 📽 Watch Videos: 30 min
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+- Have some fun learning about design-based causal inference -- another approach to analyzing experiments
+:::
+
+
+## Introduction to Causal Inference and Randomization-Based Inference
+
+- 📽 Follow along with the [slides](../2-slides/08.1-causal-inference.qmd).
+
+Video coming soon!
+
+
+<!--{{< video https://www.youtube.com/watch?v=CBD6Z2dz0jQ >}}-->
+
+## Introduction to Causal Inference and Randomization-Based Inference
+
+- 📽 Follow along with the [slides](../2-slides/08.1-causal-inference.qmd#/potential-outcomes-framework-and-estimation).
+
+Video coming soon!
