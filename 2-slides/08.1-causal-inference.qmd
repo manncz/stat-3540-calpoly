@@ -46,7 +46,7 @@ library(tidyverse)
 ## Data
 
 
-![](_images/08-plants.png){width=35%}
+![](_images/08-plants.png){width=30%}
 
 ## Exact p-value based on randomization
 
@@ -65,7 +65,7 @@ $$\frac{1}{\binom{8}{4}} = \frac{1}{70}$$
 :::
 
 :::column
-![](_images/08-plants-notreat.png){width=65%}
+![](_images/08-plants-notreat.png){width=60%}
 
 :::
 
@@ -84,7 +84,7 @@ $$\frac{1}{\binom{8}{4}} = \frac{1}{70}$$
 :::
 
 :::column
-![](_images/08-plants-notreat.png){width=65%}
+![](_images/08-plants-notreat.png){width=60%}
 
 :::
 
@@ -221,14 +221,14 @@ The set of all plausible values makes up a (1-$\alpha$)*100% confidence interval
 
 | Treatment | $y_{i}$ | $\tilde{y}_{i}$ |
 |-----------|-----------------|----------------------------------------|
-| 1         | 8.6             |                       |
-| 0         | 8.4             |                                     |
-| 1         | 8.9             |                         |
-| 1         | 8.6             |                        |
-| 0         | 8.5             |                                     |
-| 0         | 8.1             |                                     |
-| 0         | 8.3             |                                    |
-| 1         | 8.7             |                     |
+| treat         | 8.6             |                       |
+| control        | 8.4             |                                     |
+| treat        | 8.9             |                         |
+| treat         | 8.6             |                        |
+| control       | 8.5             |                                     |
+| control         | 8.1             |                                     |
+| control        | 8.3             |                                    |
+| treat         | 8.7             |                     |
 :::
 
 :::
@@ -253,10 +253,13 @@ test_tau <- function(tau0, dat){
     pull(pval)
 }
 
-map_dbl(seq(0, 1, by = .01), 
+hodges <- map_dbl(seq(0, 1, by = .01), 
         .f = ~test_tau(tau0 = .x, dat = data)) |> 
   enframe() |> 
-  mutate(tau = seq(0, 1, by = .01)) |> 
+  mutate(tau = seq(0, 1, by = .01)) 
+
+
+hodges |> 
   ggplot(aes(x = tau, y = value)) + 
   geom_point() +
   geom_hline(yintercept = .05, linetype = "dotted",
@@ -307,6 +310,21 @@ $$
 
 - Stable Unit Treatment Value Assumption (SUTVA): one subject's treatment status does not affect another subject's outcome
 - Potential outcomes are "not affected by how or whether we try to learn about [them]" - Rubin, 2005
+
+## A bit more notation
+
+Define the random treatment assignment variable as
+$$
+T_i =
+  \begin{cases}
+    1      & \quad \text{if subject } i \text{ is assigned to treatment}\\
+    0      & \quad \text{if subject } i \text{ is assigned to control}
+  \end{cases}
+$$
+Then we can write the **observed** outcome as:
+
+$$Y_i = T_iy_i^t + (1-T_i)y_i^c$$
+
 
 ## Plant Example -- Observed
 

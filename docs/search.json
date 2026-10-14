@@ -5843,7 +5843,7 @@
     "href": "2-slides/08.1-causal-inference.html#testing-plausible-values",
     "title": "Module 8: Causal Inference",
     "section": "Testing Plausible Values",
-    "text": "Testing Plausible Values\n\n\n\nWe already found that \\(\\tau_0 = 0\\) is not a plausible value for \\(\\tau\\) based on the data.\nLet’s test \\(H_0: \\tau = .2\\) vs. \\(H_A: \\tau \\neq .2\\) next.\n\n\nCalculate the plant heights under control assuming \\(\\tau = 0.2\\) \\(\\rightarrow\\) \\(\\tilde{y}_{i}\\)\nGet a p-value using randomization inference like before, but with the adjusted outcomes \\(\\tilde{y}_{i}\\)\n\n\n\n\n\nTreatment\n\\(y_{i}\\)\n\\(\\tilde{y}_{i}\\)\n\n\n\n\n1\n8.6\n\n\n\n0\n8.4\n\n\n\n1\n8.9\n\n\n\n1\n8.6\n\n\n\n0\n8.5\n\n\n\n0\n8.1\n\n\n\n0\n8.3\n\n\n\n1\n8.7"
+    "text": "Testing Plausible Values\n\n\n\nWe already found that \\(\\tau_0 = 0\\) is not a plausible value for \\(\\tau\\) based on the data.\nLet’s test \\(H_0: \\tau = .2\\) vs. \\(H_A: \\tau \\neq .2\\) next.\n\n\nCalculate the plant heights under control assuming \\(\\tau = 0.2\\) \\(\\rightarrow\\) \\(\\tilde{y}_{i}\\)\nGet a p-value using randomization inference like before, but with the adjusted outcomes \\(\\tilde{y}_{i}\\)\n\n\n\n\n\n\n\n\n\n\nTreatment\n\\(y_{i}\\)\n\\(\\tilde{y}_{i}\\)\n\n\n\n\ntreat\n8.6\n\n\n\ncontrol\n8.4\n\n\n\ntreat\n8.9\n\n\n\ntreat\n8.6\n\n\n\ncontrol\n8.5\n\n\n\ncontrol\n8.1\n\n\n\ncontrol\n8.3\n\n\n\ntreat\n8.7"
   },
   {
     "objectID": "2-slides/08.1-causal-inference.html#point-estimate-and-confidence-interval",
@@ -5956,5 +5956,12 @@
     "title": "8.1 Preparation: Intro to Causal Inference",
     "section": "2 Introduction to Causal Inference and Randomization-Based Inference",
     "text": "2 Introduction to Causal Inference and Randomization-Based Inference\n\n📽 Follow along with the slides.\n\nVideo coming soon!"
+  },
+  {
+    "objectID": "2-slides/08.1-causal-inference.html#a-bit-more-notation",
+    "href": "2-slides/08.1-causal-inference.html#a-bit-more-notation",
+    "title": "Module 8: Causal Inference",
+    "section": "A bit more notation",
+    "text": "A bit more notation\nDefine the random treatment assignment variable as \\[\nT_i =\n  \\begin{cases}\n    1      & \\quad \\text{if subject } i \\text{ is assigned to treatment}\\\\\n    0      & \\quad \\text{if subject } i \\text{ is assigned to control}\n  \\end{cases}\n\\] Then we can write the observed outcome as:\n\\[Y_i = T_iy_i^t + (1-T_i)y_i^c\\]"
   }
 ]

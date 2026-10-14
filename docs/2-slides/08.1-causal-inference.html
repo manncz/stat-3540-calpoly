@@ -159,7 +159,7 @@
 </section>
 <section id="data" class="slide level2">
 <h2>Data</h2>
-<p><img data-src="_images/08-plants.png" style="width:35.0%"></p>
+<p><img data-src="_images/08-plants.png" style="width:30.0%"></p>
 </section>
 <section id="exact-p-value-based-on-randomization" class="slide level2">
 <h2>Exact p-value based on randomization</h2>
@@ -174,7 +174,7 @@
 </ul>
 <p><span class="math display">\[\frac{1}{\binom{8}{4}} = \frac{1}{70}\]</span></p>
 </div><div class="column">
-<p><img data-src="_images/08-plants-notreat.png" style="width:65.0%"></p>
+<p><img data-src="_images/08-plants-notreat.png" style="width:60.0%"></p>
 </div></div>
 </section>
 <section id="what-went-into-the-p-value" class="slide level2">
@@ -187,7 +187,7 @@
 <li><strong>Makes essentially no statistical assumptions except for random assignment</strong></li>
 </ul>
 </div><div class="column">
-<p><img data-src="_images/08-plants-notreat.png" style="width:65.0%"></p>
+<p><img data-src="_images/08-plants-notreat.png" style="width:60.0%"></p>
 </div></div>
 </section>
 <section id="choosing-a-test-statistic" class="slide level2">
@@ -268,6 +268,11 @@
 </ol>
 </div><div class="column" style="width:40%;">
 <table class="caption-top">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 25%">
+<col style="width: 58%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Treatment</th>
@@ -277,42 +282,42 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
+<td>treat</td>
 <td>8.6</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>0</td>
+<td>control</td>
 <td>8.4</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>1</td>
+<td>treat</td>
 <td>8.9</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>1</td>
+<td>treat</td>
 <td>8.6</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>0</td>
+<td>control</td>
 <td>8.5</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>0</td>
+<td>control</td>
 <td>8.1</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>0</td>
+<td>control</td>
 <td>8.3</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>1</td>
+<td>treat</td>
 <td>8.7</td>
 <td></td>
 </tr>
@@ -376,6 +381,17 @@ Y_i =
 <li>Stable Unit Treatment Value Assumption (SUTVA): one subject’s treatment status does not affect another subject’s outcome</li>
 <li>Potential outcomes are “not affected by how or whether we try to learn about [them]” - Rubin, 2005</li>
 </ul>
+</section>
+<section id="a-bit-more-notation" class="slide level2">
+<h2>A bit more notation</h2>
+<p>Define the random treatment assignment variable as <span class="math display">\[
+T_i =
+  \begin{cases}
+    1      &amp; \quad \text{if subject } i \text{ is assigned to treatment}\\
+    0      &amp; \quad \text{if subject } i \text{ is assigned to control}
+  \end{cases}
+\]</span> Then we can write the <strong>observed</strong> outcome as:</p>
+<p><span class="math display">\[Y_i = T_iy_i^t + (1-T_i)y_i^c\]</span></p>
 </section>
 <section id="plant-example-observed" class="slide level2">
 <h2>Plant Example – Observed</h2>
