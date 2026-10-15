@@ -5970,5 +5970,61 @@
     "title": "8.1 Preparation: Intro to Causal Inference",
     "section": "2 Potential Outcomes Framework and Estimation",
     "text": "2 Potential Outcomes Framework and Estimation\n\n📽 Follow along with the slides."
+  },
+  {
+    "objectID": "3-activities/main-version/08.1-activity-causal-inference.html",
+    "href": "3-activities/main-version/08.1-activity-causal-inference.html",
+    "title": "Activity 8.1: Causal Inference and Comparing Assumptions",
+    "section": "",
+    "text": "library(tidyverse)\nStudy: We are interested in testing a novel tutoring strategy with 7th grade students in English. We recruit 10 middle schools and randomly assign 5 to implement the new strategy and 5 to use no tutoring in their 7th grade English classes. At the end of the year, we get the passing rate for each school on a standardized reading test."
+  },
+  {
+    "objectID": "3-activities/main-version/08.1-activity-causal-inference.html#fill-in-the-table",
+    "href": "3-activities/main-version/08.1-activity-causal-inference.html#fill-in-the-table",
+    "title": "Activity 8.1: Causal Inference and Comparing Assumptions",
+    "section": "1 Fill in the table",
+    "text": "1 Fill in the table\n… with the individual treatment effects and teh observed outcomes.\n\n\n\nSchool\n\\(y_i^t\\)\n\\(y_i^c\\)\n\\(\\tau_i\\)\n\\(T_i\\)\n\\(Y_i\\)\n\n\n\n\n1\n80\n73\n\n1\n\n\n\n2\n89\n88\n\n0\n\n\n\n3\n70\n66\n\n1\n\n\n\n4\n60\n55\n\n0\n\n\n\n5\n75\n75\n\n0\n\n\n\n6\n80\n70\n\n1\n\n\n\n7\n72\n66\n\n0\n\n\n\n8\n78\n76\n\n1\n\n\n\n9\n86\n75\n\n0\n\n\n\n10\n68\n65\n\n1"
+  },
+  {
+    "objectID": "3-activities/main-version/08.1-activity-causal-inference.html#calculate-the",
+    "href": "3-activities/main-version/08.1-activity-causal-inference.html#calculate-the",
+    "title": "Activity 8.1: Causal Inference and Comparing Assumptions",
+    "section": "2 Calculate the",
+    "text": "2 Calculate the"
+  },
+  {
+    "objectID": "3-activities/main-version/08.1-activity-causal-inference.html#estimating-ate-under-potential-outcomes",
+    "href": "3-activities/main-version/08.1-activity-causal-inference.html#estimating-ate-under-potential-outcomes",
+    "title": "Activity 8.1: Causal Inference and Comparing Assumptions",
+    "section": "Estimating ATE under Potential Outcomes",
+    "text": "Estimating ATE under Potential Outcomes\n\nI am magic and actually know both potential outcome passing rates for every school. Fill in the table with the individual treatment effects and the observed outcomes.\n\n\n\n\nSchool\n\\(y_i^t\\)\n\\(y_i^c\\)\n\\(\\tau_i\\)\n\\(T_i\\)\n\\(Y_i\\)\n\n\n\n\n1\n80\n73\n\n1\n\n\n\n2\n89\n88\n\n0\n\n\n\n3\n70\n66\n\n1\n\n\n\n4\n60\n55\n\n0\n\n\n\n5\n75\n75\n\n0\n\n\n\n6\n80\n70\n\n1\n\n\n\n7\n72\n66\n\n0\n\n\n\n8\n78\n76\n\n1\n\n\n\n9\n86\n75\n\n0\n\n\n\n10\n68\n65\n\n1\n\n\n\n\n\nCalculate the ATE (\\(\\bar{\\tau}\\)) based on the table. Why do we usually not know the ATE?\nCalculate the observed difference in means (\\(\\hat{\\tau}\\)) in this study.\nCalculate the difference in means for a different treatment permutation between the schools. Use the treatment permutation of your choosing and fill out the table below to help you out.\n\n\n\n\nSchool\n\\(T_i\\)\n\\(Y_i\\)\n\n\n\n\n1\n\n\n\n\n2\n\n\n\n\n3\n\n\n\n\n4\n\n\n\n\n5\n\n\n\n\n6\n\n\n\n\n7\n\n\n\n\n8\n\n\n\n\n9\n\n\n\n\n10\n\n\n\n\n\n\nTo create the distribution below, for every possible permutation of 5 schools among 10 being assigned treatment (225 permutations), I calculated what the observed difference in means would be (\\(\\hat{\\tau}\\)), and then plotted all of them.\n\n\nWhy does it make sense that the center of the distribution is 4.9?\nWhat does the SD value of this distribution mean?\n\n\ntrtids &lt;- combn(10, 5) |&gt; \n  data.frame()\n\nyt &lt;- c(80, 89, 70, 60, 75, 80, 72, 78, 86, 68)\n\nyc &lt;- c(73, 88, 66, 55, 75, 70, 66, 76, 75, 65)\n\nTrt &lt;- c(1, 0, 1 ,0, 0, 1, 0, 1, 0, 1)\n\ntauhat &lt;- sum(yt*Trt)/5 - sum(yc*(1-Trt))/5\n\ndif_means_it &lt;- function(ids, yt, yc){\n  \n  Trt &lt;- rep(0, 10)\n  Trt[ids] &lt;- 1\n  \n  sum(yt*Trt)/5 - sum(yc*(1-Trt))/5\n  \n}\n\nperm_dat &lt;- map_dbl(trtids, ~dif_means_it(.x, yt, yc)) |&gt; \n  enframe()\n\n\nperm_dat |&gt; \n  ggplot() + \n  geom_histogram(aes(x = value),\n                 bins = 40) +\n  geom_vline(xintercept = mean(perm_dat$value)) +\n  annotate(\"text\", x = mean(perm_dat$value), y = 15, \n           label = paste0(\"mean = \",mean(perm_dat$value)),\n           hjust = -0.1, size = 7) +\n  annotate(\"text\", x = 12, y = 15, \n           label = paste0(\"sd = \", round(sd(perm_dat$value),2)),\n           size = 7, hjust = 0) +\n  #geom_vline(xintercept = obs_dif, color = \"red\") +\n  labs(x = \"Randomized Difference in Means\",\n       y = \"Number of Randomizations\")"
+  },
+  {
+    "objectID": "3-activities/main-version/08.1-activity-causal-inference.html#assumptions",
+    "href": "3-activities/main-version/08.1-activity-causal-inference.html#assumptions",
+    "title": "Activity 8.1: Causal Inference and Comparing Assumptions",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nWrite out the model and assumptions we used to estimate the ATE in Q4.\nWrite out the model and assumptions we would use to estimate the ATE using ANOVA.\n\n\nyt &lt;- c(80, 89, 70, 60, 75, 80, 72, 78, 86, 68)\n\nyc &lt;- c(73, 88, 66, 55, 75, 70, 66, 76, 75, 65)\n\nTrt &lt;- c(1, 0, 1 , 0, 0, 1, 0, 1, 0, 1)\n\ndat &lt;- tibble(Trt = Trt,\n              Y = Trt*yt + (1-Trt)*yc)"
+  },
+  {
+    "objectID": "3-activities/instructions/08.1-activity-causal-inference.html",
+    "href": "3-activities/instructions/08.1-activity-causal-inference.html",
+    "title": "Activity 8.1: Causal Inference and Comparing Assumptions",
+    "section": "",
+    "text": "Warning\n\n\n\n\nSubmit via Gradescope, don’t forget to assign pages to the questions in the outline!\nDelete any extraneous instructions (like this box) before submission (unless you are using the PDF template). You will be deducted points from now on if you do not follow this instruction!\nThere is no coding required for this activity! I would recommend you complete it using the Word version, but you are still welcome to use the .qmd template: 08.1-activity-causal-inference.qmd\nStudy: We are interested in testing a novel tutoring strategy with 7th grade students in English. We recruit 10 middle schools and randomly assign 5 to implement the new strategy and 5 to use no tutoring in their 7th grade English classes. At the end of the year, we get the passing rate for each school on a standardized reading test."
+  },
+  {
+    "objectID": "3-activities/instructions/08.1-activity-causal-inference.html#estimating-ate-under-potential-outcomes",
+    "href": "3-activities/instructions/08.1-activity-causal-inference.html#estimating-ate-under-potential-outcomes",
+    "title": "Activity 8.1: Causal Inference and Comparing Assumptions",
+    "section": "Estimating ATE under Potential Outcomes",
+    "text": "Estimating ATE under Potential Outcomes\n\nI am magic and actually know both potential outcome passing rates for every school. Fill in the table with the individual treatment effects and the observed outcomes.\n\n\n\n\nSchool\n\\(y_i^t\\)\n\\(y_i^c\\)\n\\(\\tau_i\\)\n\\(T_i\\)\n\\(Y_i\\)\n\n\n\n\n1\n80\n73\n\n1\n\n\n\n2\n89\n88\n\n0\n\n\n\n3\n70\n66\n\n1\n\n\n\n4\n60\n55\n\n0\n\n\n\n5\n75\n75\n\n0\n\n\n\n6\n80\n70\n\n1\n\n\n\n7\n72\n66\n\n0\n\n\n\n8\n78\n76\n\n1\n\n\n\n9\n86\n75\n\n0\n\n\n\n10\n68\n65\n\n1\n\n\n\n\n\nCalculate the ATE (\\(\\bar{\\tau}\\)) based on the table. Why do we usually not know the ATE?\nCalculate the observed difference in means (\\(\\hat{\\tau}\\)) in this study.\nCalculate the difference in means for a different treatment permutation between the schools. Use the treatment permutation of your choosing and fill out the table below to help you out.\n\n\n\n\nSchool\n\\(T_i\\)\n\\(Y_i\\)\n\n\n\n\n1\n\n\n\n\n2\n\n\n\n\n3\n\n\n\n\n4\n\n\n\n\n5\n\n\n\n\n6\n\n\n\n\n7\n\n\n\n\n8\n\n\n\n\n9\n\n\n\n\n10\n\n\n\n\n\n\nTo create the distribution below, for every possible permutation of 5 schools among 10 being assigned treatment (225 permutations), I calculated what the observed difference in means would be (\\(\\hat{\\tau}\\)), and then plotted all of them.\n\n\nWhy does it make sense that the center of the distribution is 4.9?\nWhat does the SD value of this distribution mean?"
+  },
+  {
+    "objectID": "3-activities/instructions/08.1-activity-causal-inference.html#assumptions",
+    "href": "3-activities/instructions/08.1-activity-causal-inference.html#assumptions",
+    "title": "Activity 8.1: Causal Inference and Comparing Assumptions",
+    "section": "Assumptions",
+    "text": "Assumptions\n\nWrite out the model and assumptions we used to estimate the ATE in Q4.\nWrite out the model and assumptions we would use to estimate the ATE using ANOVA."
   }
 ]
