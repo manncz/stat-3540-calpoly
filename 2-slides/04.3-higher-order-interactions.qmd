@@ -95,7 +95,9 @@ emmip(stress_mod, Preworkout ~ Music | Warmup) +
 
 ## 3-way Treatment Effects Model
 
-$$y_{ijkl}=\mu+\alpha_i+\beta_j+\gamma_k+\alpha\beta_{ij}+\alpha\gamma_{ik}+\beta\gamma_{jk}+\alpha\beta\gamma_{ijk}+\epsilon_{ijkl} \text{ with } \epsilon_{ijkl} \text{ iid }\sim N(0,\sigma^2)$$ for $i=1,2; j=1,2; k=1,2; l=1,2,3$
+$$y_{ijkl}=\mu+\alpha_i+\beta_j+\gamma_k+\alpha\beta_{ij}+\alpha\gamma_{ik}+\beta\gamma_{jk}+\alpha\beta\gamma_{ijk}+\epsilon_{ijkl}$$
+
+$$\text{ with } \epsilon_{ijkl} \text{ iid }\sim N(0,\sigma^2)$$ for $i=1,2; j=1,2; k=1,2; l=1,2,3$
 
 where... continued on next slide!
 
@@ -224,18 +226,10 @@ $$\scriptsize H_0:\text{ All } \gamma_{k} = 0 \text{  vs  } H_A: \text{At least 
 
 What should we test first? Then what?
 
-:::: columns
-::: column
 ```{r}
 anova(stress_mod)
 ```
-:::
-::: column
-```{r}
-knitr::include_graphics("images/046-jmp-anova.png")
-```
-:::
-::::
+
 
 ## What should we "dig into"?
 
@@ -263,7 +257,7 @@ knitr::include_graphics("images/046-jmp-anova.png")
 
 ```{r}
 #| fig-align: center
-#| out-width: 40%
+#| out-width: 60%
 knitr::include_graphics("_images/046-three-way-decision-flowchart-stress.png")
 ```
 
@@ -306,7 +300,7 @@ emmeans(stress_mod, specs = ~ Preworkout*Music) |>
 
 
 
-## R: Main effect of Warmup
+## R: Main effect of Warmup {.scrollable}
 
 :::: columns
 ::: column

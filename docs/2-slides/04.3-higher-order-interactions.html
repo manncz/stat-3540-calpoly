@@ -336,7 +336,8 @@
 </section>
 <section id="way-treatment-effects-model" class="slide level2">
 <h2>3-way Treatment Effects Model</h2>
-<p><span class="math display">\[y_{ijkl}=\mu+\alpha_i+\beta_j+\gamma_k+\alpha\beta_{ij}+\alpha\gamma_{ik}+\beta\gamma_{jk}+\alpha\beta\gamma_{ijk}+\epsilon_{ijkl} \text{ with } \epsilon_{ijkl} \text{ iid }\sim N(0,\sigma^2)\]</span> for <span class="math inline">\(i=1,2; j=1,2; k=1,2; l=1,2,3\)</span></p>
+<p><span class="math display">\[y_{ijkl}=\mu+\alpha_i+\beta_j+\gamma_k+\alpha\beta_{ij}+\alpha\gamma_{ik}+\beta\gamma_{jk}+\alpha\beta\gamma_{ijk}+\epsilon_{ijkl}\]</span></p>
+<p><span class="math display">\[\text{ with } \epsilon_{ijkl} \text{ iid }\sim N(0,\sigma^2)\]</span> for <span class="math inline">\(i=1,2; j=1,2; k=1,2; l=1,2,3\)</span></p>
 <p>where… continued on next slide!</p>
 </section>
 <section id="way-treatment-effects-model-1" class="slide level2">
@@ -554,7 +555,7 @@ F-statistic: 9.007 on 7 and 16 DF,  p-value: 0.0001525</code></pre>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="_images/046-three-way-decision-flowchart.png" width="386"></p>
+<p><img data-src="_images/046-three-way-decision-flowchart.png"></p>
 </figure>
 </div>
 </div>
@@ -576,8 +577,6 @@ F-statistic: 9.007 on 7 and 16 DF,  p-value: 0.0001525</code></pre>
 <section id="lets-go-back-to-our-anova-table-i.e.-roadmap" class="slide level2">
 <h2>Let’s go back to our ANOVA Table (i.e., Roadmap)</h2>
 <p>What should we test first? Then what?</p>
-<div class="columns">
-<div class="column">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
@@ -596,14 +595,6 @@ Residuals               16 149.367   9.335
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
-</div><div class="column">
-<div class="cell">
-<div class="cell-output cell-output-error">
-<pre><code>Error in `knitr::include_graphics()`:
-! Cannot find the file(s): "images/046-jmp-anova.png"</code></pre>
-</div>
-</div>
-</div></div>
 </section>
 <section id="what-should-we-dig-into" class="slide level2">
 <h2>What should we “dig into”?</h2>
@@ -642,7 +633,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="_images/046-three-way-decision-flowchart-stress.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+<p><img data-src="_images/046-three-way-decision-flowchart-stress.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
@@ -658,21 +649,21 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="columns">
 <div class="column">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(emmeans)</span>
-<span id="cb8-2"><a></a><span class="fu">library</span>(multcomp)</span>
-<span id="cb8-3"><a></a><span class="fu">emmip</span>(stress_mod, Music <span class="sc">~</span> Preworkout, <span class="at">CIs =</span> <span class="cn">TRUE</span>, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb7-2"><a></a><span class="fu">library</span>(multcomp)</span>
+<span id="cb7-3"><a></a><span class="fu">emmip</span>(stress_mod, Music <span class="sc">~</span> Preworkout, <span class="at">CIs =</span> <span class="cn">TRUE</span>, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04.3-higher-order-interactions_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<p><img data-src="04.3-higher-order-interactions_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">emmeans</span>(stress_mod, <span class="at">specs =</span> <span class="sc">~</span> Preworkout<span class="sc">*</span>Music) <span class="sc">|&gt;</span> </span>
-<span id="cb9-2"><a></a>  <span class="fu">cld</span>(<span class="at">Letters =</span> LETTERS, <span class="at">decreasing =</span> T, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">emmeans</span>(stress_mod, <span class="at">specs =</span> <span class="sc">~</span> Preworkout<span class="sc">*</span>Music) <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a></a>  <span class="fu">cld</span>(<span class="at">Letters =</span> LETTERS, <span class="at">decreasing =</span> T, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Preworkout        Music        emmean   SE df lower.CL upper.CL .group
  Pre-workout drink Upbeat music   22.9 1.25 16    19.40     26.4  A    
@@ -695,8 +686,8 @@ NOTE: If two or more means share the same grouping symbol,
 <section id="pairwise-comparisons-preworkout-x-music-avg-over-workout" class="slide level2">
 <h2>Pairwise Comparisons: Preworkout x Music (avg over Workout)</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">emmeans</span>(stress_mod, <span class="at">specs =</span> <span class="sc">~</span> Preworkout<span class="sc">*</span>Music) <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">pairs</span>(<span class="at">adjust =</span> <span class="st">"tukey"</span>, <span class="at">infer =</span> <span class="fu">c</span>(T,T))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">emmeans</span>(stress_mod, <span class="at">specs =</span> <span class="sc">~</span> Preworkout<span class="sc">*</span>Music) <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">pairs</span>(<span class="at">adjust =</span> <span class="st">"tukey"</span>, <span class="at">infer =</span> <span class="fu">c</span>(T,T))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> contrast                                                        estimate   SE df lower.CL upper.CL t.ratio p.value
  None No music - (Pre-workout drink No music)                       -2.88 1.76 16    -7.93     2.16  -1.635  0.3883
@@ -713,26 +704,26 @@ P value adjustment: tukey method for comparing a family of 4 estimates </code></
 </div>
 </div>
 </section>
-<section id="r-main-effect-of-warmup" class="slide level2">
+<section id="r-main-effect-of-warmup" class="slide level2 scrollable">
 <h2>R: Main effect of Warmup</h2>
 <div class="columns">
 <div class="column">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">library</span>(emmeans)</span>
-<span id="cb13-2"><a></a><span class="fu">library</span>(multcomp)</span>
-<span id="cb13-3"><a></a><span class="fu">emmip</span>(stress_mod, <span class="sc">~</span> Warmup, <span class="at">CIs =</span> <span class="cn">TRUE</span>, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb12-2"><a></a><span class="fu">library</span>(multcomp)</span>
+<span id="cb12-3"><a></a><span class="fu">emmip</span>(stress_mod, <span class="sc">~</span> Warmup, <span class="at">CIs =</span> <span class="cn">TRUE</span>, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="04.3-higher-order-interactions_files/figure-revealjs/unnamed-chunk-17-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<p><img data-src="04.3-higher-order-interactions_files/figure-revealjs/unnamed-chunk-16-1.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">emmeans</span>(stress_mod, <span class="at">specs =</span> <span class="sc">~</span> Warmup) <span class="sc">|&gt;</span> </span>
-<span id="cb14-2"><a></a>  <span class="fu">cld</span>(<span class="at">Letters =</span> LETTERS, <span class="at">decreasing =</span> T, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">emmeans</span>(stress_mod, <span class="at">specs =</span> <span class="sc">~</span> Warmup) <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a></a>  <span class="fu">cld</span>(<span class="at">Letters =</span> LETTERS, <span class="at">decreasing =</span> T, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Warmup             emmean    SE df lower.CL upper.CL .group
  Dynamic stretching   19.0 0.882 16     16.8     21.2  A    
@@ -746,8 +737,8 @@ NOTE: If two or more means share the same grouping symbol,
       then we cannot show them to be different.
       But we also did not show them to be the same. </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">emmeans</span>(stress_mod, <span class="at">specs =</span> <span class="sc">~</span> Warmup) <span class="sc">|&gt;</span> </span>
-<span id="cb16-2"><a></a>  <span class="fu">pairs</span>(<span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">emmeans</span>(stress_mod, <span class="at">specs =</span> <span class="sc">~</span> Warmup) <span class="sc">|&gt;</span> </span>
+<span id="cb15-2"><a></a>  <span class="fu">pairs</span>(<span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> contrast                          estimate   SE df t.ratio p.value
  Dynamic stretching - (No warm-up)     5.42 1.25 16   4.349  0.0005
@@ -762,21 +753,21 @@ Results are averaged over the levels of: Preworkout, Music </code></pre>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">emmip</span>(stress_mod, Preworkout <span class="sc">~</span> Music <span class="sc">|</span> Warmup, </span>
-<span id="cb18-2"><a></a>      <span class="at">CIs =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb18-3"><a></a>      <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">emmip</span>(stress_mod, Preworkout <span class="sc">~</span> Music <span class="sc">|</span> Warmup, </span>
+<span id="cb17-2"><a></a>      <span class="at">CIs =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb17-3"><a></a>      <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="04.3-higher-order-interactions_files/figure-revealjs/unnamed-chunk-19-1.png" style="width:100.0%"></p>
+<p><img data-src="04.3-higher-order-interactions_files/figure-revealjs/unnamed-chunk-18-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">emmeans</span>(stress_mod, <span class="sc">~</span> Preworkout<span class="sc">:</span>Music<span class="sc">:</span>Warmup) <span class="sc">|&gt;</span></span>
-<span id="cb19-2"><a></a>  <span class="fu">cld</span>(<span class="at">Letters =</span> LETTERS, <span class="at">decreasing =</span> T, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">emmeans</span>(stress_mod, <span class="sc">~</span> Preworkout<span class="sc">:</span>Music<span class="sc">:</span>Warmup) <span class="sc">|&gt;</span></span>
+<span id="cb18-2"><a></a>  <span class="fu">cld</span>(<span class="at">Letters =</span> LETTERS, <span class="at">decreasing =</span> T, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Preworkout        Music        Warmup             emmean   SE df lower.CL upper.CL .group
  Pre-workout drink Upbeat music Dynamic stretching   26.0 1.76 16    20.44     31.5  A    

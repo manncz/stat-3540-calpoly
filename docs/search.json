@@ -3494,7 +3494,7 @@
     "href": "2-slides/04.3-higher-order-interactions.html#way-treatment-effects-model",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "3-way Treatment Effects Model",
-    "text": "3-way Treatment Effects Model\n\\[y_{ijkl}=\\mu+\\alpha_i+\\beta_j+\\gamma_k+\\alpha\\beta_{ij}+\\alpha\\gamma_{ik}+\\beta\\gamma_{jk}+\\alpha\\beta\\gamma_{ijk}+\\epsilon_{ijkl} \\text{ with } \\epsilon_{ijkl} \\text{ iid }\\sim N(0,\\sigma^2)\\] for \\(i=1,2; j=1,2; k=1,2; l=1,2,3\\)\nwhere… continued on next slide!"
+    "text": "3-way Treatment Effects Model\n\\[y_{ijkl}=\\mu+\\alpha_i+\\beta_j+\\gamma_k+\\alpha\\beta_{ij}+\\alpha\\gamma_{ik}+\\beta\\gamma_{jk}+\\alpha\\beta\\gamma_{ijk}+\\epsilon_{ijkl}\\]\n\\[\\text{ with } \\epsilon_{ijkl} \\text{ iid }\\sim N(0,\\sigma^2)\\] for \\(i=1,2; j=1,2; k=1,2; l=1,2,3\\)\nwhere… continued on next slide!"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#way-treatment-effects-model-1",
@@ -3550,7 +3550,7 @@
     "href": "2-slides/04.3-higher-order-interactions.html#lets-go-back-to-our-anova-table-i.e.-roadmap",
     "title": "Module 4: Factorial Treatment Structure",
     "section": "Let’s go back to our ANOVA Table (i.e., Roadmap)",
-    "text": "Let’s go back to our ANOVA Table (i.e., Roadmap)\nWhat should we test first? Then what?\n\n\n\n\nAnalysis of Variance Table\n\nResponse: Tolerance\n                        Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nWarmup                   1 176.584 176.584 18.9155 0.0004971 ***\nPreworkout               1 242.570 242.570 25.9839 0.0001076 ***\nMusic                    1  70.384  70.384  7.5394 0.0143574 *  \nWarmup:Preworkout        1  13.650  13.650  1.4622 0.2441432    \nWarmup:Music             1  11.070  11.070  1.1859 0.2922989    \nPreworkout:Music         1  72.454  72.454  7.7612 0.0132205 *  \nWarmup:Preworkout:Music  1   1.870   1.870  0.2004 0.6604336    \nResiduals               16 149.367   9.335                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n\nError in `knitr::include_graphics()`:\n! Cannot find the file(s): \"images/046-jmp-anova.png\""
+    "text": "Let’s go back to our ANOVA Table (i.e., Roadmap)\nWhat should we test first? Then what?\n\n\nAnalysis of Variance Table\n\nResponse: Tolerance\n                        Df  Sum Sq Mean Sq F value    Pr(&gt;F)    \nWarmup                   1 176.584 176.584 18.9155 0.0004971 ***\nPreworkout               1 242.570 242.570 25.9839 0.0001076 ***\nMusic                    1  70.384  70.384  7.5394 0.0143574 *  \nWarmup:Preworkout        1  13.650  13.650  1.4622 0.2441432    \nWarmup:Music             1  11.070  11.070  1.1859 0.2922989    \nPreworkout:Music         1  72.454  72.454  7.7612 0.0132205 *  \nWarmup:Preworkout:Music  1   1.870   1.870  0.2004 0.6604336    \nResiduals               16 149.367   9.335                      \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "2-slides/04.3-higher-order-interactions.html#what-should-we-dig-into",
