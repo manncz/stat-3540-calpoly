@@ -5,11 +5,10 @@ execute:
   error: true
   message: false
   warning: false
-  echo: false
 
 format:
-  html: default
   docx: default
+  html: default
 ---
 ```{r}
 library(tidyverse)

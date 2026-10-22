@@ -7,8 +7,8 @@ execute:
   warning: false
 
 format:
-  html: default
   docx: default
+  html: default
 ---
 ::: callout-warning
 - Submit via Gradescope, don't forget to assign pages to the questions in the outline!
@@ -39,7 +39,7 @@ Identify the following
 + Response: 
 + Experimental unit:
 + How many rows and column blocking factor levels should be included in a Latin Square design for this study?
-  
+
 ### 2. Unreplicated Blueprint 
 
 Sketch a blueprint for a possible study design for a standard unreplicated Latin Square (e.g., one "platform").

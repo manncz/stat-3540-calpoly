@@ -1,0 +1,15 @@
+{
+  "hash": "18d8637b98103b451b56c1127d02af47",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"midterm1-code\"\nformat: docx\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(emmeans)\nlibrary(multcomp)\n```\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nbread_loaf_data <- read_csv(\"bread_loaf_volume_simulated.csv\")  |>\n  mutate(fat = factor(fat, \n                      levels = c(\"shortening\", \"butter\", \"olive_oil\")),\n         yeast = factor(yeast, \n                        levels = c(\"A\", \"B\", \"C\")),\n         storage = factor(storage, \n                          levels = c(\"cold_dark\", \"room_temp\", \"variable\", \"warm_damp\")))\n```\n:::\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlevels(bread_loaf_data$fat)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"shortening\" \"butter\"     \"olive_oil\" \n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlevels(bread_loaf_data$yeast)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"A\" \"B\" \"C\"\n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlevels(bread_loaf_data$storage)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] \"cold_dark\" \"room_temp\" \"variable\"  \"warm_damp\"\n```\n\n\n:::\n:::\n\n\n\n[1] \"shortening\" \"butter\"     \"olive_oil\" \n\n[1] \"A\" \"B\" \"C\"\n\n[1] \"cold_dark\" \"room_temp\" \"variable\"  \"warm_damp\"\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Set contrasts to \"sum to zero\"\noptions(contrasts = c(\"contr.sum\", \"contr.poly\"))\n\nbread_mod <- lm(loaf_volume ~ fat*yeast + storage, data = bread_loaf_data)\nsummary(bread_mod)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n\nCall:\nlm(formula = loaf_volume ~ fat * yeast + storage, data = bread_loaf_data)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-9.8000 -4.8194 -0.5194  3.8875 10.4111 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept) 599.7083     1.0923 549.020  < 2e-16 ***\nfat1          8.5417     1.5448   5.529 1.10e-05 ***\nfat2          0.1917     1.5448   0.124    0.902    \nyeast1       -7.2500     1.5448  -4.693 9.06e-05 ***\nyeast2       11.0583     1.5448   7.159 2.13e-07 ***\nstorage1     18.8250     1.8920   9.950 5.42e-10 ***\nstorage2      2.3139     1.8920   1.223    0.233    \nstorage3     -0.1639     1.8920  -0.087    0.932    \nfat1:yeast1   0.7250     2.1847   0.332    0.743    \nfat2:yeast1  17.5250     2.1847   8.022 3.01e-08 ***\nfat1:yeast2 -12.4083     2.1847  -5.680 7.53e-06 ***\nfat2:yeast2 -12.9333     2.1847  -5.920 4.15e-06 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 6.554 on 24 degrees of freedom\nMultiple R-squared:  0.9472,\tAdjusted R-squared:  0.9231 \nF-statistic: 39.17 on 11 and 24 DF,  p-value: 1.269e-12\n```\n\n\n:::\n:::\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

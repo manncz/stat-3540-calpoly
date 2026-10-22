@@ -19,19 +19,15 @@ Identify the following
  
 **Treatment Structure:**
 
-+ Name:
-+ Factor(s) + Levels:
-+ t = 
-
 **Design Structure:**
 
-+ Name: 
-+ Blocking factor 1: 
-+ Blocking factor 2: 
-+ Response: 
-+ Experimental unit:
-+ How many rows and column blocking factor levels should be included in a Latin Square design for this study?
-  
++ Name: **Latin Square**
++ Blocking factor 1: **car**
++ Blocking factor 2: **route**
++ Response: **CO emission**
++ Experimental unit: **One drive on a route**
++ How many rows and column blocking factor levels should be included in a Latin Square design for this study? **6 because there are 6 treatments**
+
 ### 2. Unreplicated Blueprint 
 
 Sketch a blueprint for a possible study design for a standard unreplicated Latin Square (e.g., one "platform").

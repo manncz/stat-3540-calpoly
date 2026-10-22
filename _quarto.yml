@@ -12,6 +12,7 @@ project:
     - "!/prev-materials/"
     - "!/5-participation/"
     - "!/4-labs/templates/*"
+    - "!/6-exams/code/*"
     
 website:
   page-navigation: true

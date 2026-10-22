@@ -33,19 +33,6 @@ library(tidyverse)
 
 2. I am magic and actually know both potential outcome passing rates for every school. Fill in the table with the individual treatment effects and the observed outcomes.
 
-| School | $y_i^t$ | $y_i^c$ | $\tau_i$ | $T_i$ | $Y_i$ |
-|--------|---------|---------|----------|-------|-------|
-| 1      | 80      | 73      |          | 1     |       |
-| 2      | 89      | 88      |          | 0     |       |
-| 3      | 70      | 66      |          | 1     |       |
-| 4      | 60      | 55      |          | 0     |       |
-| 5      | 75      | 75      |          | 0     |       |
-| 6      | 80      | 70      |          | 1     |       |
-| 7      | 72      | 66      |          | 0     |       |
-| 8      | 78      | 76      |          | 1     |       |
-| 9      | 86      | 75      |          | 0     |       |
-| 10     | 68      | 65      |          | 1     |       |
-
 3.  Calculate the ATE ($\bar{\tau}$) based on the table. Why do we usually not know the ATE?
 
 4.  Calculate the **observed** difference in means ($\hat{\tau}$) in this study.

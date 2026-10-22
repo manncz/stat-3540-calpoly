@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>midterm1-code – Statistical Methods for Study Design and Analysis</title>
+<title>Activity 9.1: Polls Missing the Mark – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,42 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -79,9 +63,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-99d69ffe6c78a8b0d43fb0abb952d9a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-b135aff6800dc2d4aeba5443541e7679.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e47b5f09565cef1e8b2fc4d77510aa64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-5baf755da9d91fdc6d970f362079751c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-e47b5f09565cef1e8b2fc4d77510aa64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -350,8 +334,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#literary-digest-poll" id="toc-literary-digest-poll" class="nav-link active" data-scroll-target="#literary-digest-poll">Literary Digest Poll</a></li>
+  <li><a href="#gallups-follow-up-survey" id="toc-gallups-follow-up-survey" class="nav-link" data-scroll-target="#gallups-follow-up-survey">Gallup’s Follow-Up Survey</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="09.1-activity-polls.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -359,7 +351,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">midterm1-code</h1>
+<h1 class="title">Activity 9.1: Polls Missing the Mark</h1>
+<p class="subtitle lead">Intro to Observational Studies</p>
 </div>
 
 
@@ -376,46 +369,117 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vector</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>form <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Form A"</span>, <span class="st">"Form B"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># vector of levels</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>instruction <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Instruction 1"</span>, <span class="st">"Instruction 2"</span>, </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Instruction 3"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>treatments <span class="ot">&lt;-</span> <span class="fu">crossing</span>(form, instruction) <span class="sc">|&gt;</span> </span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">treat =</span> <span class="fu">paste</span>(form, instruction)) <span class="sc">|&gt;</span> </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(treat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in `pull()`:
-! could not find function "pull"</code></pre>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
 </div>
 </div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>treatments</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'treatments' not found</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create treatment vector of length N</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>treat_rep <span class="ot">&lt;-</span> <span class="fu">rep</span>(treatments, <span class="at">each =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'treatments' not found</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># random assignment</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">343</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(treat_rep, <span class="at">size =</span> <span class="dv">6</span><span class="sc">*</span><span class="dv">3</span>, <span class="at">replace =</span> F)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'treat_rep' not found</code></pre>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Submit via Gradescope, don’t forget to assign pages to the questions in the outline!</p></li>
+<li><p>Delete any extraneous instructions (<strong>like this box</strong>) before submission. <em>You will be deducted points from now on if you do not follow this instruction!</em></p></li>
+<li><p>There is no coding required for this activity! <strong>I would recommend you complete it using the Word version</strong>, but you are still welcome to use the .qmd template: .</p></li>
+</ul>
 </div>
 </div>
+<blockquote class="blockquote">
+<p>The 1936 campaign concluded with the Literary Digest (1936) publishing survey results forecasting a landslide victory for the Republican presidential candidate, Alf Landon. The actual election was, of course, won by the incumbent, Franklin Roosevelt, by a large margin. Thus the Literary Digest poll gained an infamous place in the history of survey research. Almost every book on presidential elections or survey methodology contains some scathing reference to the poll and gives reasons why it failed to forecast the correct results.</p>
+</blockquote>
+<p>This was the introduction to an article <span class="citation" data-cites="squire_why_1988">(<a href="#ref-squire_why_1988" role="doc-biblioref">Squire 1988</a>)</span>, written 50 years after the election and poll in question. Franklin D. Roosevelt was up for re-election to president of the US, and the republican candidate running was Alf Landon. You probably have not heard of Alf Landon because he did not win the election, contrary to what was predicted as a major margin in favor of Landon by the Literary Digest right before the election:</p>
+<p><img src="../_images/09.1-literary-digest.png" class="img-fluid"></p>
+<p>Let’s follow along with Squire’s investigation to think about what might have happened here.</p>
+<section id="literary-digest-poll" class="level2">
+<h2 class="anchored" data-anchor-id="literary-digest-poll">Literary Digest Poll</h2>
+<p>The Literary Digest boasted that they polled <strong>10 million</strong> voters across the 48 states in the US at the time. For each voter polled, they sent out a “straw ballot” and asked that it be mailed back once completed. Out of the 2.3 million ballots returned, 1,293,699 said they planned to vote for for Landon, and 972,897 for Roosevelt.</p>
+<ol type="1">
+<li><p>What is the standard error on the estimate of 55% votes for Landon? Would you consider that to be a precise estimate (i.e.&nbsp;very small standard error)?</p></li>
+<li><p>What was the response rate for the survey? (What proportion of people returned the ballot). What do you think about that response rate – does it seem high or low?</p></li>
+<li><p>It turns out that the sample of 10 million voters primary came from car registration lists and telephone books. Who might have been missing from this sample? Who might have been over-represented?</p></li>
+<li><p>Roosevelt actually won the election with 61% of the popular vote. At this point, what do you hypothesize could be some potential reasons for how wrong the poll was??</p></li>
+</ol>
+</section>
+<section id="gallups-follow-up-survey" class="level2">
+<h2 class="anchored" data-anchor-id="gallups-follow-up-survey">Gallup’s Follow-Up Survey</h2>
+<p>Because it was such an embarrassment to polling, George Gallup (this name should sound familiar!) followed up on the Literary Digest poll with his own survey between May 19-24, 1937<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> asking about whether people received and completed the Literary Digest straw ballot, who they actually voted for, and some demographic questions.</p>
+<p><span class="citation" data-cites="squire_why_1988">Squire (<a href="#ref-squire_why_1988" role="doc-biblioref">1988</a>)</span> analyzed this follow-up survey to investigate hypotheses that had developed over the previous 50 years about what “went wrong.”</p>
+<p>The first hypothesis most people had was that poorer voters (who would be more likely to support Roosevelt) were under-sampled because these voters may not own cars or telephones. The plot below shows the results from Gallup’s follow-up survey about the relationship between car / phone ownership and presidential support.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="09.1-activity-polls_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Figure representation of data presented in Table 1 of Squire. Error bars indicate two standard errors (based on the estimate and sample size).</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol start="5" type="1">
+<li><p>Does there appear to be a relationship between owning cars or phones and supporting Landon vs.&nbsp;Roosevelt? Is there evidence that people who owned cars and phones supported Landon over Roosevelt based on this survey?</p></li>
+<li><p>It turns out that it is common, as with Gallup’s survey, that voters will misremember (or report) voting for the winner of a political race. Gallup’s follow-up survey overall overestimated the vote for Roosevelt by 5%. Does that impact or change your thoughts from in Q5?</p></li>
+</ol>
+<p>The second hypothesis was that Landon voters were just more likely to respond to the poll.</p>
+<p>Here is data regarding the question</p>
+<blockquote class="blockquote">
+<p>Did you receive a Literary Digest straw vote ballot in the Presidential campaign last fall?</p>
+</blockquote>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="09.1-activity-polls_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Figure representation of data presented in Table 2 of Squire. Error bars indicate two standard errors (based on the estimate and sample size).</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Here is data regarding the question</p>
+<blockquote class="blockquote">
+<p>Did you send it in?</p>
+</blockquote>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="09.1-activity-polls_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Figure representation of data presented in Table 3 of Squire. Error bars indicate two standard errors (based on the estimate and sample size).</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol start="7" type="1">
+<li><p>Does there appear to be evidence that Landon voters were more likely to respond to the poll?</p></li>
+<li><p>What do you notice about the % of people who claimed that they sent the straw vote ballot back?</p></li>
+</ol>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<ol start="9" type="1">
+<li><p>One of the big claims of the potential accuracy of the Literary Digest polls when they originally published their article was that they had surveyed 10 million people and that the results were based on 2.3 million responses! How did it go so wrong even with such a big sample size?</p></li>
+<li><p>Based on this example, what do you think are some of the large challenges facing pollsters (statistically and logistically) who want to try to predict election results?</p></li>
+</ol>
 
 
 
-</main> <!-- /main -->
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-gallup_american_1938" class="csl-entry" role="listitem">
+Gallup, George, and Claude Robinson. 1938. <span>“American Institute of Public Opinion-Surveys, 1935-38.”</span> <em>The Public Opinion Quarterly</em> 2 (3): 373–98. <a href="https://www.jstor.org/stable/2744825">https://www.jstor.org/stable/2744825</a>.
+</div>
+<div id="ref-squire_why_1988" class="csl-entry" role="listitem">
+Squire, Peverill. 1988. <span>“Why the 1936 Literary Digest Poll Failed.”</span> <em>The Public Opinion Quarterly</em> 52 (1): 125–33. <a href="https://www.jstor.org/stable/2749114">https://www.jstor.org/stable/2749114</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>I couldn’t find the actual data, as it is not included in the official polls from <span class="citation" data-cites="gallup_american_1938">Gallup and Robinson (<a href="#ref-gallup_american_1938" role="doc-biblioref">1938</a>)</span>. But the results were produced in <span class="citation" data-cites="squire_why_1988">Squire (<a href="#ref-squire_why_1988" role="doc-biblioref">1988</a>)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
