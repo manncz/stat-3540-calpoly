@@ -1,0 +1,17 @@
+{
+  "hash": "f9d00dd53894235935e89fe9b865dc38",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"9.2 Preparation: Intro to Observational Studies\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n#### 📽 Watch Videos: 40 min\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n- Understand and identify that there are different types of observational studies\n- Define administrative data\n- Know a couple of sources of administrative data in the US\n- Consider the methods, strengths, and challenges of different sources of state data in the US\n:::\n\n\n## Types of Observational Studies\n\n- 📽 Follow along with the [slides](../2-slides/09.2-obs-studies.qmd).\n\n\n\n## Administrative Data\n\n- 📽 Follow along with the [slides](../2-slides/09.2-obs-studies.qmd#/administrative-data).\n\n\n\n",
+    "supporting": [
+      "09.2-prep_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

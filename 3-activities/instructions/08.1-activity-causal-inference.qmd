@@ -49,6 +49,8 @@ library(tidyverse)
 
 4.  Calculate the **observed** difference in means ($\hat{\tau}$) in this study.
 
+$\hat{\tau} = \frac{80+70+80+78+68}{5} - \frac{88+55+75+66+75}{5} = 3.4$
+
 5.  Calculate the difference in means for a different treatment permutation between the schools. Use the treatment permutation of your choosing and fill out the table below to help you out.
 
 | School | $T_i$ | $Y_i$ |

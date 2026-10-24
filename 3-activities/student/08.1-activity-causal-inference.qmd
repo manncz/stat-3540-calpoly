@@ -37,20 +37,9 @@ library(tidyverse)
 
 4.  Calculate the **observed** difference in means ($\hat{\tau}$) in this study.
 
-5.  Calculate the difference in means for a different treatment permutation between the schools. Use the treatment permutation of your choosing and fill out the table below to help you out.
+$\hat{\tau} = \frac{80+70+80+78+68}{5} - \frac{88+55+75+66+75}{5} = 3.4$
 
-| School | $T_i$ | $Y_i$ |
-|--------|-------|-------|
-| 1      |       |       |
-| 2      |       |       |
-| 3      |       |       |
-| 4      |       |       |
-| 5      |       |       |
-| 6      |       |       |
-| 7      |       |       |
-| 8      |       |       |
-| 9      |       |       |
-| 10     |       |       |
+5.  Calculate the difference in means for a different treatment permutation between the schools. Use the treatment permutation of your choosing and fill out the table below to help you out.
 
 6. To create the distribution below, for every possible permutation of 5 schools among 10 being assigned treatment (225 permutations), I calculated what the observed difference in means would be ($\hat{\tau}$), and then plotted all of them.
 

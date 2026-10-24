@@ -1,0 +1,29 @@
+---
+title: "Module 9: Into to Observational Studies"
+subtitle: "Covariate Adjustment"
+format: 
+  revealjs:
+    # theme: simple # other modern-ish options: dark, simple, solarized
+    theme: simple
+    slide-number: c/t 
+    # chalkboard: true # lets you draw on top of slides (keyboard: c) or open a board (b)
+    width: 1200
+    height: 675
+    css: modern-slides.css
+    auto-stretch: false
+    html-math-method: mathjax
+execute: 
+  warning: false
+  message: false
+  echo: false
+---
+
+```{r}
+
+library(tidyverse)
+```
+
+
+
+
+
