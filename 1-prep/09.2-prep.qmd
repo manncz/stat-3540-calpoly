@@ -28,11 +28,11 @@ library(tidyverse)
 
 - 📽 Follow along with the [slides](../2-slides/09.2-obs-studies.qmd).
 
-
+{{< video https://youtu.be/5J2vVO5Wa0M >}}
 
 ## Administrative Data
 
 - 📽 Follow along with the [slides](../2-slides/09.2-obs-studies.qmd#/administrative-data).
 
-
+{{< video https://youtu.be/0uyJzUAJJ-k >}}
 
