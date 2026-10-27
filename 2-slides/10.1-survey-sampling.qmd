@@ -15,17 +15,28 @@ format:
 execute: 
   warning: false
   message: false
-  echo: false
+  echo: true
   include-in-header:
 ---
 
+```{r}
+#| echo: false
+
+library(tidyverse)
+```
+
+
 # Survey Sampling Terminology
+
+:::callout-note
+Lecture based on *Sampling Design and Analysis 3rd Edition* by Sharon L. Lohr Chapters 1, 2, and 15. Figures are from this text or recreated based on figures from the text unless otherwise noted!
+:::
 
 ## Example: Literary Digest Poll (Activity 9.1)
 
-The Literary Digest boasted that they polled **10 million** voters across the 48 states in the US in October 1936. For each voter polled, they sent out a "straw ballot" and asked that it be mailed back once completed. Out of the **2.3 million ballots returned**, 1,293,699 said they planned to vote for for Landon, and 972,897 for Roosevelt. The list of 10 million voters primary came from car registration lists and telephone books.
+The Literary Digest boasted that they polled **10 million** voters across the 48 states in the US in October 1936. For each voter polled, they sent out a "straw ballot" and asked that it be mailed back once completed. Out of the **2.3 million ballots returned**, 1,293,699 said they planned to vote for for Landon, and 972,897 for Roosevelt. The list of 10 million voters primarily came from car registration lists and telephone books. (Source: [Squire, 1988](https://www.jstor.org/stable/2749114))
 
-![](../3-activities/_images/09.1-literary-digest.png)
+![](../3-activities/_images/09.1-literary-digest.png){width=40%}
 
 ## Building Blocks
 
@@ -69,7 +80,7 @@ The Literary Digest boasted that they polled **10 million** voters across the 48
 
 ## Putting it All Together
 
-![](_images/10.1-populations.png)
+![](_images/10.1-populations.png){width=90%}
 
 
 # Types of Sampling
@@ -100,6 +111,16 @@ The Literary Digest boasted that they polled **10 million** voters across the 48
 
 - Examples:
 
+:::columns
+:::{.column width=20%}
+![](https://logos-world.net/wp-content/uploads/2020/09/Pepsi-Cola-Logo-1950-1962-700x394.png){fig-alt="pepsi logo on a bottle cap"}
+
+
+:::
+:::{.column width=80%}
+:::
+:::
+
 
   
 
@@ -113,18 +134,46 @@ The Literary Digest boasted that they polled **10 million** voters across the 48
   - continue sampling until you get the required \% in each group and then you stop.
 
 ## Quota Sampling Example 
+- Link, H. C., & Hopf, H. A. (1946). *People and books; a study of reading and book-buying habits.* Book Manufacturers Institute.
 
-- 
+- Quota factors: area, city size, age, sex, and socioeconomic status
+- Psychologist determined the blocks of the city
+- Interview people from a specified socioeconomic group.
+- Interviewers were allowed to choose the specific households.
+- n = 4,000
+
+## Quota Sampling Example 
+
+- Found... 31% of “active readers” had bought the last book they read \&
+- ... 25% of all last books read cost $1 or less.
+- But ...
+![Source: Sampling Design and Analysis 3rd Edition by Sharon L Lohr](_images/10.1-reading-table.png){width=60%}
+
+... oversampled more educated readers
 
 ## Judgement Sampling
 
-- The people conducting the survey use ``judgement'' to decide which population units are included in the sample
+- The people conducting the survey use "judgement'' to decide which population units are included in the sample
 
-- Example: Hurricane Sandy
+</br>
 
-https://rucore.libraries.rutgers.edu/rutgers-lib/49079/
+- Example: [Rivera (2016)](https://rucore.libraries.rutgers.edu/rutgers-lib/49079/)
+  - investigating residents' experiences with applying for and obtaining federal disaster aid
 
+## Judgement Sampling -- Example Hurricane Sandy 
 
+:::columns
+:::{.column width=80%}
+- judgement sample of six New Jersey municipalities 
+
+>These cities were chosen because they are located on the coast, and they all experienced similar disaster affects, such as damages due to flooding, storm surge, and windshear.  [Rivera (2016)](https://rucore.libraries.rutgers.edu/rutgers-lib/49079/)
+
+- then random digit dialing used to get a random sample *within* each
+:::
+:::{.column width=20%}
+![Cities included in Rivera 2016 Focus Group Sampling](_images/101-nj-study.png)
+:::
+:::
 
 
 ## Probability Sampling Examples
@@ -187,6 +236,53 @@ Example samples: $\mathcal{S}_1 = \{1,2\}, \mathcal{S}_2 = \{1,3\}, \mathcal{S}_
 $$P(\mathcal{S}) = \frac{1}{\binom{N}{n}}$$
 $\pi_i = \frac{\text{total number of samples that contain unit } i}{\text{total number of samples of size } n}$
 
+## Simple Random Sample in R
+
+:::columns
+
+:::column
+With a dataset:
+
+```{r}
+nrow(airquality)
+
+sample_air <- airquality |> 
+  slice_sample(n = 20, replace = F)
+```
+
+```{r}
+#| echo: true
+#| eval: false
+
+sample_air
+```
+
+```{r}
+#| echo: false
+#| eval: true
+
+sample_air |> 
+  knitr::kable() |> 
+  kableExtra::scroll_box(height = "150px") |> 
+  kableExtra::kable_styling(font_size = 20)
+```
+:::
+:::column
+
+With a vector:
+
+```{r}
+ids_vec <- 1:100
+
+sample_ids <- sample(ids_vec, 
+                     size = 20,
+                     replace = F)
+sample_ids
+```
+
+:::
+:::
+
 # Goals of Survey Sampling and Types of Errors
 
 ## Why are we doing all of this!?
@@ -232,10 +328,12 @@ $\pi_i = \frac{\text{total number of samples that contain unit } i}{\text{total 
 ## Coverage Error
 
 
-- Example:
+- Undercoverage example:
 
+</br>
+</br>
 
-- Example:
+- Overcoverage example:
 
 ## Nonresponse Error
 

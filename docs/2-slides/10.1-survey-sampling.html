@@ -31,6 +31,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0427d8d92a431aa6a6430e53ec02a470.css">
   <link rel="stylesheet" href="modern-slides.css">
@@ -125,6 +191,8 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -141,12 +209,24 @@
 <section>
 <section id="survey-sampling-terminology" class="title-slide slide level1 center">
 <h1>Survey Sampling Terminology</h1>
-
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Lecture based on <em>Sampling Design and Analysis 3rd Edition</em> by Sharon L. Lohr Chapters 1, 2, and 15. Figures are from this text or recreated based on figures from the text unless otherwise noted!</p>
+</div>
+</div>
+</div>
 </section>
 <section id="example-literary-digest-poll-activity-9.1" class="slide level2">
 <h2>Example: Literary Digest Poll (Activity 9.1)</h2>
-<p>The Literary Digest boasted that they polled <strong>10 million</strong> voters across the 48 states in the US in October 1936. For each voter polled, they sent out a “straw ballot” and asked that it be mailed back once completed. Out of the <strong>2.3 million ballots returned</strong>, 1,293,699 said they planned to vote for for Landon, and 972,897 for Roosevelt. The list of 10 million voters primary came from car registration lists and telephone books.</p>
-<p><img data-src="../3-activities/_images/09.1-literary-digest.png"></p>
+<p>The Literary Digest boasted that they polled <strong>10 million</strong> voters across the 48 states in the US in October 1936. For each voter polled, they sent out a “straw ballot” and asked that it be mailed back once completed. Out of the <strong>2.3 million ballots returned</strong>, 1,293,699 said they planned to vote for for Landon, and 972,897 for Roosevelt. The list of 10 million voters primarily came from car registration lists and telephone books. (Source: <a href="https://www.jstor.org/stable/2749114">Squire, 1988</a>)</p>
+<p><img data-src="../3-activities/_images/09.1-literary-digest.png" style="width:40.0%"></p>
 </section>
 <section id="building-blocks" class="slide level2">
 <h2>Building Blocks</h2>
@@ -182,7 +262,7 @@
 </section>
 <section id="putting-it-all-together" class="slide level2">
 <h2>Putting it All Together</h2>
-<p><img data-src="_images/10.1-populations.png"></p>
+<p><img data-src="_images/10.1-populations.png" style="width:90.0%"></p>
 </section></section>
 <section>
 <section id="types-of-sampling" class="title-slide slide level1 center">
@@ -221,6 +301,12 @@
 <li><p>Primary consideration for selecting the sample is how easy it is to recruit the units</p></li>
 <li><p>Examples:</p></li>
 </ul>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="https://logos-world.net/wp-content/uploads/2020/09/Pepsi-Cola-Logo-1950-1962-700x394.png" alt="pepsi logo on a bottle cap"></p>
+</div><div class="column" style="width:80%;">
+
+</div></div>
 </section>
 <section id="quota-sampling" class="slide level2">
 <h2>Quota Sampling</h2>
@@ -237,16 +323,57 @@
 <section id="quota-sampling-example" class="slide level2">
 <h2>Quota Sampling Example</h2>
 <ul>
-<li></li>
+<li><p>Link, H. C., &amp; Hopf, H. A. (1946). <em>People and books; a study of reading and book-buying habits.</em> Book Manufacturers Institute.</p></li>
+<li><p>Quota factors: area, city size, age, sex, and socioeconomic status</p></li>
+<li><p>Psychologist determined the blocks of the city</p></li>
+<li><p>Interview people from a specified socioeconomic group.</p></li>
+<li><p>Interviewers were allowed to choose the specific households.</p></li>
+<li><p>n = 4,000</p></li>
 </ul>
+</section>
+<section id="quota-sampling-example-1" class="slide level2">
+<h2>Quota Sampling Example</h2>
+<ul>
+<li>Found… 31% of “active readers” had bought the last book they read &amp;</li>
+<li>… 25% of all last books read cost $1 or less.</li>
+<li>But … <img data-src="_images/10.1-reading-table.png" style="width:60.0%" alt="Source: Sampling Design and Analysis 3rd Edition by Sharon L Lohr"></li>
+</ul>
+<p>… oversampled more educated readers</p>
 </section>
 <section id="judgement-sampling" class="slide level2">
 <h2>Judgement Sampling</h2>
 <ul>
-<li><p>The people conducting the survey use ``judgement’’ to decide which population units are included in the sample</p></li>
-<li><p>Example: Hurricane Sandy</p></li>
+<li>The people conducting the survey use “judgement’’ to decide which population units are included in the sample</li>
 </ul>
-<p>https://rucore.libraries.rutgers.edu/rutgers-lib/49079/</p>
+<p><br></p>
+<ul>
+<li>Example: <a href="https://rucore.libraries.rutgers.edu/rutgers-lib/49079/">Rivera (2016)</a>
+<ul>
+<li>investigating residents’ experiences with applying for and obtaining federal disaster aid</li>
+</ul></li>
+</ul>
+</section>
+<section id="judgement-sampling-example-hurricane-sandy" class="slide level2">
+<h2>Judgement Sampling – Example Hurricane Sandy</h2>
+<div class="columns">
+<div class="column" style="width:80%;">
+<ul>
+<li>judgement sample of six New Jersey municipalities</li>
+</ul>
+<blockquote>
+<p>These cities were chosen because they are located on the coast, and they all experienced similar disaster affects, such as damages due to flooding, storm surge, and windshear. <a href="https://rucore.libraries.rutgers.edu/rutgers-lib/49079/">Rivera (2016)</a></p>
+</blockquote>
+<ul>
+<li>then random digit dialing used to get a random sample <em>within</em> each</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="_images/101-nj-study.png"></p>
+<figcaption>Cities included in Rivera 2016 Focus Group Sampling</figcaption>
+</figure>
+</div>
+</div></div>
 </section>
 <section id="probability-sampling-examples" class="slide level2">
 <h2>Probability Sampling Examples</h2>
@@ -308,6 +435,217 @@
 <li><strong>SRS:</strong> Every possible subset of <span class="math inline">\(n\)</span> units from the population of <span class="math inline">\(N\)</span> units has an <strong>equal probability</strong> of being sampled.</li>
 </ul>
 <p><span class="math display">\[P(\mathcal{S}) = \frac{1}{\binom{N}{n}}\]</span> <span class="math inline">\(\pi_i = \frac{\text{total number of samples that contain unit } i}{\text{total number of samples of size } n}\)</span></p>
+</section>
+<section id="simple-random-sample-in-r" class="slide level2">
+<h2>Simple Random Sample in R</h2>
+<div class="columns">
+<div class="column">
+<p>With a dataset:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">nrow</span>(airquality)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 153</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>sample_air <span class="ot">&lt;-</span> airquality <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">20</span>, <span class="at">replace =</span> F)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>sample_air</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:150px; ">
+<table class="table caption-top" style="font-size: 20px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Ozone</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Solar.R</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Wind</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Temp</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Month</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">Day</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">115</td>
+<td style="text-align: right;">7.4</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">313</td>
+<td style="text-align: right;">11.5</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">320</td>
+<td style="text-align: right;">16.6</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">175</td>
+<td style="text-align: right;">14.9</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9.7</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">63</td>
+<td style="text-align: right;">220</td>
+<td style="text-align: right;">11.5</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">139</td>
+<td style="text-align: right;">8.6</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">6.9</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">1.7</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">279</td>
+<td style="text-align: right;">7.4</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">101</td>
+<td style="text-align: right;">10.9</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">238</td>
+<td style="text-align: right;">3.4</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">220</td>
+<td style="text-align: right;">10.3</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">10.9</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">135</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">189</td>
+<td style="text-align: right;">4.6</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">252</td>
+<td style="text-align: right;">14.9</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">29</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">307</td>
+<td style="text-align: right;">12.0</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">207</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">12.0</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">27</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column">
+<p>With a vector:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>ids_vec <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span></span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>sample_ids <span class="ot">&lt;-</span> <span class="fu">sample</span>(ids_vec, </span>
+<span id="cb5-4"><a></a>                     <span class="at">size =</span> <span class="dv">20</span>,</span>
+<span id="cb5-5"><a></a>                     <span class="at">replace =</span> F)</span>
+<span id="cb5-6"><a></a>sample_ids</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 96 68  9 91 63 29 98 78 66 69 97 14 60 17 76 80 38 27 15 51</code></pre>
+</div>
+</div>
+</div></div>
 </section></section>
 <section>
 <section id="goals-of-survey-sampling-and-types-of-errors" class="title-slide slide level1 center">
@@ -366,8 +704,11 @@
 <section id="coverage-error-2" class="slide level2">
 <h2>Coverage Error</h2>
 <ul>
-<li><p>Example:</p></li>
-<li><p>Example:</p></li>
+<li>Undercoverage example:</li>
+</ul>
+<p><br> <br></p>
+<ul>
+<li>Overcoverage example:</li>
 </ul>
 </section>
 <section id="nonresponse-error" class="slide level2">
@@ -629,6 +970,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

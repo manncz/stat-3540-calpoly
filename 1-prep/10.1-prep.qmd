@@ -21,22 +21,33 @@ library(tidyverse)
 - Name and identify different sampling methods
 - Identify a simple random sample
 - Implement simple random sampling in R
+- Explain different types of non-observation errors
 :::
 
 
-## Survey Sampling Termonology
+## Survey Sampling Terminology
 
-- 📽 Follow along with the [slides](../2-slides/).
+- 📽 Follow along with the [slides](../2-slides/10.1-survey-sampling.qmd).
 
-{{< video https://youtu.be/5J2vVO5Wa0M >}}
+
+[[video soon]]
 
 ## Types of Sampling
 
-- 📽 Follow along with the [slides](../2-slides/).
+- 📽 Follow along with the [slides](../2-slides/10.1-survey-sampling.qmd#/types-of-sampling).
 
-{{< video https://youtu.be/0uyJzUAJJ-k >}}
-
+[[video soon]]
 
 ## Simple Random Sampling
 
-- 📽 Follow along with the [slides](../2-slides/).
+- 📽 Follow along with the [slides](../2-slides/10.1-survey-sampling.qmd#/simple-random-sampling).
+
+
+[[video soon]]
+
+##  Goals of Survey Sampling and Types of Errors
+
+- 📽 Follow along with the [slides](../2-slides/10.1-survey-sampling.qmd#/goals-of-survey-sampling-and-types-of-errors).
+
+
+[[video soon]]
