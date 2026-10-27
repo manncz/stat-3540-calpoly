@@ -1,0 +1,42 @@
+---
+title: "10.1 Preparation: Intro to Survey Sampling"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+#### 📽 Watch Videos: 40 min
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+- Define survey sampling terminology
+- Name and identify different sampling methods
+- Identify a simple random sample
+- Implement simple random sampling in R
+:::
+
+
+## Survey Sampling Termonology
+
+- 📽 Follow along with the [slides](../2-slides/).
+
+{{< video https://youtu.be/5J2vVO5Wa0M >}}
+
+## Types of Sampling
+
+- 📽 Follow along with the [slides](../2-slides/).
+
+{{< video https://youtu.be/0uyJzUAJJ-k >}}
+
+
+## Simple Random Sampling
+
+- 📽 Follow along with the [slides](../2-slides/).

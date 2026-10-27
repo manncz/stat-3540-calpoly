@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lab 4: Design a CRD – Statistical Methods for Study Design and Analysis</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../0-course-info/canvas/stat-3540-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e47b5f09565cef1e8b2fc4d77510aa64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5baf755da9d91fdc6d970f362079751c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e47b5f09565cef1e8b2fc4d77510aa64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Statistical Methods for Study Design and Analysis
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Statistical Methods for Study Design and Analysis</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/manncz/stat-3540-calpoly" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://canvas.calpoly.edu" title="Cal Poly Canvas" class="quarto-navigation-tool px-1" aria-label="Cal Poly Canvas"><i class="bi bi-person-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../0-course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#determine-research-question-optional-checkpoint-due-102" id="toc-determine-research-question-optional-checkpoint-due-102" class="nav-link active" data-scroll-target="#determine-research-question-optional-checkpoint-due-102"><span class="header-section-number">1</span> Determine Research Question (Optional Checkpoint due 10/2)</a></li>
+  <li><a href="#create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit" id="toc-create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit" class="nav-link" data-scroll-target="#create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit"><span class="header-section-number">2</span> Create a 3-way Full Factorial CRD (with 2 subsamples per experimental unit!)</a></li>
+  <li><a href="#data-collection-due-109-on-canvas" id="toc-data-collection-due-109-on-canvas" class="nav-link" data-scroll-target="#data-collection-due-109-on-canvas"><span class="header-section-number">3</span> Data Collection – due 10/9 on Canvas</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis"><span class="header-section-number">4</span> Data Analysis</a>
+  <ul class="collapse">
+  <li><a href="#step-1-data-processing-cleaning" id="toc-step-1-data-processing-cleaning" class="nav-link" data-scroll-target="#step-1-data-processing-cleaning"><span class="header-section-number">4.1</span> Step 1: Data Processing / Cleaning</a></li>
+  <li><a href="#step-2-analysis-and-inference" id="toc-step-2-analysis-and-inference" class="nav-link" data-scroll-target="#step-2-analysis-and-inference"><span class="header-section-number">4.2</span> Step 2: Analysis and Inference</a></li>
+  </ul></li>
+  <li><a href="#report-and-submission" id="toc-report-and-submission" class="nav-link" data-scroll-target="#report-and-submission"><span class="header-section-number">5</span> Report and Submission</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 4: Design a CRD</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="lab-objectives" class="level4">
+<h4 class="anchored" data-anchor-id="lab-objectives">Lab Objectives</h4>
+<ul>
+<li>Address a research question from start to finish with a Completely Randomized experiment with a factorial treatment structure and subsampling</li>
+<li>Implement CRD random assignment for an appropriate sample size of islanders</li>
+<li>Collect and analyze data based on the factorial treatment structure with subsampling</li>
+<li>Write a clear report explaining the design adn analysis</li>
+</ul>
+<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Reminders
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> You <strong>must</strong> write R code in this template! <a href="templates/03-lab-code-template.qmd">03-lab-code-template.qmd</a></p>
+<ul>
+<li>You will <strong>turn in your code</strong> with the report.</li>
+<li>This is so that you can <strong>save</strong> your code for reproducibility.</li>
+</ul></li>
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Any lab element that should be completed in R will have this R logo next to it in these instructions.</p></li>
+<li><p>Remember this is a group assignment! You should be working with your group through <strong>all</strong> elements of this lab and you are all responsible for the final report.</p></li>
+<li><p>Unless you are having a private issue with your group, <strong>anything communication with me via email relating to labs should include all of your group members!!</strong> ’cc them all!</p></li>
+<li><p>Contact Dr.&nbsp;C for any questions or clarifications – even better, post questions to discord!</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="determine-research-question-optional-checkpoint-due-102" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="determine-research-question-optional-checkpoint-due-102"><span class="header-section-number">1</span> Determine Research Question (Optional Checkpoint due 10/2)</h2>
+<p>Develop a research question with <strong>three factors</strong> with a total of <span class="math inline">\(t = 12\)</span> treatment combinations (e.g.&nbsp;3x2x2)</p>
+<p>You may either:</p>
+<ol type="1">
+<li>use the provided example below or</li>
+<li>propose your own question
+<ul>
+<li>If you chose this option, you <strong>must</strong> submit a proposal by Friday 10/2 at 11:59pm. I will approve your proposal the end of the weekend.</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Example Research Question:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>How do ambient temperature (-20 C / 5 C / 40 C), hydration status (Water 250mL / Dehydrated), and acute salt intake (Fried Chips / No Salt) affect an islander’s systolic blood pressure after a 10-minute exposure period?</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Get approval of your research question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>If you choose your own research question</strong> (not the one provided), proposals should include:</p>
+<ul>
+<li>A clear statement of the research question.</li>
+<li>The treatment and experimental structures.</li>
+<li>A justification for feasibility (e.g., timing constraints, don’t have your Islander garden for 14 days).</li>
+</ul>
+<p>Submit proposals via Canvas at Lab 3: Checkpoint – Proposal.</p>
+</div>
+</div>
+</section>
+<section id="create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit"><span class="header-section-number">2</span> Create a 3-way Full Factorial CRD (with 2 subsamples per experimental unit!)</h2>
+<p>We are going to use <span class="math inline">\(r = 4\)</span>. Recall, <span class="math inline">\(t = 12\)</span>.</p>
+<ol type="1">
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> In R, <strong>randomly sample</strong> 48 islanders from your 60 – You may want to sample 12 from each group member here, but ensure the random assignment of factors is conducted across the entire set of 48 islanders at once.</p></li>
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> <strong>Randomly assign treatments</strong> to participants in a CRD for your 3-way full factorial treatment structure (what are your 3 factors and levels?) using the tools in R learned in class.</p>
+<ul>
+<li>See <a href="../2-slides/04.1-factorials.html#/create-a-full-factorial-crd-in-r-with-edible-package">class slides</a> for an example</li>
+<li>At this point you should have a dataset with 48 rows (one for each islander), and four columns (1 column for your Islander name/id, and 3 for the factors).</li>
+</ul></li>
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Double your rows from 48 to 96 – <strong>adding two subsamples for each islander</strong> – by adding a <code>subsample</code> column with the values 1 and 2 for each islander.</p>
+<ul>
+<li>This does not entail applying ANOTHER treatment combo. Just recording the response twice.</li>
+<li><strong>There is provided code in the template to help you do this using <code>expand_grid()</code>!!</strong></li>
+<li>Your data should have 96 rows and 5 columns now.</li>
+</ul></li>
+<li><p>Finally, add an empty column for your outcome</p>
+<ul>
+<li>This means your final data set should have 96 rows and 6 columns for (as an example), <code>islander</code>, <code>temperature</code>, <code>hydration</code>, <code>salt</code>, <code>subsample</code>, and <code>blood_pressure</code>.</li>
+<li>Make sure you used context as your column headers (e.g., <code>temperature</code> instead of <code>factor_a</code>).</li>
+</ul></li>
+</ol>
+</section>
+<section id="data-collection-due-109-on-canvas" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="data-collection-due-109-on-canvas"><span class="header-section-number">3</span> Data Collection – due 10/9 on Canvas</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Stop!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure you have completed sections <strong>1</strong> Research Question and <strong>2</strong> Create 3-way Factorial CRD with subsamples above before moving on.</p>
+</div>
+</div>
+<p>Big picture: utilizing the “Task” button on the Islands:</p>
+<ol type="1">
+<li>apply your treatment appropriately</li>
+<li>record the response variable</li>
+<li>fill out the response column in your data set.</li>
+</ol>
+<p><strong>Step 1: Determine your data collection procedure</strong></p>
+<ul>
+<li>Think about direct controls!</li>
+<li>Talk about and <strong>solidify</strong> the data collection procedure as a group <strong>BEFORE COLLECTING ANY DATA</strong> to ensure you are following the same processes (e.g., time waiting before collecting blood pressure).</li>
+<li>Write down your procedure before anything else</li>
+<li>Be careful about timing!!
+<ul>
+<li>Should you measure your response immediately after applying the treatment or allow for some time to pass?? Be careful about real versus island time</li>
+<li>Remember your Islanders will sleep and this will take time.</li>
+</ul></li>
+<li>Be thoughtful and careful and work together! Communication is seriously key here.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Procedure for provided research question
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Following the treatment combination randomly assigned to each islander that you created above, collect the data for each islander by:</p>
+<p><strong>Step 1:</strong> Apply the assigned Temperature level (wait the 10 minutes real time)</p>
+<ul>
+<li>Sit at -20*C 10 mins</li>
+<li>Sit at 5*C 10 mins</li>
+<li>Sit at 40*C 10 mins</li>
+</ul>
+<p><strong>Step 2:</strong> Apply the assigned Hydration level immediately after the 10-minute temperature exposure</p>
+<ul>
+<li>Drink Water 250mL</li>
+<li>Do not drink anything</li>
+</ul>
+<p><strong>Step 3:</strong> Apply the assigned Salty snack level immediately after the hydration is complete</p>
+<ul>
+<li>Fried Chips 50g</li>
+<li>Do not eat anything</li>
+</ul>
+<p><strong>Step 4:</strong> Measure Blood Pressure TWICE (subsamples)</p>
+<ul>
+<li>Click Blood Pressure (record as Subsample 1)</li>
+<li>Click Blood Pressure (record as Subsample 2)</li>
+</ul>
+<p><strong>SEE BELOW ABOUT BLOOD PRESSURE BEING MEASURED AS Systolic/Diastolic – RECORD BOTH!</strong></p>
+<p>Think about “direct control” for your data collection. For example, how many minutes between each subsample collection?</p>
+</div>
+</div>
+<p><strong>Step 2: Implement treatment and collect response</strong></p>
+<ul>
+<li>Once you implement the “Task” you can find it in your “Recent Tasks” section.</li>
+<li>Follow the procedure you determined as carefully as you can.</li>
+<li>If you accidentally mess up data collection, this will mess up your data and <strong>you should make a note/possibly remove this observation.</strong></li>
+<li>Carefully record your data collection as it actually happened and note any deviations from your original planned procedure as you implement your design and treatment.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Tips
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>I would open 12 tabs and turn on your favorite movie to collect data.</li>
+<li>BE CAREFUL to assign the correct treatment combo to each islander!</li>
+</ul>
+</div>
+</div>
+<p><strong>Step 3: Record all responses in your data table</strong></p>
+<ul>
+<li>Remember, you should have <strong>TWO</strong> subsamples (responses measured) for each islander!</li>
+<li>Turn in your data with <strong>96 rows</strong></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Provided Research Question – record both blood pressures!!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As noted above – if you are doing the provided question, make sure you record <strong>BOTH</strong> Systolic AND Diastolic blood pressure. They are reported as Systolic/Diastolic. Record it either like that (“Systolic/Diastolic”) in your data or in separate columns, one for systolic and one for diastolic.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>End of Data Collection for Project Checkpoint Submission
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>No need to go farther than this for the data collection assignment!</p>
+</div>
+</div>
+</section>
+<section id="data-analysis" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="data-analysis"><span class="header-section-number">4</span> Data Analysis</h2>
+<p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Use R to analyze the data you collected!</p>
+<ul>
+<li>There is some guidance for this analysis in the template, but you may need to add additional code chunks or remove them.</li>
+<li>Make sure to explain all code and clean up your .qmd file before your final submission.</li>
+</ul>
+<section id="step-1-data-processing-cleaning" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="step-1-data-processing-cleaning"><span class="header-section-number">4.1</span> Step 1: Data Processing / Cleaning</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Provided Research Question – Data Processing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>BP is measured in Systolic/Diastolic… this is NOT division.</p>
+<ul>
+<li>Systolic (Top Number) Measures the pressure when the heart beats</li>
+<li>Diastolic (Bottom Number) Measures the pressure between beats</li>
+</ul>
+<p>BUT we want one single number for the response. So we are going to use the following:</p>
+<p>Mean Arterial Pressure (MAP) = <span class="math inline">\(\frac{Systolic + 2\cdot Diastolic}{3}\)</span></p>
+<p>Use Excel/Google Sheets <strong>or</strong> R to calculate the MAP from your recorded blood pressure. I have included code in the template to help with this.</p>
+<p><em>This is actually a nice touch to what real life data collection can entail.</em></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>BEFORE you move on! If you are using the provided question, for each of the subsamples, calculate the islanders MAP (you should have 96 of these). Then move onto the below.</p>
+</div>
+</div>
+<ul>
+<li>You have a data set with 96 rows (2 subsamples per islander x treatment combo).</li>
+<li>Think about how you might want to analyze this data!
+<ul>
+<li><em>Note</em> Even though we know how to use LMMs to account for subsampling, we are going to stick with the “aggregate” method for this lab.</li>
+</ul></li>
+<li>Aggregate/Average the your response across the 2 subsamples so you have a data set of 48 rows to analyze and your islander-level response is the average.
+<ul>
+<li>e.g.: for the provided question the response with be the <strong>average</strong> MAP</li>
+<li><code>group_by() |&gt; summarize()</code></li>
+<li>Make sure you keep each unique Islander and end up with one row per Islander!</li>
+</ul></li>
+</ul>
+</section>
+<section id="step-2-analysis-and-inference" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="step-2-analysis-and-inference"><span class="header-section-number">4.2</span> Step 2: Analysis and Inference</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>BEFORE you move on! Your dataset should be at the Islander level (48 rows) for the rest of the analysis.</p>
+</div>
+</div>
+<ul>
+<li>Fit a 3-way full factorial CRD analysis to the <strong>average</strong> response at the islander level</li>
+<li>Check model fit (residual analysis)</li>
+<li>Following the decision flow-chart for higher-order interaction factorial analysis (when to look at 3-way interactions, 2-way interactions, and main effects), carry out the rest of the analysis.
+<ul>
+<li>This should also include appropriate interaction <strong>plots</strong> or other plots displaying the effects</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="report-and-submission" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="report-and-submission"><span class="header-section-number">5</span> Report and Submission</h2>
+<p>Download the guided lab report template and work within it <a href="templates/03-lab-3way-factorial-template.docx">03-lab-3way-factorial-template.docx</a>.</p>
+<p>Make sure to:</p>
+<ul>
+<li>Use complete sentences</li>
+<li>Focus on clarity, logical flow, and professional grammar</li>
+<li>Think about being as concise as possible while being complete and clear</li>
+<li>Clean up the report at the end so that it is readable and professional.</li>
+<li>Make sure you have addressed all instructions in this document in the report.</li>
+</ul>
+<p>In your final submission you will submit:</p>
+<ol type="1">
+<li>Your report following the template.</li>
+<li>A .qmd with all of your code following the .qmd template.</li>
+<li>Your dataset (.csv or .xlsx)</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Generative AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As a reminder, you are allowed to use generative AI on this assignment outside of class. However, your group should agree on how it will be used and you must disclose how you used in in your report. Finally, as always, follow the <a href="../0-course-info/syllabus-f26.html">syllabus</a> guidelines for citing AI.</p>
+<p><em>If you us AI to help you with writing, you should prompt the model “Please assess my work and provide only feedback. Do not rewrite anything.” </em></p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/github\.com\/manncz\/stat-3540-calpoly");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Built by Charlotte Mann, adapted from materials by Dr.&nbsp;Emily Robinson and Dr.&nbsp;Anelise Sabbag.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

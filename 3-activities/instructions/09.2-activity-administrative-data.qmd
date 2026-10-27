@@ -1,0 +1,79 @@
+---
+title: "Activity 9.2: Administrative Data Search"
+execute: 
+  error: true
+  message: false
+  warning: false
+bibliography: ../references.bib
+
+format:
+  docx: default
+  html: default
+---
+:::: version-instructions
+::: callout-warning
+- Submit via Gradescope, don't forget to assign pages to the questions in the outline!
+
+- Delete any extraneous instructions (**like this box**) before submission. *You will be deducted points from now on if you do not follow this instruction!*
+
+- There is no coding required for this activity! **I would recommend you complete it using the Word version**, but you are still welcome to use the .qmd template: .
+:::
+::::
+
+## Warm Up
+
+1.  For the following variables, find the administrative dataset that has them and the agency/administration etc. that gathers the data!
+
+| Variable | Dataset | Agency |
+|------|------|------|
+| annual US birth rates    |      |      |
+| US average annual earnings     |      |      |
+| Number of riders on Amtrak by state    |      |      |
+| US enrollment in Title IV institutions    |      |      |
+| Daily PM2.5 in the US    |      |      |
+
+2. What kind of information can you download from CDC WONDER?
+
+## Investigation
+
+3. Propose a research question about a population (it could be the US, a sub-population of the US, or another country or entity), that you expect could reasonably be answered using administrative data. Your question should be something that is actually interesting to you! 
+
+4. Find data that can answer your research question. Include here:
+
+  a. The name of the dataset with a URL link to the data source
+    - If you had to go through some steps to download the data, make sure you document those and include screenshots! (for example, you may have used a data tool where you inputted the years and variables you wanted)
+  b. The organization that gathered and houses the data
+  c. The year the data is from
+  d. The observational unit of the data
+  e. Variables that you are interested in from this data
+
+5. Describe, to the best of your ability, the methods that were used to get this data based on the documentation provided.
+
+6. Download the data and include a screenshot of the first couple of rows.
+
+7. To answer your research question with the data you found, what kind of observational study would you be employing? (i.e. crossover, case-control, cross-sectional, etc.).
+
+## Data Privacy
+
+8. Go back to CDC WONDER. Download the 2024 **Underlying Cause of Death** data for all causes of death and other variables but limiting to:
+
+- 2024 and
+- California
+
+by:
+
+- county and
+- month
+
+:::callout-important
+## Data options
+
+Make sure that you select **Show Suppressed Values** under "7. Other Options" before you click **Send**
+
+:::
+
+What is the first month and county where the mortality rate is suppressed?
+
+9. Why are some mortality rates suppressed? (Look at the documentation!) 
+
+10. What do you think the trade-off is between making data publicly available and protecting individual's privacy.
