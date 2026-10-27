@@ -7,8 +7,8 @@ execute:
 bibliography: ../references.bib
 
 format:
-  docx: default
   html: default
+  docx: default
 ---
 :::: version-instructions
 ::: callout-warning
@@ -16,7 +16,7 @@ format:
 
 - Delete any extraneous instructions (**like this box**) before submission. *You will be deducted points from now on if you do not follow this instruction!*
 
-- There is no coding required for this activity! **I would recommend you complete it using the Word version**, but you are still welcome to use the .qmd template: .
+- There is no coding required for this activity! **I would recommend you complete it using the Word version**, but you are still welcome to use the .qmd template: [09.2-activity-administrative-data.qmd](../student/09.2-activity-administrative-data.qmd).
 :::
 ::::
 
