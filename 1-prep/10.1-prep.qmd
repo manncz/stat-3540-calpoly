@@ -30,13 +30,13 @@ library(tidyverse)
 - 📽 Follow along with the [slides](../2-slides/10.1-survey-sampling.qmd).
 
 
-[[video soon]]
+{{< video https://youtu.be/_uet5tmBmWk >}}
 
 ## Types of Sampling
 
 - 📽 Follow along with the [slides](../2-slides/10.1-survey-sampling.qmd#/types-of-sampling).
 
-[[video soon]]
+{{< video https://youtu.be/nGNkU7Hq97M  >}}
 
 ## Simple Random Sampling
 
