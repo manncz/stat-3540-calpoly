@@ -1,5 +1,5 @@
 ---
-title: "Lab 4: Design a CRD"
+title: "Lab 4: Stratified Sampling"
 format: 
   html:
     number-sections: true 
@@ -9,17 +9,17 @@ format:
 
 #### Lab Objectives
 
-- Address a research question from start to finish with a Completely Randomized experiment with a factorial treatment structure and subsampling
-- Implement CRD random assignment for an appropriate sample size of islanders
-- Collect and analyze data based on the factorial treatment structure with subsampling
-- Write a clear report explaining the design adn analysis
+- Address a research question about a population proportion from start to finish with a **stratified random sample** design
+- Implement a stratified random sample with an appropriate sample size of islanders
+- Collect and analyze data 
+- Write a clear report explaining the design and analysis
 
 -----------------------------------------------------------------------------------------------------------------
 
 :::callout-note
 ## Reminders
 
-- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} You **must** write R code in this template! [03-lab-code-template.qmd](templates/03-lab-code-template.qmd)
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} You **must** write R code in this template! [[coming soon]]
     - You will **turn in your code** with the report. 
     - This is so that you can **save** your code for reproducibility. 
     
@@ -32,205 +32,150 @@ format:
 
 :::
 
+### Big Picture
 
+In this lab you will estimate a population parameter about some population of islanders using a stratified random sample design. 
 
-## Determine Research Question (Optional Checkpoint due 10/2)
+## Determine Research Question and Population (Checkpoint 1 -- due Wed 11/4)
 
-Develop a research question with **three factors** with a total of $t = 12$ treatment combinations (e.g. 3x2x2)
+Create a research question where the parameter of interest is a **population proportion** regarding a population of islanders.
 
-You may either:
+The requirements of your question are:
 
-1. use the provided example below or 
-2. propose your own question
-    - If you chose this option, you **must** submit a proposal by Friday 10/2 at 11:59pm. I will approve your proposal the end of the weekend.
+- it must be about a population proportion
+- **islanders are the observational units** AND **sampling units**
+- **be specific about your population** 
+  - coverage error should **not** be concern in your study, so **choose your population wisely**
+  - it is going to be DIFFICULT to have your population be all islanders
+  - your population should have at least 300 islanders in it ($N \geq 300$)
+- it should not be about age, income, or which city the islander lives in since you will be collecting those variables anyway
+- you may not look at weight or classify food as "junk food" -- I don't want to read that
 
-:::callout-note
-### Example Research Question:
-How do ambient temperature (-20 C / 5 C / 40 C), hydration status (Water 250mL / Dehydrated), and acute salt intake (Fried Chips / No Salt) affect an islander’s systolic blood pressure after a 10-minute exposure period?
+:::callout-warning
+## Consider your population carefully!
+
+Note that you need to be able to have a FULL SAMPLING FRAME of *islanders* for whatever population you choose. So make sure you choose a population that you can reasonably do this for, given the setup of the Islands Simulation!!
+
+You might want to check out these buildings in each city to help with making a sampling frame: Hall, Bureau, Clinic, School, Hospital, University...
+
+You should think about this BEFORE determining your strata and maybe even your question!
 :::
 
-:::callout-important
-### Get approval of your research question
 
-**If you choose your own research question** (not the one provided), proposals should include:
+:::callout-tip
+## Have fun!
 
-- A clear statement of the research question.
-- The treatment and experimental structures.
-- A justification for feasibility (e.g., timing constraints, don’t have your Islander garden for 14 days).
+This will be more fun and interesting for you if you are creative!
 
-Submit proposals via Canvas at Lab 3: Checkpoint -- Proposal.
+I recommend you look at the **"Survey"** option in Islands -- there are a lot of interesting questions you can ask your islanders in addition to the documentation that is already there about them.
+
 :::
 
+For Checkpoint 1 you will write a short proposal for your study specifying:
 
-## Create a 3-way Full Factorial CRD (with 2 subsamples per experimental unit!)
+1. A specific research question referring to the parameter of interest and the population you are interested in.
+2. How you will measure the outcome you identify (do you need to give a survey or is the information already in the islander information?)
+3. How you plan to construct a sampling frame (does not need to be highly detailed, but give me an idea).
+4. What strata you plan to use noting what each stratum is and how many there are.
 
-We are going to use $r = 4$. Recall, $t = 12$.
 
-1. ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} In R, **randomly sample** 48 islanders from your 60 
-    – You may want to sample 12 from each group member here, but ensure the random assignment of factors is conducted across the entire set of 48 islanders at once.
+## Construct your Sampling Frame
 
-2. ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} **Randomly assign treatments** to participants in a CRD for your 3-way full factorial treatment structure (what are your 3 factors and levels?) using the tools in R learned in class. 
-    - See [class slides](../2-slides/04.1-factorials.html#/create-a-full-factorial-crd-in-r-with-edible-package) for an example
-    - At this point you should have a dataset with 48 rows (one for each islander), and four columns (1 column for your Islander name/id, and 3 for the factors).
-3. ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Double your rows from 48 to 96 -- **adding two subsamples for each islander** -- by adding a `subsample` column with the values 1 and 2 for each islander.
-    - This does not entail applying ANOTHER treatment combo. Just recording the response twice. 
-    - **There is provided code in the template to help you do this using `expand_grid()`!!**
-    - Your data should have 96 rows and 5 columns now.
-4. Finally, add an empty column for your outcome
-    - This means your final data set should have 96 rows and 6 columns for (as an example), `islander`, `temperature`, `hydration`, `salt`, `subsample`, and `blood_pressure`.
-    - Make sure you used context as your column headers (e.g., `temperature` instead of `factor_a`).
+The first step is to construct your sampling frame
 
-## Data Collection -- due 10/9 on Canvas
+- Your sampling units should be one islander
+- You should not have any coverage error in your study
+- Make sure you note the strata in your frame!
+
+I would recommend doing this in a shared Excel or Google Sheet
+
+## Determine the Sample Size
+
+
+
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Estimate the **maximum** overall sample size $n$ given some bound of error on your estimate
+- You can choose your bound of error, but it should be smaller that 0.06
+- After determining the overall sample size, use one of the allocations we learned (Proportional, Neyman, or Optimal) to find the sample size for each stratum ($n_1$, $n_2$, ...)
+
+
+## Randomly Sample Islanders (Checkpoint 2 -- due Wed 11/11)
 
 :::callout-important
 # Stop!
 
-Make sure you have completed sections **1** Research Question and **2** Create 3-way Factorial CRD with subsamples above before moving on.
+Make sure you have completed sections **1-3** before collecting any data
 
+You need your strata sizes and a sampling frame before random sampling!
 :::
 
-
-Big picture: utilizing the “Task” button on the Islands:
-
-  1. apply your treatment appropriately
-  2. record the response variable
-  3. fill out the response column in your data set.
-
-**Step 1: Determine your data collection procedure**
-  
-  
-  - Think about direct controls! 
-  - Talk about and **solidify** the data collection procedure as a group **BEFORE COLLECTING ANY DATA** to ensure you are following the same processes (e.g., time waiting before collecting blood pressure).
-  - Write down your procedure before anything else
-  - Be careful about timing!!
-      - Should you measure your response immediately after applying the treatment or allow for some time to pass?? Be careful about real versus island time
-      - Remember your Islanders will sleep and this will take time.
-  - Be thoughtful and careful and work together! Communication is seriously key here.
-  
-:::callout-note
-
-# Procedure for provided research question
-
-Following the treatment combination randomly assigned to each islander that you created above, collect the data for each islander by:
-
-**Step 1:** Apply the assigned Temperature level (wait the 10 minutes real time)
-
-  - Sit at -20*C 10 mins
-  - Sit at 5*C 10 mins
-  - Sit at 40*C 10 mins
-
-**Step 2:** Apply the assigned Hydration level immediately after the 10-minute temperature exposure
-
-- Drink Water 250mL
-- Do not drink anything
-
-**Step 3:** Apply the assigned Salty snack level immediately after the hydration is complete
-
-- Fried Chips 50g
-- Do not eat anything
-
-**Step 4:** Measure Blood Pressure TWICE (subsamples)
-
-- Click Blood Pressure (record as Subsample 1)
-- Click Blood Pressure (record as Subsample 2)
-
-**SEE BELOW ABOUT BLOOD PRESSURE BEING MEASURED AS Systolic/Diastolic --  RECORD BOTH!**
-
-Think about “direct control” for your data collection. For example, how many minutes between each subsample collection?
-:::
-  
-
-**Step 2: Implement treatment and collect response**
-  
-  - Once you implement the “Task” you can find it in your “Recent Tasks” section.
-  - Follow the procedure you determined as carefully as you can.
-  - If you accidentally mess up data collection, this will mess up your data and **you should make a note/possibly remove this observation.**
-  - Carefully record your data collection as it actually happened and note any deviations from your original planned procedure as you implement your design and treatment.
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Take a random sample of islanders using *Stratified Random Sampling* with R
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} This should be **reproducible**
+  - use `set.seed()`
+  - do this once as a group
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} save both: 
+  - a .csv or .xlsx of whole sampling frame with a column indicating which islanders are included in your final sample
+  - a .csv or .xlsx with just your final sample of islanders to use for data entry
+- You will submit your sampling frame with a column indicating which islanders are included in your final sample for checkpoint 2.
 
 :::callout-warning
-## Tips
+## End of Sampling for Checkpoint 2
 
-- I would open 12 tabs and turn on your favorite movie to collect data.
-- BE CAREFUL to assign the correct treatment combo to each islander!
+No need to go farther than this for Checkpoint 2! However, I would **recommend continuing** on depending on your group's schedules to make sure that you complete the data collection and analysis in time.
 :::
 
 
-**Step 3: Record all responses in your data table**
+## Data Collection 
 
-- Remember, you should have **TWO** subsamples (responses measured) for each islander!
-- Turn in your data with **96 rows**
+:::callout-warning
+### Get on the same page before jumping in
 
-:::callout-note
-## Provided Research Question -- record both blood pressures!!
+As with all of the Labs, collecting data is the most time consuming and tedious part! You don't want to have to redo this!
 
-As noted above -- if you are doing the provided question, make sure you record **BOTH** Systolic AND Diastolic blood pressure. They are reported as Systolic/Diastolic. Record it either like that ("Systolic/Diastolic") in your data or in separate columns, one for systolic and one for diastolic.
+Make sure everyone in your group has read the instructions here FULLY before starting. Make sure that you are all on the same page with a plan about how you are going to complete the data collection and divide up the work.
+
+**Note:** You definitely should divide up this work but everyone in your group is ultimately responsible for all of the data quality!
+
 :::
 
+- Put your the sample data you created in Step 4 in a sharable excel sheet or google sheets to record your data 
+- remember that each line in your dataset should represent one islander
+- columns in your file should be named appropriately
+  - think about what easy but clear names will be for analyzing this data IN R
+- collect information about your sample of islanders from *The Islands* including:
+  - your variable(s) of interest being measured to answer the research question
+  - island the islander lives in (Ironbard, Providence, or Bonne Sante)
+  - city/village the islander lives in
+  - household number
+  - age
+  - monthly income
+  - whether the islander owns a pet
+  - whether the islander gave consent or not
+    - if they did not give consent to be in your study, you should still be able to measure everything but your variable of interest!
+    - you will use this information for a nonresponse analysis
 
-:::callout-important
-## End of Data Collection for Project Checkpoint Submission
 
-No need to go farther than this for the data collection assignment!
-:::
-
+**As you collect data, make sure you are recording information about:**
+  
+  - how each response was coded in the data sheet
+  - how will missing data is handled 
+  - people who refused to respond and people who could not be reached
+  - any codes / acronyms used in the recording of the data
+  - anything else that did not go to plan, like participants dying etc.
 
 ## Data Analysis
 
 ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Use R to analyze the data you collected! 
 
+  - See the report template for expected analyses.
   - There is some guidance for this analysis in the template, but you may need to add additional code chunks or remove them.
   - Make sure to explain all code and clean up your .qmd file before your final submission.
 
 
-### Step 1: Data Processing / Cleaning
-
-:::callout-note
-## Provided Research Question -- Data Processing
-
-BP is measured in Systolic/Diastolic... this is NOT division. 
-
-- Systolic (Top Number) Measures the pressure when the heart beats
-- Diastolic (Bottom Number) Measures the pressure between beats
-
-BUT we want one single number for the response. So we are going to use the following:
-
-Mean Arterial Pressure (MAP) = $\frac{Systolic + 2\cdot Diastolic}{3}$
-
-Use Excel/Google Sheets **or** R to calculate the MAP from your recorded blood pressure. I have included code in the template to help with this.
-
-*This is actually a nice touch to what real life data collection can entail.*
-:::
-
-:::callout-important
-BEFORE you move on! If you are using the provided question, for each of the subsamples, calculate the islanders MAP (you should have 96 of these). Then move onto the below.
-:::
-
-
-- You have a data set with 96 rows (2 subsamples per islander x treatment combo). 
-- Think about how you might want to analyze this data!
-    - *Note* Even though we know how to use LMMs to account for subsampling, we are going to stick with the "aggregate" method for this lab.
-- Aggregate/Average the your response across the 2 subsamples so you have a data set of 48 rows to analyze and your islander-level response is the average.
-    - e.g.: for the provided question the response with be the **average** MAP
-    - `group_by() |> summarize()`
-    - Make sure you keep each unique Islander and end up with one row per Islander!
-
-
-### Step 2: Analysis and Inference
-
-:::callout-important
-BEFORE you move on! Your dataset should be at the Islander level (48 rows) for the rest of the analysis.
-:::
-
-
-- Fit a 3-way full factorial CRD analysis to the **average** response at the islander level
-- Check model fit (residual analysis)
-- Following the decision flow-chart for higher-order interaction factorial analysis (when to look at 3-way interactions, 2-way interactions, and main effects), carry out the rest of the analysis.
-  - This should also include appropriate interaction **plots** or other plots displaying the effects
 
 
 ## Report and Submission
 
-Download the guided lab report template and work within it [03-lab-3way-factorial-template.docx](templates/03-lab-3way-factorial-template.docx).
+Download the guided lab report template and work within it [[coming soon]].
 
 Make sure to:
 
@@ -238,7 +183,8 @@ Make sure to:
 - Focus on clarity, logical flow, and professional grammar
 - Think about being as concise as possible while being complete and clear
 - Clean up the report at the end so that it is readable and professional.
-- Make sure you have addressed all instructions in this document in the report.
+- For each plot/figure you include, please add good labels, titles, and references in the body of your report.
+- Make sure you have addressed all instructions in this document and in the template in the report.
 
 In your final submission you will submit:
 

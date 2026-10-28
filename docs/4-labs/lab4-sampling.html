@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab 4: Design a CRD – Statistical Methods for Study Design and Analysis</title>
+<title>Lab 4: Stratified Sampling – Statistical Methods for Study Design and Analysis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -349,15 +349,14 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#determine-research-question-optional-checkpoint-due-102" id="toc-determine-research-question-optional-checkpoint-due-102" class="nav-link active" data-scroll-target="#determine-research-question-optional-checkpoint-due-102"><span class="header-section-number">1</span> Determine Research Question (Optional Checkpoint due 10/2)</a></li>
-  <li><a href="#create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit" id="toc-create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit" class="nav-link" data-scroll-target="#create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit"><span class="header-section-number">2</span> Create a 3-way Full Factorial CRD (with 2 subsamples per experimental unit!)</a></li>
-  <li><a href="#data-collection-due-109-on-canvas" id="toc-data-collection-due-109-on-canvas" class="nav-link" data-scroll-target="#data-collection-due-109-on-canvas"><span class="header-section-number">3</span> Data Collection – due 10/9 on Canvas</a></li>
-  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis"><span class="header-section-number">4</span> Data Analysis</a>
-  <ul class="collapse">
-  <li><a href="#step-1-data-processing-cleaning" id="toc-step-1-data-processing-cleaning" class="nav-link" data-scroll-target="#step-1-data-processing-cleaning"><span class="header-section-number">4.1</span> Step 1: Data Processing / Cleaning</a></li>
-  <li><a href="#step-2-analysis-and-inference" id="toc-step-2-analysis-and-inference" class="nav-link" data-scroll-target="#step-2-analysis-and-inference"><span class="header-section-number">4.2</span> Step 2: Analysis and Inference</a></li>
-  </ul></li>
-  <li><a href="#report-and-submission" id="toc-report-and-submission" class="nav-link" data-scroll-target="#report-and-submission"><span class="header-section-number">5</span> Report and Submission</a></li>
+  <li><a href="#big-picture" id="toc-big-picture" class="nav-link active" data-scroll-target="#big-picture"><span class="header-section-number">0.1</span> Big Picture</a></li>
+  <li><a href="#determine-research-question-and-population-checkpoint-1-due-wed-114" id="toc-determine-research-question-and-population-checkpoint-1-due-wed-114" class="nav-link" data-scroll-target="#determine-research-question-and-population-checkpoint-1-due-wed-114"><span class="header-section-number">1</span> Determine Research Question and Population (Checkpoint 1 – due Wed 11/4)</a></li>
+  <li><a href="#construct-your-sampling-frame" id="toc-construct-your-sampling-frame" class="nav-link" data-scroll-target="#construct-your-sampling-frame"><span class="header-section-number">2</span> Construct your Sampling Frame</a></li>
+  <li><a href="#determine-the-sample-size" id="toc-determine-the-sample-size" class="nav-link" data-scroll-target="#determine-the-sample-size"><span class="header-section-number">3</span> Determine the Sample Size</a></li>
+  <li><a href="#randomly-sample-islanders-checkpoint-2-due-wed-1111" id="toc-randomly-sample-islanders-checkpoint-2-due-wed-1111" class="nav-link" data-scroll-target="#randomly-sample-islanders-checkpoint-2-due-wed-1111"><span class="header-section-number">4</span> Randomly Sample Islanders (Checkpoint 2 – due Wed 11/11)</a></li>
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection"><span class="header-section-number">5</span> Data Collection</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis"><span class="header-section-number">6</span> Data Analysis</a></li>
+  <li><a href="#report-and-submission" id="toc-report-and-submission" class="nav-link" data-scroll-target="#report-and-submission"><span class="header-section-number">7</span> Report and Submission</a></li>
   </ul>
 </nav>
     </div>
@@ -367,7 +366,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 4: Design a CRD</h1>
+<h1 class="title">Lab 4: Stratified Sampling</h1>
 </div>
 
 
@@ -387,10 +386,10 @@ window.Quarto = {
 <section id="lab-objectives" class="level4">
 <h4 class="anchored" data-anchor-id="lab-objectives">Lab Objectives</h4>
 <ul>
-<li>Address a research question from start to finish with a Completely Randomized experiment with a factorial treatment structure and subsampling</li>
-<li>Implement CRD random assignment for an appropriate sample size of islanders</li>
-<li>Collect and analyze data based on the factorial treatment structure with subsampling</li>
-<li>Write a clear report explaining the design adn analysis</li>
+<li>Address a research question about a population proportion from start to finish with a <strong>stratified random sample</strong> design</li>
+<li>Implement a stratified random sample with an appropriate sample size of islanders</li>
+<li>Collect and analyze data</li>
+<li>Write a clear report explaining the design and analysis</li>
 </ul>
 <hr>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -404,7 +403,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> You <strong>must</strong> write R code in this template! <a href="templates/03-lab-code-template.qmd">03-lab-code-template.qmd</a></p>
+<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> You <strong>must</strong> write R code in this template! [[coming soon]]</p>
 <ul>
 <li>You will <strong>turn in your code</strong> with the report.</li>
 <li>This is so that you can <strong>save</strong> your code for reproducibility.</li>
@@ -417,75 +416,83 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="determine-research-question-optional-checkpoint-due-102" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="determine-research-question-optional-checkpoint-due-102"><span class="header-section-number">1</span> Determine Research Question (Optional Checkpoint due 10/2)</h2>
-<p>Develop a research question with <strong>three factors</strong> with a total of <span class="math inline">\(t = 12\)</span> treatment combinations (e.g.&nbsp;3x2x2)</p>
-<p>You may either:</p>
-<ol type="1">
-<li>use the provided example below or</li>
-<li>propose your own question
+<section id="big-picture" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="big-picture"><span class="header-section-number">0.1</span> Big Picture</h3>
+<p>In this lab you will estimate a population parameter about some population of islanders using a stratified random sample design.</p>
+</section>
+<section id="determine-research-question-and-population-checkpoint-1-due-wed-114" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="determine-research-question-and-population-checkpoint-1-due-wed-114"><span class="header-section-number">1</span> Determine Research Question and Population (Checkpoint 1 – due Wed 11/4)</h2>
+<p>Create a research question where the parameter of interest is a <strong>population proportion</strong> regarding a population of islanders.</p>
+<p>The requirements of your question are:</p>
 <ul>
-<li>If you chose this option, you <strong>must</strong> submit a proposal by Friday 10/2 at 11:59pm. I will approve your proposal the end of the weekend.</li>
+<li>it must be about a population proportion</li>
+<li><strong>islanders are the observational units</strong> AND <strong>sampling units</strong></li>
+<li><strong>be specific about your population</strong>
+<ul>
+<li>coverage error should <strong>not</strong> be concern in your study, so <strong>choose your population wisely</strong></li>
+<li>it is going to be DIFFICULT to have your population be all islanders</li>
+<li>your population should have at least 300 islanders in it (<span class="math inline">\(N \geq 300\)</span>)</li>
 </ul></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Example Research Question:
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>How do ambient temperature (-20 C / 5 C / 40 C), hydration status (Water 250mL / Dehydrated), and acute salt intake (Fried Chips / No Salt) affect an islander’s systolic blood pressure after a 10-minute exposure period?</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Get approval of your research question
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>If you choose your own research question</strong> (not the one provided), proposals should include:</p>
-<ul>
-<li>A clear statement of the research question.</li>
-<li>The treatment and experimental structures.</li>
-<li>A justification for feasibility (e.g., timing constraints, don’t have your Islander garden for 14 days).</li>
+<li>it should not be about age, income, or which city the islander lives in since you will be collecting those variables anyway</li>
+<li>you may not look at weight or classify food as “junk food” – I don’t want to read that</li>
 </ul>
-<p>Submit proposals via Canvas at Lab 3: Checkpoint – Proposal.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Consider your population carefully!
 </div>
 </div>
-</section>
-<section id="create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="create-a-3-way-full-factorial-crd-with-2-subsamples-per-experimental-unit"><span class="header-section-number">2</span> Create a 3-way Full Factorial CRD (with 2 subsamples per experimental unit!)</h2>
-<p>We are going to use <span class="math inline">\(r = 4\)</span>. Recall, <span class="math inline">\(t = 12\)</span>.</p>
+<div class="callout-body-container callout-body">
+<p>Note that you need to be able to have a FULL SAMPLING FRAME of <em>islanders</em> for whatever population you choose. So make sure you choose a population that you can reasonably do this for, given the setup of the Islands Simulation!!</p>
+<p>You might want to check out these buildings in each city to help with making a sampling frame: Hall, Bureau, Clinic, School, Hospital, University…</p>
+<p>You should think about this BEFORE determining your strata and maybe even your question!</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Have fun!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This will be more fun and interesting for you if you are creative!</p>
+<p>I recommend you look at the <strong>“Survey”</strong> option in Islands – there are a lot of interesting questions you can ask your islanders in addition to the documentation that is already there about them.</p>
+</div>
+</div>
+<p>For Checkpoint 1 you will write a short proposal for your study specifying:</p>
 <ol type="1">
-<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> In R, <strong>randomly sample</strong> 48 islanders from your 60 – You may want to sample 12 from each group member here, but ensure the random assignment of factors is conducted across the entire set of 48 islanders at once.</p></li>
-<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> <strong>Randomly assign treatments</strong> to participants in a CRD for your 3-way full factorial treatment structure (what are your 3 factors and levels?) using the tools in R learned in class.</p>
-<ul>
-<li>See <a href="../2-slides/04.1-factorials.html#/create-a-full-factorial-crd-in-r-with-edible-package">class slides</a> for an example</li>
-<li>At this point you should have a dataset with 48 rows (one for each islander), and four columns (1 column for your Islander name/id, and 3 for the factors).</li>
-</ul></li>
-<li><p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Double your rows from 48 to 96 – <strong>adding two subsamples for each islander</strong> – by adding a <code>subsample</code> column with the values 1 and 2 for each islander.</p>
-<ul>
-<li>This does not entail applying ANOTHER treatment combo. Just recording the response twice.</li>
-<li><strong>There is provided code in the template to help you do this using <code>expand_grid()</code>!!</strong></li>
-<li>Your data should have 96 rows and 5 columns now.</li>
-</ul></li>
-<li><p>Finally, add an empty column for your outcome</p>
-<ul>
-<li>This means your final data set should have 96 rows and 6 columns for (as an example), <code>islander</code>, <code>temperature</code>, <code>hydration</code>, <code>salt</code>, <code>subsample</code>, and <code>blood_pressure</code>.</li>
-<li>Make sure you used context as your column headers (e.g., <code>temperature</code> instead of <code>factor_a</code>).</li>
-</ul></li>
+<li>A specific research question referring to the parameter of interest and the population you are interested in.</li>
+<li>How you will measure the outcome you identify (do you need to give a survey or is the information already in the islander information?)</li>
+<li>How you plan to construct a sampling frame (does not need to be highly detailed, but give me an idea).</li>
+<li>What strata you plan to use noting what each stratum is and how many there are.</li>
 </ol>
 </section>
-<section id="data-collection-due-109-on-canvas" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="data-collection-due-109-on-canvas"><span class="header-section-number">3</span> Data Collection – due 10/9 on Canvas</h2>
+<section id="construct-your-sampling-frame" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="construct-your-sampling-frame"><span class="header-section-number">2</span> Construct your Sampling Frame</h2>
+<p>The first step is to construct your sampling frame</p>
+<ul>
+<li>Your sampling units should be one islander</li>
+<li>You should not have any coverage error in your study</li>
+<li>Make sure you note the strata in your frame!</li>
+</ul>
+<p>I would recommend doing this in a shared Excel or Google Sheet</p>
+</section>
+<section id="determine-the-sample-size" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="determine-the-sample-size"><span class="header-section-number">3</span> Determine the Sample Size</h2>
+<ul>
+<li><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Estimate the <strong>maximum</strong> overall sample size <span class="math inline">\(n\)</span> given some bound of error on your estimate</li>
+<li>You can choose your bound of error, but it should be smaller that 0.06</li>
+<li>After determining the overall sample size, use one of the allocations we learned (Proportional, Neyman, or Optimal) to find the sample size for each stratum (<span class="math inline">\(n_1\)</span>, <span class="math inline">\(n_2\)</span>, …)</li>
+</ul>
+</section>
+<section id="randomly-sample-islanders-checkpoint-2-due-wed-1111" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="randomly-sample-islanders-checkpoint-2-due-wed-1111"><span class="header-section-number">4</span> Randomly Sample Islanders (Checkpoint 2 – due Wed 11/11)</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -496,69 +503,23 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Make sure you have completed sections <strong>1</strong> Research Question and <strong>2</strong> Create 3-way Factorial CRD with subsamples above before moving on.</p>
+<p>Make sure you have completed sections <strong>1-3</strong> before collecting any data</p>
+<p>You need your strata sizes and a sampling frame before random sampling!</p>
 </div>
 </div>
-<p>Big picture: utilizing the “Task” button on the Islands:</p>
-<ol type="1">
-<li>apply your treatment appropriately</li>
-<li>record the response variable</li>
-<li>fill out the response column in your data set.</li>
-</ol>
-<p><strong>Step 1: Determine your data collection procedure</strong></p>
 <ul>
-<li>Think about direct controls!</li>
-<li>Talk about and <strong>solidify</strong> the data collection procedure as a group <strong>BEFORE COLLECTING ANY DATA</strong> to ensure you are following the same processes (e.g., time waiting before collecting blood pressure).</li>
-<li>Write down your procedure before anything else</li>
-<li>Be careful about timing!!
+<li><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Take a random sample of islanders using <em>Stratified Random Sampling</em> with R</li>
+<li><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> This should be <strong>reproducible</strong>
 <ul>
-<li>Should you measure your response immediately after applying the treatment or allow for some time to pass?? Be careful about real versus island time</li>
-<li>Remember your Islanders will sleep and this will take time.</li>
+<li>use <code>set.seed()</code></li>
+<li>do this once as a group</li>
 </ul></li>
-<li>Be thoughtful and careful and work together! Communication is seriously key here.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Procedure for provided research question
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Following the treatment combination randomly assigned to each islander that you created above, collect the data for each islander by:</p>
-<p><strong>Step 1:</strong> Apply the assigned Temperature level (wait the 10 minutes real time)</p>
+<li><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> save both:
 <ul>
-<li>Sit at -20*C 10 mins</li>
-<li>Sit at 5*C 10 mins</li>
-<li>Sit at 40*C 10 mins</li>
-</ul>
-<p><strong>Step 2:</strong> Apply the assigned Hydration level immediately after the 10-minute temperature exposure</p>
-<ul>
-<li>Drink Water 250mL</li>
-<li>Do not drink anything</li>
-</ul>
-<p><strong>Step 3:</strong> Apply the assigned Salty snack level immediately after the hydration is complete</p>
-<ul>
-<li>Fried Chips 50g</li>
-<li>Do not eat anything</li>
-</ul>
-<p><strong>Step 4:</strong> Measure Blood Pressure TWICE (subsamples)</p>
-<ul>
-<li>Click Blood Pressure (record as Subsample 1)</li>
-<li>Click Blood Pressure (record as Subsample 2)</li>
-</ul>
-<p><strong>SEE BELOW ABOUT BLOOD PRESSURE BEING MEASURED AS Systolic/Diastolic – RECORD BOTH!</strong></p>
-<p>Think about “direct control” for your data collection. For example, how many minutes between each subsample collection?</p>
-</div>
-</div>
-<p><strong>Step 2: Implement treatment and collect response</strong></p>
-<ul>
-<li>Once you implement the “Task” you can find it in your “Recent Tasks” section.</li>
-<li>Follow the procedure you determined as carefully as you can.</li>
-<li>If you accidentally mess up data collection, this will mess up your data and <strong>you should make a note/possibly remove this observation.</strong></li>
-<li>Carefully record your data collection as it actually happened and note any deviations from your original planned procedure as you implement your design and treatment.</li>
+<li>a .csv or .xlsx of whole sampling frame with a column indicating which islanders are included in your final sample</li>
+<li>a .csv or .xlsx with just your final sample of islanders to use for data entry</li>
+</ul></li>
+<li>You will submit your sampling frame with a column indicating which islanders are included in your final sample for checkpoint 2.</li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -566,140 +527,83 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Tips
+<span class="screen-reader-only">Warning</span>End of Sampling for Checkpoint 2
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li>I would open 12 tabs and turn on your favorite movie to collect data.</li>
-<li>BE CAREFUL to assign the correct treatment combo to each islander!</li>
-</ul>
-</div>
-</div>
-<p><strong>Step 3: Record all responses in your data table</strong></p>
-<ul>
-<li>Remember, you should have <strong>TWO</strong> subsamples (responses measured) for each islander!</li>
-<li>Turn in your data with <strong>96 rows</strong></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Provided Research Question – record both blood pressures!!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>As noted above – if you are doing the provided question, make sure you record <strong>BOTH</strong> Systolic AND Diastolic blood pressure. They are reported as Systolic/Diastolic. Record it either like that (“Systolic/Diastolic”) in your data or in separate columns, one for systolic and one for diastolic.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>End of Data Collection for Project Checkpoint Submission
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>No need to go farther than this for the data collection assignment!</p>
+<p>No need to go farther than this for Checkpoint 2! However, I would <strong>recommend continuing</strong> on depending on your group’s schedules to make sure that you complete the data collection and analysis in time.</p>
 </div>
 </div>
 </section>
-<section id="data-analysis" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="data-analysis"><span class="header-section-number">4</span> Data Analysis</h2>
+<section id="data-collection" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="data-collection"><span class="header-section-number">5</span> Data Collection</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Get on the same page before jumping in
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As with all of the Labs, collecting data is the most time consuming and tedious part! You don’t want to have to redo this!</p>
+<p>Make sure everyone in your group has read the instructions here FULLY before starting. Make sure that you are all on the same page with a plan about how you are going to complete the data collection and divide up the work.</p>
+<p><strong>Note:</strong> You definitely should divide up this work but everyone in your group is ultimately responsible for all of the data quality!</p>
+</div>
+</div>
+<ul>
+<li>Put your the sample data you created in Step 4 in a sharable excel sheet or google sheets to record your data</li>
+<li>remember that each line in your dataset should represent one islander</li>
+<li>columns in your file should be named appropriately
+<ul>
+<li>think about what easy but clear names will be for analyzing this data IN R</li>
+</ul></li>
+<li>collect information about your sample of islanders from <em>The Islands</em> including:
+<ul>
+<li>your variable(s) of interest being measured to answer the research question</li>
+<li>island the islander lives in (Ironbard, Providence, or Bonne Sante)</li>
+<li>city/village the islander lives in</li>
+<li>household number</li>
+<li>age</li>
+<li>monthly income</li>
+<li>whether the islander owns a pet</li>
+<li>whether the islander gave consent or not
+<ul>
+<li>if they did not give consent to be in your study, you should still be able to measure everything but your variable of interest!</li>
+<li>you will use this information for a nonresponse analysis</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>As you collect data, make sure you are recording information about:</strong></p>
+<ul>
+<li>how each response was coded in the data sheet</li>
+<li>how will missing data is handled</li>
+<li>people who refused to respond and people who could not be reached</li>
+<li>any codes / acronyms used in the recording of the data</li>
+<li>anything else that did not go to plan, like participants dying etc.</li>
+</ul>
+</section>
+<section id="data-analysis" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="data-analysis"><span class="header-section-number">6</span> Data Analysis</h2>
 <p><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Use R to analyze the data you collected!</p>
 <ul>
+<li>See the report template for expected analyses.</li>
 <li>There is some guidance for this analysis in the template, but you may need to add additional code chunks or remove them.</li>
 <li>Make sure to explain all code and clean up your .qmd file before your final submission.</li>
 </ul>
-<section id="step-1-data-processing-cleaning" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="step-1-data-processing-cleaning"><span class="header-section-number">4.1</span> Step 1: Data Processing / Cleaning</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Provided Research Question – Data Processing
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>BP is measured in Systolic/Diastolic… this is NOT division.</p>
-<ul>
-<li>Systolic (Top Number) Measures the pressure when the heart beats</li>
-<li>Diastolic (Bottom Number) Measures the pressure between beats</li>
-</ul>
-<p>BUT we want one single number for the response. So we are going to use the following:</p>
-<p>Mean Arterial Pressure (MAP) = <span class="math inline">\(\frac{Systolic + 2\cdot Diastolic}{3}\)</span></p>
-<p>Use Excel/Google Sheets <strong>or</strong> R to calculate the MAP from your recorded blood pressure. I have included code in the template to help with this.</p>
-<p><em>This is actually a nice touch to what real life data collection can entail.</em></p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>BEFORE you move on! If you are using the provided question, for each of the subsamples, calculate the islanders MAP (you should have 96 of these). Then move onto the below.</p>
-</div>
-</div>
-<ul>
-<li>You have a data set with 96 rows (2 subsamples per islander x treatment combo).</li>
-<li>Think about how you might want to analyze this data!
-<ul>
-<li><em>Note</em> Even though we know how to use LMMs to account for subsampling, we are going to stick with the “aggregate” method for this lab.</li>
-</ul></li>
-<li>Aggregate/Average the your response across the 2 subsamples so you have a data set of 48 rows to analyze and your islander-level response is the average.
-<ul>
-<li>e.g.: for the provided question the response with be the <strong>average</strong> MAP</li>
-<li><code>group_by() |&gt; summarize()</code></li>
-<li>Make sure you keep each unique Islander and end up with one row per Islander!</li>
-</ul></li>
-</ul>
 </section>
-<section id="step-2-analysis-and-inference" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="step-2-analysis-and-inference"><span class="header-section-number">4.2</span> Step 2: Analysis and Inference</h3>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>BEFORE you move on! Your dataset should be at the Islander level (48 rows) for the rest of the analysis.</p>
-</div>
-</div>
-<ul>
-<li>Fit a 3-way full factorial CRD analysis to the <strong>average</strong> response at the islander level</li>
-<li>Check model fit (residual analysis)</li>
-<li>Following the decision flow-chart for higher-order interaction factorial analysis (when to look at 3-way interactions, 2-way interactions, and main effects), carry out the rest of the analysis.
-<ul>
-<li>This should also include appropriate interaction <strong>plots</strong> or other plots displaying the effects</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="report-and-submission" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="report-and-submission"><span class="header-section-number">5</span> Report and Submission</h2>
-<p>Download the guided lab report template and work within it <a href="templates/03-lab-3way-factorial-template.docx">03-lab-3way-factorial-template.docx</a>.</p>
+<section id="report-and-submission" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="report-and-submission"><span class="header-section-number">7</span> Report and Submission</h2>
+<p>Download the guided lab report template and work within it [[coming soon]].</p>
 <p>Make sure to:</p>
 <ul>
 <li>Use complete sentences</li>
 <li>Focus on clarity, logical flow, and professional grammar</li>
 <li>Think about being as concise as possible while being complete and clear</li>
 <li>Clean up the report at the end so that it is readable and professional.</li>
-<li>Make sure you have addressed all instructions in this document in the report.</li>
+<li>For each plot/figure you include, please add good labels, titles, and references in the body of your report.</li>
+<li>Make sure you have addressed all instructions in this document and in the template in the report.</li>
 </ul>
 <p>In your final submission you will submit:</p>
 <ol type="1">
