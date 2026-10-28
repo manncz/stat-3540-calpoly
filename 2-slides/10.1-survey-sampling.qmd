@@ -194,7 +194,7 @@ The Literary Digest boasted that they polled **10 million** voters across the 48
 - Each element in the population has a known probability of selection
   - To be representative, this probability needs to be greater than 0
 - So... each possible **sample** from the population has a known probability of selection
-- The probabilities of each sample being drawn add to zero
+- The probabilities of each sample being drawn add to 1 (one)
 
 ## Framework for Probability Sampling
 

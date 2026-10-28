@@ -42,8 +42,7 @@ library(tidyverse)
 
 - 📽 Follow along with the [slides](../2-slides/10.1-survey-sampling.qmd#/simple-random-sampling).
 
-
-[[video soon]]
+{{< video https://youtu.be/vwArk7lAnfE >}}
 
 ##  Goals of Survey Sampling and Types of Errors
 
