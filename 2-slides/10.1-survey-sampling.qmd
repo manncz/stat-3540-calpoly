@@ -312,9 +312,9 @@ sample_ids
 
 ## Coverage Error
 
-- Sampled population does not match the target population (selection bias)
+- Sampling frame does not match the target population (selection bias)
 ![](_images/10.1-populations.png){width=60%}
-- Communicate coverage errors and explain how the sampled population differs from the target population
+- Communicate coverage errors and explain how the Sampling frame population differs from the target population
   
 ## Coverage Error
 

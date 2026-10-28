@@ -48,5 +48,4 @@ library(tidyverse)
 
 - 📽 Follow along with the [slides](../2-slides/10.1-survey-sampling.qmd#/goals-of-survey-sampling-and-types-of-errors).
 
-
-[[video soon]]
+{{< video https://youtu.be/FW0eDENkMFg >}}
