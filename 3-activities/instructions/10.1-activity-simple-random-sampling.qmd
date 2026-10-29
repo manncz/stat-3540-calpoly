@@ -1,0 +1,224 @@
+---
+title: "Activity 10.1: Intro to Sampling & Simple Random Samples"
+execute: 
+  error: true
+  message: false
+  warning: false
+bibliography: ../references.bib
+format:
+  html: default
+  docx: default
+  
+---
+```{r}
+#| echo: false
+
+library(tidyverse)
+```
+
+:::: version-instructions
+::: callout-warning
+- Submit via Gradescope, don't forget to assign pages to the questions in the outline!
+
+- Delete any extraneous instructions (**like this box**) before submission. *You will be deducted points from now on if you do not follow this instruction!*
+
+- **You do need to do a bit of R coding for this activity**, I would recommend that you use the qmd template: [10.1-activity-simple-random-sampling.qmd](../student/10.1-activity-simple-random-sampling.qmd). But you are welcome to use the Word template as always!
+:::
+::::
+
+## Terminology, Types of Sampling and Errors
+
+For the following questions, describe the target population, sampling frame, sample, sampled population, sampling unit, and observation unit. Also note **sampling method(s)** was or were used and discuss what kinds of **non-observation errors** may be present based on the description. Make sure to discuss if you think those errors will likely lead to biased estimation and the nature of that bias.
+
+1. In July 2019, the Iowa State Fair Straw Poll asked fair-goers to indicate their choices for candidates for U.S. president and Congress in the 2020 election. Fair-goers indicated their choices by stopping at the Iowa Secretary of State's booth and filling out the poll on an electronic tablet. More than 2,000 people participated.
+
+- target population:
+
+- sampling frame:
+
+- sample:
+
+- sampled population:
+
+- sampling unit:
+
+- observation unit:
+
+- sampling method(s):
+
+- possible non-observation errors and bias if any (discuss):
+
+:::callout-tip
+You might want to look up information (or ask Dr. C about the Iowa State Fair) to really think about errors.
+:::
+
+2. To study nutrient content of menus in retirement homes (for elderly folks who need care) in Washington State, Goren et al. (1993) mailed surveys to all 184 licenced homes in Washington State, directed to the administrator and food service manager. Of those, 43 were returned by the deadline and included menus.
+
+- target population:
+
+- sampling frame:
+
+- sample:
+
+- sampled population:
+
+- sampling unit:
+
+- observation unit:
+
+- sampling method(s):
+
+- possible non-observation errors and bias if any (discuss):
+
+3. A study was completed in 2000 on how students in selected public schools described their use of the internet. Five school districts in a Western state were selected to give a cross-section of urban and rural schools that had internet access. A random sample of 500 students was drawn from the enrollment records for all middle and high students in each district. Each middle or high school student within a district had an equal probability of being selected.  A survey, administered electronically, was available to the randomly selected students in the media center of their school. Participation in the survey was voluntary.
+
+- target population:
+
+- sampling frame:
+
+- sample:
+
+- sampled population:
+
+- sampling unit:
+
+- observation unit:
+
+- sampling method(s):
+
+- possible non-observation errors and bias if any  (discuss):
+
+4. The League of Women Voters of Texas (2019) evaluated the county election websites for all 254 counties in Texas. They found that 201 of the counties had insecure websites. That is the internet address began with "http" rather than "https." Only nine used the ".gov" domain that indicates a bona-fide U.S.-based government organization.
+
+- target population:
+
+- sampling frame:
+
+- sample:
+
+- sampled population:
+
+- sampling unit:
+
+- observation unit:
+
+- sampling method(s):
+
+- possible non-observation errors and bias if any (discuss):
+
+## Simple Random Sampling (SRS)
+
+While you often don't get to have the full population as a sampling frame, we are going to walk through an example today to investigate the mathematical qualities of simple random sampling.
+
+We are going to consider the population of countries included in the data from the World Bank put together in June 2019 by the authors of "Statistics: UnLocking the Power of Data." 
+
+We are interested in estimating the average C02 emissions per-capita of a countries in the world. 
+
+```{r}
+# read in data on countries from the
+# package Lock5Data
+
+library(Lock5Data)
+
+# when we use data from a package, we just use this data() function
+data(AllCountries3e)
+
+head(AllCountries3e) |> 
+  knitr::kable()
+```
+:::callout-tip
+### Data Documentation
+
+You can look at the documentation for this data by typing or pasting `?AllCountries3e` in the CONSOLE.
+:::
+
+1. We unfortunately are missing the CO2 values (`CO2`) for 6% of the countries in the data. Let's remove those countries from the data for now to keep things simple. 
+
+a. What is our population now? 
+
+b. What is the size of our population? $N =$
+
+```{r}
+# only keep countries we have C02 information about
+
+countries <- AllCountries3e |> 
+  filter(!is.na(CO2))
+```
+
+Use this `countries` data for the rest of the activity
+
+2. We do literally have the population data here, so go ahead and **calculate** the population mean CO2 emissions per capita. Let's also look at the distribution.
+
+$$\mu =$$ metric tons per capita
+
+```{r}
+# histogram of C02 emissions
+
+countries |> 
+  ggplot(aes(x = CO2)) +
+  geom_histogram()
+```
+
+3. In a previous class, we asked students to think of 10 countries that they believed were representative of the countries in the world (i.e., they resemble the collection of all countries of the world). Why is this not the best way to get a sample to estimate the average CO2 emissions? Do you thing the estimate would be biased, and in what direction?
+
+4. Let's do simple random sampling instead. How many ways are there to select a sample $\mathcal{S}$ of size $n = 10$ from the population of 204 countries? Write out the formula you use and the output from R. (Hint: use the `choose()` function in R)
+
+5. Calculate the probability of selecting a sample $\mathcal{S}$ of size $n = 10$ using SRS. 
+
+6. What is the probability of each country being included in a sample? In other words, calculate the inclusion probability ($\pi_i$).
+
+7. Using R, take a sample of 10 countries from the `countries` data. Calculate the mean C02 emissions.
+
+8. Do that again -- make sure you use a different seed so you get a different number.
+
+9. How different were your two sample estimates from the population mean? 
+
+10. Now let's see what happens if we repeat this process many times (5,000 to be exact), taking a sample of 10 countries. I went ahead and did this for you. The plot below is a histogram of the sample mean C02 emissions. **Note** If you are reading this 
+
+a. What is the shape of the sampling distribution? Is this what you expected? Explain.
+b. Where is the sampling distribution centered? Why does this make sense?
+c. Why is the center of this sampling distribution not exactly $\mu$?
+
+```{r}
+#| echo: false
+
+sample_mean_fun <- function(dat, size, var){
+  
+  dat |> 
+    slice_sample(n = size) |> 
+    summarize(mean_val = mean({{var}}, na.rm = T)) |> 
+    pull(mean_val)
+  
+}
+
+set.seed(30353)
+
+sim <- map_dbl(.x = 1:5000,
+               .f = ~sample_mean_fun(countries, size = 10, var = CO2))
+```
+
+```{r}
+#| echo: false
+
+sim |> 
+  enframe() |> 
+  ggplot() +
+  geom_histogram(aes(x = value)) +
+  geom_vline(xintercept = mean(sim), color = "red") + 
+  annotate("label", x =  mean(sim), y = 500, 
+           label = paste0("mean = ", round(mean(sim),2)),
+           hjust = 0) +
+  labs(x = "Sample Mean C02 Emissions with n = 10 Countries",
+       y = "Number of Samples")
+```
+
+11. What do you think would happen to the sampling distribution if we increased the sample size to n = 20 or n = 50?
+
+12. Remember how we removed countries that didn't have C02 emission information? Let's go back and look at them. 
+
+```{r}
+noco2_countries <- AllCountries3e |> 
+  filter(is.na(CO2))
+```
+
+What do you notice about these places? How does not having data on these places impact our understanding of our estimates for C02 emissions and how we can generalize them?
