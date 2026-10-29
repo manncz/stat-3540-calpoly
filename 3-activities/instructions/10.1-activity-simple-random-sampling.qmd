@@ -5,14 +5,13 @@ execute:
   message: false
   warning: false
 bibliography: ../references.bib
+
+echo: false
 format:
-  html: default
   docx: default
-  
+  html: default
 ---
 ```{r}
-#| echo: false
-
 library(tidyverse)
 ```
 
@@ -161,6 +160,29 @@ countries |>
 
 3. In a previous class, we asked students to think of 10 countries that they believed were representative of the countries in the world (i.e., they resemble the collection of all countries of the world). Why is this not the best way to get a sample to estimate the average CO2 emissions? Do you thing the estimate would be biased, and in what direction?
 
+```{r}
+#| include: false
+
+judgement_sample1 <- c("Brazil", "India", "China",
+                      "United States", "Germany", "Saudi Arabia",
+                      "Japan", "United Kingdom", "Kenya", "Switzerland")
+
+
+judgement_sample2 <- c("China", "United States", "Brazil",
+                       "Ethiopia", "Poland", "Australia",
+                       "Bolivia", "Philippines", "Madagascar",
+                       "United Kingdom")
+
+
+countries |> 
+  filter(Country %in% judgement_sample1) |> 
+  summarize(mean_co2 = mean(CO2))
+
+countries |> 
+  filter(Country %in% judgement_sample2) |> 
+  summarize(mean_co2 = mean(CO2))
+```
+
 4. Let's do simple random sampling instead. How many ways are there to select a sample $\mathcal{S}$ of size $n = 10$ from the population of 204 countries? Write out the formula you use and the output from R. (Hint: use the `choose()` function in R)
 
 5. Calculate the probability of selecting a sample $\mathcal{S}$ of size $n = 10$ using SRS. 
@@ -173,15 +195,13 @@ countries |>
 
 9. How different were your two sample estimates from the population mean? 
 
-10. Now let's see what happens if we repeat this process many times (5,000 to be exact), taking a sample of 10 countries. I went ahead and did this for you. The plot below is a histogram of the sample mean C02 emissions. **Note** If you are reading this 
+10. Now let's see what happens if we repeat this process many times (5,000 to be exact), taking a sample of 10 countries. I went ahead and did this for you. The plot below is a histogram of the sample mean C02 emissions. **Note** If you are reading this on the Quarto template, you will need to look back at the online version to see the figure.
 
 a. What is the shape of the sampling distribution? Is this what you expected? Explain.
 b. Where is the sampling distribution centered? Why does this make sense?
 c. Why is the center of this sampling distribution not exactly $\mu$?
 
 ```{r}
-#| echo: false
-
 sample_mean_fun <- function(dat, size, var){
   
   dat |> 
@@ -198,8 +218,6 @@ sim <- map_dbl(.x = 1:5000,
 ```
 
 ```{r}
-#| echo: false
-
 sim |> 
   enframe() |> 
   ggplot() +
