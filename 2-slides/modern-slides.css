@@ -32,7 +32,11 @@
 
 /* Lists */
 .reveal ul {
-  margin-top: 1em;
+  margin-top: .5em;
+}
+
+.reveal ol {
+  margin-top: 0em !important;
 }
 
 .reveal li {

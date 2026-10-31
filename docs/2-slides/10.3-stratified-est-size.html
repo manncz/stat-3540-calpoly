@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Module 10: Survey Sampling – Statistical Methods for Study Design and Analysis</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../0-course-info/canvas/stat-3540-logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e47b5f09565cef1e8b2fc4d77510aa64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5baf755da9d91fdc6d970f362079751c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-e47b5f09565cef1e8b2fc4d77510aa64.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Statistical Methods for Study Design and Analysis
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Statistical Methods for Study Design and Analysis</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/manncz/stat-3540-calpoly" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://canvas.calpoly.edu" title="Cal Poly Canvas" class="quarto-navigation-tool px-1" aria-label="Cal Poly Canvas"><i class="bi bi-person-fill"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../0-course-info/syllabus-f26.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../0-course-info/course-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sampling-estimation-and-evaluating-estimators" id="toc-sampling-estimation-and-evaluating-estimators" class="nav-link active" data-scroll-target="#sampling-estimation-and-evaluating-estimators">Sampling, Estimation, and Evaluating Estimators</a>
+  <ul class="collapse">
+  <li><a href="#review-sampling-and-estimation" id="toc-review-sampling-and-estimation" class="nav-link" data-scroll-target="#review-sampling-and-estimation">Review: Sampling and Estimation</a></li>
+  <li><a href="#review-sampling-distributions" id="toc-review-sampling-distributions" class="nav-link" data-scroll-target="#review-sampling-distributions">Review: Sampling Distributions</a></li>
+  <li><a href="#review-random-variables-and-expected-value" id="toc-review-random-variables-and-expected-value" class="nav-link" data-scroll-target="#review-random-variables-and-expected-value">Review: Random Variables and Expected Value</a></li>
+  <li><a href="#bias-and-variance-of-estimation" id="toc-bias-and-variance-of-estimation" class="nav-link" data-scroll-target="#bias-and-variance-of-estimation">Bias and Variance of Estimation</a></li>
+  <li><a href="#evaluating-estimators" id="toc-evaluating-estimators" class="nav-link" data-scroll-target="#evaluating-estimators">Evaluating Estimators</a></li>
+  <li><a href="#expected-value-and-variance-for-discrete-random-variables" id="toc-expected-value-and-variance-for-discrete-random-variables" class="nav-link" data-scroll-target="#expected-value-and-variance-for-discrete-random-variables">Expected Value and Variance for Discrete Random Variables</a></li>
+  <li><a href="#expected-value-and-variance-rules" id="toc-expected-value-and-variance-rules" class="nav-link" data-scroll-target="#expected-value-and-variance-rules">Expected Value and Variance Rules</a></li>
+  </ul></li>
+  <li><a href="#estimation-with-simple-random-sampling" id="toc-estimation-with-simple-random-sampling" class="nav-link" data-scroll-target="#estimation-with-simple-random-sampling">Estimation with Simple Random Sampling</a>
+  <ul class="collapse">
+  <li><a href="#reminder-simple-random-sampling" id="toc-reminder-simple-random-sampling" class="nav-link" data-scroll-target="#reminder-simple-random-sampling">Reminder: Simple Random Sampling</a></li>
+  <li><a href="#estimating-the-population-mean" id="toc-estimating-the-population-mean" class="nav-link" data-scroll-target="#estimating-the-population-mean">Estimating the Population Mean</a></li>
+  <li><a href="#expected-value-of-sample-mean-with-srs" id="toc-expected-value-of-sample-mean-with-srs" class="nav-link" data-scroll-target="#expected-value-of-sample-mean-with-srs">Expected Value of Sample Mean with SRS</a></li>
+  <li><a href="#variance-of-sample-mean-with-srs" id="toc-variance-of-sample-mean-with-srs" class="nav-link" data-scroll-target="#variance-of-sample-mean-with-srs">Variance of Sample Mean with SRS</a></li>
+  <li><a href="#estimating-variation-of-the-sample-mean-with-srs" id="toc-estimating-variation-of-the-sample-mean-with-srs" class="nav-link" data-scroll-target="#estimating-variation-of-the-sample-mean-with-srs">Estimating Variation of the Sample Mean with SRS</a></li>
+  <li><a href="#estimating-variation-of-the-sample-mean-with-srs-1" id="toc-estimating-variation-of-the-sample-mean-with-srs-1" class="nav-link" data-scroll-target="#estimating-variation-of-the-sample-mean-with-srs-1">Estimating Variation of the Sample Mean with SRS</a></li>
+  <li><a href="#finite-population-correction" id="toc-finite-population-correction" class="nav-link" data-scroll-target="#finite-population-correction">Finite Population Correction</a></li>
+  <li><a href="#estimating-the-population-total" id="toc-estimating-the-population-total" class="nav-link" data-scroll-target="#estimating-the-population-total">Estimating the Population Total</a></li>
+  <li><a href="#expected-value-of-hattau-with-srs" id="toc-expected-value-of-hattau-with-srs" class="nav-link" data-scroll-target="#expected-value-of-hattau-with-srs">Expected Value of <span class="math inline">\(\hat{\tau}\)</span> with SRS</a></li>
+  <li><a href="#variance-of-hattau-with-srs" id="toc-variance-of-hattau-with-srs" class="nav-link" data-scroll-target="#variance-of-hattau-with-srs">Variance of <span class="math inline">\(\hat{\tau}\)</span> with SRS</a></li>
+  <li><a href="#summary-estimating-means-and-totals-with-srs" id="toc-summary-estimating-means-and-totals-with-srs" class="nav-link" data-scroll-target="#summary-estimating-means-and-totals-with-srs">Summary – Estimating Means and Totals with SRS</a></li>
+  </ul></li>
+  <li><a href="#stratified-random-sampling" id="toc-stratified-random-sampling" class="nav-link" data-scroll-target="#stratified-random-sampling">Stratified Random Sampling</a>
+  <ul class="collapse">
+  <li><a href="#stratified-random-sampling-1" id="toc-stratified-random-sampling-1" class="nav-link" data-scroll-target="#stratified-random-sampling-1">Stratified Random Sampling</a></li>
+  <li><a href="#stratified-random-sampling-vs.-srs" id="toc-stratified-random-sampling-vs.-srs" class="nav-link" data-scroll-target="#stratified-random-sampling-vs.-srs">Stratified Random Sampling vs.&nbsp;SRS</a></li>
+  <li><a href="#notation-for-stratified-random-sampling" id="toc-notation-for-stratified-random-sampling" class="nav-link" data-scroll-target="#notation-for-stratified-random-sampling">Notation for Stratified Random Sampling</a></li>
+  <li><a href="#notation-for-stratified-random-sampling-1" id="toc-notation-for-stratified-random-sampling-1" class="nav-link" data-scroll-target="#notation-for-stratified-random-sampling-1">Notation for Stratified Random Sampling</a></li>
+  <li><a href="#estimating-the-population-mean-with-stratified-random-sampling" id="toc-estimating-the-population-mean-with-stratified-random-sampling" class="nav-link" data-scroll-target="#estimating-the-population-mean-with-stratified-random-sampling">Estimating the Population Mean with Stratified Random Sampling</a></li>
+  <li><a href="#estimating-the-population-mean-with-stratified-random-sampling-1" id="toc-estimating-the-population-mean-with-stratified-random-sampling-1" class="nav-link" data-scroll-target="#estimating-the-population-mean-with-stratified-random-sampling-1">Estimating the Population Mean with Stratified Random Sampling</a></li>
+  <li><a href="#estimating-the-population-total-with-stratified-random-sampling" id="toc-estimating-the-population-total-with-stratified-random-sampling" class="nav-link" data-scroll-target="#estimating-the-population-total-with-stratified-random-sampling">Estimating the Population Total with Stratified Random Sampling</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="10.3-stratified-est-size.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Module 10: Survey Sampling</h1>
+<p class="subtitle lead">Estimation with SRS and Stratified Random Sampling</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sampling-estimation-and-evaluating-estimators" class="level1">
+<h1>Sampling, Estimation, and Evaluating Estimators</h1>
+<section id="review-sampling-and-estimation" class="level2">
+<h2 class="anchored" data-anchor-id="review-sampling-and-estimation">Review: Sampling and Estimation</h2>
+<p><img src="_images/10.2-popsample.png" class="img-fluid" style="width:60.0%"></p>
+</section>
+<section id="review-sampling-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="review-sampling-distributions">Review: Sampling Distributions</h2>
+<ul>
+<li><p>A <strong>random variable</strong> is a function that assigns a number to each outcome in the sample space</p></li>
+<li><p>The set of possible values of a random variable, along with the probability with which each value occurs is called the <strong>probability distribution</strong> of the random variable</p></li>
+<li><p>In sampling, estimators are random variables that can be described by a <strong>sampling distribution</strong></p></li>
+</ul>
+</section>
+<section id="review-random-variables-and-expected-value" class="level2">
+<h2 class="anchored" data-anchor-id="review-random-variables-and-expected-value">Review: Random Variables and Expected Value</h2>
+<ul>
+<li>Let <span class="math inline">\(X\)</span> be a random variable that can be described by a probability distribution</li>
+<li><strong>Expected value</strong>: <span class="math inline">\(\mathbb{E}[X]\)</span> is the <strong>long-run average</strong> value of the random variable</li>
+</ul>
+</section>
+<section id="bias-and-variance-of-estimation" class="level2">
+<h2 class="anchored" data-anchor-id="bias-and-variance-of-estimation">Bias and Variance of Estimation</h2>
+<ul>
+<li>The <strong>bias</strong> of an estimator <span class="math inline">\(\hat{\theta}\)</span> is the difference between the expected value of the estimator and the population parameter (<span class="math inline">\(\theta\)</span>) it is meant to estimate. <span class="math display">\[Bias[\hat{\theta}] = \mathbb{E}[\hat{\theta}] - \theta\]</span></li>
+<li>Another important element of estimation is the <strong>variance</strong>: <span class="math inline">\(\mathbb{V}[\hat{\theta}]\)</span>.</li>
+<li><strong>Mean Squared Error</strong> combines them: <span class="math display">\[MSE[\hat{\theta}] = \mathbb{V}[\hat{\theta}] + (Bias[\hat{\theta}])^2\]</span></li>
+</ul>
+</section>
+<section id="evaluating-estimators" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-estimators">Evaluating Estimators</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>An estimator <span class="math inline">\(\hat{\theta}\)</span> of <span class="math inline">\(\theta\)</span> is…</p>
+<ul>
+<li><strong>unbiased</strong> if <span class="math inline">\(\mathbb{E}[\hat{\theta}] = \theta\)</span></li>
+<li><strong>precise</strong> if <span class="math inline">\(\mathbb{V}[\hat{\theta}]\)</span> is small</li>
+<li><strong>accurate</strong> if <span class="math inline">\(MSE[\hat{\theta}]\)</span> is small</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img src="_images/10.2-archers.png" class="img-fluid" style="width:25.0%"></p>
+</div>
+</div>
+</section>
+<section id="expected-value-and-variance-for-discrete-random-variables" class="level2">
+<h2 class="anchored" data-anchor-id="expected-value-and-variance-for-discrete-random-variables">Expected Value and Variance for Discrete Random Variables</h2>
+<ul>
+<li>Let <span class="math inline">\(X\)</span> be a discrete random variable</li>
+<li><span class="math inline">\(P(X = k)\)</span> is the probability that that random variable <span class="math inline">\(X\)</span> takes the value <span class="math inline">\(k\)</span></li>
+</ul>
+<p><span class="math display">\[\mathbb{E}[X] = \sum_k P(X=k)\cdot(k)\]</span></p>
+<p><span class="math display">\[\mathbb{V}[X] = \sum_k  P(X=k) \cdot (k -\mathbb{E}[X] )^2\]</span></p>
+</section>
+<section id="expected-value-and-variance-rules" class="level2">
+<h2 class="anchored" data-anchor-id="expected-value-and-variance-rules">Expected Value and Variance Rules</h2>
+<ul>
+<li>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Z\)</span> be random variables</li>
+<li>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be constants</li>
+</ul>
+<p><span class="math display">\[\mathbb{E}[aX +b] = a\mathbb{E}[X] + b\]</span> <span class="math display">\[\mathbb{E}[X + Z] = \mathbb{E}[X] + \mathbb{E}[Z]\]</span></p>
+<p><span class="math display">\[\mathbb{V}[aX + b] = a^2\mathbb{V}[X] + 0\]</span> <span class="math display">\[\mathbb{V}[X + Z] = \mathbb{V}[X] + \mathbb{V}[Z] + 2Cov[X, Z]\]</span></p>
+</section>
+</section>
+<section id="estimation-with-simple-random-sampling" class="level1">
+<h1>Estimation with Simple Random Sampling</h1>
+<section id="reminder-simple-random-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="reminder-simple-random-sampling">Reminder: Simple Random Sampling</h2>
+<ul>
+<li>Every possible subset of <span class="math inline">\(n\)</span> units from the population of <span class="math inline">\(N\)</span> units has an <strong>equal probability</strong> of being sampled.</li>
+</ul>
+<p><span class="math display">\[P(\mathcal{S}) = \frac{1}{\binom{N}{n}}\]</span></p>
+<p><span class="math display">\[\pi_i = \frac{\text{total number of samples that contain unit } i}{\text{total number of samples of size } n} = \frac{\binom{N-1}{n-1}}{\binom{N}{n}} = \frac{n}{N}\]</span></p>
+</section>
+<section id="estimating-the-population-mean" class="level2">
+<h2 class="anchored" data-anchor-id="estimating-the-population-mean">Estimating the Population Mean</h2>
+<ul>
+<li><p>We are interested in estimating a population mean for a quantitative variable <span class="math display">\[\mu = \frac{y_1 + y_2 + ... + y_N}{N}\]</span></p></li>
+<li><p>We have a SRS if size <span class="math inline">\(n\)</span>: <span class="math inline">\(y_1, ..., y_n\)</span></p></li>
+<li><p>Logical estimator: <strong>sample mean</strong> <span class="math display">\[\bar{y} =  \frac{1}{n}\sum_{i = 1}^n y_i\]</span></p></li>
+</ul>
+</section>
+<section id="expected-value-of-sample-mean-with-srs" class="level2">
+<h2 class="anchored" data-anchor-id="expected-value-of-sample-mean-with-srs">Expected Value of Sample Mean with SRS</h2>
+<ul>
+<li>Can show that the sample mean <span class="math inline">\(\bar{y}\)</span> is an <em>unbiased</em> estimator for the population mean <span class="math inline">\(\mu\)</span> under SRS.</li>
+</ul>
+<p><span class="math inline">\(\mathbb{E}[\bar{y}]=\)</span></p>
+</section>
+<section id="variance-of-sample-mean-with-srs" class="level2">
+<h2 class="anchored" data-anchor-id="variance-of-sample-mean-with-srs">Variance of Sample Mean with SRS</h2>
+<p>Under SRS</p>
+<p><span class="math inline">\(\mathbb{V}[\bar{y}]=\)</span></p>
+</section>
+<section id="estimating-variation-of-the-sample-mean-with-srs" class="level2">
+<h2 class="anchored" data-anchor-id="estimating-variation-of-the-sample-mean-with-srs">Estimating Variation of the Sample Mean with SRS</h2>
+<p><strong>In previous statistics courses…</strong></p>
+<ul>
+<li>Assume <strong>infinite or very large</strong> populations</li>
+<li>For the sampling distribution of the sample mean <span class="math inline">\(\bar{y}\)</span>, estimate <span class="math display">\[\hat{SD}(\bar{y}) = SE(\bar{y}) = \sqrt{\frac{s^2}{n}}\]</span></li>
+</ul>
+</section>
+<section id="estimating-variation-of-the-sample-mean-with-srs-1" class="level2">
+<h2 class="anchored" data-anchor-id="estimating-variation-of-the-sample-mean-with-srs-1">Estimating Variation of the Sample Mean with SRS</h2>
+<ul>
+<li>Assume a <strong>finite</strong> population</li>
+<li>More or less precision estimating <span class="math inline">\(\mu\)</span>?</li>
+<li>We showed under SRS <span class="math inline">\(\mathbb{V}[\bar{y}]= \frac{N-n}{N}\cdot \frac{\sigma^2}{n}\)</span></li>
+</ul>
+<p><span class="math display">\[\hat{\mathbb{V}}(\bar{y}) = \big(1 - \frac{n}{N}\big)\frac{s^2}{n}\]</span></p>
+</section>
+<section id="finite-population-correction" class="level2">
+<h2 class="anchored" data-anchor-id="finite-population-correction">Finite Population Correction</h2>
+<ul>
+<li><p><strong>finite population correction (fpc)</strong>: <span class="math inline">\(\frac{N-n}{N} = (1 - \frac{n}{N})\)</span></p></li>
+<li><p><span class="math inline">\(n = 100\)</span>, <span class="math inline">\(N = 100,000\)</span></p></li>
+<li><p><span class="math inline">\(n = 100\)</span>, <span class="math inline">\(N = 20,00\)</span></p></li>
+<li><p><span class="math inline">\(n = 100\)</span>, <span class="math inline">\(N = 204\)</span></p></li>
+</ul>
+</section>
+<section id="estimating-the-population-total" class="level2">
+<h2 class="anchored" data-anchor-id="estimating-the-population-total">Estimating the Population Total</h2>
+<p>Population total: <span class="math display">\[\tau = y_1 + y_2 + ... + y_N =\]</span></p>
+<p>Logical estimator for population total: <span class="math display">\[\hat{\tau} = N\bar{y}\]</span></p>
+</section>
+<section id="expected-value-of-hattau-with-srs" class="level2">
+<h2 class="anchored" data-anchor-id="expected-value-of-hattau-with-srs">Expected Value of <span class="math inline">\(\hat{\tau}\)</span> with SRS</h2>
+<ul>
+<li>Can show that the estimator <span class="math inline">\(\hat{\tau} = N\bar{y}\)</span> is an <em>unbiased</em> estimator for the population total <span class="math inline">\(\tau\)</span> under SRS.</li>
+</ul>
+<p><span class="math inline">\(\mathbb{E}[\hat{\tau}]=\)</span></p>
+</section>
+<section id="variance-of-hattau-with-srs" class="level2">
+<h2 class="anchored" data-anchor-id="variance-of-hattau-with-srs">Variance of <span class="math inline">\(\hat{\tau}\)</span> with SRS</h2>
+<p>Under SRS</p>
+<p><span class="math inline">\(\mathbb{V}[\hat{\tau}]=\)</span></p>
+<p>So we logically estimate the variance with</p>
+<p><span class="math display">\[\hat{\mathbb{V}}[\hat{\tau}] = N(N-1)\frac{s^2}{n}\]</span></p>
+</section>
+<section id="summary-estimating-means-and-totals-with-srs" class="level2">
+<h2 class="anchored" data-anchor-id="summary-estimating-means-and-totals-with-srs">Summary – Estimating Means and Totals with SRS</h2>
+<p><strong>Mean</strong></p>
+<ul>
+<li>Sample mean <span class="math inline">\(\bar{y}\)</span> is an <strong>unbiased</strong> estimator of the population mean <span class="math inline">\(\mu\)</span></li>
+<li>Estimate the variance: <span class="math inline">\(\hat{\mathbb{V}}(\bar{y}) = \big(1 - \frac{n}{N}\big)\frac{s^2}{n}\)</span></li>
+</ul>
+<p><strong>Total</strong></p>
+<ul>
+<li><span class="math inline">\(\hat{\tau} = N\bar{y}\)</span> is an <strong>unbiased</strong> estimator of the population total <span class="math inline">\(\tau\)</span></li>
+<li>Estimate the variance: <span class="math inline">\(\hat{\mathbb{V}}(\hat{\tau}) = N(N-1)\frac{s^2}{n}\)</span></li>
+</ul>
+</section>
+</section>
+<section id="stratified-random-sampling" class="level1">
+<h1>Stratified Random Sampling</h1>
+<section id="stratified-random-sampling-1" class="level2">
+<h2 class="anchored" data-anchor-id="stratified-random-sampling-1">Stratified Random Sampling</h2>
+<p>A <strong>stratified random sample</strong> is one obtained by</p>
+<ol type="1">
+<li>separating the population elements into non-overlapping groups (partitions) called <em>strata</em>, then</li>
+<li>selecting a simple random sample from <em>each stratum</em></li>
+</ol>
+</section>
+<section id="stratified-random-sampling-vs.-srs" class="level2">
+<h2 class="anchored" data-anchor-id="stratified-random-sampling-vs.-srs">Stratified Random Sampling vs.&nbsp;SRS</h2>
+<p>Stratified Random Sampling…</p>
+<ul>
+<li>gives more precise estimates than SRS IF variation within strata is smaller than the variation overall of the whole population</li>
+<li>can save money</li>
+<li>allows you to estimate population parameters for strata (subgroups of the population)</li>
+<li>ensures you have units from each strata in every sample</li>
+</ul>
+</section>
+<section id="notation-for-stratified-random-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="notation-for-stratified-random-sampling">Notation for Stratified Random Sampling</h2>
+<p><span class="math inline">\(N\)</span>: population size (number of sampling units in the population)</p>
+<p><span class="math inline">\(n\)</span>: sample size</p>
+<p><span class="math inline">\(L\)</span>: number of strata</p>
+<p><span class="math inline">\(N_{g}\)</span>: number of sampling units in stratum <span class="math inline">\(g\)</span></p>
+<p><span class="math inline">\(n_{g}\)</span>: number of units <strong>selected</strong> from the <span class="math inline">\(N_{g}\)</span> sampling units in stratum <span class="math inline">\(g\)</span> (strata <span class="math inline">\(g\)</span>’s sample size)</p>
+</section>
+<section id="notation-for-stratified-random-sampling-1" class="level2">
+<h2 class="anchored" data-anchor-id="notation-for-stratified-random-sampling-1">Notation for Stratified Random Sampling</h2>
+<p><span class="math inline">\(y_{ig}\)</span>: value of the <span class="math inline">\(i^{th}\)</span> unit in stratum <span class="math inline">\(g\)</span></p>
+<p><strong>population parameters</strong></p>
+<p><span class="math inline">\(\mu_g\)</span>: population mean of stratum <span class="math inline">\(g\)</span></p>
+<p><span class="math inline">\(\tau_g\)</span>: population total of stratum <span class="math inline">\(g\)</span></p>
+<p><span class="math inline">\(\sigma^2_g\)</span>: population variance of stratum <span class="math inline">\(g\)</span></p>
+<p><strong>sample statistics</strong></p>
+<p><span class="math inline">\(\bar{y}_g\)</span> sample mean for stratum <span class="math inline">\(g\)</span></p>
+<p><span class="math inline">\(s^2_g\)</span>: sample standard deviation of stratum <span class="math inline">\(g\)</span></p>
+</section>
+<section id="estimating-the-population-mean-with-stratified-random-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="estimating-the-population-mean-with-stratified-random-sampling">Estimating the Population Mean with Stratified Random Sampling</h2>
+<ul>
+<li><p>Overall population mean <span class="math inline">\(\mu = \frac{1}{N}\cdot\tau\)</span></p></li>
+<li><p>Overall population total: <span class="math inline">\(\tau = \displaystyle\sum_{g = 1}^L \tau_g\)</span></p></li>
+<li><p>Since the sample in each stratum is a SRS, we know that <span class="math inline">\(\hat{\tau}_g = N_g\bar{y}_g\)</span> is an unbiased estimator for <span class="math inline">\(\tau_g\)</span></p></li>
+<li><p>Therefore, an unbiased estimator (<span class="math inline">\(\bar{y}_{st}\)</span>) for <span class="math inline">\(\mu\)</span> is: <span class="math inline">\(\bar{y}_{st} = \frac{1}{N}\displaystyle\sum_{g = 1}^L \hat{\tau}_g\)</span></p></li>
+</ul>
+</section>
+<section id="estimating-the-population-mean-with-stratified-random-sampling-1" class="level2">
+<h2 class="anchored" data-anchor-id="estimating-the-population-mean-with-stratified-random-sampling-1">Estimating the Population Mean with Stratified Random Sampling</h2>
+<p><span class="math display">\[\bar{y}_{st} = \frac{1}{N}\displaystyle\sum_{g = 1}^L N_g\bar{y}_g\]</span></p>
+<p><span class="math display">\[\hat{\mathbb{V}}[\bar{y}_{st}] = \frac{1}{N^2}\displaystyle\sum_{g = 1}^L N_g^2 (1-\frac{n_g}{N_g})(\frac{s_g^2}{n_g})\]</span></p>
+</section>
+<section id="estimating-the-population-total-with-stratified-random-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="estimating-the-population-total-with-stratified-random-sampling">Estimating the Population Total with Stratified Random Sampling</h2>
+<p>Therefore, an unbiased estimator for <span class="math inline">\(\tau\)</span> is:</p>
+<p><span class="math display">\[N\bar{y}_{st} = \displaystyle\sum_{g = 1}^L N_g\bar{y}_g\]</span></p>
+<p>And a reasonable estimated variance is:</p>
+<p><span class="math display">\[\hat{\mathbb{V}}[N\bar{y}_{st}] = N^2\hat{\mathbb{V}}[\bar{y}_{st}] = \displaystyle\sum_{g = 1}^L N_g^2 (1-\frac{n_g}{N_g})(\frac{s_g^2}{n_g})\]</span></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/github\.com\/manncz\/stat-3540-calpoly");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Built by Charlotte Mann, adapted from materials by Dr.&nbsp;Emily Robinson and Dr.&nbsp;Anelise Sabbag.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This page is built with ❤️️ and <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

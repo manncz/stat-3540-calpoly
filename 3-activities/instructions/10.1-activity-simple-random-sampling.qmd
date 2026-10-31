@@ -11,10 +11,6 @@ format:
   docx: default
   html: default
 ---
-```{r}
-library(tidyverse)
-```
-
 :::: version-instructions
 ::: callout-warning
 - Submit via Gradescope, don't forget to assign pages to the questions in the outline!
@@ -107,6 +103,13 @@ You might want to look up information (or ask Dr. C about the Iowa State Fair) t
 
 ## Simple Random Sampling (SRS)
 
+```{r}
+# load needed packages
+
+library(tidyverse)
+library(maps)
+```
+
 While you often don't get to have the full population as a sampling frame, we are going to walk through an example today to investigate the mathematical qualities of simple random sampling.
 
 We are going to consider the population of countries included in the data from the World Bank put together in June 2019 by the authors of "Statistics: UnLocking the Power of Data." 
@@ -144,6 +147,18 @@ countries <- AllCountries3e |>
   filter(!is.na(CO2))
 ```
 
+```{r}
+#| include: false
+
+world <- map_data("world")
+
+setdiff(unique(world$region),
+        countries$Country)
+
+setdiff(countries$Country,
+        unique(world$region))
+```
+
 Use this `countries` data for the rest of the activity
 
 2. We do literally have the population data here, so go ahead and **calculate** the population mean CO2 emissions per capita. Let's also look at the distribution.
@@ -155,45 +170,39 @@ $$\mu =$$ metric tons per capita
 
 countries |> 
   ggplot(aes(x = CO2)) +
-  geom_histogram()
+  geom_histogram() +
+  labs(x = "Country C02 Emissions per Capita",
+       y = "Number of Countries")
+```
+
+```{r}
+# looking at the top 10, just for curiosity
+
+countries |> 
+  select(Country,CO2, LandArea, Population, Density, GDP, Rural) |> 
+  slice_max(CO2, n = 10) |> 
+  knitr::kable()
 ```
 
 3. In a previous class, we asked students to think of 10 countries that they believed were representative of the countries in the world (i.e., they resemble the collection of all countries of the world). Why is this not the best way to get a sample to estimate the average CO2 emissions? Do you thing the estimate would be biased, and in what direction?
-
-```{r}
-#| include: false
-
-judgement_sample1 <- c("Brazil", "India", "China",
-                      "United States", "Germany", "Saudi Arabia",
-                      "Japan", "United Kingdom", "Kenya", "Switzerland")
-
-
-judgement_sample2 <- c("China", "United States", "Brazil",
-                       "Ethiopia", "Poland", "Australia",
-                       "Bolivia", "Philippines", "Madagascar",
-                       "United Kingdom")
-
-
-countries |> 
-  filter(Country %in% judgement_sample1) |> 
-  summarize(mean_co2 = mean(CO2))
-
-countries |> 
-  filter(Country %in% judgement_sample2) |> 
-  summarize(mean_co2 = mean(CO2))
-```
 
 4. Let's do simple random sampling instead. How many ways are there to select a sample $\mathcal{S}$ of size $n = 10$ from the population of 204 countries? Write out the formula you use and the output from R. (Hint: use the `choose()` function in R)
 
 5. Calculate the probability of selecting a sample $\mathcal{S}$ of size $n = 10$ using SRS. 
 
+$P(\mathcal{S}) = \frac{1}{\binom{N}{n}} = \frac{1}{2.74926 \times 10^{16}} \approx 3.64 \times 10^{-17}$ (very very small!)
+
 6. What is the probability of each country being included in a sample? In other words, calculate the inclusion probability ($\pi_i$).
+
+$\pi_i = \frac{10}{204} \approx 0.049$ 
 
 7. Using R, take a sample of 10 countries from the `countries` data. Calculate the mean C02 emissions.
 
 8. Do that again -- make sure you use a different seed so you get a different number.
 
 9. How different were your two sample estimates from the population mean? 
+
+**Answers will vary: one of my random samples is a large over-estimate. But as we will see, the INDIVIDUAL samples don't matter -- what matters is the long-term behaviors of the estimates.**
 
 10. Now let's see what happens if we repeat this process many times (5,000 to be exact), taking a sample of 10 countries. I went ahead and did this for you. The plot below is a histogram of the sample mean C02 emissions. **Note** If you are reading this on the Quarto template, you will need to look back at the online version to see the figure.
 
@@ -202,6 +211,8 @@ b. Where is the sampling distribution centered? Why does this make sense?
 c. Why is the center of this sampling distribution not exactly $\mu$?
 
 ```{r}
+#| code-fold: true
+
 sample_mean_fun <- function(dat, size, var){
   
   dat |> 
@@ -218,6 +229,9 @@ sim <- map_dbl(.x = 1:5000,
 ```
 
 ```{r}
+#| code-fold: true
+
+
 sim |> 
   enframe() |> 
   ggplot() +
