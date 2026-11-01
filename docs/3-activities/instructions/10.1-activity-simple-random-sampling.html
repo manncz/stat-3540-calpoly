@@ -471,237 +471,13 @@ Tip
 <p>We are going to consider the population of countries included in the data from the World Bank put together in June 2019 by the authors of “Statistics: UnLocking the Power of Data.”</p>
 <p>We are interested in estimating the average C02 emissions per-capita of a countries in the world.</p>
 <div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 2%">
-<col style="width: 3%">
-<col style="width: 4%">
-<col style="width: 3%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 2%">
-<col style="width: 4%">
-<col style="width: 3%">
-<col style="width: 2%">
-<col style="width: 5%">
-<col style="width: 3%">
-<col style="width: 2%">
-<col style="width: 1%">
-<col style="width: 2%">
-<col style="width: 3%">
-<col style="width: 4%">
-<col style="width: 4%">
-<col style="width: 4%">
-<col style="width: 6%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 2%">
-<col style="width: 5%">
-<col style="width: 4%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Country</th>
-<th style="text-align: left;">Code</th>
-<th style="text-align: right;">LandArea</th>
-<th style="text-align: right;">Population</th>
-<th style="text-align: right;">Density</th>
-<th style="text-align: right;">GDP</th>
-<th style="text-align: right;">Rural</th>
-<th style="text-align: right;">CO2</th>
-<th style="text-align: right;">PumpPrice</th>
-<th style="text-align: right;">Military</th>
-<th style="text-align: right;">Health</th>
-<th style="text-align: right;">ArmedForces</th>
-<th style="text-align: right;">Internet</th>
-<th style="text-align: right;">Cell</th>
-<th style="text-align: right;">HIV</th>
-<th style="text-align: right;">Hunger</th>
-<th style="text-align: right;">Diabetes</th>
-<th style="text-align: right;">BirthRate</th>
-<th style="text-align: right;">DeathRate</th>
-<th style="text-align: right;">ElderlyPop</th>
-<th style="text-align: right;">LifeExpectancy</th>
-<th style="text-align: right;">FemaleLabor</th>
-<th style="text-align: right;">Unemployment</th>
-<th style="text-align: right;">Energy</th>
-<th style="text-align: right;">Electricity</th>
-<th style="text-align: right;">Developed</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Afghanistan</td>
-<td style="text-align: left;">AFG</td>
-<td style="text-align: right;">652.86</td>
-<td style="text-align: right;">37.172</td>
-<td style="text-align: right;">56.9</td>
-<td style="text-align: right;">521</td>
-<td style="text-align: right;">74.5</td>
-<td style="text-align: right;">0.29</td>
-<td style="text-align: right;">0.70</td>
-<td style="text-align: right;">3.72</td>
-<td style="text-align: right;">2.01</td>
-<td style="text-align: right;">323</td>
-<td style="text-align: right;">11.4</td>
-<td style="text-align: right;">67.4</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">30.3</td>
-<td style="text-align: right;">9.6</td>
-<td style="text-align: right;">32.5</td>
-<td style="text-align: right;">6.6</td>
-<td style="text-align: right;">2.6</td>
-<td style="text-align: right;">64.0</td>
-<td style="text-align: right;">50.3</td>
-<td style="text-align: right;">1.5</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Albania</td>
-<td style="text-align: left;">ALB</td>
-<td style="text-align: right;">27.40</td>
-<td style="text-align: right;">2.866</td>
-<td style="text-align: right;">104.6</td>
-<td style="text-align: right;">5254</td>
-<td style="text-align: right;">39.7</td>
-<td style="text-align: right;">1.98</td>
-<td style="text-align: right;">1.36</td>
-<td style="text-align: right;">4.08</td>
-<td style="text-align: right;">9.51</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">71.8</td>
-<td style="text-align: right;">123.7</td>
-<td style="text-align: right;">0.1</td>
-<td style="text-align: right;">5.5</td>
-<td style="text-align: right;">10.1</td>
-<td style="text-align: right;">11.7</td>
-<td style="text-align: right;">7.5</td>
-<td style="text-align: right;">13.6</td>
-<td style="text-align: right;">78.5</td>
-<td style="text-align: right;">55.9</td>
-<td style="text-align: right;">13.9</td>
-<td style="text-align: right;">808</td>
-<td style="text-align: right;">2309</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Algeria</td>
-<td style="text-align: left;">DZA</td>
-<td style="text-align: right;">2381.74</td>
-<td style="text-align: right;">42.228</td>
-<td style="text-align: right;">17.7</td>
-<td style="text-align: right;">4279</td>
-<td style="text-align: right;">27.4</td>
-<td style="text-align: right;">3.74</td>
-<td style="text-align: right;">0.28</td>
-<td style="text-align: right;">13.81</td>
-<td style="text-align: right;">10.73</td>
-<td style="text-align: right;">317</td>
-<td style="text-align: right;">47.7</td>
-<td style="text-align: right;">111.0</td>
-<td style="text-align: right;">0.1</td>
-<td style="text-align: right;">4.7</td>
-<td style="text-align: right;">6.7</td>
-<td style="text-align: right;">22.3</td>
-<td style="text-align: right;">4.8</td>
-<td style="text-align: right;">6.4</td>
-<td style="text-align: right;">76.3</td>
-<td style="text-align: right;">16.4</td>
-<td style="text-align: right;">12.1</td>
-<td style="text-align: right;">1328</td>
-<td style="text-align: right;">1363</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">American Samoa</td>
-<td style="text-align: left;">ASM</td>
-<td style="text-align: right;">0.20</td>
-<td style="text-align: right;">0.055</td>
-<td style="text-align: right;">277.3</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">12.8</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Andorra</td>
-<td style="text-align: left;">AND</td>
-<td style="text-align: right;">0.47</td>
-<td style="text-align: right;">0.077</td>
-<td style="text-align: right;">163.8</td>
-<td style="text-align: right;">42030</td>
-<td style="text-align: right;">11.9</td>
-<td style="text-align: right;">5.83</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">14.02</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">98.9</td>
-<td style="text-align: right;">104.4</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">8.0</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Angola</td>
-<td style="text-align: left;">AGO</td>
-<td style="text-align: right;">1246.70</td>
-<td style="text-align: right;">30.810</td>
-<td style="text-align: right;">24.7</td>
-<td style="text-align: right;">3432</td>
-<td style="text-align: right;">34.5</td>
-<td style="text-align: right;">1.29</td>
-<td style="text-align: right;">0.97</td>
-<td style="text-align: right;">9.40</td>
-<td style="text-align: right;">5.43</td>
-<td style="text-align: right;">117</td>
-<td style="text-align: right;">14.3</td>
-<td style="text-align: right;">44.7</td>
-<td style="text-align: right;">1.9</td>
-<td style="text-align: right;">23.9</td>
-<td style="text-align: right;">3.9</td>
-<td style="text-align: right;">41.3</td>
-<td style="text-align: right;">8.4</td>
-<td style="text-align: right;">2.5</td>
-<td style="text-align: right;">61.8</td>
-<td style="text-align: right;">76.4</td>
-<td style="text-align: right;">7.3</td>
-<td style="text-align: right;">545</td>
-<td style="text-align: right;">312</td>
-<td style="text-align: right;">1</td>
-</tr>
-</tbody>
-</table>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `library()`:
+! there is no package called 'Lock5Data'</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'AllCountries3e' not found</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -724,29 +500,47 @@ Tip
 <li><p>What is our population now?</p></li>
 <li><p>What is the size of our population? <span class="math inline">\(N =\)</span></p></li>
 </ol>
+<div class="cell">
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'AllCountries3e' not found</code></pre>
+</div>
+</div>
 <p>Use this <code>countries</code> data for the rest of the activity</p>
 <ol start="2" type="1">
 <li>We do literally have the population data here, so go ahead and <strong>calculate</strong> the population mean CO2 emissions per capita. Let’s also look at the distribution.</li>
 </ol>
 <p><span class="math display">\[\mu =\]</span> metric tons per capita</p>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="10.1-activity-simple-random-sampling_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'countries' not found</code></pre>
 </div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'countries' not found</code></pre>
 </div>
 </div>
 <ol start="3" type="1">
 <li><p>In a previous class, we asked students to think of 10 countries that they believed were representative of the countries in the world (i.e., they resemble the collection of all countries of the world). Why is this not the best way to get a sample to estimate the average CO2 emissions? Do you thing the estimate would be biased, and in what direction?</p></li>
 <li><p>Let’s do simple random sampling instead. How many ways are there to select a sample <span class="math inline">\(\mathcal{S}\)</span> of size <span class="math inline">\(n = 10\)</span> from the population of 204 countries? Write out the formula you use and the output from R. (Hint: use the <code>choose()</code> function in R)</p></li>
 <li><p>Calculate the probability of selecting a sample <span class="math inline">\(\mathcal{S}\)</span> of size <span class="math inline">\(n = 10\)</span> using SRS.</p></li>
-<li><p>What is the probability of each country being included in a sample? In other words, calculate the inclusion probability (<span class="math inline">\(\pi_i\)</span>).</p></li>
+</ol>
+<p><span class="math inline">\(P(\mathcal{S}) = \frac{1}{\binom{N}{n}} = \frac{1}{2.74926 \times 10^{16}} \approx 3.64 \times 10^{-17}\)</span> (very very small!)</p>
+<ol start="6" type="1">
+<li>What is the probability of each country being included in a sample? In other words, calculate the inclusion probability (<span class="math inline">\(\pi_i\)</span>).</li>
+</ol>
+<p><span class="math inline">\(\pi_i = \frac{10}{204} \approx 0.049\)</span></p>
+<ol start="7" type="1">
 <li><p>Using R, take a sample of 10 countries from the <code>countries</code> data. Calculate the mean C02 emissions.</p></li>
 <li><p>Do that again – make sure you use a different seed so you get a different number.</p></li>
 <li><p>How different were your two sample estimates from the population mean?</p></li>
-<li><p>Now let’s see what happens if we repeat this process many times (5,000 to be exact), taking a sample of 10 countries. I went ahead and did this for you. The plot below is a histogram of the sample mean C02 emissions. <strong>Note</strong> If you are reading this on the Quarto template, you will need to look back at the online version to see the figure.</p></li>
+</ol>
+<p><strong>Answers will vary: one of my random samples is a large over-estimate. But as we will see, the INDIVIDUAL samples don’t matter – what matters is the long-term behaviors of the estimates.</strong></p>
+<ol start="10" type="1">
+<li>Now let’s see what happens if we repeat this process many times (5,000 to be exact), taking a sample of 10 countries. I went ahead and did this for you. The plot below is a histogram of the sample mean C02 emissions. <strong>Note</strong> If you are reading this on the Quarto template, you will need to look back at the online version to see the figure.</li>
 </ol>
 <ol type="a">
 <li>What is the shape of the sampling distribution? Is this what you expected? Explain.</li>
@@ -754,18 +548,29 @@ Tip
 <li>Why is the center of this sampling distribution not exactly <span class="math inline">\(\mu\)</span>?</li>
 </ol>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="10.1-activity-simple-random-sampling_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `map_dbl()`:
+ℹ In index: 1.
+Caused by error in `.f()`:
+! object 'countries' not found</code></pre>
 </div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'sim' not found</code></pre>
 </div>
 </div>
 <ol start="11" type="1">
 <li><p>What do you think would happen to the sampling distribution if we increased the sample size to n = 20 or n = 50?</p></li>
 <li><p>Remember how we removed countries that didn’t have C02 emission information? Let’s go back and look at them.</p></li>
 </ol>
+<div class="cell">
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'AllCountries3e' not found</code></pre>
+</div>
+</div>
 <p>What do you notice about these places? How does not having data on these places impact our understanding of our estimates for C02 emissions and how we can generalize them?</p>
 
 

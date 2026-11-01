@@ -11,7 +11,6 @@ format:
   docx: default
   html: default
 ---
-:::: version-instructions
 ::: callout-warning
 - Submit via Gradescope, don't forget to assign pages to the questions in the outline!
 
@@ -19,7 +18,6 @@ format:
 
 - **You do need to do a bit of R coding for this activity**, I would recommend that you use the qmd template: [10.1-activity-simple-random-sampling.qmd](../student/10.1-activity-simple-random-sampling.qmd). But you are welcome to use the Word template as always!
 :::
-::::
 
 ## Terminology, Types of Sampling and Errors
 
@@ -147,18 +145,6 @@ countries <- AllCountries3e |>
   filter(!is.na(CO2))
 ```
 
-```{r}
-#| include: false
-
-world <- map_data("world")
-
-setdiff(unique(world$region),
-        countries$Country)
-
-setdiff(countries$Country,
-        unique(world$region))
-```
-
 Use this `countries` data for the rest of the activity
 
 2. We do literally have the population data here, so go ahead and **calculate** the population mean CO2 emissions per capita. Let's also look at the distribution.
@@ -190,19 +176,13 @@ countries |>
 
 5. Calculate the probability of selecting a sample $\mathcal{S}$ of size $n = 10$ using SRS. 
 
-$P(\mathcal{S}) = \frac{1}{\binom{N}{n}} = \frac{1}{2.74926 \times 10^{16}} \approx 3.64 \times 10^{-17}$ (very very small!)
-
 6. What is the probability of each country being included in a sample? In other words, calculate the inclusion probability ($\pi_i$).
-
-$\pi_i = \frac{10}{204} \approx 0.049$ 
 
 7. Using R, take a sample of 10 countries from the `countries` data. Calculate the mean C02 emissions.
 
 8. Do that again -- make sure you use a different seed so you get a different number.
 
 9. How different were your two sample estimates from the population mean? 
-
-**Answers will vary: one of my random samples is a large over-estimate. But as we will see, the INDIVIDUAL samples don't matter -- what matters is the long-term behaviors of the estimates.**
 
 10. Now let's see what happens if we repeat this process many times (5,000 to be exact), taking a sample of 10 countries. I went ahead and did this for you. The plot below is a histogram of the sample mean C02 emissions. **Note** If you are reading this on the Quarto template, you will need to look back at the online version to see the figure.
 

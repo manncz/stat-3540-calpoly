@@ -1,0 +1,54 @@
+---
+title: "10.2 Preparation: Estimation with SRS & Intro to Stratified Random Sampling"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+#### 📽 Watch Videos: 45 min
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+- Review random variables, expected value, and variance
+- Understand how to evaluate estimators based on bias and variance
+- Estimate the population mean and total with SRS
+- Estimate the variance of estimators with SRS
+- Design a stratified random sample
+- Idenitfy when a stratified random sample may be preferabale to an SRS
+:::
+
+
+## Sampling, Estimation, and Evaluating Estimators
+
+- 📽 Follow along with the [slides](../2-slides/10.2-estimation.qmd).
+
+
+{{< video https://youtu.be/xJSHdC983is >}}
+
+## Estimation with Simple Random Sampling
+
+- 📽 Follow along with the [slides](../2-slides/10.2-estimation.qmd#/estimation-with-simple-random-sampling).
+
+:::callout-warning
+### typo in video
+
+Sorry, there is a typo at the end of the video for the variance of $\hat{\tau}$. It is fixed in the slides themselves. $\mathbb{V}(\hat{\tau}) = N(N-n)\frac{\sigma^2}{n}$
+:::
+
+{{< video https://youtu.be/mqEUL3uoncs >}}
+
+## Stratified Random Sampling
+
+- 📽 Follow along with the [slides](../2-slides/10.2-estimation.qmd#/stratified-random-sampling).
+
+{{< video https://youtu.be/RAkx9-O3tUc >}}
+
+

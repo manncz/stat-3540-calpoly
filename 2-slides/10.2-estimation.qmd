@@ -170,7 +170,7 @@ $\mathbb{V}[\hat{\tau}]=$
 
 So we logically estimate the variance with
 
-$$\hat{\mathbb{V}}[\hat{\tau}] = N(N-1)\frac{s^2}{n}$$
+$$\hat{\mathbb{V}}[\hat{\tau}] = N(N-n)\frac{s^2}{n}$$
 
 ## Summary -- Estimating Means and Totals with SRS
 
@@ -182,7 +182,7 @@ $$\hat{\mathbb{V}}[\hat{\tau}] = N(N-1)\frac{s^2}{n}$$
 **Total**
 
 - $\hat{\tau} = N\bar{y}$ is an **unbiased** estimator of the population total $\tau$
-- Estimate the variance: $\hat{\mathbb{V}}(\hat{\tau}) = N(N-1)\frac{s^2}{n}$
+- Estimate the variance: $\hat{\mathbb{V}}(\hat{\tau}) = N(N-n)\frac{s^2}{n}$
 
 
 # Stratified Random Sampling
@@ -240,15 +240,7 @@ agpop_srs |>
 ```
 
 
-```{r}
-#| include: false
 
-sd(agpop$acres92, na.rm = T)
-sum(agpop$acres92, na.rm = T)
-
-sd(agpop_srs$acres92)
-mean(agpop_srs$acres92, na.rm = T)*3078
-```
 
 ## Estimating Farm Acres
 
