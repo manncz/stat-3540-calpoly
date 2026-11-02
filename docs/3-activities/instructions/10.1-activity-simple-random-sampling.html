@@ -377,7 +377,6 @@ window.Quarto = {
 </header>
 
 
-<div class="version-instructions">
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -393,7 +392,6 @@ Warning
 <li><p>Delete any extraneous instructions (<strong>like this box</strong>) before submission. <em>You will be deducted points from now on if you do not follow this instruction!</em></p></li>
 <li><p><strong>You do need to do a bit of R coding for this activity</strong>, I would recommend that you use the qmd template: <a href="../student/10.1-activity-simple-random-sampling.qmd">10.1-activity-simple-random-sampling.qmd</a>. But you are welcome to use the Word template as always!</p></li>
 </ul>
-</div>
 </div>
 </div>
 <section id="terminology-types-of-sampling-and-errors" class="level2">
@@ -527,20 +525,11 @@ Tip
 <li><p>In a previous class, we asked students to think of 10 countries that they believed were representative of the countries in the world (i.e., they resemble the collection of all countries of the world). Why is this not the best way to get a sample to estimate the average CO2 emissions? Do you thing the estimate would be biased, and in what direction?</p></li>
 <li><p>Let’s do simple random sampling instead. How many ways are there to select a sample <span class="math inline">\(\mathcal{S}\)</span> of size <span class="math inline">\(n = 10\)</span> from the population of 204 countries? Write out the formula you use and the output from R. (Hint: use the <code>choose()</code> function in R)</p></li>
 <li><p>Calculate the probability of selecting a sample <span class="math inline">\(\mathcal{S}\)</span> of size <span class="math inline">\(n = 10\)</span> using SRS.</p></li>
-</ol>
-<p><span class="math inline">\(P(\mathcal{S}) = \frac{1}{\binom{N}{n}} = \frac{1}{2.74926 \times 10^{16}} \approx 3.64 \times 10^{-17}\)</span> (very very small!)</p>
-<ol start="6" type="1">
-<li>What is the probability of each country being included in a sample? In other words, calculate the inclusion probability (<span class="math inline">\(\pi_i\)</span>).</li>
-</ol>
-<p><span class="math inline">\(\pi_i = \frac{10}{204} \approx 0.049\)</span></p>
-<ol start="7" type="1">
+<li><p>What is the probability of each country being included in a sample? In other words, calculate the inclusion probability (<span class="math inline">\(\pi_i\)</span>).</p></li>
 <li><p>Using R, take a sample of 10 countries from the <code>countries</code> data. Calculate the mean C02 emissions.</p></li>
 <li><p>Do that again – make sure you use a different seed so you get a different number.</p></li>
 <li><p>How different were your two sample estimates from the population mean?</p></li>
-</ol>
-<p><strong>Answers will vary: one of my random samples is a large over-estimate. But as we will see, the INDIVIDUAL samples don’t matter – what matters is the long-term behaviors of the estimates.</strong></p>
-<ol start="10" type="1">
-<li>Now let’s see what happens if we repeat this process many times (5,000 to be exact), taking a sample of 10 countries. I went ahead and did this for you. The plot below is a histogram of the sample mean C02 emissions. <strong>Note</strong> If you are reading this on the Quarto template, you will need to look back at the online version to see the figure.</li>
+<li><p>Now let’s see what happens if we repeat this process many times (5,000 to be exact), taking a sample of 10 countries. I went ahead and did this for you. The plot below is a histogram of the sample mean C02 emissions. <strong>Note</strong> If you are reading this on the Quarto template, you will need to look back at the online version to see the figure.</p></li>
 </ol>
 <ol type="a">
 <li>What is the shape of the sampling distribution? Is this what you expected? Explain.</li>

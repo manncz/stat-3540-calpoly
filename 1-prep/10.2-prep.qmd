@@ -22,7 +22,7 @@ library(tidyverse)
 - Estimate the population mean and total with SRS
 - Estimate the variance of estimators with SRS
 - Design a stratified random sample
-- Idenitfy when a stratified random sample may be preferabale to an SRS
+- Idenitify when a stratified random sample may be preferable to an SRS
 :::
 
 
