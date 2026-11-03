@@ -381,16 +381,12 @@
 <p>We have county-level data from the Census Bureau (1995) provided by Sharon Lohr as part of the textbook SDA.</p>
 <p><span class="math inline">\(N = 3078\)</span></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(SDAResources)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error in `library()`:
-! there is no package called 'SDAResources'</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">data</span>(agpop)</span>
-<span id="cb3-2"><a></a><span class="fu">nrow</span>(agpop)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'agpop' not found</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(SDAResources)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="fu">data</span>(agpop)</span>
+<span id="cb1-4"><a></a><span class="fu">nrow</span>(agpop)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3078</code></pre>
 </div>
 </div>
 </section>
@@ -398,19 +394,11 @@
 <h2>Estimating Farm Acres</h2>
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
-<div class="cell-output cell-output-error quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error:
-! object 'agpop' not found</code></pre>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="10.2-estimation_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </div>
-<div class="cell-output cell-output-error quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error:
-! object 'agpop' not found</code></pre>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="cell-output cell-output-error quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<pre><code>Error:
-! object 'agpop_srs' not found</code></pre>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="10.2-estimation_files/figure-revealjs/unnamed-chunk-3-2.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -418,9 +406,12 @@
 <section id="estimating-farm-acres-1" class="slide level2">
 <h2>Estimating Farm Acres</h2>
 <div class="cell">
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'agpop_srs' not found</code></pre>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="10.2-estimation_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -477,47 +468,41 @@
 <div class="column">
 <p>Equal <span class="math inline">\(n_g\)</span>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="do">## equal n_g for each stratum</span></span>
-<span id="cb9-2"><a></a></span>
-<span id="cb9-3"><a></a>agpop_strs <span class="ot">&lt;-</span> agpop <span class="sc">|&gt;</span> </span>
-<span id="cb9-4"><a></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span> </span>
-<span id="cb9-5"><a></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">75</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'agpop' not found</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="do">## equal n_g for each stratum</span></span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a>agpop_strs <span class="ot">&lt;-</span> agpop <span class="sc">|&gt;</span> </span>
+<span id="cb3-4"><a></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span> </span>
+<span id="cb3-5"><a></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">75</span>)</span>
+<span id="cb3-6"><a></a></span>
+<span id="cb3-7"><a></a><span class="fu">nrow</span>(agpop_strs) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 300</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">nrow</span>(agpop_strs) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'agpop_strs' not found</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">table</span>(agpop_strs<span class="sc">$</span>region)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'agpop_strs' not found</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">table</span>(agpop_strs<span class="sc">$</span>region)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+NC NE  S  W 
+75 75 75 75 </code></pre>
 </div>
 </div>
 </div><div class="column">
 <p>Proportional <span class="math inline">\(n_g\)</span>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="do">## proportional n_g for each stratum</span></span>
-<span id="cb15-2"><a></a></span>
-<span id="cb15-3"><a></a>agpop_strs <span class="ot">&lt;-</span> agpop <span class="sc">|&gt;</span> </span>
-<span id="cb15-4"><a></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span> </span>
-<span id="cb15-5"><a></a>  <span class="fu">slice_sample</span>(<span class="at">prop =</span> <span class="dv">300</span><span class="sc">/</span><span class="dv">3078</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'agpop' not found</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="do">## proportional n_g for each stratum</span></span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a>agpop_strs <span class="ot">&lt;-</span> agpop <span class="sc">|&gt;</span> </span>
+<span id="cb7-4"><a></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span> </span>
+<span id="cb7-5"><a></a>  <span class="fu">slice_sample</span>(<span class="at">prop =</span> <span class="dv">300</span><span class="sc">/</span><span class="dv">3078</span>)</span>
+<span id="cb7-6"><a></a></span>
+<span id="cb7-7"><a></a><span class="fu">nrow</span>(agpop_strs) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 298</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">nrow</span>(agpop_strs) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'agpop_strs' not found</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">table</span>(agpop_strs<span class="sc">$</span>region)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'agpop_strs' not found</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">table</span>(agpop_strs<span class="sc">$</span>region)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ NC  NE   S   W 
+102  21 134  41 </code></pre>
 </div>
 </div>
 </div></div>

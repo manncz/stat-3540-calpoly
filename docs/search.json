@@ -7334,21 +7334,21 @@
     "href": "2-slides/10.2-estimation.html#stratified-random-sampling---example",
     "title": "Module 10: Survey Sampling",
     "section": "Stratified Random Sampling - Example",
-    "text": "Stratified Random Sampling - Example\nEstimating the total number of farm acres in the US.\nWe have county-level data from the Census Bureau (1995) provided by Sharon Lohr as part of the textbook SDA.\n\\(N = 3078\\)\n\nlibrary(SDAResources)\n\nError in `library()`:\n! there is no package called 'SDAResources'\n\ndata(agpop)\nnrow(agpop)\n\nError:\n! object 'agpop' not found"
+    "text": "Stratified Random Sampling - Example\nEstimating the total number of farm acres in the US.\nWe have county-level data from the Census Bureau (1995) provided by Sharon Lohr as part of the textbook SDA.\n\\(N = 3078\\)\n\nlibrary(SDAResources)\n\ndata(agpop)\nnrow(agpop)\n\n[1] 3078"
   },
   {
     "objectID": "2-slides/10.2-estimation.html#estimating-farm-acres",
     "href": "2-slides/10.2-estimation.html#estimating-farm-acres",
     "title": "Module 10: Survey Sampling",
     "section": "Estimating Farm Acres",
-    "text": "Estimating Farm Acres\n\n\n\nError:\n! object 'agpop' not found\n\n\nError:\n! object 'agpop' not found\n\n\n\n\nError:\n! object 'agpop_srs' not found"
+    "text": "Estimating Farm Acres"
   },
   {
     "objectID": "2-slides/10.2-estimation.html#estimating-farm-acres-1",
     "href": "2-slides/10.2-estimation.html#estimating-farm-acres-1",
     "title": "Module 10: Survey Sampling",
     "section": "Estimating Farm Acres",
-    "text": "Estimating Farm Acres\n\n\nError:\n! object 'agpop_srs' not found"
+    "text": "Estimating Farm Acres"
   },
   {
     "objectID": "2-slides/10.2-estimation.html#estimating-farm-acres-stratified-sampling",
@@ -7376,7 +7376,7 @@
     "href": "2-slides/10.2-estimation.html#stratified-sampling-in-r",
     "title": "Module 10: Survey Sampling",
     "section": "Stratified Sampling in R",
-    "text": "Stratified Sampling in R\n\n\nEqual \\(n_g\\):\n\n## equal n_g for each stratum\n\nagpop_strs &lt;- agpop |&gt; \n  group_by(region) |&gt; \n  slice_sample(n = 75)\n\nError:\n! object 'agpop' not found\n\nnrow(agpop_strs) \n\nError:\n! object 'agpop_strs' not found\n\ntable(agpop_strs$region)\n\nError:\n! object 'agpop_strs' not found\n\n\n\nProportional \\(n_g\\):\n\n## proportional n_g for each stratum\n\nagpop_strs &lt;- agpop |&gt; \n  group_by(region) |&gt; \n  slice_sample(prop = 300/3078)\n\nError:\n! object 'agpop' not found\n\nnrow(agpop_strs) \n\nError:\n! object 'agpop_strs' not found\n\ntable(agpop_strs$region)\n\nError:\n! object 'agpop_strs' not found"
+    "text": "Stratified Sampling in R\n\n\nEqual \\(n_g\\):\n\n## equal n_g for each stratum\n\nagpop_strs &lt;- agpop |&gt; \n  group_by(region) |&gt; \n  slice_sample(n = 75)\n\nnrow(agpop_strs) \n\n[1] 300\n\ntable(agpop_strs$region)\n\n\nNC NE  S  W \n75 75 75 75 \n\n\n\nProportional \\(n_g\\):\n\n## proportional n_g for each stratum\n\nagpop_strs &lt;- agpop |&gt; \n  group_by(region) |&gt; \n  slice_sample(prop = 300/3078)\n\nnrow(agpop_strs) \n\n[1] 298\n\ntable(agpop_strs$region)\n\n\n NC  NE   S   W \n102  21 134  41"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html",
