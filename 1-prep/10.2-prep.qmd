@@ -25,6 +25,11 @@ library(tidyverse)
 - Idenitify when a stratified random sample may be preferable to an SRS
 :::
 
+For additional practice problems and reading see:
+
+- Ch 2.1-2.2, 3.1 in [Sampling: Design and Analysis 3rd Edition](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=cdi_globaltitleindex_catalog_336273757&context=PC&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Primo%20Central&tab=Everything&query=any,contains,sampling%20design%20and%20analysis&offset=0) by Sharon L. Lohr.
+- Ch 3 & Ch 4.1-4.3 in [Elementary Survey Sampling 7th Edition](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991070566017102901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,elementary%20survey%20sampling&offset=0) by Schaeffer et. al.
+- You can request the books from the library including just certain pages! Or find a copy in the ways you know how to.... 
 
 ## Sampling, Estimation, and Evaluating Estimators
 

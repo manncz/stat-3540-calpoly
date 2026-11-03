@@ -6732,7 +6732,7 @@
     "href": "1-prep/10.1-prep.html",
     "title": "10.1 Preparation: Intro to Survey Sampling",
     "section": "",
-    "text": "NoneLearning Objectives\n\n\n\n\nDefine survey sampling terminology\nName and identify different sampling methods\nIdentify a simple random sample\nImplement simple random sampling in R\nExplain different types of non-observation errors"
+    "text": "NoneLearning Objectives\n\n\n\n\nDefine survey sampling terminology\nName and identify different sampling methods\nIdentify a simple random sample\nImplement simple random sampling in R\nExplain different types of non-observation errors\n\n\n\nFor additional practice problems and reading see\n\nCh 1, Ch 2.1-2.3, and Ch 15.1 in Sampling: Design and Analysis 3rd Edition by Sharon L. Lohr.\nCh 1, Ch 2.1-2.4, 4.1-4.3 in Elementry Survey Sampling 7th Edition by Schaeffer et. al.\nI don’t want to make you purchase these books, but they are useful if you want to do more reading and for all of the practice problems\nYou can request the books from the library including just certain pages! Or find a copy in the ways you know how to…."
   },
   {
     "objectID": "1-prep/10.1-prep.html#survey-sampling-termonology",
@@ -7383,7 +7383,7 @@
     "href": "2-slides/10.3-stratified-est-size.html",
     "title": "Module 10: Survey Sampling",
     "section": "",
-    "text": "A random variable is a function that assigns a number to each outcome in the sample space\nThe set of possible values of a random variable, along with the probability with which each value occurs is called the probability distribution of the random variable\nIn sampling, estimators are random variables that can be described by a sampling distribution\n\n\n\n\n\nLet \\(X\\) be a random variable that can be described by a probability distribution\nExpected value: \\(\\mathbb{E}[X]\\) is the long-run average value of the random variable\n\n\n\n\n\nThe bias of an estimator \\(\\hat{\\theta}\\) is the difference between the expected value of the estimator and the population parameter (\\(\\theta\\)) it is meant to estimate. \\[Bias[\\hat{\\theta}] = \\mathbb{E}[\\hat{\\theta}] - \\theta\\]\nAnother important element of estimation is the variance: \\(\\mathbb{V}[\\hat{\\theta}]\\).\nMean Squared Error combines them: \\[MSE[\\hat{\\theta}] = \\mathbb{V}[\\hat{\\theta}] + (Bias[\\hat{\\theta}])^2\\]\n\n\n\n\n\n\nAn estimator \\(\\hat{\\theta}\\) of \\(\\theta\\) is…\n\nunbiased if \\(\\mathbb{E}[\\hat{\\theta}] = \\theta\\)\nprecise if \\(\\mathbb{V}[\\hat{\\theta}]\\) is small\naccurate if \\(MSE[\\hat{\\theta}]\\) is small\n\n\n\n\n\n\n\n\n\nLet \\(X\\) be a discrete random variable\n\\(P(X = k)\\) is the probability that that random variable \\(X\\) takes the value \\(k\\)\n\n\\[\\mathbb{E}[X] = \\sum_k P(X=k)\\cdot(k)\\]\n\\[\\mathbb{V}[X] = \\sum_k  P(X=k) \\cdot (k -\\mathbb{E}[X] )^2\\]\n\n\n\n\nLet \\(X\\) and \\(Z\\) be random variables\nLet \\(a\\) and \\(b\\) be constants\n\n\\[\\mathbb{E}[aX +b] = a\\mathbb{E}[X] + b\\] \\[\\mathbb{E}[X + Z] = \\mathbb{E}[X] + \\mathbb{E}[Z]\\]\n\\[\\mathbb{V}[aX + b] = a^2\\mathbb{V}[X] + 0\\] \\[\\mathbb{V}[X + Z] = \\mathbb{V}[X] + \\mathbb{V}[Z] + 2Cov[X, Z]\\]"
+    "text": "\\(N\\): population size (number of sampling units in the population)\n\\(n\\): sample size\n\\(L\\): number of strata\n\\(N_{g}\\): number of sampling units in stratum \\(g\\)\n\\(n_{g}\\): number of units selected from the \\(N_{g}\\) sampling units in stratum \\(g\\) (strata \\(g\\)’s sample size)\n\n\n\n\\(y_{gi}\\): value of the \\(i^{th}\\) unit in stratum \\(g\\)\npopulation parameters\n\\(\\mu_g\\): population mean of stratum \\(g\\)\n\\(\\tau_g\\): population total of stratum \\(g\\)\n\\(\\sigma^2_g\\): population variance of stratum \\(g\\)\nsample statistics\n\\(\\bar{y}_g = \\frac{1}{n_g}\\sum_{i = 1}^{n_g} y_{gi}\\): sample mean for stratum \\(g\\)\n\\(s^2_g\\): sample standard deviation of stratum \\(g\\)\n\n\n\n\\[\n\\begin{align}\n\\tau &= \\sum_{g=1}^L \\sum_{i=1}^{N_g} y_{gi}\\\\\n&= \\sum_{g=1}^L\n\\end{align}\n\\] \\[\n\\begin{align}\n\\mu &= \\frac{1}{N}\\tau\\\\\n&= \\frac{1}{N}\\sum_{g=1}^L\\qquad\\mu_g\n\\end{align}\n\\]\n\n\n\n\nOverall population mean: \\(\\mu = \\frac{1}{N}\\cdot\\tau\\)\nOverall population total: \\(\\tau = \\displaystyle\\sum_{g = 1}^L \\tau_g\\)\nSince the sample in each stratum is a SRS, we know that \\(\\hat{\\tau}_g = N_g\\bar{y}_g\\) is an unbiased estimator for \\(\\tau_g\\)\nTherefore, an unbiased estimator (\\(\\bar{y}_{st}\\)) for \\(\\mu\\) is: \\(\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L\\)\n\n\n\n\n\\[\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\n\\[\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\frac{1}{N^2}\\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\]\n\n\n\nTherefore, an unbiased estimator for \\(\\tau\\) is:\n\\[\\hat{\\tau}_{st} = N\\bar{y}_{st} = \\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\nAnd a reasonable estimated variance is:\n\\[\\hat{\\mathbb{V}}[N\\bar{y}_{st}] = N^2\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\]\n\n\n\n\n\n\n\n\n\n\ntable(agpop$region)\n\n\n  NC   NE    S    W \n1054  220 1382  422 \n\nset.seed(343)\n\nagpop_strat &lt;- agpop |&gt; \n  group_by(region) |&gt; \n  mutate(N_g = n()) |&gt; \n  slice_sample(prop = 300/3078)\n\n\n\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) \n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\)\n    \n\\(\\hat{\\tau}_{st} = N\\bar{y}_{st} =\\)\n\n\n\nCode\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) |&gt; \n  kableExtra::kable_styling(font_size = 25)\n\n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\frac{1}{N^2}\\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\)\n    \n\\(\\hat{\\mathbb{V}}[\\hat{\\tau}_{st}]  =\\)\n\n\n\nCode\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) |&gt; \n  kableExtra::kable_styling(font_size = 25)\n\n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702\n\n\n\n\n\n\n\n\n\n\n\nlibrary(survey)\n\nStep 1: Set Up Design\n\n\nSRS\n\nsrs_des &lt;- svydesign(id = ~1, \n                     data = agpopsrs,\n                     fpc = ~N,\n                     na_weights = \"warn\")\n\n\nStratified\n\nstrat_des &lt;- svydesign(id = ~1,\n                       data = agpop_strat,\n                       strata = ~region,\n                       fpc = ~N_g,\n                       na_weights = \"warn\")\n\n\n\n\n\n\nStep 2: Estimates\n\n\nSRS\n\n# mean or prop\nsvymean(~acres92mil, design = srs_des, na.rm = T)\n\n             mean     SE\nacres92mil 0.2937 0.0259\n\n\n\n# total\nsvytotal(~acres92mil, design = srs_des, na.rm = T)\n\n            total    SE\nacres92mil 897.95 79.17\n\n\n\nStratified\n\n# mean or prop\nsvymean(~acres92mil, design = strat_des, na.rm = T)\n\n              mean    SE\nacres92mil 0.30328 0.019\n\n\n\n# total\nsvytotal(~acres92mil, design = strat_des, na.rm = T)\n\n            total     SE\nacres92mil 927.24 58.297\n\n\n\n\n\n\n\n\n\n\n\n\n\nWarningWrong analysis – ignoring strata in estimation\n\n\n\n\nincorrect_des &lt;- svydesign(id = ~1, \n                        data = agpop_strat,\n                        fpc = ~N,\n                        na_weights = \"warn\")\n\n\n# mean or prop\nsvymean(~acres92mil, design = incorrect_des, na.rm = T)\n\n              mean     SE\nacres92mil 0.30359 0.0212\n\n# total\nsvytotal(~acres92mil, design = incorrect_des, na.rm = T)\n\n            total     SE\nacres92mil 928.17 65.026"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#review-sampling-distributions",
@@ -7522,43 +7522,43 @@
     "objectID": "2-slides/10.3-stratified-est-size.html#notation-for-stratified-random-sampling",
     "href": "2-slides/10.3-stratified-est-size.html#notation-for-stratified-random-sampling",
     "title": "Module 10: Survey Sampling",
-    "section": "Notation for Stratified Random Sampling",
-    "text": "Notation for Stratified Random Sampling\n\\(N\\): population size (number of sampling units in the population)\n\\(n\\): sample size\n\\(L\\): number of strata\n\\(N_{g}\\): number of sampling units in stratum \\(g\\)\n\\(n_{g}\\): number of units selected from the \\(N_{g}\\) sampling units in stratum \\(g\\) (strata \\(g\\)’s sample size)"
+    "section": "",
+    "text": "\\(N\\): population size (number of sampling units in the population)\n\\(n\\): sample size\n\\(L\\): number of strata\n\\(N_{g}\\): number of sampling units in stratum \\(g\\)\n\\(n_{g}\\): number of units selected from the \\(N_{g}\\) sampling units in stratum \\(g\\) (strata \\(g\\)’s sample size)"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#notation-for-stratified-random-sampling-1",
     "href": "2-slides/10.3-stratified-est-size.html#notation-for-stratified-random-sampling-1",
     "title": "Module 10: Survey Sampling",
-    "section": "Notation for Stratified Random Sampling",
-    "text": "Notation for Stratified Random Sampling\n\\(y_{gi}\\): value of the \\(i^{th}\\) unit in stratum \\(g\\)\npopulation parameters\n\\(\\mu_g\\): population mean of stratum \\(g\\)\n\\(\\tau_g\\): population total of stratum \\(g\\)\n\\(\\sigma^2_g\\): population variance of stratum \\(g\\)\nsample statistics\n\\(\\bar{y}_g = \\frac{1}{n_g}\\sum_{i = 1}^{n_g} y_{gi}\\): sample mean for stratum \\(g\\)\n\\(s^2_g\\): sample standard deviation of stratum \\(g\\)"
+    "section": "",
+    "text": "\\(y_{gi}\\): value of the \\(i^{th}\\) unit in stratum \\(g\\)\npopulation parameters\n\\(\\mu_g\\): population mean of stratum \\(g\\)\n\\(\\tau_g\\): population total of stratum \\(g\\)\n\\(\\sigma^2_g\\): population variance of stratum \\(g\\)\nsample statistics\n\\(\\bar{y}_g = \\frac{1}{n_g}\\sum_{i = 1}^{n_g} y_{gi}\\): sample mean for stratum \\(g\\)\n\\(s^2_g\\): sample standard deviation of stratum \\(g\\)"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-the-population-mean-with-stratified-random-sampling",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-the-population-mean-with-stratified-random-sampling",
     "title": "Module 10: Survey Sampling",
-    "section": "Estimating the Population Mean with Stratified Random Sampling",
-    "text": "Estimating the Population Mean with Stratified Random Sampling\n\nOverall population mean: \\(\\mu = \\frac{1}{N}\\cdot\\tau\\)\nOverall population total: \\(\\tau = \\displaystyle\\sum_{g = 1}^L \\tau_g\\)\nSince the sample in each stratum is a SRS, we know that \\(\\hat{\\tau}_g = N_g\\bar{y}_g\\) is an unbiased estimator for \\(\\tau_g\\)\nTherefore, an unbiased estimator (\\(\\bar{y}_{st}\\)) for \\(\\mu\\) is: \\(\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L\\)"
+    "section": "",
+    "text": "Overall population mean: \\(\\mu = \\frac{1}{N}\\cdot\\tau\\)\nOverall population total: \\(\\tau = \\displaystyle\\sum_{g = 1}^L \\tau_g\\)\nSince the sample in each stratum is a SRS, we know that \\(\\hat{\\tau}_g = N_g\\bar{y}_g\\) is an unbiased estimator for \\(\\tau_g\\)\nTherefore, an unbiased estimator (\\(\\bar{y}_{st}\\)) for \\(\\mu\\) is: \\(\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L\\)"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-the-population-mean-with-stratified-random-sampling-1",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-the-population-mean-with-stratified-random-sampling-1",
     "title": "Module 10: Survey Sampling",
-    "section": "Estimating the Population Mean with Stratified Random Sampling",
-    "text": "Estimating the Population Mean with Stratified Random Sampling\n\\[\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\n\\[\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\frac{1}{N^2}\\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\]"
+    "section": "",
+    "text": "\\[\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\n\\[\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\frac{1}{N^2}\\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\]"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-the-population-total-with-stratified-random-sampling",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-the-population-total-with-stratified-random-sampling",
     "title": "Module 10: Survey Sampling",
-    "section": "Estimating the Population Total with Stratified Random Sampling",
-    "text": "Estimating the Population Total with Stratified Random Sampling\nTherefore, an unbiased estimator for \\(\\tau\\) is:\n\\[\\hat{\\tau}_{st} = N\\bar{y}_{st} = \\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\nAnd a reasonable estimated variance is:\n\\[\\hat{\\mathbb{V}}[N\\bar{y}_{st}] = N^2\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\]"
+    "section": "",
+    "text": "Therefore, an unbiased estimator for \\(\\tau\\) is:\n\\[\\hat{\\tau}_{st} = N\\bar{y}_{st} = \\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\nAnd a reasonable estimated variance is:\n\\[\\hat{\\mathbb{V}}[N\\bar{y}_{st}] = N^2\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\]"
   },
   {
     "objectID": "1-prep/10.2-prep.html",
     "href": "1-prep/10.2-prep.html",
     "title": "10.2 Preparation: Estimation with SRS & Intro to Stratified Random Sampling",
     "section": "",
-    "text": "NoneLearning Objectives\n\n\n\n\nReview random variables, expected value, and variance\nUnderstand how to evaluate estimators based on bias and variance\nEstimate the population mean and total with SRS\nEstimate the variance of estimators with SRS\nDesign a stratified random sample\nIdenitify when a stratified random sample may be preferable to an SRS"
+    "text": "NoneLearning Objectives\n\n\n\n\nReview random variables, expected value, and variance\nUnderstand how to evaluate estimators based on bias and variance\nEstimate the population mean and total with SRS\nEstimate the variance of estimators with SRS\nDesign a stratified random sample\nIdenitify when a stratified random sample may be preferable to an SRS\n\n\n\nFor additional practice problems and reading see:\n\nCh 2.1-2.2, 3.1 in Sampling: Design and Analysis 3rd Edition by Sharon L. Lohr.\nCh 3 & Ch 4.1-4.3 in Elementary Survey Sampling 7th Edition by Schaeffer et. al.\nYou can request the books from the library including just certain pages! Or find a copy in the ways you know how to…."
   },
   {
     "objectID": "1-prep/10.2-prep.html#sampling-estimation-and-evaluating-estimators",
@@ -7599,8 +7599,8 @@
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-farm-acres-stratified-sampling-1",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-farm-acres-stratified-sampling-1",
     "title": "Module 10: Survey Sampling",
-    "section": "Estimating Farm Acres – Stratified Sampling",
-    "text": "Estimating Farm Acres – Stratified Sampling\n\n\n\ntable(agpop$region)\n\n\n  NC   NE    S    W \n1054  220 1382  422 \n\nset.seed(343)\n\nagpop_strat &lt;- agpop |&gt; \n  group_by(region) |&gt; \n  mutate(N_g = n()) |&gt; \n  slice_sample(prop = 300/3078)\n\n\n\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) \n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702"
+    "section": "",
+    "text": "table(agpop$region)\n\n\n  NC   NE    S    W \n1054  220 1382  422 \n\nset.seed(343)\n\nagpop_strat &lt;- agpop |&gt; \n  group_by(region) |&gt; \n  mutate(N_g = n()) |&gt; \n  slice_sample(prop = 300/3078)\n\n\n\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) \n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#section",
@@ -7627,22 +7627,22 @@
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-mean-and-total-farm-acres-stratified-sampling",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-mean-and-total-farm-acres-stratified-sampling",
     "title": "Module 10: Survey Sampling",
-    "section": "Estimating Mean and Total Farm Acres – Stratified Sampling",
-    "text": "Estimating Mean and Total Farm Acres – Stratified Sampling\n\n\n\\(\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\)\n    \n\\(\\hat{\\tau}_{st} = N\\bar{y}_{st} =\\)\n\n\n\nCode\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) |&gt; \n  kableExtra::kable_styling(font_size = 25)\n\n\n\n \n  \n    region \n    N_g \n    n_g \n    ybar_g \n    sd_g \n  \n \n\n  \n    NC \n    1054 \n    102 \n    0.340 \n    0.280 \n  \n  \n    NE \n    220 \n    21 \n    0.102 \n    0.092 \n  \n  \n    S \n    1382 \n    134 \n    0.186 \n    0.230 \n  \n  \n    W \n    422 \n    41 \n    0.705 \n    0.702"
+    "section": "",
+    "text": "\\(\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\)\n    \n\\(\\hat{\\tau}_{st} = N\\bar{y}_{st} =\\)\n\n\n\nCode\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) |&gt; \n  kableExtra::kable_styling(font_size = 25)\n\n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-variability-of-estimated-farm-acres",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-variability-of-estimated-farm-acres",
     "title": "Module 10: Survey Sampling",
-    "section": "Estimating Variability of Estimated Farm Acres",
-    "text": "Estimating Variability of Estimated Farm Acres\n\n\n\\(\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\frac{1}{N^2}\\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\)\n    \n\\(\\hat{\\mathbb{V}}[\\hat{\\tau}_{st}]  =\\)\n\n\n\nCode\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) |&gt; \n  kableExtra::kable_styling(font_size = 25)\n\n\n\n \n  \n    region \n    N_g \n    n_g \n    ybar_g \n    sd_g \n  \n \n\n  \n    NC \n    1054 \n    102 \n    0.340 \n    0.280 \n  \n  \n    NE \n    220 \n    21 \n    0.102 \n    0.092 \n  \n  \n    S \n    1382 \n    134 \n    0.186 \n    0.230 \n  \n  \n    W \n    422 \n    41 \n    0.705 \n    0.702"
+    "section": "",
+    "text": "\\(\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\frac{1}{N^2}\\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\)\n    \n\\(\\hat{\\mathbb{V}}[\\hat{\\tau}_{st}]  =\\)\n\n\n\nCode\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) |&gt; \n  kableExtra::kable_styling(font_size = 25)\n\n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#target-population-parameters",
     "href": "2-slides/10.3-stratified-est-size.html#target-population-parameters",
     "title": "Module 10: Survey Sampling",
-    "section": "Target Population Parameters",
-    "text": "Target Population Parameters\n\\[\n\\begin{align}\n\\tau &= \\sum_{g=1}^L \\sum_{i=1}^{N_g} y_{gi}\\\\\n&= \\sum_{g=1}^L\n\\end{align}\n\\] \\[\n\\begin{align}\n\\mu &= \\frac{1}{N}\\tau\\\\\n&= \\frac{1}{N}\\sum_{g=1}^L\\qquad\\mu_g\n\\end{align}\n\\]"
+    "section": "",
+    "text": "\\[\n\\begin{align}\n\\tau &= \\sum_{g=1}^L \\sum_{i=1}^{N_g} y_{gi}\\\\\n&= \\sum_{g=1}^L\n\\end{align}\n\\] \\[\n\\begin{align}\n\\mu &= \\frac{1}{N}\\tau\\\\\n&= \\frac{1}{N}\\sum_{g=1}^L\\qquad\\mu_g\n\\end{align}\n\\]"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#using-r-for-sampling-estimates",
@@ -7662,36 +7662,36 @@
     "objectID": "2-slides/10.3-stratified-est-size.html#using-r-for-sampling-estimates---survey-package",
     "href": "2-slides/10.3-stratified-est-size.html#using-r-for-sampling-estimates---survey-package",
     "title": "Module 10: Survey Sampling",
-    "section": "Using R for Sampling Estimates - survey package",
-    "text": "Using R for Sampling Estimates - survey package\n\nlibrary(survey)\n\nStep 1: Set Up Design\n\n\nSRS\n\nsrs_des &lt;- svydesign(id = ~1, \n                     data = agpopsrs,\n                     fpc = ~N,\n                     na_weights = \"warn\")\n\n\nStratified\n\nstrat_des &lt;- svydesign(id = ~1,\n                       data = agpop_strat,\n                       strata = ~region,\n                       fpc = ~N_g,\n                       na_weights = \"warn\")"
+    "section": "",
+    "text": "library(survey)\n\nStep 1: Set Up Design\n\n\nSRS\n\nsrs_des &lt;- svydesign(id = ~1, \n                     data = agpopsrs,\n                     fpc = ~N,\n                     na_weights = \"warn\")\n\n\nStratified\n\nstrat_des &lt;- svydesign(id = ~1,\n                       data = agpop_strat,\n                       strata = ~region,\n                       fpc = ~N_g,\n                       na_weights = \"warn\")"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#using-r-for-sampling-estimates---survey-package-1",
     "href": "2-slides/10.3-stratified-est-size.html#using-r-for-sampling-estimates---survey-package-1",
     "title": "Module 10: Survey Sampling",
-    "section": "Using R for Sampling Estimates - survey package",
-    "text": "Using R for Sampling Estimates - survey package\nStep 2: Estimates\n\n\nSRS\n\n# mean or prop\nsvymean(~acres92mil, design = srs_des, na.rm = T)\n\n             mean     SE\nacres92mil 0.2937 0.0259\n\n\n\n# total\nsvytotal(~acres92mil, design = srs_des, na.rm = T)\n\n            total    SE\nacres92mil 897.95 79.17\n\n\n\nStratified\n\n# mean or prop\nsvymean(~acres92mil, design = strat_des, na.rm = T)\n\n              mean    SE\nacres92mil 0.30328 0.019\n\n\n\n# total\nsvytotal(~acres92mil, design = strat_des, na.rm = T)\n\n            total     SE\nacres92mil 927.24 58.297"
+    "section": "",
+    "text": "Step 2: Estimates\n\n\nSRS\n\n# mean or prop\nsvymean(~acres92mil, design = srs_des, na.rm = T)\n\n             mean     SE\nacres92mil 0.2937 0.0259\n\n\n\n# total\nsvytotal(~acres92mil, design = srs_des, na.rm = T)\n\n            total    SE\nacres92mil 897.95 79.17\n\n\n\nStratified\n\n# mean or prop\nsvymean(~acres92mil, design = strat_des, na.rm = T)\n\n              mean    SE\nacres92mil 0.30328 0.019\n\n\n\n# total\nsvytotal(~acres92mil, design = strat_des, na.rm = T)\n\n            total     SE\nacres92mil 927.24 58.297"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#what-if-we-used-the-wrong-design-for-estimation",
     "href": "2-slides/10.3-stratified-est-size.html#what-if-we-used-the-wrong-design-for-estimation",
     "title": "Module 10: Survey Sampling",
-    "section": "What if we used the wrong design for estimation?",
-    "text": "What if we used the wrong design for estimation?\n\n\n\n\n\n\nWrong analysis – ignoring strata in estimation\n\n\n\nincorrect_des &lt;- svydesign(id = ~1, \n                        data = agpop_strat,\n                        fpc = ~N,\n                        na_weights = \"warn\")\n\n\n# mean or prop\nsvymean(~acres92mil, design = incorrect_des, na.rm = T)\n\n              mean     SE\nacres92mil 0.30359 0.0212\n\n# total\nsvytotal(~acres92mil, design = incorrect_des, na.rm = T)\n\n            total     SE\nacres92mil 928.17 65.026"
+    "section": "",
+    "text": "WarningWrong analysis – ignoring strata in estimation\n\n\n\n\nincorrect_des &lt;- svydesign(id = ~1, \n                        data = agpop_strat,\n                        fpc = ~N,\n                        na_weights = \"warn\")\n\n\n# mean or prop\nsvymean(~acres92mil, design = incorrect_des, na.rm = T)\n\n              mean     SE\nacres92mil 0.30359 0.0212\n\n# total\nsvytotal(~acres92mil, design = incorrect_des, na.rm = T)\n\n            total     SE\nacres92mil 928.17 65.026"
   },
   {
     "objectID": "1-prep/10.3-prep.html",
     "href": "1-prep/10.3-prep.html",
     "title": "10.3 Preparation: Estimation with Stratified Random Sampling and Determining Sample Size",
     "section": "",
-    "text": "NoneLearning Objectives\n\n\n\n\nEstimate the population mean and total with Stratified Random Sampling\nEstimate the variance of estimators with Stratified Random Sampling\nCalculate sample size based on a margin of error, estimator, and design"
+    "text": "NoneLearning Objectives\n\n\n\n\nEstimate the population mean and total with Stratified Random Sampling\nEstimate the variance of estimators with Stratified Random Sampling\nCalculate sample size based on a margin of error, estimator, and design\n\n\n\nFor additional practice problems and reading see:\n\nCh 3.2, 3.4, 3.5) in Sampling: Design and Analysis 3rd Edition by Sharon L. Lohr.\nCh 4.3-4.7, 5.1-5.9 in Elementary Survey Sampling 7th Edition by Schaeffer et. al.\nYou can request the books from the library including just certain pages! Or find a copy in the ways you know how to…."
   },
   {
     "objectID": "1-prep/10.3-prep.html#estimation-with-stratified-random-sampling",
     "href": "1-prep/10.3-prep.html#estimation-with-stratified-random-sampling",
     "title": "10.3 Preparation: Estimation with Stratified Random Sampling and Determining Sample Size",
     "section": "1 Estimation with Stratified Random Sampling",
-    "text": "1 Estimation with Stratified Random Sampling\n\n📽 Follow along with the slides.\n\nvideo coming soon!"
+    "text": "1 Estimation with Stratified Random Sampling\n\n📽 Follow along with the slides."
   },
   {
     "objectID": "1-prep/10.3-prep.html#determining-sample-size",
