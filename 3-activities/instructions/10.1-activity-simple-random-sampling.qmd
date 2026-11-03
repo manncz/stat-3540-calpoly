@@ -8,8 +8,8 @@ bibliography: ../references.bib
 
 echo: false
 format:
-  html: default
   docx: default
+  html: default
 ---
 ::: callout-warning
 - Submit via Gradescope, don't forget to assign pages to the questions in the outline!
