@@ -37,5 +37,9 @@ For additional practice problems and reading see:
 
 ## Determining Sample Size
 
-coming soon!
+- 📽 Follow along with the [slides](../2-slides/10.3-stratified-est-size.qmd#/determining-sample-size).
+
+
+
+video coming soon!
 
