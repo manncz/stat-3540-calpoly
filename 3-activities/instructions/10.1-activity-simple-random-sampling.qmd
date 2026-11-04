@@ -45,7 +45,7 @@ For the following questions, describe the target population, sampling frame, sam
 You might want to look up information (or ask Dr. C about the Iowa State Fair) to really think about errors.
 :::
 
-2. To study nutrient content of menus in retirement homes (for elderly folks who need care) in Washington State, Goren et al. (1993) mailed surveys to all 184 licenced homes in Washington State, directed to the administrator and food service manager. Of those, 43 were returned by the deadline and included menus.
+2. To study nutrient content of menus in retirement homes (for elderly folks who need care) in Washington State, Goren et al. (1993) mailed surveys to all 184 licensed homes in Washington State, directed to the administrator and food service manager. Of those, 43 were returned by the deadline and included menus.
 
 - target population:
 

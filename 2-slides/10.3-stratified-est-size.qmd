@@ -515,7 +515,7 @@ $$a_g = \frac{N_g\sigma_g^2}{\sum_{h = 1}^L N_h\sigma_h} \quad \quad  n = \frac{
   - for a stratum population variance: $p_g(1-p_g) = \sigma_g^2$
   
 
-## Summary of Allocations
+## Summary of Allocations {.smaller}
 
 - **Proportional** Allocation
   - Cost of sampling **and** variances are approximately **equal** for all strata
