@@ -7522,36 +7522,36 @@
     "objectID": "2-slides/10.3-stratified-est-size.html#notation-for-stratified-random-sampling",
     "href": "2-slides/10.3-stratified-est-size.html#notation-for-stratified-random-sampling",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "\\(N\\): population size (number of sampling units in the population)\n\\(n\\): sample size\n\\(L\\): number of strata\n\\(N_{g}\\): number of sampling units in stratum \\(g\\)\n\\(n_{g}\\): number of units selected from the \\(N_{g}\\) sampling units in stratum \\(g\\) (strata \\(g\\)’s sample size)"
+    "section": "Notation for Stratified Random Sampling",
+    "text": "Notation for Stratified Random Sampling\n\\(N\\): population size (number of sampling units in the population)\n\\(n\\): sample size\n\\(L\\): number of strata\n\\(N_{g}\\): number of sampling units in stratum \\(g\\)\n\\(n_{g}\\): number of units selected from the \\(N_{g}\\) sampling units in stratum \\(g\\) (strata \\(g\\)’s sample size)"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#notation-for-stratified-random-sampling-1",
     "href": "2-slides/10.3-stratified-est-size.html#notation-for-stratified-random-sampling-1",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "\\(y_{gi}\\): value of the \\(i^{th}\\) unit in stratum \\(g\\)\npopulation parameters\n\\(\\mu_g\\): population mean of stratum \\(g\\)\n\\(\\tau_g\\): population total of stratum \\(g\\)\n\\(\\sigma^2_g\\): population variance of stratum \\(g\\)\nsample statistics\n\\(\\bar{y}_g = \\frac{1}{n_g}\\sum_{i = 1}^{n_g} y_{gi}\\): sample mean for stratum \\(g\\)\n\\(s^2_g\\): sample standard deviation of stratum \\(g\\)"
+    "section": "Notation for Stratified Random Sampling",
+    "text": "Notation for Stratified Random Sampling\n\\(y_{gi}\\): value of the \\(i^{th}\\) unit in stratum \\(g\\)\npopulation parameters\n\\(\\mu_g\\): population mean of stratum \\(g\\)\n\\(\\tau_g\\): population total of stratum \\(g\\)\n\\(\\sigma^2_g\\): population variance of stratum \\(g\\)\nsample statistics\n\\(\\bar{y}_g = \\frac{1}{n_g}\\sum_{i = 1}^{n_g} y_{gi}\\): sample mean for stratum \\(g\\)\n\\(s^2_g\\): sample standard deviation of stratum \\(g\\)"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-the-population-mean-with-stratified-random-sampling",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-the-population-mean-with-stratified-random-sampling",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "Overall population mean: \\(\\mu = \\frac{1}{N}\\cdot\\tau\\)\nOverall population total: \\(\\tau = \\displaystyle\\sum_{g = 1}^L \\tau_g\\)\nSince the sample in each stratum is a SRS, we know that \\(\\hat{\\tau}_g = N_g\\bar{y}_g\\) is an unbiased estimator for \\(\\tau_g\\)\nTherefore, an unbiased estimator (\\(\\bar{y}_{st}\\)) for \\(\\mu\\) is: \\(\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L\\)"
+    "section": "Estimating the Population Mean with Stratified Random Sampling",
+    "text": "Estimating the Population Mean with Stratified Random Sampling\n\nOverall population mean: \\(\\mu = \\frac{1}{N}\\cdot\\tau\\)\nOverall population total: \\(\\tau = \\displaystyle\\sum_{g = 1}^L \\tau_g\\)\nSince the sample in each stratum is a SRS, we know that \\(\\hat{\\tau}_g = N_g\\bar{y}_g\\) is an unbiased estimator for \\(\\tau_g\\)\nTherefore, an unbiased estimator (\\(\\bar{y}_{st}\\)) for \\(\\mu\\) is: \\(\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L\\)"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-the-population-mean-with-stratified-random-sampling-1",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-the-population-mean-with-stratified-random-sampling-1",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "\\[\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\n\\[\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\frac{1}{N^2}\\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\]"
+    "section": "Estimating the Population Mean with Stratified Random Sampling",
+    "text": "Estimating the Population Mean with Stratified Random Sampling\n\\[\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\n\\[\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\frac{1}{N^2}\\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\]"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-the-population-total-with-stratified-random-sampling",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-the-population-total-with-stratified-random-sampling",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "Therefore, an unbiased estimator for \\(\\tau\\) is:\n\\[\\hat{\\tau}_{st} = N\\bar{y}_{st} = \\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\nAnd a reasonable estimated variance is:\n\\[\\hat{\\mathbb{V}}[N\\bar{y}_{st}] = N^2\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\]"
+    "section": "Estimating the Population Total with Stratified Random Sampling",
+    "text": "Estimating the Population Total with Stratified Random Sampling\nTherefore, an unbiased estimator for \\(\\tau\\) is:\n\\[\\hat{\\tau}_{st} = N\\bar{y}_{st} = \\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\nAnd a reasonable estimated variance is:\n\\[\\hat{\\mathbb{V}}[N\\bar{y}_{st}] = N^2\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\]"
   },
   {
     "objectID": "1-prep/10.2-prep.html",
@@ -7599,8 +7599,8 @@
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-farm-acres-stratified-sampling-1",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-farm-acres-stratified-sampling-1",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "table(agpop$region)\n\n\n  NC   NE    S    W \n1054  220 1382  422 \n\nset.seed(343)\n\nagpop_strat &lt;- agpop |&gt; \n  group_by(region) |&gt; \n  mutate(N_g = n()) |&gt; \n  slice_sample(prop = 300/3078)\n\n\n\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) \n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702"
+    "section": "Estimating Farm Acres – Stratified Sampling",
+    "text": "Estimating Farm Acres – Stratified Sampling\n\n\n\ntable(agpop$region)\n\n\n  NC   NE    S    W \n1054  220 1382  422 \n\nset.seed(343)\n\nagpop_strat &lt;- agpop |&gt; \n  group_by(region) |&gt; \n  mutate(N_g = n()) |&gt; \n  slice_sample(prop = 300/3078)\n\n\n\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) \n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#section",
@@ -7627,22 +7627,22 @@
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-mean-and-total-farm-acres-stratified-sampling",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-mean-and-total-farm-acres-stratified-sampling",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "\\(\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\)\n    \n\\(\\hat{\\tau}_{st} = N\\bar{y}_{st} =\\)\n\n\n\nCode\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) |&gt; \n  kableExtra::kable_styling(font_size = 25)\n\n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702"
+    "section": "Estimating Mean and Total Farm Acres – Stratified Sampling",
+    "text": "Estimating Mean and Total Farm Acres – Stratified Sampling\n\n\n\\(\\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\)\n    \n\\(\\hat{\\tau}_{st} = N\\bar{y}_{st} =\\)\n\n\n\nCode\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) |&gt; \n  kableExtra::kable_styling(font_size = 25)\n\n\n\n \n  \n    region \n    N_g \n    n_g \n    ybar_g \n    sd_g \n  \n \n\n  \n    NC \n    1054 \n    102 \n    0.340 \n    0.280 \n  \n  \n    NE \n    220 \n    21 \n    0.102 \n    0.092 \n  \n  \n    S \n    1382 \n    134 \n    0.186 \n    0.230 \n  \n  \n    W \n    422 \n    41 \n    0.705 \n    0.702"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#estimating-variability-of-estimated-farm-acres",
     "href": "2-slides/10.3-stratified-est-size.html#estimating-variability-of-estimated-farm-acres",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "\\(\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\frac{1}{N^2}\\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\)\n    \n\\(\\hat{\\mathbb{V}}[\\hat{\\tau}_{st}]  =\\)\n\n\n\nCode\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) |&gt; \n  kableExtra::kable_styling(font_size = 25)\n\n\n\n\n\nregion\nN_g\nn_g\nybar_g\nsd_g\n\n\n\n\nNC\n1054\n102\n0.340\n0.280\n\n\nNE\n220\n21\n0.102\n0.092\n\n\nS\n1382\n134\n0.186\n0.230\n\n\nW\n422\n41\n0.705\n0.702"
+    "section": "Estimating Variability of Estimated Farm Acres",
+    "text": "Estimating Variability of Estimated Farm Acres\n\n\n\\(\\hat{\\mathbb{V}}[\\bar{y}_{st}] = \\frac{1}{N^2}\\displaystyle\\sum_{g = 1}^L N_g^2 \\Big(1-\\frac{n_g}{N_g}\\Big)\\Big(\\frac{s_g^2}{n_g}\\Big)\\)\n    \n\\(\\hat{\\mathbb{V}}[\\hat{\\tau}_{st}]  =\\)\n\n\n\nCode\nagpop_strat |&gt; \n  group_by(region, N_g) |&gt; \n  summarize(n_g = n(), \n            ybar_g = mean(acres92mil, na.rm = T),\n            sd_g = sd(acres92mil, na.rm = T)) |&gt; \n  knitr::kable(digits = 3) |&gt; \n  kableExtra::kable_styling(font_size = 25)\n\n\n\n \n  \n    region \n    N_g \n    n_g \n    ybar_g \n    sd_g \n  \n \n\n  \n    NC \n    1054 \n    102 \n    0.340 \n    0.280 \n  \n  \n    NE \n    220 \n    21 \n    0.102 \n    0.092 \n  \n  \n    S \n    1382 \n    134 \n    0.186 \n    0.230 \n  \n  \n    W \n    422 \n    41 \n    0.705 \n    0.702"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#target-population-parameters",
     "href": "2-slides/10.3-stratified-est-size.html#target-population-parameters",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "\\[\n\\begin{align}\n\\tau &= \\sum_{g=1}^L \\sum_{i=1}^{N_g} y_{gi}\\\\\n&= \\sum_{g=1}^L\n\\end{align}\n\\] \\[\n\\begin{align}\n\\mu &= \\frac{1}{N}\\tau\\\\\n&= \\frac{1}{N}\\sum_{g=1}^L\\qquad\\mu_g\n\\end{align}\n\\]"
+    "section": "Target Population Parameters",
+    "text": "Target Population Parameters\n\\[\n\\begin{align}\n\\tau &= \\sum_{g=1}^L \\sum_{i=1}^{N_g} y_{gi}\\\\\n&= \\sum_{g=1}^L\n\\end{align}\n\\] \\[\n\\begin{align}\n\\mu &= \\frac{1}{N}\\tau\\\\\n&= \\frac{1}{N}\\sum_{g=1}^L\\qquad\\mu_g\n\\end{align}\n\\]"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#using-r-for-sampling-estimates",
@@ -7662,22 +7662,22 @@
     "objectID": "2-slides/10.3-stratified-est-size.html#using-r-for-sampling-estimates---survey-package",
     "href": "2-slides/10.3-stratified-est-size.html#using-r-for-sampling-estimates---survey-package",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "library(survey)\n\nStep 1: Set Up Design\n\n\nSRS\n\nsrs_des &lt;- svydesign(id = ~1, \n                     data = agpopsrs,\n                     fpc = ~N,\n                     na_weights = \"warn\")\n\n\nStratified\n\nstrat_des &lt;- svydesign(id = ~1,\n                       data = agpop_strat,\n                       strata = ~region,\n                       fpc = ~N_g,\n                       na_weights = \"warn\")"
+    "section": "Using R for Sampling Estimates - survey package",
+    "text": "Using R for Sampling Estimates - survey package\n\nlibrary(survey)\n\nStep 1: Set Up Design\n\n\nSRS\n\nsrs_des &lt;- svydesign(id = ~1, \n                     data = agpopsrs,\n                     fpc = ~N,\n                     na_weights = \"warn\")\n\n\nStratified\n\nstrat_des &lt;- svydesign(id = ~1,\n                       data = agpop_strat,\n                       strata = ~region,\n                       fpc = ~N_g,\n                       na_weights = \"warn\")"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#using-r-for-sampling-estimates---survey-package-1",
     "href": "2-slides/10.3-stratified-est-size.html#using-r-for-sampling-estimates---survey-package-1",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "Step 2: Estimates\n\n\nSRS\n\n# mean or prop\nsvymean(~acres92mil, design = srs_des, na.rm = T)\n\n             mean     SE\nacres92mil 0.2937 0.0259\n\n\n\n# total\nsvytotal(~acres92mil, design = srs_des, na.rm = T)\n\n            total    SE\nacres92mil 897.95 79.17\n\n\n\nStratified\n\n# mean or prop\nsvymean(~acres92mil, design = strat_des, na.rm = T)\n\n              mean    SE\nacres92mil 0.30328 0.019\n\n\n\n# total\nsvytotal(~acres92mil, design = strat_des, na.rm = T)\n\n            total     SE\nacres92mil 927.24 58.297"
+    "section": "Using R for Sampling Estimates - survey package",
+    "text": "Using R for Sampling Estimates - survey package\nStep 2: Estimates\n\n\nSRS\n\n# mean or prop\nsvymean(~acres92mil, design = srs_des, na.rm = T)\n\n             mean     SE\nacres92mil 0.2937 0.0259\n\n\n\n# total\nsvytotal(~acres92mil, design = srs_des, na.rm = T)\n\n            total    SE\nacres92mil 897.95 79.17\n\n\n\nStratified\n\n# mean or prop\nsvymean(~acres92mil, design = strat_des, na.rm = T)\n\n              mean    SE\nacres92mil 0.30328 0.019\n\n\n\n# total\nsvytotal(~acres92mil, design = strat_des, na.rm = T)\n\n            total     SE\nacres92mil 927.24 58.297"
   },
   {
     "objectID": "2-slides/10.3-stratified-est-size.html#what-if-we-used-the-wrong-design-for-estimation",
     "href": "2-slides/10.3-stratified-est-size.html#what-if-we-used-the-wrong-design-for-estimation",
     "title": "Module 10: Survey Sampling",
-    "section": "",
-    "text": "WarningWrong analysis – ignoring strata in estimation\n\n\n\n\nincorrect_des &lt;- svydesign(id = ~1, \n                        data = agpop_strat,\n                        fpc = ~N,\n                        na_weights = \"warn\")\n\n\n# mean or prop\nsvymean(~acres92mil, design = incorrect_des, na.rm = T)\n\n              mean     SE\nacres92mil 0.30359 0.0212\n\n# total\nsvytotal(~acres92mil, design = incorrect_des, na.rm = T)\n\n            total     SE\nacres92mil 928.17 65.026"
+    "section": "What if we used the wrong design for estimation?",
+    "text": "What if we used the wrong design for estimation?\n\n\n\n\n\n\nWrong analysis – ignoring strata in estimation\n\n\n\nincorrect_des &lt;- svydesign(id = ~1, \n                        data = agpop_strat,\n                        fpc = ~N,\n                        na_weights = \"warn\")\n\n\n# mean or prop\nsvymean(~acres92mil, design = incorrect_des, na.rm = T)\n\n              mean     SE\nacres92mil 0.30359 0.0212\n\n# total\nsvytotal(~acres92mil, design = incorrect_des, na.rm = T)\n\n            total     SE\nacres92mil 928.17 65.026"
   },
   {
     "objectID": "1-prep/10.3-prep.html",
@@ -7769,5 +7769,138 @@
     "title": "Activity 10.2: Seeing Stars",
     "section": "Estimating Stars with Stratified Random Sampling",
     "text": "Estimating Stars with Stratified Random Sampling\n\nWhat is a potential benefit to using stratified random sampling to estimate the number of stars?\n\nYou could stratify by any number of things! We are going to look into two possibilities.\n\nStratify by Density\nDivide the star map into two strata, high density and low density.\n\nLow density: \\(N_1 = 80\\) squares\nHigh density: \\(N_2 = 20\\) squares\n\n\nLet \\(g = 1\\) index the low density stratum and \\(g = 2\\) index the high density stratum. Say I will be taking a sample proportional to the population sizes of the stratum.\n\nDefine the following in context\n\n\\(\\mu_1:\\)\n\\(\\sigma^2_1:\\)\n\\(\\bar{y}_1:\\)\n\\(s^2_1:\\)\n\nFill in the values:\n\n\\(L =\\)\n\\(N =\\)\n\\(n = 10\\)\n\\(n_1 =\\)\n\\(n_2 =\\)\n\n\n\n\n\n\n\nWarningMore App instructions\n\n\n\n\nGo back to the applet and select Stratify Samples by under “Show Sampling Options”\nChoose density under Variable:\nTake 1,000 samples of size 10\n\n\n\n\n\nInclude a screenshot of the last set of sample data, making sure the Mean and SD values are visible.\nInclude a screenshot of the sampling distribution of the sample mean making sure the mean and SD values are visible.\nDid the simulated distribution align with your expectations?\nHow did doing stratified sampling based on density compare to SRS in terms of bias, precision, and accuracy?\n\n\n\nStratify by Side\nWhat if we consider side of the map instead?\nLet’s split the star map vertically into two equal halves\n\nstars in the left 50 squares of the map (columns 0 – 4) would be in the left stratum\nstars in the right 50 squares of the map (columns 5 – 9) would be in the right stratum.\n\n\n\n\nMap of sky split up into grids.\n\n\n\n\n\n\n\n\nWarningBack to the app!\n\n\n\n\nNow, stratify by the side variable rather than density\nRun 1,000 simulations with this stratification\n\n\n\n\nInclude a screenshot of the last set of sample data, making sure the Mean and SD values are visible.\nInclude a screenshot of the sampling distribution of the sample mean making sure the mean and SD values are visible.\nHow did doing stratified sampling based on side compare to SRS in terms of bias, precision, and accuracy?"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#review-confidence-intervals",
+    "href": "2-slides/10.3-stratified-est-size.html#review-confidence-intervals",
+    "title": "Module 10: Survey Sampling",
+    "section": "Review: Confidence Intervals",
+    "text": "Review: Confidence Intervals\n\\[\\hat{\\theta} \\pm \\text{critical value} \\times SE(\\hat{\\theta})\\]\n95% CI: \\(\\hat{\\theta} \\pm 2 \\times SE(\\hat{\\theta})\\)"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#bound-on-error-of-estimation",
+    "href": "2-slides/10.3-stratified-est-size.html#bound-on-error-of-estimation",
+    "title": "Module 10: Survey Sampling",
+    "section": "Bound on Error of Estimation",
+    "text": "Bound on Error of Estimation\nSimple Random Sampling for population mean:\n\\[B = 2\\sqrt{\\Big(\\frac{N-n}{N-1}\\Big)\\frac{\\sigma^2}{n}}\\]\nStratified Random Sampling for population mean:\n\\[B = 2\\sqrt{\\sum_{g=1}^L \\Big(\\frac{N_g}{N}\\Big)^2 \\Big(\\frac{N_g-n_g}{N_g-1}\\Big)\\frac{\\sigma_g^2}{n_g}}\\]"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#extension-estimating-population-proportions",
+    "href": "2-slides/10.3-stratified-est-size.html#extension-estimating-population-proportions",
+    "title": "Module 10: Survey Sampling",
+    "section": "Extension: Estimating Population Proportions",
+    "text": "Extension: Estimating Population Proportions\n\nWe haven’t talked about estimating population proportions yet…\nThis is because a proportion is just a special mean where the outcome variable is binary\n\n\\[\ny_i =\n  \\begin{cases}\n    1       & \\quad \\text{if ``success\"}\\\\\n    0      & \\quad \\text{if ``failure\"}\n  \\end{cases}\n\\] SRS: \\(p = \\frac{1}{N}\\displaystyle\\sum_{j=1}^N y_i = \\frac{\\text{\\# successes}}{N} \\qquad \\qquad \\hat{p} = \\frac{1}{n}\\displaystyle\\sum_{j=1}^n y_i = \\frac{\\text{\\# successes}}{n}\\)"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#estimating-population-proportions",
+    "href": "2-slides/10.3-stratified-est-size.html#estimating-population-proportions",
+    "title": "Module 10: Survey Sampling",
+    "section": "Estimating Population Proportions",
+    "text": "Estimating Population Proportions\nSRS\n\n\n\n\n\n\n\nEstimator\n\n\n\n\n\nPoint\n\\(\\hat{p} = \\bar{y} =  \\frac{1}{n}\\sum_{i=1}^ny_i\\)\n\n\nVariance\n\\(\\hat{\\mathbb{V}}(\\hat{p}) = \\Big(1 - \\frac{n}{N}\\Big)\\frac{\\hat{p}(1-\\hat{p})}{n-1}\\)\n\n\n\nStratified\n\n\n\n\n\n\n\nEstimator\n\n\n\n\n\nPoint\n\\(\\hat{p}_{st} = \\bar{y}_{st} = \\frac{1}{N}\\sum_{g=1}^LN_g\\hat{p}_g\\)\n\n\nVariance\n\\(\\hat{\\mathbb{V}}(\\hat{p}_{st}) = \\frac{1}{N^2}\\sum_{g=1}^LN_g^2\\Big(1 - \\frac{n_g}{N_g}\\Big)\\frac{\\hat{p}_g(1-\\hat{p}_g)}{n_g-1}\\)"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#review-population-proportions",
+    "href": "2-slides/10.3-stratified-est-size.html#review-population-proportions",
+    "title": "Module 10: Survey Sampling",
+    "section": "Review: Population Proportions",
+    "text": "Review: Population Proportions\nPopulation:\n\n\\(p\\) is the population proportion of successes\n\\(\\sigma^2 = p(1-p)\\) is the population variance\n\nSample:\n\n\\(\\hat{p}\\) is the sample proportion of successes\n\\(\\mathbb{E}[\\hat{p}] = p\\)\nIn previous classes with infinite populations: \\(\\mathbb{V}[\\hat{p}] = \\frac{p(1-p)}{n}\\)"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---estimating-mu-with-srs",
+    "href": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---estimating-mu-with-srs",
+    "title": "Module 10: Survey Sampling",
+    "section": "Calculating Sample Size - Estimating \\(\\mu\\) with SRS",
+    "text": "Calculating Sample Size - Estimating \\(\\mu\\) with SRS\nSample size required to estimate \\(\\mu\\) with a bound on the error of estimation \\(B\\):\n\\[n = \\frac{N\\sigma^2}{(N-1)D + \\sigma^2}\\] where \\[D = \\frac{B^2}{4}\\]"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---srs",
+    "href": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---srs",
+    "title": "Module 10: Survey Sampling",
+    "section": "Calculating Sample Size - SRS",
+    "text": "Calculating Sample Size - SRS\nSample size required to estimate the population mean, \\(\\mu\\), or total, \\(\\tau\\) with a bound on the error of estimation \\(B\\):\n\\[n = \\frac{N\\sigma^2}{(N-1)D + \\sigma^2}\\]\nwhere \\[D = \\frac{B^2}{4} \\text{ when estimating } \\mu\\] \\[D = \\frac{B^2}{4N^2} \\text{ when estimating } \\tau\\]"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---estimating-tau-with-srs",
+    "href": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---estimating-tau-with-srs",
+    "title": "Module 10: Survey Sampling",
+    "section": "Calculating Sample Size - Estimating \\(\\tau\\) with SRS",
+    "text": "Calculating Sample Size - Estimating \\(\\tau\\) with SRS\nSample size required to estimate \\(\\tau\\) with a bound on the error of estimation \\(B\\):\n\\[n = \\frac{N\\sigma^2}{(N-1)D + \\sigma^2}\\] where \\[D = \\frac{B^2}{4}\\]"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---srs-1",
+    "href": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---srs-1",
+    "title": "Module 10: Survey Sampling",
+    "section": "Calculating Sample Size - SRS",
+    "text": "Calculating Sample Size - SRS\nSample size required to estimate the population proportion \\(p\\) with a bound on the error of estimation \\(B\\):\n\\[n = \\frac{N p(1-p)}{(N-1)D + p(1-p)}\\]\nwhere \\[D = \\frac{B^2}{4} \\text{ when estimating } p\\]"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---stratified-random-sampling",
+    "href": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---stratified-random-sampling",
+    "title": "Module 10: Survey Sampling",
+    "section": "Calculating Sample Size - Stratified Random Sampling",
+    "text": "Calculating Sample Size - Stratified Random Sampling\nMulti-step process:\n\nDetermine how you want to allocate the sample size between clusters \\[n_g = a_g n \\qquad \\text{    for } g = 1, ..., L \\text{ and } a_1 + ... + a_L = 1\\] \\[a_g\\text{ is the proportion of sampling units allocated to stratum }g\\]\nDetermine the overall sample size \\(n\\) given a bound \\(B\\)\nCalculate the appropriate stratum sizes \\(n_1, ..., n_L\\), given \\(n\\) and the chosen allocation"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---stratified-random-sampling-1",
+    "href": "2-slides/10.3-stratified-est-size.html#calculating-sample-size---stratified-random-sampling-1",
+    "title": "Module 10: Survey Sampling",
+    "section": "Calculating Sample Size - Stratified Random Sampling",
+    "text": "Calculating Sample Size - Stratified Random Sampling\nApproximate sample size required to estimate the population mean, \\(\\mu\\), or total, \\(\\tau\\) with a bound on the error of estimation \\(B\\):\n\\[n = \\frac{\\displaystyle\\sum_{g=1}^L N_g\\sigma_g^2/a_g}{(N-1)D + \\sigma^2}\\]\nwhere \\(a_g\\) is the fraction of observations allocated to stratum \\(g\\) and \\[D = \\frac{B^2}{4} \\text{ when estimating } \\mu, \\quad D = \\frac{B^2}{4N^2} \\text{ when estimating } \\tau\\]"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#stratified-random-sampling-how-to-choose-allocation",
+    "href": "2-slides/10.3-stratified-est-size.html#stratified-random-sampling-how-to-choose-allocation",
+    "title": "Module 10: Survey Sampling",
+    "section": "Stratified Random Sampling – How to Choose Allocation?",
+    "text": "Stratified Random Sampling – How to Choose Allocation?\nConsider three factors:\n\n\\(N_g\\):\n\\(\\sigma^2_g\\):\n\\(c_g\\): Cost of obtaining an observation in each stratum\n\nThree types of allocations:\n\nProportional Allocation\nOptimal Allocation\nNeyman Allocation"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#proportional-allocation",
+    "href": "2-slides/10.3-stratified-est-size.html#proportional-allocation",
+    "title": "Module 10: Survey Sampling",
+    "section": "Proportional Allocation",
+    "text": "Proportional Allocation\n\nnumber of sampled unit in each stratum is proportional to the size of the stratum.\n\n\\[a_g = \\frac{N_g}{N} \\quad \\quad n = \\frac{\\displaystyle\\sum_{g=1}^L N_g\\sigma_g^2}{ND + \\displaystyle\\sum_{g=1}^L\\frac{N_g}{N}\\sigma_g^2}\\]\n\\(\\pi_{gi} =\\)\n\nUse when: cost of sampling and variances are approximately equal for all strata"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#optimal-allocation",
+    "href": "2-slides/10.3-stratified-est-size.html#optimal-allocation",
+    "title": "Module 10: Survey Sampling",
+    "section": "Optimal Allocation",
+    "text": "Optimal Allocation\n\nIncreases precision if stratum variances vary across strata\n\nminimizes variance for a fixed total cost or\nminimizes cost for a fixed variance (i.e. fixed B)\n\n\n\\[a_g = \\frac{N_g\\sigma_g^2/\\sqrt{c_g}}{\\sum_{h = 1}^L N_h\\sigma_h/\\sqrt{c_g}} \\quad \\quad n = \\frac{\\Big(\\displaystyle\\sum_{g=1}^L N_g\\sigma_g/\\sqrt{c_g}\\Big)\\Big(\\displaystyle\\sum_{g=1}^L N_g\\sigma_g\\sqrt{c_g}\\Big)}{N^2D + \\displaystyle\\sum_{g=1}^LN_g\\sigma_g^2}\\]\n\nUse when: costs of sampling and stratum variances vary across strata"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#neyman-allocation",
+    "href": "2-slides/10.3-stratified-est-size.html#neyman-allocation",
+    "title": "Module 10: Survey Sampling",
+    "section": "Neyman Allocation",
+    "text": "Neyman Allocation\n\nspecial case of optimal allocation when costs are similar between strata\nwill support more precise estimation than proportional allocation if stratum variances are specified correctly\n\n\\[a_g = \\frac{N_g\\sigma_g^2}{\\sum_{h = 1}^L N_h\\sigma_h} \\quad \\quad  n = \\frac{\\Big(\\displaystyle\\sum_{g=1}^L N_g\\sigma_g\\Big)^2}{N^2D + \\displaystyle\\sum_{g=1}^LN_g\\sigma_g^2}\\]\n\nUse when: stratum variances vary across strata but costs of sampling are the same"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#determining-sample-size-and-allocation-for-estimating-proportions",
+    "href": "2-slides/10.3-stratified-est-size.html#determining-sample-size-and-allocation-for-estimating-proportions",
+    "title": "Module 10: Survey Sampling",
+    "section": "Determining Sample Size and Allocation for Estimating Proportions",
+    "text": "Determining Sample Size and Allocation for Estimating Proportions\n\nRemember, the population proportion \\(p\\) and sample proportion \\(\\hat{p}\\) are just special cases of means where \\(y\\) is a binary variable.\nFollow the equations for estimating the population mean \\(\\mu\\) but substitute\n\nfor the overall population variance: \\(p(1-p) = \\sigma^2\\)\nfor a stratum population variance: \\(p_g(1-p_g) = \\sigma_g^2\\)"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#summary",
+    "href": "2-slides/10.3-stratified-est-size.html#summary",
+    "title": "Module 10: Survey Sampling",
+    "section": "Summary",
+    "text": "Summary\nTo determine a sample size,\n\nDetermine your desired maximum bound of error \\(B\\)\nApproximate population variance(s) using one of the options…\n\nhistorical data, a pilot study, or\nestimating \\(\\mu\\) or \\(\\tau\\)? last resort \\(\\rightarrow\\) (range of variable)/4\nestimating \\(p\\)? last resort \\(\\rightarrow\\) use \\(p = 0.5\\) or for a conservative estimate\n\nIf stratified sample, choose allocation type\nCalculate \\(n\\) for the appropriate population parameter and study design, given (1) the bound you chose, (2) approximated population variances, and (3) allocations if appropriate\nIf stratified sample, calculate stratum sample sizes (\\(n_g\\)’s) from \\(n\\) and allocations"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#summary-of-allocations",
+    "href": "2-slides/10.3-stratified-est-size.html#summary-of-allocations",
+    "title": "Module 10: Survey Sampling",
+    "section": "Summary of Allocations",
+    "text": "Summary of Allocations\n\nProportional Allocation\n\nCost of sampling and variances are approximately equal for all strata\nSize (either), Variability (equal), Cost (equal)\nUsually do this!\n\nOptimal Allocation\n\nCosts of sampling and stratum variances vary across strata\nSize (equal), Variability (VARY), Cost (VARY)\n\nNeyman Allocation\n\nonly costs of sampling vary across strata\nSize (either), Variability (VARY), Cost (equal)"
+  },
+  {
+    "objectID": "2-slides/10.3-stratified-est-size.html#determining-sample-size---big-idea",
+    "href": "2-slides/10.3-stratified-est-size.html#determining-sample-size---big-idea",
+    "title": "Module 10: Survey Sampling",
+    "section": "Determining Sample Size - Big Idea",
+    "text": "Determining Sample Size - Big Idea\n\\[B = 2\\sqrt{\\Big(\\frac{N-n}{N-1}\\Big)\\frac{\\sigma^2}{n}}\\]\n\\[\\hat{y} \\pm B\\]"
   }
 ]
