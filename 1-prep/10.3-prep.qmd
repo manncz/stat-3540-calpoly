@@ -37,6 +37,11 @@ For additional practice problems and reading see:
 
 ## Determining Sample Size
 
+- There were a couple of typos in these slides -- sorry!! They are all fixed now, but might be wrong in the video.
+- I also call "theta" tau for some reason.
+
+- This guide [Sample Size Calculations in R](../2-slides/10.3-sample-size-rcode.qmd) walks through the sample size calculations with an example in R
+
 - 📽 Follow along with the [slides](../2-slides/10.3-stratified-est-size.qmd#/determining-sample-size).
 
 

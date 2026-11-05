@@ -7698,7 +7698,7 @@
     "href": "1-prep/10.3-prep.html#determining-sample-size",
     "title": "10.3 Preparation: Estimation with Stratified Random Sampling and Determining Sample Size",
     "section": "2 Determining Sample Size",
-    "text": "2 Determining Sample Size\n\n📽 Follow along with the slides."
+    "text": "2 Determining Sample Size\n\nThere were a couple of typos in these slides – sorry!! They are all fixed now, but might be wrong in the video.\nI also call “theta” tau for some reason.\nThis guide Sample Size Calculations in R walks through the sample size calculations with an example in R\n📽 Follow along with the slides."
   },
   {
     "objectID": "3-activities/main-version/10.2-activity-stars.html",
@@ -7986,5 +7986,54 @@
     "title": "Activity 10.3: Reading Comprehension",
     "section": "Sample Size",
     "text": "Sample Size\n\nSuppose the average test score for the class is to be estimated again at the end of the school year with a bound of four points on the error of estimation. The costs of sampling are equal in all strata, but the variances differ. Assume the variances are in line with what we saw in the study at the beginning of the year. Find the overall sample size and the sample size for each stratum using the appropriate allocation. Do all the calculations by hand and show your work.\n\nMake sure that you make clear what your:\n\nallocation method\nallocations (\\(a_g\\)’s)\noverall sample size \\(n\\)\nand stratum sample sizes (\\(n_g\\)’s) are."
+  },
+  {
+    "objectID": "2-slides/10.3-strat-allocation-rcode.html",
+    "href": "2-slides/10.3-strat-allocation-rcode.html",
+    "title": "Sample Size Calcuations in R",
+    "section": "",
+    "text": "Hopefully this will help with sample size calculations! You just need to set things up correctly and then can use the code provided here.\nI will use an example to walk through all of the calculations."
+  },
+  {
+    "objectID": "2-slides/10.3-strat-allocation-rcode.html#simple-random-sampling",
+    "href": "2-slides/10.3-strat-allocation-rcode.html#simple-random-sampling",
+    "title": "Sample Size Calcuations in R",
+    "section": "Simple Random Sampling",
+    "text": "Simple Random Sampling\n\\[n = \\frac{N\\sigma^2}{(N-1)D + \\sigma^2}\\]\nwhere \\[D = \\frac{B^2}{4} \\text{ when estimating } \\mu \\text{ or } p\\] \\[D = \\frac{B^2}{4N^2} \\text{ when estimating } \\tau\\] Replace \\(\\sigma^2\\) with \\(p(1-p)\\) if estimating the population proportion.\nLet’s calculate this for the example above:\n\n# set up the values based on the study description\nN &lt;- 310\nsigma2 &lt;- 3^2\nD &lt;- 1^2/4\n\n\n# formulas for numerator and denominator\nsrs_numerator &lt;- N*sigma2\nsrs_denom &lt;- (N-1)*D + sigma2\n\n# calculate n\nn &lt;- srs_numerator/srs_denom\n\nn\n\n[1] 32.34783\n\n\nDon’t forget to round up! In this case, we would say they need a sample of 33 people."
+  },
+  {
+    "objectID": "2-slides/10.3-strat-allocation-rcode.html#stratified-random-sampling",
+    "href": "2-slides/10.3-strat-allocation-rcode.html#stratified-random-sampling",
+    "title": "Sample Size Calcuations in R",
+    "section": "Stratified Random Sampling",
+    "text": "Stratified Random Sampling\nIt turns out that the county contains a rural area and two towns, A and B:\n\nTown A is built around a factory, and most households contain factory workers with school-age children.\nTown B is an exclusive suburb of a city in a neighboring county and contains older residents with few children at home.\n\nThere are 93 households in the rural area (stratum 1), 155 in town A (stratum 2), 62 in town B (stratum 3).\nWe have additional information from the previous study about towns and rural areas similar to the ones in this study that had standard deviation in TV watching of:\n\nRural: 2 hours\nTown A: 3 hours\nTown B: 4 hours\n\nLet’s set up the additional values we need for the sample size calculations:\n\nN_g &lt;- c(93, 155, 62)\nsigma_g &lt;- c(2, 3, 4)\n\n\n\n\n\n\n\nWarning\n\n\n\nNote that if you hadn’t calculated the SRS sample size first, you need to also define D and N for the calculations below.\n\n# population size\nN &lt;- 310\n\n# for total\nD &lt;- (1/N)^2/4\n\n# for mean /prop\nD &lt;- 1^2/4\n\n\n\n\nProportional Allocation\n\\[a_g = \\frac{N_g}{N} \\quad \\quad n = \\frac{\\displaystyle\\sum_{g=1}^L N_g\\sigma_g^2}{ND + \\displaystyle\\sum_{g=1}^L\\frac{N_g}{N}\\sigma_g^2}\\]\n\n# proportional allocation overall sample size\nprop_numerator &lt;- sum(N_g*sigma_g^2)\nprop_denom &lt;- (sum(N_g*sigma_g^2)/N) + (sum(N)*D)\n\nn &lt;- prop_numerator/prop_denom\nn\n\n[1] 31.93287\n\n\nRounding up, with the proportional allocation, we would need \\(n =32\\) households.\n\n# proportional allocations\nag &lt;- N_g/N\nag\n\n[1] 0.3 0.5 0.2\n\n\n\n# stratum sample sizes\nag*32\n\n[1]  9.6 16.0  6.4\n\n\nRound these to get to 32 households: \\(n_1 = 10, n_2 = 16, n_3 = 6\\)\n\n\nNeyman Allocation\n\\[a_g = \\frac{N_g\\sigma_g}{\\sum_{h = 1}^L N_h\\sigma_h} \\quad \\quad  n = \\frac{\\Big(\\displaystyle\\sum_{g=1}^L N_g\\sigma_g\\Big)^2}{N^2D + \\displaystyle\\sum_{g=1}^LN_g\\sigma_g^2}\\]\n\n# neyman allocation formula\n\nneym_numerator &lt;- sum(N_g*sigma_g)^2\nneym_denom &lt;- (sum(N_g*(sigma_g^2))) + (N^2*D)\n\nn &lt;- neym_numerator/neym_denom\nn\n\n[1] 30.17477\n\n\nUsing Neyman allocation we calculate needing \\(n = 31\\) households.\n\nag &lt;- N_g*sigma_g/sum(N_g*sigma_g)\nag\n\n[1] 0.2068966 0.5172414 0.2758621\n\n\n\nag*31\n\n[1]  6.413793 16.034483  8.551724\n\n\nRound these to get to 31 households: \\(n_1 = 6, n_2 = 16, n_3 = 9\\)"
+  },
+  {
+    "objectID": "2-slides/10.3-strat-allocation-rcode.html#proportional-allocation-1",
+    "href": "2-slides/10.3-strat-allocation-rcode.html#proportional-allocation-1",
+    "title": "Sample Size Calcuations in R",
+    "section": "Proportional Allocation",
+    "text": "Proportional Allocation\nn*ag\nnum\nnumerator &lt;- sum(N_gsigma_g)^2 denom &lt;- (sum(N_g(sigma_g^2))) + (N2*(B)2/4)\nnumerator/denom\nag = N_gsigma_g/sum(N_gsigma_g) ag\nag*n\nlibrary(PracTools)\nN &lt;- sum(props$N) p &lt;- .54 B &lt;- .01\nnumerator &lt;- Np(1-p) denom &lt;- (N-1)(B)^2/4 + p(1-p)\nnumerator/denom"
+  },
+  {
+    "objectID": "2-slides/10.3-sample-size-rcode.html",
+    "href": "2-slides/10.3-sample-size-rcode.html",
+    "title": "Sample Size Calcuations in R",
+    "section": "",
+    "text": "Hopefully this will help with sample size calculations! You just need to set things up correctly and then can use the code provided here.\nI will use an example to walk through all of the calculations."
+  },
+  {
+    "objectID": "2-slides/10.3-sample-size-rcode.html#simple-random-sampling",
+    "href": "2-slides/10.3-sample-size-rcode.html#simple-random-sampling",
+    "title": "Sample Size Calcuations in R",
+    "section": "Simple Random Sampling",
+    "text": "Simple Random Sampling\n\\[n = \\frac{N\\sigma^2}{(N-1)D + \\sigma^2}\\]\nwhere \\[D = \\frac{B^2}{4} \\text{ when estimating } \\mu \\text{ or } p\\] \\[D = \\frac{B^2}{4N^2} \\text{ when estimating } \\tau\\] Replace \\(\\sigma^2\\) with \\(p(1-p)\\) if estimating the population proportion.\nLet’s calculate this for the example above:\n\n# set up the values based on the study description\nN &lt;- 310\nsigma2 &lt;- 3^2\nD &lt;- 1^2/4\n\n\n# formulas for numerator and denominator\nsrs_numerator &lt;- N*sigma2\nsrs_denom &lt;- (N-1)*D + sigma2\n\n# calculate n\nn &lt;- srs_numerator/srs_denom\n\nn\n\n[1] 32.34783\n\n\nDon’t forget to round up! In this case, we would say they need a sample of 33 people."
+  },
+  {
+    "objectID": "2-slides/10.3-sample-size-rcode.html#stratified-random-sampling",
+    "href": "2-slides/10.3-sample-size-rcode.html#stratified-random-sampling",
+    "title": "Sample Size Calcuations in R",
+    "section": "Stratified Random Sampling",
+    "text": "Stratified Random Sampling\nIt turns out that the county contains a rural area and two towns, A and B:\n\nTown A is built around a factory, and most households contain factory workers with school-age children.\nTown B is an exclusive suburb of a city in a neighboring county and contains older residents with few children at home.\n\nThere are 93 households in the rural area (stratum 1), 155 in town A (stratum 2), 62 in town B (stratum 3).\nWe have additional information from the previous study about towns and rural areas similar to the ones in this study that had standard deviation in TV watching of:\n\nRural: 2 hours\nTown A: 3 hours\nTown B: 4 hours\n\nLet’s set up the additional values we need for the sample size calculations:\n\nN_g &lt;- c(93, 155, 62)\nsigma_g &lt;- c(2, 3, 4)\n\n\n\n\n\n\n\nWarning\n\n\n\nNote that if you hadn’t calculated the SRS sample size first, you need to also define D and N for the calculations below.\n\n# population size\nN &lt;- 310\n\n# for total\nD &lt;- (1/N)^2/4\n\n# for mean /prop\nD &lt;- 1^2/4\n\n\n\n\nProportional Allocation\n\\[a_g = \\frac{N_g}{N} \\quad \\quad n = \\frac{\\displaystyle\\sum_{g=1}^L N_g\\sigma_g^2}{ND + \\displaystyle\\sum_{g=1}^L\\frac{N_g}{N}\\sigma_g^2}\\]\n\n# proportional allocation overall sample size\nprop_numerator &lt;- sum(N_g*sigma_g^2)\nprop_denom &lt;- (sum(N_g*sigma_g^2)/N) + (sum(N)*D)\n\nn &lt;- prop_numerator/prop_denom\nn\n\n[1] 31.93287\n\n\nRounding up, with the proportional allocation, we would need \\(n =32\\) households.\n\n# proportional allocations\nag &lt;- N_g/N\nag\n\n[1] 0.3 0.5 0.2\n\n\n\n# stratum sample sizes\nag*32\n\n[1]  9.6 16.0  6.4\n\n\nRound these to get to 32 households: \\(n_1 = 10, n_2 = 16, n_3 = 6\\)\n\n\nNeyman Allocation\n\\[a_g = \\frac{N_g\\sigma_g}{\\sum_{h = 1}^L N_h\\sigma_h} \\quad \\quad  n = \\frac{\\Big(\\displaystyle\\sum_{g=1}^L N_g\\sigma_g\\Big)^2}{N^2D + \\displaystyle\\sum_{g=1}^LN_g\\sigma_g^2}\\]\n\n# neyman allocation formula\n\nneym_numerator &lt;- sum(N_g*sigma_g)^2\nneym_denom &lt;- (sum(N_g*(sigma_g^2))) + (N^2*D)\n\nn &lt;- neym_numerator/neym_denom\nn\n\n[1] 30.17477\n\n\nUsing Neyman allocation we calculate needing \\(n = 31\\) households.\n\nag &lt;- N_g*sigma_g/sum(N_g*sigma_g)\nag\n\n[1] 0.2068966 0.5172414 0.2758621\n\n\n\nag*31\n\n[1]  6.413793 16.034483  8.551724\n\n\nRound these to get to 31 households: \\(n_1 = 6, n_2 = 16, n_3 = 9\\)"
   }
 ]

@@ -1,0 +1,144 @@
+---
+title: "Sample Size Calcuations in R"
+format: html
+---
+
+Hopefully this will help with sample size calculations! You just need to set things up correctly and then can use the code provided here.
+
+I will use an example to walk through all of the calculations.
+
+### Example
+
+An advertising firm, interested in determining how much to emphasize television advertising in a certain county, decides to conduct a sample survey to estimate the **average number of hours each week** that households within the county watch television, with a bound on the estimation error of 1 hour. The total number of households is $N = 310$.
+
+From a previous study, they estimate that the overall standard deviation of TV watching per week is 3 hours.  
+
+
+## Simple Random Sampling
+
+$$n = \frac{N\sigma^2}{(N-1)D + \sigma^2}$$
+
+where $$D = \frac{B^2}{4} \text{ when estimating } \mu \text{ or } p$$
+$$D = \frac{B^2}{4N^2} \text{ when estimating } \tau$$
+Replace $\sigma^2$ with $p(1-p)$ if estimating the population proportion.
+
+
+Let's calculate this for the example above:
+
+```{r}
+# set up the values based on the study description
+N <- 310
+sigma2 <- 3^2
+D <- 1^2/4
+```
+
+```{r}
+# formulas for numerator and denominator
+srs_numerator <- N*sigma2
+srs_denom <- (N-1)*D + sigma2
+
+# calculate n
+n <- srs_numerator/srs_denom
+
+n
+```
+
+Don't forget to round up! In this case, we would say they need a sample of 33 people.
+
+## Stratified Random Sampling
+
+It turns out that the county contains a rural area and two towns, A and B:
+
+- Town A is built around a factory, and most households contain factory workers with school-age children.
+- Town B is an exclusive suburb of a city in a neighboring county and contains older residents with few children at home.
+
+There are 93 households in the rural area (stratum 1), 155  in town A  (stratum 2), 62 in town B (stratum 3). 
+
+We have additional information from the previous study about towns and rural areas similar to the ones in this study that had **standard deviation** in TV watching of: 
+
+- Rural: 2 hours
+- Town A: 3 hours
+- Town B: 4 hours
+
+
+Let's set up the *additional* values we need for the sample size calculations:
+
+```{r}
+N_g <- c(93, 155, 62)
+sigma_g <- c(2, 3, 4)
+```
+
+:::callout-warning
+Note that if you hadn't calculated the SRS sample size first, you need to also define D and N for the calculations below.
+
+```{r}
+#| eval: false
+
+# population size
+N <- 310
+
+# for total
+D <- (1/N)^2/4
+
+# for mean /prop
+D <- 1^2/4
+```
+
+:::
+
+### Proportional Allocation
+
+$$a_g = \frac{N_g}{N} \quad \quad n = \frac{\displaystyle\sum_{g=1}^L N_g\sigma_g^2}{ND + \displaystyle\sum_{g=1}^L\frac{N_g}{N}\sigma_g^2}$$
+
+```{r}
+# proportional allocation overall sample size
+prop_numerator <- sum(N_g*sigma_g^2)
+prop_denom <- (sum(N_g*sigma_g^2)/N) + (sum(N)*D)
+
+n <- prop_numerator/prop_denom
+n
+```
+
+Rounding up, with the proportional allocation, we would need $n =32$ households.
+
+```{r}
+# proportional allocations
+ag <- N_g/N
+ag
+```
+
+```{r}
+# stratum sample sizes
+ag*32
+```
+
+Round these to get to 32 households: $n_1 = 10, n_2 = 16, n_3 = 6$
+
+### Neyman Allocation
+
+$$a_g = \frac{N_g\sigma_g}{\sum_{h = 1}^L N_h\sigma_h} \quad \quad  n = \frac{\Big(\displaystyle\sum_{g=1}^L N_g\sigma_g\Big)^2}{N^2D + \displaystyle\sum_{g=1}^LN_g\sigma_g^2}$$
+
+
+
+```{r}
+# neyman allocation formula
+
+neym_numerator <- sum(N_g*sigma_g)^2
+neym_denom <- (sum(N_g*(sigma_g^2))) + (N^2*D)
+
+n <- neym_numerator/neym_denom
+n
+```
+
+Using Neyman allocation we calculate needing $n = 31$ households.
+
+```{r}
+ag <- N_g*sigma_g/sum(N_g*sigma_g)
+ag
+```
+
+```{r}
+ag*31
+```
+
+Round these to get to 31 households: $n_1 = 6, n_2 = 16, n_3 = 9$
