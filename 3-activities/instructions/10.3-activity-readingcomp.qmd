@@ -7,7 +7,6 @@ execute:
   warning: false
 
 echo: false
-eval: false
 format:
   html: default
   docx: default
@@ -18,8 +17,8 @@ format:
 
 - Delete any extraneous instructions (**like this box**) before submission. *You will be deducted points from now on if you do not follow this instruction!*
 
-- You need to do some R coding for this activity, so you should at least complete the code in the qmd template [10.3-activity-readingcomp.qmd](../student/10.3-activity-readingcomp.qmd)
-- However there are a lot of calculations so you might want to do most of the activity in Word or on paper if you aren't comfortable with using R as a calculator.
+- You do not need to do any R coding for this activity, I would recommend that you use the Word template.
+- But you are welcome to use the quarto template as always!  [10.3-activity-readingcomp.qmd](../student/10.3-activity-readingcomp.qmd)
   
 :::
 
@@ -28,15 +27,13 @@ library(tidyverse)
 library(survey)
 ```
 
-A school wants to estimate the average score on a reading comprehension exam for sixth grade students. The school’s students are grouped into 3 tracks, based on their performance in reading classes in 5th grade. The school decides to stratify on tracks because this method should reduce the variability of test scores. The sixth grade contains a total of 55 students in track I, 80 in track II, and 65 in track III. A stratified random sample is taken with 14 students in track I, 20 students in track II, and 16 students in track III. The test SCORES are located in the file `sixthgrade.csv` file on canvas.
+A school wants to estimate the average score on a reading comprehension exam for sixth grade students. The school’s students are grouped into 3 tracks, based on their performance in reading classes in 5th grade. The school decides to stratify on tracks because this method should reduce the variability of test scores. The sixth grade contains a total of 55 students in track I, 80 in track II, and 65 in track III. A stratified random sample is taken with 14 students in track I, 20 students in track II, and 16 students in track III. 
+
+The data for the **sample** of students are located in the file `10-sixthgrade.csv` file on canvas.
 
 1. Read the data into R and construct parallel box plots for these data showing the distribution of scores for each track. 
 
-```{r}
-# read in data
 
-readingdat <- read_csv("")
-```
 
 ```{r}
 # side-by-side boxplots of score by track
@@ -58,10 +55,10 @@ $N =$
 
 |TRACK | I |	II|	III|
 |-----|---|---|----|
-|$N_{i}$ | . |.  |.   |
-|$n_{i}$	|. |. |. |		
-|${\bar{y}}_{i}$		|. |. |. |		
-|$s_{i}$		|. |. |. |		
+|$N_{g}$ | . |.  |.   |
+|$n_{g}$	|. |. |. |		
+|${\bar{y}}_{g}$		|. |. |. |		
+|$s_{g}$		|. |. |. |		
 
 4.	Use the appropriate equations to *estimate* the average score for the sixth grade (i.e. calculate $\bar{y}_st$). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!
 
