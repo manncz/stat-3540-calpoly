@@ -400,16 +400,27 @@ Warning
 <p>A school wants to estimate the average score on a reading comprehension exam for sixth grade students. The school’s students are grouped into 3 tracks, based on their performance in reading classes in 5th grade. The school decides to stratify on tracks because this method should reduce the variability of test scores. The sixth grade contains a total of 55 students in track I, 80 in track II, and 65 in track III. A stratified random sample is taken with 14 students in track I, 20 students in track II, and 16 students in track III.</p>
 <p>The data for the <strong>sample</strong> of students are located in the file <code>10-sixthgrade.csv</code> file on canvas.</p>
 <ol type="1">
-<li>Read the data into R and construct parallel box plots for these data showing the distribution of scores for each track.</li>
-</ol>
-<ol start="2" type="1">
-<li>Based on the plot you created, comment on the patterns you see with respect to center and variability. Do you think there could be a problem in placing students in tracks (for their learning)? Do you think that stratified sampling will be beneficial over SRS in this case?</li>
+<li><p>Read the data into R and construct parallel box plots for these data showing the distribution of scores for each track.</p></li>
+<li><p>Based on the plot you created, comment on the patterns you see with respect to center and variability. Do you think there could be a problem in placing students in tracks (for their learning)? Do you think that stratified sampling will be beneficial over SRS in this case?</p></li>
 </ol>
 <section id="estimation-with-stratified-sampling" class="level2">
 <h2 class="anchored" data-anchor-id="estimation-with-stratified-sampling">Estimation with Stratified Sampling</h2>
 <ol start="3" type="1">
 <li>Fill in the table below:</li>
 </ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember that the data that you have is the SAMPLE data! So this is just asking you to calculate the means and sds from the data, not take an additional sample.</p>
+</div>
+</div>
 <p><span class="math inline">\(N =\)</span></p>
 <table class="caption-top table">
 <thead>
@@ -448,14 +459,9 @@ Warning
 </tbody>
 </table>
 <ol start="4" type="1">
-<li>Use the appropriate equations to <em>estimate</em> the average score for the sixth grade (i.e.&nbsp;calculate <span class="math inline">\(\bar{y}_st\)</span>). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!</li>
+<li><p>Use the appropriate equations to <em>estimate</em> the average score for the sixth grade (i.e.&nbsp;calculate <span class="math inline">\(\bar{y}_st\)</span>). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!</p></li>
+<li><p>Now use the <code>survey</code> package in to calculate the standard error. Calculate the 95% confidence interval for the parameter of interest “by hand” using the mean and standard error and a critical value of 2.</p></li>
 </ol>
-<ol start="5" type="1">
-<li>Now use R to calculate the standard error and the 95% confidence interval for the parameter of interest.</li>
-</ol>
-<div class="{callout-tip}">
-<p>You can just use a critical value of 2 for your confidence interval.</p>
-</div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

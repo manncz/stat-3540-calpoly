@@ -7,7 +7,7 @@ execute:
   warning: false
 
 echo: false
-format:
+format: 
   html: default
   docx: default
 
@@ -33,23 +33,16 @@ The data for the **sample** of students are located in the file `10-sixthgrade.c
 
 1. Read the data into R and construct parallel box plots for these data showing the distribution of scores for each track. 
 
-
-
-```{r}
-# side-by-side boxplots of score by track
-
-
-```
-
 2.	Based on the plot you created, comment on the patterns you see with respect to center and variability. Do you think there could be a problem in placing students in tracks (for their learning)? Do you think that stratified sampling will be beneficial over SRS in this case?
 
 ## Estimation with Stratified Sampling
 
 3. Fill in the table below:
 
-```{r}
-# use R to calculate sample stratum means and sds
-```
+:::callout-warning
+
+Remember that the data that you have is the SAMPLE data! So this is just asking you to calculate the means and sds from the data, not take an additional sample.
+:::
 
 $N =$
 
@@ -62,30 +55,12 @@ $N =$
 
 4.	Use the appropriate equations to *estimate* the average score for the sixth grade (i.e. calculate $\bar{y}_st$). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!
 
-```{r}
-# use R as a calculator if you want!
-
-
-```
-
-5.	Now use R to calculate the standard error and the 95% confidence interval for the parameter of interest. 
-
-:::{callout-tip}
-You can just use a critical value of 2 for your confidence interval. 
-:::
-
-```{r}
-# use the survey package!
-```
+5.	Now use the `survey` package in to calculate the standard error. Calculate the 95% confidence interval for the parameter of interest "by hand" using the mean and standard error and a critical value of 2. 
 
 :::callout-warning
 ## Incorrect analysis
 
 6.	Now use R to calculate the standard error and the 95% confidence interval for the parameter of interest, forgetting that you used a stratified design and **treating the study like an SRS**
-
-```{r}
-# use the survey package!
-```
 
 :::
 
@@ -113,14 +88,6 @@ Say instead of an average score, the school was actually interested in estimatin
 
 11. Use the appropriate equations to *estimate* the *proportion* of for the sixth grade that will pass the reading comprehension test. Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!
 
-```{r}
-# use R to get strata sample proportions
-```
-
-```{r}
-# use R as a calculator if you want!
-```
-
 ## Sample Size
 
 12. Suppose the *average test score* for the class is to be estimated *again at the end of the school year* with a bound of four points on the error of estimation. The costs of sampling are equal in all strata, but the variances differ. Assume the variances are in line with what we saw in the study at the beginning of the year. Find the overall sample size and the sample size for each stratum using the *appropriate allocation*. Do all the calculations by hand and show your work.
@@ -131,7 +98,3 @@ Make sure that you make clear what your:
 - allocations ($a_g$'s)
 - overall sample size $n$
 - and stratum sample sizes ($n_g$'s) are.
-
-```{r}
-# use R as a calculator if you want
-```
