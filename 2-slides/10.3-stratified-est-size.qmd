@@ -493,7 +493,7 @@ $\pi_{gi} =$
   - minimizes cost for a fixed variance (i.e. fixed B)
 
 
-$$a_g = \frac{N_g\sigma_g^2/\sqrt{c_g}}{\sum_{h = 1}^L N_h\sigma_h/\sqrt{c_g}} \quad \quad n = \frac{\Big(\displaystyle\sum_{g=1}^L N_g\sigma_g/\sqrt{c_g}\Big)\Big(\displaystyle\sum_{g=1}^L N_g\sigma_g\sqrt{c_g}\Big)}{N^2D + \displaystyle\sum_{g=1}^LN_g\sigma_g^2}$$
+$$a_g = \frac{N_g\sigma_g/\sqrt{c_g}}{\sum_{h = 1}^L N_h\sigma_h/\sqrt{c_g}} \quad \quad n = \frac{\Big(\displaystyle\sum_{g=1}^L N_g\sigma_g/\sqrt{c_g}\Big)\Big(\displaystyle\sum_{g=1}^L N_g\sigma_g\sqrt{c_g}\Big)}{N^2D + \displaystyle\sum_{g=1}^LN_g\sigma_g^2}$$
 
 - Use when: costs of sampling and stratum variances vary across strata
 
@@ -503,7 +503,7 @@ $$a_g = \frac{N_g\sigma_g^2/\sqrt{c_g}}{\sum_{h = 1}^L N_h\sigma_h/\sqrt{c_g}} \
 - will support more precise estimation than proportional allocation if stratum variances are specified correctly
 
 
-$$a_g = \frac{N_g\sigma_g^2}{\sum_{h = 1}^L N_h\sigma_h} \quad \quad  n = \frac{\Big(\displaystyle\sum_{g=1}^L N_g\sigma_g\Big)^2}{N^2D + \displaystyle\sum_{g=1}^LN_g\sigma_g^2}$$
+$$a_g = \frac{N_g\sigma_g}{\sum_{h = 1}^L N_h\sigma_h} \quad \quad  n = \frac{\Big(\displaystyle\sum_{g=1}^L N_g\sigma_g\Big)^2}{N^2D + \displaystyle\sum_{g=1}^LN_g\sigma_g^2}$$
 
 - Use when:  stratum variances vary across strata *but* costs of sampling are the same
 
