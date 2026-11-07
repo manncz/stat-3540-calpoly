@@ -542,3 +542,5 @@ To determine a sample size,
 3. Calculate $n$ for the appropriate population parameter and study design, given (1) the bound you chose, (2) approximated population variances, and (3) allocations if appropriate
 3. **If stratified sample**, calculate stratum sample sizes ($n_g$'s) from $n$ and allocations
 
+[R Code Reference with an Example!](10.3-sample-size-rcode.qmd)
+

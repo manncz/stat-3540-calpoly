@@ -1,0 +1,192 @@
+---
+title: "Lab 4 Analysis Appendix"
+subtitle: "YOUR REPORT TITLE"
+author: "YOUR NAMES"
+toc: true
+execute: 
+  error: true
+  message: false
+  warning: false
+  echo: true
+embed-resources: true
+format: html
+---
+
+```{r}
+#| label: setup
+
+# I believe these are the main packages you will need
+# add any more that you end up needing here!
+
+library(tidyverse)
+library(survey)
+library(sampling)
+```
+
+## Sampling Frame
+
+You probably won't use any code to create your frame (maybe??). But you definitely need to read your frame into R for the next two steps.
+
+:::callout-warning
+Throughout the code below, replace `STRAT_VAR` with the name of the variable defining your strata in your data.
+:::
+
+```{r}
+## read in sampling frame
+
+frame <- read_csv("") |> 
+  janitor::clean_names() |>  # clean up column names
+  mutate(STRAT_VAR = factor(STRAT_VAR)) # turn your strata variable into a factor variable
+```
+
+Check the order of your strata -- if you want them in a different order change the order of the levels NOW!!
+
+```{r}
+levels(frame$STRAT_VAR)
+```
+
+Note the order of your levels here to keep track of what your index $g = 1, ..., L$ is referring to. Add or delete bullet points as needed
+
+- $g = 1$: 
+- $g = 2$: 
+- $g = 3$: 
+
+
+```{r}
+# calculate strata population sizes
+
+pop_sizes <- frame |> 
+  group_by(STRAT_VAR) |> 
+  summarize(N_g = n())
+
+pop_sizes
+```
+
+
+## Calculate Sample Size
+
+Based on the allocation you choose, calculate the overall sample size $n$ and sample size for each stratum $n_1, n_2, ...$
+
+I have added some helpers.
+
+```{r}
+## set up parameters for calculation
+
+# bound -- you choose, but should be smaller than 0.06
+B <- 
+D <- B^2/4
+
+# N -- PLEASE CHECK THESE ARE CORRECT
+N_g <- pop_sizes$N_g
+N <- nsum(N_g)
+
+# approximated probabilities based on previous data OR just use 0.5 if you really don't have anything to base this on
+p_g <- c()
+
+# given the probabilities, this is how you calculate the simga values (note this is the sigma, NOT sigma squared)
+sigma_g <- sqrt(p_g*(1-p_g))
+
+```
+
+```{r}
+## calculate n based on appropriate formula
+## see the R code helpers I posted
+
+n_overall
+```
+
+```{r}
+## calculate allocations
+
+a_g
+```
+
+```{r}
+## calculate strata sample sizes
+## don't forget to use your ROUNDED n value!
+
+
+```
+
+
+
+## Stratified Random Sample
+
+Since we have chosen exact strata samples to use based on our calculations above, the R code in the slides before doesn't work. 
+
+This `strata()` function is from the *sampling* package loaded in the beginning of the file.
+
+
+
+### Find your sample
+
+The function we are going to use uses the rownumber as an ID, so to make sure everything lines up and is matched up in the end, let's create an ID variable in the sampling frame.
+
+```{r}
+# creating a sampling ID which is just the row number
+# you don't need to do anything here
+
+frame <- frame |> 
+  mutate(sampling_ID = row_number())
+```
+
+In the code below:
+
+- Replace`"STRAT_VAR"` with the name of your stratification variable, in quotation marks.
+- `size` is the VECTOR of your rounded $n_g$ strata sizes, determined above. Make sure this is in the order of your strata!! 
+- You can change the seed if you want
+
+```{r}
+# stratified random sample
+set.seed(343938)
+
+mysample <- strata(data = frame,
+                 stratanames = c("STRAT_VAR"),
+                 size = c(),
+                 method = "srswor")
+```
+
+```{r}
+# CHECK that this worked as you anticipated
+
+mysample |> 
+  count(STRAT_VAR) 
+```
+
+Once you have confirmed that worked correctly, move on to adding this informaiton to your sampling frame.
+
+### Add information back to your sampling frame
+
+```{r}
+# save a dataset with a new variable indicating that that islander is in the sample
+
+sampleids <- mysample |> 
+  select(ID_unit, STRAT_VAR) |> 
+  mutate(in_sample = "yes")
+```
+
+```{r}
+frame_with_sample <- frame |> 
+  left_join(sampleids, 
+            by = join_by(sampling_ID == ID_unit, 
+                         STRAT_VAR)) 
+```
+
+Let's save the full sampling frame with this information
+
+```{r}
+write_csv(frame_with_sample, file = "lab4-frame-stratified-sample.csv")
+```
+
+Let's also save your sample!! Change the name of the file or where it is saved according to your setup. This will help you for collecting data.
+
+```{r}
+strat_sample <- frame_with_sample |> 
+  filter(in_sample == "yes")
+
+write_csv(strat_sample, file = "lab4-stratified-sample.csv")
+```
+
+## Analyze Sample Data
+
+Follow the report template, adding chunks as you need!
