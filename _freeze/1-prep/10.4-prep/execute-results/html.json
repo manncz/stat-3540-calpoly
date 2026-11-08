@@ -1,0 +1,15 @@
+{
+  "hash": "03e1ec4403c1553173065245fb197398",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"10.4 Preparation: Survey Weights\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n#### 📽 Watch Videos: 45 min\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n- Estimate the population mean and total using survey weights.\n- Understand why survey weights are used when the probability of selectoin is not equal.\n:::\n\nFor additional practice problems and reading see:\n\n- Ch 11.5-11.6 in [Elementary Survey Sampling 7th Edition](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991070566017102901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,elementary%20survey%20sampling&offset=0) by Schaeffer et. al.\n- You can request the books from the library including just certain pages! Or find a copy in the ways you know how to.... \n\n## Survey Weights\n\n- 📽 Follow along with the [slides](../2-slides/10.4-weights.qmd).\n\nvideo soon\n\n## Accounting for Nonresponse and Coverage Issues\n\ncoming soon\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

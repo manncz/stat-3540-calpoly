@@ -7,10 +7,9 @@ execute:
   warning: false
 
 echo: false
-format: 
-  html: default
+format:
   docx: default
-
+  html: default
 ---
 ::: callout-warning
 - Submit via Gradescope, don't forget to assign pages to the questions in the outline!
@@ -56,6 +55,18 @@ $N =$
 4.	Use the appropriate equations to *estimate* the average score for the sixth grade (i.e. calculate $\bar{y}_st$). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!
 
 5.	Now use the `survey` package in to calculate the standard error. Calculate the 95% confidence interval for the parameter of interest "by hand" using the mean and standard error and a critical value of 2. 
+
+```{r}
+readingdat <- readingdat |> 
+  mutate(weight = SIZE / n(), .by = TRACK)
+
+strat_des <- svydesign(ids = ~1,
+                       strata = ~TRACK,
+                       weights = ~ weight,
+                       data = readingdat)
+
+svymean(~SCORES, design = strat_des, na.rm = T)
+```
 
 :::callout-warning
 ## Incorrect analysis

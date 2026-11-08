@@ -77,6 +77,18 @@ $N =$
 # Hint: the SIZE variable in the data gives the N_gs
 ```
 
+```{r}
+readingdat <- readingdat |> 
+  mutate(weight = SIZE / n(), .by = TRACK)
+
+strat_des <- svydesign(ids = ~1,
+                       strata = ~TRACK,
+                       weights = ~ weight,
+                       data = readingdat)
+
+svymean(~SCORES, design = strat_des, na.rm = T)
+```
+
 :::callout-warning
 ## Incorrect analysis
 

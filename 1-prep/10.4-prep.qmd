@@ -1,0 +1,38 @@
+---
+title: "10.4 Preparation: Survey Weights"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+#### 📽 Watch Videos: 45 min
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+- Estimate the population mean and total using survey weights.
+- Understand why survey weights are used when the probability of selectoin is not equal.
+:::
+
+For additional practice problems and reading see:
+
+- Ch 11.5-11.6 in [Elementary Survey Sampling 7th Edition](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991070566017102901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,elementary%20survey%20sampling&offset=0) by Schaeffer et. al.
+- You can request the books from the library including just certain pages! Or find a copy in the ways you know how to.... 
+
+## Survey Weights
+
+- 📽 Follow along with the [slides](../2-slides/10.4-weights.qmd).
+
+video soon
+
+## Accounting for Nonresponse and Coverage Issues
+
+coming soon
+

@@ -23,10 +23,342 @@ execute:
 #| echo: false
 
 library(tidyverse)
+library(gt)
 ```
 
 # Survey Weights
 
+## Complex Sampling Designs
+
+- Most sample surveys in real life use *complex sampling designs*
+- One or more of the following:
+
+:::columns
+:::column
+1. stratification
+2. clustering
+3. unequal probabilities of selection
+4. multiple stages of selection
+5. systematic selection
+:::
+:::column
+:::callout-tip
+## This class
+
+In this class we are only covering **stratification** formally, but I want you to be aware that there are many more complex things to do!
+:::
+:::
+:::
+
+## Complex Sampling Designs -- Estimation
+
+There are two elements of complex sampling designs that must be taken into account to make valid inferences:
+
+1. Different probabilities of selection in sampling for sampling units.
+
+</br>
+
+2. Variation associated with sampling design.
+
+## Survey Weights -- accounting for complexities!
+
+If...
+
+  - units in the population have **different probabilities** of being selected in the sample
+  - there is **nonresponse**
+  - there are frame deficiencies (**coverage** issues)
+
+## Survey Weights -- Big Picture
+
+Let $w_j$ be a weight for unit $j$
+
+$$\hat{\mu}_w = \frac{\sum w_jy_i}{\sum w_j} \qquad \qquad \hat{\tau}_w = N\frac{\sum w_jy_j}{\sum w_j}$$
+
+</br>
+
+:::callout-note
+## Estimating Variability
+
+As always we don't just care about the **point** estimates $\hat{\mu}_w$ and $\hat{\tau}_w$, but also  how much **sampling variability** there is in these estimates!
+
+There is a special way to estimate the variability, $SE(\hat{\mu}_w)$ and $SE(\hat{\tau}_w)$...
+
+... we are just goint to let the `survey` package in `R` handle it
+
+:::
 
 
-# Non-Response
+## Unequal Probabilities of Selection
+
+- Reminder: $\pi_j$ is the probability of **unit** $j$ of being selected in the sample
+
+$$w_j = \frac{1}{\pi_j}$$
+
+
+## Survey Weights with Stratification
+
+- You have seen them before!!
+ $$w_{gi} = \frac{1}{\pi_{gi}} = \frac{N_g}{n_g}= w_g$$
+ 
+$$\hat{\mu} = \bar{y}_{st} = \frac{1}{N}\displaystyle\sum_{g = 1}^L N_g\bar{y}_g$$
+
+... let's do the math
+
+## Survey Weights with Stratification
+
+$\hat{\mu} = \frac{\sum w_jy_i}{\sum w_j}  = \frac{\displaystyle\sum_{g=1}^L \sum_{i=1}^{n_g}\frac{N_g}{n_g} y_{gi}}{\displaystyle\sum_{g=1}^L \sum_{i=1}^{n_g} \frac{N_g}{n_g}}$
+
+## Example: Reading Comprehension
+
+```{r}
+#| echo: false
+
+readingdat <- read_csv("../3-activities/_data/10-sixthgrade.csv") |> 
+  janitor::clean_names() |> 
+  select(-question)
+
+```
+
+:::columns
+
+:::{.column}
+
+```{r}
+#| echo: false
+
+readingdat |> 
+  group_by(track) |> 
+  slice_sample(n = 2) |> 
+  knitr::kable()
+```
+:::
+:::{.column}
+
+```{r}
+#| code-fold: true
+
+readingdat |>
+  ggplot(aes(x = track, y = scores)) +
+  geom_boxplot() +
+  geom_jitter(height = 0, width = .2,
+              alpha = .7, color = "#154734",
+              size = 2) +
+  labs(x = "Track", y = "Score",
+       title = "Distribution of Reading Comprehension Scores by Track for Stratified Sample of 6th Graders") 
+```
+:::
+:::
+
+## Reading Comprehension - Weights
+
+:::columns
+:::column
+```{r}
+table(readingdat$track)
+```
+
+:::
+
+:::column
+```{r}
+readingdat <- readingdat |> 
+  mutate(weight = size/n(), .by = track)
+```
+
+```{r}
+#| code-fold: true
+readingdat |> 
+  slice_sample(n = 1, by = track) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling(font_size = 30)
+```
+:::
+
+:::
+
+## Estimation in R
+
+```{r}
+library(survey)
+```
+
+</br>
+
+:::columns
+:::column
+```{r}
+strat_des <- svydesign(ids = ~1,
+                       strata = ~track,
+                       fpc = ~size,
+                       data = readingdat)
+
+svymean(~scores, strat_des)
+```
+:::
+:::column
+```{r}
+strat_des_w <- svydesign(ids = ~1,
+                       strata = ~track,
+                       weights = ~weight,
+                       data = readingdat)
+
+svymean(~scores, strat_des_w)
+```
+
+:::
+:::
+
+## Example: Florida Building Permits (Ex 11.6 in [ESS](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991070566017102901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,elementary%20survey%20sampling&offset=0))
+
+:::columns
+:::column
+**Goal**: Estimate total number of building permiits for housing units issued in Florida in 2000
+
+**Sample**: 10 of Floridas 67 counties by dropping 10 random points on the **map** of the state
+:::
+:::column
+```{r}
+#| echo: false
+counties <- c("Alachua","Santa Rosa","Polk","Palm Beach",
+             "Collier","Orange","Suwannee","Volusia",
+             "Wakulla","Hillsborough")
+
+florida_map <- map_data("county") |> 
+  filter(region == "florida")   |> 
+  mutate(in_sample = str_to_title(subregion) %in% counties)
+```
+
+
+```{r}
+#| echo: false
+#| fig-width: 6
+
+florida_map |> 
+  ggplot(aes(x = long, y = lat, group = group,
+             fill = in_sample)) +
+  geom_polygon(color = "grey25",
+               linewidth = .1) +
+  scale_fill_manual(values = c("grey80","#f768a1"),guide = "none") +
+  coord_map("albers",  lat0 = 45.5, lat1 = 29.5) +
+  xlab("") + ylab("") +
+  theme(plot.title = element_text(hjust = 0.5),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        legend.position = "none",
+        plot.margin = margin(0, 0, 0, 0, "cm"),
+        panel.background = element_rect(fill = "white"))
+```
+:::
+:::
+
+
+##  Example: Florida Building Permits
+
+- The probability of selecting a county is proportional to the size or area of the county  $A_i$ 
+- Let $k$ be the total area of Floria
+$\rightarrow \pi_i = \frac{A_i}{k}$
+- Note: for estimating the population mean, we don't need to know $k$! 
+$$\hat{\mu} = \frac{\sum \frac{k}{A_i}y_i}{\sum \frac{k}{A_i}} = \qquad\qquad\quad = \frac{\sum \frac{1}{A_i}y_i}{\sum \frac{1}{A_i}}$$
+
+## Example: Florida Building Permits
+
+```{r}
+#| echo: false
+
+# copy this code if you want to play with this data!
+
+florida_permits <- tibble(
+  county = c("Alachua","Santa Rosa","Polk","Palm Beach",
+             "Collier","Orange","Suwannee","Volusia","Wakulla","Hillsborough"),
+  area = c(874, 1017, 1874, 1974, 2025, 907, 688, 1103, 607, 1051),
+  permits = c(1973, 1056, 4746, 10504, 7970, 10239, 125, 3587, 394, 11656)
+)  |> 
+  mutate(weight = 1/area)
+```
+
+```{r}
+#| echo: false
+
+florida_permits |> 
+  gt() |> 
+  tab_options(table.font.size = 22) |>
+  tab_header(
+    title = "Florida Housing Permit Data",
+    subtitle = "Table 11.1 in ESS"
+  ) |> 
+  tab_style(style = cell_text(align = "center"),
+    locations = cells_column_labels()) |> 
+  cols_align(align = "left",
+             columns = county) |> 
+  fmt_number(columns = c(area, permits),
+             decimals = 0) |> 
+  fmt_number(columns = weight,
+             decimals = 3,
+             scale_by = 100) |> 
+  tab_footnote(
+    footnote = "Weights are multiplied by 100 for visibility.",
+    locations = cells_column_labels(columns = weight)
+  ) |> 
+    cols_label(
+    county = md("**County**"),
+    area = md("**Area ($A_i$)**"),
+    permits = md("**\\# Permits ($y_i$)**"), 
+    weight = md("**Weight ($w_i$)**"),
+    ) 
+  
+  
+```
+
+
+
+
+
+##  Example: Florida Building Permits {.smaller}
+
+```{r}
+#| code-fold: true
+
+# copy this code if you want to play with this data!
+
+florida_permits <- tibble(
+  county = c("Alachua","Santa Rosa","Polk","Palm Beach",
+             "Collier","Orange","Suwannee","Volusia","Wakulla","Hillsborough"),
+  area = c(874, 1017, 1874, 1974, 2025, 907, 688, 1103, 607, 1051),
+  permits = c(1973, 1056, 4746, 10504, 7970, 10239, 125, 3587, 394, 11656)
+)  |> 
+  mutate(weight = 1/area)
+```
+
+```{r}
+y_i <- florida_permits$permits
+w_i <- 1/florida_permits$area
+N <- 67
+```
+
+:::columns
+:::{.column width=48%}
+**Ignored** the unequal probability of sampling and treat this like a SRS ...  
+```{r}
+(muhat_srs <- sum(y_i)/10) 
+N*muhat_srs
+```
+
+estimate the total as 350,075 permits with an SE of 87,904 permits
+:::
+:::{.column width=4%}
+:::
+:::{.column width=48%}
+**Correctly** account for unequal probability with weights:
+
+```{r}
+(muhat_w <- sum(w_i*y_i)/sum(w_i)) 
+N*muhat_w
+```
+estimate the total as 386,297 permits with an SE of 94,873 permits.
+:::
+:::
+
+# Accounting for Non-Response and Coverage Issues
