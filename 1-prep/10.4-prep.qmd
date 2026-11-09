@@ -11,7 +11,7 @@ number-depth: 2
 library(tidyverse)
 ```
 
-#### 📽 Watch Videos: 45 min
+#### 📽 Watch Videos: 55 min
 
 ------------------------------------------------------------------------
 
@@ -35,5 +35,7 @@ For additional practice problems and reading see:
 ## Accounting for Nonresponse and Other Uses for Weights
 
 - 📽 Follow along with the [slides](../2-slides/10.4-weights.qmd#/accounting-for-nonresponse-and-other-uses-for-weights).
+
+{{<video https://youtu.be/_CSnNVY4A0M>}}
 
 
