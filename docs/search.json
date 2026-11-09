@@ -7971,7 +7971,7 @@
     "href": "3-activities/instructions/10.3-activity-readingcomp.html#estimation-with-stratified-sampling",
     "title": "Activity 10.3: Reading Comprehension",
     "section": "Estimation with Stratified Sampling",
-    "text": "Estimation with Stratified Sampling\n\nFill in the table below:\n\n\n\n\n\n\n\nWarning\n\n\n\nRemember that the data that you have is the SAMPLE data! So this is just asking you to calculate the means and sds from the data, not take an additional sample.\n\n\n\\(N =\\)\n\n\n\nTRACK\nI\nII\nIII\n\n\n\n\n\\(N_{g}\\)\n.\n.\n.\n\n\n\\(n_{g}\\)\n.\n.\n.\n\n\n\\({\\bar{y}}_{g}\\)\n.\n.\n.\n\n\n\\(s_{g}\\)\n.\n.\n.\n\n\n\n\nUse the appropriate equations to estimate the average score for the sixth grade (i.e. calculate \\(\\bar{y}_st\\)). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!\nNow use the survey package in to calculate the standard error. Calculate the 95% confidence interval for the parameter of interest “by hand” using the mean and standard error and a critical value of 2.\n\n\n\n\n\n\n\nWarningIncorrect analysis\n\n\n\n\nNow use R to calculate the standard error and the 95% confidence interval for the parameter of interest, forgetting that you used a stratified design and treating the study like an SRS\n\n\n\n\nWas stratification beneficial to accuracy? Was that what you expected? Explain.\nEstimate the average score for the track I students and the variance of that estimate.\n\n\nEstimate the average score for the track II students and the variance of that estimate."
+    "text": "Estimation with Stratified Sampling\n\nFill in the table below:\n\n\n\n\n\n\n\nWarning\n\n\n\nRemember that the data that you have is the SAMPLE data! So this is just asking you to calculate the means and sds from the data, not take an additional sample.\n\n\n\\(N =\\)\n\n\n\nTRACK\nI\nII\nIII\n\n\n\n\n\\(N_{g}\\)\n.\n.\n.\n\n\n\\(n_{g}\\)\n.\n.\n.\n\n\n\\({\\bar{y}}_{g}\\)\n.\n.\n.\n\n\n\\(s_{g}\\)\n.\n.\n.\n\n\n\n\nUse the appropriate equations to estimate the average score for the sixth grade (i.e. calculate \\(\\bar{y}_st\\)). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!\nNow use the survey package in to calculate the standard error. Calculate the 95% confidence interval for the parameter of interest “by hand” using the mean and standard error and a critical value of 2.\n\n\n\nError:\n! object 'readingdat' not found\n\n\nError:\n! object 'readingdat' not found\n\n\nError:\n! object 'strat_des' not found\n\n\n\n\n\n\n\n\nWarningIncorrect analysis\n\n\n\n\nNow use R to calculate the standard error and the 95% confidence interval for the parameter of interest, forgetting that you used a stratified design and treating the study like an SRS\n\n\n\n\nWas stratification beneficial to accuracy? Was that what you expected? Explain.\nEstimate the average score for the track I students and the variance of that estimate.\n\n\nEstimate the average score for the track II students and the variance of that estimate."
   },
   {
     "objectID": "3-activities/instructions/10.3-activity-readingcomp.html#estimating-proportions",
@@ -8048,7 +8048,7 @@
     "href": "2-slides/10.4-weights.html#example-reading-comprehension",
     "title": "Module 10: Survey Sampling",
     "section": "Example: Reading Comprehension",
-    "text": "Example: Reading Comprehension\n\n\n\n\n\n\n\nstudent\ntrack\nscores\nsize\n\n\n\n\n8\nI\n91\n55\n\n\n14\nI\n83\n55\n\n\n17\nII\n48\n80\n\n\n15\nII\n85\n80\n\n\n47\nIII\n42\n65\n\n\n36\nIII\n32\n65\n\n\n\n\n\n\n\n\nCode\nreadingdat |&gt;\n  ggplot(aes(x = track, y = scores)) +\n  geom_boxplot() +\n  geom_jitter(height = 0, width = .2,\n              alpha = .7, color = \"#154734\",\n              size = 2) +\n  labs(x = \"Track\", y = \"Score\",\n       title = \"Distribution of Reading Comprehension Scores by Track for Stratified Sample of 6th Graders\")"
+    "text": "Example: Reading Comprehension\n\n\n\n\n\n\n\nstudent\ntrack\nscores\nsize\n\n\n\n\n11\nI\n62\n55\n\n\n8\nI\n91\n55\n\n\n32\nII\n61\n80\n\n\n21\nII\n65\n80\n\n\n48\nIII\n30\n65\n\n\n40\nIII\n29\n65\n\n\n\n\n\n\n\n\nCode\nreadingdat |&gt;\n  ggplot(aes(x = track, y = scores)) +\n  geom_boxplot() +\n  geom_jitter(height = 0, width = .2,\n              alpha = .7, color = \"#154734\",\n              size = 2) +\n  labs(x = \"Track\", y = \"Score\",\n       title = \"Distribution of Reading Comprehension Scores by Track for Stratified Sample of 6th Graders\")"
   },
   {
     "objectID": "2-slides/10.4-weights.html#complex-sampling-designs",
@@ -8083,7 +8083,7 @@
     "href": "2-slides/10.4-weights.html#survey-weights-with-stratification",
     "title": "Module 10: Survey Sampling",
     "section": "Survey Weights with Stratification",
-    "text": "Survey Weights with Stratification\n\nYou have seen them before!! \\[w_{gi} = \\frac{1}{\\pi_{gi}} = \\frac{N_g}{n_g}= w_g\\]\n\n\\[\\hat{\\mu} = \\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\n… let’s do the math"
+    "text": "Survey Weights with Stratification\n\nYou have seen them before!! \\[w_{gi} = \\frac{1}{\\pi_{gi}} = \\frac{N_g}{n_g}= w_g\\]\n\n\\[\\hat{\\mu}_w = \\bar{y}_{st} = \\frac{1}{N}\\displaystyle\\sum_{g = 1}^L N_g\\bar{y}_g\\]\n… let’s do the math"
   },
   {
     "objectID": "2-slides/10.4-weights.html#unequal-probabilities-of-selection",
@@ -8097,14 +8097,14 @@
     "href": "2-slides/10.4-weights.html#survey-weights-with-stratification-1",
     "title": "Module 10: Survey Sampling",
     "section": "Survey Weights with Stratification",
-    "text": "Survey Weights with Stratification\n\\(\\hat{\\mu} = \\frac{\\sum w_jy_i}{\\sum w_j}  = \\frac{\\displaystyle\\sum_{g=1}^L \\sum_{i=1}^{n_g}\\frac{N_g}{n_g} y_{gi}}{\\displaystyle\\sum_{g=1}^L \\sum_{i=1}^{n_g} \\frac{N_g}{n_g}}\\)"
+    "text": "Survey Weights with Stratification\n\\(\\hat{\\mu}_w = \\frac{\\sum w_jy_i}{\\sum w_j}  = \\frac{\\displaystyle\\sum_{g=1}^L \\sum_{i=1}^{n_g}\\frac{N_g}{n_g} y_{gi}}{\\displaystyle\\sum_{g=1}^L \\sum_{i=1}^{n_g} \\frac{N_g}{n_g}}\\)"
   },
   {
     "objectID": "2-slides/10.4-weights.html#reading-comprehension---weights",
     "href": "2-slides/10.4-weights.html#reading-comprehension---weights",
     "title": "Module 10: Survey Sampling",
     "section": "Reading Comprehension - Weights",
-    "text": "Reading Comprehension - Weights\n\n\n\ntable(readingdat$track)\n\n\n  I  II III \n 14  20  16 \n\n\n\n\nreadingdat &lt;- readingdat |&gt; \n  mutate(weight = size/n(), .by = track)\n\n\n\nCode\nreadingdat |&gt; \n  slice_sample(n = 1, by = track) |&gt; \n  knitr::kable() |&gt; \n  kableExtra::kable_styling(font_size = 30)\n\n\n\n \n  \n    student \n    track \n    scores \n    size \n    weight \n  \n \n\n  \n    12 \n    I \n    79 \n    55 \n    3.928571 \n  \n  \n    19 \n    II \n    53 \n    80 \n    4.000000 \n  \n  \n    36 \n    III \n    32 \n    65 \n    4.062500"
+    "text": "Reading Comprehension - Weights\n\n\n\ntable(readingdat$track)\n\n\n  I  II III \n 14  20  16 \n\n\n\n\nreadingdat &lt;- readingdat |&gt; \n  mutate(weight = size/n(), .by = track)\n\n\n\nCode\nreadingdat |&gt; \n  slice_sample(n = 1, by = track) |&gt; \n  knitr::kable() |&gt; \n  kableExtra::kable_styling(font_size = 30)\n\n\n\n \n  \n    student \n    track \n    scores \n    size \n    weight \n  \n \n\n  \n    1 \n    I \n    80 \n    55 \n    3.928571 \n  \n  \n    30 \n    II \n    52 \n    80 \n    4.000000 \n  \n  \n    39 \n    III \n    65 \n    65 \n    4.062500"
   },
   {
     "objectID": "2-slides/10.4-weights.html#estimation-in-r",
@@ -8125,7 +8125,7 @@
     "href": "2-slides/10.4-weights.html#example-florida-building-permits",
     "title": "Module 10: Survey Sampling",
     "section": "Example: Florida Building Permits",
-    "text": "Example: Florida Building Permits\n\nThe probability of selecting a county is proportional to the size or area of the county \\(A_i\\)\nLet \\(k\\) be the total area of Floria \\(\\rightarrow \\pi_i = \\frac{A_i}{k}\\)\nNote: for estimating the population mean, we don’t need to know \\(k\\)! \\[\\hat{\\mu} = \\frac{\\sum \\frac{k}{A_i}y_i}{\\sum \\frac{k}{A_i}} = \\qquad\\qquad\\quad = \\frac{\\sum \\frac{1}{A_i}y_i}{\\sum \\frac{1}{A_i}}\\]"
+    "text": "Example: Florida Building Permits\n\nThe probability of selecting a county is proportional to the size or area of the county \\(A_i\\)\nLet \\(k\\) be the total area of Floria \\(\\rightarrow \\pi_i = \\frac{A_i}{k}\\)\nNote: for estimating the population mean, we don’t need to know \\(k\\)! \\[\\hat{\\mu}_w = \\frac{\\sum \\frac{k}{A_i}y_i}{\\sum \\frac{k}{A_i}} = \\qquad\\qquad\\quad = \\frac{\\sum \\frac{1}{A_i}y_i}{\\sum \\frac{1}{A_i}}\\]"
   },
   {
     "objectID": "2-slides/10.4-weights.html#example-florida-building-permits-1",
@@ -8161,5 +8161,187 @@
     "title": "10.4 Preparation: Survey Weights",
     "section": "2 Accounting for Nonresponse and Coverage Issues",
     "text": "2 Accounting for Nonresponse and Coverage Issues\ncoming soon"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#reminder-basic-idea-of-weighted-estimators",
+    "href": "2-slides/10.4-weights.html#reminder-basic-idea-of-weighted-estimators",
+    "title": "Module 10: Survey Sampling",
+    "section": "Reminder: Basic Idea of Weighted Estimators",
+    "text": "Reminder: Basic Idea of Weighted Estimators\nLet \\(w_j\\) be a weight for unit \\(j\\)\n\\[\\hat{\\mu}_w = \\frac{\\sum w_jy_j}{\\sum w_j}  \\qquad \\qquad \\hat{\\tau}_w = N\\frac{\\sum w_jy_j}{\\sum w_j}\\]"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#nonresponse",
+    "href": "2-slides/10.4-weights.html#nonresponse",
+    "title": "Module 10: Survey Sampling",
+    "section": "Nonresponse",
+    "text": "Nonresponse\n\nIn real life, you are going to have nonresponse\nNonrespondent: any eligible sample unit for which data are not obtained because the unit refuses to answer, is not reachable, or cannot answer for any number of reasons\nNonresponse error just refers to the presence of nonresponse"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#trade-off-for-adjustment",
+    "href": "2-slides/10.4-weights.html#trade-off-for-adjustment",
+    "title": "Module 10: Survey Sampling",
+    "section": "Trade-off for Adjustment",
+    "text": "Trade-off for Adjustment\n\nAdjusting with weights (correctly) decreases bias but can increase variance\n\n \n\nAre there sub-groups of your population that you think will have relatively constant nonresponse rates within them?"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#example-slo-medical-care",
+    "href": "2-slides/10.4-weights.html#example-slo-medical-care",
+    "title": "Module 10: Survey Sampling",
+    "section": "Example: SLO Medical Care",
+    "text": "Example: SLO Medical Care\nA stratified sample of 1,000 households is selected from two regions (North and South) in SLO county.\n\n2 Strata: North and South County\nSuppose there are 40,000 households in North county and 120,000 in South county.\nNorth county sample size is set at 400 and South county is 600 households.\nGoal: estimate the proportion of households with access to primary health care in SLO county"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#example-slo-medical-care-1",
+    "href": "2-slides/10.4-weights.html#example-slo-medical-care-1",
+    "title": "Module 10: Survey Sampling",
+    "section": "Example: SLO Medical Care",
+    "text": "Example: SLO Medical Care\n\n\n\nStrata\n\\(N_g\\)\n\\(n_g\\)\nBase Weight\n\n\n\n\nNorth (g = 1)\n40,000\n400\n\n\n\nSouth (g = 2)\n120,000\n600\n\n\n\n\nCalculating base weight \\(w_g\\)? \n\\(w_1\\) =\n\n\\(w_2\\) ="
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#example-slo-medical-care-2",
+    "href": "2-slides/10.4-weights.html#example-slo-medical-care-2",
+    "title": "Module 10: Survey Sampling",
+    "section": "Example: SLO Medical Care",
+    "text": "Example: SLO Medical Care\n\n\n\n\n\n\n\n\n\n\n\n Strata\n N\n n\n# responses  \\(n^*_g\\)\n# of “yes”  \\(x_g\\)\nBase Weight\n\n\n\n\nNorth (g = 1)\n40,000\n400\n200\n170\n100\n\n\nSouth (g = 2)\n120,000\n600\n530\n330\n200\n\n\n\nLet \\(x_g = \\sum_{i=1}^{n_g} y_{gi}\\) where \\(y_{gi}\\) is a binary variable that takes the value of 1 if the household has access to primary healthcare."
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#adjusting-for-nonresponse",
+    "href": "2-slides/10.4-weights.html#adjusting-for-nonresponse",
+    "title": "Module 10: Survey Sampling",
+    "section": "Adjusting for Nonresponse",
+    "text": "Adjusting for Nonresponse\n\nSimply adjust the base weight taking into account the response rate.\nGet a new weight, adjusted for nonreponse\nLet \\(r_g\\) be the response rate for strata \\(g\\)\n\nNonresponse adjusted base weight = \\([\\text{base weight}]\\times[\\frac{1}{\\text{response rate}}]\\)\n\\[w^*_g = \\frac{w_g}{r_g}\\]"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#hello",
+    "href": "2-slides/10.4-weights.html#hello",
+    "title": "Module 10: Survey Sampling",
+    "section": "Hello",
+    "text": "Hello\n\n\n\n\n\n\n\n\n\n\n\n\n\n Strata\n N\n n\n# resp.  \\(n^*_g\\)\nresp. rate  \\(r_g\\)\n# “yes”  \\(x_g\\)\n\\(w_g\\)\n\\(w^*_g\\)\n\n\n\n\nNorth\n40,000\n400\n200\n\n170\n100\n\n\n\nSouth\n120,000\n600\n530\n\n330\n200"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#example-slo-medical-care-3",
+    "href": "2-slides/10.4-weights.html#example-slo-medical-care-3",
+    "title": "Module 10: Survey Sampling",
+    "section": "Example: SLO Medical Care",
+    "text": "Example: SLO Medical Care\n\n\n\n\n\n\n\n\n\n\n\n Strata\n N\n n\n# responses  \\(n^*_g\\)\n# of “yes”  \\(x_g\\)\nBase Weight\n\n\n\n\nNorth (g = 1)\n40,000\n400\n200\n170\n100\n\n\nSouth (g = 2)\n120,000\n600\n530\n330\n200\n\n\n\n\n\n\nUnweighted estimated proportion of households with access to primary health care:\n\n\\(\\hat{p} = \\frac{\\sum x_g}{\\sum n^*_g}=\\)\n\n\nWeighted estimated proportion:\n\n\\(\\hat{p}_w = \\frac{\\sum w_gx_g}{\\sum w_gn^*_g}  =\\)"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#slo-medical-care-adjusting-for-nonresponse",
+    "href": "2-slides/10.4-weights.html#slo-medical-care-adjusting-for-nonresponse",
+    "title": "Module 10: Survey Sampling",
+    "section": "SLO Medical Care – Adjusting for Nonresponse",
+    "text": "SLO Medical Care – Adjusting for Nonresponse\n\n\n\n\n\n\n\n\n\n\n\n\n\n Strata\n \\(N_g\\)\n \\(n_g\\)\n# resp.  \\(n^*_g\\)\nresp. rate  \\(r_g\\)\n# “yes”  \\(x_g\\)\n \\(w_g\\)\n \\(w^*_g\\)\n\n\n\n\nNorth\n40,000\n400\n200\n\n170\n100\n\n\n\nSouth\n120,000\n600\n530\n\n330\n200\n\n\n\n\n \\(r_1= \\qquad \\qquad \\qquad \\qquad \\qquad \\qquad r_2=\\)\n\n\\(w_1^*=  \\qquad \\qquad \\qquad \\qquad  \\qquad \\qquad w_2^*=\\)"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#slo-medical-care-adjusting-for-nonresponse-1",
+    "href": "2-slides/10.4-weights.html#slo-medical-care-adjusting-for-nonresponse-1",
+    "title": "Module 10: Survey Sampling",
+    "section": "SLO Medical Care – Adjusting for Nonresponse",
+    "text": "SLO Medical Care – Adjusting for Nonresponse\n\n\n\n\n\n\n\n\n\n\n\n\n\n Strata\n \\(N_g\\)\n \\(n_g\\)\n# resp.  \\(n^*_g\\)\nresp. rate  \\(r_g\\)\n# “yes”  \\(x_g\\)\n \\(w_g\\)\n \\(w^*_g\\)\n\n\n\n\nNorth\n40,000\n400\n200\n0.50\n170\n100\n200\n\n\nSouth\n120,000\n600\n530\n0.88\n330\n200\n226\n\n\n\n\nWeighted non-response adjusted estimated proportion of households with access to primary health care is:\n\n\\(\\hat{p}_{adj} = \\frac{\\sum w^*_gx_g}{\\sum w^*_gn^*_g}  =\\)"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#slo-medical-care-adjusting-for-nonresponse-2",
+    "href": "2-slides/10.4-weights.html#slo-medical-care-adjusting-for-nonresponse-2",
+    "title": "Module 10: Survey Sampling",
+    "section": "SLO Medical Care – Adjusting for Nonresponse",
+    "text": "SLO Medical Care – Adjusting for Nonresponse\n\n\n\n\n\n\n\n\n\n\n\n\n\n Strata\n \\(N_g\\)\n \\(n_g\\)\n# resp.  \\(n^*_g\\)\nresp. rate  \\(r_g\\)\n# “yes”  \\(x_g\\)\n \\(w_g\\)\n \\(w^*_g\\)\n\n\n\n\nNorth\n40,000\n400\n200\n0.50\n170\n100\n200\n\n\nSouth\n120,000\n600\n530\n0.88\n330\n200\n226\n\n\n\n\nWeighted non-response adjusted estimated proportion of households with access to primary health care is:\n\n\\(\\hat{p}_{adj} = \\frac{\\sum w^*_gx_g}{\\sum w^*_gn^*_g}  =\\)"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#nonresponse-bias",
+    "href": "2-slides/10.4-weights.html#nonresponse-bias",
+    "title": "Module 10: Survey Sampling",
+    "section": "Nonresponse Bias",
+    "text": "Nonresponse Bias\n\nNonresponse bias occurs when nonrespondents both:\n\ndiffer systematically from respondents in characteristics related to the response of interest and\nare a large eough proportion of the population that this difference impacts the survey estimates.\n\nAdjust for nonresponse bias using weights!"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#trade-off-for-adjustment-for-nonresponse",
+    "href": "2-slides/10.4-weights.html#trade-off-for-adjustment-for-nonresponse",
+    "title": "Module 10: Survey Sampling",
+    "section": "Trade-off for Adjustment for Nonresponse",
+    "text": "Trade-off for Adjustment for Nonresponse\n\nAdjusting with weights decreases bias but can increase variance\n\n \n\nAre there sub-groups of your population that you think will have relatively constant nonresponse rates within them?"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#reminder-weighted-estimators",
+    "href": "2-slides/10.4-weights.html#reminder-weighted-estimators",
+    "title": "Module 10: Survey Sampling",
+    "section": "Reminder: Weighted Estimators",
+    "text": "Reminder: Weighted Estimators\nLet \\(w_j\\) be a weight for unit \\(j\\)\n\\[\\hat{\\mu}_w = \\frac{\\sum w_jy_j}{\\sum w_j}  \\qquad \\qquad \\hat{\\tau}_w = N\\frac{\\sum w_jy_j}{\\sum w_j}\\]"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#weighted-estimator-for-strata",
+    "href": "2-slides/10.4-weights.html#weighted-estimator-for-strata",
+    "title": "Module 10: Survey Sampling",
+    "section": "Weighted Estimator for Strata",
+    "text": "Weighted Estimator for Strata\n\nWith stratified sampling all units in a strata typically have the same weight… so we can simplify to…\nLet \\(w_g\\) be a weight for strata \\(g\\)\nand \\(Y_g = \\sum_{i=1}^{n_g} y_{gi}\\) be the total of the response of interest \\(y_{gi}\\) for strata \\(g\\)\n\n\\[\\hat{\\mu}_w = \\frac{\\sum w_gY_g}{\\sum w_g}  \\qquad \\qquad \\hat{\\tau}_w = N\\frac{\\sum w_gY_g}{\\sum w_g}\\]"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#comparing-estimators",
+    "href": "2-slides/10.4-weights.html#comparing-estimators",
+    "title": "Module 10: Survey Sampling",
+    "section": "Comparing Estimators",
+    "text": "Comparing Estimators\n\n\n\nEstimator\n\\(\\hat{p}\\)\n\\(SE(\\hat{p})\\)\n\n\n\n\nUnweighted\n0.685\n0.015\n\n\nStrata Weighted\n0.659\n0.0008\n\n\nNonresponse Adjusted Weighted\n0.679\n0.0008\n\n\n\n\n\nNorth county observed prop: \\(\\hat{p}_1 = \\frac{170}{200} = 0.85\\)\nSouth county observed prop: \\(\\hat{p}_2 = \\frac{330}{530} = 0.622\\)"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#weights-for-other-representation-issues",
+    "href": "2-slides/10.4-weights.html#weights-for-other-representation-issues",
+    "title": "Module 10: Survey Sampling",
+    "section": "Weights for other Representation Issues",
+    "text": "Weights for other Representation Issues\n\nUse weights if…\n\nunits in the population have different probabilities of being selected in the sample\nthere is suspected nonresponse bias\nthere is suspected coverage bias\n\nWeights often address ALL THREE of these issues in complex surveys\nThis is a big part of the job of survey experts!"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#determining-weights",
+    "href": "2-slides/10.4-weights.html#determining-weights",
+    "title": "Module 10: Survey Sampling",
+    "section": "Determining Weights",
+    "text": "Determining Weights\n\nWeights often address ALL THREE of these issues in complex surveys\nThis is a big part of the job of survey experts!"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#weights-in-administrative-data",
+    "href": "2-slides/10.4-weights.html#weights-in-administrative-data",
+    "title": "Module 10: Survey Sampling",
+    "section": "Weights in Administrative Data",
+    "text": "Weights in Administrative Data\n\nincludes person weights that estimate the number of people in the target population that each person represents. In general, since population units may be sampled with different selection probabilities and since response rates and coverage rates may vary across subpopulations, different responding units represent different numbers of units in the population. The use of weights in survey analysis compensates for this differential representation, thus producing estimates that relate to the target population. - Census Bureau\n\n\nResearchers using BRFSS data should conduct analyses with complex sampling procedures; they also should appropriately stratify and weight the data in their work. Potential bias resulting from selection probabilities and noncoverage among segments of the population can be reduced through weighting. - BRFSS"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#weights-in-administrative-data-1",
+    "href": "2-slides/10.4-weights.html#weights-in-administrative-data-1",
+    "title": "Module 10: Survey Sampling",
+    "section": "Weights in Administrative Data",
+    "text": "Weights in Administrative Data\n\nOften, big surveys stratify on some variables like states, counties, etc.\nBut it is difficult to stratify on demographic information…\nAfter the sample is collected, calculate weights based on discrepenciess between demographics of the sample and known demographics of the population (from the Census)"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#calculating-weights",
+    "href": "2-slides/10.4-weights.html#calculating-weights",
+    "title": "Module 10: Survey Sampling",
+    "section": "Calculating Weights",
+    "text": "Calculating Weights\nExample procedure:\n\nCalculate base weight based on probability of selection\nAdjust for nonresponse\nPoststratification adjustment to correct for departures from known population totals\n\nand there may be other layers of adjustments for other elements of the complex sampling design!"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#example-slo-medical-care-4",
+    "href": "2-slides/10.4-weights.html#example-slo-medical-care-4",
+    "title": "Module 10: Survey Sampling",
+    "section": "Example: SLO Medical Care",
+    "text": "Example: SLO Medical Care\n\n\n\nStrata\nIncome\nPop Size\n# resp.\n# yes\n\n\n\n\nNorth (g = 1)\nHigh\n20,000\n120\n110\n\n\nNorth (g = 1)\nLow\n20,000\n80\n60\n\n\nSouth (g = 2)\nHigh\n80,000\n360\n250\n\n\nSouth (g = 2)\nLow\n40,000\n170\n80"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#calculating-weights-1",
+    "href": "2-slides/10.4-weights.html#calculating-weights-1",
+    "title": "Module 10: Survey Sampling",
+    "section": "Calculating Weights",
+    "text": "Calculating Weights"
+  },
+  {
+    "objectID": "2-slides/10.4-weights.html#weighty-lessons",
+    "href": "2-slides/10.4-weights.html#weighty-lessons",
+    "title": "Module 10: Survey Sampling",
+    "section": "Weighty Lessons",
+    "text": "Weighty Lessons\n\nThe big picture here is: pay attention to whether data you are analyzing gives you survey weights!!\nYou need to use a weighted analysis if weights are provided to be able to generalize to the intended target population\nIt is hard to get a perfect sample – weights help us adjust things in a principled way to generalize back to the target population"
+  },
+  {
+    "objectID": "1-prep/10.4-prep.html#accounting-for-nonresponse-and-other-uses-for-weights",
+    "href": "1-prep/10.4-prep.html#accounting-for-nonresponse-and-other-uses-for-weights",
+    "title": "10.4 Preparation: Survey Weights",
+    "section": "2 Accounting for Nonresponse and Other Uses for Weights",
+    "text": "2 Accounting for Nonresponse and Other Uses for Weights\n\n📽 Follow along with the slides."
   }
 ]

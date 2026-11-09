@@ -100,13 +100,13 @@ $$w_j = \frac{1}{\pi_j}$$
 - You have seen them before!!
  $$w_{gi} = \frac{1}{\pi_{gi}} = \frac{N_g}{n_g}= w_g$$
  
-$$\hat{\mu} = \bar{y}_{st} = \frac{1}{N}\displaystyle\sum_{g = 1}^L N_g\bar{y}_g$$
+$$\hat{\mu}_w = \bar{y}_{st} = \frac{1}{N}\displaystyle\sum_{g = 1}^L N_g\bar{y}_g$$
 
 ... let's do the math
 
 ## Survey Weights with Stratification
 
-$\hat{\mu} = \frac{\sum w_jy_i}{\sum w_j}  = \frac{\displaystyle\sum_{g=1}^L \sum_{i=1}^{n_g}\frac{N_g}{n_g} y_{gi}}{\displaystyle\sum_{g=1}^L \sum_{i=1}^{n_g} \frac{N_g}{n_g}}$
+$\hat{\mu}_w = \frac{\sum w_jy_i}{\sum w_j}  = \frac{\displaystyle\sum_{g=1}^L \sum_{i=1}^{n_g}\frac{N_g}{n_g} y_{gi}}{\displaystyle\sum_{g=1}^L \sum_{i=1}^{n_g} \frac{N_g}{n_g}}$
 
 ## Example: Reading Comprehension
 
@@ -261,7 +261,7 @@ florida_map |>
 - Let $k$ be the total area of Floria
 $\rightarrow \pi_i = \frac{A_i}{k}$
 - Note: for estimating the population mean, we don't need to know $k$! 
-$$\hat{\mu} = \frac{\sum \frac{k}{A_i}y_i}{\sum \frac{k}{A_i}} = \qquad\qquad\quad = \frac{\sum \frac{1}{A_i}y_i}{\sum \frac{1}{A_i}}$$
+$$\hat{\mu}_w = \frac{\sum \frac{k}{A_i}y_i}{\sum \frac{k}{A_i}} = \qquad\qquad\quad = \frac{\sum \frac{1}{A_i}y_i}{\sum \frac{1}{A_i}}$$
 
 ## Example: Florida Building Permits
 
@@ -361,4 +361,236 @@ estimate the total as 386,297 permits with an SE of 94,873 permits.
 :::
 :::
 
-# Accounting for Non-Response and Coverage Issues
+# Accounting for Nonresponse and Other Uses for Weights
+
+
+## Nonresponse
+
+- In real life, you are going to have nonresponse
+- *Nonrespondent*: any eligible sample unit for which data are not obtained because the unit refuses to answer, is not reachable, or cannot answer for any number of reasons
+- **Nonresponse error** just refers to the presence of nonresponse
+
+## Nonresponse Bias
+
+- **Nonresponse bias** occurs when nonrespondents both:
+    1. differ systematically from respondents in characteristics related to the response of interest and
+    2. are a large eough proportion of the population that this difference impacts the survey estimates.
+- Adjust for nonresponse bias using weights!
+
+## Reminder: Weighted Estimators
+
+Let $w_j$ be a weight for unit $j$
+
+$$\hat{\mu}_w = \frac{\sum w_jy_j}{\sum w_j}  \qquad \qquad \hat{\tau}_w = N\frac{\sum w_jy_j}{\sum w_j}$$
+
+
+
+
+## Trade-off for Adjustment for Nonresponse
+
+- Adjusting with weights decreases bias but can increase variance
+
+
+</br>
+</br>
+
+- Are there sub-groups of your population that you think will have relatively constant nonresponse rates within them?
+ 
+## Weighted Estimator for Strata
+
+- With stratified sampling all units in a strata typically have the same weight... so we can simplify to...
+- Let $w_g$ be a weight for **strata** $g$
+- and $Y_g = \sum_{i=1}^{n_g} y_{gi}$ be the **total** of the response of interest $y_{gi}$ for **strata** $g$
+
+$$\hat{\mu}_w = \frac{\sum w_gY_g}{\sum w_g}  \qquad \qquad \hat{\tau}_w = N\frac{\sum w_gY_g}{\sum w_g}$$
+
+## Example: SLO Medical Care
+
+A stratified sample of 1,000 households is selected from two regions (North and South) in SLO county.
+
+- 2 Strata: North and South County
+- Suppose there are 40,000 households in North county and 120,000 in South county.
+- North county sample size is set at 400 and South county is 600 households.
+- **Goal**: estimate the *proportion* of households with access to primary health care in SLO county
+
+## Example: SLO Medical Care
+
+
+| Strata        | $N_g$   | $n_g$   | Base Weight |
+|---------------|-----|-----|-------------|
+| North (g = 1) |  40,000   |  400   |             |
+| South (g = 2) |   120,000  |  600   |             |
+
+Calculating base weight $w_g$?
+<br>
+
+$w_1$ = 
+
+<br>
+
+$w_2$ = 
+
+## Example: SLO Medical Care
+
+
+| <br> Strata | <br> N   | <br> n  | \# responses <br> $n^*_g$ | \# of "yes" <br> $x_g$ | Base Weight |
+| ------- | ---: | ---: | :-----: | :----: | :---: |
+| North (g = 1) | 40,000    |  400   |    200  |   170   |     [100]{style="color:blue;"}        |
+| South (g = 2) | 120,000    |   600  |     530          |     330          |     [200]{style="color:blue;"}        |
+
+Let $x_g = \sum_{i=1}^{n_g} y_{gi}$ where $y_{gi}$ is a binary variable that takes the value of 1 if the household has access to primary healthcare.
+
+## Example: SLO Medical Care
+
+| <br> Strata | <br> N   | <br> n  | \# responses <br> $n^*_g$ | \# of "yes" <br> $x_g$ | Base Weight |
+| ------- | ---: | ---: | :-----: | :----: | :---: |
+| North (g = 1) | 40,000    |  400   |    200  |   170   |     [100]{style="color:blue;"}        |
+| South (g = 2) | 120,000    |   600  |     530          |     330          |    [200]{style="color:blue;"}          |
+
+:::columns
+:::column
+- **Unweighted** estimated proportion of households with
+access to primary health care:
+
+$\hat{p} = \frac{\sum x_g}{\sum n^*_g}=$
+:::
+:::column
+- **Weighted** estimated proportion:
+
+$\hat{p}_w = \frac{\sum w_gx_g}{\sum w_gn^*_g}  =$
+:::
+:::
+
+## Adjusting for Nonresponse
+
+- Simply adjust the base weight taking into account the
+response rate.
+- Get a new weight, adjusted for nonreponse
+- Let $r_g$ be the response rate for strata $g$
+
+Nonresponse adjusted base weight =   $[\text{base weight}]\times[\frac{1}{\text{response rate}}]$
+
+$$w^*_g = \frac{w_g}{r_g}$$
+
+## SLO Medical Care -- Adjusting for Nonresponse
+
+| <br> Strata | <br> $N_g$   | <br> $n_g$  | \# resp. <br> $n^*_g$ | resp. rate <br> $r_g$ |\# "yes" <br> $x_g$ |  <br> $w_g$ |  <br> $w^*_g$ |
+| ----- | ---: | ---: | :-----: | :-----: | :----: | :---: | :---: |
+| North | 40,000    |  400   |    200 | |   170   |     [100]{style="color:blue;"}   | |
+| South | 120,000    |   600  |     530      |    |     330  |     [200]{style="color:blue;"}    | |
+
+
+<br>
+$r_1= \qquad \qquad \qquad \qquad \qquad \qquad r_2=$
+
+
+<br>
+
+
+$w_1^*=  \qquad \qquad \qquad \qquad  \qquad \qquad w_2^*=$
+
+
+
+
+## SLO Medical Care -- Adjusting for Nonresponse
+
+| <br> Strata | <br> $N_g$   | <br> $n_g$  | \# resp. <br> $n^*_g$ | resp. rate <br> $r_g$ |\# "yes" <br> $x_g$ |  <br> $w_g$ |  <br> $w^*_g$ |
+| ----- | ---: | ---: | :-----: | :-----: | :----: | :---: | :---: |
+| North | 40,000    |  400   |    200 |[0.50]{style="color:green;"} |   170   |    [100]{style="color:blue;"}   | [200]{style="color:green;"} |
+| South | 120,000    |   600  |     530      |  [0.88]{style="color:green;"}  |     330  |    [200]{style="color:blue;"}    | [226]{style="color:green;"} |
+
+
+- **Weighted non-response adjusted** estimated proportion of households with access to primary health care is:
+
+$\hat{p}_{adj} = \frac{\sum w^*_gx_g}{\sum w^*_gn^*_g}  =$
+
+## Comparing Estimators
+
+| Estimator | $\hat{p}$ | $SE(\hat{p})$ |
+|-------|---|---|
+|Unweighted|0.685 | 0.015 |
+|Strata Weighted| 0.659 | 0.0008 |
+|Nonresponse Adjusted Weighted| 0.679 | 0.0008 |
+
+<br>
+
+- North county observed prop: $\hat{p}_1 = \frac{170}{200} = 0.85$ 
+- South county observed prop: $\hat{p}_2 = \frac{330}{530} = 0.622$
+
+```{r}
+#| echo: false
+#| include: false
+
+N_g <- c(40000, 120000)
+n_g <- c(400, 600)
+w_g <- N_g/n_g
+nstar_g <- c(200, 530)
+y_g <- c(170, 330)
+p_g <- y_g/nstar_g
+wstar_g <- w_g/(nstar_g/n_g)
+
+phat <- sum(y_g)/sum(nstar_g)
+sqrt(phat*(1-phat)/1000)
+
+sum(y_g*w_g)/sum(w_g*nstar_g)
+sqrt(sum(w_g^2*p_g*(1-p_g)) / sum(w_g*nstar_g)^2)
+
+sum(y_g*wstar_g)/sum(wstar_g*nstar_g)
+sqrt(sum(wstar_g^2*p_g*(1-p_g)) / sum(wstar_g*nstar_g)^2)
+
+
+```
+
+
+## Weights for other Representation Issues
+
+- Use weights if...
+    - units in the population have **different probabilities** of being selected in the sample
+    - there is suspected **nonresponse bias**
+    - there is suspected **coverage bias** 
+
+- Weights often address ALL THREE of these issues in complex surveys
+- This is a big part of the job of survey experts! 
+
+## Weights in Administrative Data
+
+> includes person weights that estimate the number of people in the target population that each person represents. In general, since population units may be sampled with different selection probabilities and since response rates and coverage rates may vary across subpopulations, different responding units represent different numbers of units in the population. The use of weights in survey analysis compensates for this differential representation, thus producing estimates that relate to the target population.
+- [Census Bureau](https://www.census.gov/programs-surveys/sipp/methodology/weighting.html)
+
+> Researchers using BRFSS data should conduct analyses with complex sampling procedures; they also should appropriately stratify and weight the data in their work. Potential bias resulting from selection probabilities and noncoverage among segments of the population can be reduced through weighting. 
+- [BRFSS](https://www.cdc.gov/brfss/annual_data/2025/pdf/Complex-Sampling-Weights-and-Preparing-Module-Data-for-Analysis-2025-508.pdf)
+
+## Weights in Administrative Data
+
+- Often, big surveys stratify on **some variables** like states, counties, etc.
+- But it is difficult to stratify on demographic information... 
+- After the sample is collected, calculate weights based on discrepenciess between demographics of the sample and known demographics of the population (from the Census)
+
+## Example: SLO Medical Care
+
+
+| Strata        | Income | Pop Size      | \# resp.  | \# yes |
+|---------------|--------|--------|-----------|---------|
+| North (g = 1) | High   | 20,000 | 120       | 110     |
+| North (g = 1) | Low    | 20,000 | 80        | 60      |
+| South (g = 2) | High   | 80,000 | 360       | 250     |
+| South (g = 2) | Low    | 40,000 | 170       | 80      |
+
+## Calculating Weights
+
+Example procedure:
+
+1. Calculate base weight based on probability of selection
+2. Adjust for nonresponse
+3. *Poststratification* adjustment to correct for departures from known population totals
+
+and there may be other layers of adjustments for other elements of the complex sampling design!
+
+## Weighty Lessons
+
+- The big picture here is: pay attention to whether data you are analyzing gives you survey weights!!
+- You *need* to use a weighted analysis if weights are provided to be able to generalize to the intended target population
+- It is hard to get a *perfect* sample -- weights help us adjust things in a principled way to generalize back to the target population
+
+![](_images/10.1-populations.png){width=30%}
+

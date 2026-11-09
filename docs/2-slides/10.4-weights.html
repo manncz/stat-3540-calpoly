@@ -295,12 +295,12 @@
 <ul>
 <li>You have seen them before!! <span class="math display">\[w_{gi} = \frac{1}{\pi_{gi}} = \frac{N_g}{n_g}= w_g\]</span></li>
 </ul>
-<p><span class="math display">\[\hat{\mu} = \bar{y}_{st} = \frac{1}{N}\displaystyle\sum_{g = 1}^L N_g\bar{y}_g\]</span></p>
+<p><span class="math display">\[\hat{\mu}_w = \bar{y}_{st} = \frac{1}{N}\displaystyle\sum_{g = 1}^L N_g\bar{y}_g\]</span></p>
 <p>… let’s do the math</p>
 </section>
 <section id="survey-weights-with-stratification-1" class="slide level2">
 <h2>Survey Weights with Stratification</h2>
-<p><span class="math inline">\(\hat{\mu} = \frac{\sum w_jy_i}{\sum w_j}  = \frac{\displaystyle\sum_{g=1}^L \sum_{i=1}^{n_g}\frac{N_g}{n_g} y_{gi}}{\displaystyle\sum_{g=1}^L \sum_{i=1}^{n_g} \frac{N_g}{n_g}}\)</span></p>
+<p><span class="math inline">\(\hat{\mu}_w = \frac{\sum w_jy_i}{\sum w_j}  = \frac{\displaystyle\sum_{g=1}^L \sum_{i=1}^{n_g}\frac{N_g}{n_g} y_{gi}}{\displaystyle\sum_{g=1}^L \sum_{i=1}^{n_g} \frac{N_g}{n_g}}\)</span></p>
 </section>
 <section id="example-reading-comprehension" class="slide level2">
 <h2>Example: Reading Comprehension</h2>
@@ -319,39 +319,39 @@
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">I</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">55</td>
+</tr>
+<tr class="even">
 <td style="text-align: right;">8</td>
 <td style="text-align: left;">I</td>
 <td style="text-align: right;">91</td>
 <td style="text-align: right;">55</td>
 </tr>
+<tr class="odd">
+<td style="text-align: right;">32</td>
+<td style="text-align: left;">II</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">80</td>
+</tr>
 <tr class="even">
-<td style="text-align: right;">14</td>
-<td style="text-align: left;">I</td>
-<td style="text-align: right;">83</td>
-<td style="text-align: right;">55</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: left;">II</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">80</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">17</td>
-<td style="text-align: left;">II</td>
 <td style="text-align: right;">48</td>
-<td style="text-align: right;">80</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">15</td>
-<td style="text-align: left;">II</td>
-<td style="text-align: right;">85</td>
-<td style="text-align: right;">80</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">47</td>
 <td style="text-align: left;">III</td>
-<td style="text-align: right;">42</td>
+<td style="text-align: right;">30</td>
 <td style="text-align: right;">65</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">36</td>
+<td style="text-align: right;">40</td>
 <td style="text-align: left;">III</td>
-<td style="text-align: right;">32</td>
+<td style="text-align: right;">29</td>
 <td style="text-align: right;">65</td>
 </tr>
 </tbody>
@@ -419,23 +419,23 @@
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:right;"> 1 </td>
    <td style="text-align:left;"> I </td>
-   <td style="text-align:right;"> 79 </td>
+   <td style="text-align:right;"> 80 </td>
    <td style="text-align:right;"> 55 </td>
    <td style="text-align:right;"> 3.928571 </td>
   </tr>
   <tr>
-   <td style="text-align:right;"> 19 </td>
+   <td style="text-align:right;"> 30 </td>
    <td style="text-align:left;"> II </td>
-   <td style="text-align:right;"> 53 </td>
+   <td style="text-align:right;"> 52 </td>
    <td style="text-align:right;"> 80 </td>
    <td style="text-align:right;"> 4.000000 </td>
   </tr>
   <tr>
-   <td style="text-align:right;"> 36 </td>
+   <td style="text-align:right;"> 39 </td>
    <td style="text-align:left;"> III </td>
-   <td style="text-align:right;"> 32 </td>
+   <td style="text-align:right;"> 65 </td>
    <td style="text-align:right;"> 65 </td>
    <td style="text-align:right;"> 4.062500 </td>
   </tr>
@@ -504,30 +504,30 @@ scores 59.989 1.7499</code></pre>
 <ul>
 <li>The probability of selecting a county is proportional to the size or area of the county <span class="math inline">\(A_i\)</span></li>
 <li>Let <span class="math inline">\(k\)</span> be the total area of Floria <span class="math inline">\(\rightarrow \pi_i = \frac{A_i}{k}\)</span></li>
-<li>Note: for estimating the population mean, we don’t need to know <span class="math inline">\(k\)</span>! <span class="math display">\[\hat{\mu} = \frac{\sum \frac{k}{A_i}y_i}{\sum \frac{k}{A_i}} = \qquad\qquad\quad = \frac{\sum \frac{1}{A_i}y_i}{\sum \frac{1}{A_i}}\]</span></li>
+<li>Note: for estimating the population mean, we don’t need to know <span class="math inline">\(k\)</span>! <span class="math display">\[\hat{\mu}_w = \frac{\sum \frac{k}{A_i}y_i}{\sum \frac{k}{A_i}} = \qquad\qquad\quad = \frac{\sum \frac{1}{A_i}y_i}{\sum \frac{1}{A_i}}\]</span></li>
 </ul>
 </section>
 <section id="example-florida-building-permits-1" class="slide level2">
 <h2>Example: Florida Building Permits</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="oobxbftuoc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#oobxbftuoc table {
+<div id="iweqefmtye" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#iweqefmtye table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#oobxbftuoc thead, #oobxbftuoc tbody, #oobxbftuoc tfoot, #oobxbftuoc tr, #oobxbftuoc td, #oobxbftuoc th {
+#iweqefmtye thead, #iweqefmtye tbody, #iweqefmtye tfoot, #iweqefmtye tr, #iweqefmtye td, #iweqefmtye th {
   border-style: none;
 }
 
-#oobxbftuoc p {
+#iweqefmtye p {
   margin: 0;
   padding: 0;
 }
 
-#oobxbftuoc .gt_table {
+#iweqefmtye .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -553,12 +553,12 @@ scores 59.989 1.7499</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_caption {
+#iweqefmtye .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#oobxbftuoc .gt_title {
+#iweqefmtye .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -570,7 +570,7 @@ scores 59.989 1.7499</code></pre>
   border-bottom-width: 0;
 }
 
-#oobxbftuoc .gt_subtitle {
+#iweqefmtye .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -582,7 +582,7 @@ scores 59.989 1.7499</code></pre>
   border-top-width: 0;
 }
 
-#oobxbftuoc .gt_heading {
+#iweqefmtye .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -594,13 +594,13 @@ scores 59.989 1.7499</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_bottom_border {
+#iweqefmtye .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_col_headings {
+#iweqefmtye .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -615,7 +615,7 @@ scores 59.989 1.7499</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_col_heading {
+#iweqefmtye .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -635,7 +635,7 @@ scores 59.989 1.7499</code></pre>
   overflow-x: hidden;
 }
 
-#oobxbftuoc .gt_column_spanner_outer {
+#iweqefmtye .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -647,15 +647,15 @@ scores 59.989 1.7499</code></pre>
   padding-right: 4px;
 }
 
-#oobxbftuoc .gt_column_spanner_outer:first-child {
+#iweqefmtye .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#oobxbftuoc .gt_column_spanner_outer:last-child {
+#iweqefmtye .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#oobxbftuoc .gt_column_spanner {
+#iweqefmtye .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -667,11 +667,11 @@ scores 59.989 1.7499</code></pre>
   width: 100%;
 }
 
-#oobxbftuoc .gt_spanner_row {
+#iweqefmtye .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#oobxbftuoc .gt_group_heading {
+#iweqefmtye .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -697,7 +697,7 @@ scores 59.989 1.7499</code></pre>
   text-align: left;
 }
 
-#oobxbftuoc .gt_empty_group_heading {
+#iweqefmtye .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -712,15 +712,15 @@ scores 59.989 1.7499</code></pre>
   vertical-align: middle;
 }
 
-#oobxbftuoc .gt_from_md > :first-child {
+#iweqefmtye .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#oobxbftuoc .gt_from_md > :last-child {
+#iweqefmtye .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#oobxbftuoc .gt_row {
+#iweqefmtye .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -739,7 +739,7 @@ scores 59.989 1.7499</code></pre>
   overflow-x: hidden;
 }
 
-#oobxbftuoc .gt_stub {
+#iweqefmtye .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -752,7 +752,7 @@ scores 59.989 1.7499</code></pre>
   padding-right: 5px;
 }
 
-#oobxbftuoc .gt_stub_row_group {
+#iweqefmtye .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -766,15 +766,15 @@ scores 59.989 1.7499</code></pre>
   vertical-align: top;
 }
 
-#oobxbftuoc .gt_row_group_first td {
+#iweqefmtye .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#oobxbftuoc .gt_row_group_first th {
+#iweqefmtye .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#oobxbftuoc .gt_summary_row {
+#iweqefmtye .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -784,16 +784,16 @@ scores 59.989 1.7499</code></pre>
   padding-right: 5px;
 }
 
-#oobxbftuoc .gt_first_summary_row {
+#iweqefmtye .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_first_summary_row.thick {
+#iweqefmtye .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#oobxbftuoc .gt_last_summary_row {
+#iweqefmtye .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -803,7 +803,7 @@ scores 59.989 1.7499</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_grand_summary_row {
+#iweqefmtye .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -813,7 +813,7 @@ scores 59.989 1.7499</code></pre>
   padding-right: 5px;
 }
 
-#oobxbftuoc .gt_first_grand_summary_row {
+#iweqefmtye .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -823,7 +823,7 @@ scores 59.989 1.7499</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_last_grand_summary_row_top {
+#iweqefmtye .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -833,11 +833,11 @@ scores 59.989 1.7499</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_striped {
+#iweqefmtye .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#oobxbftuoc .gt_table_body {
+#iweqefmtye .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -846,7 +846,7 @@ scores 59.989 1.7499</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_footnotes {
+#iweqefmtye .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -860,7 +860,7 @@ scores 59.989 1.7499</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_footnote {
+#iweqefmtye .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -869,7 +869,7 @@ scores 59.989 1.7499</code></pre>
   padding-right: 5px;
 }
 
-#oobxbftuoc .gt_sourcenotes {
+#iweqefmtye .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -883,7 +883,7 @@ scores 59.989 1.7499</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#oobxbftuoc .gt_sourcenote {
+#iweqefmtye .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -891,72 +891,72 @@ scores 59.989 1.7499</code></pre>
   padding-right: 5px;
 }
 
-#oobxbftuoc .gt_left {
+#iweqefmtye .gt_left {
   text-align: left;
 }
 
-#oobxbftuoc .gt_center {
+#iweqefmtye .gt_center {
   text-align: center;
 }
 
-#oobxbftuoc .gt_right {
+#iweqefmtye .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#oobxbftuoc .gt_font_normal {
+#iweqefmtye .gt_font_normal {
   font-weight: normal;
 }
 
-#oobxbftuoc .gt_font_bold {
+#iweqefmtye .gt_font_bold {
   font-weight: bold;
 }
 
-#oobxbftuoc .gt_font_italic {
+#iweqefmtye .gt_font_italic {
   font-style: italic;
 }
 
-#oobxbftuoc .gt_super {
+#iweqefmtye .gt_super {
   font-size: 65%;
 }
 
-#oobxbftuoc .gt_footnote_marks {
+#iweqefmtye .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#oobxbftuoc .gt_asterisk {
+#iweqefmtye .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#oobxbftuoc .gt_indent_1 {
+#iweqefmtye .gt_indent_1 {
   text-indent: 5px;
 }
 
-#oobxbftuoc .gt_indent_2 {
+#iweqefmtye .gt_indent_2 {
   text-indent: 10px;
 }
 
-#oobxbftuoc .gt_indent_3 {
+#iweqefmtye .gt_indent_3 {
   text-indent: 15px;
 }
 
-#oobxbftuoc .gt_indent_4 {
+#iweqefmtye .gt_indent_4 {
   text-indent: 20px;
 }
 
-#oobxbftuoc .gt_indent_5 {
+#iweqefmtye .gt_indent_5 {
   text-indent: 25px;
 }
 
-#oobxbftuoc .katex-display {
+#iweqefmtye .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#oobxbftuoc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#iweqefmtye div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1079,11 +1079,434 @@ scores 59.989 1.7499</code></pre>
 <p>estimate the total as 386,297 permits with an SE of 94,873 permits.</p>
 </div></div>
 </section></section>
-<section id="accounting-for-non-response-and-coverage-issues" class="title-slide slide level1 center">
-<h1>Accounting for Non-Response and Coverage Issues</h1>
-
+<section>
+<section id="accounting-for-nonresponse-and-other-uses-for-weights" class="title-slide slide level1 center">
+<h1>Accounting for Nonresponse and Other Uses for Weights</h1>
 
 </section>
+<section id="nonresponse" class="slide level2">
+<h2>Nonresponse</h2>
+<ul>
+<li>In real life, you are going to have nonresponse</li>
+<li><em>Nonrespondent</em>: any eligible sample unit for which data are not obtained because the unit refuses to answer, is not reachable, or cannot answer for any number of reasons</li>
+<li><strong>Nonresponse error</strong> just refers to the presence of nonresponse</li>
+</ul>
+</section>
+<section id="nonresponse-bias" class="slide level2">
+<h2>Nonresponse Bias</h2>
+<ul>
+<li><strong>Nonresponse bias</strong> occurs when nonrespondents both:
+<ol type="1">
+<li>differ systematically from respondents in characteristics related to the response of interest and</li>
+<li>are a large eough proportion of the population that this difference impacts the survey estimates.</li>
+</ol></li>
+<li>Adjust for nonresponse bias using weights!</li>
+</ul>
+</section>
+<section id="reminder-weighted-estimators" class="slide level2">
+<h2>Reminder: Weighted Estimators</h2>
+<p>Let <span class="math inline">\(w_j\)</span> be a weight for unit <span class="math inline">\(j\)</span></p>
+<p><span class="math display">\[\hat{\mu}_w = \frac{\sum w_jy_j}{\sum w_j}  \qquad \qquad \hat{\tau}_w = N\frac{\sum w_jy_j}{\sum w_j}\]</span></p>
+</section>
+<section id="trade-off-for-adjustment-for-nonresponse" class="slide level2">
+<h2>Trade-off for Adjustment for Nonresponse</h2>
+<ul>
+<li>Adjusting with weights decreases bias but can increase variance</li>
+</ul>
+<p><br> <br></p>
+<ul>
+<li>Are there sub-groups of your population that you think will have relatively constant nonresponse rates within them?</li>
+</ul>
+</section>
+<section id="weighted-estimator-for-strata" class="slide level2">
+<h2>Weighted Estimator for Strata</h2>
+<ul>
+<li>With stratified sampling all units in a strata typically have the same weight… so we can simplify to…</li>
+<li>Let <span class="math inline">\(w_g\)</span> be a weight for <strong>strata</strong> <span class="math inline">\(g\)</span></li>
+<li>and <span class="math inline">\(Y_g = \sum_{i=1}^{n_g} y_{gi}\)</span> be the <strong>total</strong> of the response of interest <span class="math inline">\(y_{gi}\)</span> for <strong>strata</strong> <span class="math inline">\(g\)</span></li>
+</ul>
+<p><span class="math display">\[\hat{\mu}_w = \frac{\sum w_gY_g}{\sum w_g}  \qquad \qquad \hat{\tau}_w = N\frac{\sum w_gY_g}{\sum w_g}\]</span></p>
+</section>
+<section id="example-slo-medical-care" class="slide level2">
+<h2>Example: SLO Medical Care</h2>
+<p>A stratified sample of 1,000 households is selected from two regions (North and South) in SLO county.</p>
+<ul>
+<li>2 Strata: North and South County</li>
+<li>Suppose there are 40,000 households in North county and 120,000 in South county.</li>
+<li>North county sample size is set at 400 and South county is 600 households.</li>
+<li><strong>Goal</strong>: estimate the <em>proportion</em> of households with access to primary health care in SLO county</li>
+</ul>
+</section>
+<section id="example-slo-medical-care-1" class="slide level2">
+<h2>Example: SLO Medical Care</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Strata</th>
+<th><span class="math inline">\(N_g\)</span></th>
+<th><span class="math inline">\(n_g\)</span></th>
+<th>Base Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>North (g = 1)</td>
+<td>40,000</td>
+<td>400</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>South (g = 2)</td>
+<td>120,000</td>
+<td>600</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Calculating base weight <span class="math inline">\(w_g\)</span>? <br></p>
+<p><span class="math inline">\(w_1\)</span> =</p>
+<p><br></p>
+<p><span class="math inline">\(w_2\)</span> =</p>
+</section>
+<section id="example-slo-medical-care-2" class="slide level2">
+<h2>Example: SLO Medical Care</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 21%">
+<col style="width: 18%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><br> Strata</th>
+<th style="text-align: right;"><br> N</th>
+<th style="text-align: right;"><br> n</th>
+<th style="text-align: center;"># responses <br> <span class="math inline">\(n^*_g\)</span></th>
+<th style="text-align: center;"># of “yes” <br> <span class="math inline">\(x_g\)</span></th>
+<th style="text-align: center;">Base Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>North (g = 1)</td>
+<td style="text-align: right;">40,000</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: center;">200</td>
+<td style="text-align: center;">170</td>
+<td style="text-align: center;"><span style="color:blue;">100</span></td>
+</tr>
+<tr class="even">
+<td>South (g = 2)</td>
+<td style="text-align: right;">120,000</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: center;">530</td>
+<td style="text-align: center;">330</td>
+<td style="text-align: center;"><span style="color:blue;">200</span></td>
+</tr>
+</tbody>
+</table>
+<p>Let <span class="math inline">\(x_g = \sum_{i=1}^{n_g} y_{gi}\)</span> where <span class="math inline">\(y_{gi}\)</span> is a binary variable that takes the value of 1 if the household has access to primary healthcare.</p>
+</section>
+<section id="example-slo-medical-care-3" class="slide level2">
+<h2>Example: SLO Medical Care</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 21%">
+<col style="width: 18%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><br> Strata</th>
+<th style="text-align: right;"><br> N</th>
+<th style="text-align: right;"><br> n</th>
+<th style="text-align: center;"># responses <br> <span class="math inline">\(n^*_g\)</span></th>
+<th style="text-align: center;"># of “yes” <br> <span class="math inline">\(x_g\)</span></th>
+<th style="text-align: center;">Base Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>North (g = 1)</td>
+<td style="text-align: right;">40,000</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: center;">200</td>
+<td style="text-align: center;">170</td>
+<td style="text-align: center;"><span style="color:blue;">100</span></td>
+</tr>
+<tr class="even">
+<td>South (g = 2)</td>
+<td style="text-align: right;">120,000</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: center;">530</td>
+<td style="text-align: center;">330</td>
+<td style="text-align: center;"><span style="color:blue;">200</span></td>
+</tr>
+</tbody>
+</table>
+<div class="columns">
+<div class="column">
+<ul>
+<li><strong>Unweighted</strong> estimated proportion of households with access to primary health care:</li>
+</ul>
+<p><span class="math inline">\(\hat{p} = \frac{\sum x_g}{\sum n^*_g}=\)</span></p>
+</div><div class="column">
+<ul>
+<li><strong>Weighted</strong> estimated proportion:</li>
+</ul>
+<p><span class="math inline">\(\hat{p}_w = \frac{\sum w_gx_g}{\sum w_gn^*_g}  =\)</span></p>
+</div></div>
+</section>
+<section id="adjusting-for-nonresponse" class="slide level2">
+<h2>Adjusting for Nonresponse</h2>
+<ul>
+<li>Simply adjust the base weight taking into account the response rate.</li>
+<li>Get a new weight, adjusted for nonreponse</li>
+<li>Let <span class="math inline">\(r_g\)</span> be the response rate for strata <span class="math inline">\(g\)</span></li>
+</ul>
+<p>Nonresponse adjusted base weight = <span class="math inline">\([\text{base weight}]\times[\frac{1}{\text{response rate}}]\)</span></p>
+<p><span class="math display">\[w^*_g = \frac{w_g}{r_g}\]</span></p>
+</section>
+<section id="slo-medical-care-adjusting-for-nonresponse" class="slide level2">
+<h2>SLO Medical Care – Adjusting for Nonresponse</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><br> Strata</th>
+<th style="text-align: right;"><br> <span class="math inline">\(N_g\)</span></th>
+<th style="text-align: right;"><br> <span class="math inline">\(n_g\)</span></th>
+<th style="text-align: center;"># resp. <br> <span class="math inline">\(n^*_g\)</span></th>
+<th style="text-align: center;">resp. rate <br> <span class="math inline">\(r_g\)</span></th>
+<th style="text-align: center;"># “yes” <br> <span class="math inline">\(x_g\)</span></th>
+<th style="text-align: center;"><br> <span class="math inline">\(w_g\)</span></th>
+<th style="text-align: center;"><br> <span class="math inline">\(w^*_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>North</td>
+<td style="text-align: right;">40,000</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: center;">200</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">170</td>
+<td style="text-align: center;"><span style="color:blue;">100</span></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td>South</td>
+<td style="text-align: right;">120,000</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: center;">530</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">330</td>
+<td style="text-align: center;"><span style="color:blue;">200</span></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><br> <span class="math inline">\(r_1= \qquad \qquad \qquad \qquad \qquad \qquad r_2=\)</span></p>
+<p><br></p>
+<p><span class="math inline">\(w_1^*=  \qquad \qquad \qquad \qquad  \qquad \qquad w_2^*=\)</span></p>
+</section>
+<section id="slo-medical-care-adjusting-for-nonresponse-1" class="slide level2">
+<h2>SLO Medical Care – Adjusting for Nonresponse</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><br> Strata</th>
+<th style="text-align: right;"><br> <span class="math inline">\(N_g\)</span></th>
+<th style="text-align: right;"><br> <span class="math inline">\(n_g\)</span></th>
+<th style="text-align: center;"># resp. <br> <span class="math inline">\(n^*_g\)</span></th>
+<th style="text-align: center;">resp. rate <br> <span class="math inline">\(r_g\)</span></th>
+<th style="text-align: center;"># “yes” <br> <span class="math inline">\(x_g\)</span></th>
+<th style="text-align: center;"><br> <span class="math inline">\(w_g\)</span></th>
+<th style="text-align: center;"><br> <span class="math inline">\(w^*_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>North</td>
+<td style="text-align: right;">40,000</td>
+<td style="text-align: right;">400</td>
+<td style="text-align: center;">200</td>
+<td style="text-align: center;"><span style="color:green;">0.50</span></td>
+<td style="text-align: center;">170</td>
+<td style="text-align: center;"><span style="color:blue;">100</span></td>
+<td style="text-align: center;"><span style="color:green;">200</span></td>
+</tr>
+<tr class="even">
+<td>South</td>
+<td style="text-align: right;">120,000</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: center;">530</td>
+<td style="text-align: center;"><span style="color:green;">0.88</span></td>
+<td style="text-align: center;">330</td>
+<td style="text-align: center;"><span style="color:blue;">200</span></td>
+<td style="text-align: center;"><span style="color:green;">226</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Weighted non-response adjusted</strong> estimated proportion of households with access to primary health care is:</li>
+</ul>
+<p><span class="math inline">\(\hat{p}_{adj} = \frac{\sum w^*_gx_g}{\sum w^*_gn^*_g}  =\)</span></p>
+</section>
+<section id="comparing-estimators" class="slide level2">
+<h2>Comparing Estimators</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Estimator</th>
+<th><span class="math inline">\(\hat{p}\)</span></th>
+<th><span class="math inline">\(SE(\hat{p})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Unweighted</td>
+<td>0.685</td>
+<td>0.015</td>
+</tr>
+<tr class="even">
+<td>Strata Weighted</td>
+<td>0.659</td>
+<td>0.0008</td>
+</tr>
+<tr class="odd">
+<td>Nonresponse Adjusted Weighted</td>
+<td>0.679</td>
+<td>0.0008</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ul>
+<li>North county observed prop: <span class="math inline">\(\hat{p}_1 = \frac{170}{200} = 0.85\)</span></li>
+<li>South county observed prop: <span class="math inline">\(\hat{p}_2 = \frac{330}{530} = 0.622\)</span></li>
+</ul>
+</section>
+<section id="weights-for-other-representation-issues" class="slide level2">
+<h2>Weights for other Representation Issues</h2>
+<ul>
+<li>Use weights if…
+<ul>
+<li>units in the population have <strong>different probabilities</strong> of being selected in the sample</li>
+<li>there is suspected <strong>nonresponse bias</strong></li>
+<li>there is suspected <strong>coverage bias</strong></li>
+</ul></li>
+<li>Weights often address ALL THREE of these issues in complex surveys</li>
+<li>This is a big part of the job of survey experts!</li>
+</ul>
+</section>
+<section id="weights-in-administrative-data" class="slide level2">
+<h2>Weights in Administrative Data</h2>
+<blockquote>
+<p>includes person weights that estimate the number of people in the target population that each person represents. In general, since population units may be sampled with different selection probabilities and since response rates and coverage rates may vary across subpopulations, different responding units represent different numbers of units in the population. The use of weights in survey analysis compensates for this differential representation, thus producing estimates that relate to the target population. - <a href="https://www.census.gov/programs-surveys/sipp/methodology/weighting.html">Census Bureau</a></p>
+</blockquote>
+<blockquote>
+<p>Researchers using BRFSS data should conduct analyses with complex sampling procedures; they also should appropriately stratify and weight the data in their work. Potential bias resulting from selection probabilities and noncoverage among segments of the population can be reduced through weighting. - <a href="https://www.cdc.gov/brfss/annual_data/2025/pdf/Complex-Sampling-Weights-and-Preparing-Module-Data-for-Analysis-2025-508.pdf">BRFSS</a></p>
+</blockquote>
+</section>
+<section id="weights-in-administrative-data-1" class="slide level2">
+<h2>Weights in Administrative Data</h2>
+<ul>
+<li>Often, big surveys stratify on <strong>some variables</strong> like states, counties, etc.</li>
+<li>But it is difficult to stratify on demographic information…</li>
+<li>After the sample is collected, calculate weights based on discrepenciess between demographics of the sample and known demographics of the population (from the Census)</li>
+</ul>
+</section>
+<section id="example-slo-medical-care-4" class="slide level2">
+<h2>Example: SLO Medical Care</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Strata</th>
+<th>Income</th>
+<th>Pop Size</th>
+<th># resp.</th>
+<th># yes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>North (g = 1)</td>
+<td>High</td>
+<td>20,000</td>
+<td>120</td>
+<td>110</td>
+</tr>
+<tr class="even">
+<td>North (g = 1)</td>
+<td>Low</td>
+<td>20,000</td>
+<td>80</td>
+<td>60</td>
+</tr>
+<tr class="odd">
+<td>South (g = 2)</td>
+<td>High</td>
+<td>80,000</td>
+<td>360</td>
+<td>250</td>
+</tr>
+<tr class="even">
+<td>South (g = 2)</td>
+<td>Low</td>
+<td>40,000</td>
+<td>170</td>
+<td>80</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="calculating-weights" class="slide level2">
+<h2>Calculating Weights</h2>
+<p>Example procedure:</p>
+<ol type="1">
+<li>Calculate base weight based on probability of selection</li>
+<li>Adjust for nonresponse</li>
+<li><em>Poststratification</em> adjustment to correct for departures from known population totals</li>
+</ol>
+<p>and there may be other layers of adjustments for other elements of the complex sampling design!</p>
+</section>
+<section id="weighty-lessons" class="slide level2">
+<h2>Weighty Lessons</h2>
+<ul>
+<li>The big picture here is: pay attention to whether data you are analyzing gives you survey weights!!</li>
+<li>You <em>need</em> to use a weighted analysis if weights are provided to be able to generalize to the intended target population</li>
+<li>It is hard to get a <em>perfect</em> sample – weights help us adjust things in a principled way to generalize back to the target population</li>
+</ul>
+<p><img data-src="_images/10.1-populations.png" style="width:30.0%"></p>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
