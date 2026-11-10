@@ -6879,7 +6879,7 @@
     "href": "4-labs/lab4-sampling.html#determine-the-sample-size",
     "title": "Lab 4: Stratified Sampling",
     "section": "3 Determine the Sample Size",
-    "text": "3 Determine the Sample Size\n\n Estimate the maximum overall sample size \\(n\\) given some bound of error on your estimate\nYou can choose your bound of error, but it should be smaller that 0.06\nAfter determining the overall sample size, use one of the allocations we learned (Proportional, Neyman, or Optimal) to find the sample size for each stratum (\\(n_1\\), \\(n_2\\), …)"
+    "text": "3 Determine the Sample Size\n\n Estimate the maximum overall sample size \\(n\\) given some bound of error on your estimate\nYou can choose your bound of error, but it should be smaller that 0.06\nAfter determining the overall sample size, use one of the allocations we learned (Proportional, Neyman, or Optimal) to find the sample size for each stratum (\\(n_1\\), \\(n_2\\), …)\nThis code should help you! Just note that the example is for estimating a mean, not a proportion. So in this case, \\(\\sigma_g^2 = p_g(1-p_g)\\)"
   },
   {
     "objectID": "4-labs/lab4-sampling.html#randomly-sample-islanders",

@@ -93,9 +93,10 @@ I would recommend doing this in a shared Excel or Google Sheet
 
 
 
-- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Estimate the **maximum** overall sample size $n$ given some bound of error on your estimate
+- ![](../0-course-info/images/rstudio-logo-fullcolor.png){width=40px} Estimate the overall sample size $n$ given some bound of error on your estimate
 - You can choose your bound of error, but it should be smaller that 0.06
 - After determining the overall sample size, use one of the allocations we learned (Proportional, Neyman, or Optimal) to find the sample size for each stratum ($n_1$, $n_2$, ...)
+- [This code](../2-slides/10.3-sample-size-rcode.qmd) should help you! Just note that the example is for estimating a mean, not a proportion. So in this case, $\sigma_g^2 = p_g(1-p_g)$
 
 
 ## Randomly Sample Islanders (Checkpoint 2 -- due Wed 11/11)
