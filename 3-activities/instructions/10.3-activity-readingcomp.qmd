@@ -32,6 +32,13 @@ The data for the **sample** of students are located in the file `10-sixthgrade.c
 
 1. Read the data into R and construct parallel box plots for these data showing the distribution of scores for each track. 
 
+```{r}
+#| version: solution
+
+readingdat <- 
+
+```
+
 2.	Based on the plot you created, comment on the patterns you see with respect to center and variability. Do you think there could be a problem in placing students in tracks (for their learning)? Do you think that stratified sampling will be beneficial over SRS in this case?
 
 ## Estimation with Stratified Sampling

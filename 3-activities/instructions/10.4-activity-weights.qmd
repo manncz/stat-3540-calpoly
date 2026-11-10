@@ -1,0 +1,104 @@
+---
+title: "Activity 10.4: Winter Break"
+subtitle: "Survey Weights"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+echo: false
+format:
+  html: default
+  docx: default
+---
+::: callout-warning
+- Submit via Gradescope, don't forget to assign pages to the questions in the outline!
+
+- **Be reasonable with digits!** No need to include more than 3 decimals in most cases.
+
+- Delete any extraneous instructions (**like this box**) before submission. *You will be deducted points from now on if you do not follow this instruction!*
+
+- You do not need to do any R coding for this activity, I would recommend that you use the Word template.
+- But you are welcome to use the quarto template as always!  [10.4-activity-weights.qmd](../student/10.4-activity-weights.qmd)
+  
+:::
+
+```{r}
+library(tidyverse)
+library(survey)
+```
+
+## Nonresponse Weighting
+
+### Study
+
+In January 1995, the Office of University Evaluation at Arizona State University surveyed faculty and staff members to find out their reaction to closure of the university during Winter Break, 1994. Faculty and staff in academic units that were closed during winter break were divided into four strata and sampled. 
+
+Questionnaires were sent through campus mail to persons in strata 1 – 4; the sample sizes below were the number of questionnaires mailed in each stratum. Not all people responded
+
+### Calculations By Hand
+
+1. 	Fill out the table below. Make sure to show your work for all calculations.
+
+| Employee Type	| 	$N_g$ |  $n_g$ | \# resp. $n^*_g$ | \# "yes" resp. $x_g$| 	$w_g$ |	Response Rate $r_g$ |	 $w^*_g$ |
+|----------|---|---|---|---|---|---|---|
+|1	Faculty |	1374|	500|288 |	191 | | | |
+|2	Classified Staff|	1960|	653| 533	|467| | | |
+|3	Administrative Staff|	252	|95| 91	 | 77 | | | |
+|4	Academic Professional|	95|	74|73 |	58 | | | |
+
+2. Explain what the base weight for *Faculty* actually means in terms of this study.
+
+The question asked in the survey was: "Would you want to have winter break closure again?" The answers are shown above in the "yes" answers column where $x_g$ is the total number of affirmative answers in that stratum.
+
+3. Estimate the **unweighted** estimated proportion of employees who favor having winter break closure again, ignorning stratification and nonresponse. (No need to compute the variance.) This should be done "by hand" -- not with an R function. 
+
+4. Estimate the **strata weighted** estimated proportion of employees who favor having winter break closure again, ignoring nonresponse. (No need to compute the variance.) This should be done "by hand" -- not with an R function. 
+
+5.	Estimate by hand the **weighted, non-response adjusted**, estimated proportion of employees who favor having winter break closure again. (No need to compute the variance.) This should be done "by hand" -- not with an R function. 
+
+### Estimation in R
+
+Let's let R calculate these for us with the standard errors.
+
+:::callout-tip
+# Sample Data
+
+The data are in the file `10-winter.csv` on Canvas.
+
+Note that: the data file contains only those individuals who returned the survey.
+:::
+
+The variable `breakaga` is the answer to the question "Would you want to have winter break closure again?" `1` means "yes" and `0` means "no".
+
+6. Let's take a moment to think about this data.
+  a. What is one row in the dataset?
+  b. Why does it make sense that there are 985 rows?
+  c. What is the `breakaga` variable in term of the notation we have been using? (e.g. $n_g$, $y_{gi}$, $x_g$, etc.)
+
+We can verity that the data reflects the table we used before:
+
+7. Fill in the code below to add a column for the base weights called `base_weight` to the `winter` data.
+
+8. Fill in the code below to add a column for the response rate called `rr` to the `winter` data. Then use that to calculate a column for the adjusted weight called `adj_weight`.
+
+Check that these all align with your previous calculations by hand!
+
+9. Using `survey` package and the **base weights** (ignoring non-response), determine the proportion of employees who favor having winter break closure again with 95% confidence. 
+
+:::callout-tip
+## Using Weights with `survey`
+
+Now in your design, use the `weights` argument rather than `fpc`
+
+`svydesign(id = ~XXX, strata = ~XXX, weights = ~XXX, data = XXX)`
+
+:::
+
+:::callout-tip
+Use the estimated proportion and standard error from the package and the formula $\hat{p} \pm 2\times SE(\hat{p})$ for the 95% confidence interval "by hand".
+:::
+
+10.	Now use the `survey` package and the **adjusted weights** (taking stratification and nonresponse into account), determine the proportion of employees who favor having winter break closure again with 95% confidence. The tips from Q9 apply here as well!
+
+11. Explain why the estimates from Q9 and Q10 are not very different. 
