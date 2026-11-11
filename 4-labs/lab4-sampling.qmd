@@ -176,7 +176,7 @@ Make sure everyone in your group has read the instructions here FULLY before sta
 
 ## Report and Submission
 
-Download the guided lab report template and work within it [[coming soon]].
+Download the guided lab report template and work within it [04-lab-sampling-template.docx](templates/04-lab-sampling-template.docx).
 
 Make sure to:
 
@@ -184,14 +184,14 @@ Make sure to:
 - Focus on clarity, logical flow, and professional grammar
 - Think about being as concise as possible while being complete and clear
 - Clean up the report at the end so that it is readable and professional.
-- For each plot/figure you include, please add good labels, titles, and references in the body of your report.
+- For each plot/figure you include, please add good labels, titles, and references in the body of your report. Make sure tables have a caption and figures have a title.
 - Make sure you have addressed all instructions in this document and in the template in the report.
 
 In your final submission you will submit:
 
 1. Your report following the template.
 2. A .qmd with all of your code following the .qmd template.
-3. Your dataset (.csv or .xlsx)
+3. Your sample dataset (.csv or .xlsx)
 
 
 :::callout-warning

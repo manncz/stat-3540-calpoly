@@ -486,9 +486,10 @@ window.Quarto = {
 <section id="determine-the-sample-size" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="determine-the-sample-size"><span class="header-section-number">3</span> Determine the Sample Size</h2>
 <ul>
-<li><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Estimate the <strong>maximum</strong> overall sample size <span class="math inline">\(n\)</span> given some bound of error on your estimate</li>
+<li><img src="../0-course-info/images/rstudio-logo-fullcolor.png" class="img-fluid" width="40"> Estimate the overall sample size <span class="math inline">\(n\)</span> given some bound of error on your estimate</li>
 <li>You can choose your bound of error, but it should be smaller that 0.06</li>
 <li>After determining the overall sample size, use one of the allocations we learned (Proportional, Neyman, or Optimal) to find the sample size for each stratum (<span class="math inline">\(n_1\)</span>, <span class="math inline">\(n_2\)</span>, …)</li>
+<li><a href="../2-slides/10.3-sample-size-rcode.html">This code</a> should help you! Just note that the example is for estimating a mean, not a proportion. So in this case, <span class="math inline">\(\sigma_g^2 = p_g(1-p_g)\)</span></li>
 </ul>
 </section>
 <section id="randomly-sample-islanders-checkpoint-2-due-wed-1111" class="level2" data-number="4">
@@ -595,21 +596,21 @@ window.Quarto = {
 </section>
 <section id="report-and-submission" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="report-and-submission"><span class="header-section-number">7</span> Report and Submission</h2>
-<p>Download the guided lab report template and work within it [[coming soon]].</p>
+<p>Download the guided lab report template and work within it <a href="templates/04-lab-sampling-template.docx">04-lab-sampling-template.docx</a>.</p>
 <p>Make sure to:</p>
 <ul>
 <li>Use complete sentences</li>
 <li>Focus on clarity, logical flow, and professional grammar</li>
 <li>Think about being as concise as possible while being complete and clear</li>
 <li>Clean up the report at the end so that it is readable and professional.</li>
-<li>For each plot/figure you include, please add good labels, titles, and references in the body of your report.</li>
+<li>For each plot/figure you include, please add good labels, titles, and references in the body of your report. Make sure tables have a caption and figures have a title.</li>
 <li>Make sure you have addressed all instructions in this document and in the template in the report.</li>
 </ul>
 <p>In your final submission you will submit:</p>
 <ol type="1">
 <li>Your report following the template.</li>
 <li>A .qmd with all of your code following the .qmd template.</li>
-<li>Your dataset (.csv or .xlsx)</li>
+<li>Your sample dataset (.csv or .xlsx)</li>
 </ol>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
