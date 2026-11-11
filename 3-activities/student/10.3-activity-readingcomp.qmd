@@ -62,7 +62,9 @@ $N =$
 |${\bar{y}}_{g}$		|. |. |. |		
 |$s_{g}$		|. |. |. |		
 
-4.	Use the appropriate equations to *estimate* the average score for the sixth grade (i.e. calculate $\bar{y}_st$). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!
+$N = 200$
+
+4.	Use the appropriate equations to *estimate* the average score for the sixth grade (i.e. calculate $\bar{y}_{st}$). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!
 
 ```{r}
 # use R as a calculator if you want!
@@ -75,18 +77,6 @@ $N =$
 ```{r}
 # use the survey package!
 # Hint: the SIZE variable in the data gives the N_gs
-```
-
-```{r}
-readingdat <- readingdat |> 
-  mutate(weight = SIZE / n(), .by = TRACK)
-
-strat_des <- svydesign(ids = ~1,
-                       strata = ~TRACK,
-                       weights = ~ weight,
-                       data = readingdat)
-
-svymean(~SCORES, design = strat_des, na.rm = T)
 ```
 
 :::callout-warning
@@ -128,6 +118,18 @@ Say instead of an average score, the school was actually interested in estimatin
 10. What is our variable of interest now (i.e. $y_{gi}$)?
 
 11. Use the appropriate equations to *estimate* the *proportion* of for the sixth grade that will pass the reading comprehension test. Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!
+
+```{r}
+# use R to get strata sample proportions to use in the calculation
+# hint: make a new variable called "passed" that is 1 if the student has a SCORES >= 60 and 0 if not
+# hint: use group_by() and summarize()
+
+
+```
+
+```{r}
+# use R as a calculator if you want!
+```
 
 ## Sample Size
 

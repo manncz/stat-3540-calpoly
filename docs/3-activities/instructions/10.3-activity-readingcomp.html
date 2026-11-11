@@ -392,8 +392,7 @@ Warning
 <ul>
 <li><p>Submit via Gradescope, don’t forget to assign pages to the questions in the outline!</p></li>
 <li><p>Delete any extraneous instructions (<strong>like this box</strong>) before submission. <em>You will be deducted points from now on if you do not follow this instruction!</em></p></li>
-<li><p>You do not need to do any R coding for this activity, I would recommend that you use the Word template.</p></li>
-<li><p>But you are welcome to use the quarto template as always! <a href="../student/10.3-activity-readingcomp.qmd">10.3-activity-readingcomp.qmd</a></p></li>
+<li><p>You should do all coding in the quarto template as always! <a href="../student/10.3-activity-readingcomp.qmd">10.3-activity-readingcomp.qmd</a></p></li>
 </ul>
 </div>
 </div>
@@ -458,24 +457,11 @@ Warning
 </tr>
 </tbody>
 </table>
+<p><span class="math inline">\(N = 200\)</span></p>
 <ol start="4" type="1">
-<li><p>Use the appropriate equations to <em>estimate</em> the average score for the sixth grade (i.e.&nbsp;calculate <span class="math inline">\(\bar{y}_st\)</span>). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!</p></li>
+<li><p>Use the appropriate equations to <em>estimate</em> the average score for the sixth grade (i.e.&nbsp;calculate <span class="math inline">\(\bar{y}_{st}\)</span>). Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!</p></li>
 <li><p>Now use the <code>survey</code> package in to calculate the standard error. Calculate the 95% confidence interval for the parameter of interest “by hand” using the mean and standard error and a critical value of 2.</p></li>
 </ol>
-<div class="cell">
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'readingdat' not found</code></pre>
-</div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'readingdat' not found</code></pre>
-</div>
-<div class="cell-output cell-output-error">
-<pre><code>Error:
-! object 'strat_des' not found</code></pre>
-</div>
-</div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -494,18 +480,35 @@ Warning
 <ol start="7" type="1">
 <li><p>Was stratification beneficial to accuracy? Was that what you expected? Explain.</p></li>
 <li><p>Estimate the average score for the <em>track I</em> students and the variance of that estimate.</p></li>
-</ol>
-<ol start="9" type="1">
-<li>Estimate the average score for the <em>track II</em> students and the variance of that estimate.</li>
+<li><p>Estimate the average score for the <em>track II</em> students and the variance of that estimate.</p></li>
 </ol>
 </section>
 <section id="estimating-proportions" class="level2">
 <h2 class="anchored" data-anchor-id="estimating-proportions">Estimating Proportions</h2>
 <p>Say instead of an average score, the school was actually interested in estimating the <strong>proportion</strong> of students who will get a “passing” score of 60 or above.</p>
 <ol start="10" type="1">
-<li><p>What is our variable of interest now (i.e.&nbsp;<span class="math inline">\(y_{gi}\)</span>)?</p></li>
-<li><p>Use the appropriate equations to <em>estimate</em> the <em>proportion</em> of for the sixth grade that will pass the reading comprehension test. Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!</p></li>
+<li>What is our variable of interest now (i.e.&nbsp;<span class="math inline">\(y_{gi}\)</span>)?</li>
 </ol>
+<div class="version">
+<p><em>The variable of interest is</em> <strong>whether or not that student</strong> <em>got a passing score of 60 points or above</em></p>
+<p><span class="math display">\[
+y_{gi} =
+  \begin{cases}
+    1       &amp; \quad \text{if student } i \text{ in track }g \text{ scored 60 or more} \\
+    0      &amp; \quad \text{if student } i \text{ in track }g \text{ scored less than 60}
+  \end{cases}
+\]</span></p>
+</div>
+<ol start="11" type="1">
+<li>Use the appropriate equations to <em>estimate</em> the <em>proportion</em> of for the sixth grade that will pass the reading comprehension test. Do all the calculations by hand, only rounding it at the end to 3 significant decimal places. Show your work!</li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+\hat{p}_{st} &amp;= \frac{1}{N} \sum_{g=1}^L N_g\hat{p}_g\\
+&amp;= \frac{1}{200}\big[(55\times 1.0) +(80\times  0.60)+(65\times 0.125) \big] \\
+&amp; \approx  0.556
+\end{align}
+\]</span></p>
 </section>
 <section id="sample-size" class="level2">
 <h2 class="anchored" data-anchor-id="sample-size">Sample Size</h2>
@@ -519,6 +522,22 @@ Warning
 <li>overall sample size <span class="math inline">\(n\)</span></li>
 <li>and stratum sample sizes (<span class="math inline">\(n_g\)</span>’s) are.</li>
 </ul>
+<div class="cell">
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'N_g' not found</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'ag' not found</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-error">
+<pre><code>Error:
+! object 'ag' not found</code></pre>
+</div>
+</div>
 
 
 </section>

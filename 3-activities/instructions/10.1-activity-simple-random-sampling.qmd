@@ -79,7 +79,7 @@ You might want to look up information (or ask Dr. C about the Iowa State Fair) t
 
 - sampling method(s):
 
-- possible non-observation errors and bias if any  (discuss):
+- possible non-observation errors and bias if any (discuss):
 
 4. The League of Women Voters of Texas (2019) evaluated the county election websites for all 254 counties in Texas. They found that 201 of the counties had insecure websites. That is the internet address began with "http" rather than "https." Only nine used the ".gov" domain that indicates a bona-fide U.S.-based government organization.
 
