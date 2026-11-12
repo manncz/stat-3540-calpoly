@@ -8048,7 +8048,7 @@
     "href": "2-slides/10.4-weights.html#example-reading-comprehension",
     "title": "Module 10: Survey Sampling",
     "section": "Example: Reading Comprehension",
-    "text": "Example: Reading Comprehension\n\n\n\n\n\n\n\nstudent\ntrack\nscores\nsize\n\n\n\n\n11\nI\n62\n55\n\n\n8\nI\n91\n55\n\n\n32\nII\n61\n80\n\n\n21\nII\n65\n80\n\n\n48\nIII\n30\n65\n\n\n40\nIII\n29\n65\n\n\n\n\n\n\n\n\nCode\nreadingdat |&gt;\n  ggplot(aes(x = track, y = scores)) +\n  geom_boxplot() +\n  geom_jitter(height = 0, width = .2,\n              alpha = .7, color = \"#154734\",\n              size = 2) +\n  labs(x = \"Track\", y = \"Score\",\n       title = \"Distribution of Reading Comprehension Scores by Track for Stratified Sample of 6th Graders\")"
+    "text": "Example: Reading Comprehension\n\n\n\n\n\n\n\nstudent\ntrack\nscores\nsize\n\n\n\n\n1\nI\n80\n55\n\n\n3\nI\n68\n55\n\n\n29\nII\n68\n80\n\n\n30\nII\n52\n80\n\n\n45\nIII\n61\n65\n\n\n35\nIII\n42\n65\n\n\n\n\n\n\n\n\nCode\nreadingdat |&gt;\n  ggplot(aes(x = track, y = scores)) +\n  geom_boxplot() +\n  geom_jitter(height = 0, width = .2,\n              alpha = .7, color = \"#154734\",\n              size = 2) +\n  labs(x = \"Track\", y = \"Score\",\n       title = \"Distribution of Reading Comprehension Scores by Track for Stratified Sample of 6th Graders\")"
   },
   {
     "objectID": "2-slides/10.4-weights.html#complex-sampling-designs",
@@ -8076,7 +8076,7 @@
     "href": "2-slides/10.4-weights.html#survey-weights-big-picture",
     "title": "Module 10: Survey Sampling",
     "section": "Survey Weights – Big Picture",
-    "text": "Survey Weights – Big Picture\nLet \\(w_j\\) be a weight for unit \\(j\\)\n\\[\\hat{\\mu}_w = \\frac{\\sum w_jy_i}{\\sum w_j} \\qquad \\qquad \\hat{\\tau}_w = N\\frac{\\sum w_jy_j}{\\sum w_j}\\]\n\n\n\n\n\n\n\nEstimating Variability\n\n\nAs always we don’t just care about the point estimates \\(\\hat{\\mu}_w\\) and \\(\\hat{\\tau}_w\\), but also how much sampling variability there is in these estimates!\nThere is a special way to estimate the variability, \\(SE(\\hat{\\mu}_w)\\) and \\(SE(\\hat{\\tau}_w)\\)…\n… we are just goint to let the survey package in R handle it"
+    "text": "Survey Weights – Big Picture\nLet \\(w_j\\) be a weight for unit \\(j\\)\n\\[\\hat{\\mu}_w = \\frac{\\sum w_jy_j}{\\sum w_j} \\qquad \\qquad \\hat{\\tau}_w = N\\frac{\\sum w_jy_j}{\\sum w_j}\\]\n\n\n\n\n\n\n\nEstimating Variability\n\n\nAs always we don’t just care about the point estimates \\(\\hat{\\mu}_w\\) and \\(\\hat{\\tau}_w\\), but also how much sampling variability there is in these estimates!\nThere is a special way to estimate the variability, \\(SE(\\hat{\\mu}_w)\\) and \\(SE(\\hat{\\tau}_w)\\)…\n… we are just goint to let the survey package in R handle it"
   },
   {
     "objectID": "2-slides/10.4-weights.html#survey-weights-with-stratification",
@@ -8104,7 +8104,7 @@
     "href": "2-slides/10.4-weights.html#reading-comprehension---weights",
     "title": "Module 10: Survey Sampling",
     "section": "Reading Comprehension - Weights",
-    "text": "Reading Comprehension - Weights\n\n\n\ntable(readingdat$track)\n\n\n  I  II III \n 14  20  16 \n\n\n\n\nreadingdat &lt;- readingdat |&gt; \n  mutate(weight = size/n(), .by = track)\n\n\n\nCode\nreadingdat |&gt; \n  slice_sample(n = 1, by = track) |&gt; \n  knitr::kable() |&gt; \n  kableExtra::kable_styling(font_size = 30)\n\n\n\n \n  \n    student \n    track \n    scores \n    size \n    weight \n  \n \n\n  \n    1 \n    I \n    80 \n    55 \n    3.928571 \n  \n  \n    30 \n    II \n    52 \n    80 \n    4.000000 \n  \n  \n    39 \n    III \n    65 \n    65 \n    4.062500"
+    "text": "Reading Comprehension - Weights\n\n\n\ntable(readingdat$track)\n\n\n  I  II III \n 14  20  16 \n\n\n\n\nreadingdat &lt;- readingdat |&gt; \n  mutate(weight = size/n(), .by = track)\n\n\n\nCode\nreadingdat |&gt; \n  slice_sample(n = 1, by = track) |&gt; \n  knitr::kable() |&gt; \n  kableExtra::kable_styling(font_size = 30)\n\n\n\n \n  \n    student \n    track \n    scores \n    size \n    weight \n  \n \n\n  \n    14 \n    I \n    83 \n    55 \n    3.928571 \n  \n  \n    33 \n    II \n    59 \n    80 \n    4.000000 \n  \n  \n    39 \n    III \n    65 \n    65 \n    4.062500"
   },
   {
     "objectID": "2-slides/10.4-weights.html#estimation-in-r",
@@ -8272,7 +8272,7 @@
     "href": "2-slides/10.4-weights.html#weighted-estimator-for-strata",
     "title": "Module 10: Survey Sampling",
     "section": "Weighted Estimator for Strata",
-    "text": "Weighted Estimator for Strata\n\nWith stratified sampling all units in a strata typically have the same weight… so we can simplify to…\nLet \\(w_g\\) be a weight for strata \\(g\\)\nand \\(Y_g = \\sum_{i=1}^{n_g} y_{gi}\\) be the total of the response of interest \\(y_{gi}\\) for strata \\(g\\)\n\n\\[\\hat{\\mu}_w = \\frac{\\sum w_gY_g}{\\sum w_g}  \\qquad \\qquad \\hat{\\tau}_w = N\\frac{\\sum w_gY_g}{\\sum w_g}\\]"
+    "text": "Weighted Estimator for Strata\n\nWith stratified sampling all units in a strata typically have the same weight… so we can simplify to…\nLet \\(w_g\\) be a weight for strata \\(g\\)\nand \\(Y_g = \\sum_{i=1}^{n_g} y_{gi}\\) be the total of the response of interest \\(y_{gi}\\) for strata \\(g\\)\n\n\\[\\hat{\\mu}_w = \\frac{\\sum w_gY_g}{\\sum w_g n_g}  \\qquad \\qquad \\hat{\\tau}_w = N\\frac{\\sum w_gY_g}{\\sum w_g n_g}\\]"
   },
   {
     "objectID": "2-slides/10.4-weights.html#comparing-estimators",

@@ -72,7 +72,7 @@ If...
 
 Let $w_j$ be a weight for unit $j$
 
-$$\hat{\mu}_w = \frac{\sum w_jy_i}{\sum w_j} \qquad \qquad \hat{\tau}_w = N\frac{\sum w_jy_j}{\sum w_j}$$
+$$\hat{\mu}_w = \frac{\sum w_jy_j}{\sum w_j} \qquad \qquad \hat{\tau}_w = N\frac{\sum w_jy_j}{\sum w_j}$$
 
 </br>
 
@@ -402,7 +402,7 @@ $$\hat{\mu}_w = \frac{\sum w_jy_j}{\sum w_j}  \qquad \qquad \hat{\tau}_w = N\fra
 - Let $w_g$ be a weight for **strata** $g$
 - and $Y_g = \sum_{i=1}^{n_g} y_{gi}$ be the **total** of the response of interest $y_{gi}$ for **strata** $g$
 
-$$\hat{\mu}_w = \frac{\sum w_gY_g}{\sum w_g}  \qquad \qquad \hat{\tau}_w = N\frac{\sum w_gY_g}{\sum w_g}$$
+$$\hat{\mu}_w = \frac{\sum w_gY_g}{\sum w_g n_g}  \qquad \qquad \hat{\tau}_w = N\frac{\sum w_gY_g}{\sum w_g n_g}$$
 
 ## Example: SLO Medical Care
 
