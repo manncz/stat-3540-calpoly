@@ -77,7 +77,11 @@ winter |>
             sampsize = first(sampsize),
             nresp = n(),
             yes = sum(breakaga)
-            )
+            ) |> 
+  mutate(prop_yes = yes/nresp,
+         base_weight = popsize/sampsize,
+         rr = nresp/sampsize,
+         adj_weight = base_weight/rr)
 ```
 
 7. Fill in the code below to add a column for the base weights called `base_weight` to the `winter` data.

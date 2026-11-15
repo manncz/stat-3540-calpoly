@@ -1,0 +1,44 @@
+---
+title: "11.1 Preparation: Instrument Design I"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+#### 📽 Watch Videos: XX min
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+- Consider coverage issues that come with different sampling frames in practice
+- Understand sources of observation error
+- Implement revisions to questions following the 10 guidelines for question writing.
+:::
+
+For additional details, read Chapters 3 & 4 of  [**Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method**](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991067612891702901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Internet,%20Phone,%20Mail,%20and%20Mixed%E2%80%90Mode%20Surveys:%20The%20Tailored%20Design%20Method%5C&offset=0) (2014) by Don A Dillman, Jolene D Smyth, and Leah Melani Christian
+
+  - Available for free online through the library
+  - I would **highly recommend** going through this reading -- the slides are a summary of these chapters.
+
+
+## Distribution of Surveys and Coverage
+
+- 📽 Follow along with the [slides](../2-slides/11.1-survey-in-practice.qmd).
+- Read Ch 3 of [**Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method**](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991067612891702901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Internet,%20Phone,%20Mail,%20and%20Mixed%E2%80%90Mode%20Surveys:%20The%20Tailored%20Design%20Method%5C&offset=0)
+
+
+
+## Fundamentals of Instrument Design
+
+- 📽 Follow along with the [slides](../2-slides/11.1-survey-in-practice.qmd#/fundamentals-of-instrument-design).
+- Read Ch 4 of [**Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method**](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991067612891702901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Internet,%20Phone,%20Mail,%20and%20Mixed%E2%80%90Mode%20Surveys:%20The%20Tailored%20Design%20Method%5C&offset=0)
+
+
+
