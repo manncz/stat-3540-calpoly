@@ -8461,14 +8461,14 @@
     "href": "2-slides/11.1-survey-in-practice.html#sources-of-errors-in-surveys-1",
     "title": "Module 10: Survey Instruments",
     "section": "Sources of Errors in Surveys",
-    "text": "Sources of Errors in Surveys\n\nErrors of nonobservation: the sampled elements do not cover the entire target population\n\nSampling\nCoverage\nNonresponse\n\nErrors of observation: recorded data don’t reflect the “truth” – i.e. measurement error\n\nInterviewer\nRespondents\nInstrument\nMethod of data collection"
+    "text": "Sources of Errors in Surveys\n\nErrors of nonobservation: the sampled elements do not cover the entire target population\n\nSampling\nCoverage\nNonresponse\n\nErrors of observation: recorded data don’t reflect the “truth”\n\nInterviewer\nRespondents\nInstrument\nMethod of data collection"
   },
   {
     "objectID": "2-slides/11.1-survey-in-practice.html#interviewer",
     "href": "2-slides/11.1-survey-in-practice.html#interviewer",
     "title": "Module 10: Survey Instruments",
     "section": "Interviewer",
-    "text": "Interviewer\n\n\n\n\n\n\nInterviewer Influence?\n\n\nHow can the presence of interviewers affect responses on individual questions?\n\n\n\n\n\nPositives:\n\nextra motivation and assistance\nclarify meaning of questions\nprobe for more complete answers\ncontrols question order and time in each question\n\n\nIssues:\n\nsocial desirability: people want to make a good impression in a social interaction\nacquiescence: tendency to agree with someone\nboth present in self-administered surveys, but stronger with interviewer administered"
+    "text": "Interviewer\n\n\n\n\n\n\nInterviewer Influence?\n\n\nHow can the presence of interviewers affect responses on individual questions?\n\n\n\n\n\n\nPositives:\n\nextra motivation and assistance\nclarify meaning of questions\nprobe for more complete answers\ncontrols question order and time in each question\n\n\nIssues:\n\nsocial desirability: people want to make a good impression in a social interaction\nacquiescence: tendency to agree with someone\nboth present in self-administered surveys, but stronger with interviewer administered"
   },
   {
     "objectID": "2-slides/11.1-survey-in-practice.html#respondent",
@@ -8601,14 +8601,14 @@
     "href": "2-slides/11.1-survey-in-practice.html#guidelines-for-writing-questions-6",
     "title": "Module 10: Survey Instruments",
     "section": "Guidelines for Writing Questions",
-    "text": "Guidelines for Writing Questions\n\n\n\n\n\n\nGuideline 4.9\n\n\nMake sure “yes” means yes and “no” means no\n\n\n\n\n\nDouble-Negative\nDo you favor or oppose not allowing the state to raise taxes without approval of 60% of voters?\n⃝ Favor\n⃝ Oppose\n\nRevision 1\nDo you favor or oppose requiring 60% approval by voters in order to raise state taxes?\n⃝ Favor\n⃝ Oppose\n\nRevision 2\nIn the September election you will be asked to vote on this referendum: “No state tax can be raised without approval by 60% of those voting in a statewide election.” If the election were held today, would you vote for or against approval?\n⃝ For\n⃝ Against"
+    "text": "Guidelines for Writing Questions\n\n\n\n\n\n\nGuideline 4.9\n\n\nMake sure “yes” means yes and “no” means no\n\n\n\n\n\n\nDouble-Negative\nDo you favor or oppose not allowing the state to raise taxes without approval of 60% of voters?\n⃝ Favor\n⃝ Oppose\n\nRevision 1\nDo you favor or oppose requiring 60% approval by voters in order to raise state taxes?\n⃝ Favor\n⃝ Oppose\n\nRevision 2\nIn the September election you will be asked to vote on this referendum: “No state tax can be raised without approval by 60% of those voting in a statewide election.” If the election were held today, would you vote for or against approval?\n⃝ For\n⃝ Against"
   },
   {
     "objectID": "2-slides/11.1-survey-in-practice.html#guidelines-for-writing-questions-7",
     "href": "2-slides/11.1-survey-in-practice.html#guidelines-for-writing-questions-7",
     "title": "Module 10: Survey Instruments",
     "section": "Guidelines for Writing Questions",
-    "text": "Guidelines for Writing Questions\n\n\n\n\n\n\nGuideline 4.10\n\n\nOrganize questions in a way to make it easier for respondents to comprehend the response task.\n\n\n\n\nuse as simple and organized of structure as possible – lower cognitive load\navoid making respondents re-read things many times\n\n\n\nRepetitive & Interrupting\nAre you very likely, somewhat likely, somewhat unlikely, or very unlikely to visit Yellowstone National Park again?\n\n⃝ Very likely\n⃝ Somewhat likely\n⃝ Somewhat unlikely\n⃝ Very unlikely\n\n\nRevision\nHow likely or unlikely are you to visit Yellowstone National Park again?\n\n⃝ Very likely\n⃝ Somewhat likely\n⃝ Somewhat unlikely\n⃝ Very unlikely"
+    "text": "Guidelines for Writing Questions\n\n\n\n\n\n\nGuideline 4.10\n\n\nOrganize questions in a way to make it easier for respondents to comprehend the response task.\n\n\n\n\nuse as simple and organized of structure as possible – lower cognitive load\navoid making respondents re-read things many times\n\n\n\n\nRepetitive & Interrupting\nAre you very likely, somewhat likely, somewhat unlikely, or very unlikely to visit Yellowstone National Park again?\n⃝ Very likely\n⃝ Somewhat likely\n⃝ Somewhat unlikely\n⃝ Very unlikely\n\nRevision\nHow likely or unlikely are you to visit Yellowstone National Park again?\n⃝ Very likely\n⃝ Somewhat likely\n⃝ Somewhat unlikely\n⃝ Very unlikely"
   },
   {
     "objectID": "2-slides/11.1-survey-in-practice.html#reducing-errors-of-observation-with-design",
@@ -8643,20 +8643,20 @@
     "href": "1-prep/11.1-prep.html",
     "title": "11.1 Preparation: Instrument Design I",
     "section": "",
-    "text": "NoneLearning Objectives\n\n\n\n\nConsider coverage issues that come with different sampling frames in practice\nUnderstand sources of observation error\nImplement revisions to questions following the 10 guidelines for question writing.\n\n\n\nFor additional details, read Chapters 3 & 4 of Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method (2014) by Don A Dillman, Jolene D Smyth, and Leah Melani Christian\n\nAvailable through the library\nI would highly recommend going through this reading – the slides are a summary of these chapters."
+    "text": "NoneLearning Objectives\n\n\n\n\nConsider coverage issues that come with different sampling frames in practice\nUnderstand sources of observation error\nImplement revisions to questions following the 10 guidelines for question writing.\n\n\n\nFor additional details, read Chapters 3 & 4 of Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method (2014) by Don A Dillman, Jolene D Smyth, and Leah Melani Christian\n\nAvailable for free online through the library\nI would highly recommend going through this reading – the slides are a summary of these chapters."
   },
   {
     "objectID": "1-prep/11.1-prep.html#distribution-of-surveys-and-coverage",
     "href": "1-prep/11.1-prep.html#distribution-of-surveys-and-coverage",
     "title": "11.1 Preparation: Instrument Design I",
     "section": "1 Distribution of Surveys and Coverage",
-    "text": "1 Distribution of Surveys and Coverage\n\n📽 Follow along with the slides."
+    "text": "1 Distribution of Surveys and Coverage\n\n📽 Follow along with the slides.\nRead Ch 3 of Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method"
   },
   {
     "objectID": "1-prep/11.1-prep.html#fundamentals-of-instrument-design",
     "href": "1-prep/11.1-prep.html#fundamentals-of-instrument-design",
     "title": "11.1 Preparation: Instrument Design I",
     "section": "2 Fundamentals of Instrument Design",
-    "text": "2 Fundamentals of Instrument Design\n\n📽 Follow along with the slides."
+    "text": "2 Fundamentals of Instrument Design\n\n📽 Follow along with the slides.\nRead Ch 4 of Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method"
   }
 ]

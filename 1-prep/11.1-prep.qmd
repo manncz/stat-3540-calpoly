@@ -11,7 +11,7 @@ number-depth: 2
 library(tidyverse)
 ```
 
-#### 📽 Watch Videos: XX min
+#### 📽 Watch Videos: 55 min
 
 ------------------------------------------------------------------------
 
@@ -27,12 +27,13 @@ For additional details, read Chapters 3 & 4 of  [**Internet, Phone, Mail, and Mi
   - Available for free online through the library
   - I would **highly recommend** going through this reading -- the slides are a summary of these chapters.
 
-
 ## Distribution of Surveys and Coverage
 
 - 📽 Follow along with the [slides](../2-slides/11.1-survey-in-practice.qmd).
 - Read Ch 3 of [**Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method**](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991067612891702901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Internet,%20Phone,%20Mail,%20and%20Mixed%E2%80%90Mode%20Surveys:%20The%20Tailored%20Design%20Method%5C&offset=0)
 
+
+{{< video https://youtu.be/tR18pU6qSm4 >}}
 
 
 ## Fundamentals of Instrument Design
@@ -40,5 +41,5 @@ For additional details, read Chapters 3 & 4 of  [**Internet, Phone, Mail, and Mi
 - 📽 Follow along with the [slides](../2-slides/11.1-survey-in-practice.qmd#/fundamentals-of-instrument-design).
 - Read Ch 4 of [**Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method**](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991067612891702901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Internet,%20Phone,%20Mail,%20and%20Mixed%E2%80%90Mode%20Surveys:%20The%20Tailored%20Design%20Method%5C&offset=0)
 
-
+{{< video https://youtu.be/brao7hFH3X4 >}}
 

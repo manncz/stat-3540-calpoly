@@ -132,7 +132,7 @@ With web surveys, it is easy to get a **large** sample, but that does not mean i
   - Sampling
   - Coverage
   - Nonresponse
-- **Errors of observation**: recorded data don't reflect the "truth" -- i.e. measurement error
+- **Errors of observation**: recorded data don't reflect the "truth"
   - Interviewer
   - Respondents
   - Instrument
@@ -146,6 +146,8 @@ With web surveys, it is easy to get a **large** sample, but that does not mean i
 How can the presence of interviewers affect responses on individual questions?
 :::
 
+
+::: {style="font-size: 80%;"}
 :::columns
 :::column
 **Positives:**
@@ -164,6 +166,8 @@ How can the presence of interviewers affect responses on individual questions?
 
 - both present in self-administered surveys, but stronger with interviewer administered
 :::
+:::
+
 :::
 
 ## Respondent
@@ -354,14 +358,13 @@ Use as few words as possible to pose the question
 
 Use complete sentences that take a question form, and use simple sentence structures
 :::
-
 :::columns
 :::column
-![](_images/11.1-ex-guideline-4.8.png)
+![](_images/11.1-ex-guideline-4.8.png){width=70%}
 :::
 :::column
 
-![](_images/11.1-ex-guideline-4.82.png)
+![](_images/11.1-ex-guideline-4.82.png){width=80%}
 :::
 :::
 
@@ -372,6 +375,7 @@ Use complete sentences that take a question form, and use simple sentence struct
 
 Make sure "yes" means yes and "no" means no
 :::
+::: {style="font-size: 85%;"}
 
 ::::columns
 :::{.column width=30%}
@@ -407,7 +411,7 @@ In the September election you will be asked to vote on this referendum: "No stat
 
 :::
 ::::
-
+:::
 ## Guidelines for Writing Questions
 
 :::callout-note
@@ -419,6 +423,8 @@ Organize questions in a way to make it easier for respondents to comprehend the 
 - use as simple and organized of structure as possible -- lower cognitive load
 - avoid making respondents re-read things many times
 
+::: {style="font-size: 80%;"}
+
 ::::columns
 :::{.column width=60%}
 
@@ -426,7 +432,7 @@ Organize questions in a way to make it easier for respondents to comprehend the 
 
 Are you very likely, somewhat likely, somewhat unlikely, or very unlikely to visit Yellowstone National Park again?
 
-::: {style="font-size: 80%;"}
+
 
  ⃝ Very likely
 
@@ -435,7 +441,7 @@ Are you very likely, somewhat likely, somewhat unlikely, or very unlikely to vis
  ⃝ Somewhat unlikely
  
  ⃝ Very unlikely
-:::
+
 
 :::
 :::{.column width=40%}
@@ -444,7 +450,7 @@ Are you very likely, somewhat likely, somewhat unlikely, or very unlikely to vis
 
 How likely or unlikely are you to visit Yellowstone National Park again?
 
-::: {style="font-size: 80%;"}
+
 
  ⃝ Very likely
 
@@ -453,12 +459,12 @@ How likely or unlikely are you to visit Yellowstone National Park again?
  ⃝ Somewhat unlikely
  
  ⃝ Very unlikely
-:::
+
 
 :::
 ::::
 
-
+:::
 
 ## Summary -- General Guidelines for Questions 
 
