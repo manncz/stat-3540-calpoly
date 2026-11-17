@@ -1,0 +1,34 @@
+---
+title: "11.1 Preparation: Instrument Design I"
+number-sections: true
+number-depth: 2
+---
+
+```{r}
+#| include: false
+#| label: packages-setup
+
+library(tidyverse)
+```
+
+#### 📚 Read: ~1 hour
+
+------------------------------------------------------------------------
+
+::: callout
+## Learning Objectives
+- Recognize the difference between different kinds of open-ended and closed-ended questions including ordinal versus nominal. 
+- Write questions and implement revisions to questions following the additional guidelines.
+- Consider question order.
+:::
+
+## How to Write Open-Ended and Closed-Ended Questions
+
+- 📚 Read Ch 5: "How to Write Open-Ended and Closed-Ended Questions" of [**Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method**](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991067612891702901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Internet,%20Phone,%20Mail,%20and%20Mixed%E2%80%90Mode%20Surveys:%20The%20Tailored%20Design%20Method%5C&offset=0)
+- Note that the guidelines are all listed in the [student companion site](https://resources.learning.wiley.com/isbn/9781118921302)
+
+
+## Ordering Questions and Testing for Question Order Effects
+
+- 📚 Read Ch 7: "Ordering Questions and Testing for Question Order Effects" of [**Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method**](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991067612891702901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Internet,%20Phone,%20Mail,%20and%20Mixed%E2%80%90Mode%20Surveys:%20The%20Tailored%20Design%20Method%5C&offset=0)
+

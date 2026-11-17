@@ -1,0 +1,15 @@
+{
+  "hash": "70c4da84bd09efe8566564280009e84c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"11.1 Preparation: Instrument Design I\"\nnumber-sections: true\nnumber-depth: 2\n---\n\n\n\n#### 📚 Read: ~1 hour\n\n------------------------------------------------------------------------\n\n::: callout\n## Learning Objectives\n- Recognize the difference between different kinds of open-ended and closed-ended questions including ordinal versus nominal. \n- Write questions and implement revisions to questions following the additional guidelines.\n- Consider question order.\n:::\n\n## How to Write Open-Ended and Closed-Ended Questions\n\n- 📚 Read Ch 5: \"How to Write Open-Ended and Closed-Ended Questions\" of [**Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method**](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991067612891702901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Internet,%20Phone,%20Mail,%20and%20Mixed%E2%80%90Mode%20Surveys:%20The%20Tailored%20Design%20Method%5C&offset=0)\n- Note that the guidelines are all listed in the [student companion site](https://resources.learning.wiley.com/isbn/9781118921302)\n\n\n## Ordering Questions and Testing for Question Order Effects\n\n- 📚 Read Ch 7: \"Ordering Questions and Testing for Question Order Effects\" of [**Internet, Phone, Mail, and Mixed‐Mode Surveys: The Tailored Design Method**](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991067612891702901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Internet,%20Phone,%20Mail,%20and%20Mixed%E2%80%90Mode%20Surveys:%20The%20Tailored%20Design%20Method%5C&offset=0)\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
