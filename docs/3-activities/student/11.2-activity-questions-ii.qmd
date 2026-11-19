@@ -1,0 +1,86 @@
+---
+title: "Activity 11: Questionnaire Writing"
+subtitle: "Cal Poly Basic Needs Report -- Part II"
+execute: 
+  error: true
+  message: false
+  warning: false
+
+author: Your Name(s)
+echo: true
+embed-resources: true
+format: typst
+---
+## Cal Poly Basic Needs Report
+
+We will be building upon our work in Activity 11 Part 1, so you will want to refer to what you worked on previously.
+
+Here are some references and resources related to the Care Report:
+  
+  - [2018 Full Report](https://www.calstate.edu/impact-of-the-csu/student-success/basic-needs-initiative/Documents/BasicNeedsStudy_phaseII_withAccessibilityComments.pdf)
+  - [Basic Needs Initiative website](https://basicneeds.calpoly.edu/)
+
+The Basic Needs Initiative defines the following concepts:
+
+  - **Basic Needs**: The fundamental, minimum requirements necessary for a decent standard of life and physical, mental, and social well-being. In the context of this report, we refer primarily to food and housing, but basic needs may also include issues such as safety and security, sanitation, access to clean water, and clothing.
+  - **Food Insecurity**: The state of being without reliable access to a sufficient quantity of affordable, nutritious food. 
+    - ‘Anxiety over food access’ is considered marginal food insecurity while outright ‘hunger’ and ‘not eating for an entire day due to lack of resources for food’ is a more extreme manifestation.  
+    - “Low” and “very low” food security levels are defined as “food insecurity” by the USDA, and “marginal” and “high” food security levels are not typically considered “food insecurity”. 
+    - The word ‘hunger’ is sometimes used colloquially to describe food insecurity.
+  - **Housing Insecurity**: Variably defined as having difficulty paying rent, having frequent moves, living in overcrowded conditions, or doubling up with friends and relatives. In the college context, instability may take the form of frequent moving of residence due to lack of resources or eviction, or temporary or chronic couch surfing. Homelessness refers to lack of a fixed, regular, and adequate nighttime residence, characterized by living in motels, hotels, or camping grounds due to lack of alternative adequate accommodations or living in a car or other location not designed for being a residence.
+  
+:::{.callout-caution}
+## Measurable Concepts
+
+You might need to **further** refine these definitions to write good questions! 
+
+**Looking deeper into the report (page 15)**, you will find more concrete definitions of "low" vs. "marginal" vs. "high" food security.
+:::
+
+The main results we want to reproduce with our questionnaire:
+
+- 27% of Cal Poly students experienced food insecurity in 2017
+-	12% of Cal Poly students experienced housing insecurity in 2017
+- Cal Poly students who experienced food and housing insecurity reported worse physical health, mental health, and lower GPA's than students who do not.
+- The highest rates of food insecurity (66%) and housing insecurity (18%) were experienced by students of color and first-generation students.
+
+## Writing and Revising Questions
+
+We will use the guidelines we learned from [Chapter 5 in the textbook](https://csu-calpoly.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991067612891702901&context=L&vid=01CALS_PSU:01CALS_PSU&lang=en&search_scope=Everything&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Internet,%20Phone,%20Mail,%20and%20Mixed-Mode%20Surveys%20:%20The%20Tailored%20Design%20Method&offset=0) to revise and write additional questions. Here is the [consolidated list of guidelines](https://epdc.wiley.com/pub/docs/3d3f6505-6663-4920-bcc2-3bdac7b92430).
+
+### Step 1: Revise Previous Questions
+
+**1.1** Copy/paste the questions you wrote in Activity 11 Part I here.
+
+**1.2** Revise / re-write the questions applying the new guidelines you learned.
+  
+  - Especially think about WHAT questions FORM you should use (open-ended or closed-ended etc) and what guidelines you should think about for that question form.
+
+**1.3** Write a couple sentences about your revisions and why you made them.
+
+**1.4** List the guidelines you used:
+
+### Step 2: Write Additional Questions
+
+**2** Write the additional questions you would need so that you could recreate the results above, but with students at Cal Poly today.
+
+:::callout-tip
+## Don't reinvent the wheel!
+
+I wanted you to think about how to ask questions to address some complex concepts. However, in practice, we should let psychologists and other experts do that work for us for common, complex concepts.
+
+**1.6** For example, there are many instruments out there to measure mental health! Find one that would make sense to include in your instrument. You could also look up what they actually used in the original report.
+:::
+
+## Questionnaire Design
+
+Now, let's put this all together into an actual questionnaire!
+
+**3** Follow the guidelines from Chapter 7 of the textbook to order and group your questions appropriately as a full questionnaire. 
+
+  - **Write your questionnaire using** [**this template.**](../_images/11-questionnaire-template.docx) (see example below to help understand the template)
+  - You will submit this as a separate document on *Canvas.* 
+  - You can assume the questionnaire will be taken ONLINE, so you are writing instructions for "coding" the survey up on the computer.
+    - Here is a [full example](../_images/11-survey_example.docx) of what a questionnaire might look like with instructions for coding it online.
+  - After break we will do peer revisions and "code" the survey -- i.e. make it an online survey -- using [Qualtrics](https://calpolyocob.co1.qualtrics.com/login)
+  - It should be clear when questions should be grouped together on a page, versus on separate pages, as well as if there should be any skip logic.

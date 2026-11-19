@@ -101,4 +101,4 @@ Use the estimated proportion and standard error from the package and the formula
 
 10.	Now use the `survey` package and the **adjusted weights** (taking stratification and nonresponse into account), determine the proportion of employees who favor having winter break closure again with 95% confidence. The tips from Q9 apply here as well!
 
-11. Explain why the estimates from Q9 and Q10 are not very different. 
+11. Explain why the point estimates from Q9 and Q10 are not very different. 
